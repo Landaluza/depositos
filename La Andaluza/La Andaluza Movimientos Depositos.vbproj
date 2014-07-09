@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0518B3B6-EE66-4D4F-A0E3-F953E0AC2A37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>La_Andaluza_MovimientosDepositos.My.MyApplication</StartupObject>
+    <RootNamespace>La_Andaluza_MovimientosDepositos</RootNamespace>
+    <AssemblyName>La Andaluza MovimientosDepositos</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <TargetZone>Custom</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>user-trash.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>247F7EA75E27118A015C3762DB5731458C9579A9</ManifestCertificateThumbprint>
+    <ManifestKeyFile>La Andaluza Produccion_TemporaryKey.pfx</ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <OptionStrict>Off</OptionStrict>
+    <TargetFrameworkProfile />
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>\\192.168.1.200\datos\Informatica\La Andaluza MovimientosDepositos\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-ES</TargetCulture>
+    <ProductName>La Andaluza Movimientos Despositos</ProductName>
+    <PublisherName>La Andaluza</PublisherName>
+    <MinimumRequiredVersion>1.0.0.20</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>150</ApplicationRevision>
+    <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>true</Optimize>
+    <WarningsAsErrors>41998,42004,42020,42021,42022,42024,42025,42026,42029,42030,42031,42099,42104,42105,42106,42107,42108,42109,42353,42354,42355</WarningsAsErrors>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningsAsErrors>41998,42004,42020,42021,42022,42024,42025,42026,42029,42030,42031,42099,42104,42105,42106,42107,42108,42109,42353,42354,42355</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.2, Version=2.6.20102.54119, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.2, Version=2.6.20102.54119, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
+    <Reference Include="DgvFilterPopup, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="InformeDepositos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bases\ZLibrerias\InformeDepositos.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Runtime.CompilerServices" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\Personal\Empleados\Tipos_usuarios\DBO_TiposUsuarios.vb" />
+    <Compile Include="Administracion\Personal\Empleados\Tipos_usuarios\spTiposUsuarios.vb" />
+    <Compile Include="Administracion\Personal\Empleados\Usuarios\DBO_Usuarios.vb" />
+    <Compile Include="Administracion\Personal\Empleados\Usuarios\spUsuarios.vb" />
+    <Compile Include="Administracion\Proveedores_y_articulos\spProveedores.vb" />
+    <Compile Include="Bases\Clases\FechaQs.vb" />
+    <Compile Include="Bases\Conf\Components\CuadroTextoNumerosNegativos.Designer.vb">
+      <DependentUpon>CuadroTextoNumerosNegativos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Conf\Components\CuadroTextoNumerosNegativos.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\CompuestoPor\DBO_CompuestoPor.vb" />
+    <Compile Include="Control\CompuestoPor\spCompuestoPor.vb" />
+    <Compile Include="Control\Elaboraciones\frmElaboraciones.Designer.vb">
+      <DependentUpon>frmElaboraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Elaboraciones\frmElaboraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Elaboraciones\frmResumenEliminarElaboracion.Designer.vb">
+      <DependentUpon>frmResumenEliminarElaboracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Elaboraciones\frmResumenEliminarElaboracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos\DBO_Procesos.vb" />
+    <Compile Include="Control\Procesos\spProcesos.vb" />
+    <Compile Include="Control\TiposLotes\new\DBO_TiposLotes.vb" />
+    <Compile Include="Control\TiposLotes\new\spTiposLotes.vb" />
+    <Compile Include="Control\TiposProductos\MedidasProductos\DBO_MedidasProductos.vb" />
+    <Compile Include="Control\TiposProductos\MedidasProductos\spMedidasProductos.vb" />
+    <Compile Include="Control\TiposProductos\nuevo2\DBO_TiposProductos.vb" />
+    <Compile Include="Control\TiposProductos\nuevo2\spTiposProductos.vb" />
+    <Compile Include="Control\_antiguos\Lotes\clsAnaliticas.vb" />
+    <Compile Include="Control\_antiguos\Lotes\clsAnaliticasValores.vb" />
+    <Compile Include="Control\_antiguos\Lotes\clsLotes.vb" />
+    <Compile Include="Control\_antiguos\Lotes\CompuestoPor\clsCompuestoPor.vb" />
+    <Compile Include="Control\_antiguos\Lotes\CompuestoPor\ctlCompuestoPor.vb" />
+    <Compile Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor.vb">
+      <DependentUpon>dtsCompuestoPor.xsd</DependentUpon>
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor1.Designer.vb">
+      <DependentUpon>dtsCompuestoPor.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Control\_antiguos\Lotes\ctlLotes.vb" />
+    <Compile Include="Control\_antiguos\Lotes\dtsLotesTrazabilidad.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsLotesTrazabilidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Control\_antiguos\Lotes\spLotes.vb" />
+    <Compile Include="Bases\Conf\Components\DataGridViewPrintDocument.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Bases\engine\GUIstandar.Designer.vb">
+      <DependentUpon>GUIstandar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\engine\GUIstandar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\engine\frmNews.Designer.vb">
+      <DependentUpon>frmNews.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\engine\frmNews.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\engine\GUImain.Designer.vb">
+      <DependentUpon>GUImain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\engine\GUImain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Extensiones\ComboBoxExtension.vb" />
+    <Compile Include="Bases\Extensiones\dtpBoxExtension.vb" />
+    <Compile Include="Bases\Extensiones\TabPageExtension.vb" />
+    <Compile Include="Bases\Extensiones\DataGridViewExtension.vb" />
+    <Compile Include="Bases\Extensiones\ExcelExtension.vb" />
+    <Compile Include="Bases\Extensiones\WordExtension.vb" />
+    <Compile Include="Bases\Form\Dialogos\frmEspera.Designer.vb">
+      <DependentUpon>frmEspera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Form\Dialogos\frmEspera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Interfaces\BotleForm.vb" />
+    <Compile Include="Bases\DataBase\StoredProcedureComp.vb" />
+    <Compile Include="Bases\Clases\Calendar.vb" />
+    <Compile Include="Bases\Clases\MicrosoftOfficeExporter.vb" />
+    <Compile Include="Bases\Clases\Printer.vb" />
+    <Compile Include="Bases\Clases\SMS.vb" />
+    <Compile Include="Bases\Sesion\FrmInicio - Copia %282%29.Designer.vb">
+      <DependentUpon>FrmInicio - Copia %282%29.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Sesion\FrmInicio - Copia %282%29.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\clsDepositos.vb" />
+    <Compile Include="Elaboracion\clsTransicubas.vb" />
+    <Compile Include="Elaboracion\ctlDepositos.vb" />
+    <Compile Include="Elaboracion\frmMovimientosMain.Designer.vb">
+      <DependentUpon>frmMovimientosMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\frmMovimientosMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\DBO_Filtros.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\frmEntFiltros.Designer.vb">
+      <DependentUpon>frmEntFiltros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\frmEntFiltros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\frmFiltros.Designer.vb">
+      <DependentUpon>frmFiltros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\frmFiltros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\spFiltros.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.Designer.vb">
+      <DependentUpon>frmEntMovimientosCopy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Noticias\Noticias\DBO_Noticias.vb" />
+    <Compile Include="Noticias\Noticias\spNoticias.vb" />
+    <Compile Include="Noticias\Visor\frmEntNoticias2.Designer.vb">
+      <DependentUpon>frmEntNoticias2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Noticias\Visor\frmEntNoticias2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noticias\Visor\frmNoticias2.Designer.vb">
+      <DependentUpon>frmNoticias2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Noticias\Visor\frmNoticias2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\CodigoLote.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\frmMovimientos.Designer.vb">
+      <DependentUpon>frmMovimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\frmMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Bases\Clases\Web.vb" />
+    <Compile Include="Bases\BD\DataBase.vb" />
+    <Compile Include="Bases\engine\Engine_LA.vb" />
+    <Compile Include="Bases\engine\frmMensajesPendientes.Designer.vb">
+      <DependentUpon>frmMensajesPendientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\engine\frmMensajesPendientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\engine\Notificador.vb" />
+    <Compile Include="Bases\engine\TabManager.vb" />
+    <Compile Include="Bases\Form\Dialogos\frmEntrada.Designer.vb">
+      <DependentUpon>frmEntrada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Form\Dialogos\frmEntrada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Conf\Config.vb" />
+    <Compile Include="Bases\Dependencias\FrmAheredarOld.Designer.vb">
+      <DependentUpon>FrmAheredarOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Dependencias\FrmAheredarOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Dependencias\FrmAHeredarEntOld.Designer.vb">
+      <DependentUpon>FrmAHeredarEntOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Dependencias\FrmAHeredarEntOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\DataBase\DataBussines.vb" />
+    <Compile Include="Bases\DataBase\DataBussinesParameter.vb" />
+    <Compile Include="Bases\Form\GridSimpleForm.Designer.vb">
+      <DependentUpon>GridSimpleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Form\GridSimpleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Form\DetailedSimpleForm.Designer.vb">
+      <DependentUpon>DetailedSimpleForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Form\DetailedSimpleForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Interfaces\Queriable.vb" />
+    <Compile Include="Bases\Interfaces\Savable.vb" />
+    <Compile Include="Bases\DataBase\StoredProcedure.vb" />
+    <Compile Include="Bases\Interfaces\wizardable.vb" />
+    <Compile Include="Bases\engine\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\engine\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Clases\File.vb" />
+    <Compile Include="Bases\Clases\NativeMethods.vb" />
+    <Compile Include="Bases\Clases\Pantalla.vb" />
+    <Compile Include="Bases\Clases\Consola.vb" />
+    <Compile Include="Bases\Conf\Components\clsCuadroDeTexto.vb" />
+    <Compile Include="Bases\Conf\Components\ctlCuadroDeTexto.vb" />
+    <Compile Include="Bases\Conf\Components\CuadroDeTexto.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Bases\Clases\Encriptacion.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.Designer.vb">
+      <DependentUpon>ListMovPorTipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bases\Conf\Components\MessageDialogue.Designer.vb">
+      <DependentUpon>MessageDialogue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bases\Conf\Components\MessageDialogue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\clsMovimientos.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\ctlMovimientos.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\dtsMovimientos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsMovimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\clsProcesos.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\ctlProcesos.vb" />
+    <Compile Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\dtsProcesos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtsProcesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Bases\Clases\Imagen.vb" />
+    <Compile Include="Otros\OldLib.vb" />
+    <Compile Include="Produccion\RecipientesSalidas\spRecipientesSalidas.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bases\engine\GUIstandar.resx">
+      <DependentUpon>GUIstandar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\engine\frmNews.resx">
+      <DependentUpon>frmNews.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\engine\GUImain.resx">
+      <DependentUpon>GUImain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Form\Dialogos\frmEspera.resx">
+      <DependentUpon>frmEspera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Sesion\FrmInicio - Copia %282%29.resx">
+      <DependentUpon>FrmInicio - Copia %282%29.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Elaboraciones\frmElaboraciones.resx">
+      <DependentUpon>frmElaboraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Elaboraciones\frmResumenEliminarElaboracion.resx">
+      <DependentUpon>frmResumenEliminarElaboracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\frmMovimientosMain.resx">
+      <DependentUpon>frmMovimientosMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\Filtros\frmEntFiltros.resx">
+      <DependentUpon>frmEntFiltros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\Filtros\frmFiltros.resx">
+      <DependentUpon>frmFiltros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.resx">
+      <DependentUpon>frmEntMovimientosCopy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\frmMovimientos.resx">
+      <DependentUpon>frmMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
+      <DependentUpon>frmEntNoticias2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noticias\Visor\frmNoticias2.resx">
+      <DependentUpon>frmNoticias2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\engine\frmMensajesPendientes.resx">
+      <DependentUpon>frmMensajesPendientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Form\Dialogos\frmEntrada.resx">
+      <DependentUpon>frmEntrada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Dependencias\FrmAheredarOld.es.resx">
+      <DependentUpon>FrmAheredarOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Dependencias\FrmAheredarOld.resx">
+      <DependentUpon>FrmAheredarOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Dependencias\FrmAHeredarEntOld.resx">
+      <DependentUpon>FrmAHeredarEntOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Form\GridSimpleForm.es.resx">
+      <DependentUpon>GridSimpleForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Form\GridSimpleForm.resx">
+      <DependentUpon>GridSimpleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Form\DetailedSimpleForm.resx">
+      <DependentUpon>DetailedSimpleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\engine\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.resx">
+      <DependentUpon>ListMovPorTipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bases\Conf\Components\MessageDialogue.resx">
+      <DependentUpon>MessageDialogue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor.xsc">
+      <DependentUpon>dtsCompuestoPor.xsd</DependentUpon>
+    </None>
+    <None Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsCompuestoPor1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor.xss">
+      <DependentUpon>dtsCompuestoPor.xsd</DependentUpon>
+    </None>
+    <None Include="Bases\Utilidades\C1ReportDesigner\C1Report.chm" />
+    <None Include="Bases\Utilidades\C1ReportDesigner\C1ReportDesigner.exe.settings" />
+    <None Include="Control\_antiguos\Lotes\dtsLotesTrazabilidad.xsc">
+      <DependentUpon>dtsLotesTrazabilidad.xsd</DependentUpon>
+    </None>
+    <None Include="Control\_antiguos\Lotes\dtsLotesTrazabilidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsLotesTrazabilidad.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Control\_antiguos\Lotes\dtsLotesTrazabilidad.xss">
+      <DependentUpon>dtsLotesTrazabilidad.xsd</DependentUpon>
+    </None>
+    <None Include="Elaboracion\MovimientosElaboracion\dtsMovimientos.xsc">
+      <DependentUpon>dtsMovimientos.xsd</DependentUpon>
+    </None>
+    <None Include="Elaboracion\MovimientosElaboracion\dtsMovimientos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsMovimientos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Elaboracion\MovimientosElaboracion\dtsMovimientos.xss">
+      <DependentUpon>dtsMovimientos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\DataSources\Entities.datasource" />
+    <None Include="My Project\DataSources\PaletsProducidosEntities.datasource" />
+    <None Include="My Project\DataSources\PedidosProveedoresDocumentosContainer.datasource" />
+    <None Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\dtsProcesos.xsc">
+      <DependentUpon>dtsProcesos.xsd</DependentUpon>
+    </None>
+    <None Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\dtsProcesos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtsProcesos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Elaboracion\MovimientosElaboracion\Tipos movimientos\dtsProcesos.xss">
+      <DependentUpon>dtsProcesos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\window_new.ico" />
+    <Content Include="Resources\window_new_3.ico" />
+    <Content Include="user-trash.ico" />
+    <None Include="Resources\window_duplicate.ico" />
+    <None Include="Resources\page_excel_16.png" />
+    <None Include="Resources\page_white_word_16.png" />
+    <None Include="Resources\folder-magnify.png" />
+    <None Include="Resources\view-refresh-4.png" />
+    <None Include="Resources\tools-report-bug.png" />
+    <None Include="Resources\view_16.png" />
+    <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
+    <None Include="Iconos\LA  sin texto 48 x 48.bmp" />
+    <None Include="Iconos\LA  sin texto 48 x 48.ico" />
+    <None Include="Iconos\LA con texto 256 x 256.ico" />
+    <None Include="Iconos\LA con texto 48 x 48.ico" />
+    <None Include="Iconos\LogoLA.ico" />
+    <None Include="Iconos\LogoLA.jpg" />
+    <None Include="Iconos\Modificar.ico" />
+    <None Include="Iconos\print_ico.jpg" />
+    <None Include="Iconos\refresh.png" />
+    <None Include="Iconos\Solo texto.jpg" />
+    <None Include="Resources\emblem-important-3.png" />
+    <None Include="Resources\document_16.png" />
+    <None Include="Resources\emblem-notice.png" />
+    <None Include="Resources\edit-remove-3.png" />
+    <None Include="Resources\checkbox-2.png" />
+    <None Include="Resources\document-save-5.png" />
+    <None Include="Resources\edit-clear-2.png" />
+    <None Include="Resources\edit-clear-21.png" />
+    <None Include="Resources\dialog-apply.png" />
+    <None Include="Resources\emblem-documents.png" />
+    <None Include="Resources\edit-add-2.png" />
+    <None Include="Resources\document-save-5_16.png" />
+    <None Include="Resources\application-exit-3.png" />
+    <None Include="Resources\emblem-special.png" />
+    <None Include="Resources\dialog-ok-3.png" />
+    <None Include="Resources\dialog-cancel-3.png" />
+    <None Include="Resources\document-save-5_32.png" />
+    <None Include="Resources\emblem-notice_256.png" />
+    <None Include="Resources\emblem-new_256.png" />
+    <None Include="Resources\emblem-important-2_256.png" />
+    <None Include="Resources\application-exit-3_256.png" />
+    <None Include="Resources\emblem-mail_16.png" />
+    <None Include="Resources\help-2.png" />
+    <None Include="Resources\edit-group.png" />
+    <None Include="Resources\appointmentmissed16.png" />
+    <None Include="Resources\accessories_dictionary.png" />
+    <None Include="Resources\document_print_16.png" />
+    <None Include="Resources\application-exit-4.png" />
+    <Content Include="Resources\important.png" />
+    <None Include="Bases\ZLibrerias\referencias\AxInterop.TwainControlXTrial.dll" />
+    <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.dll" />
+    <None Include="Resources\sp2b.jpg" />
+    <None Include="Resources\imprimir_16.png" />
+    <None Include="Resources\pedidoColor.bmp" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\window-duplicate.png" />
+    <None Include="Resources\system-help-3.png" />
+    <None Include="Resources\search-3.png" />
+    <None Include="Resources\LogoLA.ico" />
+    <None Include="Resources\user-suit.png" />
+    <None Include="Resources\network-transmit.png" />
+    <None Include="Resources\LogoLaIcon.ico" />
+    <None Include="Resources\LaIconPng.png" />
+    <None Include="Resources\LaIconPng.ico" />
+    <None Include="Resources\LogoBandejaLa.png" />
+    <None Include="Resources\LogoBandejaLa2.png" />
+    <None Include="Resources\LogoBandejaLa2.ico" />
+    <None Include="Resources\mail-forward-4_16.png" />
+    <None Include="Resources\mail-forward-4_22.png" />
+    <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.xml" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1InputPanel.2.dll" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1InputPanel.2.xml" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1Report.2.dll" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1Report.2.xml" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1TrueDBGrid.2.dll" />
+    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1TrueDBGrid.2.xml" />
+    <None Include="Bases\ZLibrerias\referencias\DgvFilterPopup.dll" />
+    <None Include="app.config" />
+    <None Include="My Project\DataSources\ControlesLotesGranel.datasource" />
+    <Content Include="Resources\LA  sin texto 48 x 48.ico" />
+    <None Include="Resources\insert-horizontal-rule.png" />
+    <Content Include="Resources\Logo JR Sabater.gif" />
+    <Content Include="Resources\Logo LA sin texto.jpg" />
+    <None Include="Bases\ZLibrerias\DgvFilterPopup.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{3924545A-F8E2-475A-B1A4-05175BC41E50}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Runtime de Microsoft Visual Studio 2010 Tools para Office %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Especificaciones\" />
+    <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Vbe.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

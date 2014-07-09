@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsLotesTrazabilidad" targetNamespace="http://tempuri.org/dtsLotesTrazabilidad.xsd" xmlns:mstns="http://tempuri.org/dtsLotesTrazabilidad.xsd" xmlns="http://tempuri.org/dtsLotesTrazabilidad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsLotesTrazabilidad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dtsLotesTrazabilidad" msprop:Generator_DataSetName="dtsLotesTrazabilidad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LotesTrazabilidad" msprop:Generator_UserTableName="LotesTrazabilidad" msprop:Generator_RowDeletedName="LotesTrazabilidadRowDeleted" msprop:Generator_RowChangedName="LotesTrazabilidadRowChanged" msprop:Generator_RowClassName="LotesTrazabilidadRow" msprop:Generator_RowChangingName="LotesTrazabilidadRowChanging" msprop:Generator_RowEvArgName="LotesTrazabilidadRowChangeEvent" msprop:Generator_RowEvHandlerName="LotesTrazabilidadRowChangeEventHandler" msprop:Generator_TableClassName="LotesTrazabilidadDataTable" msprop:Generator_TableVarName="tableLotesTrazabilidad" msprop:Generator_RowDeletingName="LotesTrazabilidadRowDeleting" msprop:Generator_TablePropName="LotesTrazabilidad">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ComponeA" msdata:Caption="Column1" msprop:Generator_UserColumnName="ComponeA" msprop:Generator_ColumnPropNameInRow="ComponeA" msprop:Generator_ColumnVarNameInTable="columnComponeA" msprop:Generator_ColumnPropNameInTable="ComponeAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LoteId" msprop:Generator_UserColumnName="LoteId" msprop:Generator_ColumnPropNameInRow="LoteId" msprop:Generator_ColumnVarNameInTable="columnLoteId" msprop:Generator_ColumnPropNameInTable="LoteIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CodigoLote" msprop:Generator_UserColumnName="CodigoLote" msprop:Generator_ColumnPropNameInRow="CodigoLote" msprop:Generator_ColumnVarNameInTable="columnCodigoLote" msprop:Generator_ColumnPropNameInTable="CodigoLoteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Proceso" msprop:Generator_UserColumnName="Proceso" msprop:Generator_ColumnPropNameInRow="Proceso" msprop:Generator_ColumnVarNameInTable="columnProceso" msprop:Generator_ColumnPropNameInTable="ProcesoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Proveedor" msprop:Generator_UserColumnName="Proveedor" msprop:Generator_ColumnVarNameInTable="columnProveedor" msprop:Generator_ColumnPropNameInRow="Proveedor" msprop:Generator_ColumnPropNameInTable="ProveedorColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
