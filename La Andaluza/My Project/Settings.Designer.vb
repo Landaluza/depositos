@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=servidor;Initial Catalog=LA;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.101\SQLEXPRESS,1608;Initial Catalog=LA;Integrated Security="& _ 
+            "True")>  _
         Public ReadOnly Property LAConnectionString1() As String
             Get
                 Return CType(Me("LAConnectionString1"),String)

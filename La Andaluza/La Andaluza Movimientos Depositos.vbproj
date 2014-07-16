@@ -116,6 +116,8 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -141,6 +143,7 @@
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -176,6 +179,18 @@
       <DependentUpon>frmResumenEliminarElaboracion.vb</DependentUpon>
     </Compile>
     <Compile Include="Control\Elaboraciones\frmResumenEliminarElaboracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\frmProcesosAbiertos.Designer.vb">
+      <DependentUpon>frmProcesosAbiertos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\frmProcesosAbiertos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.Designer.vb">
+      <DependentUpon>frmTrasiego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Control\Procesos\DBO_Procesos.vb" />
@@ -434,6 +449,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Elaboraciones\frmResumenEliminarElaboracion.resx">
       <DependentUpon>frmResumenEliminarElaboracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\frmProcesosAbiertos.resx">
+      <DependentUpon>frmProcesosAbiertos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmTrasiego.resx">
+      <DependentUpon>frmTrasiego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\frmMovimientosMain.resx">
       <DependentUpon>frmMovimientosMain.vb</DependentUpon>

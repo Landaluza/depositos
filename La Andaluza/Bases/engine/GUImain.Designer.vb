@@ -37,6 +37,7 @@ Partial Class GUImain
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElaboracionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FiltrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanContenido = New System.Windows.Forms.Panel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tsCustomMenu = New System.Windows.Forms.ToolStrip()
@@ -56,7 +57,7 @@ Partial Class GUImain
         Me.Button8 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmsNotificacionesOperaciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.FiltrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProcesosAbiertosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.mAgenda.SuspendLayout()
         Me.msMenu.SuspendLayout()
@@ -197,7 +198,7 @@ Partial Class GUImain
         Me.msMenu.BackColor = System.Drawing.SystemColors.Control
         Me.msMenu.GripMargin = New System.Windows.Forms.Padding(2)
         Me.msMenu.ImageScalingSize = New System.Drawing.Size(22, 22)
-        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem, Me.ElaboracionesToolStripMenuItem, Me.FiltrosToolStripMenuItem})
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem, Me.ElaboracionesToolStripMenuItem, Me.FiltrosToolStripMenuItem, Me.ProcesosAbiertosToolStripMenuItem})
         Me.msMenu.Location = New System.Drawing.Point(0, 0)
         Me.msMenu.MinimumSize = New System.Drawing.Size(1092, 25)
         Me.msMenu.Name = "msMenu"
@@ -216,6 +217,12 @@ Partial Class GUImain
         Me.ElaboracionesToolStripMenuItem.Name = "ElaboracionesToolStripMenuItem"
         Me.ElaboracionesToolStripMenuItem.Size = New System.Drawing.Size(92, 21)
         Me.ElaboracionesToolStripMenuItem.Text = "Elaboraciones"
+        '
+        'FiltrosToolStripMenuItem
+        '
+        Me.FiltrosToolStripMenuItem.Name = "FiltrosToolStripMenuItem"
+        Me.FiltrosToolStripMenuItem.Size = New System.Drawing.Size(51, 21)
+        Me.FiltrosToolStripMenuItem.Text = "Filtros"
         '
         'PanContenido
         '
@@ -426,11 +433,11 @@ Partial Class GUImain
         Me.cmsNotificacionesOperaciones.Name = "ContextMenuStrip1"
         Me.cmsNotificacionesOperaciones.Size = New System.Drawing.Size(61, 4)
         '
-        'FiltrosToolStripMenuItem
+        'ProcesosAbiertosToolStripMenuItem
         '
-        Me.FiltrosToolStripMenuItem.Name = "FiltrosToolStripMenuItem"
-        Me.FiltrosToolStripMenuItem.Size = New System.Drawing.Size(51, 21)
-        Me.FiltrosToolStripMenuItem.Text = "Filtros"
+        Me.ProcesosAbiertosToolStripMenuItem.Name = "ProcesosAbiertosToolStripMenuItem"
+        Me.ProcesosAbiertosToolStripMenuItem.Size = New System.Drawing.Size(111, 21)
+        Me.ProcesosAbiertosToolStripMenuItem.Text = "Procesos abiertos"
         '
         'GUImain
         '
@@ -508,8 +515,9 @@ Partial Class GUImain
     Protected WithEvents LAgenda As System.Windows.Forms.Label
     Private WithEvents mAgenda As System.Windows.Forms.ContextMenuStrip
     Private WithEvents AsdToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MovimientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ElaboracionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FiltrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents ProcesosAbiertosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents MovimientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents ElaboracionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents FiltrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

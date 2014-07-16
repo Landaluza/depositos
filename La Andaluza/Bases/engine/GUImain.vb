@@ -5,6 +5,7 @@ Public Class GUImain
     Protected frmIni As FrmInicio
     Protected frmNews As frmNews
     Protected Event extras_showed()
+    Protected frmProcesos As frmProcesosAbiertos
 
     'Public Sub New()
     '    MyBase.new()
@@ -63,7 +64,7 @@ Public Class GUImain
 
         Me.ToolTip1.SetToolTip(Me.lServ, "Usuario: " & UsuarioUsado & Environment.NewLine & "Base de datos: " & tablausada & Environment.NewLine & "Servidor: " & ServidorUsado)
         Me.ToolTip1.SetToolTip(Me.lUser, "Usuario conectado: " & usua & Environment.NewLine & "click para acceder a la configuración de usuario")
-
+        ProcesosAbiertosToolStripMenuItem_Click(Nothing, Nothing)
         Me.Show()
     End Sub
 
@@ -454,6 +455,19 @@ Public Class GUImain
     Private Sub FiltrosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FiltrosToolStripMenuItem.Click
         Dim frm As New frmFiltros
         GUImain.añadirPestaña(CType(frm, Form))
+    End Sub
+
+    Private Sub ProcesosAbiertosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcesosAbiertosToolStripMenuItem.Click
+        If Not frmProcesos Is Nothing Then
+            frmProcesos.Close()
+        End If
+
+        Me.frmProcesos = New frmProcesosAbiertos
+        frmProcesos.Show()
+        Dim screen As New Pantalla
+        If screen.isMultiScreen Then
+            screen.reubicar_formulario_en_pantalla_secundaria(CType(frmProcesos, Form))
+        End If
     End Sub
 End Class
 
