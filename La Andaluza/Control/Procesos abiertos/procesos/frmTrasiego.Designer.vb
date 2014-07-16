@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmTrasiego
-    Inherits System.Windows.Forms.Form
+    Inherits frmProceso
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,21 +22,16 @@ Partial Class frmTrasiego
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTrasiego))
         Me.cboDepositoOrigen = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.cboProducto = New System.Windows.Forms.ComboBox()
         Me.cboLote = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnExportar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cboDepositoOrigen
@@ -71,17 +66,6 @@ Partial Class frmTrasiego
         Me.cboDepositoDestino.Size = New System.Drawing.Size(70, 21)
         Me.cboDepositoDestino.TabIndex = 2
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.trasiego
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(87, 76)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -101,17 +85,6 @@ Partial Class frmTrasiego
         Me.Label2.Size = New System.Drawing.Size(11, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "-"
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.FlatAppearance.BorderSize = 0
-        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Image = CType(resources.GetObject("btnBorrar.Image"), System.Drawing.Image)
-        Me.btnBorrar.Location = New System.Drawing.Point(829, 12)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 63)
-        Me.btnBorrar.TabIndex = 6
-        Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'cboProducto
         '
@@ -155,17 +128,6 @@ Partial Class frmTrasiego
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "-"
         '
-        'btnExportar
-        '
-        Me.btnExportar.FlatAppearance.BorderSize = 0
-        Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
-        Me.btnExportar.Location = New System.Drawing.Point(933, 12)
-        Me.btnExportar.Name = "btnExportar"
-        Me.btnExportar.Size = New System.Drawing.Size(75, 63)
-        Me.btnExportar.TabIndex = 11
-        Me.btnExportar.UseVisualStyleBackColor = True
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -182,24 +144,27 @@ Partial Class frmTrasiego
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 96)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btnExportar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cboLote)
         Me.Controls.Add(Me.cboProducto)
-        Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.cboDepositoDestino)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.cboDepositoOrigen)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTrasiego"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
         Me.Text = "frmTrasiego"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.SetChildIndex(Me.cboDepositoOrigen, 0)
+        Me.Controls.SetChildIndex(Me.txtCantidad, 0)
+        Me.Controls.SetChildIndex(Me.cboDepositoDestino, 0)
+        Me.Controls.SetChildIndex(Me.Label1, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
+        Me.Controls.SetChildIndex(Me.cboProducto, 0)
+        Me.Controls.SetChildIndex(Me.cboLote, 0)
+        Me.Controls.SetChildIndex(Me.Label3, 0)
+        Me.Controls.SetChildIndex(Me.Label4, 0)
+        Me.Controls.SetChildIndex(Me.Label5, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,14 +172,11 @@ Partial Class frmTrasiego
     Private WithEvents cboDepositoOrigen As System.Windows.Forms.ComboBox
     Private WithEvents txtCantidad As System.Windows.Forms.TextBox
     Private WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
-    Private WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Private WithEvents Label1 As System.Windows.Forms.Label
     Private WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents btnBorrar As System.Windows.Forms.Button
     Private WithEvents cboProducto As System.Windows.Forms.ComboBox
     Private WithEvents cboLote As System.Windows.Forms.ComboBox
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
-    Private WithEvents btnExportar As System.Windows.Forms.Button
     Private WithEvents Label5 As System.Windows.Forms.Label
 End Class
