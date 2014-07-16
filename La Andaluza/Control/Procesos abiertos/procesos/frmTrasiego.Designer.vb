@@ -71,9 +71,12 @@ Partial Class frmTrasiego
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.trasiego
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(75, 63)
+        Me.PictureBox1.Size = New System.Drawing.Size(87, 76)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '

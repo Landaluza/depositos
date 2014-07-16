@@ -581,6 +581,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\trasiego.png" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
     <Content Include="user-trash.ico" />

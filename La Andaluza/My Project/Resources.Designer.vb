@@ -583,6 +583,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property trasiego() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("trasiego", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property user_suit() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("user_suit", resourceCulture)
