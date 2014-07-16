@@ -584,6 +584,7 @@
     <None Include="Resources\trasiego.png" />
     <None Include="Resources\emblem-unreadable.png" />
     <None Include="Resources\emblem-symbolic-link-2.png" />
+    <None Include="Resources\align-left.png" />
     <Content Include="Resources\folder-development.ico" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
