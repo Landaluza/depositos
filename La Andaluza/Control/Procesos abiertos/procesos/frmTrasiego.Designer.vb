@@ -22,6 +22,7 @@ Partial Class frmTrasiego
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTrasiego))
         Me.cboDepositoOrigen = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
@@ -34,6 +35,7 @@ Partial Class frmTrasiego
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnExportar = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,7 +106,7 @@ Partial Class frmTrasiego
         '
         Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_unreadable
+        Me.btnBorrar.Image = CType(resources.GetObject("btnBorrar.Image"), System.Drawing.Image)
         Me.btnBorrar.Location = New System.Drawing.Point(829, 12)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 63)
@@ -157,18 +159,29 @@ Partial Class frmTrasiego
         '
         Me.btnExportar.FlatAppearance.BorderSize = 0
         Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExportar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_symbolic_link_2
+        Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
         Me.btnExportar.Location = New System.Drawing.Point(933, 12)
         Me.btnExportar.Name = "btnExportar"
         Me.btnExportar.Size = New System.Drawing.Size(75, 63)
         Me.btnExportar.TabIndex = 11
         Me.btnExportar.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(104, 62)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Trasiego"
+        '
         'frmTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 96)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnExportar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -203,4 +216,5 @@ Partial Class frmTrasiego
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
     Private WithEvents btnExportar As System.Windows.Forms.Button
+    Private WithEvents Label5 As System.Windows.Forms.Label
 End Class

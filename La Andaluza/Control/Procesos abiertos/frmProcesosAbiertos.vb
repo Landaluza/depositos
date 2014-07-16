@@ -19,4 +19,12 @@
         Next
         Me.ResumeLayout()
     End Sub
+
+    Private Sub tsCompacto_Click(sender As Object, e As EventArgs) Handles tsCompacto.Click
+        Me.FlowLayoutPanel1.Visible = False
+    End Sub
+
+    Private Sub tsDetallado_Click(sender As Object, e As EventArgs) Handles tsDetallado.Click
+        Me.FlowLayoutPanel1.Visible = True
+    End Sub
 End Class
