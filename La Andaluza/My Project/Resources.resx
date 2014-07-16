@@ -124,9 +124,6 @@
   <data name="view_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="system_help_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\system-help-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="emblem_mail_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-mail_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,9 +141,6 @@
   </data>
   <data name="user_suit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-suit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoBandejaLa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoBandejaLa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="page_excel_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\page_excel_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,20 +175,26 @@
   <data name="document_print_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document_print_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mail_forward_4_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mail-forward-4_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit_clear_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit-clear-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="emblem_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emblem-special.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="system_help_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\system-help-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dialog_ok_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dialog-ok-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit_clear_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-clear-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="emblem_important_2_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-important-2_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="window_duplicate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\window-duplicate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="checkbox_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkbox-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +214,8 @@
   <data name="document_save_5_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-save-5_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emblem_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emblem-special.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="document_save_5_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document-save-5_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoBandejaLa21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoBandejaLa2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +235,11 @@
   <data name="help_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="window_duplicate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window-duplicate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trasiego" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trasiego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mail_forward_4_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail-forward-4_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="accessories_dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accessories_dictionary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +253,11 @@
   <data name="edit_group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sp2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sp2b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoBandejaLa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoBandejaLa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="emblem-unreadable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emblem-unreadable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="emblem_important_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-important-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,11 +289,14 @@
   <data name="tools_report_bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools-report-bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document_save_5_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document-save-5_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_development" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\folder-development.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="page_white_word_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\page_white_word_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sp2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sp2b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="window_new_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\window_new_3.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,7 +304,7 @@
   <data name="emblem_notice_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-notice_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trasiego" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trasiego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="emblem-symbolic-link-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emblem-symbolic-link-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

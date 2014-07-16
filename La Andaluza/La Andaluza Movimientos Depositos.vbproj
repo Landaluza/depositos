@@ -582,6 +582,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trasiego.png" />
+    <None Include="Resources\emblem-unreadable.png" />
+    <None Include="Resources\emblem-symbolic-link-2.png" />
+    <Content Include="Resources\folder-development.ico" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
     <Content Include="user-trash.ico" />

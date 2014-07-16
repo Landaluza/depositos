@@ -22,58 +22,58 @@ Partial Class frmTrasiego
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboDepositoOrigen = New System.Windows.Forms.ComboBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.cboProducto = New System.Windows.Forms.ComboBox()
+        Me.cboLote = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnExportar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cboDepositoOrigen
         '
-        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(105, 33)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(73, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cboDepositoOrigen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboDepositoOrigen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboDepositoOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboDepositoOrigen.FormattingEnabled = True
+        Me.cboDepositoOrigen.Location = New System.Drawing.Point(105, 33)
+        Me.cboDepositoOrigen.Name = "cboDepositoOrigen"
+        Me.cboDepositoOrigen.Size = New System.Drawing.Size(73, 21)
+        Me.cboDepositoOrigen.TabIndex = 0
         '
-        'TextBox1
+        'txtCantidad
         '
-        Me.TextBox1.AccessibleDescription = "Cantidad"
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(205, 33)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(106, 21)
-        Me.TextBox1.TabIndex = 1
+        Me.txtCantidad.AccessibleDescription = "Cantidad"
+        Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCantidad.Location = New System.Drawing.Point(205, 33)
+        Me.txtCantidad.Multiline = True
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
+        Me.txtCantidad.TabIndex = 1
         '
-        'ComboBox2
+        'cboDepositoDestino
         '
-        Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(339, 33)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(70, 21)
-        Me.ComboBox2.TabIndex = 2
+        Me.cboDepositoDestino.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboDepositoDestino.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboDepositoDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboDepositoDestino.FormattingEnabled = True
+        Me.cboDepositoDestino.Location = New System.Drawing.Point(339, 33)
+        Me.cboDepositoDestino.Name = "cboDepositoDestino"
+        Me.cboDepositoDestino.Size = New System.Drawing.Size(70, 21)
+        Me.cboDepositoDestino.TabIndex = 2
         '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.trasiego
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(11, 11)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(87, 76)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -100,38 +100,38 @@ Partial Class frmTrasiego
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "-"
         '
-        'Button1
+        'btnBorrar
         '
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_cancel_3
-        Me.Button1.Location = New System.Drawing.Point(829, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 63)
-        Me.Button1.TabIndex = 6
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBorrar.FlatAppearance.BorderSize = 0
+        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_unreadable
+        Me.btnBorrar.Location = New System.Drawing.Point(829, 12)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 63)
+        Me.btnBorrar.TabIndex = 6
+        Me.btnBorrar.UseVisualStyleBackColor = True
         '
-        'ComboBox3
+        'cboProducto
         '
-        Me.ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(429, 33)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(168, 21)
-        Me.ComboBox3.TabIndex = 7
+        Me.cboProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProducto.FormattingEnabled = True
+        Me.cboProducto.Location = New System.Drawing.Point(429, 33)
+        Me.cboProducto.Name = "cboProducto"
+        Me.cboProducto.Size = New System.Drawing.Size(168, 21)
+        Me.cboProducto.TabIndex = 7
         '
-        'ComboBox4
+        'cboLote
         '
-        Me.ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.ComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(626, 33)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(175, 21)
-        Me.ComboBox4.TabIndex = 8
+        Me.cboLote.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboLote.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboLote.FormattingEnabled = True
+        Me.cboLote.Location = New System.Drawing.Point(626, 33)
+        Me.cboLote.Name = "cboLote"
+        Me.cboLote.Size = New System.Drawing.Size(175, 21)
+        Me.cboLote.TabIndex = 8
         '
         'Label3
         '
@@ -153,34 +153,34 @@ Partial Class frmTrasiego
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "-"
         '
-        'Button2
+        'btnExportar
         '
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_ok_3
-        Me.Button2.Location = New System.Drawing.Point(933, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 63)
-        Me.Button2.TabIndex = 11
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnExportar.FlatAppearance.BorderSize = 0
+        Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_symbolic_link_2
+        Me.btnExportar.Location = New System.Drawing.Point(933, 12)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(75, 63)
+        Me.btnExportar.TabIndex = 11
+        Me.btnExportar.UseVisualStyleBackColor = True
         '
         'frmTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 96)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnExportar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox4)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cboLote)
+        Me.Controls.Add(Me.cboProducto)
+        Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboDepositoDestino)
+        Me.Controls.Add(Me.txtCantidad)
+        Me.Controls.Add(Me.cboDepositoOrigen)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTrasiego"
         Me.ShowIcon = False
@@ -191,16 +191,16 @@ Partial Class frmTrasiego
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Private WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Private WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Private WithEvents cboDepositoOrigen As System.Windows.Forms.ComboBox
+    Private WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Private WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
     Private WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Private WithEvents Label1 As System.Windows.Forms.Label
     Private WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents Button1 As System.Windows.Forms.Button
-    Private WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Private WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Private WithEvents btnBorrar As System.Windows.Forms.Button
+    Private WithEvents cboProducto As System.Windows.Forms.ComboBox
+    Private WithEvents cboLote As System.Windows.Forms.ComboBox
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
-    Private WithEvents Button2 As System.Windows.Forms.Button
+    Private WithEvents btnExportar As System.Windows.Forms.Button
 End Class
