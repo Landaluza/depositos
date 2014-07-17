@@ -1,9 +1,10 @@
 ﻿Public Class frmProcesosAbiertos
-
+    Private EngProcesosAbiertos As EngineProcesosAbiertos
     Public Sub New()
 
         InitializeComponent()
 
+        Me.EngProcesosAbiertos = New EngineProcesosAbiertos
 
         Me.SuspendLayout()
         For i As Integer = 0 To 10
@@ -26,5 +27,9 @@
 
     Private Sub tsDetallado_Click(sender As Object, e As EventArgs) Handles tsDetallado.Click
         Me.FlowLayoutPanel1.Visible = True
+    End Sub
+
+    Private Sub frmProcesosAbiertos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.EngProcesosAbiertos.SetValues(Me.FlowLayoutPanel1, Me.DataGridView1)
     End Sub
 End Class

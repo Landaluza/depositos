@@ -181,6 +181,7 @@
     <Compile Include="Control\Elaboraciones\frmResumenEliminarElaboracion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\EngineProcesosAbiertos.vb" />
     <Compile Include="Control\Procesos abiertos\frmProceso.Designer.vb">
       <DependentUpon>frmProceso.vb</DependentUpon>
     </Compile>
@@ -193,14 +194,18 @@
     <Compile Include="Control\Procesos abiertos\frmProcesosAbiertos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\EngineTrasiegos.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.Designer.vb">
       <DependentUpon>frmTrasiego.vb</DependentUpon>
     </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\ProcesosEngine.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpTrasiegos.vb" />
     <Compile Include="Control\Procesos\DBO_Procesos.vb" />
     <Compile Include="Control\Procesos\spProcesos.vb" />
+    <Compile Include="Control\Procesos abiertos\spProcesosAbiertos.vb" />
     <Compile Include="Control\TiposLotes\new\DBO_TiposLotes.vb" />
     <Compile Include="Control\TiposLotes\new\spTiposLotes.vb" />
     <Compile Include="Control\TiposProductos\MedidasProductos\DBO_MedidasProductos.vb" />

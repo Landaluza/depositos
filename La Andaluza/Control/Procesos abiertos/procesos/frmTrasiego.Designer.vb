@@ -32,7 +32,24 @@ Partial Class frmTrasiego
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.FlatAppearance.BorderSize = 0
+        Me.btnBorrar.Location = New System.Drawing.Point(870, 0)
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 96)
+        '
+        'btnExportar
+        '
+        Me.btnExportar.FlatAppearance.BorderSize = 0
+        Me.btnExportar.Location = New System.Drawing.Point(945, 0)
+        Me.btnExportar.Size = New System.Drawing.Size(75, 96)
+        '
+        'pbIconoOperacion
+        '
+        Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 96)
         '
         'cboDepositoOrigen
         '
@@ -155,6 +172,9 @@ Partial Class frmTrasiego
         Me.Controls.Add(Me.cboDepositoOrigen)
         Me.Name = "frmTrasiego"
         Me.Text = "frmTrasiego"
+        Me.Controls.SetChildIndex(Me.btnExportar, 0)
+        Me.Controls.SetChildIndex(Me.btnBorrar, 0)
+        Me.Controls.SetChildIndex(Me.pbIconoOperacion, 0)
         Me.Controls.SetChildIndex(Me.cboDepositoOrigen, 0)
         Me.Controls.SetChildIndex(Me.txtCantidad, 0)
         Me.Controls.SetChildIndex(Me.cboDepositoDestino, 0)
@@ -165,6 +185,7 @@ Partial Class frmTrasiego
         Me.Controls.SetChildIndex(Me.Label3, 0)
         Me.Controls.SetChildIndex(Me.Label4, 0)
         Me.Controls.SetChildIndex(Me.Label5, 0)
+        CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
