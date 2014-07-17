@@ -7,15 +7,12 @@
     Public Function devolverProcesosAbiertos() As DataTable
         Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from procesosabiertos", False)
     End Function
+    
 
-    Public Function borrar_proceso_abierto(ByVal id As Integer) As Boolean
-        Return Me.ConsultaAlteraciones("delete from procesosabiertos where movimientoid =" & id)
-    End Function
-
-    Public Function añadirProceso() As Integer
+    Public Function añadirProceso(ByVal proceso As Integer) As Integer
         Me.EmpezarTransaccion()
         Try
-            If Not Me.ConsultaAlteraciones("insert into MovimientosAbiertos(observaciones) values('')") Then
+            If Not Me.ConsultaAlteraciones("insert into MovimientosAbiertos(procesoid) values(" & proceso & ")") Then
                 Me.CancelarTransaccion()
                 Return 0
             End If

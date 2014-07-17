@@ -208,7 +208,7 @@ Partial Class frmEntMovimientosCopy
         'txtTodoCorrecto
         '
         Me.txtTodoCorrecto.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTodoCorrecto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTodoCorrecto.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTodoCorrecto.Size = New System.Drawing.Size(10, 13)
         '
         'FechaLabel
@@ -694,7 +694,7 @@ Partial Class frmEntMovimientosCopy
         Me.cbFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbFiltros.FormattingEnabled = True
         Me.cbFiltros.Location = New System.Drawing.Point(106, 271)
-        Me.cbFiltros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbFiltros.Margin = New System.Windows.Forms.Padding(2)
         Me.cbFiltros.Name = "cbFiltros"
         Me.cbFiltros.Size = New System.Drawing.Size(218, 21)
         Me.cbFiltros.TabIndex = 14
@@ -706,7 +706,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboPartidaTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboPartidaTipoProducto.FormattingEnabled = True
         Me.cboPartidaTipoProducto.Location = New System.Drawing.Point(108, 86)
-        Me.cboPartidaTipoProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboPartidaTipoProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cboPartidaTipoProducto.Name = "cboPartidaTipoProducto"
         Me.cboPartidaTipoProducto.Size = New System.Drawing.Size(216, 24)
         Me.cboPartidaTipoProducto.TabIndex = 5
@@ -718,7 +718,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboPartidaDepositoID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboPartidaDepositoID.FormattingEnabled = True
         Me.cboPartidaDepositoID.Location = New System.Drawing.Point(107, 27)
-        Me.cboPartidaDepositoID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboPartidaDepositoID.Margin = New System.Windows.Forms.Padding(2)
         Me.cboPartidaDepositoID.Name = "cboPartidaDepositoID"
         Me.cboPartidaDepositoID.Size = New System.Drawing.Size(216, 21)
         Me.cboPartidaDepositoID.TabIndex = 1
@@ -871,7 +871,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboAjusteLotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboAjusteLotes.FormattingEnabled = True
         Me.cboAjusteLotes.Location = New System.Drawing.Point(118, 19)
-        Me.cboAjusteLotes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboAjusteLotes.Margin = New System.Windows.Forms.Padding(2)
         Me.cboAjusteLotes.Name = "cboAjusteLotes"
         Me.cboAjusteLotes.Size = New System.Drawing.Size(217, 21)
         Me.cboAjusteLotes.TabIndex = 1
@@ -883,7 +883,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboAdicionProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboAdicionProducto.FormattingEnabled = True
         Me.cboAdicionProducto.Location = New System.Drawing.Point(118, 52)
-        Me.cboAdicionProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboAdicionProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cboAdicionProducto.Name = "cboAdicionProducto"
         Me.cboAdicionProducto.Size = New System.Drawing.Size(217, 24)
         Me.cboAdicionProducto.TabIndex = 3
@@ -895,7 +895,7 @@ Partial Class frmEntMovimientosCopy
         Me.cbMedidaLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbMedidaLote.FormattingEnabled = True
         Me.cbMedidaLote.Location = New System.Drawing.Point(202, 86)
-        Me.cbMedidaLote.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbMedidaLote.Margin = New System.Windows.Forms.Padding(2)
         Me.cbMedidaLote.Name = "cbMedidaLote"
         Me.cbMedidaLote.Size = New System.Drawing.Size(133, 24)
         Me.cbMedidaLote.TabIndex = 6
@@ -966,7 +966,7 @@ Partial Class frmEntMovimientosCopy
         Me.cbMedidacompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbMedidacompra.FormattingEnabled = True
         Me.cbMedidacompra.Location = New System.Drawing.Point(239, 102)
-        Me.cbMedidacompra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbMedidacompra.Margin = New System.Windows.Forms.Padding(2)
         Me.cbMedidacompra.Name = "cbMedidacompra"
         Me.cbMedidacompra.Size = New System.Drawing.Size(98, 24)
         Me.cbMedidacompra.TabIndex = 8
@@ -976,7 +976,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboCompraProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboCompraProveedor.FormattingEnabled = True
         Me.cboCompraProveedor.Location = New System.Drawing.Point(115, 40)
-        Me.cboCompraProveedor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboCompraProveedor.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCompraProveedor.Name = "cboCompraProveedor"
         Me.cboCompraProveedor.Size = New System.Drawing.Size(222, 21)
         Me.cboCompraProveedor.TabIndex = 3
@@ -986,7 +986,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboCompraProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboCompraProducto.FormattingEnabled = True
         Me.cboCompraProducto.Location = New System.Drawing.Point(115, 11)
-        Me.cboCompraProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboCompraProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCompraProducto.Name = "cboCompraProducto"
         Me.cboCompraProducto.Size = New System.Drawing.Size(222, 21)
         Me.cboCompraProducto.TabIndex = 1
@@ -1093,7 +1093,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboFinalDepositoID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboFinalDepositoID.FormattingEnabled = True
         Me.cboFinalDepositoID.Location = New System.Drawing.Point(80, 33)
-        Me.cboFinalDepositoID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboFinalDepositoID.Margin = New System.Windows.Forms.Padding(2)
         Me.cboFinalDepositoID.Name = "cboFinalDepositoID"
         Me.cboFinalDepositoID.Size = New System.Drawing.Size(110, 21)
         Me.cboFinalDepositoID.TabIndex = 1
@@ -1126,7 +1126,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboTipoLoteCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoLoteCompra.FormattingEnabled = True
         Me.cboTipoLoteCompra.Location = New System.Drawing.Point(96, 45)
-        Me.cboTipoLoteCompra.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboTipoLoteCompra.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTipoLoteCompra.Name = "cboTipoLoteCompra"
         Me.cboTipoLoteCompra.Size = New System.Drawing.Size(194, 21)
         Me.cboTipoLoteCompra.TabIndex = 3
@@ -1138,7 +1138,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboFinalTipoProductoFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboFinalTipoProductoFinal.FormattingEnabled = True
         Me.cboFinalTipoProductoFinal.Location = New System.Drawing.Point(96, 14)
-        Me.cboFinalTipoProductoFinal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboFinalTipoProductoFinal.Margin = New System.Windows.Forms.Padding(2)
         Me.cboFinalTipoProductoFinal.Name = "cboFinalTipoProductoFinal"
         Me.cboFinalTipoProductoFinal.Size = New System.Drawing.Size(194, 21)
         Me.cboFinalTipoProductoFinal.TabIndex = 1
@@ -1272,7 +1272,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboFinalTipoProductoActual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboFinalTipoProductoActual.FormattingEnabled = True
         Me.cboFinalTipoProductoActual.Location = New System.Drawing.Point(96, 21)
-        Me.cboFinalTipoProductoActual.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboFinalTipoProductoActual.Margin = New System.Windows.Forms.Padding(2)
         Me.cboFinalTipoProductoActual.Name = "cboFinalTipoProductoActual"
         Me.cboFinalTipoProductoActual.Size = New System.Drawing.Size(194, 24)
         Me.cboFinalTipoProductoActual.TabIndex = 1
@@ -1392,7 +1392,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboSalidaTransicubas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboSalidaTransicubas.FormattingEnabled = True
         Me.cboSalidaTransicubas.Location = New System.Drawing.Point(97, 322)
-        Me.cboSalidaTransicubas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboSalidaTransicubas.Margin = New System.Windows.Forms.Padding(2)
         Me.cboSalidaTransicubas.Name = "cboSalidaTransicubas"
         Me.cboSalidaTransicubas.Size = New System.Drawing.Size(216, 21)
         Me.cboSalidaTransicubas.TabIndex = 14
@@ -1403,7 +1403,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboSalidaRecipiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboSalidaRecipiente.FormattingEnabled = True
         Me.cboSalidaRecipiente.Location = New System.Drawing.Point(97, 290)
-        Me.cboSalidaRecipiente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboSalidaRecipiente.Margin = New System.Windows.Forms.Padding(2)
         Me.cboSalidaRecipiente.Name = "cboSalidaRecipiente"
         Me.cboSalidaRecipiente.Size = New System.Drawing.Size(216, 21)
         Me.cboSalidaRecipiente.TabIndex = 12
@@ -1414,7 +1414,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboSalidaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboSalidaProducto.FormattingEnabled = True
         Me.cboSalidaProducto.Location = New System.Drawing.Point(96, 33)
-        Me.cboSalidaProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboSalidaProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cboSalidaProducto.Name = "cboSalidaProducto"
         Me.cboSalidaProducto.Size = New System.Drawing.Size(217, 21)
         Me.cboSalidaProducto.TabIndex = 1
@@ -1597,7 +1597,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboDiferenciasTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDiferenciasTipoLote.FormattingEnabled = True
         Me.cboDiferenciasTipoLote.Location = New System.Drawing.Point(105, 44)
-        Me.cboDiferenciasTipoLote.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboDiferenciasTipoLote.Margin = New System.Windows.Forms.Padding(2)
         Me.cboDiferenciasTipoLote.Name = "cboDiferenciasTipoLote"
         Me.cboDiferenciasTipoLote.Size = New System.Drawing.Size(199, 24)
         Me.cboDiferenciasTipoLote.TabIndex = 3
@@ -1608,7 +1608,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboDiferenciaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDiferenciaProducto.FormattingEnabled = True
         Me.cboDiferenciaProducto.Location = New System.Drawing.Point(105, 16)
-        Me.cboDiferenciaProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboDiferenciaProducto.Margin = New System.Windows.Forms.Padding(2)
         Me.cboDiferenciaProducto.Name = "cboDiferenciaProducto"
         Me.cboDiferenciaProducto.Size = New System.Drawing.Size(199, 21)
         Me.cboDiferenciaProducto.TabIndex = 1
@@ -1781,7 +1781,7 @@ Partial Class frmEntMovimientosCopy
         Me.cboProceso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProceso.FormattingEnabled = True
         Me.cboProceso.Location = New System.Drawing.Point(219, 10)
-        Me.cboProceso.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cboProceso.Margin = New System.Windows.Forms.Padding(2)
         Me.cboProceso.Name = "cboProceso"
         Me.cboProceso.Size = New System.Drawing.Size(288, 21)
         Me.cboProceso.TabIndex = 3
@@ -1793,7 +1793,7 @@ Partial Class frmEntMovimientosCopy
         Me.Panel1.Controls.Add(Me.gbPartida)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 72)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(350, 684)
         Me.Panel1.TabIndex = 6
@@ -1806,7 +1806,7 @@ Partial Class frmEntMovimientosCopy
         Me.Panel2.Controls.Add(FechaLabel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 25)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(700, 47)
         Me.Panel2.TabIndex = 16
@@ -1823,7 +1823,7 @@ Partial Class frmEntMovimientosCopy
         Me.Panel3.Controls.Add(Me.butActualizar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 756)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(700, 63)
         Me.Panel3.TabIndex = 1000000001
@@ -1834,7 +1834,7 @@ Partial Class frmEntMovimientosCopy
         Me.Panel4.Controls.Add(Me.gbSalidas)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(700, 72)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(341, 684)
         Me.Panel4.TabIndex = 1000000002
@@ -1851,7 +1851,7 @@ Partial Class frmEntMovimientosCopy
         Me.Controls.Add(Me.Panel3)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = True
         Me.Name = "frmEntMovimientosCopy"
         Me.Controls.SetChildIndex(Me.Panel3, 0)
@@ -1890,7 +1890,6 @@ Partial Class frmEntMovimientosCopy
     End Sub
     Private WithEvents DtsMovimientos As La_Andaluza_MovimientosDepositos.dtsMovimientos
     Private WithEvents gbDiferencias As System.Windows.Forms.GroupBox
-    Private WithEvents cboProceso As System.Windows.Forms.ComboBox
     Private WithEvents cbFiltros As System.Windows.Forms.ComboBox
     Private WithEvents cboPartidaTipoProducto As System.Windows.Forms.ComboBox
     Private WithEvents cboPartidaDepositoID As System.Windows.Forms.ComboBox
@@ -1965,5 +1964,6 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents Panel2 As System.Windows.Forms.Panel
     Private WithEvents Panel3 As System.Windows.Forms.Panel
     Private WithEvents Panel4 As System.Windows.Forms.Panel
+    Public WithEvents cboProceso As System.Windows.Forms.ComboBox
 
 End Class

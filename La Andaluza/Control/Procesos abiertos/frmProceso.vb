@@ -1,11 +1,9 @@
 ﻿Public Class frmProceso
-    Private procesoEng As ProcesosEngine
+    Public Event Cancelado(sender As Object, e As EventArgs)
 
 
 
 
 
-    Protected Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        Me.Close()
-    End Sub
+
 End Class

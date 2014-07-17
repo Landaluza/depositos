@@ -1,10 +1,11 @@
 ﻿Public Class EngineTrasiegos
+    Inherits ProcesosEngine
 
     Private spTrasiegos As SpTrasiegos
-    Private id As Integer
+
     Public Sub New(ByVal id As Integer)
+        MyBase.New(id)
         spTrasiegos = New SpTrasiegos
-        Me.id = id
     End Sub
 
     Public Sub SetValues(ByRef cboDepositoOrigen As ComboBox, ByRef cboDepositoDestino As ComboBox, ByRef txtCantidad As TextBox, ByRef cboProducto As ComboBox, ByRef cboLote As ComboBox)

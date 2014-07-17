@@ -1,5 +1,8 @@
 ﻿Public Class frmProcesosAbiertos
     Private EngProcesosAbiertos As EngineProcesosAbiertos
+   
+
+
     Public Sub New()
 
         InitializeComponent()
@@ -20,6 +23,6 @@
     End Sub
 
     Private Sub tsTrasiegos_Click(sender As Object, e As EventArgs) Handles tsTrasiegos.Click
-        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1)
+        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.TRASIEGO)
     End Sub
 End Class

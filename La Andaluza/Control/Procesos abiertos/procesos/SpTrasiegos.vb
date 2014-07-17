@@ -27,6 +27,6 @@
                                  "cantidad=" & cantidad & "," & _
                                 "TipoProductoid=" & producto & "," & _
                                  "TipoLoteid=" & lote & _
-                                " where movimientoid=")
+                                " where movimientoid=" & id)
     End Function
 End Class
