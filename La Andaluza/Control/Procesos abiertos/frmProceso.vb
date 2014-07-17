@@ -1,4 +1,4 @@
-﻿Public MustInherit Class frmProceso
+﻿Public Class frmProceso
     Private procesoEng As ProcesosEngine
 
 

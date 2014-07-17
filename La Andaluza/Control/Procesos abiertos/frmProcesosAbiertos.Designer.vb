@@ -28,6 +28,7 @@ Partial Class frmProcesosAbiertos
         Me.tsCompacto = New System.Windows.Forms.ToolStripButton()
         Me.tsDetallado = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.tsTrasiegos = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,7 +46,7 @@ Partial Class frmProcesosAbiertos
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(768, 25)
@@ -89,6 +90,14 @@ Partial Class frmProcesosAbiertos
         Me.DataGridView1.Size = New System.Drawing.Size(768, 415)
         Me.DataGridView1.TabIndex = 2
         '
+        'tsTrasiegos
+        '
+        Me.tsTrasiegos.Image = CType(resources.GetObject("tsTrasiegos.Image"), System.Drawing.Image)
+        Me.tsTrasiegos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsTrasiegos.Name = "tsTrasiegos"
+        Me.tsTrasiegos.Size = New System.Drawing.Size(77, 22)
+        Me.tsTrasiegos.Text = "Trasiegos"
+        '
         'frmProcesosAbiertos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,4 +122,5 @@ Partial Class frmProcesosAbiertos
     Friend WithEvents tsCompacto As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsDetallado As System.Windows.Forms.ToolStripButton
     Private WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents tsTrasiegos As System.Windows.Forms.ToolStripButton
 End Class
