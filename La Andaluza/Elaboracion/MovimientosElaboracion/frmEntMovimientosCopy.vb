@@ -1,6 +1,8 @@
 Public Class frmEntMovimientosCopy
     Inherits FrmAHeredarEntOld
 
+    Public Event Saved(sender As Object, e As EventArgs)
+
     Private Const ABREVIATURA_TIPO_LOTE_ENVASADO As String = "ENV"
     Private Const DESCRIPCION_PROCESO_DIFERENCIAS As String = "Diferencias"
     Private Const DESCRIPCION_TIPO_LOTE_RECEPCION As String = "Recepcion"
@@ -588,6 +590,7 @@ Public Class frmEntMovimientosCopy
         Try
             MOVER()
             dtb.TerminarTransaccion()
+            RaiseEvent Saved(Me, Nothing)
             messagebox.show("Movimiento Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.reiniciar()
         Catch ex As Exception

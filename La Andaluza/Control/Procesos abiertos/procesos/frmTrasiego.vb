@@ -33,6 +33,7 @@
 
 
         frmMovimientos = New frmEntMovimientosCopy
+        AddHandler frmMovimientos.Saved, AddressOf btnBorrar_Click
         frmMovimientos.Show()
         frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.TRASIEGO.ToString, cboDepositoDestino.SelectedValue.ToString, cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
         frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.TRASIEGO
