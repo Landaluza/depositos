@@ -40,12 +40,14 @@ Partial Class frmTrasiego
         Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.Location = New System.Drawing.Point(870, 0)
         Me.btnBorrar.Size = New System.Drawing.Size(75, 96)
+        Me.btnBorrar.TabIndex = 9
         '
         'btnExportar
         '
         Me.btnExportar.FlatAppearance.BorderSize = 0
         Me.btnExportar.Location = New System.Drawing.Point(945, 0)
         Me.btnExportar.Size = New System.Drawing.Size(75, 96)
+        Me.btnExportar.TabIndex = 10
         '
         'pbIconoOperacion
         '
@@ -70,7 +72,7 @@ Partial Class frmTrasiego
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
-        Me.txtCantidad.TabIndex = 1
+        Me.txtCantidad.TabIndex = 2
         '
         'cboDepositoDestino
         '
@@ -81,7 +83,7 @@ Partial Class frmTrasiego
         Me.cboDepositoDestino.Location = New System.Drawing.Point(339, 33)
         Me.cboDepositoDestino.Name = "cboDepositoDestino"
         Me.cboDepositoDestino.Size = New System.Drawing.Size(70, 21)
-        Me.cboDepositoDestino.TabIndex = 2
+        Me.cboDepositoDestino.TabIndex = 4
         '
         'Label1
         '
@@ -90,7 +92,7 @@ Partial Class frmTrasiego
         Me.Label1.Location = New System.Drawing.Point(186, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(11, 13)
-        Me.Label1.TabIndex = 4
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "-"
         '
         'Label2
@@ -100,7 +102,7 @@ Partial Class frmTrasiego
         Me.Label2.Location = New System.Drawing.Point(320, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(11, 13)
-        Me.Label2.TabIndex = 5
+        Me.Label2.TabIndex = 3
         Me.Label2.Text = "-"
         '
         'cboProducto
@@ -112,7 +114,7 @@ Partial Class frmTrasiego
         Me.cboProducto.Location = New System.Drawing.Point(429, 33)
         Me.cboProducto.Name = "cboProducto"
         Me.cboProducto.Size = New System.Drawing.Size(168, 21)
-        Me.cboProducto.TabIndex = 7
+        Me.cboProducto.TabIndex = 6
         '
         'cboLote
         '
@@ -132,7 +134,7 @@ Partial Class frmTrasiego
         Me.Label3.Location = New System.Drawing.Point(606, 37)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(11, 13)
-        Me.Label3.TabIndex = 9
+        Me.Label3.TabIndex = 7
         Me.Label3.Text = "-"
         '
         'Label4
@@ -142,7 +144,7 @@ Partial Class frmTrasiego
         Me.Label4.Location = New System.Drawing.Point(412, 37)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(11, 13)
-        Me.Label4.TabIndex = 10
+        Me.Label4.TabIndex = 5
         Me.Label4.Text = "-"
         '
         'Label5
@@ -152,7 +154,7 @@ Partial Class frmTrasiego
         Me.Label5.Location = New System.Drawing.Point(104, 62)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
-        Me.Label5.TabIndex = 12
+        Me.Label5.TabIndex = 11
         Me.Label5.Text = "Trasiego"
         '
         'frmTrasiego

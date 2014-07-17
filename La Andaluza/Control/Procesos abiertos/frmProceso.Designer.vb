@@ -57,6 +57,7 @@ Partial Class frmProceso
         '
         Me.pbIconoOperacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pbIconoOperacion.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pbIconoOperacion.Enabled = False
         Me.pbIconoOperacion.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.trasiego
         Me.pbIconoOperacion.Location = New System.Drawing.Point(0, 0)
         Me.pbIconoOperacion.Name = "pbIconoOperacion"

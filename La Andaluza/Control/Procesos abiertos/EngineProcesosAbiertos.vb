@@ -26,11 +26,14 @@
     End Sub
     Public Sub SetValues(ByRef panel As FlowLayoutPanel, ByRef datagrid As DataGridView)
         Dim dt As DataTable = spProcesosAbiertos.devolverProcesosAbiertos
+        Dim frm As frmTrasiego
+        Dim separador As Panel
+        Dim Generator As System.Random = New System.Random()
 
         If Not dt Is Nothing Then
             For Each dr As DataRow In dt.Rows
 
-                Dim frm As New frmTrasiego(Convert.ToInt32(dr.Item(0)))
+                frm = New frmTrasiego(Convert.ToInt32(dr.Item(0)))
                 frm.WindowState = FormWindowState.Normal
                 frm.TopLevel = False
                 frm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -38,6 +41,11 @@
                 frm.Show()
                 panel.Controls.Add(frm)
 
+                separador = New Panel
+                separador.BackColor = Color.Black
+                separador.Height = 2
+                separador.Width = 1020 + (Generator.Next(0, 9) * 10)
+                panel.Controls.Add(separador)
             Next
             datagrid.DataSource = dt
         End If
