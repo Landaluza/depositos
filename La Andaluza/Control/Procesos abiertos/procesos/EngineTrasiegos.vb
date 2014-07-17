@@ -76,7 +76,7 @@
             cantidad = 0
         Else
             Try
-                cantidad = CType(txtCantidad.Text, Double)
+                cantidad = CType(txtCantidad.Text.Replace(".", ","), Double)
             Catch ex As Exception
                 cantidad = 0
             End Try

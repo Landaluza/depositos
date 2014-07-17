@@ -112,7 +112,7 @@ Partial Class frmProcesosAbiertos
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProcesosAbiertos"
-        Me.Text = "frmProcesosAbiertos"
+        Me.Text = "Movimientos Abiertos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

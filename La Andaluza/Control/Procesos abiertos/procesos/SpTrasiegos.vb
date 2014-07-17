@@ -22,12 +22,12 @@
 
     Public Function actualizar(ByVal origen As Integer, ByVal destino As Integer, ByVal cantidad As Double, ByVal producto As Integer, ByVal lote As Integer, ByVal id As Integer) As Boolean
         Return Me.ConsultaAlteraciones("update movimientosAbiertos set " & _
-                               "entradepositoid=" & destino & "," & _
-                                 "saledepositoid=" & origen & "," & _
-                                 "cantidad=" & cantidad & "," & _
-                                "TipoProductoid=" & producto & "," & _
-                                 "TipoLoteid=" & lote & _
-                                " where movimientoid=" & id)
+                               "entradepositoid=" & destino.ToString & "," & _
+                                 "saledepositoid=" & origen.ToString & "," & _
+                                 "cantidad=" & cantidad.ToString.Replace(",", ".") & "," & _
+                                "TipoProductoid=" & producto.ToString & "," & _
+                                 "TipoLoteid=" & lote.ToString & _
+                                " where movimientoid=" & id.ToString)
     End Function
 
 

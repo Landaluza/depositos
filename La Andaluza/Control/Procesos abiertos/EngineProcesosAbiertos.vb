@@ -53,7 +53,10 @@
 
     Public Sub añadir_Elemento(ByRef FlowLayoutPanel1 As FlowLayoutPanel, ByVal tipoproceso As Integer)
         Dim proceso As Integer = Me.spProcesosAbiertos.añadirProceso(tipoproceso)
+
         If proceso <> 0 Then
+            Dim separador As Panel
+            Dim Generator As System.Random = New System.Random()
             Dim frm As New frmTrasiego(proceso)
             frm.WindowState = FormWindowState.Normal
             frm.TopLevel = False
@@ -61,6 +64,14 @@
             frm.Dock = DockStyle.None
             frm.Show()
             FlowLayoutPanel1.Controls.Add(frm)
+
+            separador = New Panel
+            separador.BackColor = Color.Black
+            separador.Height = 2
+            separador.Width = 1020 + (Generator.Next(0, 9) * 10)
+            FlowLayoutPanel1.Controls.Add(separador)
         End If
     End Sub
+
+   
 End Class

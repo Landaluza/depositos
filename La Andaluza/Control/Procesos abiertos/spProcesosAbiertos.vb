@@ -6,10 +6,9 @@
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
         Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + convert(varchar, Cantidad) +' litros del deposito ' + convert(varchar,dep.codigo) + ' al deposito ' + convert(varchar,dep2.codigo) " & _
-                            "from movimientosAbiertos, procesos, depositos dep, depositos dep2 " & _
-                            "where movimientosAbiertos.procesoid = procesos.ProcesoID " & _
-                            "and movimientosAbiertos.EntraDepositoID = dep2.DepositoID  " & _
-                            "and movimientosAbiertos.SaleDepositoID  = dep.DepositoID", False)
+                            "from movimientosAbiertos inner join procesos on movimientosAbiertos.procesoid = procesos.ProcesoID " & _
+                            "left join  depositos dep on  movimientosAbiertos.SaleDepositoID  = dep.DepositoID " & _
+                            "left join depositos dep2 on movimientosAbiertos.EntraDepositoID = dep2.DepositoID  ", False)
     End Function
     
 
