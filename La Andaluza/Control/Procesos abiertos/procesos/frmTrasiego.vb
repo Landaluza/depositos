@@ -3,9 +3,9 @@
 
     Private trasiegosEng As EngineTrasiegos
 
-    Public Sub New()
-        InitializeComponent()
-    End Sub
+    'Public Sub New()
+    '    InitializeComponent()
+    'End Sub
 
     Public Sub New(ByVal id As Integer)
 
