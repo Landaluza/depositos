@@ -5,7 +5,7 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
-        Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from procesosabiertos")
+        Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from procesosabiertos", False)
     End Function
 
     Public Function borrar_proceso_abierto(ByVal id As Integer) As Boolean
@@ -20,7 +20,7 @@
                 Return 0
             End If
 
-            Dim dt As DataTable = Me.Consultar("select max(movimientoid from movimientosAbiertos)")
+            Dim dt As DataTable = Me.Consultar("select max(movimientoid) from movimientosAbiertos", False)
             If dt Is Nothing Then
                 Me.CancelarTransaccion()
                 Return 0
