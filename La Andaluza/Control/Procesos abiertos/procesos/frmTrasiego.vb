@@ -32,6 +32,7 @@
         frmEspera = New frmEspera("Cargando datos")
         frmEspera.Show()
 
+
         frmMovimientos = New frmEntMovimientosCopy
         frmMovimientos.Show()
         frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.TRASIEGO.ToString, cboDepositoDestino.SelectedValue.ToString, cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
