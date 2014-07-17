@@ -5,7 +5,7 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
-        Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from procesosabiertos", False)
+        Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from movimientosAbiertos", False)
     End Function
     
 
@@ -29,5 +29,13 @@
             Me.CancelarTransaccion()
             Return 0
         End Try
+    End Function
+
+    Public Function borrar(ByVal id As Integer) As Boolean
+        Return ConsultaAlteraciones("delete from movimientosabiertos where movimientoid =" & id)
+    End Function
+
+    Public Function seleccionar(ByVal id As Integer) As DataTable
+        Return Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID, tipoProductoid, tipoloteid from procesosabiertos where movimientoid=" & id, False)
     End Function
 End Class

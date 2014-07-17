@@ -29,4 +29,6 @@
                                  "TipoLoteid=" & lote & _
                                 " where movimientoid=" & id)
     End Function
+
+
 End Class

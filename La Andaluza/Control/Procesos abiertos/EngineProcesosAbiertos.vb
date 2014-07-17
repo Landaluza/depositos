@@ -30,6 +30,14 @@
         If Not dt Is Nothing Then
             For Each dr As DataRow In dt.Rows
 
+                Dim frm As New frmTrasiego(Convert.ToInt32(dr.Item(0)))
+                frm.WindowState = FormWindowState.Normal
+                frm.TopLevel = False
+                frm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+                frm.Dock = DockStyle.None
+                frm.Show()
+                panel.Controls.Add(frm)
+
             Next
             datagrid.DataSource = dt
         End If

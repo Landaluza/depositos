@@ -6,6 +6,11 @@
 
     Public Function borrar_proceso_abierto() As Boolean
         Dim sp As New spProcesosAbiertos
-        Return sp.ConsultaAlteraciones("delete from movimientosabiertos where movimientoid =" & id)
+        Return sp.borrar(id)
+    End Function
+
+    Public Function seleccionar() As DataTable
+        Dim sp As New spProcesosAbiertos
+        Return sp.seleccionar(id)
     End Function
 End Class

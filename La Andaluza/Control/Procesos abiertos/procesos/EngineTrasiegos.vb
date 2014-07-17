@@ -13,6 +13,13 @@
         cboLote.mam_DataSource(spTrasiegos.devolver_tipos_de_lotes(), False, )
         cboDepositoDestino.mam_DataSource(spTrasiegos.devolver_depositos(), False, )
         cboDepositoOrigen.mam_DataSource(spTrasiegos.devolver_depositos_ocupados(), False, )
+
+        Dim dt As DataTable = MyBase.seleccionar()
+        cboDepositoOrigen.SelectedValue = dt.Rows(0).Item(6)
+        cboDepositoDestino.SelectedValue = dt.Rows(0).Item(5)
+        txtCantidad.Text = dt.Rows(0).Item(3).ToString
+        cboProducto.SelectedValue = dt.Rows(0).Item(9)
+        cboLote.SelectedValue = dt.Rows(0).Item(10)
     End Sub
 
     Public Sub actualizar(ByRef cboDepositoOrigen As ComboBox, ByRef cboDepositoDestino As ComboBox, ByRef txtCantidad As TextBox, ByRef cboProducto As ComboBox, ByRef cboLote As ComboBox)

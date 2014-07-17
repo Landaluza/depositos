@@ -9,7 +9,6 @@
 
         Me.pbIconoOperacion.Image = My.Resources.trasiego
         trasiegosEng = New EngineTrasiegos(id)
-
     End Sub
 
 
