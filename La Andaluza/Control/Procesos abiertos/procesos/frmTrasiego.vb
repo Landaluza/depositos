@@ -16,7 +16,7 @@
         trasiegosEng.setvalues(Me.cboDepositoOrigen, Me.cboDepositoDestino, Me.txtCantidad, Me.cboProducto, cboLote)
     End Sub
 
-    Private Sub autoguardado() Handles cboDepositoDestino.SelectedValueChanged, cboDepositoOrigen.SelectedValueChanged, cboLote.SelectedValueChanged, cboProducto.SelectedValueChanged, txtCantidad.TextChanged
+    Private Sub autoguardado()
         trasiegosEng.actualizar(Me.cboDepositoOrigen, Me.cboDepositoDestino, Me.txtCantidad, Me.cboProducto, Me.cboLote)
     End Sub
 
@@ -44,5 +44,13 @@
 
 
         frmEspera.Close()
+    End Sub
+
+    Private Sub frmTrasiego_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        AddHandler cboDepositoDestino.SelectedValueChanged, AddressOf autoguardado
+        AddHandler cboDepositoOrigen.SelectedValueChanged, AddressOf autoguardado
+        AddHandler cboLote.SelectedValueChanged, AddressOf autoguardado
+        AddHandler cboProducto.SelectedValueChanged, AddressOf autoguardado
+        AddHandler txtCantidad.TextChanged, AddressOf autoguardado
     End Sub
 End Class
