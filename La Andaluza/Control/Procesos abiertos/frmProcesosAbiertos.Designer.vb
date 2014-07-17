@@ -27,8 +27,8 @@ Partial Class frmProcesosAbiertos
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.tsCompacto = New System.Windows.Forms.ToolStripButton()
         Me.tsDetallado = New System.Windows.Forms.ToolStripButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tsTrasiegos = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -72,6 +72,14 @@ Partial Class frmProcesosAbiertos
         Me.tsDetallado.Size = New System.Drawing.Size(23, 22)
         Me.tsDetallado.Text = "Vista detallada"
         '
+        'tsTrasiegos
+        '
+        Me.tsTrasiegos.Image = CType(resources.GetObject("tsTrasiegos.Image"), System.Drawing.Image)
+        Me.tsTrasiegos.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsTrasiegos.Name = "tsTrasiegos"
+        Me.tsTrasiegos.Size = New System.Drawing.Size(77, 22)
+        Me.tsTrasiegos.Text = "Trasiegos"
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -89,14 +97,6 @@ Partial Class frmProcesosAbiertos
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(768, 415)
         Me.DataGridView1.TabIndex = 2
-        '
-        'tsTrasiegos
-        '
-        Me.tsTrasiegos.Image = CType(resources.GetObject("tsTrasiegos.Image"), System.Drawing.Image)
-        Me.tsTrasiegos.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsTrasiegos.Name = "tsTrasiegos"
-        Me.tsTrasiegos.Size = New System.Drawing.Size(77, 22)
-        Me.tsTrasiegos.Text = "Trasiegos"
         '
         'frmProcesosAbiertos
         '

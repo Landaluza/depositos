@@ -5,7 +5,11 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
-        Return Me.Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID from movimientosAbiertos", False)
+        Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + Cantidad +' litros del deposito ' +dep.codigo + ' al deposito ' + dep2.codigo,LoteID,FiltroID " & _
+                            "from movimientosAbiertos, procesos, depositos dep, depositos dep2 " & _
+                            "where movimientosAbiertos.procesoid = procesos.ProcesoID " & _
+                            "and movimientosAbiertos.EntraDepositoID = dep2.DepositoI  " & _
+                            "and movimientosAbiertos.SaleDepositoID  = dep.DepositoID", False)
     End Function
     
 

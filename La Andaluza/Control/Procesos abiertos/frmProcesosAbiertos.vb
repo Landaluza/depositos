@@ -25,4 +25,9 @@
     Private Sub tsTrasiegos_Click(sender As Object, e As EventArgs) Handles tsTrasiegos.Click
         Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.TRASIEGO)
     End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        tsDetallado_Click(Nothing, Nothing)
+        Me.FlowLayoutPanel1.Controls(e.RowIndex).Focus()
+    End Sub
 End Class
