@@ -36,6 +36,6 @@
     End Function
 
     Public Function seleccionar(ByVal id As Integer) As DataTable
-        Return Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID, tipoProductoid, tipoloteid from procesosabiertos where movimientoid=" & id, False)
+        Return Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID, tipoProductoid, tipoloteid from movimientosabiertos where movimientoid=" & id, False)
     End Function
 End Class
