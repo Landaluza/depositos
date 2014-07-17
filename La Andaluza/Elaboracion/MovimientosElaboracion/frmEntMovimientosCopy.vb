@@ -184,7 +184,7 @@ Public Class frmEntMovimientosCopy
         Posicion = Pos
         ctlMov.SetMovimientoID(MovimientoID)
 
-        dtpFecha.Value = Fecha
+        'dtpFecha.Value = Fecha
         cboProceso.Text = ProcesoI
         cboPartidaDepositoID.Text = SaleDepositoID
         cboFinalDepositoID.Text = EntraDepositoID

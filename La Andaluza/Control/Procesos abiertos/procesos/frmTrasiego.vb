@@ -29,10 +29,20 @@
 
 
     Private Sub btnExportar_Click(sender As Object, e As EventArgs) Handles btnExportar.Click
-        Dim frm As New frmEntMovimientosCopy
-        frm.Show()
-        frm.CargarDatos(0, 0, New Date, CType(Me.txtCantidad.Text, Double), "", EngineProcesosAbiertos.TRASIEGO.ToString, cboDepositoDestino.SelectedValue.ToString, cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
-        frm.cboProceso.SelectedValue = EngineProcesosAbiertos.TRASIEGO
+        frmEspera = New frmEspera("Cargando datos")
+        frmEspera.Show()
 
+        frmMovimientos = New frmEntMovimientosCopy
+        frmMovimientos.Show()
+        frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.TRASIEGO.ToString, cboDepositoDestino.SelectedValue.ToString, cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
+        frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.TRASIEGO
+        frmMovimientos.cboPartidaDepositoID.SelectedValue = Me.cboDepositoOrigen.SelectedValue
+        frmMovimientos.cboFinalDepositoID.SelectedValue = Me.cboDepositoDestino.SelectedValue
+        frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = Me.cboProducto.SelectedValue
+        frmMovimientos.cboTipoLoteCompra.SelectedValue = Me.cboLote.SelectedValue
+        frmMovimientos.txtCantidad.Text = Me.txtCantidad.Text
+
+
+        frmEspera.Close()
     End Sub
 End Class

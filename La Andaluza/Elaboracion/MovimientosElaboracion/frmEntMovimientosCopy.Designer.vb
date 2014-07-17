@@ -1892,13 +1892,9 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents gbDiferencias As System.Windows.Forms.GroupBox
     Private WithEvents cbFiltros As System.Windows.Forms.ComboBox
     Private WithEvents cboPartidaTipoProducto As System.Windows.Forms.ComboBox
-    Private WithEvents cboPartidaDepositoID As System.Windows.Forms.ComboBox
     Private WithEvents cbMedidacompra As System.Windows.Forms.ComboBox
     Private WithEvents cboCompraProveedor As System.Windows.Forms.ComboBox
     Private WithEvents cboCompraProducto As System.Windows.Forms.ComboBox
-    Private WithEvents cboFinalDepositoID As System.Windows.Forms.ComboBox
-    Private WithEvents cboTipoLoteCompra As System.Windows.Forms.ComboBox
-    Private WithEvents cboFinalTipoProductoFinal As System.Windows.Forms.ComboBox
     Private WithEvents cboFinalTipoProductoActual As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaTransicubas As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
@@ -1909,7 +1905,6 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents cboAdicionProducto As System.Windows.Forms.ComboBox
     Private WithEvents cbMedidaLote As System.Windows.Forms.ComboBox
     Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
-    Private WithEvents txtCantidad As La_Andaluza_MovimientosDepositos.CuadroTextoNumerosNegativos
     Private WithEvents txtObservaciones As CuadroDeTexto
     Private WithEvents gbPartida As System.Windows.Forms.GroupBox
     Private WithEvents gbFinal As System.Windows.Forms.GroupBox
@@ -1965,5 +1960,10 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents Panel3 As System.Windows.Forms.Panel
     Private WithEvents Panel4 As System.Windows.Forms.Panel
     Public WithEvents cboProceso As System.Windows.Forms.ComboBox
+    Public WithEvents cboPartidaDepositoID As System.Windows.Forms.ComboBox
+    Public WithEvents cboFinalDepositoID As System.Windows.Forms.ComboBox
+    Public WithEvents cboTipoLoteCompra As System.Windows.Forms.ComboBox
+    Public WithEvents cboFinalTipoProductoFinal As System.Windows.Forms.ComboBox
+    Public WithEvents txtCantidad As La_Andaluza_MovimientosDepositos.CuadroTextoNumerosNegativos
 
 End Class
