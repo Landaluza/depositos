@@ -39,19 +39,19 @@ Partial Class frmTrasiego
         '
         Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.Location = New System.Drawing.Point(870, 0)
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 96)
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 94)
         Me.btnBorrar.TabIndex = 9
         '
         'btnExportar
         '
         Me.btnExportar.FlatAppearance.BorderSize = 0
         Me.btnExportar.Location = New System.Drawing.Point(945, 0)
-        Me.btnExportar.Size = New System.Drawing.Size(75, 96)
+        Me.btnExportar.Size = New System.Drawing.Size(75, 94)
         Me.btnExportar.TabIndex = 10
         '
         'pbIconoOperacion
         '
-        Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 96)
+        Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 94)
         '
         'cboDepositoOrigen
         '
@@ -63,6 +63,7 @@ Partial Class frmTrasiego
         Me.cboDepositoOrigen.Name = "cboDepositoOrigen"
         Me.cboDepositoOrigen.Size = New System.Drawing.Size(73, 21)
         Me.cboDepositoOrigen.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.cboDepositoOrigen, "Deposito de salida")
         '
         'txtCantidad
         '
@@ -73,6 +74,7 @@ Partial Class frmTrasiego
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
         Me.txtCantidad.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.txtCantidad, "Litros del movimiento")
         '
         'cboDepositoDestino
         '
@@ -84,6 +86,7 @@ Partial Class frmTrasiego
         Me.cboDepositoDestino.Name = "cboDepositoDestino"
         Me.cboDepositoDestino.Size = New System.Drawing.Size(70, 21)
         Me.cboDepositoDestino.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.cboDepositoDestino, "Deposito de entrada")
         '
         'Label1
         '
@@ -115,6 +118,7 @@ Partial Class frmTrasiego
         Me.cboProducto.Name = "cboProducto"
         Me.cboProducto.Size = New System.Drawing.Size(168, 21)
         Me.cboProducto.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.cboProducto, "Tipo de producto de la salida")
         '
         'cboLote
         '
@@ -126,6 +130,7 @@ Partial Class frmTrasiego
         Me.cboLote.Name = "cboLote"
         Me.cboLote.Size = New System.Drawing.Size(175, 21)
         Me.cboLote.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.cboLote, "Tipo de lote de la salida")
         '
         'Label3
         '
@@ -161,7 +166,7 @@ Partial Class frmTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1020, 96)
+        Me.ClientSize = New System.Drawing.Size(1020, 107)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
