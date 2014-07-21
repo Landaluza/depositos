@@ -55,6 +55,7 @@
 
             Next
             datagrid.DataSource = dt
+            datagrid.Columns(3).Visible = False
         End If
     End Sub
 

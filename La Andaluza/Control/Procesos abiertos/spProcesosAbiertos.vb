@@ -5,10 +5,12 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
-        Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + convert(varchar, Cantidad) +' litros del deposito ' + convert(varchar,dep.codigo) + ' al deposito ' + convert(varchar,dep2.codigo) , movimientosAbiertos.ProcesoID " & _
-                            "from movimientosAbiertos inner join procesos on movimientosAbiertos.procesoid = procesos.ProcesoID " & _
-                            "left join  depositos dep on  movimientosAbiertos.SaleDepositoID  = dep.DepositoID " & _
-                            "left join depositos dep2 on movimientosAbiertos.EntraDepositoID = dep2.DepositoID  ", False)
+        'Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + convert(varchar, Cantidad) +' litros del deposito ' + convert(varchar,dep.codigo) + ' al deposito ' + convert(varchar,dep2.codigo) , movimientosAbiertos.ProcesoID " & _
+        '                    "from movimientosAbiertos inner join procesos on movimientosAbiertos.procesoid = procesos.ProcesoID " & _
+        '                    "left join  depositos dep on  movimientosAbiertos.SaleDepositoID  = dep.DepositoID " & _
+        '                    "left join depositos dep2 on movimientosAbiertos.EntraDepositoID = dep2.DepositoID  ", False)
+
+        Return Me.Consultar("ListadoMovimientosPendientes", True)
     End Function
     
 
