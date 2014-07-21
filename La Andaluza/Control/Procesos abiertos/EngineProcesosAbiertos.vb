@@ -39,6 +39,8 @@
                         frm = New frmCompra(Convert.ToInt32(dr.Item(0)))
                     Case FILTRACION
                         frm = New frmFiltrado(Convert.ToInt32(dr.Item(0)))
+                    Case GRANEL
+                        frm = New frmGraneles(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -69,6 +71,8 @@
                     frm = New frmCompra(proceso)
                 Case FILTRACION
                     frm = New frmFiltrado(proceso)
+                Case GRANEL
+                    frm = New frmGraneles(proceso)
                 Case Else
                     frm = Nothing
             End Select

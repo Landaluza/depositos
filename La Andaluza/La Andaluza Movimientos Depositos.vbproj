@@ -197,6 +197,7 @@
     <Compile Include="Control\Procesos abiertos\ProcesoMovimiento.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineTrasiegos.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\frmCompra.Designer.vb">
       <DependentUpon>frmCompra.vb</DependentUpon>
@@ -210,6 +211,12 @@
     <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmGraneles.Designer.vb">
+      <DependentUpon>frmGraneles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmGraneles.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.Designer.vb">
       <DependentUpon>frmTrasiego.vb</DependentUpon>
     </Compile>
@@ -219,6 +226,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\ProcesosEngine.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpTrasiegos.vb" />
     <Compile Include="Control\Procesos\DBO_Procesos.vb" />
     <Compile Include="Control\Procesos\spProcesos.vb" />
@@ -489,6 +497,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmGraneles.resx">
+      <DependentUpon>frmGraneles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmTrasiego.resx">
       <DependentUpon>frmTrasiego.vb</DependentUpon>
