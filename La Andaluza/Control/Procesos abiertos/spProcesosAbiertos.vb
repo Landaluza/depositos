@@ -5,7 +5,7 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolverProcesosAbiertos() As DataTable
-        Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + convert(varchar, Cantidad) +' litros del deposito ' + convert(varchar,dep.codigo) + ' al deposito ' + convert(varchar,dep2.codigo) " & _
+        Return Me.Consultar("select MovimientoID,Fecha,procesos.Descripcion + ' de ' + convert(varchar, Cantidad) +' litros del deposito ' + convert(varchar,dep.codigo) + ' al deposito ' + convert(varchar,dep2.codigo) , movimientosAbiertos.ProcesoID " & _
                             "from movimientosAbiertos inner join procesos on movimientosAbiertos.procesoid = procesos.ProcesoID " & _
                             "left join  depositos dep on  movimientosAbiertos.SaleDepositoID  = dep.DepositoID " & _
                             "left join depositos dep2 on movimientosAbiertos.EntraDepositoID = dep2.DepositoID  ", False)
@@ -39,6 +39,6 @@
     End Function
 
     Public Function seleccionar(ByVal id As Integer) As DataTable
-        Return Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID, tipoProductoid, tipoloteid from movimientosabiertos where movimientoid=" & id, False)
+        Return Consultar("select MovimientoID,Fecha,Observaciones,Cantidad,ProcesoID,EntraDepositoID,SaleDepositoID,LoteID,FiltroID, tipoProductoid, tipoloteid, ProveedorID, TipoProductobID from movimientosabiertos where movimientoid=" & id, False)
     End Function
 End Class

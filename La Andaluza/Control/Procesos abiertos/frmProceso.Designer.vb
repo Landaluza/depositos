@@ -108,10 +108,10 @@ Partial Class frmProceso
         Me.ResumeLayout(False)
 
     End Sub
-    Protected WithEvents btnBorrar As System.Windows.Forms.Button
-    Protected WithEvents btnExportar As System.Windows.Forms.Button
     Protected WithEvents pbIconoOperacion As System.Windows.Forms.PictureBox
     Private WithEvents Panseparador As System.Windows.Forms.Panel
     Private WithEvents Panel1 As System.Windows.Forms.Panel
     Protected WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Public WithEvents btnBorrar As System.Windows.Forms.Button
+    Public WithEvents btnExportar As System.Windows.Forms.Button
 End Class

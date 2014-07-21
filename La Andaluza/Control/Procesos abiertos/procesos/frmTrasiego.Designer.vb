@@ -35,6 +35,11 @@ Partial Class frmTrasiego
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'pbIconoOperacion
+        '
+        Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 94)
+        Me.ToolTip1.SetToolTip(Me.pbIconoOperacion, "Trasiego")
+        '
         'btnBorrar
         '
         Me.btnBorrar.FlatAppearance.BorderSize = 0
@@ -48,10 +53,6 @@ Partial Class frmTrasiego
         Me.btnExportar.Location = New System.Drawing.Point(945, 0)
         Me.btnExportar.Size = New System.Drawing.Size(75, 94)
         Me.btnExportar.TabIndex = 10
-        '
-        'pbIconoOperacion
-        '
-        Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 94)
         '
         'cboDepositoOrigen
         '
@@ -197,14 +198,14 @@ Partial Class frmTrasiego
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents cboDepositoOrigen As System.Windows.Forms.ComboBox
-    Private WithEvents txtCantidad As System.Windows.Forms.TextBox
-    Private WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
     Private WithEvents Label1 As System.Windows.Forms.Label
     Private WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents cboProducto As System.Windows.Forms.ComboBox
-    Private WithEvents cboLote As System.Windows.Forms.ComboBox
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
     Private WithEvents Label5 As System.Windows.Forms.Label
+    Public WithEvents cboDepositoOrigen As System.Windows.Forms.ComboBox
+    Public WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Public WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
+    Public WithEvents cboProducto As System.Windows.Forms.ComboBox
+    Public WithEvents cboLote As System.Windows.Forms.ComboBox
 End Class

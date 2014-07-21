@@ -1893,8 +1893,6 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents cbFiltros As System.Windows.Forms.ComboBox
     Private WithEvents cboPartidaTipoProducto As System.Windows.Forms.ComboBox
     Private WithEvents cbMedidacompra As System.Windows.Forms.ComboBox
-    Private WithEvents cboCompraProveedor As System.Windows.Forms.ComboBox
-    Private WithEvents cboCompraProducto As System.Windows.Forms.ComboBox
     Private WithEvents cboFinalTipoProductoActual As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaTransicubas As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
@@ -1919,7 +1917,6 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents txtFinalCantidadActual As CuadroDeTexto
     Private WithEvents txtFinalLoteActual As CuadroDeTexto
     Private WithEvents gbCompra As System.Windows.Forms.GroupBox
-    Private WithEvents txtCompraCantidad As CuadroDeTexto
     Private WithEvents txtCompraLote As CuadroDeTexto
     Private WithEvents lblProcesoCompra As System.Windows.Forms.Label
     Private WithEvents txtAjusteCantidadActual As CuadroDeTexto
@@ -1965,5 +1962,8 @@ Partial Class frmEntMovimientosCopy
     Public WithEvents cboTipoLoteCompra As System.Windows.Forms.ComboBox
     Public WithEvents cboFinalTipoProductoFinal As System.Windows.Forms.ComboBox
     Public WithEvents txtCantidad As La_Andaluza_MovimientosDepositos.CuadroTextoNumerosNegativos
+    Public WithEvents cboCompraProveedor As System.Windows.Forms.ComboBox
+    Public WithEvents cboCompraProducto As System.Windows.Forms.ComboBox
+    Public WithEvents txtCompraCantidad As La_Andaluza_MovimientosDepositos.CuadroDeTexto
 
 End Class

@@ -1,82 +1,92 @@
 ﻿Public Class EngineTrasiegos
     Inherits ProcesosEngine
+    Implements ProcesoMovimiento
 
     Private spTrasiegos As SpTrasiegos
-
-    Public Sub New(ByVal id As Integer)
+    Private gui As frmTrasiego
+    Public Sub New(ByVal id As Integer, ByRef frm As frmTrasiego)
         MyBase.New(id)
         spTrasiegos = New SpTrasiegos
+        gui = frm
+
+        CargarDatos()
+        AddHandler gui.cboDepositoDestino.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cboDepositoOrigen.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cboLote.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cboProducto.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.txtCantidad.TextChanged, AddressOf Autoguardado
+        AddHandler gui.btnExportar.Click, AddressOf Exportar
+        AddHandler gui.btnBorrar.Click, AddressOf borrar
     End Sub
 
-    Public Sub SetValues(ByRef cboDepositoOrigen As ComboBox, ByRef cboDepositoDestino As ComboBox, ByRef txtCantidad As TextBox, ByRef cboProducto As ComboBox, ByRef cboLote As ComboBox)
-        cboProducto.mam_DataSource(spTrasiegos.devolver_productos(), False, )
-        cboLote.mam_DataSource(spTrasiegos.devolver_tipos_de_lotes(), False, )
-        cboDepositoDestino.mam_DataSource(spTrasiegos.devolver_depositos(), False, )
-        cboDepositoOrigen.mam_DataSource(spTrasiegos.devolver_depositos_ocupados(), False, )
+    Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
+        gui.cboProducto.mam_DataSource(spTrasiegos.devolver_productos(), False, )
+        gui.cboLote.mam_DataSource(spTrasiegos.devolver_tipos_de_lotes(), False, )
+        gui.cboDepositoDestino.mam_DataSource(spTrasiegos.devolver_depositos(), False, )
+        gui.cboDepositoOrigen.mam_DataSource(spTrasiegos.devolver_depositos_ocupados(), False, )
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then
-            cboDepositoOrigen.SelectedValue = dt.Rows(0).Item(6)
-            cboDepositoDestino.SelectedValue = dt.Rows(0).Item(5)
-            txtCantidad.Text = dt.Rows(0).Item(3).ToString
-            cboProducto.SelectedValue = dt.Rows(0).Item(9)
-            cboLote.SelectedValue = dt.Rows(0).Item(10)
+            gui.cboDepositoOrigen.SelectedValue = dt.Rows(0).Item(6)
+            gui.cboDepositoDestino.SelectedValue = dt.Rows(0).Item(5)
+            gui.txtCantidad.Text = dt.Rows(0).Item(3).ToString
+            gui.cboProducto.SelectedValue = dt.Rows(0).Item(9)
+            gui.cboLote.SelectedValue = dt.Rows(0).Item(10)
         End If
     End Sub
-
-    Public Sub actualizar(ByRef cboDepositoOrigen As ComboBox, ByRef cboDepositoDestino As ComboBox, ByRef txtCantidad As TextBox, ByRef cboProducto As ComboBox, ByRef cboLote As ComboBox)
+    Private Sub Autoguardado(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Autoguardado
         Dim origen As Integer
         Dim destino As Integer
         Dim producto As Integer
         Dim lote As Integer
         Dim cantidad As Double
 
-        If cboDepositoOrigen.SelectedValue Is Nothing Then
+        If gui.cboDepositoOrigen.SelectedValue Is Nothing Then
             origen = 0
         Else
             Try
-                origen = CType(cboDepositoOrigen.SelectedValue, Integer)
+                origen = CType(gui.cboDepositoOrigen.SelectedValue, Integer)
             Catch ex As Exception
                 origen = 0
             End Try
         End If
 
-        If cboDepositoDestino.SelectedValue Is Nothing Then
+        If gui.cboDepositoDestino.SelectedValue Is Nothing Then
             destino = 0
         Else
             Try
-                destino = CType(cboDepositoDestino.SelectedValue, Integer)
+                destino = CType(gui.cboDepositoDestino.SelectedValue, Integer)
             Catch ex As Exception
                 destino = 0
             End Try
         End If
 
 
-        If cboProducto.SelectedValue Is Nothing Then
+        If gui.cboProducto.SelectedValue Is Nothing Then
             producto = 0
         Else
             Try
-                producto = CType(cboProducto.SelectedValue, Integer)
+                producto = CType(gui.cboProducto.SelectedValue, Integer)
             Catch ex As Exception
                 producto = 0
             End Try
         End If
 
-        If cboLote.SelectedValue Is Nothing Then
+        If gui.cboLote.SelectedValue Is Nothing Then
             lote = 0
         Else
             Try
-                lote = CType(cboLote.SelectedValue, Integer)
+                lote = CType(gui.cboLote.SelectedValue, Integer)
             Catch ex As Exception
                 lote = 0
             End Try
         End If
 
-        If txtCantidad.Text = "" Or Not IsNumeric(txtCantidad.Text) Then
+        If gui.txtCantidad.Text = "" Or Not IsNumeric(gui.txtCantidad.Text) Then
             cantidad = 0
         Else
             Try
-                cantidad = CType(txtCantidad.Text.Replace(".", ","), Double)
+                cantidad = CType(gui.txtCantidad.Text.Replace(".", ","), Double)
             Catch ex As Exception
                 cantidad = 0
             End Try
@@ -85,4 +95,33 @@
 
         spTrasiegos.actualizar(origen, destino, cantidad, producto, lote, id)
     End Sub
+
+    Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
+        gui.frmEspera = New frmEspera("Cargando datos")
+        gui.frmEspera.Show()
+
+
+        gui.frmMovimientos = New frmEntMovimientosCopy
+        AddHandler gui.frmMovimientos.Saved, AddressOf borrar
+        gui.frmMovimientos.Show()
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.TRASIEGO.ToString, gui.cboDepositoDestino.SelectedValue.ToString, gui.cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.TRASIEGO
+        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoOrigen.SelectedValue
+        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
+        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
+        gui.frmMovimientos.cboTipoLoteCompra.SelectedValue = gui.cboLote.SelectedValue
+        gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
+
+
+        gui.frmEspera.Close()
+    End Sub
+
+    Private Sub borrar(sender As Object, e As EventArgs)
+        If borrar_proceso_abierto() Then
+            gui.Close()
+        End If
+    End Sub
+
+
+
 End Class

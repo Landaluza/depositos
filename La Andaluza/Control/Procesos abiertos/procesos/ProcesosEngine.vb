@@ -13,4 +13,6 @@
     Public Function seleccionar() As DataTable
         Return sp.seleccionar(id)
     End Function
+
+
 End Class

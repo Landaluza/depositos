@@ -26,14 +26,22 @@
     End Sub
     Public Sub SetValues(ByRef panel As FlowLayoutPanel, ByRef datagrid As DataGridView)
         Dim dt As DataTable = spProcesosAbiertos.devolverProcesosAbiertos
-        Dim frm As frmTrasiego
-        'Dim separador As Panel
-        'Dim Generator As System.Random = New System.Random()
+        Dim frm As frmProceso
+        
 
         If Not dt Is Nothing Then
             For Each dr As DataRow In dt.Rows
 
-                frm = New frmTrasiego(Convert.ToInt32(dr.Item(0)))
+                Select Case Convert.ToInt32(dr.Item(3))
+                    Case TRASIEGO
+                        frm = New frmTrasiego(Convert.ToInt32(dr.Item(0)))
+                    Case COMPRA_MATERIAS_PRIMAS
+                        frm = New frmCompra(Convert.ToInt32(dr.Item(0)))
+                    Case Else
+                        frm = Nothing
+                End Select
+
+
                 frm.WindowState = FormWindowState.Normal
                 frm.TopLevel = False
                 frm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -41,11 +49,6 @@
                 frm.Show()
                 panel.Controls.Add(frm)
 
-                'separador = New Panel
-                'separador.BackColor = Color.Black
-                'separador.Height = 2
-                'separador.Width = 1020 + (Generator.Next(0, 9) * 10)
-                'panel.Controls.Add(separador)
             Next
             datagrid.DataSource = dt
         End If
@@ -55,22 +58,27 @@
         Dim proceso As Integer = Me.spProcesosAbiertos.añadirProceso(tipoproceso)
 
         If proceso <> 0 Then
-            'Dim separador As Panel
-            'Dim Generator As System.Random = New System.Random()
-            Dim frm As New frmTrasiego(proceso)
+            Dim frm As frmProceso
+
+            Select Case tipoproceso
+                Case TRASIEGO
+                    frm = New frmTrasiego(proceso)
+                Case COMPRA_MATERIAS_PRIMAS
+                    frm = New frmCompra(proceso)
+                Case Else
+                    frm = Nothing
+            End Select
+
             frm.WindowState = FormWindowState.Normal
             frm.TopLevel = False
             frm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
             frm.Dock = DockStyle.None
             frm.Show()
             FlowLayoutPanel1.Controls.Add(frm)
-
-            'separador = New Panel
-            'separador.BackColor = Color.Black
-            'separador.Height = 2
-            'separador.Width = 1020 + (Generator.Next(0, 9) * 10)
-            'FlowLayoutPanel1.Controls.Add(separador)
         End If
+
+
+
     End Sub
 
    

@@ -29,6 +29,7 @@ Partial Class frmProcesosAbiertos
         Me.tsDetallado = New System.Windows.Forms.ToolStripButton()
         Me.tsTrasiegos = New System.Windows.Forms.ToolStripButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,7 +47,7 @@ Partial Class frmProcesosAbiertos
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(768, 25)
@@ -102,6 +103,14 @@ Partial Class frmProcesosAbiertos
         Me.DataGridView1.Size = New System.Drawing.Size(768, 415)
         Me.DataGridView1.TabIndex = 2
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(70, 22)
+        Me.ToolStripButton1.Text = "Compra"
+        '
         'frmProcesosAbiertos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,4 +136,5 @@ Partial Class frmProcesosAbiertos
     Friend WithEvents tsDetallado As System.Windows.Forms.ToolStripButton
     Private WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents tsTrasiegos As System.Windows.Forms.ToolStripButton
+    Private WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class

@@ -30,4 +30,8 @@
         tsDetallado_Click(Nothing, Nothing)
         Me.FlowLayoutPanel1.Controls(e.RowIndex).Focus()
     End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS)
+    End Sub
 End Class
