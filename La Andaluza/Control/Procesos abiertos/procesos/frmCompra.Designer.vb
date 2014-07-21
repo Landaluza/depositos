@@ -30,6 +30,11 @@ Partial Class frmCompra
         Me.cboProductoEntrada = New System.Windows.Forms.ComboBox()
         Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,11 +59,11 @@ Partial Class frmCompra
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(113, 67)
+        Me.Label5.Location = New System.Drawing.Point(79, 83)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 26
-        Me.Label5.Text = "Entrada"
+        Me.Label5.Text = "Compra"
         '
         'cboLote
         '
@@ -66,7 +71,7 @@ Partial Class frmCompra
         Me.cboLote.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboLote.FormattingEnabled = True
-        Me.cboLote.Location = New System.Drawing.Point(635, 38)
+        Me.cboLote.Location = New System.Drawing.Point(635, 59)
         Me.cboLote.Name = "cboLote"
         Me.cboLote.Size = New System.Drawing.Size(175, 21)
         Me.cboLote.TabIndex = 25
@@ -78,7 +83,7 @@ Partial Class frmCompra
         Me.cboProductoFinal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboProductoFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProductoFinal.FormattingEnabled = True
-        Me.cboProductoFinal.Location = New System.Drawing.Point(635, 11)
+        Me.cboProductoFinal.Location = New System.Drawing.Point(635, 24)
         Me.cboProductoFinal.Name = "cboProductoFinal"
         Me.cboProductoFinal.Size = New System.Drawing.Size(175, 21)
         Me.cboProductoFinal.TabIndex = 23
@@ -90,7 +95,7 @@ Partial Class frmCompra
         Me.cboDepositoDestino.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboDepositoDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDepositoDestino.FormattingEnabled = True
-        Me.cboDepositoDestino.Location = New System.Drawing.Point(494, 27)
+        Me.cboDepositoDestino.Location = New System.Drawing.Point(499, 43)
         Me.cboDepositoDestino.Name = "cboDepositoDestino"
         Me.cboDepositoDestino.Size = New System.Drawing.Size(81, 21)
         Me.cboDepositoDestino.TabIndex = 21
@@ -100,7 +105,7 @@ Partial Class frmCompra
         '
         Me.txtCantidad.AccessibleDescription = "Cantidad"
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCantidad.Location = New System.Drawing.Point(327, 27)
+        Me.txtCantidad.Location = New System.Drawing.Point(327, 43)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
@@ -113,7 +118,7 @@ Partial Class frmCompra
         Me.cboProductoEntrada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboProductoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProductoEntrada.FormattingEnabled = True
-        Me.cboProductoEntrada.Location = New System.Drawing.Point(116, 12)
+        Me.cboProductoEntrada.Location = New System.Drawing.Point(116, 24)
         Me.cboProductoEntrada.Name = "cboProductoEntrada"
         Me.cboProductoEntrada.Size = New System.Drawing.Size(168, 21)
         Me.cboProductoEntrada.TabIndex = 27
@@ -125,7 +130,7 @@ Partial Class frmCompra
         Me.cboProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProveedor.FormattingEnabled = True
-        Me.cboProveedor.Location = New System.Drawing.Point(116, 43)
+        Me.cboProveedor.Location = New System.Drawing.Point(116, 59)
         Me.cboProveedor.Name = "cboProveedor"
         Me.cboProveedor.Size = New System.Drawing.Size(168, 21)
         Me.cboProveedor.TabIndex = 28
@@ -134,18 +139,73 @@ Partial Class frmCompra
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(632, 67)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(114, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(62, 9)
         Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Destino"
+        Me.Label1.Text = "Producto entrada"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(114, 50)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 9)
+        Me.Label2.TabIndex = 30
+        Me.Label2.Text = "Proveedor"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(325, 31)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 9)
+        Me.Label3.TabIndex = 31
+        Me.Label3.Text = "Cantidad"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(497, 31)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(35, 9)
+        Me.Label4.TabIndex = 32
+        Me.Label4.Text = "Deposito"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(633, 12)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 9)
+        Me.Label6.TabIndex = 33
+        Me.Label6.Text = "Producto final"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(633, 50)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(19, 9)
+        Me.Label7.TabIndex = 34
+        Me.Label7.Text = "Lote"
         '
         'frmCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 107)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboProveedor)
         Me.Controls.Add(Me.cboProductoEntrada)
@@ -168,6 +228,11 @@ Partial Class frmCompra
         Me.Controls.SetChildIndex(Me.cboProductoEntrada, 0)
         Me.Controls.SetChildIndex(Me.cboProveedor, 0)
         Me.Controls.SetChildIndex(Me.Label1, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
+        Me.Controls.SetChildIndex(Me.Label3, 0)
+        Me.Controls.SetChildIndex(Me.Label4, 0)
+        Me.Controls.SetChildIndex(Me.Label6, 0)
+        Me.Controls.SetChildIndex(Me.Label7, 0)
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -181,4 +246,9 @@ Partial Class frmCompra
     Public WithEvents cboProductoEntrada As System.Windows.Forms.ComboBox
     Public WithEvents cboProveedor As System.Windows.Forms.ComboBox
     Private WithEvents Label1 As System.Windows.Forms.Label
+    Private WithEvents Label2 As System.Windows.Forms.Label
+    Private WithEvents Label3 As System.Windows.Forms.Label
+    Private WithEvents Label4 As System.Windows.Forms.Label
+    Private WithEvents Label6 As System.Windows.Forms.Label
+    Private WithEvents Label7 As System.Windows.Forms.Label
 End Class

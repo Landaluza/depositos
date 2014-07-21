@@ -27,6 +27,10 @@ Partial Class frmFiltrado
         Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.cboDepositoPartida = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +54,7 @@ Partial Class frmFiltrado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(125, 74)
+        Me.Label5.Location = New System.Drawing.Point(73, 81)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 13)
         Me.Label5.TabIndex = 34
@@ -62,7 +66,7 @@ Partial Class frmFiltrado
         Me.cboFiltro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboFiltro.FormattingEnabled = True
-        Me.cboFiltro.Location = New System.Drawing.Point(225, 34)
+        Me.cboFiltro.Location = New System.Drawing.Point(220, 38)
         Me.cboFiltro.Name = "cboFiltro"
         Me.cboFiltro.Size = New System.Drawing.Size(175, 21)
         Me.cboFiltro.TabIndex = 32
@@ -74,7 +78,7 @@ Partial Class frmFiltrado
         Me.cboDepositoDestino.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboDepositoDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDepositoDestino.FormattingEnabled = True
-        Me.cboDepositoDestino.Location = New System.Drawing.Point(537, 34)
+        Me.cboDepositoDestino.Location = New System.Drawing.Point(532, 38)
         Me.cboDepositoDestino.Name = "cboDepositoDestino"
         Me.cboDepositoDestino.Size = New System.Drawing.Size(81, 21)
         Me.cboDepositoDestino.TabIndex = 31
@@ -84,7 +88,7 @@ Partial Class frmFiltrado
         '
         Me.txtCantidad.AccessibleDescription = "Cantidad"
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCantidad.Location = New System.Drawing.Point(415, 34)
+        Me.txtCantidad.Location = New System.Drawing.Point(410, 38)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
@@ -97,19 +101,63 @@ Partial Class frmFiltrado
         Me.cboDepositoPartida.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboDepositoPartida.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDepositoPartida.FormattingEnabled = True
-        Me.cboDepositoPartida.Location = New System.Drawing.Point(128, 34)
+        Me.cboDepositoPartida.Location = New System.Drawing.Point(123, 38)
         Me.cboDepositoPartida.Name = "cboDepositoPartida"
         Me.cboDepositoPartida.Size = New System.Drawing.Size(81, 21)
         Me.cboDepositoPartida.TabIndex = 35
         Me.ToolTip1.SetToolTip(Me.cboDepositoPartida, "Deposito de partida")
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(121, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 9)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Deposito"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(218, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(23, 9)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Filtro"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(408, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 9)
+        Me.Label3.TabIndex = 44
+        Me.Label3.Text = "Cantidad"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(530, 26)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(51, 9)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "Deposito final"
         '
         'frmFiltrado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 107)
-        Me.Controls.Add(Me.cboDepositoPartida)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cboDepositoPartida)
         Me.Controls.Add(Me.cboFiltro)
         Me.Controls.Add(Me.cboDepositoDestino)
         Me.Controls.Add(Me.txtCantidad)
@@ -118,11 +166,15 @@ Partial Class frmFiltrado
         Me.Controls.SetChildIndex(Me.txtCantidad, 0)
         Me.Controls.SetChildIndex(Me.cboDepositoDestino, 0)
         Me.Controls.SetChildIndex(Me.cboFiltro, 0)
-        Me.Controls.SetChildIndex(Me.Label5, 0)
         Me.Controls.SetChildIndex(Me.cboDepositoPartida, 0)
         Me.Controls.SetChildIndex(Me.btnExportar, 0)
         Me.Controls.SetChildIndex(Me.btnBorrar, 0)
         Me.Controls.SetChildIndex(Me.pbIconoOperacion, 0)
+        Me.Controls.SetChildIndex(Me.Label5, 0)
+        Me.Controls.SetChildIndex(Me.Label1, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
+        Me.Controls.SetChildIndex(Me.Label3, 0)
+        Me.Controls.SetChildIndex(Me.Label4, 0)
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -133,4 +185,8 @@ Partial Class frmFiltrado
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
     Public WithEvents Label5 As System.Windows.Forms.Label
     Public WithEvents cboDepositoPartida As System.Windows.Forms.ComboBox
+    Private WithEvents Label1 As System.Windows.Forms.Label
+    Private WithEvents Label2 As System.Windows.Forms.Label
+    Private WithEvents Label3 As System.Windows.Forms.Label
+    Private WithEvents Label4 As System.Windows.Forms.Label
 End Class

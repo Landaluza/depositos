@@ -26,6 +26,9 @@ Partial Class frmGraneles
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cboRecipiente = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +54,7 @@ Partial Class frmGraneles
         Me.cboDepositoPArtida.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboDepositoPArtida.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDepositoPArtida.FormattingEnabled = True
-        Me.cboDepositoPArtida.Location = New System.Drawing.Point(131, 29)
+        Me.cboDepositoPArtida.Location = New System.Drawing.Point(122, 38)
         Me.cboDepositoPArtida.Name = "cboDepositoPArtida"
         Me.cboDepositoPArtida.Size = New System.Drawing.Size(81, 21)
         Me.cboDepositoPArtida.TabIndex = 35
@@ -61,7 +64,7 @@ Partial Class frmGraneles
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(128, 69)
+        Me.Label5.Location = New System.Drawing.Point(79, 82)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 13)
         Me.Label5.TabIndex = 34
@@ -73,7 +76,7 @@ Partial Class frmGraneles
         Me.cboRecipiente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboRecipiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboRecipiente.FormattingEnabled = True
-        Me.cboRecipiente.Location = New System.Drawing.Point(369, 29)
+        Me.cboRecipiente.Location = New System.Drawing.Point(360, 38)
         Me.cboRecipiente.Name = "cboRecipiente"
         Me.cboRecipiente.Size = New System.Drawing.Size(188, 21)
         Me.cboRecipiente.TabIndex = 31
@@ -83,18 +86,51 @@ Partial Class frmGraneles
         '
         Me.txtCantidad.AccessibleDescription = "Cantidad"
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCantidad.Location = New System.Drawing.Point(238, 29)
+        Me.txtCantidad.Location = New System.Drawing.Point(229, 38)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
         Me.txtCantidad.TabIndex = 30
         Me.ToolTip1.SetToolTip(Me.txtCantidad, "Litros del movimiento")
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(120, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 9)
+        Me.Label1.TabIndex = 41
+        Me.Label1.Text = "Deposito"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(358, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 9)
+        Me.Label2.TabIndex = 42
+        Me.Label2.Text = "Recipiente"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(227, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 9)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "Cantidad"
+        '
         'frmGraneles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 107)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboDepositoPArtida)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cboRecipiente)
@@ -108,6 +144,9 @@ Partial Class frmGraneles
         Me.Controls.SetChildIndex(Me.cboRecipiente, 0)
         Me.Controls.SetChildIndex(Me.Label5, 0)
         Me.Controls.SetChildIndex(Me.cboDepositoPArtida, 0)
+        Me.Controls.SetChildIndex(Me.Label1, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
+        Me.Controls.SetChildIndex(Me.Label3, 0)
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -117,4 +156,7 @@ Partial Class frmGraneles
     Public WithEvents cboRecipiente As System.Windows.Forms.ComboBox
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
     Public WithEvents Label5 As System.Windows.Forms.Label
+    Private WithEvents Label1 As System.Windows.Forms.Label
+    Private WithEvents Label2 As System.Windows.Forms.Label
+    Private WithEvents Label3 As System.Windows.Forms.Label
 End Class
