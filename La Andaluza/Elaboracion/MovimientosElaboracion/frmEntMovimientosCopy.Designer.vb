@@ -1895,7 +1895,6 @@ Partial Class frmEntMovimientosCopy
     Private WithEvents cbMedidacompra As System.Windows.Forms.ComboBox
     Private WithEvents cboFinalTipoProductoActual As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaTransicubas As System.Windows.Forms.ComboBox
-    Private WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
     Private WithEvents cboSalidaProducto As System.Windows.Forms.ComboBox
     Private WithEvents cboDiferenciasTipoLote As System.Windows.Forms.ComboBox
     Private WithEvents cboDiferenciaProducto As System.Windows.Forms.ComboBox
@@ -1965,5 +1964,6 @@ Partial Class frmEntMovimientosCopy
     Public WithEvents cboCompraProveedor As System.Windows.Forms.ComboBox
     Public WithEvents cboCompraProducto As System.Windows.Forms.ComboBox
     Public WithEvents txtCompraCantidad As La_Andaluza_MovimientosDepositos.CuadroDeTexto
+    Public WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
 
 End Class

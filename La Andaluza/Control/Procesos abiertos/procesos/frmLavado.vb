@@ -7,7 +7,7 @@
 
         InitializeComponent()
 
-        Me.pbIconoOperacion.Image = My.Resources.venta
+        Me.pbIconoOperacion.Image = My.Resources.lavado
         engineLavado = New EngineLavado(id, Me)
 
     End Sub

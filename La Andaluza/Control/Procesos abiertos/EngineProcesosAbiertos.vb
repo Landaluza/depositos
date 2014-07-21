@@ -10,6 +10,7 @@
     Public Const TERMINADO As Integer = 7
     Public Const AJUDATE_COMERCIAL As Integer = 8
     Public Const AJUSTE_AGUA As Integer = 12
+    Public Const LAVADO_DEPOSITO As Integer = 13
     Public Const FILTRACION As Integer = 10
     Public Const DIFERENCIAS As Integer = 11
     Public Const MERMAS As Integer = 16
@@ -41,6 +42,8 @@
                         frm = New frmFiltrado(Convert.ToInt32(dr.Item(0)))
                     Case GRANEL
                         frm = New frmGraneles(Convert.ToInt32(dr.Item(0)))
+                    Case LAVADO_DEPOSITO
+                        frm = New frmLavado(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -74,6 +77,8 @@
                     frm = New frmFiltrado(proceso)
                 Case GRANEL
                     frm = New frmGraneles(proceso)
+                Case LAVADO_DEPOSITO
+                    frm = New frmLavado(proceso)
                 Case Else
                     frm = Nothing
             End Select

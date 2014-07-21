@@ -647,6 +647,7 @@
     <Content Include="Resources\compra.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
+    <Content Include="Resources\lavado.png" />
     <Content Include="Resources\venta.png" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
