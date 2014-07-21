@@ -12,8 +12,8 @@
     Public Function devolver_depositos() As DataTable
         Return Me.Consultar("devolverDepositosFinales") 'devolverDepositosPartidas
     End Function
-    Public Function devolver_filtros() As DataTable
-        Return Me.Consultar("FiltrosCbo")
+    Public Function devolver_recipientes() As DataTable
+        Return Me.Consultar("RecipiesntesSalidasCbo")
     End Function
 
 
