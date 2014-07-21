@@ -91,10 +91,9 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.FILTRACION.ToString, gui.cboDepositoDestino.SelectedValue.ToString, "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.FILTRACION
-        gui.frmMovimientos.txtCompraCantidad.Text = gui.txtCantidad.Text
-
+        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPartida.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
-        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboFiltro.SelectedValue
+        gui.frmMovimientos.cbFiltros.SelectedValue = gui.cboFiltro.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

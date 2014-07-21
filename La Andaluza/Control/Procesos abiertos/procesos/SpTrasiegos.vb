@@ -5,7 +5,7 @@
         MyBase.New(Config.Server)
     End Sub
     Public Function devolver_productos() As DataTable
-        Return Me.Consultar("TiposProductosSelectCbo") '"TiposProductosSelectCboNoEnologicos")
+        Return Me.Consultar("TiposProductosSelectCboNoEnologicos") '"TiposProductosSelectCbo") '"TiposProductosSelectCboNoEnologicos")
     End Function
 
     Public Function devolver_tipos_de_lotes() As DataTable
