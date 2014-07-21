@@ -196,11 +196,18 @@
     </Compile>
     <Compile Include="Control\Procesos abiertos\ProcesoMovimiento.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCompra.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineTrasiegos.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\frmCompra.Designer.vb">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.Designer.vb">
+      <DependentUpon>frmFiltrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.Designer.vb">
@@ -211,6 +218,7 @@
     </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\ProcesosEngine.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpTrasiegos.vb" />
     <Compile Include="Control\Procesos\DBO_Procesos.vb" />
     <Compile Include="Control\Procesos\spProcesos.vb" />
@@ -479,6 +487,9 @@
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmCompra.resx">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
+      <DependentUpon>frmFiltrado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmTrasiego.resx">
       <DependentUpon>frmTrasiego.vb</DependentUpon>
     </EmbeddedResource>
@@ -612,7 +623,9 @@
     <None Include="Resources\emblem-symbolic-link-2.png" />
     <None Include="Resources\align-left.png" />
     <Content Include="Resources\compra.png" />
+    <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
+    <Content Include="Resources\venta.png" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
     <Content Include="user-trash.ico" />

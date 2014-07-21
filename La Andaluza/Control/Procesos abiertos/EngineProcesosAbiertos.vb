@@ -37,6 +37,8 @@
                         frm = New frmTrasiego(Convert.ToInt32(dr.Item(0)))
                     Case COMPRA_MATERIAS_PRIMAS
                         frm = New frmCompra(Convert.ToInt32(dr.Item(0)))
+                    Case FILTRACION
+                        frm = New frmFiltrado(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -65,6 +67,8 @@
                     frm = New frmTrasiego(proceso)
                 Case COMPRA_MATERIAS_PRIMAS
                     frm = New frmCompra(proceso)
+                Case FILTRACION
+                    frm = New frmFiltrado(proceso)
                 Case Else
                     frm = Nothing
             End Select

@@ -28,8 +28,9 @@ Partial Class frmProcesosAbiertos
         Me.tsCompacto = New System.Windows.Forms.ToolStripButton()
         Me.tsDetallado = New System.Windows.Forms.ToolStripButton()
         Me.tsTrasiegos = New System.Windows.Forms.ToolStripButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +48,7 @@ Partial Class frmProcesosAbiertos
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos, Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(768, 25)
@@ -81,6 +82,14 @@ Partial Class frmProcesosAbiertos
         Me.tsTrasiegos.Size = New System.Drawing.Size(77, 22)
         Me.tsTrasiegos.Text = "Trasiegos"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(70, 22)
+        Me.ToolStripButton1.Text = "Compra"
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -103,13 +112,13 @@ Partial Class frmProcesosAbiertos
         Me.DataGridView1.Size = New System.Drawing.Size(768, 415)
         Me.DataGridView1.TabIndex = 2
         '
-        'ToolStripButton1
+        'ToolStripButton2
         '
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(70, 22)
-        Me.ToolStripButton1.Text = "Compra"
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(76, 22)
+        Me.ToolStripButton2.Text = "Filtracion"
         '
         'frmProcesosAbiertos
         '
@@ -137,4 +146,5 @@ Partial Class frmProcesosAbiertos
     Private WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents tsTrasiegos As System.Windows.Forms.ToolStripButton
     Private WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Private WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
 End Class
