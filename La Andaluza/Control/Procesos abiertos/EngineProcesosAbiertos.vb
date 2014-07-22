@@ -55,6 +55,8 @@
                         frm = New frmClarificacion(Convert.ToInt32(dr.Item(0)))
                     Case COCCION_CONTROLADA
                         frm = New frmCoccion(Convert.ToInt32(dr.Item(0)))
+                    Case DESECHO
+                        frm = New frmDesecho(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -98,6 +100,8 @@
                     frm = New frmClarificacion(proceso)
                 Case COCCION_CONTROLADA
                     frm = New frmCoccion(proceso)
+                Case DESECHO
+                    frm = New frmDesecho(proceso)
                 Case Else
                     frm = Nothing
             End Select

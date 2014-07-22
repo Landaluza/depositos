@@ -200,6 +200,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\EngineClarificacion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCoccion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCompra.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineDesecho.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineLavado.vb" />
@@ -234,6 +235,12 @@
     <Compile Include="Control\Procesos abiertos\procesos\frmCompra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmDesecho.Designer.vb">
+      <DependentUpon>frmDesecho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmDesecho.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.Designer.vb">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </Compile>
@@ -264,6 +271,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpClarificacion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpCoccion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\spDesecho.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpLavado.vb" />
@@ -547,6 +555,9 @@
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmCompra.resx">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmDesecho.resx">
+      <DependentUpon>frmDesecho.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </EmbeddedResource>
@@ -693,6 +704,7 @@
     <Content Include="Resources\clarificacion.png" />
     <Content Include="Resources\coccion.png" />
     <Content Include="Resources\compra.png" />
+    <Content Include="Resources\desecho.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
     <Content Include="Resources\lavado.png" />
