@@ -1,17 +1,16 @@
-﻿Public Class EngineTrasiegos
+﻿Public Class EngineAjusteAgua
     Inherits ProcesosEngine
     Implements ProcesoMovimiento
 
-    Private spTrasiegos As SpTrasiegos
-    Private gui As frmTrasiego
-    Public Sub New(ByVal id As Integer, ByRef frm As frmTrasiego)
+    Private spAjusteAgua As SpAjusteAgua
+    Private gui As frmAjusteAgua
+    Public Sub New(ByVal id As Integer, ByRef frm As frmAjusteAgua)
         MyBase.New(id)
-        spTrasiegos = New SpTrasiegos
+        spAjusteAgua = New SpAjusteAgua
         gui = frm
 
         CargarDatos()
-        AddHandler gui.cboDepositoDestino.SelectedValueChanged, AddressOf Autoguardado
-        AddHandler gui.cboDepositoOrigen.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cboDeposito.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.cboLote.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.cboProducto.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.txtCantidad.TextChanged, AddressOf Autoguardado
@@ -20,47 +19,23 @@
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboProducto.mam_DataSource(spTrasiegos.devolver_productos(), False, False)
-        gui.cboLote.mam_DataSource(spTrasiegos.devolver_tipos_de_lotes(), False, False)
-        gui.cboDepositoDestino.mam_DataSource(spTrasiegos.devolver_depositos(), False, False)
-        gui.cboDepositoOrigen.mam_DataSource(spTrasiegos.devolver_depositos_ocupados(), False, False)
+        gui.cboProducto.mam_DataSource(spAjusteAgua.devolver_productos(), False, False)
+        gui.cboLote.mam_DataSource(spAjusteAgua.devolver_tipos_de_lotes(), False, False)
+        gui.cboDeposito.mam_DataSource(spAjusteAgua.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then
-            gui.cboDepositoOrigen.SelectedValue = dt.Rows(0).Item(6)
-            gui.cboDepositoDestino.SelectedValue = dt.Rows(0).Item(5)
+            gui.cboDeposito.SelectedValue = dt.Rows(0).Item(6)
             gui.txtCantidad.Text = dt.Rows(0).Item(3).ToString
             gui.cboProducto.SelectedValue = dt.Rows(0).Item(9)
-            gui.cboLote.SelectedValue = dt.Rows(0).Item(10)
+            gui.cboLote.SelectedValue = dt.Rows(0).Item(7)
         End If
     End Sub
     Private Sub Autoguardado(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Autoguardado
-        Dim origen As Integer
         Dim destino As Integer
         Dim producto As Integer
         Dim lote As Integer
         Dim cantidad As Double
-
-        If gui.cboDepositoOrigen.SelectedValue Is Nothing Then
-            origen = 0
-        Else
-            Try
-                origen = CType(gui.cboDepositoOrigen.SelectedValue, Integer)
-            Catch ex As Exception
-                origen = 0
-            End Try
-        End If
-
-        If gui.cboDepositoDestino.SelectedValue Is Nothing Then
-            destino = 0
-        Else
-            Try
-                destino = CType(gui.cboDepositoDestino.SelectedValue, Integer)
-            Catch ex As Exception
-                destino = 0
-            End Try
-        End If
-
 
         If gui.cboProducto.SelectedValue Is Nothing Then
             producto = 0
@@ -93,7 +68,7 @@
         End If
 
 
-        spTrasiegos.actualizar(origen, destino, cantidad, producto, lote, id)
+        spAjusteAgua.actualizar(destino, cantidad, producto, lote, id)
     End Sub
 
     Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
@@ -104,12 +79,11 @@
         gui.frmMovimientos = New frmEntMovimientosCopy
         AddHandler gui.frmMovimientos.Saved, AddressOf borrar
         gui.frmMovimientos.Show()
-        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.TRASIEGO.ToString, gui.cboDepositoDestino.SelectedValue.ToString, gui.cboDepositoOrigen.SelectedValue.ToString, "", New DataBase(Config.Server))
-        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.TRASIEGO
-        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoOrigen.SelectedValue
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.AJUSTE_AGUA.ToString, "", "", "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.AJUSTE_AGUA
+        gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
+        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
-        gui.frmMovimientos.cboTipoLoteCompra.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 
@@ -121,7 +95,4 @@
             gui.Close()
         End If
     End Sub
-
-
-
 End Class

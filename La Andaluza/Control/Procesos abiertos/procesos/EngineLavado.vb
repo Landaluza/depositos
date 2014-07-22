@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboDepositoPArtida.mam_DataSource(spLavado.devolver_depositos(), False, )
+        gui.cboDepositoPArtida.mam_DataSource(spLavado.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then

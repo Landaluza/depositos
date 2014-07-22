@@ -21,11 +21,11 @@
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboProductoEntrada.mam_DataSource(spCompra.devolver_productos(), False, )
-        gui.cboProductoFinal.mam_DataSource(spCompra.devolver_productos_no_enologicos(), False, )
-        gui.cboLote.mam_DataSource(spCompra.devolver_tipos_de_lotes(), False, )
-        gui.cboDepositoDestino.mam_DataSource(spCompra.devolver_depositos(), False, )
-        gui.cboProveedor.mam_DataSource(spCompra.devolver_proveedores(), False, )
+        gui.cboProductoEntrada.mam_DataSource(spCompra.devolver_productos(), False, False)
+        gui.cboProductoFinal.mam_DataSource(spCompra.devolver_productos_no_enologicos(), False, False)
+        gui.cboLote.mam_DataSource(spCompra.devolver_tipos_de_lotes(), False, False)
+        gui.cboDepositoDestino.mam_DataSource(spCompra.devolver_depositos(), False, False)
+        gui.cboProveedor.mam_DataSource(spCompra.devolver_proveedores(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then

@@ -16,7 +16,6 @@
     Public Const MERMAS As Integer = 16
     Public Const DESECHO As Integer = 9
     Public Const PIE_DE_CUBA As Integer = 9
-    Public Const AJUSTE_DE_AGUA As Integer = 12
     Public Const COCCION_CONTROLADA As Integer = 9
     Public Const DESEMBOTE_NC As Integer = 18
     Public Const DESEMBOTES As Integer = 19
@@ -44,6 +43,8 @@
                         frm = New frmGraneles(Convert.ToInt32(dr.Item(0)))
                     Case LAVADO_DEPOSITO
                         frm = New frmLavado(Convert.ToInt32(dr.Item(0)))
+                    Case AJUSTE_AGUA
+                        frm = New frmAjusteAgua(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -79,6 +80,8 @@
                     frm = New frmGraneles(proceso)
                 Case LAVADO_DEPOSITO
                     frm = New frmLavado(proceso)
+                Case AJUSTE_AGUA
+                    frm = New frmAjusteAgua(proceso)
                 Case Else
                     frm = Nothing
             End Select

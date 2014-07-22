@@ -195,11 +195,25 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Control\Procesos abiertos\ProcesoMovimiento.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineAjusteAgua.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineAjusteComercial.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineLavado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineTrasiegos.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\frmAjusteAgua.Designer.vb">
+      <DependentUpon>frmAjusteAgua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmAjusteAgua.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmAjusteComercial.Designer.vb">
+      <DependentUpon>frmAjusteComercial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmAjusteComercial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmCompra.Designer.vb">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </Compile>
@@ -231,6 +245,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\ProcesosEngine.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpAjusteAgua.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpAjusteComercial.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
@@ -500,6 +516,12 @@
     <EmbeddedResource Include="Control\Procesos abiertos\frmProcesosAbiertos.resx">
       <DependentUpon>frmProcesosAbiertos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmAjusteAgua.resx">
+      <DependentUpon>frmAjusteAgua.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmAjusteComercial.resx">
+      <DependentUpon>frmAjusteComercial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmCompra.resx">
       <DependentUpon>frmCompra.vb</DependentUpon>
     </EmbeddedResource>
@@ -644,6 +666,7 @@
     <None Include="Resources\emblem-unreadable.png" />
     <None Include="Resources\emblem-symbolic-link-2.png" />
     <None Include="Resources\align-left.png" />
+    <Content Include="Resources\ajusteagua.png" />
     <Content Include="Resources\compra.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
@@ -789,72 +812,72 @@
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.WinForms">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.Vbe.Interop">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="office">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="stdole">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

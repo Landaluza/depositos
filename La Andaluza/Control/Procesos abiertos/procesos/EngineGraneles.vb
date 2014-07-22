@@ -18,8 +18,8 @@
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboRecipiente.mam_DataSource(spGraneles.devolver_recipientes(), False, )
-        gui.cboDepositoPArtida.mam_DataSource(spGraneles.devolver_depositos(), False, )
+        gui.cboRecipiente.mam_DataSource(spGraneles.devolver_recipientes(), False, False)
+        gui.cboDepositoPArtida.mam_DataSource(spGraneles.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then

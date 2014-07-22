@@ -3,7 +3,7 @@
 
     <Extension()> _
     Public Sub mam_DataSource(ByVal Combo As ComboBox, ByVal tb As DataTable, _
-                              ByVal PrimeraVacia As Boolean, Optional ByVal Texto As String = "")
+                              ByVal PrimeraVacia As Boolean, ByVal tooltip As Boolean, Optional ByVal Texto As String = "")
 
         Try
             If Not tb Is Nothing Then
@@ -25,7 +25,7 @@
                     Combo.DataSource = tb
                     Combo.ValueMember = tb.Columns(0).ColumnName
                     Combo.DisplayMember = tb.Columns(1).ColumnName
-                    AddHandler Combo.SelectedIndexChanged, AddressOf CambiosDeValor
+                    If tooltip Then AddHandler Combo.SelectedIndexChanged, AddressOf CambiosDeValor
                 End If
             End If
             ''ComprobarCambiosCombo = true
