@@ -82,4 +82,16 @@
     Private Sub ToolStripButton13_Click(sender As Object, e As EventArgs) Handles ToolStripButton13.Click
         Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.ENVASADO)
     End Sub
+
+    Private Sub ToolStripButton14_Click(sender As Object, e As EventArgs) Handles ToolStripButton14.Click
+        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.FERMENTACION)
+    End Sub
+
+    Private Sub ToolStripButton15_Click(sender As Object, e As EventArgs) Handles ToolStripButton15.Click
+        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.PIE_DE_CUBA)
+    End Sub
+
+    Private Sub ToolStripButton16_Click(sender As Object, e As EventArgs) Handles ToolStripButton16.Click
+        Me.EngProcesosAbiertos.añadir_Elemento(Me.FlowLayoutPanel1, EngineProcesosAbiertos.MACERACION)
+    End Sub
 End Class

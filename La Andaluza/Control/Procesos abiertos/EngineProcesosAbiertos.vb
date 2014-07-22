@@ -65,6 +65,12 @@
                         frm = New frmDiferencias(Convert.ToInt32(dr.Item(0)))
                     Case ENVASADO
                         frm = New frmEnvasado(Convert.ToInt32(dr.Item(0)))
+                    Case FERMENTACION
+                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
+                    Case MACERACION
+                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
+                    Case PIE_DE_CUBA
+                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -118,6 +124,12 @@
                     frm = New frmDiferencias(proceso)
                 Case ENVASADO
                     frm = New frmEnvasado(proceso)
+                Case FERMENTACION
+                    frm = New frmFermentacion(proceso)
+                Case MACERACION
+                    frm = New frmFermentacion(proceso)
+                Case PIE_DE_CUBA
+                    frm = New frmFermentacion(proceso)
                 Case Else
                     frm = Nothing
             End Select

@@ -209,6 +209,8 @@
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineLavado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineMaceracion.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EnginePieCuba.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineTrasiegos.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\frmAjusteAgua.Designer.vb">
       <DependentUpon>frmAjusteAgua.vb</DependentUpon>
@@ -294,6 +296,18 @@
     <Compile Include="Control\Procesos abiertos\procesos\frmLavado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmMaceracion.Designer.vb">
+      <DependentUpon>frmMaceracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmMaceracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmPieCuba.Designer.vb">
+      <DependentUpon>frmPieCuba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmPieCuba.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmTrasiego.Designer.vb">
       <DependentUpon>frmTrasiego.vb</DependentUpon>
     </Compile>
@@ -315,6 +329,8 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpLavado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpMaceracion.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpPieCuba.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpTrasiegos.vb" />
     <Compile Include="Control\Procesos\DBO_Procesos.vb" />
     <Compile Include="Control\Procesos\spProcesos.vb" />
@@ -609,6 +625,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmEnvasado.resx">
       <DependentUpon>frmEnvasado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFermentacion.resx">
+      <DependentUpon>frmFermentacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
