@@ -186,7 +186,7 @@ Partial Class frmTrasiego
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(35, 9)
         Me.Label7.TabIndex = 44
-        Me.Label7.Text = "Deposito"
+        Me.Label7.Text = "Cantidad"
         '
         'Label8
         '
@@ -194,9 +194,9 @@ Partial Class frmTrasiego
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(347, 29)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(35, 9)
+        Me.Label8.Size = New System.Drawing.Size(45, 9)
         Me.Label8.TabIndex = 45
-        Me.Label8.Text = "Deposito"
+        Me.Label8.Text = "Deposito fin"
         '
         'Label9
         '
@@ -206,7 +206,7 @@ Partial Class frmTrasiego
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 9)
         Me.Label9.TabIndex = 46
-        Me.Label9.Text = "Deposito"
+        Me.Label9.Text = "Producto"
         '
         'Label10
         '
@@ -214,9 +214,9 @@ Partial Class frmTrasiego
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(634, 29)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(35, 9)
+        Me.Label10.Size = New System.Drawing.Size(44, 9)
         Me.Label10.TabIndex = 47
-        Me.Label10.Text = "Deposito"
+        Me.Label10.Text = "Tipo de lote"
         '
         'frmTrasiego
         '
