@@ -68,6 +68,16 @@
         End If
 
 
+        If gui.cboDeposito.SelectedValue Is Nothing Then
+            destino = 0
+        Else
+            Try
+                destino = CType(gui.cboDeposito.SelectedValue, Integer)
+            Catch ex As Exception
+                destino = 0
+            End Try
+        End If
+
         SpPieCuba.actualizar(destino, cantidad, tlote, lote, id)
     End Sub
 
