@@ -7,7 +7,7 @@
 
         InitializeComponent()
 
-        Me.pbIconoOperacion.Image = My.Resources.desecho
+        Me.pbIconoOperacion.Image = My.Resources.xx
         EngineMaceracion = New EngineMaceracion(id, Me)
 
     End Sub

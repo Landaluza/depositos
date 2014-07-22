@@ -120,13 +120,13 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS.ToString, gui.cboDepositoDestino.SelectedValue.ToString, "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS
-        gui.frmMovimientos.cboCompraProducto.SelectedValue = gui.cboProductoEntrada.SelectedValue
-        gui.frmMovimientos.cboCompraProveedor.SelectedValue = gui.cboProveedor.SelectedValue
+        If Not gui.cboProductoEntrada.SelectedValue Is Nothing Then gui.frmMovimientos.cboCompraProducto.SelectedValue = gui.cboProductoEntrada.SelectedValue
+        If Not gui.cboProveedor.SelectedValue Is Nothing Then gui.frmMovimientos.cboCompraProveedor.SelectedValue = gui.cboProveedor.SelectedValue
         gui.frmMovimientos.txtCompraCantidad.Text = gui.txtCantidad.Text
 
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
-        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProductoFinal.SelectedValue
-        gui.frmMovimientos.cboTipoLoteCompra.SelectedValue = gui.cboLote.SelectedValue
+        If Not gui.cboDepositoDestino.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
+        If Not gui.cboProductoFinal.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProductoFinal.SelectedValue
+        If Not gui.cboLote.SelectedValue Is Nothing Then gui.frmMovimientos.cboTipoLoteCompra.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

@@ -77,8 +77,8 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.FERMENTACION.ToString, gui.cboDepositoDestino.SelectedValue.ToString, "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.FERMENTACION
-        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPartida.SelectedValue
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
+        If Not gui.cboDepositoPartida.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPartida.SelectedValue
+        If Not gui.cboDepositoDestino.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDepositoDestino.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

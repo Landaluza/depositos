@@ -77,11 +77,11 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.GRANEL.ToString, gui.cboRecipiente.SelectedValue.ToString, "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.GRANEL
-        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPArtida.SelectedValue
-        gui.frmMovimientos.cboSalidaRecipiente.SelectedValue = gui.cboRecipiente.SelectedValue
+        If Not gui.cboDepositoPArtida.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPArtida.SelectedValue
+        If Not gui.cboRecipiente.SelectedValue Is Nothing Then gui.frmMovimientos.cboSalidaRecipiente.SelectedValue = gui.cboRecipiente.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboRecipiente.SelectedValue
+        If Not gui.cboRecipiente.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboRecipiente.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

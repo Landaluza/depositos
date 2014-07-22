@@ -58,7 +58,7 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.DIFERENCIAS.ToString, "", "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.DIFERENCIAS
-        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
+        If Not gui.cboDeposito.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

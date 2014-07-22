@@ -33,6 +33,16 @@
         Dim lote As Integer
         Dim cantidad As Double
 
+        If gui.cboDeposito.SelectedValue Is Nothing Then
+            destino = 0
+        Else
+            Try
+                destino = CType(gui.cboDeposito.SelectedValue, Integer)
+            Catch ex As Exception
+                destino = 0
+            End Try
+        End If
+
         If gui.cboLote.SelectedValue Is Nothing Then
             lote = 0
         Else
@@ -67,8 +77,8 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.AJUDATE_COMERCIAL.ToString, "", "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.AJUDATE_COMERCIAL
-        gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
+        If Not gui.cboLote.SelectedValue Is Nothing Then gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
+        If Not gui.cboDeposito.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

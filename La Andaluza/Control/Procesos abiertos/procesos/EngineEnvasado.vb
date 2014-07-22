@@ -42,7 +42,11 @@
         If gui.cboDeposito.SelectedValue Is Nothing Then
             destino = 0
         Else
-            destino = Convert.ToInt32(gui.cboDeposito.SelectedValue)
+            Try
+                destino = Convert.ToInt32(gui.cboDeposito.SelectedValue)
+            Catch ex As Exception
+                destino = 0
+            End Try
         End If
 
         spEnvasado.actualizar(destino, cantidad, id)
@@ -58,7 +62,7 @@
         gui.frmMovimientos.Show()
         gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.ENVASADO.ToString, "", "", "", New DataBase(Config.Server))
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.ENVASADO
-        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
+        If Not gui.cboDeposito.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 
