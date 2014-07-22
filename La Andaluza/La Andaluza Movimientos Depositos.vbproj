@@ -201,6 +201,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\EngineCoccion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineDesecho.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineDesembote.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineLavado.vb" />
@@ -241,6 +242,12 @@
     <Compile Include="Control\Procesos abiertos\procesos\frmDesecho.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmDesembote.Designer.vb">
+      <DependentUpon>frmDesembote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmDesembote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.Designer.vb">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </Compile>
@@ -272,6 +279,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpCoccion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spDesecho.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpDsembote.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpLavado.vb" />
