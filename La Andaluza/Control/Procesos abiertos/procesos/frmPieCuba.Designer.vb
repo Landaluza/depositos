@@ -28,7 +28,7 @@ Partial Class frmPieCuba
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cboLote = New System.Windows.Forms.ComboBox()
-        Me.cboProducto = New System.Windows.Forms.ComboBox()
+        Me.cbotlote = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.cboDeposito = New System.Windows.Forms.ComboBox()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,9 +76,9 @@ Partial Class frmPieCuba
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(554, 26)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(35, 9)
+        Me.Label9.Size = New System.Drawing.Size(44, 9)
         Me.Label9.TabIndex = 69
-        Me.Label9.Text = "Producto"
+        Me.Label9.Text = "Tipo de lote"
         '
         'Label7
         '
@@ -112,17 +112,17 @@ Partial Class frmPieCuba
         Me.cboLote.TabIndex = 66
         Me.ToolTip1.SetToolTip(Me.cboLote, "Tipo de lote de la salida")
         '
-        'cboProducto
+        'cbotlote
         '
-        Me.cboProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cboProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboProducto.FormattingEnabled = True
-        Me.cboProducto.Location = New System.Drawing.Point(556, 38)
-        Me.cboProducto.Name = "cboProducto"
-        Me.cboProducto.Size = New System.Drawing.Size(168, 21)
-        Me.cboProducto.TabIndex = 65
-        Me.ToolTip1.SetToolTip(Me.cboProducto, "Tipo de producto de la salida")
+        Me.cbotlote.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cbotlote.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbotlote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbotlote.FormattingEnabled = True
+        Me.cbotlote.Location = New System.Drawing.Point(556, 38)
+        Me.cbotlote.Name = "cbotlote"
+        Me.cbotlote.Size = New System.Drawing.Size(168, 21)
+        Me.cbotlote.TabIndex = 65
+        Me.ToolTip1.SetToolTip(Me.cbotlote, "Tipo de producto de la salida")
         '
         'txtCantidad
         '
@@ -158,7 +158,7 @@ Partial Class frmPieCuba
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cboLote)
-        Me.Controls.Add(Me.cboProducto)
+        Me.Controls.Add(Me.cbotlote)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.cboDeposito)
         Me.Name = "frmPieCuba"
@@ -168,7 +168,7 @@ Partial Class frmPieCuba
         Me.Controls.SetChildIndex(Me.pbIconoOperacion, 0)
         Me.Controls.SetChildIndex(Me.cboDeposito, 0)
         Me.Controls.SetChildIndex(Me.txtCantidad, 0)
-        Me.Controls.SetChildIndex(Me.cboProducto, 0)
+        Me.Controls.SetChildIndex(Me.cbotlote, 0)
         Me.Controls.SetChildIndex(Me.cboLote, 0)
         Me.Controls.SetChildIndex(Me.Label6, 0)
         Me.Controls.SetChildIndex(Me.Label7, 0)
@@ -186,7 +186,7 @@ Partial Class frmPieCuba
     Private WithEvents Label7 As System.Windows.Forms.Label
     Private WithEvents Label6 As System.Windows.Forms.Label
     Public WithEvents cboLote As System.Windows.Forms.ComboBox
-    Public WithEvents cboProducto As System.Windows.Forms.ComboBox
+    Public WithEvents cbotlote As System.Windows.Forms.ComboBox
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
     Public WithEvents cboDeposito As System.Windows.Forms.ComboBox
 End Class

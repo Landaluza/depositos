@@ -12,38 +12,38 @@
         CargarDatos()
         AddHandler gui.cboDeposito.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.cboLote.SelectedValueChanged, AddressOf Autoguardado
-        AddHandler gui.cboProducto.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cbotlote.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.txtCantidad.TextChanged, AddressOf Autoguardado
         AddHandler gui.btnExportar.Click, AddressOf Exportar
         AddHandler gui.btnBorrar.Click, AddressOf borrar
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboProducto.mam_DataSource(SpPieCuba.devolver_productos(), False, False)
-        gui.cboLote.mam_DataSource(SpPieCuba.devolver_tipos_de_lotes(), False, False)
+        gui.cbotlote.mam_DataSource(SpPieCuba.devolver_tipos_lotes(), False, False)
+        gui.cboLote.mam_DataSource(SpPieCuba.devolver_lotes(), False, False)
         gui.cboDeposito.mam_DataSource(SpPieCuba.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then
             gui.cboDeposito.SelectedValue = dt.Rows(0).Item(6)
             gui.txtCantidad.Text = dt.Rows(0).Item(3).ToString
-            gui.cboProducto.SelectedValue = dt.Rows(0).Item(9)
+            gui.cbotlote.SelectedValue = dt.Rows(0).Item(10)
             gui.cboLote.SelectedValue = dt.Rows(0).Item(7)
         End If
     End Sub
     Private Sub Autoguardado(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Autoguardado
         Dim destino As Integer
-        Dim producto As Integer
+        Dim tlote As Integer
         Dim lote As Integer
         Dim cantidad As Double
 
-        If gui.cboProducto.SelectedValue Is Nothing Then
-            producto = 0
+        If gui.cbotlote.SelectedValue Is Nothing Then
+            tlote = 0
         Else
             Try
-                producto = CType(gui.cboProducto.SelectedValue, Integer)
+                tlote = CType(gui.cbotlote.SelectedValue, Integer)
             Catch ex As Exception
-                producto = 0
+                tlote = 0
             End Try
         End If
 
@@ -68,7 +68,7 @@
         End If
 
 
-        SpPieCuba.actualizar(destino, cantidad, producto, lote, id)
+        SpPieCuba.actualizar(destino, cantidad, tlote, lote, id)
     End Sub
 
     Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
@@ -83,7 +83,7 @@
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.PIE_DE_CUBA
         gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
-        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
+        gui.frmMovimientos.cboTipoLoteCompra.SelectedValue = gui.cbotlote.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 
