@@ -68,9 +68,9 @@
                     Case FERMENTACION
                         frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
                     Case MACERACION
-                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
+                        frm = New frmMaceracion(Convert.ToInt32(dr.Item(0)))
                     Case PIE_DE_CUBA
-                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
+                        frm = New frmPieCuba(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -127,9 +127,9 @@
                 Case FERMENTACION
                     frm = New frmFermentacion(proceso)
                 Case MACERACION
-                    frm = New frmFermentacion(proceso)
+                    frm = New frmMaceracion(proceso)
                 Case PIE_DE_CUBA
-                    frm = New frmFermentacion(proceso)
+                    frm = New frmPieCuba(proceso)
                 Case Else
                     frm = Nothing
             End Select
