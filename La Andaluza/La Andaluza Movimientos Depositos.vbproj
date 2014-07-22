@@ -279,7 +279,7 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpCoccion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spCompra.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spDesecho.vb" />
-    <Compile Include="Control\Procesos abiertos\procesos\SpDsembote.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpDesembote.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpLavado.vb" />
@@ -566,6 +566,9 @@
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmDesecho.resx">
       <DependentUpon>frmDesecho.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmDesembote.resx">
+      <DependentUpon>frmDesembote.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </EmbeddedResource>
@@ -713,6 +716,7 @@
     <Content Include="Resources\coccion.png" />
     <Content Include="Resources\compra.png" />
     <Content Include="Resources\desecho.png" />
+    <Content Include="Resources\desembote.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
     <Content Include="Resources\lavado.png" />

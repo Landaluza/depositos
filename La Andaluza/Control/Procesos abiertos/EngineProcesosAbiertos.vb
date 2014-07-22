@@ -57,6 +57,8 @@
                         frm = New frmCoccion(Convert.ToInt32(dr.Item(0)))
                     Case DESECHO
                         frm = New frmDesecho(Convert.ToInt32(dr.Item(0)))
+                    Case DESEMBOTES
+                        frm = New frmDesembote(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -102,6 +104,8 @@
                     frm = New frmCoccion(proceso)
                 Case DESECHO
                     frm = New frmDesecho(proceso)
+                Case DESEMBOTES
+                    frm = New frmDesembote(proceso)
                 Case Else
                     frm = Nothing
             End Select
