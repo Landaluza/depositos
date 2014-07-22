@@ -61,6 +61,8 @@
                         frm = New frmDesembote(Convert.ToInt32(dr.Item(0)))
                     Case DESEMBOTE_NC
                         frm = New frmDesemboteNC(Convert.ToInt32(dr.Item(0)))
+                    Case DIFERENCIAS
+                        frm = New frmDiferencias(Convert.ToInt32(dr.Item(0)))
                     Case Else
                         frm = Nothing
                 End Select
@@ -110,6 +112,8 @@
                     frm = New frmDesembote(proceso)
                 Case DESEMBOTE_NC
                     frm = New frmDesemboteNC(proceso)
+                Case DIFERENCIAS
+                    frm = New frmDiferencias(proceso)
                 Case Else
                     frm = Nothing
             End Select

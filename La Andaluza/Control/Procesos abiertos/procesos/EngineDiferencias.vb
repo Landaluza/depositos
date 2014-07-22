@@ -39,6 +39,11 @@
             End Try
         End If
 
+        If gui.cboDeposito.SelectedValue Is Nothing Then
+            destino = 0
+        Else
+            destino = Convert.ToInt32(gui.cboDeposito.SelectedValue)
+        End If
 
         spDiferencias.actualizar(destino, cantidad, id)
     End Sub
@@ -51,9 +56,9 @@
         gui.frmMovimientos = New frmEntMovimientosCopy
         AddHandler gui.frmMovimientos.Saved, AddressOf borrar
         gui.frmMovimientos.Show()
-        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.CLARIFICACION.ToString, "", "", "", New DataBase(Config.Server))
-        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.CLARIFICACION
-        gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.DIFERENCIAS.ToString, "", "", "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.DIFERENCIAS
+        gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 
