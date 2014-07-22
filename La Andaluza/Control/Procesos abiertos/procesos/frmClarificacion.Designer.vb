@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAjusteComercial
+Partial Class frmClarificacion
     Inherits frmProceso
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -52,40 +52,40 @@ Partial Class frmAjusteComercial
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(74, 78)
+        Me.Label5.Location = New System.Drawing.Point(60, 78)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(100, 13)
-        Me.Label5.TabIndex = 71
-        Me.Label5.Text = "Ajuste comercial"
+        Me.Label5.Size = New System.Drawing.Size(77, 13)
+        Me.Label5.TabIndex = 78
+        Me.Label5.Text = "Clarificación"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(138, 26)
+        Me.Label10.Location = New System.Drawing.Point(124, 26)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(19, 9)
-        Me.Label10.TabIndex = 70
+        Me.Label10.TabIndex = 77
         Me.Label10.Text = "Lote"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(339, 26)
+        Me.Label7.Location = New System.Drawing.Point(325, 26)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(35, 9)
-        Me.Label7.TabIndex = 68
+        Me.Label7.TabIndex = 76
         Me.Label7.Text = "Cantidad"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(468, 26)
+        Me.Label6.Location = New System.Drawing.Point(454, 26)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(35, 9)
-        Me.Label6.TabIndex = 67
+        Me.Label6.TabIndex = 75
         Me.Label6.Text = "Deposito"
         '
         'cboLote
@@ -94,21 +94,21 @@ Partial Class frmAjusteComercial
         Me.cboLote.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboLote.FormattingEnabled = True
-        Me.cboLote.Location = New System.Drawing.Point(140, 38)
+        Me.cboLote.Location = New System.Drawing.Point(126, 38)
         Me.cboLote.Name = "cboLote"
         Me.cboLote.Size = New System.Drawing.Size(175, 21)
-        Me.cboLote.TabIndex = 66
+        Me.cboLote.TabIndex = 74
         Me.ToolTip1.SetToolTip(Me.cboLote, "Tipo de lote de la salida")
         '
         'txtCantidad
         '
         Me.txtCantidad.AccessibleDescription = "Cantidad"
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtCantidad.Location = New System.Drawing.Point(341, 38)
+        Me.txtCantidad.Location = New System.Drawing.Point(327, 38)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(106, 21)
-        Me.txtCantidad.TabIndex = 64
+        Me.txtCantidad.TabIndex = 73
         Me.ToolTip1.SetToolTip(Me.txtCantidad, "Litros del movimiento")
         '
         'cboDeposito
@@ -117,13 +117,13 @@ Partial Class frmAjusteComercial
         Me.cboDeposito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboDeposito.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboDeposito.FormattingEnabled = True
-        Me.cboDeposito.Location = New System.Drawing.Point(470, 38)
+        Me.cboDeposito.Location = New System.Drawing.Point(456, 38)
         Me.cboDeposito.Name = "cboDeposito"
         Me.cboDeposito.Size = New System.Drawing.Size(73, 21)
-        Me.cboDeposito.TabIndex = 63
+        Me.cboDeposito.TabIndex = 72
         Me.ToolTip1.SetToolTip(Me.cboDeposito, "Deposito de salida")
         '
-        'frmAjusteComercial
+        'frmClarificacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -135,8 +135,8 @@ Partial Class frmAjusteComercial
         Me.Controls.Add(Me.cboLote)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.cboDeposito)
-        Me.Name = "frmAjusteComercial"
-        Me.Text = "frmAjusteComercial"
+        Me.Name = "frmClarificacion"
+        Me.Text = "frmClarificacion"
         Me.Controls.SetChildIndex(Me.btnExportar, 0)
         Me.Controls.SetChildIndex(Me.btnBorrar, 0)
         Me.Controls.SetChildIndex(Me.pbIconoOperacion, 0)

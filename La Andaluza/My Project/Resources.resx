@@ -325,4 +325,13 @@
   <data name="ajusteagua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\ajusteagua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ajustecomercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ajustecomercial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clarificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\clarificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\coccion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

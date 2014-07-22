@@ -1,12 +1,12 @@
-﻿Public Class EngineAjusteComercial
+﻿Public Class EngineClarificacion
     Inherits ProcesosEngine
     Implements ProcesoMovimiento
 
-    Private spAjusteComercial As SpAjusteComercial
-    Private gui As frmAjusteComercial
-    Public Sub New(ByVal id As Integer, ByRef frm As frmAjusteComercial)
+    Private spClarificacion As SpClarificacion
+    Private gui As frmClarificacion
+    Public Sub New(ByVal id As Integer, ByRef frm As frmClarificacion)
         MyBase.New(id)
-        spAjusteComercial = New SpAjusteComercial
+        spClarificacion = New SpClarificacion
         gui = frm
 
         CargarDatos()
@@ -18,8 +18,8 @@
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboLote.mam_DataSource(spAjusteComercial.devolver_tipos_de_lotes(), False, False)
-        gui.cboDeposito.mam_DataSource(spAjusteComercial.devolver_depositos(), False, False)
+        gui.cboLote.mam_DataSource(spClarificacion.devolver_tipos_de_lotes(), False, False)
+        gui.cboDeposito.mam_DataSource(spClarificacion.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then
@@ -54,7 +54,7 @@
         End If
 
 
-        spAjusteComercial.actualizar(destino, cantidad, lote, id)
+        spClarificacion.actualizar(destino, cantidad, lote, id)
     End Sub
 
     Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
@@ -65,8 +65,8 @@
         gui.frmMovimientos = New frmEntMovimientosCopy
         AddHandler gui.frmMovimientos.Saved, AddressOf borrar
         gui.frmMovimientos.Show()
-        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.AJUDATE_COMERCIAL.ToString, "", "", "", New DataBase(Config.Server))
-        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.AJUDATE_COMERCIAL
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.CLARIFICACION.ToString, "", "", "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.CLARIFICACION
         gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text

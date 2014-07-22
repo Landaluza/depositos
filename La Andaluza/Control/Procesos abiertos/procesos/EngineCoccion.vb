@@ -1,37 +1,51 @@
-﻿Public Class EngineAjusteComercial
+﻿Public Class EngineCoccion
     Inherits ProcesosEngine
     Implements ProcesoMovimiento
 
-    Private spAjusteComercial As SpAjusteComercial
-    Private gui As frmAjusteComercial
-    Public Sub New(ByVal id As Integer, ByRef frm As frmAjusteComercial)
+    Private spCoccion As SpCoccion
+    Private gui As frmCoccion
+    Public Sub New(ByVal id As Integer, ByRef frm As frmCoccion)
         MyBase.New(id)
-        spAjusteComercial = New SpAjusteComercial
+        spCoccion = New SpCoccion
         gui = frm
 
         CargarDatos()
         AddHandler gui.cboDeposito.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.cboLote.SelectedValueChanged, AddressOf Autoguardado
+        AddHandler gui.cboProducto.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.txtCantidad.TextChanged, AddressOf Autoguardado
         AddHandler gui.btnExportar.Click, AddressOf Exportar
         AddHandler gui.btnBorrar.Click, AddressOf borrar
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboLote.mam_DataSource(spAjusteComercial.devolver_tipos_de_lotes(), False, False)
-        gui.cboDeposito.mam_DataSource(spAjusteComercial.devolver_depositos(), False, False)
+        gui.cboProducto.mam_DataSource(spCoccion.devolver_productos(), False, False)
+        gui.cboLote.mam_DataSource(spCoccion.devolver_tipos_de_lotes(), False, False)
+        gui.cboDeposito.mam_DataSource(spCoccion.devolver_depositos(), False, False)
 
         Dim dt As DataTable = MyBase.seleccionar()
         If Not dt Is Nothing Then
             gui.cboDeposito.SelectedValue = dt.Rows(0).Item(6)
             gui.txtCantidad.Text = dt.Rows(0).Item(3).ToString
+            gui.cboProducto.SelectedValue = dt.Rows(0).Item(9)
             gui.cboLote.SelectedValue = dt.Rows(0).Item(7)
         End If
     End Sub
     Private Sub Autoguardado(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Autoguardado
         Dim destino As Integer
+        Dim producto As Integer
         Dim lote As Integer
         Dim cantidad As Double
+
+        If gui.cboProducto.SelectedValue Is Nothing Then
+            producto = 0
+        Else
+            Try
+                producto = CType(gui.cboProducto.SelectedValue, Integer)
+            Catch ex As Exception
+                producto = 0
+            End Try
+        End If
 
         If gui.cboLote.SelectedValue Is Nothing Then
             lote = 0
@@ -54,7 +68,7 @@
         End If
 
 
-        spAjusteComercial.actualizar(destino, cantidad, lote, id)
+        spCoccion.actualizar(destino, cantidad, producto, lote, id)
     End Sub
 
     Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
@@ -65,10 +79,11 @@
         gui.frmMovimientos = New frmEntMovimientosCopy
         AddHandler gui.frmMovimientos.Saved, AddressOf borrar
         gui.frmMovimientos.Show()
-        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.AJUDATE_COMERCIAL.ToString, "", "", "", New DataBase(Config.Server))
-        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.AJUDATE_COMERCIAL
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.COCCION_CONTROLADA.ToString, "", "", "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.COCCION_CONTROLADA
         gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
+        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

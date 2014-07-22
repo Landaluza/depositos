@@ -1,5 +1,5 @@
-﻿Public Class SpAjusteComercial
-   Inherits DataBase
+﻿Public Class SpClarificacion
+    Inherits DataBase
 
     Public Sub New()
         MyBase.New(Config.Server)
@@ -8,7 +8,7 @@
     Public Function devolver_tipos_de_lotes() As DataTable
         Return Me.Consultar("select Lotes.LoteID, Lotes.CodigoLote from " & _
                               " Lotes LEFT OUTER JOIN TiposProductos ON Lotes.TipoProductoID = TiposProductos.TipoProductoID inner join usosProductos on TiposProductos.TipoProductoID = usosproductos.TipoProductoID " & _
-                              " where usosProductos.ProcesoID = 8 and CantidadRestante > 0", False)
+                              " where usosProductos.ProcesoID = 2 and CantidadRestante > 0", False)
     End Function
 
     Public Function devolver_depositos_ocupados() As DataTable
