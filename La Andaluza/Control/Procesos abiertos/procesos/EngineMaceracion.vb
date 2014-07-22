@@ -12,14 +12,12 @@
         CargarDatos()
         AddHandler gui.cboDeposito.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.cboLote.SelectedValueChanged, AddressOf Autoguardado
-        AddHandler gui.cboProducto.SelectedValueChanged, AddressOf Autoguardado
         AddHandler gui.txtCantidad.TextChanged, AddressOf Autoguardado
         AddHandler gui.btnExportar.Click, AddressOf Exportar
         AddHandler gui.btnBorrar.Click, AddressOf borrar
     End Sub
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
-        gui.cboProducto.mam_DataSource(SpMaceracion.devolver_productos(), False, False)
         gui.cboLote.mam_DataSource(SpMaceracion.devolver_tipos_de_lotes(), False, False)
         gui.cboDeposito.mam_DataSource(SpMaceracion.devolver_depositos(), False, False)
 
@@ -27,23 +25,21 @@
         If Not dt Is Nothing Then
             gui.cboDeposito.SelectedValue = dt.Rows(0).Item(6)
             gui.txtCantidad.Text = dt.Rows(0).Item(3).ToString
-            gui.cboProducto.SelectedValue = dt.Rows(0).Item(9)
             gui.cboLote.SelectedValue = dt.Rows(0).Item(7)
         End If
     End Sub
     Private Sub Autoguardado(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Autoguardado
         Dim destino As Integer
-        Dim producto As Integer
         Dim lote As Integer
         Dim cantidad As Double
 
-        If gui.cboProducto.SelectedValue Is Nothing Then
-            producto = 0
+        If gui.cboDeposito.SelectedValue Is Nothing Then
+            destino = 0
         Else
             Try
-                producto = CType(gui.cboProducto.SelectedValue, Integer)
+                destino = CType(gui.cboDeposito.SelectedValue, Integer)
             Catch ex As Exception
-                producto = 0
+                destino = 0
             End Try
         End If
 
@@ -68,7 +64,7 @@
         End If
 
 
-        SpMaceracion.actualizar(destino, cantidad, producto, lote, id)
+        SpMaceracion.actualizar(destino, cantidad, lote, id)
     End Sub
 
     Private Sub Exportar(sender As Object, e As EventArgs) Implements ProcesoMovimiento.Exportar
@@ -83,7 +79,6 @@
         gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.MACERACION
         gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
-        gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
         gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text
 
 

@@ -22,11 +22,10 @@
         Return Me.Consultar("devolverDepositosFinales") 'devolverDepositosPartidas
     End Function
 
-    Public Function actualizar(ByVal destino As Integer, ByVal cantidad As Double, ByVal producto As Integer, ByVal lote As Integer, ByVal id As Integer) As Boolean
+    Public Function actualizar(ByVal destino As Integer, ByVal cantidad As Double, ByVal lote As Integer, ByVal id As Integer) As Boolean
         Return Me.ConsultaAlteraciones("update movimientosAbiertos set " & _
                                  "saledepositoid=" & destino.ToString & "," & _
                                  "cantidad=" & cantidad.ToString.Replace(",", ".") & "," & _
-                                "TipoProductoid=" & producto.ToString & "," & _
                                  "Loteid=" & lote.ToString & _
                                 " where movimientoid=" & id.ToString)
     End Function
