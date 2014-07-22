@@ -463,6 +463,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property fermentacion() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fermentacion", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property filtrado() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("filtrado", resourceCulture)
@@ -616,6 +626,16 @@ Namespace My.Resources
         Friend ReadOnly Property LogoLA() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("LogoLA", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property maceracion() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("maceracion", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

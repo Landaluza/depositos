@@ -7,7 +7,7 @@
 
         InitializeComponent()
 
-        Me.pbIconoOperacion.Image = My.Resources.filtrado
+        Me.pbIconoOperacion.Image = My.Resources.fermentacion
         EngineFermentacion = New EngineFermentacion(id, Me)
 
     End Sub
