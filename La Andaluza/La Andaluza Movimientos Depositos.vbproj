@@ -204,6 +204,8 @@
     <Compile Include="Control\Procesos abiertos\procesos\EngineDesembote.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineDesemboteNC.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineDiferencias.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineEnvasado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\EngineFermentacion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\EngineLavado.vb" />
@@ -262,6 +264,18 @@
     <Compile Include="Control\Procesos abiertos\procesos\frmDiferencias.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmEnvasado.Designer.vb">
+      <DependentUpon>frmEnvasado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmEnvasado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmFermentacion.Designer.vb">
+      <DependentUpon>frmFermentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Procesos abiertos\procesos\frmFermentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\Procesos abiertos\procesos\frmFiltrado.Designer.vb">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </Compile>
@@ -296,6 +310,8 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpDesembote.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpDesemboteNC.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpDiferencias.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpEnvasado.vb" />
+    <Compile Include="Control\Procesos abiertos\procesos\SpFermentacion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpFiltrado.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\spGraneles.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpLavado.vb" />
@@ -591,6 +607,9 @@
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmDiferencias.resx">
       <DependentUpon>frmDiferencias.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmEnvasado.resx">
+      <DependentUpon>frmEnvasado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\Procesos abiertos\procesos\frmFiltrado.resx">
       <DependentUpon>frmFiltrado.vb</DependentUpon>
     </EmbeddedResource>
@@ -741,6 +760,7 @@
     <Content Include="Resources\desembote.png" />
     <Content Include="Resources\desembotenc.png" />
     <Content Include="Resources\diferencia.png" />
+    <Content Include="Resources\envasado.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
     <Content Include="Resources\lavado.png" />
