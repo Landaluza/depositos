@@ -7,7 +7,7 @@
 
         InitializeComponent()
 
-        Me.pbIconoOperacion.Image = My.Resources.xx
+        Me.pbIconoOperacion.Image = My.Resources.piebota
         EnginePieCuba = New EnginePieCuba(id, Me)
 
     End Sub
