@@ -79,8 +79,8 @@
         gui.frmMovimientos = New frmEntMovimientosCopy
         AddHandler gui.frmMovimientos.Saved, AddressOf borrar
         gui.frmMovimientos.Show()
-        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.AJUSTE_AGUA.ToString, "", "", "", New DataBase(Config.Server))
-        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.AJUSTE_AGUA
+        gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.PIE_DE_CUBA.ToString, "", "", "", New DataBase(Config.Server))
+        gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.PIE_DE_CUBA
         gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
         gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
         gui.frmMovimientos.cboFinalTipoProductoFinal.SelectedValue = gui.cboProducto.SelectedValue
