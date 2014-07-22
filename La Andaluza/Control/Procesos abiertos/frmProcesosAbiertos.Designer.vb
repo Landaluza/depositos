@@ -37,8 +37,9 @@ Partial Class frmProcesosAbiertos
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton11 = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,16 +51,16 @@ Partial Class frmProcesosAbiertos
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 25)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(985, 415)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1182, 415)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsCompacto, Me.tsDetallado, Me.tsTrasiegos, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton8, Me.ToolStripButton9, Me.ToolStripButton10, Me.ToolStripButton11})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(985, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1182, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -162,6 +163,22 @@ Partial Class frmProcesosAbiertos
         Me.ToolStripButton9.Size = New System.Drawing.Size(72, 22)
         Me.ToolStripButton9.Text = "Desecho"
         '
+        'ToolStripButton10
+        '
+        Me.ToolStripButton10.Image = CType(resources.GetObject("ToolStripButton10.Image"), System.Drawing.Image)
+        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton10.Name = "ToolStripButton10"
+        Me.ToolStripButton10.Size = New System.Drawing.Size(87, 20)
+        Me.ToolStripButton10.Text = "Desembote"
+        '
+        'ToolStripButton11
+        '
+        Me.ToolStripButton11.Image = CType(resources.GetObject("ToolStripButton11.Image"), System.Drawing.Image)
+        Me.ToolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton11.Name = "ToolStripButton11"
+        Me.ToolStripButton11.Size = New System.Drawing.Size(112, 22)
+        Me.ToolStripButton11.Text = "Desembotes NC"
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -181,22 +198,14 @@ Partial Class frmProcesosAbiertos
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(985, 415)
+        Me.DataGridView1.Size = New System.Drawing.Size(1182, 415)
         Me.DataGridView1.TabIndex = 2
-        '
-        'ToolStripButton10
-        '
-        Me.ToolStripButton10.Image = CType(resources.GetObject("ToolStripButton10.Image"), System.Drawing.Image)
-        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton10.Name = "ToolStripButton10"
-        Me.ToolStripButton10.Size = New System.Drawing.Size(87, 20)
-        Me.ToolStripButton10.Text = "Desembote"
         '
         'frmProcesosAbiertos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 440)
+        Me.ClientSize = New System.Drawing.Size(1182, 440)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStrip1)
@@ -227,4 +236,5 @@ Partial Class frmProcesosAbiertos
     Private WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
     Private WithEvents ToolStripButton9 As System.Windows.Forms.ToolStripButton
     Private WithEvents ToolStripButton10 As System.Windows.Forms.ToolStripButton
+    Private WithEvents ToolStripButton11 As System.Windows.Forms.ToolStripButton
 End Class
