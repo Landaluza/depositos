@@ -23,11 +23,12 @@
     End Function
 
 
-    Public Function actualizar(ByVal proveedor As Integer, ByVal destino As Integer, ByVal cantidad As Double, ByVal producto As Integer, ByVal id As Integer) As Boolean
+    Public Function actualizar(ByVal proveedor As Integer, ByVal destino As Integer, ByVal cantidad As Double, ByVal producto As Integer, ByVal productoFin As Integer, ByVal id As Integer) As Boolean
         Return Me.ConsultaAlteraciones("update movimientosAbiertos set " & _
                                "entradepositoid=" & destino.ToString & "," & _
                                  "cantidad=" & cantidad.ToString.Replace(",", ".") & "," & _
                                 "TipoProductoid=" & producto.ToString & "," & _
+                                "TipoProductobid=" & productoFin.ToString & "," & _
                                 "ProveedorId=" & proveedor.ToString & "," & _
                                 " where movimientoid=" & id.ToString)
     End Function

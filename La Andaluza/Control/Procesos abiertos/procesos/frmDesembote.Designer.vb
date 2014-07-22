@@ -31,6 +31,8 @@ Partial Class frmDesembote
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cboProductoFin = New System.Windows.Forms.ComboBox()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,7 +86,7 @@ Partial Class frmDesembote
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(116, 26)
+        Me.Label1.Location = New System.Drawing.Point(113, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 9)
         Me.Label1.TabIndex = 38
@@ -108,7 +110,7 @@ Partial Class frmDesembote
         Me.cboProductoEntrada.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboProductoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProductoEntrada.FormattingEnabled = True
-        Me.cboProductoEntrada.Location = New System.Drawing.Point(118, 38)
+        Me.cboProductoEntrada.Location = New System.Drawing.Point(115, 19)
         Me.cboProductoEntrada.Name = "cboProductoEntrada"
         Me.cboProductoEntrada.Size = New System.Drawing.Size(202, 21)
         Me.cboProductoEntrada.TabIndex = 36
@@ -147,11 +149,35 @@ Partial Class frmDesembote
         Me.txtCantidad.TabIndex = 33
         Me.ToolTip1.SetToolTip(Me.txtCantidad, "Litros del movimiento")
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(113, 47)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 9)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Producto final"
+        '
+        'cboProductoFin
+        '
+        Me.cboProductoFin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboProductoFin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboProductoFin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProductoFin.FormattingEnabled = True
+        Me.cboProductoFin.Location = New System.Drawing.Point(115, 59)
+        Me.cboProductoFin.Name = "cboProductoFin"
+        Me.cboProductoFin.Size = New System.Drawing.Size(202, 21)
+        Me.cboProductoFin.TabIndex = 42
+        Me.ToolTip1.SetToolTip(Me.cboProductoFin, "Producto de entrada")
+        '
         'frmDesembote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 107)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.cboProductoFin)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -175,6 +201,8 @@ Partial Class frmDesembote
         Me.Controls.SetChildIndex(Me.Label2, 0)
         Me.Controls.SetChildIndex(Me.Label3, 0)
         Me.Controls.SetChildIndex(Me.Label4, 0)
+        Me.Controls.SetChildIndex(Me.cboProductoFin, 0)
+        Me.Controls.SetChildIndex(Me.Label6, 0)
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -189,4 +217,6 @@ Partial Class frmDesembote
     Private WithEvents Label5 As System.Windows.Forms.Label
     Public WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Private WithEvents Label6 As System.Windows.Forms.Label
+    Public WithEvents cboProductoFin As System.Windows.Forms.ComboBox
 End Class
