@@ -29,7 +29,7 @@
                                  "cantidad=" & cantidad.ToString.Replace(",", ".") & "," & _
                                 "TipoProductoid=" & producto.ToString & "," & _
                                 "TipoProductobid=" & productoFin.ToString & "," & _
-                                "ProveedorId=" & proveedor.ToString & "," & _
+                                "ProveedorId=" & proveedor.ToString & "" & _
                                 " where movimientoid=" & id.ToString)
     End Function
 End Class
