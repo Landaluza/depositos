@@ -21,7 +21,7 @@
 
     Private Sub CargarDatos() Implements ProcesoMovimiento.CargarDatos
         gui.cboProductoEntrada.mam_DataSource(spDesembote.devolver_productos(), False, False)
-        gui.cboProductoFin.mam_DataSource(spDesembote.devolver_productos(), False, False)
+        gui.cboProductoFin.mam_DataSource(spDesembote.devolver_productos_no_enologicos(), False, False)
         gui.cboDepositoDestino.mam_DataSource(spDesembote.devolver_depositos(), False, False)
         gui.cboProveedor.mam_DataSource(spDesembote.devolver_proveedores(), False, False)
 
