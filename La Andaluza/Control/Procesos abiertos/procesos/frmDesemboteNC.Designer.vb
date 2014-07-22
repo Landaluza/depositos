@@ -32,6 +32,7 @@ Partial Class frmDesemboteNC
         Me.cboProductoEntrada = New System.Windows.Forms.ComboBox()
         Me.cboDepositoDestino = New System.Windows.Forms.ComboBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -160,11 +161,22 @@ Partial Class frmDesemboteNC
         Me.txtCantidad.TabIndex = 44
         Me.ToolTip1.SetToolTip(Me.txtCantidad, "Litros del movimiento")
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(61, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(87, 13)
+        Me.Label5.TabIndex = 79
+        Me.Label5.Text = "DesemboteNC"
+        '
         'frmDesemboteNC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 107)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cboProductoFin)
         Me.Controls.Add(Me.Label4)
@@ -190,6 +202,7 @@ Partial Class frmDesemboteNC
         Me.Controls.SetChildIndex(Me.Label4, 0)
         Me.Controls.SetChildIndex(Me.cboProductoFin, 0)
         Me.Controls.SetChildIndex(Me.Label6, 0)
+        Me.Controls.SetChildIndex(Me.Label5, 0)
         CType(Me.pbIconoOperacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -205,4 +218,5 @@ Partial Class frmDesemboteNC
     Public WithEvents cboProductoEntrada As System.Windows.Forms.ComboBox
     Public WithEvents cboDepositoDestino As System.Windows.Forms.ComboBox
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Private WithEvents Label5 As System.Windows.Forms.Label
 End Class
