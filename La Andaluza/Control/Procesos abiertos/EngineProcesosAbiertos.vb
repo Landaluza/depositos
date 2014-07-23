@@ -28,53 +28,12 @@
     End Sub
     Public Sub SetValues(ByRef panel As FlowLayoutPanel, ByRef datagrid As DataGridView)
         Dim dt As DataTable = spProcesosAbiertos.devolverProcesosAbiertos
-        Dim frm As frmProceso
-        
+        Dim frm As frmProceso        
 
         If Not dt Is Nothing Then
             For Each dr As DataRow In dt.Rows
 
-                Select Case Convert.ToInt32(dr.Item(3))
-                    Case TRASIEGO
-                        frm = New frmTrasiego(Convert.ToInt32(dr.Item(0)))
-                    Case COMPRA_MATERIAS_PRIMAS
-                        frm = New frmCompra(Convert.ToInt32(dr.Item(0)))
-                    Case FILTRACION
-                        frm = New frmFiltrado(Convert.ToInt32(dr.Item(0)))
-                    Case GRANEL
-                        frm = New frmGraneles(Convert.ToInt32(dr.Item(0)))
-                    Case LAVADO_DEPOSITO
-                        frm = New frmLavado(Convert.ToInt32(dr.Item(0)))
-                    Case AJUSTE_AGUA
-                        frm = New frmAjusteAgua(Convert.ToInt32(dr.Item(0)))
-                    Case AJUDATE_COMERCIAL
-                        frm = New frmAjusteComercial(Convert.ToInt32(dr.Item(0)))
-                    Case CLARIFICACION
-                        frm = New frmClarificacion(Convert.ToInt32(dr.Item(0)))
-                    Case CLARIFICACION
-                        frm = New frmClarificacion(Convert.ToInt32(dr.Item(0)))
-                    Case COCCION_CONTROLADA
-                        frm = New frmCoccion(Convert.ToInt32(dr.Item(0)))
-                    Case DESECHO
-                        frm = New frmDesecho(Convert.ToInt32(dr.Item(0)))
-                    Case DESEMBOTES
-                        frm = New frmDesembote(Convert.ToInt32(dr.Item(0)))
-                    Case DESEMBOTE_NC
-                        frm = New frmDesemboteNC(Convert.ToInt32(dr.Item(0)))
-                    Case DIFERENCIAS
-                        frm = New frmDiferencias(Convert.ToInt32(dr.Item(0)))
-                    Case ENVASADO
-                        frm = New frmEnvasado(Convert.ToInt32(dr.Item(0)))
-                    Case FERMENTACION
-                        frm = New frmFermentacion(Convert.ToInt32(dr.Item(0)))
-                    Case MACERACION
-                        frm = New frmMaceracion(Convert.ToInt32(dr.Item(0)))
-                    Case PIE_DE_CUBA
-                        frm = New frmPieCuba(Convert.ToInt32(dr.Item(0)))
-                    Case Else
-                        frm = Nothing
-                End Select
-
+                frm = form_por_proceso(Convert.ToInt32(dr.Item(3)), Convert.ToInt32(dr.Item(0)))               
 
                 frm.WindowState = FormWindowState.Normal
                 frm.TopLevel = False
@@ -82,10 +41,11 @@
                 frm.Dock = DockStyle.None
                 frm.Show()
                 panel.Controls.Add(frm)
-
             Next
+
             datagrid.DataSource = dt
             datagrid.Columns(3).Visible = False
+            datagrid.Columns(0).Visible = False
         End If
     End Sub
 
@@ -95,44 +55,7 @@
         If proceso <> 0 Then
             Dim frm As frmProceso
 
-            Select Case tipoproceso
-                Case TRASIEGO
-                    frm = New frmTrasiego(proceso)
-                Case COMPRA_MATERIAS_PRIMAS
-                    frm = New frmCompra(proceso)
-                Case FILTRACION
-                    frm = New frmFiltrado(proceso)
-                Case GRANEL
-                    frm = New frmGraneles(proceso)
-                Case LAVADO_DEPOSITO
-                    frm = New frmLavado(proceso)
-                Case AJUSTE_AGUA
-                    frm = New frmAjusteAgua(proceso)
-                Case AJUDATE_COMERCIAL
-                    frm = New frmAjusteComercial(proceso)
-                Case CLARIFICACION
-                    frm = New frmClarificacion(proceso)
-                Case COCCION_CONTROLADA
-                    frm = New frmCoccion(proceso)
-                Case DESECHO
-                    frm = New frmDesecho(proceso)
-                Case DESEMBOTES
-                    frm = New frmDesembote(proceso)
-                Case DESEMBOTE_NC
-                    frm = New frmDesemboteNC(proceso)
-                Case DIFERENCIAS
-                    frm = New frmDiferencias(proceso)
-                Case ENVASADO
-                    frm = New frmEnvasado(proceso)
-                Case FERMENTACION
-                    frm = New frmFermentacion(proceso)
-                Case MACERACION
-                    frm = New frmMaceracion(proceso)
-                Case PIE_DE_CUBA
-                    frm = New frmPieCuba(proceso)
-                Case Else
-                    frm = Nothing
-            End Select
+            frm = form_por_proceso(tipoproceso, proceso)
 
             frm.WindowState = FormWindowState.Normal
             frm.TopLevel = False
@@ -142,9 +65,47 @@
             FlowLayoutPanel1.Controls.Add(frm)
         End If
 
-
-
     End Sub
 
-   
+    Private Function form_por_proceso(ByVal tipoProceso As Integer, ByVal proceso As Integer) As frmProceso
+        Select Case tipoProceso
+            Case TRASIEGO
+                Return New frmTrasiego(proceso)
+            Case COMPRA_MATERIAS_PRIMAS
+                Return New frmCompra(proceso)
+            Case FILTRACION
+                Return New frmFiltrado(proceso)
+            Case GRANEL
+                Return New frmGraneles(proceso)
+            Case LAVADO_DEPOSITO
+                Return New frmLavado(proceso)
+            Case AJUSTE_AGUA
+                Return New frmAjusteAgua(proceso)
+            Case AJUDATE_COMERCIAL
+                Return New frmAjusteComercial(proceso)
+            Case CLARIFICACION
+                Return New frmClarificacion(proceso)
+            Case COCCION_CONTROLADA
+                Return New frmCoccion(proceso)
+            Case DESECHO
+                Return New frmDesecho(proceso)
+            Case DESEMBOTES
+                Return New frmDesembote(proceso)
+            Case DESEMBOTE_NC
+                Return New frmDesemboteNC(proceso)
+            Case DIFERENCIAS
+                Return New frmDiferencias(proceso)
+            Case ENVASADO
+                Return New frmEnvasado(proceso)
+            Case FERMENTACION
+                Return New frmFermentacion(proceso)
+            Case MACERACION
+                Return New frmMaceracion(proceso)
+            Case PIE_DE_CUBA
+                Return New frmPieCuba(proceso)
+            Case Else
+                Return Nothing
+        End Select
+    End Function
+
 End Class
