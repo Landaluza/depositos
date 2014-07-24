@@ -1173,7 +1173,7 @@ Public Class frmEntMovimientosCopy
                 End If
 
                 If CantPartidaActual = 0 Then
-                    messagebox.show("Por favor seleccionar un deposito valido", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    'messagebox.show("Por favor seleccionar un deposito valido", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 ElseIf (CantAMover <= CantPartidaActual) Then
                     If TipoMovimiento = "M" Then 'Macerado
                         txtFinalCantidadFinal.Text = (CantFinalActual).ToString

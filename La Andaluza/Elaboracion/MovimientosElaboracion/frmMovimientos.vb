@@ -65,29 +65,6 @@ Public Class frmMovimientos
         ' GeneralBindingSource.Position = 0
     End Sub
 
-    'Overrides Sub Modificar()
-    '    Dim Posicion As Integer = GeneralBindingSource.Position
-    '    If Posicion >= 0 Then
-    '        Dim FrmEnt As New frmEntMovimientos
-    '        FrmEnt.Text = "Modificar Movimientos"
-    '        FrmEnt.CargarDatos(Posicion, _
-    '                   dgvGeneral.Rows(Posicion).Cells(0).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(1).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(2).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(3).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(4).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(5).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(6).Value, _
-    '                   dgvGeneral.Rows(Posicion).Cells(7).Value)
-    '        FrmEnt.ShowDialog()
-    '        ctlMov.mostrarTodosMovimientos(dtsMov)
-    '        GeneralBindingSource.Position = 1
-    '        GeneralBindingSource.Position = Posicion
-    '    Else
-    '        messagebox.show("Seleccionar alguna celda")
-    '    End If
-    'End Sub
-
     Overrides Sub Eliminar()
 
         Me.Cursor = Cursors.WaitCursor
