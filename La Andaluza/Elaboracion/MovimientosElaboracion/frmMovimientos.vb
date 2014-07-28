@@ -100,39 +100,19 @@ Public Class frmMovimientos
 
         'Me.Cursor = Cursors.Default
 
-        Me.Cursor = Cursors.WaitCursor
 
-
-        If Not dgvGeneral.CurrentRow.Cells(0) Is Nothing Then            
+        If Not dgvGeneral.CurrentRow.Cells(0).Value Is Nothing Then
 
             If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Dim mov As New MovimientoDeposito
-                Dim id As Integer = Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0))
 
-                If mov.tieneTrazabilidad(id) Then
-
-                Else
-                    Dim loteDestino As Integer = mov.recuperarLoteMovimiento(id)
-
-                    If loteDestino > 0 Then
-                        If Not mov.actualizarValoresLote(loteDestino, id) Then
-
-                        End If
-
-                        If Not mov.borrarMovimiento(id) Then
-
-                        End If
-                    Else
-                        MessageBox.Show("caso no contemplado, no se podra borrar el movimiento. Contactar con el administrador", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    End If
+                Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
+                If Not frm.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+                    Me.dgvFill()
                 End If
-
             End If
         Else
             MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
-        Me.Cursor = Cursors.Default
     End Sub
 
     Function EliminarTodos(ByRef dtb As DataBase) As Boolean
