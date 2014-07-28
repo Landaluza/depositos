@@ -74,7 +74,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteOrigen.AutoSize = True
         Me.lLoteOrigen.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen.Location = New System.Drawing.Point(123, 75)
+        Me.lLoteOrigen.Location = New System.Drawing.Point(136, 75)
         Me.lLoteOrigen.Name = "lLoteOrigen"
         Me.lLoteOrigen.Size = New System.Drawing.Size(10, 13)
         Me.lLoteOrigen.TabIndex = 7
@@ -241,7 +241,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteDestino.AutoSize = True
         Me.lLoteDestino.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteDestino.Location = New System.Drawing.Point(123, 52)
+        Me.lLoteDestino.Location = New System.Drawing.Point(136, 52)
         Me.lLoteDestino.Name = "lLoteDestino"
         Me.lLoteDestino.Size = New System.Drawing.Size(10, 13)
         Me.lLoteDestino.TabIndex = 9
@@ -270,7 +270,7 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito2.Size = New System.Drawing.Size(466, 134)
         Me.gbDeposito2.TabIndex = 10
         Me.gbDeposito2.TabStop = False
-        Me.gbDeposito2.Text = "Depositos del origen"
+        Me.gbDeposito2.Text = "Depositos del segundo origen"
         '
         'ldepositoDuplicado2
         '
@@ -334,7 +334,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteOrigen2.AutoSize = True
         Me.lLoteOrigen2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen2.Location = New System.Drawing.Point(123, 101)
+        Me.lLoteOrigen2.Location = New System.Drawing.Point(136, 101)
         Me.lLoteOrigen2.Name = "lLoteOrigen2"
         Me.lLoteOrigen2.Size = New System.Drawing.Size(10, 13)
         Me.lLoteOrigen2.TabIndex = 11
@@ -345,9 +345,9 @@ Partial Class frmResumenBorradoDeposito
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(33, 101)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 13)
+        Me.Label9.Size = New System.Drawing.Size(102, 13)
         Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Lote origen"
+        Me.Label9.Text = "Segundo lote origen"
         '
         'frmResumenBorradoDeposito
         '
