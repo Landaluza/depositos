@@ -74,7 +74,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteOrigen.AutoSize = True
         Me.lLoteOrigen.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen.Location = New System.Drawing.Point(136, 75)
+        Me.lLoteOrigen.Location = New System.Drawing.Point(802, 78)
         Me.lLoteOrigen.Name = "lLoteOrigen"
         Me.lLoteOrigen.Size = New System.Drawing.Size(10, 13)
         Me.lLoteOrigen.TabIndex = 7
@@ -83,9 +83,10 @@ Partial Class frmResumenBorradoDeposito
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 52)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(621, 55)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(50, 13)
+        Me.Label3.Size = New System.Drawing.Size(60, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Lote final"
         '
@@ -241,7 +242,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteDestino.AutoSize = True
         Me.lLoteDestino.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteDestino.Location = New System.Drawing.Point(136, 52)
+        Me.lLoteDestino.Location = New System.Drawing.Point(802, 55)
         Me.lLoteDestino.Name = "lLoteDestino"
         Me.lLoteDestino.Size = New System.Drawing.Size(10, 13)
         Me.lLoteDestino.TabIndex = 9
@@ -250,9 +251,10 @@ Partial Class frmResumenBorradoDeposito
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(33, 75)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(621, 78)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 13)
+        Me.Label5.Size = New System.Drawing.Size(71, 13)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Lote origen"
         '
@@ -334,7 +336,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteOrigen2.AutoSize = True
         Me.lLoteOrigen2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen2.Location = New System.Drawing.Point(136, 101)
+        Me.lLoteOrigen2.Location = New System.Drawing.Point(802, 104)
         Me.lLoteOrigen2.Name = "lLoteOrigen2"
         Me.lLoteOrigen2.Size = New System.Drawing.Size(10, 13)
         Me.lLoteOrigen2.TabIndex = 11
@@ -343,9 +345,10 @@ Partial Class frmResumenBorradoDeposito
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(33, 101)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(621, 104)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(102, 13)
+        Me.Label9.Size = New System.Drawing.Size(121, 13)
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Segundo lote origen"
         '
@@ -366,7 +369,11 @@ Partial Class frmResumenBorradoDeposito
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbDeposito)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmResumenBorradoDeposito"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Resumen eliminar movimiento"
         Me.gbDeposito.ResumeLayout(False)
         Me.gbDeposito.PerformLayout()
