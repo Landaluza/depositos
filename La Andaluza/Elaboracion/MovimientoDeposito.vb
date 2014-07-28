@@ -2,6 +2,7 @@
     Inherits DataBase
 
     Public loteDestino As Integer 'lote que recibe el movimiento
+    Public lotePartida As Integer 'lote del que surge el movimiento
     Public trazabilidad As Boolean 'si el movimiento posee trazabilidad
     Public MovimientoID As Integer 'id del movimiento a eliminar
     Public revertirDepositos As Boolean
@@ -84,6 +85,14 @@
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
 
+    Public Function recuperarLotePartidaTrazabilidad(ByVal movimientoId As Integer) As Integer
+        Dim dt As DataTable = Consultar("select lotePartida from compuestopor where movimientoid = " & movimientoId, False)
+
+        If dt Is Nothing Then Return 0
+
+        Return Convert.ToInt32(dt.Rows(0).Item(0))
+    End Function
+
     Public Function recuperarCodigoLoteMovimiento(ByVal movimientoId As Integer) As String
         Dim dt As DataTable = Consultar("select codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId, False)
 
@@ -93,6 +102,14 @@
     End Function
 
     Public Function recuperarCodigoLoteTrazabilidad(ByVal movimientoId As Integer) As String
+        Dim dt As DataTable = Consultar("select codigolote from compuestopor, lotes where lotefinal = loteid and movimientoid = " & movimientoId, False)
+
+        If dt Is Nothing Then Return "-"
+
+        Return Convert.ToString(dt.Rows(0).Item(0))
+    End Function
+
+    Public Function recuperarCodigoLotePartidaTrazabilidad(ByVal movimientoId As Integer) As String
         Dim dt As DataTable = Consultar("select codigolote from compuestopor, lotes where lotepartida = loteid and movimientoid = " & movimientoId, False)
 
         If dt Is Nothing Then Return "-"

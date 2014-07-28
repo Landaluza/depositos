@@ -120,7 +120,7 @@
     Private Sub setValues()
 
         If mov.tieneTrazabilidad(mov.MovimientoID) Then
-            lLoteOrigen.Text = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
+            lLoteDestino.Text = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
             mov.loteDestino = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
             mov.trazabilidad = True
 
@@ -128,7 +128,12 @@
 
             If mov.movimientoReflexivo Then
                 lBorrarDestinoReflexivo.Visible = True
+                mov.lotePartida = mov.loteDestino
+                lLoteOrigen.Text = lLoteDestino.Text
             Else
+                mov.lotePartida = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
+                lLoteOrigen.Text = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
+
                 If mov.tieneTrazabilidadLote(mov.loteDestino, mov.MovimientoID) Then
                     lBorrarDestino.Visible = True
                 Else
@@ -138,11 +143,13 @@
             End If
         Else
             lLoteOrigen.Text = mov.recuperarCodigoLoteMovimiento(mov.MovimientoID)
+            lLoteDestino.Text = lLoteOrigen.Text
             mov.loteDestino = mov.recuperarLoteMovimiento(mov.MovimientoID)
             mov.trazabilidad = False
             lBorrarDestinoTrazabilidad.Visible = True
         End If
 
+        'esto es para el de partida
         If mov.loteDestino > 0 Then
             cboDeposito.mam_DataSource(mov.devolverDepositos, False, False)
             cboDepositoPrevio.mam_DataSource(mov.devolverDepositos, False, False)

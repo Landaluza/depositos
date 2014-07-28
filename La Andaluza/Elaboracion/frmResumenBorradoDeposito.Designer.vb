@@ -46,8 +46,6 @@ Partial Class frmResumenBorradoDeposito
         '
         'gbDeposito
         '
-        Me.gbDeposito.Controls.Add(Me.lLoteOrigen)
-        Me.gbDeposito.Controls.Add(Me.Label3)
         Me.gbDeposito.Controls.Add(Me.ldepositoDuplicado)
         Me.gbDeposito.Controls.Add(Me.cbDeposito)
         Me.gbDeposito.Controls.Add(Me.Label2)
@@ -57,16 +55,16 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito.Enabled = False
         Me.gbDeposito.Location = New System.Drawing.Point(30, 25)
         Me.gbDeposito.Name = "gbDeposito"
-        Me.gbDeposito.Size = New System.Drawing.Size(466, 121)
+        Me.gbDeposito.Size = New System.Drawing.Size(466, 134)
         Me.gbDeposito.TabIndex = 0
         Me.gbDeposito.TabStop = False
-        Me.gbDeposito.Text = "Origen"
+        Me.gbDeposito.Text = "Depositos del origen"
         '
         'lLoteOrigen
         '
         Me.lLoteOrigen.AutoSize = True
         Me.lLoteOrigen.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen.Location = New System.Drawing.Point(106, 27)
+        Me.lLoteOrigen.Location = New System.Drawing.Point(634, 101)
         Me.lLoteOrigen.Name = "lLoteOrigen"
         Me.lLoteOrigen.Size = New System.Drawing.Size(10, 13)
         Me.lLoteOrigen.TabIndex = 7
@@ -75,11 +73,11 @@ Partial Class frmResumenBorradoDeposito
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 27)
+        Me.Label3.Location = New System.Drawing.Point(544, 66)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 13)
+        Me.Label3.Size = New System.Drawing.Size(50, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Lote"
+        Me.Label3.Text = "Lote final"
         '
         'ldepositoDuplicado
         '
@@ -205,13 +203,11 @@ Partial Class frmResumenBorradoDeposito
         '
         'gbDestino
         '
-        Me.gbDestino.Controls.Add(Me.lLoteDestino)
         Me.gbDestino.Controls.Add(Me.lBorrarDestinoTrazabilidad)
-        Me.gbDestino.Controls.Add(Me.Label5)
         Me.gbDestino.Controls.Add(Me.cbBorrarDestino)
         Me.gbDestino.Controls.Add(Me.lBorrarDestinoReflexivo)
         Me.gbDestino.Controls.Add(Me.lBorrarDestino)
-        Me.gbDestino.Location = New System.Drawing.Point(30, 152)
+        Me.gbDestino.Location = New System.Drawing.Point(30, 165)
         Me.gbDestino.Name = "gbDestino"
         Me.gbDestino.Size = New System.Drawing.Size(466, 129)
         Me.gbDestino.TabIndex = 6
@@ -235,7 +231,7 @@ Partial Class frmResumenBorradoDeposito
         '
         Me.lLoteDestino.AutoSize = True
         Me.lLoteDestino.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteDestino.Location = New System.Drawing.Point(106, 31)
+        Me.lLoteDestino.Location = New System.Drawing.Point(634, 66)
         Me.lLoteDestino.Name = "lLoteDestino"
         Me.lLoteDestino.Size = New System.Drawing.Size(10, 13)
         Me.lLoteDestino.TabIndex = 9
@@ -244,11 +240,11 @@ Partial Class frmResumenBorradoDeposito
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 31)
+        Me.Label5.Location = New System.Drawing.Point(544, 101)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(28, 13)
+        Me.Label5.Size = New System.Drawing.Size(60, 13)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Lote"
+        Me.Label5.Text = "Lote origen"
         '
         'frmResumenBorradoDeposito
         '
@@ -256,7 +252,11 @@ Partial Class frmResumenBorradoDeposito
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(760, 425)
+        Me.Controls.Add(Me.lLoteDestino)
         Me.Controls.Add(Me.gbDestino)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.lLoteOrigen)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbDeposito)
@@ -267,6 +267,7 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDestino.ResumeLayout(False)
         Me.gbDestino.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Private WithEvents gbDeposito As System.Windows.Forms.GroupBox
