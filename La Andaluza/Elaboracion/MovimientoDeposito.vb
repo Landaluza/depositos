@@ -3,10 +3,13 @@
 
     Public loteDestino As Integer 'lote que recibe el movimiento
     Public lotePartida As Integer 'lote del que surge el movimiento
+    Public lotePartida2 As Integer 'segundo lote del que surge el movimiento, para volcados sobre un deposito ocupado
     Public trazabilidad As Boolean 'si el movimiento posee trazabilidad
     Public MovimientoID As Integer 'id del movimiento a eliminar
     Public revertirDepositos As Boolean
-    Public depositoOcupado As Boolean 'deposito previo del lote final ocupado
+    Public revertirDepositos2 As Boolean
+    Public depositoOcupado As Boolean 'deposito previo del lote partida ocupado
+    Public depositoOcupado2 As Boolean 'deposito previo del segundo lote partida ocupado
     Public movimientoReflexivo As Boolean 'movimiento sobre si mismo
     Public movimientoReflexivoEntreDepositos As Boolean ' movimientos sobre si mismo a diferente deposito
     Public destinoEliminable As Boolean 'si el lote final se puede eliminar por no ser el de partida y no contener trazabilidad
@@ -47,8 +50,8 @@
         End If
     End Function
 
-    Public Function tieneTrazabilidadMultiLote(ByVal loteID As Integer, ByVal movimientoid As Integer) As Boolean
-        Dim dt As DataTable = Consultar("select count(*) from compuestoPor where (loteFinal = " & loteID & " and movimientoid<>" & movimientoid & ") or (lotePArtida=" & loteID & ")", False)
+    Public Function tieneTrazabilidadMultiLote(ByVal movimientoid As Integer) As Boolean
+        Dim dt As DataTable = Consultar("select count(*) from compuestoPor where movimientoid = " & movimientoid, False)
 
         If dt Is Nothing Then Return False
 
@@ -122,8 +125,8 @@
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
 
-    Public Function recuperarSegundoCodigoLoteMovimiento(ByVal movimientoId As Integer) As String
-        Dim dt As DataTable = Consultar("select top 1 codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId & " order by lotepartida desc", False)
+    Public Function recuperarSegundoCodigoLotePartidaTrazabilidad(ByVal movimientoId As Integer) As String
+        Dim dt As DataTable = Consultar("select top 1 codigolote from compuestopor, lotes where lotepartida = loteid and movimientoid = " & movimientoId & " order by lotePartida desc", False)
 
         If dt Is Nothing Then Return "-"
 

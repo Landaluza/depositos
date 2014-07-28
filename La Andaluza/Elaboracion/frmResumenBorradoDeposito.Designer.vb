@@ -40,8 +40,8 @@ Partial Class frmResumenBorradoDeposito
         Me.lBorrarDestinoTrazabilidad = New System.Windows.Forms.Label()
         Me.lLoteDestino = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.gpDeposito2 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.gbDeposito2 = New System.Windows.Forms.GroupBox()
+        Me.ldepositoDuplicado2 = New System.Windows.Forms.Label()
         Me.cbDeposito2 = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cboDepositoPrevio2 = New System.Windows.Forms.ComboBox()
@@ -51,7 +51,7 @@ Partial Class frmResumenBorradoDeposito
         Me.Label9 = New System.Windows.Forms.Label()
         Me.gbDeposito.SuspendLayout()
         Me.gbDestino.SuspendLayout()
-        Me.gpDeposito2.SuspendLayout()
+        Me.gbDeposito2.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbDeposito
@@ -256,33 +256,33 @@ Partial Class frmResumenBorradoDeposito
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Lote origen"
         '
-        'gpDeposito2
+        'gbDeposito2
         '
-        Me.gpDeposito2.Controls.Add(Me.Label4)
-        Me.gpDeposito2.Controls.Add(Me.cbDeposito2)
-        Me.gpDeposito2.Controls.Add(Me.Label6)
-        Me.gpDeposito2.Controls.Add(Me.cboDepositoPrevio2)
-        Me.gpDeposito2.Controls.Add(Me.Label7)
-        Me.gpDeposito2.Controls.Add(Me.cboDeposito2)
-        Me.gpDeposito2.Enabled = False
-        Me.gpDeposito2.Location = New System.Drawing.Point(515, 145)
-        Me.gpDeposito2.Name = "gpDeposito2"
-        Me.gpDeposito2.Size = New System.Drawing.Size(466, 134)
-        Me.gpDeposito2.TabIndex = 10
-        Me.gpDeposito2.TabStop = False
-        Me.gpDeposito2.Text = "Depositos del origen"
+        Me.gbDeposito2.Controls.Add(Me.ldepositoDuplicado2)
+        Me.gbDeposito2.Controls.Add(Me.cbDeposito2)
+        Me.gbDeposito2.Controls.Add(Me.Label6)
+        Me.gbDeposito2.Controls.Add(Me.cboDepositoPrevio2)
+        Me.gbDeposito2.Controls.Add(Me.Label7)
+        Me.gbDeposito2.Controls.Add(Me.cboDeposito2)
+        Me.gbDeposito2.Enabled = False
+        Me.gbDeposito2.Location = New System.Drawing.Point(515, 145)
+        Me.gbDeposito2.Name = "gbDeposito2"
+        Me.gbDeposito2.Size = New System.Drawing.Size(466, 134)
+        Me.gbDeposito2.TabIndex = 10
+        Me.gbDeposito2.TabStop = False
+        Me.gbDeposito2.Text = "Depositos del origen"
         '
-        'Label4
+        'ldepositoDuplicado2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DarkRed
-        Me.Label4.Location = New System.Drawing.Point(107, 97)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(159, 9)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "El deposito se encuentra ocupado por otro lote"
-        Me.Label4.Visible = False
+        Me.ldepositoDuplicado2.AutoSize = True
+        Me.ldepositoDuplicado2.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ldepositoDuplicado2.ForeColor = System.Drawing.Color.DarkRed
+        Me.ldepositoDuplicado2.Location = New System.Drawing.Point(107, 97)
+        Me.ldepositoDuplicado2.Name = "ldepositoDuplicado2"
+        Me.ldepositoDuplicado2.Size = New System.Drawing.Size(159, 9)
+        Me.ldepositoDuplicado2.TabIndex = 5
+        Me.ldepositoDuplicado2.Text = "El deposito se encuentra ocupado por otro lote"
+        Me.ldepositoDuplicado2.Visible = False
         '
         'cbDeposito2
         '
@@ -357,7 +357,7 @@ Partial Class frmResumenBorradoDeposito
         Me.ClientSize = New System.Drawing.Size(998, 571)
         Me.Controls.Add(Me.lLoteOrigen2)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.gpDeposito2)
+        Me.Controls.Add(Me.gbDeposito2)
         Me.Controls.Add(Me.lLoteDestino)
         Me.Controls.Add(Me.gbDestino)
         Me.Controls.Add(Me.Label3)
@@ -372,8 +372,8 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito.PerformLayout()
         Me.gbDestino.ResumeLayout(False)
         Me.gbDestino.PerformLayout()
-        Me.gpDeposito2.ResumeLayout(False)
-        Me.gpDeposito2.PerformLayout()
+        Me.gbDeposito2.ResumeLayout(False)
+        Me.gbDeposito2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -396,8 +396,8 @@ Partial Class frmResumenBorradoDeposito
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents lLoteDestino As System.Windows.Forms.Label
     Private WithEvents Label5 As System.Windows.Forms.Label
-    Private WithEvents gpDeposito2 As System.Windows.Forms.GroupBox
-    Private WithEvents Label4 As System.Windows.Forms.Label
+    Private WithEvents gbDeposito2 As System.Windows.Forms.GroupBox
+    Private WithEvents ldepositoDuplicado2 As System.Windows.Forms.Label
     Private WithEvents cbDeposito2 As System.Windows.Forms.CheckBox
     Private WithEvents Label6 As System.Windows.Forms.Label
     Private WithEvents cboDepositoPrevio2 As System.Windows.Forms.ComboBox

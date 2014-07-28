@@ -10,6 +10,7 @@
 
     Private Sub eliminar()
         mov.revertirDepositos = cbDeposito.Checked
+        mov.revertirDepositos2 = cbDeposito2.Checked
         mov.eliminarDestino = cbBorrarDestino.Checked
 
         mov.EmpezarTransaccion()
@@ -46,7 +47,7 @@
                         End If
 
                     Else
-                        If Not mov.actualizarCantidadLote(mov.loteDestino, mov.MovimientoID) Then
+                        If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
                             mov.CancelarTransaccion()
                             MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
@@ -57,6 +58,29 @@
                         mov.CancelarTransaccion()
                         MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
+                    End If
+
+                    If mov.lotePartida2 > 0 Then
+                        If mov.revertirDepositos2 Then
+                            If Not mov.actualizarValoresLote(mov.lotePartida2, mov.MovimientoID) Then
+                                mov.CancelarTransaccion()
+                                MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                Exit Sub
+                            End If
+
+                        Else
+                            If Not mov.actualizarCantidadLote(mov.lotePartida2, mov.MovimientoID) Then
+                                mov.CancelarTransaccion()
+                                MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                Exit Sub
+                            End If
+                        End If
+
+                        If Not mov.borrarTrazabilidad(mov.lotePartida2, mov.MovimientoID) Then
+                            mov.CancelarTransaccion()
+                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            Exit Sub
+                        End If
                     End If
 
                     If mov.destinoEliminable Then
@@ -145,6 +169,11 @@
                 mov.lotePartida = mov.loteDestino
                 lLoteOrigen.Text = lLoteDestino.Text
             Else
+                If mov.tieneTrazabilidadMultiLote(mov.MovimientoID) Then
+                    mov.lotePartida2 = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
+                    lLoteOrigen2.Text = mov.recuperarSegundoCodigoLotePartidaTrazabilidad(mov.MovimientoID)
+                End If
+
                 mov.lotePartida = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
                 lLoteOrigen.Text = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
 
@@ -172,15 +201,6 @@
             Dim depPrev As Integer = mov.seleccionarDepositoPrevio(mov.lotePartida)
             Dim dep As Integer = mov.seleccionarDepositoActual(mov.lotePartida)
 
-
-            If depPrev > 0 Then
-                Me.gbDeposito.Enabled = True
-            End If
-
-            If dep = depPrev Then
-                Me.cbDeposito.Enabled = False
-            End If
-
             cboDeposito.SelectedValue = dep
             cboDepositoPrevio.SelectedValue = depPrev
 
@@ -189,6 +209,40 @@
             If mov.depositoOcupado Then
                 ldepositoDuplicado.Visible = True
             End If
+
+            If depPrev > 0 Then
+                Me.gbDeposito.Enabled = True
+            End If
+
+            If dep = depPrev Then
+                Me.cbDeposito.Enabled = False
+            Else
+                If mov.lotePartida2 > 0 Then
+                    cboDeposito2.mam_DataSource(mov.devolverDepositos, False, False)
+                    cboDepositoPrevio2.mam_DataSource(mov.devolverDepositos, False, False)
+
+                    depPrev = mov.seleccionarDepositoPrevio(mov.lotePartida2)
+                    dep = mov.seleccionarDepositoActual(mov.lotePartida2)
+
+                    cboDeposito2.SelectedValue = dep
+                    cboDepositoPrevio2.SelectedValue = depPrev
+
+                    mov.depositoOcupado2 = mov.estaOcupado(depPrev)
+
+                    If mov.depositoOcupado Then
+                        ldepositoDuplicado2.Visible = True
+                    End If
+
+                    If depPrev > 0 Then
+                        Me.gbDeposito2.Enabled = True
+                    End If
+
+                    If dep = depPrev Then
+                        Me.cbDeposito.Enabled = False
+                    End If
+                End If
+            End If
+
         End If
     End Sub
     Private Sub frmResumenBorradoDeposito_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
