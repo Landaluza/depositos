@@ -67,35 +67,69 @@ Public Class frmMovimientos
 
     Overrides Sub Eliminar()
 
+        'Me.Cursor = Cursors.WaitCursor
+
+        'Dim Posicion As Integer = GeneralBindingSource.Position
+        'If Posicion >= 0 Then
+        '    Dim response As DialogResult
+        '    response = MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        '    If response = DialogResult.Yes Then
+        '        ctlMov.SetMovimientoID(Convert.ToInt32(dgvGeneral.Rows(Posicion).Cells(0).Value))
+
+        '        If ctlMov.EliminarMovimiento() Then
+        '            ctlMov.mostrarTodosMovimientos(dtsMov, dtb)
+        '            Dim ctlPro As New ctlProcesos
+
+        '            If ctlPro.devolverTipoMovimientoPorDescripcion(dgvGeneral.Rows(Posicion).Cells(4).Value.ToString, dtb) = "E" Then
+        '                MessageBox.Show("Por favor verificar manualmente la necesidad del lote de recepcion " & Convert.ToString(dgvGeneral.Rows(Posicion).Cells(5).Value))
+        '            End If
+
+        '            If Posicion > 0 Then
+        '                GeneralBindingSource.Position = Posicion - 1
+        '            Else
+        '                GeneralBindingSource.Position = 0
+        '            End If
+        '        Else
+        '            MessageBox.Show("No se pudo eliminar el movimiento", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '        End If
+        '    End If
+        'Else
+        '    MessageBox.Show("Seleccionar alguna celda", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        'End If
+
+        'Me.Cursor = Cursors.Default
+
         Me.Cursor = Cursors.WaitCursor
 
-        Dim Posicion As Integer = GeneralBindingSource.Position
-        If Posicion >= 0 Then
-            Dim response As DialogResult
-            response = MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-            If response = DialogResult.Yes Then
-                ctlMov.SetMovimientoID(Convert.ToInt32(dgvGeneral.Rows(Posicion).Cells(0).Value))
+        If Not dgvGeneral.CurrentRow.Cells(0) Is Nothing Then            
 
-                If ctlMov.EliminarMovimiento() Then
-                    ctlMov.mostrarTodosMovimientos(dtsMov, dtb)
-                    Dim ctlPro As New ctlProcesos
+            If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                Dim mov As New MovimientoDeposito
+                Dim id As Integer = Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0))
 
-                    If ctlPro.devolverTipoMovimientoPorDescripcion(dgvGeneral.Rows(Posicion).Cells(4).Value.ToString, dtb) = "E" Then
-                        MessageBox.Show("Por favor verificar manualmente la necesidad del lote de recepcion " & Convert.ToString(dgvGeneral.Rows(Posicion).Cells(5).Value))
-                    End If
+                If mov.tieneTrazabilidad(id) Then
 
-                    If Posicion > 0 Then
-                        GeneralBindingSource.Position = Posicion - 1
-                    Else
-                        GeneralBindingSource.Position = 0
-                    End If
                 Else
-                    MessageBox.Show("No se pudo eliminar el movimiento", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Dim loteDestino As Integer = mov.recuperarLoteMovimiento(id)
+
+                    If loteDestino > 0 Then
+                        If Not mov.actualizarValoresLote(loteDestino, id) Then
+
+                        End If
+
+                        If Not mov.borrarMovimiento(id) Then
+
+                        End If
+                    Else
+                        MessageBox.Show("caso no contemplado, no se podra borrar el movimiento. Contactar con el administrador", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
+
             End If
         Else
-            MessageBox.Show("Seleccionar alguna celda", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
 
         Me.Cursor = Cursors.Default
