@@ -116,10 +116,17 @@
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
-    Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal movimientoid As Integer) As Boolean
-        If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
-            Return False
+    Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal movimientoid As Integer, Optional restar As Boolean = False) As Boolean
+        If restar Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+                Return False
+            End If
+        Else
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+                Return False
+            End If
         End If
+        
 
         If Not ConsultaAlteraciones("update lotes set depositoid = depositoprevioid where loteid=" & loteid) Then
             Return False
@@ -139,9 +146,15 @@
 
         Return True
     End Function
-    Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal movimientoid As Integer) As Boolean
-        If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
-            Return False
+    Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal movimientoid As Integer, Optional ByVal restar As Boolean = False) As Boolean
+        If restar Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+                Return False
+            End If
+        Else
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+                Return False
+            End If
         End If
 
         Return True
@@ -171,7 +184,7 @@
             Return False
         End If
 
-        If Not ConsultaAlteraciones("delete select * from AnaliticasValores where analiticaid in (select analiticaid from analiticas where loteid = " & loteID & " )") Then
+        If Not ConsultaAlteraciones("delete from AnaliticasValores where analiticaid in (select analiticaid from analiticas where loteid = " & loteID & " )") Then
             Return False
         End If
 
@@ -188,7 +201,7 @@
     End Function
 
     Public Function borrarTrazabilidad(ByVal loteDestino As Integer, ByVal movimientoid As Integer) As Boolean
-        If Not ConsultaAlteraciones("delete from compuestopor where movimientoid=" & movimientoid & " and lotefinal=" & loteDestino) Then
+        If Not ConsultaAlteraciones("delete from compuestopor where movimientoid=" & movimientoid & " and lotePartida=" & loteDestino) Then
             Return False
         End If
 
