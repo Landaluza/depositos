@@ -106,7 +106,8 @@ Public Class frmMovimientos
             If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
                 Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
-                If Not frm.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
+                Dim result As DialogResult = frm.ShowDialog()
+                If result <> Windows.Forms.DialogResult.Cancel Then
                     Me.dgvFill()
                 End If
             End If

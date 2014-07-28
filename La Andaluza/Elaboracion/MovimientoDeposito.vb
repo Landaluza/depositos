@@ -11,6 +11,7 @@
     Public destinoEliminable As Boolean 'si el lote final se puede eliminar por no ser el de partida y no contener trazabilidad
     Public eliminarDestino As Boolean
 
+
     Private dtb As DataBase
 
     Public Sub New()
@@ -83,12 +84,31 @@
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
 
+    Public Function recuperarCodigoLoteMovimiento(ByVal movimientoId As Integer) As String
+        Dim dt As DataTable = Consultar("select codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId, False)
+
+        If dt Is Nothing Then Return "-"
+
+        Return Convert.ToString(dt.Rows(0).Item(0))
+    End Function
+
+    Public Function recuperarCodigoLoteTrazabilidad(ByVal movimientoId As Integer) As String
+        Dim dt As DataTable = Consultar("select codigolote from compuestopor, lotes where lotepartida = loteid and movimientoid = " & movimientoId, False)
+
+        If dt Is Nothing Then Return "-"
+
+        Return Convert.ToString(dt.Rows(0).Item(0))
+    End Function
     Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal movimientoid As Integer) As Boolean
         If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
             Return False
         End If
 
         If Not ConsultaAlteraciones("update lotes set depositoid = depositoprevioid where loteid=" & loteid) Then
+            Return False
+        End If
+
+        If Not ConsultaAlteraciones("update lotes set depositoprevioid = null where loteid=" & loteid) Then
             Return False
         End If
 
@@ -104,6 +124,14 @@
     End Function
     Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal movimientoid As Integer) As Boolean
         If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Public Function actualizarDepositoPrevioLote(ByVal loteid As Integer) As Boolean
+        If Not ConsultaAlteraciones("update lotes set depositoprevioid =null where loteid=" & loteid) Then
             Return False
         End If
 
