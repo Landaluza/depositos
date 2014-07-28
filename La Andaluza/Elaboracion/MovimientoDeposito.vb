@@ -47,6 +47,19 @@
         End If
     End Function
 
+    Public Function tieneTrazabilidadMultiLote(ByVal loteID As Integer, ByVal movimientoid As Integer) As Boolean
+        Dim dt As DataTable = Consultar("select count(*) from compuestoPor where (loteFinal = " & loteID & " and movimientoid<>" & movimientoid & ") or (lotePArtida=" & loteID & ")", False)
+
+        If dt Is Nothing Then Return False
+
+        If Convert.ToInt32(dt.Rows(0).Item(0)) > 1 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+
     Public Function estaOcupado(ByVal depositoID As Integer) As Boolean
         Dim dt As DataTable = Consultar("select count(*) from lotes where depositoid = " & depositoID, False)
 
@@ -86,7 +99,7 @@
     End Function
 
     Public Function recuperarLotePartidaTrazabilidad(ByVal movimientoId As Integer) As Integer
-        Dim dt As DataTable = Consultar("select lotePartida from compuestopor where movimientoid = " & movimientoId, False)
+        Dim dt As DataTable = Consultar("select top 1 lotePartida from compuestopor where movimientoid = " & movimientoId & " order by lotePartida", False)
 
         If dt Is Nothing Then Return 0
 
@@ -94,7 +107,23 @@
     End Function
 
     Public Function recuperarCodigoLoteMovimiento(ByVal movimientoId As Integer) As String
-        Dim dt As DataTable = Consultar("select codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId, False)
+        Dim dt As DataTable = Consultar("select top 1 codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId & " order by lotepartida", False)
+
+        If dt Is Nothing Then Return "-"
+
+        Return Convert.ToString(dt.Rows(0).Item(0))
+    End Function
+
+    Public Function recuperarSegundoLotePartidaTrazabilidad(ByVal movimientoId As Integer) As Integer
+        Dim dt As DataTable = Consultar("select top 1 lotePartida from compuestopor where movimientoid = " & movimientoId & " order by lotePartida desc", False)
+
+        If dt Is Nothing Then Return 0
+
+        Return Convert.ToInt32(dt.Rows(0).Item(0))
+    End Function
+
+    Public Function recuperarSegundoCodigoLoteMovimiento(ByVal movimientoId As Integer) As String
+        Dim dt As DataTable = Consultar("select top 1 codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId & " order by lotepartida desc", False)
 
         If dt Is Nothing Then Return "-"
 

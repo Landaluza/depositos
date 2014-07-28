@@ -155,6 +155,7 @@
                     mov.destinoEliminable = True
                 End If
             End If
+
         Else
             lLoteOrigen.Text = mov.recuperarCodigoLoteMovimiento(mov.MovimientoID)
             lLoteDestino.Text = lLoteOrigen.Text
