@@ -47,7 +47,7 @@
                         End If
 
                     Else
-                        If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida, mov.MovimientoID, mov.lotePartida) Then
                             mov.CancelarTransaccion()
                             MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
@@ -69,7 +69,7 @@
                             End If
 
                         Else
-                            If Not mov.actualizarCantidadLote(mov.lotePartida2, mov.MovimientoID) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2, mov.MovimientoID, mov.lotePartida2) Then
                                 mov.CancelarTransaccion()
                                 MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                 Exit Sub
@@ -91,17 +91,33 @@
                                 Exit Sub
                             End If
                         Else
-                            If Not mov.actualizarCantidadLote(mov.loteDestino, mov.MovimientoID, True) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
                                 mov.CancelarTransaccion()
                                 MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                 Exit Sub
                             End If
+
+                            If mov.lotePartida2 > 0 Then
+                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+                                    mov.CancelarTransaccion()
+                                    MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    Exit Sub
+                                End If
+                            End If
                         End If
                     Else
-                        If Not mov.actualizarCantidadLote(mov.loteDestino, mov.MovimientoID, True) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
                             mov.CancelarTransaccion()
                             MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
+                        End If
+
+                        If mov.lotePartida2 > 0 Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+                                mov.CancelarTransaccion()
+                                MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                Exit Sub
+                            End If
                         End If
                     End If
                 End If

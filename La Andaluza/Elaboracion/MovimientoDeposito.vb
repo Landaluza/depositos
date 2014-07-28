@@ -192,6 +192,20 @@
         Return True
     End Function
 
+    Public Function actualizarCantidadLoteTrazabilidadMulti(ByVal loteid As Integer, ByVal movimientoid As Integer, ByVal lotePartida As Integer, Optional ByVal restar As Boolean = False) As Boolean
+        If restar Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from compuestopor where movimientoid = " & movimientoid & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
+                Return False
+            End If
+        Else
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from compuestopor where movimientoid = " & movimientoid & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
+                Return False
+            End If
+        End If
+
+        Return True
+    End Function
+
     Public Function actualizarDepositoPrevioLote(ByVal loteid As Integer) As Boolean
         If Not ConsultaAlteraciones("update lotes set depositoprevioid =null where loteid=" & loteid) Then
             Return False
