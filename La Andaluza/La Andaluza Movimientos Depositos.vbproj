@@ -105,13 +105,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Bases\ZLibrerias\InformeDepositos.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -423,6 +423,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\MovimientoDeposito.vb" />
+    <Compile Include="Elaboracion\MovimientoDepositoEngine.vb" />
     <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\DBO_Filtros.vb" />
     <Compile Include="Elaboracion\MovimientosElaboracion\Filtros\frmEntFiltros.Designer.vb">
       <DependentUpon>frmEntFiltros.vb</DependentUpon>
@@ -786,6 +787,8 @@
     <None Include="Resources\emblem-unreadable.png" />
     <None Include="Resources\emblem-symbolic-link-2.png" />
     <None Include="Resources\align-left.png" />
+    <Content Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll" />
     <Content Include="Resources\ajusteagua.png" />
     <Content Include="Resources\ajustecomercial.png" />
     <Content Include="Resources\clarificacion.png" />

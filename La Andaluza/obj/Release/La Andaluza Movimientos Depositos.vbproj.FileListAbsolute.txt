@@ -79,3 +79,52 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\es\La Andal
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.TrustInfo.xml
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe.manifest
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUIstandar.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNews.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUImain.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEspera.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.FrmInicio.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmElaboraciones.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmResumenEliminarElaboracion.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProceso.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProcesosAbiertos.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmAjusteAgua.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmAjusteComercial.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmClarificacion.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmCoccion.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmCompra.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmDesecho.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmDesembote.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmDesemboteNC.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmDiferencias.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEnvasado.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmFermentacion.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmFiltrado.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmGraneles.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmLavado.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmMaceracion.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmPieCuba.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmTrasiego.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmMovimientosMain.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmResumenBorradoDeposito.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntFiltros.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmFiltros.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntMovimientosCopy.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmMovimientos.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntNoticias2.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNoticias2.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmMensajesPendientes.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntrada.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.FrmAheredarOld.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.FrmAHeredarEntOld.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.gridsimpleform.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.DetailedSimpleForm.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.SplashScreen1.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.ListMovPorTipos.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.MessageDialogue.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Resources.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.FrmAheredarOld.es.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.gridsimpleform.es.resources
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbproj.GenerateResource.Cache
+C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe.licenses

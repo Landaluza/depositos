@@ -23,14 +23,14 @@ Partial Class frmResumenBorradoDeposito
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.gbDeposito = New System.Windows.Forms.GroupBox()
-        Me.lLoteOrigen = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ldepositoDuplicado = New System.Windows.Forms.Label()
         Me.cbDeposito = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cboDepositoPrevio = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboDeposito = New System.Windows.Forms.ComboBox()
+        Me.lLoteOrigen = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.cbBorrarDestino = New System.Windows.Forms.CheckBox()
@@ -69,26 +69,6 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito.TabIndex = 0
         Me.gbDeposito.TabStop = False
         Me.gbDeposito.Text = "Depositos del origen"
-        '
-        'lLoteOrigen
-        '
-        Me.lLoteOrigen.AutoSize = True
-        Me.lLoteOrigen.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lLoteOrigen.Location = New System.Drawing.Point(802, 78)
-        Me.lLoteOrigen.Name = "lLoteOrigen"
-        Me.lLoteOrigen.Size = New System.Drawing.Size(10, 13)
-        Me.lLoteOrigen.TabIndex = 7
-        Me.lLoteOrigen.Text = "-"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(621, 55)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Lote final"
         '
         'ldepositoDuplicado
         '
@@ -147,6 +127,26 @@ Partial Class frmResumenBorradoDeposito
         Me.cboDeposito.Name = "cboDeposito"
         Me.cboDeposito.Size = New System.Drawing.Size(164, 21)
         Me.cboDeposito.TabIndex = 0
+        '
+        'lLoteOrigen
+        '
+        Me.lLoteOrigen.AutoSize = True
+        Me.lLoteOrigen.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lLoteOrigen.Location = New System.Drawing.Point(802, 78)
+        Me.lLoteOrigen.Name = "lLoteOrigen"
+        Me.lLoteOrigen.Size = New System.Drawing.Size(10, 13)
+        Me.lLoteOrigen.TabIndex = 7
+        Me.lLoteOrigen.Text = "-"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(621, 55)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Lote final"
         '
         'btnAceptar
         '
@@ -385,31 +385,31 @@ Partial Class frmResumenBorradoDeposito
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents gbDeposito As System.Windows.Forms.GroupBox
-    Private WithEvents cbDeposito As System.Windows.Forms.CheckBox
-    Private WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents cboDepositoPrevio As System.Windows.Forms.ComboBox
-    Private WithEvents Label1 As System.Windows.Forms.Label
-    Private WithEvents cboDeposito As System.Windows.Forms.ComboBox
-    Private WithEvents ldepositoDuplicado As System.Windows.Forms.Label
     Private WithEvents btnAceptar As System.Windows.Forms.Button
     Private WithEvents btnCancelar As System.Windows.Forms.Button
-    Private WithEvents cbBorrarDestino As System.Windows.Forms.CheckBox
-    Friend WithEvents lBorrarDestino As System.Windows.Forms.Label
-    Friend WithEvents gbDestino As System.Windows.Forms.GroupBox
-    Private WithEvents lBorrarDestinoReflexivo As System.Windows.Forms.Label
-    Private WithEvents lBorrarDestinoTrazabilidad As System.Windows.Forms.Label
-    Private WithEvents lLoteOrigen As System.Windows.Forms.Label
-    Private WithEvents Label3 As System.Windows.Forms.Label
-    Private WithEvents lLoteDestino As System.Windows.Forms.Label
-    Private WithEvents Label5 As System.Windows.Forms.Label
-    Private WithEvents gbDeposito2 As System.Windows.Forms.GroupBox
-    Private WithEvents ldepositoDuplicado2 As System.Windows.Forms.Label
-    Private WithEvents cbDeposito2 As System.Windows.Forms.CheckBox
-    Private WithEvents Label6 As System.Windows.Forms.Label
-    Private WithEvents cboDepositoPrevio2 As System.Windows.Forms.ComboBox
-    Private WithEvents Label7 As System.Windows.Forms.Label
-    Private WithEvents cboDeposito2 As System.Windows.Forms.ComboBox
-    Private WithEvents lLoteOrigen2 As System.Windows.Forms.Label
-    Private WithEvents Label9 As System.Windows.Forms.Label
+    Public WithEvents gbDeposito As System.Windows.Forms.GroupBox
+    Public WithEvents cbDeposito As System.Windows.Forms.CheckBox
+    Public WithEvents Label2 As System.Windows.Forms.Label
+    Public WithEvents cboDepositoPrevio As System.Windows.Forms.ComboBox
+    Public WithEvents Label1 As System.Windows.Forms.Label
+    Public WithEvents cboDeposito As System.Windows.Forms.ComboBox
+    Public WithEvents ldepositoDuplicado As System.Windows.Forms.Label
+    Public WithEvents cbBorrarDestino As System.Windows.Forms.CheckBox
+    Public WithEvents lBorrarDestino As System.Windows.Forms.Label
+    Public WithEvents gbDestino As System.Windows.Forms.GroupBox
+    Public WithEvents lBorrarDestinoReflexivo As System.Windows.Forms.Label
+    Public WithEvents lBorrarDestinoTrazabilidad As System.Windows.Forms.Label
+    Public WithEvents lLoteOrigen As System.Windows.Forms.Label
+    Public WithEvents Label3 As System.Windows.Forms.Label
+    Public WithEvents lLoteDestino As System.Windows.Forms.Label
+    Public WithEvents Label5 As System.Windows.Forms.Label
+    Public WithEvents gbDeposito2 As System.Windows.Forms.GroupBox
+    Public WithEvents ldepositoDuplicado2 As System.Windows.Forms.Label
+    Public WithEvents cbDeposito2 As System.Windows.Forms.CheckBox
+    Public WithEvents Label6 As System.Windows.Forms.Label
+    Public WithEvents cboDepositoPrevio2 As System.Windows.Forms.ComboBox
+    Public WithEvents Label7 As System.Windows.Forms.Label
+    Public WithEvents cboDeposito2 As System.Windows.Forms.ComboBox
+    Public WithEvents lLoteOrigen2 As System.Windows.Forms.Label
+    Public WithEvents Label9 As System.Windows.Forms.Label
 End Class
