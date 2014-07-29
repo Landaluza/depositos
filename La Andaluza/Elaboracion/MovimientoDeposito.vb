@@ -234,6 +234,7 @@
         'select * from AnaliticasValores where analiticaid in (select analiticaid from analiticas where loteid = )
         'select * from Analiticas where loteId = 
 
+        'analiticas
         If Not ConsultaAlteraciones("delete from AnaliticasExternas where analiticaid in (select analiticaid from analiticas where loteid = " & loteID & ")") Then
             Return False
         End If
@@ -246,10 +247,32 @@
             Return False
         End If
 
-
-        If Not ConsultaAlteraciones("delete from lotes where loteID=" & loteID) Then
+        'elaboraciones
+        If Not ConsultaAlteraciones("delete from elaboraciones_ingredientes where id_elaboracion in (select id from elaboraciones where id_elaboracion_final in(select id from elaboraciones_finales where id_lote_terminado = " & loteID & " ))") Then
             Return False
         End If
+
+        If Not ConsultaAlteraciones("delete from elaboraciones where id_elaboracion_final in(select id from elaboraciones_finales where id_lote_terminado = " & loteID & ")") Then
+            Return False
+        End If
+
+        If Not ConsultaAlteraciones("delete from elaboraciones_finales where id_lote_terminado = " & loteID) Then
+            Return False
+        End If
+
+        If Not ConsultaAlteraciones("delete from elaboraciones_ingredientes where id_elaboracion in (select id from elaboraciones where id_lote =" & loteID & " )  ") Then
+            Return False
+        End If
+
+
+        If Not ConsultaAlteraciones("delete from elaboraciones where id_lote = " & loteID) Then
+            Return False
+        End If
+
+        If Not ConsultaAlteraciones("delete from elaboraciones_finales where id not in (select id_elaboracion_final from elaboraciones)") Then
+            Return False
+        End If
+
 
         Return True
     End Function
