@@ -9,18 +9,20 @@
         engine = New MovimientoDepositoEngine(movimientoid)
     End Sub
 
-    
-
 
     Public Sub eliminar()
-        If engine.eliminar(cbDeposito.Checked, cbDeposito2.Checked, cbBorrarDestino.Checked) Then
-            Me.DialogResult = Windows.Forms.DialogResult.OK
-            Me.Close()
-        End If
+        Try
+            If engine.eliminar(cbDeposito.Checked, cbDeposito2.Checked, cbBorrarDestino.Checked) Then
+                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.Close()
+            End If
+        Catch ex As Exception
+            'MessageBox.Show("Error al realizar la operacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        
     End Sub
 
     Public Sub setValues()
-
         engine.setGuiValues(Me)
     End Sub
     Private Sub frmResumenBorradoDeposito_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

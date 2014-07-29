@@ -103,9 +103,11 @@ Public Class frmMovimientos
         'PRUEBA
         Dim dtb As New DataBase(Config.Server)
         Dim dt As DataTable = dtb.Consultar("select movimientoid from movimientos", False)
+        Dim frm As frmResumenBorradoDeposito
+
         For Each row As DataRow In dt.Rows
-            Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
-            frm.setvalues()
+            frm = New frmResumenBorradoDeposito(Convert.ToInt32(row.Item(0)))
+            frm.setValues()
             frm.eliminar()
         Next
 

@@ -89,6 +89,7 @@
         Dim dt As DataTable = Consultar("select loteid from movimientos where movimientoid = " & movimientoId, False)
 
         If dt Is Nothing Then Return 0
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return 0
 
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
@@ -97,6 +98,7 @@
         Dim dt As DataTable = Consultar("select loteFinal from compuestopor where movimientoid = " & movimientoId, False)
 
         If dt Is Nothing Then Return 0
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return 0
 
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
@@ -105,6 +107,7 @@
         Dim dt As DataTable = Consultar("select top 1 lotePartida from compuestopor where movimientoid = " & movimientoId & " order by lotePartida", False)
 
         If dt Is Nothing Then Return 0
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return 0
 
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
@@ -113,6 +116,7 @@
         Dim dt As DataTable = Consultar("select top 1 codigolote from movimientos, lotes where lotes.loteid = movimientos.loteid and movimientoid = " & movimientoId & " order by lotepartida", False)
 
         If dt Is Nothing Then Return "-"
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return "-"
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
@@ -121,6 +125,7 @@
         Dim dt As DataTable = Consultar("select top 1 lotePartida from compuestopor where movimientoid = " & movimientoId & " order by lotePartida desc", False)
 
         If dt Is Nothing Then Return 0
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return 0
 
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
@@ -129,6 +134,7 @@
         Dim dt As DataTable = Consultar("select top 1 codigolote from compuestopor, lotes where lotepartida = loteid and movimientoid = " & movimientoId & " order by lotePartida desc", False)
 
         If dt Is Nothing Then Return "-"
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return "-"
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
@@ -137,6 +143,7 @@
         Dim dt As DataTable = Consultar("select codigolote from compuestopor, lotes where lotefinal = loteid and movimientoid = " & movimientoId, False)
 
         If dt Is Nothing Then Return "-"
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return "-"
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
@@ -145,6 +152,7 @@
         Dim dt As DataTable = Consultar("select codigolote from compuestopor, lotes where lotepartida = loteid and movimientoid = " & movimientoId, False)
 
         If dt Is Nothing Then Return "-"
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then Return "-"
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
