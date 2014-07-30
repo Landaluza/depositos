@@ -189,7 +189,7 @@
 
             If mov.trazabilidad Then
                 If Not mov.borrarTrazabilidad(mov.lotePartida.Id, mov.MovimientoID) Then
-                    Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                    Throw New Exception("Error al realizar la operacion. No se pudo borrrar la trazabilidad")
                 End If
 
                 If mov.movimientoReflexivo Then
@@ -197,25 +197,25 @@
                     If mov.movimientoReflexivoEntreDepositos Then
                         If mov.lotePartida.revertirDepositos Then
                             If Not mov.actualizarDepositoLote(mov.lotePartida.Id) Then
-                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el deposito del lote  origen")
                             End If
                         End If
                     Else
 
                         If Not mov.actualizarCantidadLote(mov.lotePartida.Id, mov.MovimientoID) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad  del lote origen")
                         End If
                     End If
 
                 Else
                     If mov.lotePartida.revertirDepositos Then
                         If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote origen")
                         End If
 
                     Else
                         If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida.Id, mov.MovimientoID, mov.lotePartida.Id) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote origen")
                         End If
                     End If
 
@@ -226,24 +226,24 @@
                     If mov.lotePartida2.Id > 0 Then
                         If mov.lotePartida2.revertirDepositos Then
                             If Not mov.actualizarValoresLote(mov.lotePartida2.Id, mov.MovimientoID) Then
-                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote  origen2")
                             End If
 
                         Else
                             If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2.Id, mov.MovimientoID, mov.lotePartida2.Id) Then
-                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote origen2")
                             End If
                         End If
 
                         If Not mov.borrarTrazabilidad(mov.lotePartida2.Id, mov.MovimientoID) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. no se pudo borrar la trazabilidad del lote origen2")
                         End If
                     End If
 
                     If mov.loteDestino.eliminable Then
                         If mov.eliminarDestino Then
                             If Not mov.borrarLote(mov.loteDestino.Id) Then
-                                Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
+                                Throw New Exception("Error al realizar la operacion. No se pudo borrar el lote de destino")
                             End If
                         Else
                             If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.Id, True) Then
@@ -252,7 +252,7 @@
 
                             If mov.lotePartida2.Id > 0 Then
                                 If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.Id, True) Then
-                                    Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
+                                    Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote destino")
                                 End If
                             End If
                         End If
@@ -275,16 +275,16 @@
                     If mov.lotePartida.revertirDepositos Then
 
                         If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote origen")
                         End If
                     Else
 
                         If Not mov.actualizarCantidadLote(mov.lotePartida.Id, mov.MovimientoID) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote origen")
                         End If
 
                         If Not mov.actualizarDepositoPrevioLote(mov.lotePartida.Id) Then
-                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote origen")
                         End If
                     End If
 

@@ -69,7 +69,6 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Wind
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Xml.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.C1Report.2.xml
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.Win.C1Report.2.xml
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUIstandar.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNews.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUImain.resources
