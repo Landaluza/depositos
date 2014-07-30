@@ -1,12 +1,13 @@
 ﻿Public Class MovimientoDepositoEngine
-    Private codigoLotePartida As String
-    Private codigoLotePartida2 As String
-    Private codigoLoteDestino As String
-    Private deposito As Integer
-    Private depositoPrevio As Integer
-    Private deposito2 As Integer
-    Private depositoPrevio2 As Integer
-    Private trazabilidadLote As Boolean
+    'Private codigoLotePartida As String
+    'Private codigoLotePartida2 As String
+    'Private codigoLoteDestino As String
+    'Private deposito As Integer
+    'Private depositoPrevio As Integer
+    'Private deposito2 As Integer
+    'Private depositoPrevio2 As Integer
+    'Private trazabilidadLote As Boolean
+
 
     Private mov As MovimientoDeposito
 
@@ -31,7 +32,7 @@
 
     '                If mov.movimientoReflexivoEntreDepositos Then
     '                    If mov.revertirDepositos Then
-    '                        If Not mov.actualizarDepositoLote(mov.lotePartida) Then
+    '                        If Not mov.actualizarDepositoLote(mov.lotePartida.ID) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
@@ -39,7 +40,7 @@
     '                    End If
     '                Else
 
-    '                    If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
+    '                    If Not mov.actualizarCantidadLote(mov.lotePartida.ID, mov.MovimientoID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
@@ -48,43 +49,43 @@
 
     '            Else
     '                If mov.revertirDepositos Then
-    '                    If Not mov.actualizarValoresLote(mov.lotePartida, mov.MovimientoID) Then
+    '                    If Not mov.actualizarValoresLote(mov.lotePartida.ID, mov.MovimientoID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
     '                    End If
 
     '                Else
-    '                    If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida, mov.MovimientoID, mov.lotePartida) Then
+    '                    If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida.ID, mov.MovimientoID, mov.lotePartida.ID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
     '                    End If
     '                End If
 
-    '                If Not mov.borrarTrazabilidad(mov.lotePartida, mov.MovimientoID) Then
+    '                If Not mov.borrarTrazabilidad(mov.lotePartida.ID, mov.MovimientoID) Then
     '                    mov.CancelarTransaccion()
     '                    MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                    Exit Function
     '                End If
 
-    '                If mov.lotePartida2 > 0 Then
+    '                If mov.lotePartida2.ID > 0 Then
     '                    If mov.revertirDepositos2 Then
-    '                        If Not mov.actualizarValoresLote(mov.lotePartida2, mov.MovimientoID) Then
+    '                        If Not mov.actualizarValoresLote(mov.lotePartida2.ID, mov.MovimientoID) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
     '                        End If
 
     '                    Else
-    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2, mov.MovimientoID, mov.lotePartida2) Then
+    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2.ID, mov.MovimientoID, mov.lotePartida2.ID) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
     '                        End If
     '                    End If
 
-    '                    If Not mov.borrarTrazabilidad(mov.lotePartida2, mov.MovimientoID) Then
+    '                    If Not mov.borrarTrazabilidad(mov.lotePartida2.ID, mov.MovimientoID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
@@ -93,20 +94,20 @@
 
     '                If mov.destinoEliminable Then
     '                    If mov.eliminarDestino Then
-    '                        If Not mov.borrarLote(mov.loteDestino) Then
+    '                        If Not mov.borrarLote(mov.loteDestinoID) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
     '                        End If
     '                    Else
-    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
+    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestinoID, mov.MovimientoID, mov.lotePartida.ID, True) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
     '                        End If
 
-    '                        If mov.lotePartida2 > 0 Then
-    '                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+    '                        If mov.lotePartida2.ID > 0 Then
+    '                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestinoID, mov.MovimientoID, mov.lotePartida2.ID, True) Then
     '                                mov.CancelarTransaccion()
     '                                MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                                Exit Function
@@ -114,14 +115,14 @@
     '                        End If
     '                    End If
     '                Else
-    '                    If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
+    '                    If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestinoID, mov.MovimientoID, mov.lotePartida.ID, True) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
     '                    End If
 
-    '                    If mov.lotePartida2 > 0 Then
-    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+    '                    If mov.lotePartida2.ID > 0 Then
+    '                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestinoID, mov.MovimientoID, mov.lotePartida2.ID, True) Then
     '                            mov.CancelarTransaccion()
     '                            MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote destino", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                            Exit Function
@@ -132,23 +133,23 @@
 
     '        Else
 
-    '            If mov.lotePartida > 0 Then
+    '            If mov.lotePartida.ID > 0 Then
     '                If mov.revertirDepositos Then
 
-    '                    If Not mov.actualizarValoresLote(mov.lotePartida, mov.MovimientoID) Then
+    '                    If Not mov.actualizarValoresLote(mov.lotePartida.ID, mov.MovimientoID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
     '                    End If
     '                Else
 
-    '                    If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
+    '                    If Not mov.actualizarCantidadLote(mov.lotePartida.ID, mov.MovimientoID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
     '                    End If
 
-    '                    If Not mov.actualizarDepositoPrevioLote(mov.lotePartida) Then
+    '                    If Not mov.actualizarDepositoPrevioLote(mov.lotePartida.ID) Then
     '                        mov.CancelarTransaccion()
     '                        MessageBox.Show("Error al realizar la operacion. No se pudo actualizar el lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                        Exit Function
@@ -178,8 +179,8 @@
     'End Function
 
     Public Function eliminar(ByVal revertirDepositos As Boolean, ByVal revertirDepositos2 As Boolean, ByVal borrardestino As Boolean) As Boolean
-        mov.revertirDepositos = revertirDepositos
-        mov.revertirDepositos2 = revertirDepositos2
+        mov.lotePartida.revertirDepositos = revertirDepositos
+        mov.lotePartida2.revertirDepositos = revertirDepositos2
         mov.eliminarDestino = borrardestino
 
         mov.EmpezarTransaccion()
@@ -190,74 +191,74 @@
                 If mov.movimientoReflexivo Then
 
                     If mov.movimientoReflexivoEntreDepositos Then
-                        If mov.revertirDepositos Then
-                            If Not mov.actualizarDepositoLote(mov.lotePartida) Then
+                        If mov.lotePartida.revertirDepositos Then
+                            If Not mov.actualizarDepositoLote(mov.lotePartida.Id) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                             End If
                         End If
                     Else
 
-                        If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
+                        If Not mov.actualizarCantidadLote(mov.lotePartida.ID, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
 
                 Else
-                    If mov.revertirDepositos Then
-                        If Not mov.actualizarValoresLote(mov.lotePartida, mov.MovimientoID) Then
+                    If mov.lotePartida.revertirDepositos Then
+                        If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
 
                     Else
-                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida, mov.MovimientoID, mov.lotePartida) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida.Id, mov.MovimientoID, mov.lotePartida.Id) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
 
-                    If Not mov.borrarTrazabilidad(mov.lotePartida, mov.MovimientoID) Then
+                    If Not mov.borrarTrazabilidad(mov.lotePartida.Id, mov.MovimientoID) Then
                         Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                     End If
 
-                    If mov.lotePartida2 > 0 Then
-                        If mov.revertirDepositos2 Then
-                            If Not mov.actualizarValoresLote(mov.lotePartida2, mov.MovimientoID) Then
+                    If mov.lotePartida2.ID > 0 Then
+                        If mov.lotePartida2.revertirDepositos Then
+                            If Not mov.actualizarValoresLote(mov.lotePartida2.Id, mov.MovimientoID) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                             End If
 
                         Else
-                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2, mov.MovimientoID, mov.lotePartida2) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2.Id, mov.MovimientoID, mov.lotePartida2.Id) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                             End If
                         End If
 
-                        If Not mov.borrarTrazabilidad(mov.lotePartida2, mov.MovimientoID) Then
+                        If Not mov.borrarTrazabilidad(mov.lotePartida2.ID, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
 
                     If mov.destinoEliminable Then
                         If mov.eliminarDestino Then
-                            If Not mov.borrarLote(mov.loteDestino) Then
+                            If Not mov.borrarLote(mov.loteDestino.Id) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
                         Else
-                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.ID, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
 
-                            If mov.lotePartida2 > 0 Then
-                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+                            If mov.lotePartida2.ID > 0 Then
+                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.ID, True) Then
                                     Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                                 End If
                             End If
                         End If
                     Else
-                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida, True) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.ID, True) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                         End If
 
-                        If mov.lotePartida2 > 0 Then
-                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino, mov.MovimientoID, mov.lotePartida2, True) Then
+                        If mov.lotePartida2.ID > 0 Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.ID, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
                         End If
@@ -266,19 +267,19 @@
 
             Else
 
-                If mov.lotePartida > 0 Then
-                    If mov.revertirDepositos Then
+                If mov.lotePartida.ID > 0 Then
+                    If mov.lotePartida.revertirDepositos Then
 
-                        If Not mov.actualizarValoresLote(mov.lotePartida, mov.MovimientoID) Then
+                        If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     Else
 
-                        If Not mov.actualizarCantidadLote(mov.lotePartida, mov.MovimientoID) Then
+                        If Not mov.actualizarCantidadLote(mov.lotePartida.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
 
-                        If Not mov.actualizarDepositoPrevioLote(mov.lotePartida) Then
+                        If Not mov.actualizarDepositoPrevioLote(mov.lotePartida.Id) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
@@ -303,26 +304,26 @@
 
     'Public Sub setValues()
     '    If mov.tieneTrazabilidad(mov.MovimientoID) Then
-    '        lLoteDestino.Text = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
-    '        mov.loteDestino = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
+    '        lmov.loteDestino.Text = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
+    '        mov.loteDestinoID = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
     '        mov.trazabilidad = True
 
     '        mov.movimientoReflexivo = mov.esReflexivo(mov.MovimientoID)
 
     '        If mov.movimientoReflexivo Then
     '            lBorrarDestinoReflexivo.Visible = True
-    '            mov.lotePartida = mov.loteDestino
-    '            lLoteOrigen.Text = lLoteDestino.Text
+    '            mov.lotePartida.ID = mov.loteDestinoID
+    '            lLoteOrigen.Text = lmov.loteDestino.Text
     '        Else
     '            If mov.tieneTrazabilidadMultiLote(mov.MovimientoID) Then
-    '                mov.lotePartida2 = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
+    '                mov.lotePartida2.ID = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
     '                lLoteOrigen2.Text = mov.recuperarSegundoCodigoLotePartidaTrazabilidad(mov.MovimientoID)
     '            End If
 
-    '            mov.lotePartida = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
+    '            mov.lotePartida.ID = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
     '            lLoteOrigen.Text = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
 
-    '            If mov.tieneTrazabilidadLote(mov.loteDestino, mov.MovimientoID) Then
+    '            If mov.tieneTrazabilidadLote(mov.loteDestinoID, mov.MovimientoID) Then
     '                lBorrarDestino.Visible = True
     '            Else
     '                cbBorrarDestino.Visible = True
@@ -332,19 +333,19 @@
 
     '    Else
     '        lLoteOrigen.Text = mov.recuperarCodigoLoteMovimiento(mov.MovimientoID)
-    '        lLoteDestino.Text = lLoteOrigen.Text
-    '        mov.loteDestino = mov.recuperarLoteMovimiento(mov.MovimientoID)
-    '        mov.lotePartida = mov.loteDestino
+    '        lmov.loteDestino.Text = lLoteOrigen.Text
+    '        mov.loteDestinoID = mov.recuperarLoteMovimiento(mov.MovimientoID)
+    '        mov.lotePartida.ID = mov.loteDestinoID
     '        mov.trazabilidad = False
     '        lBorrarDestinoTrazabilidad.Visible = True
     '    End If
 
 
-    '    If mov.lotePartida > 0 Then
+    '    If mov.lotePartida.ID > 0 Then
     '        cboDeposito.mam_DataSource(mov.devolverDepositos, False, False)
     '        cboDepositoPrevio.mam_DataSource(mov.devolverDepositos, False, False)
-    '        Dim depPrev As Integer = mov.seleccionarDepositoPrevio(mov.lotePartida)
-    '        Dim dep As Integer = mov.seleccionarDepositoActual(mov.lotePartida)
+    '        Dim depPrev As Integer = mov.seleccionarDepositoPrevio(mov.lotePartida.ID)
+    '        Dim dep As Integer = mov.seleccionarDepositoActual(mov.lotePartida.ID)
 
     '        cboDeposito.SelectedValue = dep
     '        cboDepositoPrevio.SelectedValue = depPrev
@@ -362,12 +363,12 @@
     '        If dep = depPrev Then
     '            Me.cbDeposito.Enabled = False
     '        Else
-    '            If mov.lotePartida2 > 0 Then
+    '            If mov.lotePartida2.ID > 0 Then
     '                cboDeposito2.mam_DataSource(mov.devolverDepositos, False, False)
     '                cboDepositoPrevio2.mam_DataSource(mov.devolverDepositos, False, False)
 
-    '                depPrev = mov.seleccionarDepositoPrevio(mov.lotePartida2)
-    '                dep = mov.seleccionarDepositoActual(mov.lotePartida2)
+    '                depPrev = mov.seleccionarDepositoPrevio(mov.lotePartida2.ID)
+    '                dep = mov.seleccionarDepositoActual(mov.lotePartida2.ID)
 
     '                cboDeposito2.SelectedValue = dep
     '                cboDepositoPrevio2.SelectedValue = depPrev
@@ -393,49 +394,49 @@
 
     Public Sub setValues()
         If mov.tieneTrazabilidad(mov.MovimientoID) Then
-            codigoLoteDestino = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
-            mov.loteDestino = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
+            mov.loteDestino.codigoLote = mov.recuperarCodigoLoteTrazabilidad(mov.MovimientoID)
+            mov.loteDestino.Id = mov.recuperarLoteTrazabilidad(mov.MovimientoID)
             mov.trazabilidad = True
 
             mov.movimientoReflexivo = mov.esReflexivo(mov.MovimientoID)
 
             If mov.movimientoReflexivo Then
-                mov.lotePartida = mov.loteDestino
-                codigoLotePartida = codigoLoteDestino
+                mov.lotePartida.ID = mov.loteDestino.Id
+                mov.lotePartida.codigoLote = mov.loteDestino.codigoLote
             Else
                 If mov.tieneTrazabilidadMultiLote(mov.MovimientoID) Then
-                    mov.lotePartida2 = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
-                    codigoLotePartida2 = mov.recuperarSegundoCodigoLotePartidaTrazabilidad(mov.MovimientoID)
+                    mov.lotePartida2.ID = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
+                    mov.lotePartida2.codigoLote = mov.recuperarSegundoCodigoLotePartidaTrazabilidad(mov.MovimientoID)
                 End If
 
-                mov.lotePartida = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
-                codigolotepartida = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
+                mov.lotePartida.ID = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
+                mov.lotePartida.codigoLote = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
 
-                trazabilidadLote = mov.tieneTrazabilidadLote(mov.loteDestino, mov.MovimientoID)
+                mov.loteDestino.trazabilidadLote = mov.tieneTrazabilidadLote(mov.loteDestino.Id, mov.MovimientoID)
 
             End If
 
         Else
-            codigoLotePartida = mov.recuperarCodigoLoteMovimiento(mov.MovimientoID)
-            codigoLoteDestino = codigoLotePartida
-            mov.loteDestino = mov.recuperarLoteMovimiento(mov.MovimientoID)
-            mov.lotePartida = mov.loteDestino
+            mov.lotePartida.codigoLote = mov.recuperarCodigoLoteMovimiento(mov.MovimientoID)
+            mov.loteDestino.codigoLote = mov.lotePartida.codigoLote
+            mov.loteDestino.Id = mov.recuperarLoteMovimiento(mov.MovimientoID)
+            mov.lotePartida.ID = mov.loteDestino.Id
             mov.trazabilidad = False
         End If
 
 
-        If mov.lotePartida > 0 Then            
-            depositoPrevio = mov.seleccionarDepositoPrevio(mov.lotePartida)
-            deposito = mov.seleccionarDepositoActual(mov.lotePartida)
+        If mov.lotePartida.ID > 0 Then
+            mov.lotePartida.depositoPrevio = mov.seleccionarDepositoPrevio(mov.lotePartida.ID)
+            mov.lotePartida.deposito = mov.seleccionarDepositoActual(mov.lotePartida.ID)
 
-            mov.depositoOcupado = mov.estaOcupado(depositoPrevio)
+            mov.lotePartida.depositoOcupado = mov.estaOcupado(mov.lotePartida.depositoPrevio)
 
-            If deposito <> depositoPrevio Then
-                If mov.lotePartida2 > 0 Then
-                    depositoPrevio2 = mov.seleccionarDepositoPrevio(mov.lotePartida2)
-                    deposito2 = mov.seleccionarDepositoActual(mov.lotePartida2)
+            If mov.lotePartida.depositoPrevio <> mov.lotePartida.deposito Then
+                If mov.lotePartida2.ID > 0 Then
+                    mov.lotePartida2.depositoPrevio = mov.seleccionarDepositoPrevio(mov.lotePartida2.ID)
+                    mov.lotePartida2.depositoPrevio = mov.seleccionarDepositoActual(mov.lotePartida2.ID)
 
-                    mov.depositoOcupado2 = mov.estaOcupado(depositoPrevio2)
+                    mov.lotePartida2.depositoOcupado = mov.estaOcupado(mov.lotePartida2.depositoPrevio)
                 End If
             End If
         End If
@@ -443,19 +444,19 @@
 
     Public Sub setGuiValues(ByRef frm As frmResumenBorradoDeposito)
         If mov.trazabilidad Then
-            frm.lLoteDestino.Text = codigoLoteDestino
+            frm.lLoteDestino.Text = mov.loteDestino.codigoLote
 
             If mov.movimientoReflexivo Then
                 frm.lBorrarDestinoReflexivo.Visible = True
                 frm.lLoteOrigen.Text = frm.lLoteDestino.Text
             Else
-                If mov.lotePartida2 > 0 Then
-                    frm.lLoteOrigen2.Text = codigoLotePartida2
+                If mov.lotePartida2.ID > 0 Then
+                    frm.lLoteOrigen2.Text = mov.lotePartida2.codigoLote
                 End If
 
-                frm.lLoteOrigen.Text = codigoLotePartida
+                frm.lLoteOrigen.Text = mov.lotePartida.codigoLote
 
-                If trazabilidadLote Then
+                If mov.loteDestino.trazabilidadLote Then
                     frm.lBorrarDestino.Visible = True
                 Else
                     frm.cbBorrarDestino.Visible = True
@@ -464,50 +465,50 @@
             End If
 
         Else
-            frm.lLoteOrigen.Text = codigoLotePartida
-            frm.lLoteDestino.Text = codigoLotePartida
+            frm.lLoteOrigen.Text = mov.lotePartida.codigoLote
+            frm.lLoteDestino.Text = mov.loteDestino.codigoLote
             frm.lBorrarDestinoTrazabilidad.Visible = True
         End If
 
 
-        If mov.lotePartida > 0 Then
+        If mov.lotePartida.ID > 0 Then
             frm.cboDeposito.mam_DataSource(mov.devolverDepositos, False, False)
-            frm.cboDepositoPrevio.mam_DataSource(mov.devolverDepositos, False, False)            
+            frm.cboDepositoPrevio.mam_DataSource(mov.devolverDepositos, False, False)
 
-            frm.cboDeposito.SelectedValue = deposito
-            frm.cboDepositoPrevio.SelectedValue = depositoPrevio
+            frm.cboDeposito.SelectedValue = mov.lotePartida.deposito
+            frm.cboDepositoPrevio.SelectedValue = mov.lotePartida.depositoPrevio
 
-            mov.depositoOcupado = mov.estaOcupado(depositoPrevio)
+            mov.lotePartida.depositoOcupado = mov.estaOcupado(mov.lotePartida.depositoPrevio)
 
-            If mov.depositoOcupado Then
+            If mov.lotePartida.depositoOcupado Then
                 frm.ldepositoDuplicado.Visible = True
             End If
 
-            If depositoPrevio > 0 Then
+            If mov.lotePartida.depositoPrevio > 0 Then
                 frm.gbDeposito.Enabled = True
             End If
 
-            If deposito = depositoPrevio Then
+            If mov.lotePartida.depositoPrevio = mov.lotePartida.deposito Then
                 frm.cbDeposito.Enabled = False
             Else
-                If mov.lotePartida2 > 0 Then
+                If mov.lotePartida2.ID > 0 Then
                     frm.cboDeposito2.mam_DataSource(mov.devolverDepositos, False, False)
                     frm.cboDepositoPrevio2.mam_DataSource(mov.devolverDepositos, False, False)
 
-                    frm.cboDeposito2.SelectedValue = deposito2
-                    frm.cboDepositoPrevio2.SelectedValue = depositoPrevio2
+                    frm.cboDeposito2.SelectedValue = mov.lotePartida2.deposito
+                    frm.cboDepositoPrevio2.SelectedValue = mov.lotePartida2.depositoPrevio
 
-                    mov.depositoOcupado2 = mov.estaOcupado(depositoPrevio2)
+                    mov.lotePartida2.depositoOcupado = mov.estaOcupado(mov.lotePartida2.depositoPrevio)
 
-                    If mov.depositoOcupado Then
+                    If mov.lotePartida.depositoOcupado Then
                         frm.ldepositoDuplicado2.Visible = True
                     End If
 
-                    If depositoPrevio2 > 0 Then
+                    If mov.lotePartida2.depositoPrevio > 0 Then
                         frm.gbDeposito2.Enabled = True
                     End If
 
-                    If deposito2 = depositoPrevio2 Then
+                    If mov.lotePartida2.depositoPrevio = mov.lotePartida2.depositoPrevio Then
                         frm.cbDeposito.Enabled = False
                     End If
                 End If

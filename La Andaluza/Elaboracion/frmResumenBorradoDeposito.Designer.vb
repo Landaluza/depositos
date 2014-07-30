@@ -49,9 +49,11 @@ Partial Class frmResumenBorradoDeposito
         Me.cboDeposito2 = New System.Windows.Forms.ComboBox()
         Me.lLoteOrigen2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.gbDeposito.SuspendLayout()
         Me.gbDestino.SuspendLayout()
         Me.gbDeposito2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbDeposito
@@ -153,7 +155,7 @@ Partial Class frmResumenBorradoDeposito
         Me.btnAceptar.FlatAppearance.BorderSize = 0
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_ok_3
-        Me.btnAceptar.Location = New System.Drawing.Point(833, 495)
+        Me.btnAceptar.Location = New System.Drawing.Point(833, 17)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(133, 64)
         Me.btnAceptar.TabIndex = 1
@@ -167,7 +169,7 @@ Partial Class frmResumenBorradoDeposito
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_cancel_3
-        Me.btnCancelar.Location = New System.Drawing.Point(678, 495)
+        Me.btnCancelar.Location = New System.Drawing.Point(678, 17)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(133, 64)
         Me.btnCancelar.TabIndex = 2
@@ -352,6 +354,17 @@ Partial Class frmResumenBorradoDeposito
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Segundo lote origen"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Panel1.Controls.Add(Me.btnAceptar)
+        Me.Panel1.Controls.Add(Me.btnCancelar)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 477)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(998, 94)
+        Me.Panel1.TabIndex = 13
+        '
         'frmResumenBorradoDeposito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -366,9 +379,8 @@ Partial Class frmResumenBorradoDeposito
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lLoteOrigen)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.gbDeposito)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -381,6 +393,7 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDestino.PerformLayout()
         Me.gbDeposito2.ResumeLayout(False)
         Me.gbDeposito2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -412,4 +425,5 @@ Partial Class frmResumenBorradoDeposito
     Public WithEvents cboDeposito2 As System.Windows.Forms.ComboBox
     Public WithEvents lLoteOrigen2 As System.Windows.Forms.Label
     Public WithEvents Label9 As System.Windows.Forms.Label
+    Private WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

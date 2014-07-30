@@ -1,20 +1,16 @@
 ﻿Public Class MovimientoDeposito
     Inherits DataBase
 
-    Public loteDestino As Integer 'lote que recibe el movimiento
-    Public lotePartida As Integer 'lote del que surge el movimiento
-    Public lotePartida2 As Integer 'segundo lote del que surge el movimiento, para volcados sobre un deposito ocupado
     Public trazabilidad As Boolean 'si el movimiento posee trazabilidad
-    Public MovimientoID As Integer 'id del movimiento a eliminar
-    Public revertirDepositos As Boolean
-    Public revertirDepositos2 As Boolean
-    Public depositoOcupado As Boolean 'deposito previo del lote partida ocupado
-    Public depositoOcupado2 As Boolean 'deposito previo del segundo lote partida ocupado
+    Public MovimientoID As Integer 'id del movimiento a eliminar    
     Public movimientoReflexivo As Boolean 'movimiento sobre si mismo
     Public movimientoReflexivoEntreDepositos As Boolean ' movimientos sobre si mismo a diferente deposito
     Public destinoEliminable As Boolean 'si el lote final se puede eliminar por no ser el de partida y no contener trazabilidad
     Public eliminarDestino As Boolean
 
+    Public lotePartida As MovimientoDeposito.Lote ' lote del que suge el movimiento
+    Public lotePartida2 As MovimientoDeposito.Lote  ' segundo lote del que sale el movimiento, para volcados sobre depositos ocupados
+    Public loteDestino As MovimientoDeposito.Lote   ' lote que recibe el movimiento
 
     Private dtb As DataBase
 
@@ -230,10 +226,6 @@
     End Function
 
     Public Function borrarLote(ByVal loteID As Integer) As Boolean
-        '        select * from AnaliticasExternas where analiticaid in (select analiticaid from analiticas where loteid = )
-        'select * from AnaliticasValores where analiticaid in (select analiticaid from analiticas where loteid = )
-        'select * from Analiticas where loteId = 
-
         'analiticas
         If Not ConsultaAlteraciones("delete from AnaliticasExternas where analiticaid in (select analiticaid from analiticas where loteid = " & loteID & ")") Then
             Return False
@@ -300,4 +292,27 @@
 
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
+
+    Public Class Lote
+        Public Id As Integer
+        Public codigoLote As String
+        Public deposito As Integer
+        Public depositoPrevio As Integer
+        Public trazabilidadLote As Boolean
+        Public revertirDepositos As Boolean
+        Public depositoOcupado As Boolean 'deposito previo del lote partida ocupado
+
+
+        Public Sub New()
+            Id = 0
+            codigoLote = ""
+            deposito = 0
+            depositoPrevio = 0
+            trazabilidadLote = False
+            revertirDepositos = False
+            depositoOcupado = True
+        End Sub
+
+    End Class
+
 End Class

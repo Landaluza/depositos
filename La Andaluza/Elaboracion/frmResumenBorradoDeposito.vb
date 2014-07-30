@@ -32,4 +32,6 @@
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Me.eliminar()
     End Sub
+
+    
 End Class
