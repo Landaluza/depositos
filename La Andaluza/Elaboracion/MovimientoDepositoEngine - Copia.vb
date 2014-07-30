@@ -227,12 +227,12 @@
 
                     If mov.lotePartida2.Id > 0 Then
                         If mov.lotePartida2.revertirDepositos Then
-                            If Not mov.actualizarValoresLote(mov.lotePartida2.Id, mov.cantidadSecundaria) Then
+                            If Not mov.actualizarValoresLote(mov.lotePartida2.Id, mov.MovimientoID) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote  origen2")
                             End If
 
                         Else
-                            If Not mov.actualizarCantidadLote(mov.lotePartida2.Id, mov.cantidadSecundaria) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida2.Id, mov.MovimientoID, mov.lotePartida2.Id) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote origen2")
                             End If
                         End If
@@ -248,23 +248,23 @@
                                 Throw New Exception("Error al realizar la operacion. No se pudo borrar el lote de destino")
                             End If
                         Else
-                            If Not mov.actualizarCantidadLote(mov.loteDestino.Id, mov.cantidad, True) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.Id, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
 
                             If mov.lotePartida2.Id > 0 Then
-                                If Not mov.actualizarCantidadLote(mov.loteDestino.Id, mov.cantidadSecundaria, True) Then
+                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.Id, True) Then
                                     Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote destino")
                                 End If
                             End If
                         End If
                     Else
-                        If Not mov.actualizarCantidadLote(mov.loteDestino.Id, mov.cantidad, True) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.Id, True) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                         End If
 
                         If mov.lotePartida2.Id > 0 Then
-                            If Not mov.actualizarCantidadLote(mov.loteDestino.Id, mov.cantidadSecundaria, True) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.Id, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
                         End If
@@ -276,7 +276,7 @@
                 If mov.lotePartida.Id > 0 Then
                     If mov.lotePartida.revertirDepositos Then
 
-                        If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.cantidad) Then
+                        If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote origen")
                         End If
                     Else

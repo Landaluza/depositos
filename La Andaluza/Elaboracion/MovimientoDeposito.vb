@@ -9,14 +9,23 @@
     Public lotePartida As MovimientoDeposito.Lote ' lote del que suge el movimiento
     Public lotePartida2 As MovimientoDeposito.Lote  ' segundo lote del que sale el movimiento, para volcados sobre depositos ocupados
     Public loteDestino As MovimientoDeposito.Lote   ' lote que recibe el movimiento
-
-    Private dtb As DataBase
+    Public cantidad As Double
+    Public cantidadSecundaria As Double
 
     Public Sub New()
         MyBase.New(Config.Server)
         lotePartida = New MovimientoDeposito.Lote
         lotePartida2 = New MovimientoDeposito.Lote
         loteDestino = New MovimientoDeposito.Lote
+
+
+        trazabilidad = False
+        MovimientoID = 0
+        movimientoReflexivo = False
+        movimientoReflexivoEntreDepositos = False
+        eliminarDestino = False
+        cantidad = 0
+        cantidadSecundaria = 0
     End Sub
 
     Public Function devolverDepositos() As DataTable
@@ -89,6 +98,17 @@
         End If
     End Function
 
+    Public Function recuperarCantidadMovimiento(ByVal movimientoid As Integer) As Double
+        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from movimientos where movimientoid =" & movimientoid)
+
+        Return Convert.ToDouble(dt.Rows(0).Item(0))
+    End Function
+
+    Public Function recuperarCantidadTrazabilidad(ByVal movimientoid As Integer, ByVal lotepartida As Integer) As Double
+        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from compuestopor where movimientoid =" & movimientoid & " and lotepartida=" & lotepartida)
+
+        Return Convert.ToDouble(dt.Rows(0).Item(0))
+    End Function
     Public Function recuperarLoteMovimiento(ByVal movimientoId As Integer) As Integer
         Dim dt As DataTable = Consultar("select loteid from movimientos where movimientoid = " & movimientoId, False)
 
@@ -160,17 +180,9 @@
 
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
-    Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal movimientoid As Integer, Optional restar As Boolean = False) As Boolean
-        If restar Then
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
-                Return False
-            End If
-        Else
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
-                Return False
-            End If
-        End If
-        
+    Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal cantidadMovimiento As Double, Optional restar As Boolean = False) As Boolean
+        Me.actualizarCantidadLote(loteid, cantidadMovimiento, restar)
+
 
         If Not ConsultaAlteraciones("update lotes set depositoid = depositoprevioid where loteid=" & loteid) Then
             Return False
@@ -190,13 +202,13 @@
 
         Return True
     End Function
-    Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal movimientoid As Integer, Optional ByVal restar As Boolean = False) As Boolean
+    Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal cantidadmovimiento As Double, Optional ByVal restar As Boolean = False) As Boolean
         If restar Then
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)-" & cantidad & " where loteid=" & loteid) Then
                 Return False
             End If
         Else
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from movimientos where movimientoid = " & movimientoid & ") where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+ " & cantidad & " where loteid=" & loteid) Then
                 Return False
             End If
         End If
@@ -204,19 +216,19 @@
         Return True
     End Function
 
-    Public Function actualizarCantidadLoteTrazabilidadMulti(ByVal loteid As Integer, ByVal movimientoid As Integer, ByVal lotePartida As Integer, Optional ByVal restar As Boolean = False) As Boolean
-        If restar Then
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante-(select cantidad from compuestopor where movimientoid = " & movimientoid & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
-                Return False
-            End If
-        Else
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = cantidadrestante+(select cantidad from compuestopor where movimientoid = " & movimientoid & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
-                Return False
-            End If
-        End If
+    'Public Function actualizarCantidadLoteTrazabilidadMulti(ByVal loteid As Integer, ByVal cantidadEnTrazabilidad As Double, Optional ByVal restar As Boolean = False) As Boolean
+    '    If restar Then
+    '        If Not ConsultaAlteraciones("update lotes set cantidadrestante= isnull(cantidadrestante,0)-" & cantidadEnTrazabilidad & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
+    '            Return False
+    '        End If
+    '    Else
+    '        If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+(select cantidad from compuestopor where movimientoid = " & MovimientoID & " and lotepartida=" & lotePartida & ") where loteid=" & loteid) Then
+    '            Return False
+    '        End If
+    '    End If
 
-        Return True
-    End Function
+    '    Return True
+    'End Function
 
     Public Function actualizarDepositoPrevioLote(ByVal loteid As Integer) As Boolean
         If Not ConsultaAlteraciones("update lotes set depositoprevioid =null where loteid=" & loteid) Then
