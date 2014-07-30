@@ -99,13 +99,13 @@
     End Function
 
     Public Function recuperarCantidadMovimiento(ByVal movimientoid As Integer) As Double
-        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from movimientos where movimientoid =" & movimientoid)
+        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from movimientos where movimientoid =" & movimientoid, False)
 
         Return Convert.ToDouble(dt.Rows(0).Item(0))
     End Function
 
     Public Function recuperarCantidadTrazabilidad(ByVal movimientoid As Integer, ByVal lotepartida As Integer) As Double
-        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from compuestopor where movimientoid =" & movimientoid & " and lotepartida=" & lotepartida)
+        Dim dt As DataTable = Consultar("select isnull(cantidad,0) from compuestopor where movimientoid =" & movimientoid & " and lotepartida=" & lotepartida, False)
 
         Return Convert.ToDouble(dt.Rows(0).Item(0))
     End Function
@@ -181,14 +181,15 @@
         Return Convert.ToString(dt.Rows(0).Item(0))
     End Function
     Public Function actualizarValoresLote(ByVal loteid As Integer, ByVal cantidadMovimiento As Double, Optional restar As Boolean = False) As Boolean
-        Me.actualizarCantidadLote(loteid, cantidadMovimiento, restar)
-
-
-        If Not ConsultaAlteraciones("update lotes set depositoid = depositoprevioid where loteid=" & loteid) Then
+        If Not Me.actualizarCantidadLote(loteid, cantidadMovimiento, restar) Then
             Return False
         End If
 
-        If Not ConsultaAlteraciones("update lotes set depositoprevioid = null where loteid=" & loteid) Then
+        If Not Me.actualizarDepositoLote(loteid) Then
+            Return False
+        End If
+
+        If Not Me.actualizarDepositoPrevioLote(loteid) Then
             Return False
         End If
 
@@ -204,11 +205,11 @@
     End Function
     Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal cantidadmovimiento As Double, Optional ByVal restar As Boolean = False) As Boolean
         If restar Then
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)-" & cantidad & " where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)-" & cantidad.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
                 Return False
             End If
         Else
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+ " & cantidad & " where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+ " & cantidad.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
                 Return False
             End If
         End If

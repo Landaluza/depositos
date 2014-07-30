@@ -112,19 +112,19 @@ Public Class frmMovimientos
         'Next
 
         'VERSION PRODUCCION
-        'If Not dgvGeneral.CurrentRow.Cells(0).Value Is Nothing Then
+        If Not dgvGeneral.CurrentRow.Cells(0).Value Is Nothing Then
 
-        '    If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
-        '        Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
-        '        Dim result As DialogResult = frm.ShowDialog()
-        '        If result <> Windows.Forms.DialogResult.Cancel Then
-        '            Me.dgvFill()
-        '        End If
-        '    End If
-        'Else
-        '    MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        'End If
+                Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
+                Dim result As DialogResult = frm.ShowDialog()
+                If result <> Windows.Forms.DialogResult.Cancel Then
+                    Me.dgvFill()
+                End If
+            End If
+        Else
+            MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Function EliminarTodos(ByRef dtb As DataBase) As Boolean
