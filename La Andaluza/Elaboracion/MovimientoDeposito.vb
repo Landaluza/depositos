@@ -40,10 +40,17 @@
 
         If dt Is Nothing Then Return False
 
-        If Convert.ToInt32(dt.Rows(0).Item(0)) > 0 Then
+        If Convert.ToInt32(dt.Rows(0).Item(0)) > 0 Then            
             Return True
         Else
-            Return False
+            dt = Consultar("select count(*) from movimientos where loteid = " & loteID & " and movimientoid<>" & movimientoid)
+            If dt Is Nothing Then Return False
+
+            If Convert.ToInt32(dt.Rows(0).Item(0)) > 0 Then
+                Return True
+            Else
+                Return False
+            End If
         End If
     End Function
 
@@ -227,6 +234,7 @@
     End Function
 
     Public Function borrarLote(ByVal loteID As Integer) As Boolean
+
         'analiticas
         If Not ConsultaAlteraciones("delete from AnaliticasExternas where analiticaid in (select analiticaid from analiticas where loteid = " & loteID & ")") Then
             Return False
@@ -266,7 +274,11 @@
             Return False
         End If
 
-        If Not ConsultaAlteraciones("delete from lote where loteid=" & loteID) Then
+        If Not ConsultaAlteraciones("update movimientos set loteid=null where movimientoid" & MovimientoID & ")") Then
+            Return False
+        End If
+
+        If Not ConsultaAlteraciones("delete from lotes where loteid=" & loteID) Then
             Return False
         End If
 
