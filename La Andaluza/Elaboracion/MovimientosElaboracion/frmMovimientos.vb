@@ -101,30 +101,30 @@ Public Class frmMovimientos
         'Me.Cursor = Cursors.Default
 
         'PRUEBA
-        Dim dtb As New DataBase(Config.Server)
-        Dim dt As DataTable = dtb.Consultar("select movimientoid from movimientos", False)
-        Dim frm As frmResumenBorradoDeposito
+        'Dim dtb As New DataBase(Config.Server)
+        'Dim dt As DataTable = dtb.Consultar("select movimientoid from movimientos", False)
+        'Dim frm As frmResumenBorradoDeposito
 
-        For Each row As DataRow In dt.Rows
-            frm = New frmResumenBorradoDeposito(Convert.ToInt32(row.Item(0)))
-            frm.setValues()
-            frm.eliminar()
-        Next
+        'For Each row As DataRow In dt.Rows
+        '    frm = New frmResumenBorradoDeposito(Convert.ToInt32(row.Item(0)))
+        '    frm.setValues()
+        '    frm.eliminar()
+        'Next
 
         'VERSION PRODUCCION
-        'If Not dgvGeneral.CurrentRow.Cells(0).Value Is Nothing Then
+        If Not dgvGeneral.CurrentRow.Cells(0).Value Is Nothing Then
 
-        '    If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            If MessageBox.Show(" ¿Realmente desea eliminar este registro? ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
-        '        Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
-        '        Dim result As DialogResult = frm.ShowDialog()
-        '        If result <> Windows.Forms.DialogResult.Cancel Then
-        '            Me.dgvFill()
-        '        End If
-        '    End If
-        'Else
-        '    MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        'End If
+                Dim frm As New frmResumenBorradoDeposito(Convert.ToInt32(dgvGeneral.CurrentRow.Cells(0).Value))
+                Dim result As DialogResult = frm.ShowDialog()
+                If result <> Windows.Forms.DialogResult.Cancel Then
+                    Me.dgvFill()
+                End If
+            End If
+        Else
+            MessageBox.Show("Seleccionar un registro", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
     Function EliminarTodos(ByRef dtb As DataBase) As Boolean

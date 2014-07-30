@@ -10,16 +10,16 @@
     End Sub
 
 
-    Public Sub eliminar()
+    Public Sub eliminar()        
         Try
             If engine.eliminar(cbDeposito.Checked, cbDeposito2.Checked, cbBorrarDestino.Checked) Then
                 Me.DialogResult = Windows.Forms.DialogResult.OK
                 Me.Close()
             End If
         Catch ex As Exception
-            'MessageBox.Show("Error al realizar la operacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al realizar la operacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        
+
     End Sub
 
     Public Sub setValues()

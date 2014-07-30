@@ -188,6 +188,10 @@
         Try
 
             If mov.trazabilidad Then
+                If Not mov.borrarTrazabilidad(mov.lotePartida.Id, mov.MovimientoID) Then
+                    Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                End If
+
                 If mov.movimientoReflexivo Then
 
                     If mov.movimientoReflexivoEntreDepositos Then
@@ -198,7 +202,7 @@
                         End If
                     Else
 
-                        If Not mov.actualizarCantidadLote(mov.lotePartida.ID, mov.MovimientoID) Then
+                        If Not mov.actualizarCantidadLote(mov.lotePartida.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
@@ -215,11 +219,11 @@
                         End If
                     End If
 
-                    If Not mov.borrarTrazabilidad(mov.lotePartida.Id, mov.MovimientoID) Then
-                        Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
-                    End If
+                    'If Not mov.borrarTrazabilidad(mov.lotePartida.Id, mov.MovimientoID) Then
+                    '    Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
+                    'End If
 
-                    If mov.lotePartida2.ID > 0 Then
+                    If mov.lotePartida2.Id > 0 Then
                         If mov.lotePartida2.revertirDepositos Then
                             If Not mov.actualizarValoresLote(mov.lotePartida2.Id, mov.MovimientoID) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
@@ -231,7 +235,7 @@
                             End If
                         End If
 
-                        If Not mov.borrarTrazabilidad(mov.lotePartida2.ID, mov.MovimientoID) Then
+                        If Not mov.borrarTrazabilidad(mov.lotePartida2.Id, mov.MovimientoID) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote")
                         End If
                     End If
@@ -267,7 +271,7 @@
 
             Else
 
-                If mov.lotePartida.ID > 0 Then
+                If mov.lotePartida.Id > 0 Then
                     If mov.lotePartida.revertirDepositos Then
 
                         If Not mov.actualizarValoresLote(mov.lotePartida.Id, mov.MovimientoID) Then

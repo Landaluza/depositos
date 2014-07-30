@@ -266,6 +266,9 @@
             Return False
         End If
 
+        If Not ConsultaAlteraciones("delete from lote where loteid=" & loteID) Then
+            Return False
+        End If
 
         Return True
     End Function
