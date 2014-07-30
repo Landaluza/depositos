@@ -5,9 +5,7 @@
     Public MovimientoID As Integer 'id del movimiento a eliminar    
     Public movimientoReflexivo As Boolean 'movimiento sobre si mismo
     Public movimientoReflexivoEntreDepositos As Boolean ' movimientos sobre si mismo a diferente deposito
-    Public destinoEliminable As Boolean 'si el lote final se puede eliminar por no ser el de partida y no contener trazabilidad
     Public eliminarDestino As Boolean
-
     Public lotePartida As MovimientoDeposito.Lote ' lote del que suge el movimiento
     Public lotePartida2 As MovimientoDeposito.Lote  ' segundo lote del que sale el movimiento, para volcados sobre depositos ocupados
     Public loteDestino As MovimientoDeposito.Lote   ' lote que recibe el movimiento
@@ -16,6 +14,9 @@
 
     Public Sub New()
         MyBase.New(Config.Server)
+        lotePartida = New MovimientoDeposito.Lote
+        lotePartida2 = New MovimientoDeposito.Lote
+        loteDestino = New MovimientoDeposito.Lote
     End Sub
 
     Public Function devolverDepositos() As DataTable
@@ -301,7 +302,7 @@
         Public trazabilidadLote As Boolean
         Public revertirDepositos As Boolean
         Public depositoOcupado As Boolean 'deposito previo del lote partida ocupado
-
+        Public eliminable As Boolean 'si el lote final se puede eliminar por no ser el de partida y no contener trazabilidad
 
         Public Sub New()
             Id = 0
@@ -311,6 +312,7 @@
             trazabilidadLote = False
             revertirDepositos = False
             depositoOcupado = True
+            eliminable = False
         End Sub
 
     End Class

@@ -236,29 +236,29 @@
                         End If
                     End If
 
-                    If mov.destinoEliminable Then
+                    If mov.loteDestino.eliminable Then
                         If mov.eliminarDestino Then
                             If Not mov.borrarLote(mov.loteDestino.Id) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
                         Else
-                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.ID, True) Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.Id, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
 
-                            If mov.lotePartida2.ID > 0 Then
-                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.ID, True) Then
+                            If mov.lotePartida2.Id > 0 Then
+                                If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.Id, True) Then
                                     Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                                 End If
                             End If
                         End If
                     Else
-                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.ID, True) Then
+                        If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida.Id, True) Then
                             Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                         End If
 
-                        If mov.lotePartida2.ID > 0 Then
-                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.ID, True) Then
+                        If mov.lotePartida2.Id > 0 Then
+                            If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.loteDestino.Id, mov.MovimientoID, mov.lotePartida2.Id, True) Then
                                 Throw New Exception("Error al realizar la operacion. No se pudo actualizar el lote destino")
                             End If
                         End If
@@ -284,8 +284,7 @@
                         End If
                     End If
 
-                Else
-                    Throw New Exception("caso no contemplado, no se podra borrar el movimiento. Contactar con el administrador")
+                    'si no fuera el caso seria un movimiento donde no existe ningun tipo de trazabilidad y se puede borrar
                 End If
             End If
 
@@ -460,7 +459,7 @@
                     frm.lBorrarDestino.Visible = True
                 Else
                     frm.cbBorrarDestino.Visible = True
-                    mov.destinoEliminable = True
+                    mov.loteDestino.eliminable = True
                 End If
             End If
 
