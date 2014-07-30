@@ -274,7 +274,7 @@
             Return False
         End If
 
-        If Not ConsultaAlteraciones("update movimientos set loteid=null where movimientoid" & MovimientoID & ")") Then
+        If Not ConsultaAlteraciones("update movimientos set loteid=null where movimientoid=" & MovimientoID) Then
             Return False
         End If
 
