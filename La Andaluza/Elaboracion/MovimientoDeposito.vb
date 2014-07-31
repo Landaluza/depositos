@@ -205,11 +205,11 @@
     End Function
     Public Function actualizarCantidadLote(ByVal loteid As Integer, ByVal cantidadmovimiento As Double, Optional ByVal restar As Boolean = False) As Boolean
         If restar Then
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)-" & cantidad.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)-" & cantidadmovimiento.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
                 Return False
             End If
         Else
-            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+ " & cantidad.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
+            If Not ConsultaAlteraciones("update lotes set cantidadrestante = isnull(cantidadrestante,0)+ " & cantidadmovimiento.ToString.Replace(",", ".") & " where loteid=" & loteid) Then
                 Return False
             End If
         End If

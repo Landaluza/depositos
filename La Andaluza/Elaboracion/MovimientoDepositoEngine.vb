@@ -402,6 +402,11 @@
                 mov.lotePartida.Id = mov.loteDestino.Id
                 mov.lotePartida.codigoLote = mov.loteDestino.codigoLote
             Else
+                mov.lotePartida.Id = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
+                mov.lotePartida.codigoLote = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
+
+                mov.loteDestino.trazabilidadLote = mov.tieneTrazabilidadLote(mov.loteDestino.Id, mov.MovimientoID)
+
                 If mov.tieneTrazabilidadMultiLote(mov.MovimientoID) Then
                     mov.lotePartida2.Id = mov.recuperarSegundoLotePartidaTrazabilidad(mov.MovimientoID)
                     mov.lotePartida2.codigoLote = mov.recuperarSegundoCodigoLotePartidaTrazabilidad(mov.MovimientoID)
@@ -409,12 +414,6 @@
                     mov.cantidad = mov.recuperarCantidadTrazabilidad(mov.MovimientoID, mov.lotePartida.Id)
                     mov.cantidadSecundaria = mov.recuperarCantidadTrazabilidad(mov.MovimientoID, mov.lotePartida2.Id)
                 End If
-
-                mov.lotePartida.Id = mov.recuperarLotePartidaTrazabilidad(mov.MovimientoID)
-                mov.lotePartida.codigoLote = mov.recuperarCodigoLotePartidaTrazabilidad(mov.MovimientoID)
-
-                mov.loteDestino.trazabilidadLote = mov.tieneTrazabilidadLote(mov.loteDestino.Id, mov.MovimientoID)
-
             End If
 
         Else
