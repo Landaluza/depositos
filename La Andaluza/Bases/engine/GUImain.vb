@@ -59,9 +59,6 @@ Public Class GUImain
     End Sub
 
     Public Overridable Sub terminarDeIniciar(ByVal tablausada As String, ByVal ServidorUsado As String, ByVal UsuarioUsado As String, ByVal usua As String)
-
-        
-
         Me.ToolTip1.SetToolTip(Me.lServ, "Usuario: " & UsuarioUsado & Environment.NewLine & "Base de datos: " & tablausada & Environment.NewLine & "Servidor: " & ServidorUsado)
         Me.ToolTip1.SetToolTip(Me.lUser, "Usuario conectado: " & usua & Environment.NewLine & "click para acceder a la configuración de usuario")
         ProcesosAbiertosToolStripMenuItem_Click(Nothing, Nothing)
@@ -466,7 +463,9 @@ Public Class GUImain
         frmProcesos.Show()
         Dim screen As New Pantalla
         If screen.isMultiScreen Then
-            screen.reubicar_formulario_en_pantalla_secundaria(CType(frmProcesos, Form))
+            frmProcesos.WindowState = FormWindowState.Normal
+            screen.reubicar_formulario_en_pantalla_primaria(CType(frmProcesos, Form))
+            frmProcesos.WindowState = FormWindowState.Maximized
         End If
     End Sub
 End Class
