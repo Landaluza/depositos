@@ -25,13 +25,8 @@
     Private Shared ventaslocalPath As String
     Private Shared versionApp As String
 
-    'Public Shared documentoImpresoraEtiquetas As System.Drawing.Printing.PrintDocument
-    'Public Shared PrintDialogEtiquetas As PrintDialog
-    'Public Shared PageSetupDialogEtiquetas As PageSetupDialog
-    'Public Shared PrintPreviewDialogEtiquetas As PrintPreviewDialog
-
     Public Shared Sub Cargar_Ajustes_Predeterminados()
-        Config.Server = DataBase.LOCAL
+        Config.Server = DataBase.SERVIDOR
         Config.MailReportPass = "Administracion2008"
         Config.HelpUrl = "http://192.168.1.106/AyudaLA/index.php"
         Config.ventasPath = "Z:\Informatica\La Andaluza app\ExcelFile\Book1.xlsx"
