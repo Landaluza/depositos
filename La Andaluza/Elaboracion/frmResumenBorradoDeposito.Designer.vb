@@ -65,7 +65,7 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito.Controls.Add(Me.Label1)
         Me.gbDeposito.Controls.Add(Me.cboDeposito)
         Me.gbDeposito.Enabled = False
-        Me.gbDeposito.Location = New System.Drawing.Point(30, 145)
+        Me.gbDeposito.Location = New System.Drawing.Point(30, 12)
         Me.gbDeposito.Name = "gbDeposito"
         Me.gbDeposito.Size = New System.Drawing.Size(466, 134)
         Me.gbDeposito.TabIndex = 0
@@ -269,7 +269,7 @@ Partial Class frmResumenBorradoDeposito
         Me.gbDeposito2.Controls.Add(Me.Label7)
         Me.gbDeposito2.Controls.Add(Me.cboDeposito2)
         Me.gbDeposito2.Enabled = False
-        Me.gbDeposito2.Location = New System.Drawing.Point(515, 145)
+        Me.gbDeposito2.Location = New System.Drawing.Point(30, 157)
         Me.gbDeposito2.Name = "gbDeposito2"
         Me.gbDeposito2.Size = New System.Drawing.Size(466, 134)
         Me.gbDeposito2.TabIndex = 10

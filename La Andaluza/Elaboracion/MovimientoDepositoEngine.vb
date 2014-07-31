@@ -1,13 +1,4 @@
 ﻿Public Class MovimientoDepositoEngine
-    'Private codigoLotePartida As String
-    'Private codigoLotePartida2 As String
-    'Private codigoLoteDestino As String
-    'Private deposito As Integer
-    'Private depositoPrevio As Integer
-    'Private deposito2 As Integer
-    'Private depositoPrevio2 As Integer
-    'Private trazabilidadLote As Boolean
-
 
     Private mov As MovimientoDeposito
 
@@ -214,9 +205,9 @@
                         End If
 
                     Else
-                        'If Not mov.actualizarCantidadLoteTrazabilidadMulti(mov.lotePartida.Id, mov.MovimientoID, mov.lotePartida.Id) Then
-                        '    Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote origen")
-                        'End If
+                        If Not mov.actualizarCantidadLote(mov.lotePartida.Id, mov.cantidad) Then
+                            Throw New Exception("Error al realizar la operacion. No se pudo actualizar la cantidad del lote origen")
+                        End If
 
 
                     End If
