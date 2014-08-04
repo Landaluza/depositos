@@ -66,8 +66,30 @@ Public Class ctlLotes
 
         Dim lote As Integer = verificar_lote(codigoLote, dtb)
 
-        'tipoproducto 0
-        If Convert.ToInt32(dtb.Consultar("guardarLoteDesdeMovimiento " & _
+
+        If codigoLote.Contains("Dif") And lote <> 0 Then
+            If Convert.ToInt32(dtb.Consultar("guardarLoteDesdeMovimiento " & _
+                                    Convert.ToString(LotePartidaID) & "," & _
+                                    Convert.ToString(LoteFinalID) & ",'" & _
+                                    codigoLote & "'," & _
+                                    Convert.ToString(cantidadRestantePartida).Replace(",", ".") & ",'" & _
+                                    Calendar.ArmarFecha(fechaFinal) & "'," & _
+                                    Convert.ToString(cantidadActualFinal).Replace(",", ".") & "," & _
+                                    DepositoID.ToString & "," & _
+                                    Convert.ToString(TipoProductoID) & "," & _
+                                    Convert.ToString(TipoLoteID) & ",'" & _
+                                    False & "','" & _
+                                    conMuestra & "'," & _
+                                    Config.User & ",'" & _
+                                    descripcion & "','" & _
+                                    observacion & "'," & _
+                                    RecipienteSalidaId).Rows(0).Item(0)) <> 1 Then
+
+                Return 0
+            End If
+
+        Else
+            If Convert.ToInt32(dtb.Consultar("guardarLoteDesdeMovimiento " & _
                                     Convert.ToString(LotePartidaID) & "," & _
                                     Convert.ToString(LoteFinalID) & ",'" & _
                                     codigoLote & "'," & _
@@ -84,8 +106,12 @@ Public Class ctlLotes
                                     observacion & "'," & _
                                     RecipienteSalidaId).Rows(0).Item(0)) <> 1 Then
 
-            Return 0
+                Return 0
+            End If
         End If
+
+        'tipoproducto 0
+        
 
 
         If TransicubaID <> 0 Then
