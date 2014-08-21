@@ -26,8 +26,8 @@ Partial Class GuiMovimientoTrasiego
         Me.dgvorigen = New System.Windows.Forms.DataGridView()
         Me.dgvDestino = New System.Windows.Forms.DataGridView()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.rbLoteDEstino = New System.Windows.Forms.RadioButton()
+        Me.rbNuevoLote = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
@@ -37,16 +37,21 @@ Partial Class GuiMovimientoTrasiego
         Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
         Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
         Me.lDescripcionDestino = New System.Windows.Forms.Label()
+        Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
+        Me.cboTipoLote = New System.Windows.Forms.ComboBox()
+        Me.panNuevoLote = New System.Windows.Forms.Panel()
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.panNuevoLote.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvorigen
         '
         Me.dgvorigen.AllowUserToAddRows = False
         Me.dgvorigen.AllowUserToDeleteRows = False
+        Me.dgvorigen.AllowUserToResizeRows = False
         Me.dgvorigen.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvorigen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvorigen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -62,6 +67,7 @@ Partial Class GuiMovimientoTrasiego
         '
         Me.dgvDestino.AllowUserToAddRows = False
         Me.dgvDestino.AllowUserToDeleteRows = False
+        Me.dgvDestino.AllowUserToResizeRows = False
         Me.dgvDestino.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvDestino.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -77,7 +83,7 @@ Partial Class GuiMovimientoTrasiego
         '
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.txtCantidad.Location = New System.Drawing.Point(712, 678)
+        Me.txtCantidad.Location = New System.Drawing.Point(629, 678)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
@@ -85,38 +91,38 @@ Partial Class GuiMovimientoTrasiego
         Me.txtCantidad.Text = "30000000"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'RadioButton1
+        'rbLoteDEstino
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.FlatAppearance.BorderSize = 0
-        Me.RadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton1.Location = New System.Drawing.Point(712, 597)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(152, 17)
-        Me.RadioButton1.TabIndex = 2
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Mantener el lote de destino"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rbLoteDEstino.AutoSize = True
+        Me.rbLoteDEstino.Checked = True
+        Me.rbLoteDEstino.FlatAppearance.BorderSize = 0
+        Me.rbLoteDEstino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbLoteDEstino.Location = New System.Drawing.Point(42, 690)
+        Me.rbLoteDEstino.Name = "rbLoteDEstino"
+        Me.rbLoteDEstino.Size = New System.Drawing.Size(152, 17)
+        Me.rbLoteDEstino.TabIndex = 2
+        Me.rbLoteDEstino.TabStop = True
+        Me.rbLoteDEstino.Text = "Mantener el lote de destino"
+        Me.rbLoteDEstino.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rbNuevoLote
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.FlatAppearance.BorderSize = 0
-        Me.RadioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton2.Location = New System.Drawing.Point(712, 620)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(117, 17)
-        Me.RadioButton2.TabIndex = 3
-        Me.RadioButton2.Text = "Crear un nuevo lote"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rbNuevoLote.AutoSize = True
+        Me.rbNuevoLote.FlatAppearance.BorderSize = 0
+        Me.rbNuevoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbNuevoLote.Location = New System.Drawing.Point(42, 713)
+        Me.rbNuevoLote.Name = "rbNuevoLote"
+        Me.rbNuevoLote.Size = New System.Drawing.Size(117, 17)
+        Me.rbNuevoLote.TabIndex = 3
+        Me.rbNuevoLote.Text = "Crear un nuevo lote"
+        Me.rbNuevoLote.UseVisualStyleBackColor = True
         '
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(953, 678)
+        Me.Button1.Location = New System.Drawing.Point(950, 678)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(244, 69)
         Me.Button1.TabIndex = 5
@@ -220,16 +226,45 @@ Partial Class GuiMovimientoTrasiego
         Me.lDescripcionDestino.TabIndex = 1
         Me.lDescripcionDestino.Text = "-"
         '
+        'cboTipoProducto
+        '
+        Me.cboTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboTipoProducto.FormattingEnabled = True
+        Me.cboTipoProducto.Location = New System.Drawing.Point(24, 11)
+        Me.cboTipoProducto.Name = "cboTipoProducto"
+        Me.cboTipoProducto.Size = New System.Drawing.Size(287, 21)
+        Me.cboTipoProducto.TabIndex = 8
+        '
+        'cboTipoLote
+        '
+        Me.cboTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboTipoLote.FormattingEnabled = True
+        Me.cboTipoLote.Location = New System.Drawing.Point(24, 38)
+        Me.cboTipoLote.Name = "cboTipoLote"
+        Me.cboTipoLote.Size = New System.Drawing.Size(287, 21)
+        Me.cboTipoLote.TabIndex = 9
+        '
+        'panNuevoLote
+        '
+        Me.panNuevoLote.Controls.Add(Me.cboTipoProducto)
+        Me.panNuevoLote.Controls.Add(Me.cboTipoLote)
+        Me.panNuevoLote.Location = New System.Drawing.Point(248, 678)
+        Me.panNuevoLote.Name = "panNuevoLote"
+        Me.panNuevoLote.Size = New System.Drawing.Size(342, 69)
+        Me.panNuevoLote.TabIndex = 10
+        Me.panNuevoLote.Visible = False
+        '
         'GuiMovimientoTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1240, 780)
+        Me.Controls.Add(Me.panNuevoLote)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.rbNuevoLote)
+        Me.Controls.Add(Me.rbLoteDEstino)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.dgvDestino)
         Me.Controls.Add(Me.dgvorigen)
@@ -239,6 +274,7 @@ Partial Class GuiMovimientoTrasiego
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
+        Me.panNuevoLote.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -247,8 +283,8 @@ Partial Class GuiMovimientoTrasiego
     Public WithEvents Button1 As System.Windows.Forms.Button
     Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
     Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
-    Public WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Public WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Public WithEvents rbLoteDEstino As System.Windows.Forms.RadioButton
+    Public WithEvents rbNuevoLote As System.Windows.Forms.RadioButton
     Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Public WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents lDescripcionOrigen As System.Windows.Forms.Label
@@ -257,4 +293,7 @@ Partial Class GuiMovimientoTrasiego
     Public WithEvents btnCantidadOrigenIncorrecta As System.Windows.Forms.Button
     Public WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
     Public WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
+    Public WithEvents cboTipoProducto As System.Windows.Forms.ComboBox
+    Public WithEvents cboTipoLote As System.Windows.Forms.ComboBox
+    Friend WithEvents panNuevoLote As System.Windows.Forms.Panel
 End Class

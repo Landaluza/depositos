@@ -10,8 +10,6 @@
             Me.dgvorigen.Columns("Capacidad").Visible = False
             Me.dgvorigen.Columns("Listado").Visible = False
         End Set
-          
-
     End Property
 
 
@@ -24,8 +22,18 @@
             Me.dgvDestino.Columns("Capacidad").Visible = False
             Me.dgvDestino.Columns("Listado").Visible = False
         End Set
+    End Property
 
+    Public WriteOnly Property TipoProductoDatasource As DataTable
+        Set(value As DataTable)
+            cboTipoProducto.mam_DataSource(value, False, False)
+        End Set
+    End Property
 
+    Public WriteOnly Property TipoLoteDatasource As DataTable
+        Set(value As DataTable)
+            cboTipoLote.mam_DataSource(value, False, False)
+        End Set
     End Property
 
     Private Sub dgvorigen_SelectionChanged(sender As Object, e As EventArgs) Handles dgvorigen.SelectionChanged
@@ -34,5 +42,10 @@
 
     Private Sub dgvDestino_SelectionChanged(sender As Object, e As EventArgs) Handles dgvDestino.SelectionChanged
         lDescripcionDestino.Text = "Se ha elegido el deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & ". Que contiene " & dgvDestino.CurrentRow.Cells("CantidadRestante").Value.ToString & " litros de " & dgvDestino.CurrentRow.Cells("producto").Value.ToString
+    End Sub
+
+
+    Private Sub rbLoteDEstino_CheckedChanged(sender As Object, e As EventArgs) Handles rbLoteDEstino.CheckedChanged, rbNuevoLote.CheckedChanged
+        panNuevoLote.Visible = rbNuevoLote.Checked
     End Sub
 End Class
