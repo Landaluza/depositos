@@ -150,5 +150,5 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.pdb
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiNuevoMovimiento.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiTrasiego.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoTrasiego.resources

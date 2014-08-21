@@ -23,13 +23,15 @@ Partial Class GuiMovimientoTrasiego
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvorigen = New System.Windows.Forms.DataGridView()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.dgvDestino = New System.Windows.Forms.DataGridView()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvorigen
@@ -44,42 +46,42 @@ Partial Class GuiMovimientoTrasiego
         Me.dgvorigen.ReadOnly = True
         Me.dgvorigen.RowHeadersVisible = False
         Me.dgvorigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvorigen.Size = New System.Drawing.Size(436, 239)
+        Me.dgvorigen.Size = New System.Drawing.Size(578, 239)
         Me.dgvorigen.TabIndex = 0
         '
-        'DataGridView1
+        'dgvDestino
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(761, 101)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(436, 239)
-        Me.DataGridView1.TabIndex = 4
+        Me.dgvDestino.AllowUserToAddRows = False
+        Me.dgvDestino.AllowUserToDeleteRows = False
+        Me.dgvDestino.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvDestino.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDestino.Location = New System.Drawing.Point(626, 101)
+        Me.dgvDestino.Name = "dgvDestino"
+        Me.dgvDestino.ReadOnly = True
+        Me.dgvDestino.RowHeadersVisible = False
+        Me.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
+        Me.dgvDestino.TabIndex = 4
         '
-        'TextBox1
+        'txtCantidad
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.TextBox1.Location = New System.Drawing.Point(515, 101)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(210, 69)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "30000000"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
+        Me.txtCantidad.Location = New System.Drawing.Point(712, 597)
+        Me.txtCantidad.Multiline = True
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
+        Me.txtCantidad.TabIndex = 1
+        Me.txtCantidad.Text = "30000000"
+        Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.FlatAppearance.BorderSize = 0
         Me.RadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton1.Location = New System.Drawing.Point(515, 211)
+        Me.RadioButton1.Location = New System.Drawing.Point(712, 707)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(152, 17)
         Me.RadioButton1.TabIndex = 2
@@ -92,7 +94,7 @@ Partial Class GuiMovimientoTrasiego
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.FlatAppearance.BorderSize = 0
         Me.RadioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton2.Location = New System.Drawing.Point(515, 234)
+        Me.RadioButton2.Location = New System.Drawing.Point(712, 730)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(117, 17)
         Me.RadioButton2.TabIndex = 3
@@ -104,38 +106,60 @@ Partial Class GuiMovimientoTrasiego
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_ok_3
-        Me.Button1.Location = New System.Drawing.Point(953, 358)
+        Me.Button1.Location = New System.Drawing.Point(953, 597)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(244, 87)
+        Me.Button1.Size = New System.Drawing.Size(244, 150)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Continuar"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'GuiTrasiego
+        'GroupBox1
+        '
+        Me.GroupBox1.Location = New System.Drawing.Point(42, 358)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(578, 165)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Detalles"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Location = New System.Drawing.Point(626, 358)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
+        Me.GroupBox2.TabIndex = 7
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Detalles"
+        '
+        'GuiMovimientoTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1240, 469)
+        Me.ClientSize = New System.Drawing.Size(1240, 780)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.txtCantidad)
+        Me.Controls.Add(Me.dgvDestino)
         Me.Controls.Add(Me.dgvorigen)
-        Me.Name = "GuiTrasiego"
+        Me.Name = "GuiMovimientoTrasiego"
         Me.Text = "Trasiego"
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Private WithEvents Button1 As System.Windows.Forms.Button
-    Private WithEvents dgvorigen As System.Windows.Forms.DataGridView
-    Private WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Private WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Private WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Public WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Public WithEvents Button1 As System.Windows.Forms.Button
+    Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
+    Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
+    Public WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Public WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Public WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class
