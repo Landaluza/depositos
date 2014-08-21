@@ -44,7 +44,7 @@ Public Class DataBase
 
         If server = SERVIDOR Then
             'Name = "192.168.1.101\SQLEXPRESS,1608"
-            Name = "VMDESARROLLO\SQLEXPRESS,1433"
+            Name = "192.168.1.59\SQLEXPRESS,1608"
             ' Name = "192.168.1.200"
             Config.connectionString = "User ID=ssa;Password=Trucha0122;Trusted_Connection=False;"
         Else
@@ -175,6 +175,33 @@ Public Class DataBase
         Finally
             cmd.Dispose()
              Me.Desconectar()
+        End Try
+    End Function
+
+    Public Sub PrepararConsulta(ByVal consulta As String)
+        Me.Conectar()
+        command = Comando(consulta)
+    End Sub
+
+    Public Sub AñadirParametroConsulta(ByVal nombre As String, ByVal valor As Object)
+        command.Parameters.AddWithValue(nombre, valor)
+    End Sub
+
+    Public Function Consultar() As DataTable
+        Dim dtsTabla As New DataTable
+        Dim dtsTemp As New DataSet
+        Dim Ad As System.Data.SqlClient.SqlDataAdapter
+
+        Try
+            Ad = New System.Data.SqlClient.SqlDataAdapter(command)
+            Ad.Fill(dtsTemp, "NuevaTabla")
+            dtsTabla = dtsTemp.Tables(0)
+            'cmd.Dispose()
+            Return dtsTabla
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            Me.Desconectar()
         End Try
     End Function
 End Class

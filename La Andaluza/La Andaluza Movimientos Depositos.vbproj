@@ -19,7 +19,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>user-trash.ico</ApplicationIcon>
+    <ApplicationIcon>Iconos\Modificar.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>247F7EA75E27118A015C3762DB5731458C9579A9</ManifestCertificateThumbprint>
     <ManifestKeyFile>La Andaluza Produccion_TemporaryKey.pfx</ManifestKeyFile>
     <SignManifests>false</SignManifests>
@@ -49,7 +49,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>180</ApplicationRevision>
+    <ApplicationRevision>183</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -444,10 +444,11 @@
     <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\GuiTrasiego.Designer.vb">
-      <DependentUpon>GuiTrasiego.vb</DependentUpon>
+    <Compile Include="Elaboracion\Movimientos\modulos\BdTrasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.Designer.vb">
+      <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\GuiTrasiego.vb">
+    <Compile Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.Designer.vb">
@@ -456,6 +457,8 @@
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\MovimientoTrasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\Trasiego.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -688,8 +691,8 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\GuiTrasiego.resx">
-      <DependentUpon>GuiTrasiego.vb</DependentUpon>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.resx">
+      <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
       <DependentUpon>frmEntNoticias2.vb</DependentUpon>
