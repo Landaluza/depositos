@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="file://192.168.1.200/datos/Informatica/La%20Andaluza%20MovimientosDepositos/La%20Andaluza%20MovimientosDepositos.application" />
+    <deploymentProvider codebase="file://192.168.1.200/datos/Informatica/pruebas/La%20Andaluza%20MovimientosDepositos/La%20Andaluza%20MovimientosDepositos.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>T+dw8t4J2nNih1aRZPI8mRJvNzIEXg38Ga1xNkr9Sr4=</dsig:DigestValue>
+        <dsig:DigestValue>fIEjFdpRnzDpf2SR3qdtsKpByIhVJ3HtdEk0tLHvmaU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
