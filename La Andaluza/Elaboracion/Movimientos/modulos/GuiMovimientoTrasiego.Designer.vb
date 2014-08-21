@@ -29,9 +29,13 @@ Partial Class GuiMovimientoTrasiego
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lDescripcionOrigen = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lDescripcionDestino = New System.Windows.Forms.Label()
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvorigen
@@ -117,6 +121,7 @@ Partial Class GuiMovimientoTrasiego
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lDescripcionOrigen)
         Me.GroupBox1.Location = New System.Drawing.Point(42, 358)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(578, 165)
@@ -124,14 +129,35 @@ Partial Class GuiMovimientoTrasiego
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles"
         '
+        'lDescripcionOrigen
+        '
+        Me.lDescripcionOrigen.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lDescripcionOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lDescripcionOrigen.Location = New System.Drawing.Point(3, 16)
+        Me.lDescripcionOrigen.Name = "lDescripcionOrigen"
+        Me.lDescripcionOrigen.Size = New System.Drawing.Size(572, 107)
+        Me.lDescripcionOrigen.TabIndex = 0
+        Me.lDescripcionOrigen.Text = "-"
+        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
         Me.GroupBox2.Location = New System.Drawing.Point(626, 358)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalles"
+        '
+        'lDescripcionDestino
+        '
+        Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
+        Me.lDescripcionDestino.Name = "lDescripcionDestino"
+        Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 107)
+        Me.lDescripcionDestino.TabIndex = 1
+        Me.lDescripcionDestino.Text = "-"
         '
         'GuiMovimientoTrasiego
         '
@@ -150,6 +176,8 @@ Partial Class GuiMovimientoTrasiego
         Me.Text = "Trasiego"
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -162,4 +190,6 @@ Partial Class GuiMovimientoTrasiego
     Public WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Public WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents lDescripcionOrigen As System.Windows.Forms.Label
+    Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
 End Class
