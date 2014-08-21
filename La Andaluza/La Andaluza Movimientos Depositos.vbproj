@@ -827,6 +827,7 @@
     <None Include="Resources\glyphicons_198_ok.png" />
     <None Include="Resources\glyphicons_197_remove.png" />
     <None Include="Resources\glyphicons_207_remove_2.png" />
+    <None Include="Resources\glyphicons_387_log_out.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />

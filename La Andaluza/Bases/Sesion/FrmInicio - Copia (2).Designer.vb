@@ -70,10 +70,10 @@ Partial Class FrmInicio
         Me.txtPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtPassword.Location = New System.Drawing.Point(88, 200)
+        Me.txtPassword.Location = New System.Drawing.Point(81, 200)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(87, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(94, 20)
         Me.txtPassword.TabIndex = 3
         '
         'txtLogin
@@ -81,10 +81,10 @@ Partial Class FrmInicio
         Me.txtLogin.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLogin.Location = New System.Drawing.Point(88, 161)
+        Me.txtLogin.Location = New System.Drawing.Point(81, 161)
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLogin.Size = New System.Drawing.Size(87, 20)
+        Me.txtLogin.Size = New System.Drawing.Size(94, 20)
         Me.txtLogin.TabIndex = 1
         '
         'Label2
@@ -120,10 +120,10 @@ Partial Class FrmInicio
         Me.ButtonCancelar.FlatAppearance.BorderSize = 0
         Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancelar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_207_remove_2
-        Me.ButtonCancelar.Location = New System.Drawing.Point(-1, -2)
+        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_387_log_out
+        Me.ButtonCancelar.Location = New System.Drawing.Point(234, -1)
         Me.ButtonCancelar.Name = "ButtonCancelar"
-        Me.ButtonCancelar.Size = New System.Drawing.Size(24, 24)
+        Me.ButtonCancelar.Size = New System.Drawing.Size(27, 24)
         Me.ButtonCancelar.TabIndex = 8
         Me.ButtonCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.ButtonCancelar.UseVisualStyleBackColor = True
@@ -137,9 +137,9 @@ Partial Class FrmInicio
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
-        Me.btnAceptar.Location = New System.Drawing.Point(82, 2)
+        Me.btnAceptar.Location = New System.Drawing.Point(88, 10)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(128, 54)
+        Me.btnAceptar.Size = New System.Drawing.Size(87, 46)
         Me.btnAceptar.TabIndex = 0
         Me.btnAceptar.Text = "&Entrar"
         Me.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -194,7 +194,7 @@ Partial Class FrmInicio
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackgroundImage = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.LogoLA
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(28, 9)
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 9)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(206, 133)
