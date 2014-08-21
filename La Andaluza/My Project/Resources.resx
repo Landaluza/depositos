@@ -127,9 +127,6 @@
   <data name="venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog_cancel_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dialog-cancel-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="maceracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\maceracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,6 +166,9 @@
   <data name="edit_clear_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-clear-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="glyphicons_197_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_197_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="emblem_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,17 +178,11 @@
   <data name="view_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="application_exit_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application-exit-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LAsinTexto48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\LA  sin texto 48 x 48.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="desembote" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\desembote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dialog_ok_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dialog-ok-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="emblem_symbolic_link_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-symbolic-link-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,11 +223,11 @@
   <data name="emblem_new_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-new_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emblem_important_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emblem-important-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="page_white_word_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\page_white_word_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="glyphicons_198_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_198_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\Modificar.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,9 +286,6 @@
   <data name="clarificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\clarificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window_new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="glyphicons_196_circle_exclamation_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_196_circle_exclamation_mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -352,8 +343,8 @@
   <data name="checkbox_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkbox-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dialog_apply" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dialog-apply.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\window_new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tools_report_bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools-report-bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,7 +355,7 @@
   <data name="emblem_unreadable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-unreadable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_198_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_198_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glyphicons_207_remove_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_207_remove_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

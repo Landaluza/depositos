@@ -30,10 +30,9 @@ Partial Class frmEntrada
         'lentrada
         '
         Me.lentrada.AutoSize = True
-        Me.lentrada.Location = New System.Drawing.Point(12, 11)
-        Me.lentrada.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lentrada.Location = New System.Drawing.Point(9, 9)
         Me.lentrada.Name = "lentrada"
-        Me.lentrada.Size = New System.Drawing.Size(51, 17)
+        Me.lentrada.Size = New System.Drawing.Size(39, 13)
         Me.lentrada.TabIndex = 0
         Me.lentrada.Text = "Label1"
         '
@@ -41,33 +40,33 @@ Partial Class frmEntrada
         '
         Me.txtEntrada.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtEntrada.Location = New System.Drawing.Point(12, 31)
-        Me.txtEntrada.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEntrada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtEntrada.Location = New System.Drawing.Point(9, 25)
         Me.txtEntrada.Name = "txtEntrada"
-        Me.txtEntrada.Size = New System.Drawing.Size(127, 22)
+        Me.txtEntrada.Size = New System.Drawing.Size(92, 20)
         Me.txtEntrada.TabIndex = 1
         '
         'btnAceptar
         '
         Me.btnAceptar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_apply
-        Me.btnAceptar.Location = New System.Drawing.Point(148, 31)
-        Me.btnAceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAceptar.FlatAppearance.BorderSize = 0
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnAceptar.Location = New System.Drawing.Point(106, 16)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(39, 27)
+        Me.btnAceptar.Size = New System.Drawing.Size(39, 35)
         Me.btnAceptar.TabIndex = 2
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'frmEntrada
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(199, 80)
+        Me.ClientSize = New System.Drawing.Size(157, 65)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtEntrada)
         Me.Controls.Add(Me.lentrada)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEntrada"

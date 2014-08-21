@@ -35,8 +35,9 @@ Partial Class frmResumenEliminarElaboracion
         Me.chbTerminado.AutoSize = True
         Me.chbTerminado.Dock = System.Windows.Forms.DockStyle.Top
         Me.chbTerminado.Location = New System.Drawing.Point(0, 0)
+        Me.chbTerminado.Margin = New System.Windows.Forms.Padding(2)
         Me.chbTerminado.Name = "chbTerminado"
-        Me.chbTerminado.Size = New System.Drawing.Size(753, 21)
+        Me.chbTerminado.Size = New System.Drawing.Size(565, 17)
         Me.chbTerminado.TabIndex = 0
         Me.chbTerminado.Text = "intentar eliminar el lote terminado"
         Me.chbTerminado.UseVisualStyleBackColor = True
@@ -44,9 +45,10 @@ Partial Class frmResumenEliminarElaboracion
         'lOperaciones
         '
         Me.lOperaciones.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lOperaciones.Location = New System.Drawing.Point(0, 21)
+        Me.lOperaciones.Location = New System.Drawing.Point(0, 17)
+        Me.lOperaciones.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lOperaciones.Name = "lOperaciones"
-        Me.lOperaciones.Size = New System.Drawing.Size(753, 321)
+        Me.lOperaciones.Size = New System.Drawing.Size(565, 261)
         Me.lOperaciones.TabIndex = 1
         Me.lOperaciones.Text = "operaciones"
         '
@@ -55,18 +57,21 @@ Partial Class frmResumenEliminarElaboracion
         Me.Panel1.Controls.Add(Me.butCancelar)
         Me.Panel1.Controls.Add(Me.butConfirmar)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 342)
+        Me.Panel1.Location = New System.Drawing.Point(0, 278)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(753, 69)
+        Me.Panel1.Size = New System.Drawing.Size(565, 56)
         Me.Panel1.TabIndex = 2
         '
         'butCancelar
         '
         Me.butCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_cancel_3
-        Me.butCancelar.Location = New System.Drawing.Point(12, 8)
+        Me.butCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.butCancelar.Location = New System.Drawing.Point(9, 6)
+        Me.butCancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.butCancelar.Name = "butCancelar"
-        Me.butCancelar.Size = New System.Drawing.Size(130, 55)
+        Me.butCancelar.Size = New System.Drawing.Size(98, 45)
         Me.butCancelar.TabIndex = 1
         Me.butCancelar.Text = "Cancelar"
         Me.butCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -75,10 +80,12 @@ Partial Class frmResumenEliminarElaboracion
         'butConfirmar
         '
         Me.butConfirmar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_ok_3
-        Me.butConfirmar.Location = New System.Drawing.Point(612, 8)
+        Me.butConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.butConfirmar.Location = New System.Drawing.Point(459, 6)
+        Me.butConfirmar.Margin = New System.Windows.Forms.Padding(2)
         Me.butConfirmar.Name = "butConfirmar"
-        Me.butConfirmar.Size = New System.Drawing.Size(130, 55)
+        Me.butConfirmar.Size = New System.Drawing.Size(98, 45)
         Me.butConfirmar.TabIndex = 0
         Me.butConfirmar.Text = "Confirmar"
         Me.butConfirmar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -86,12 +93,13 @@ Partial Class frmResumenEliminarElaboracion
         '
         'frmResumenEliminarElaboracion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(753, 411)
+        Me.ClientSize = New System.Drawing.Size(565, 334)
         Me.Controls.Add(Me.lOperaciones)
         Me.Controls.Add(Me.chbTerminado)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmResumenEliminarElaboracion"
         Me.Text = "frmResumenEliminarElaboracion"
         Me.Panel1.ResumeLayout(False)

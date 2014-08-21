@@ -825,6 +825,8 @@
     <Content Include="Resources\folder-development.ico" />
     <None Include="Resources\glyphicons_196_circle_exclamation_mark.png" />
     <None Include="Resources\glyphicons_198_ok.png" />
+    <None Include="Resources\glyphicons_197_remove.png" />
+    <None Include="Resources\glyphicons_207_remove_2.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
@@ -851,7 +853,6 @@
     <None Include="Iconos\print_ico.jpg" />
     <None Include="Iconos\refresh.png" />
     <None Include="Iconos\Solo texto.jpg" />
-    <None Include="Resources\emblem-important-3.png" />
     <None Include="Resources\document_16.png" />
     <None Include="Resources\emblem-notice.png" />
     <None Include="Resources\edit-remove-3.png" />
@@ -859,14 +860,11 @@
     <None Include="Resources\document-save-5.png" />
     <None Include="Resources\edit-clear-2.png" />
     <None Include="Resources\edit-clear-21.png" />
-    <None Include="Resources\dialog-apply.png" />
     <None Include="Resources\emblem-documents.png" />
     <None Include="Resources\edit-add-2.png" />
     <None Include="Resources\document-save-5_16.png" />
     <None Include="Resources\application-exit-3.png" />
     <None Include="Resources\emblem-special.png" />
-    <None Include="Resources\dialog-ok-3.png" />
-    <None Include="Resources\dialog-cancel-3.png" />
     <None Include="Resources\document-save-5_32.png" />
     <None Include="Resources\emblem-notice_256.png" />
     <None Include="Resources\emblem-new_256.png" />
@@ -878,7 +876,6 @@
     <None Include="Resources\appointmentmissed16.png" />
     <None Include="Resources\accessories_dictionary.png" />
     <None Include="Resources\document_print_16.png" />
-    <None Include="Resources\application-exit-4.png" />
     <Content Include="Resources\important.png" />
     <None Include="Bases\ZLibrerias\referencias\AxInterop.TwainControlXTrial.dll" />
     <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.dll" />
