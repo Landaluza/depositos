@@ -47,7 +47,7 @@ Partial Class frmElaboraciones
         'tsEliminar
         '
         Me.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsEliminar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.edit_remove_3
+        Me.tsEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.edit_remove_3
         Me.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsEliminar.Name = "tsEliminar"
         Me.tsEliminar.Size = New System.Drawing.Size(23, 22)
@@ -91,7 +91,7 @@ Partial Class frmElaboraciones
         'ToolStripButton1
         '
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.view_refresh_4
+        Me.ToolStripButton1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_refresh_4
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)

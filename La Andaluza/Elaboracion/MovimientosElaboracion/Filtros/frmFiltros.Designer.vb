@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmFiltros
-    Inherits La_Andaluza_MovimientosDepositos.gridsimpleform
+    Inherits La_Andaluza_MovimientosDepositosPruebas.gridsimpleform
 
     'Form invalida a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _

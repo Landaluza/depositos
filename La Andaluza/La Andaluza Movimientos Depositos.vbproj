@@ -7,9 +7,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0518B3B6-EE66-4D4F-A0E3-F953E0AC2A37}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>La_Andaluza_MovimientosDepositos.My.MyApplication</StartupObject>
-    <RootNamespace>La_Andaluza_MovimientosDepositos</RootNamespace>
-    <AssemblyName>La Andaluza MovimientosDepositos</AssemblyName>
+    <StartupObject>La_Andaluza_MovimientosDepositosPruebas.My.MyApplication</StartupObject>
+    <RootNamespace>La_Andaluza_MovimientosDepositosPruebas</RootNamespace>
+    <AssemblyName>La Andaluza MovimientosDepositosPruebas</AssemblyName>
     <MyType>WindowsForms</MyType>
     <TargetZone>Custom</TargetZone>
     <GenerateManifests>true</GenerateManifests>
@@ -43,13 +43,13 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-ES</TargetCulture>
-    <ProductName>La Andaluza Movimientos Despositos</ProductName>
+    <ProductName>La Andaluza Movimientos Despositos Pruebas</ProductName>
     <PublisherName>La Andaluza</PublisherName>
     <MinimumRequiredVersion>1.0.0.20</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>173</ApplicationRevision>
+    <ApplicationRevision>174</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -444,6 +444,18 @@
     <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\GuiTrasiego.Designer.vb">
+      <DependentUpon>GuiTrasiego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\GuiTrasiego.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.Designer.vb">
+      <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -672,6 +684,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\frmMovimientos.resx">
       <DependentUpon>frmMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
+      <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\GuiTrasiego.resx">
+      <DependentUpon>GuiTrasiego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
       <DependentUpon>frmEntNoticias2.vb</DependentUpon>

@@ -60,7 +60,7 @@ Partial Class DetailedSimpleForm
         'butGuardar
         '
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.document_save_5_16
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_save_5_16
         Me.butGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butGuardar.Name = "butGuardar"
         Me.butGuardar.Size = New System.Drawing.Size(23, 22)
@@ -70,7 +70,7 @@ Partial Class DetailedSimpleForm
         'butImprimir
         '
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.document_print_16
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_print_16
         Me.butImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butImprimir.Name = "butImprimir"
         Me.butImprimir.Size = New System.Drawing.Size(23, 22)
@@ -81,7 +81,7 @@ Partial Class DetailedSimpleForm
         'butVer
         '
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.view_16
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_16
         Me.butVer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butVer.Name = "butVer"
         Me.butVer.Size = New System.Drawing.Size(23, 22)
@@ -92,7 +92,7 @@ Partial Class DetailedSimpleForm
         'butExcel
         '
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.page_excel_16
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.page_excel_16
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
         Me.butExcel.Size = New System.Drawing.Size(23, 22)
@@ -104,7 +104,7 @@ Partial Class DetailedSimpleForm
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.application_xit_3
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.application_xit_3
         Me.butSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butSalir.Name = "butSalir"
         Me.butSalir.Size = New System.Drawing.Size(23, 22)

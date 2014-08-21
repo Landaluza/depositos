@@ -468,5 +468,10 @@ Public Class GUImain
             frmProcesos.WindowState = FormWindowState.Maximized
         End If
     End Sub
+
+    Private Sub NuevoMovimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoMovimientoToolStripMenuItem.Click
+        Dim frm As New GuiNuevoMovimiento
+        LAengine.AñadirPestaña(frm)
+    End Sub
 End Class
 

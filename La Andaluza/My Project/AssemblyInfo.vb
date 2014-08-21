@@ -17,10 +17,10 @@
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: System.Reflection.AssemblyTitle("La Andaluza Movimientos Despositos")> 
+<Assembly: System.Reflection.AssemblyTitle("La Andaluza Movimientos DespositosPruebas")> 
 <Assembly: System.Reflection.AssemblyDescription("Programa para el control de produccion y trazabilidad en La Andaluza.")> 
 <Assembly: System.Reflection.AssemblyCompany("La Andaluza, S.L.")> 
-<Assembly: System.Reflection.AssemblyProduct("La Andaluza Movimientos Despositos")> 
+<Assembly: System.Reflection.AssemblyProduct("La Andaluza Movimientos DespositosPruebas")> 
 <Assembly: System.Reflection.AssemblyCopyright("La Andaluza © 2014")> 
 <Assembly: System.Reflection.AssemblyTrademark("")> 
 <Assembly: System.Runtime.InteropServices.ComVisible(False)> 

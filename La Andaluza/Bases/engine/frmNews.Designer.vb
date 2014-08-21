@@ -79,7 +79,7 @@ Partial Class frmNews
         'PictureBox2
         '
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox2.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_notice_256
+        Me.PictureBox2.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_notice_256
         Me.PictureBox2.Location = New System.Drawing.Point(3, 16)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(285, 293)
@@ -212,7 +212,7 @@ Partial Class frmNews
         'PictureBox3
         '
         Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox3.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_important_2_256
+        Me.PictureBox3.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_important_2_256
         Me.PictureBox3.Location = New System.Drawing.Point(3, 16)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(236, 293)
@@ -244,7 +244,7 @@ Partial Class frmNews
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_new_256
+        Me.PictureBox1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_new_256
         Me.PictureBox1.Location = New System.Drawing.Point(3, 16)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(285, 384)

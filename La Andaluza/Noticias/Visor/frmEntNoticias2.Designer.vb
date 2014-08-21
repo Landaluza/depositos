@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ 
 Partial Class frmEntNoticias2
-    Inherits La_Andaluza_MovimientosDepositos.DetailedSimpleForm
+    Inherits La_Andaluza_MovimientosDepositosPruebas.DetailedSimpleForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _

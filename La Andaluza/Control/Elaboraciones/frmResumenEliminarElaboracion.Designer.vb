@@ -63,7 +63,7 @@ Partial Class frmResumenEliminarElaboracion
         'butCancelar
         '
         Me.butCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_cancel_3
+        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_cancel_3
         Me.butCancelar.Location = New System.Drawing.Point(12, 8)
         Me.butCancelar.Name = "butCancelar"
         Me.butCancelar.Size = New System.Drawing.Size(130, 55)
@@ -75,7 +75,7 @@ Partial Class frmResumenEliminarElaboracion
         'butConfirmar
         '
         Me.butConfirmar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_ok_3
+        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_ok_3
         Me.butConfirmar.Location = New System.Drawing.Point(612, 8)
         Me.butConfirmar.Name = "butConfirmar"
         Me.butConfirmar.Size = New System.Drawing.Size(130, 55)

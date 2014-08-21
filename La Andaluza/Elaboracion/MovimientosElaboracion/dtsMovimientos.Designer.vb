@@ -445,7 +445,7 @@ Partial Public Class dtsMovimientos
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Overloads Function AddMovimientosRow(ByVal Fecha As Date, ByVal Observaciones As String, ByVal Cantidad As Double, ByVal ProcesoID As String, ByVal SaleDepositoID As String, ByVal EntraDepositoID As String, ByVal LoteID As String, ByVal FiltroID As String) As MovimientosRow
+        Public Overloads Function AddMovimientosRow(ByVal Fecha As Date, ByVal Observaciones As String, ByVal Cantidad As Single, ByVal ProcesoID As String, ByVal SaleDepositoID As String, ByVal EntraDepositoID As String, ByVal LoteID As String, ByVal FiltroID As String) As MovimientosRow
             Dim rowMovimientosRow As MovimientosRow = CType(Me.NewRow, MovimientosRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Fecha, Observaciones, Cantidad, ProcesoID, SaleDepositoID, EntraDepositoID, LoteID, FiltroID}
             rowMovimientosRow.ItemArray = columnValuesArray
@@ -496,7 +496,7 @@ Partial Public Class dtsMovimientos
             MyBase.Columns.Add(Me.columnFecha)
             Me.columnObservaciones = New Global.System.Data.DataColumn("Observaciones", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnObservaciones)
-            Me.columnCantidad = New Global.System.Data.DataColumn("Cantidad", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnCantidad = New Global.System.Data.DataColumn("Cantidad", GetType(Single), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCantidad)
             Me.columnProcesoID = New Global.System.Data.DataColumn("ProcesoID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnProcesoID)
@@ -707,15 +707,15 @@ Partial Public Class dtsMovimientos
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
-        Public Property Cantidad() As Double
+        Public Property Cantidad() As Single
             Get
                 Try
-                    Return CType(Me(Me.tableMovimientos.CantidadColumn), Double)
+                    Return CType(Me(Me.tableMovimientos.CantidadColumn), Single)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Cantidad' de la tabla 'Movimientos' es DBNull.", e)
                 End Try
             End Get
-            Set(value As Double)
+            Set(value As Single)
                 Me(Me.tableMovimientos.CantidadColumn) = value
             End Set
         End Property

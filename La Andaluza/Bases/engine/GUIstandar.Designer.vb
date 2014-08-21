@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class GUIstandar
-    Inherits La_Andaluza_MovimientosDepositos.GUImain
+    Inherits La_Andaluza_MovimientosDepositosPruebas.GUImain
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _

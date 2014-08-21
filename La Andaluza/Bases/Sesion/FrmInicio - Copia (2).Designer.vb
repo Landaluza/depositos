@@ -44,7 +44,7 @@ Partial Class FrmInicio
         Me.lblPasswordIssue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPasswordIssue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPasswordIssue.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_important_3
+        Me.lblPasswordIssue.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_important_3
         Me.lblPasswordIssue.Location = New System.Drawing.Point(64, 186)
         Me.lblPasswordIssue.Name = "lblPasswordIssue"
         Me.lblPasswordIssue.Size = New System.Drawing.Size(17, 32)
@@ -57,7 +57,7 @@ Partial Class FrmInicio
         Me.LblLoginIssue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblLoginIssue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLoginIssue.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_important_3
+        Me.LblLoginIssue.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_important_3
         Me.LblLoginIssue.Location = New System.Drawing.Point(64, 147)
         Me.LblLoginIssue.Name = "LblLoginIssue"
         Me.LblLoginIssue.Size = New System.Drawing.Size(17, 32)
@@ -120,7 +120,7 @@ Partial Class FrmInicio
         Me.ButtonCancelar.FlatAppearance.BorderSize = 0
         Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancelar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.application_exit_4
+        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.application_exit_4
         Me.ButtonCancelar.Location = New System.Drawing.Point(-1, -2)
         Me.ButtonCancelar.Name = "ButtonCancelar"
         Me.ButtonCancelar.Size = New System.Drawing.Size(22, 23)
@@ -136,7 +136,7 @@ Partial Class FrmInicio
         Me.btnAceptar.FlatAppearance.BorderSize = 0
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.dialog_ok_3
+        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.dialog_ok_3
         Me.btnAceptar.Location = New System.Drawing.Point(82, 2)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(128, 54)
@@ -152,7 +152,7 @@ Partial Class FrmInicio
         Me.btnPass.FlatAppearance.BorderSize = 0
         Me.btnPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPass.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.system_help_3
+        Me.btnPass.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.system_help_3
         Me.btnPass.Location = New System.Drawing.Point(238, 251)
         Me.btnPass.Name = "btnPass"
         Me.btnPass.Size = New System.Drawing.Size(24, 22)
@@ -192,7 +192,7 @@ Partial Class FrmInicio
         '
         Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.LogoLA
+        Me.PictureBox1.BackgroundImage = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.LogoLA
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(28, 9)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)

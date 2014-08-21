@@ -38,6 +38,7 @@ Partial Class GUImain
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ElaboracionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FiltrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProcesosAbiertosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanContenido = New System.Windows.Forms.Panel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tsCustomMenu = New System.Windows.Forms.ToolStrip()
@@ -57,7 +58,7 @@ Partial Class GUImain
         Me.Button8 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmsNotificacionesOperaciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ProcesosAbiertosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevoMovimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.mAgenda.SuspendLayout()
         Me.msMenu.SuspendLayout()
@@ -102,7 +103,7 @@ Partial Class GUImain
         Me.LAgenda.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LAgenda.Dock = System.Windows.Forms.DockStyle.Left
         Me.LAgenda.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.LAgenda.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.accessories_dictionary
+        Me.LAgenda.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.accessories_dictionary
         Me.LAgenda.Location = New System.Drawing.Point(62, 0)
         Me.LAgenda.Name = "LAgenda"
         Me.LAgenda.Size = New System.Drawing.Size(31, 21)
@@ -124,7 +125,7 @@ Partial Class GUImain
         'lPersonalSinFin
         '
         Me.lPersonalSinFin.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lPersonalSinFin.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.appointmentmissed16
+        Me.lPersonalSinFin.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.appointmentmissed16
         Me.lPersonalSinFin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lPersonalSinFin.Location = New System.Drawing.Point(926, 0)
         Me.lPersonalSinFin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -140,7 +141,7 @@ Partial Class GUImain
         Me.lAyuda.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lAyuda.Dock = System.Windows.Forms.DockStyle.Left
         Me.lAyuda.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lAyuda.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.help_2
+        Me.lAyuda.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.help_2
         Me.lAyuda.Location = New System.Drawing.Point(31, 0)
         Me.lAyuda.Name = "lAyuda"
         Me.lAyuda.Size = New System.Drawing.Size(31, 21)
@@ -152,7 +153,7 @@ Partial Class GUImain
         Me.lUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lUser.Dock = System.Windows.Forms.DockStyle.Left
         Me.lUser.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lUser.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.user_suit
+        Me.lUser.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.user_suit
         Me.lUser.Location = New System.Drawing.Point(0, 0)
         Me.lUser.Name = "lUser"
         Me.lUser.Size = New System.Drawing.Size(31, 21)
@@ -164,7 +165,7 @@ Partial Class GUImain
         Me.lMensajes.Dock = System.Windows.Forms.DockStyle.Right
         Me.lMensajes.Enabled = False
         Me.lMensajes.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lMensajes.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_mail_16
+        Me.lMensajes.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_mail_16
         Me.lMensajes.Location = New System.Drawing.Point(946, 0)
         Me.lMensajes.Name = "lMensajes"
         Me.lMensajes.Size = New System.Drawing.Size(31, 21)
@@ -176,7 +177,7 @@ Partial Class GUImain
         Me.lReportBug.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lReportBug.Dock = System.Windows.Forms.DockStyle.Right
         Me.lReportBug.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lReportBug.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.mail_forward_4_16
+        Me.lReportBug.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.mail_forward_4_16
         Me.lReportBug.Location = New System.Drawing.Point(977, 0)
         Me.lReportBug.Name = "lReportBug"
         Me.lReportBug.Size = New System.Drawing.Size(31, 21)
@@ -187,7 +188,7 @@ Partial Class GUImain
         '
         Me.lServ.Dock = System.Windows.Forms.DockStyle.Right
         Me.lServ.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lServ.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.network_transmit
+        Me.lServ.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.network_transmit
         Me.lServ.Location = New System.Drawing.Point(1008, 0)
         Me.lServ.Name = "lServ"
         Me.lServ.Size = New System.Drawing.Size(30, 21)
@@ -198,7 +199,7 @@ Partial Class GUImain
         Me.msMenu.BackColor = System.Drawing.SystemColors.Control
         Me.msMenu.GripMargin = New System.Windows.Forms.Padding(2)
         Me.msMenu.ImageScalingSize = New System.Drawing.Size(22, 22)
-        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem, Me.ElaboracionesToolStripMenuItem, Me.FiltrosToolStripMenuItem, Me.ProcesosAbiertosToolStripMenuItem})
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MovimientosToolStripMenuItem, Me.ElaboracionesToolStripMenuItem, Me.FiltrosToolStripMenuItem, Me.ProcesosAbiertosToolStripMenuItem, Me.NuevoMovimientoToolStripMenuItem})
         Me.msMenu.Location = New System.Drawing.Point(0, 0)
         Me.msMenu.MinimumSize = New System.Drawing.Size(1092, 25)
         Me.msMenu.Name = "msMenu"
@@ -223,6 +224,12 @@ Partial Class GUImain
         Me.FiltrosToolStripMenuItem.Name = "FiltrosToolStripMenuItem"
         Me.FiltrosToolStripMenuItem.Size = New System.Drawing.Size(51, 21)
         Me.FiltrosToolStripMenuItem.Text = "Filtros"
+        '
+        'ProcesosAbiertosToolStripMenuItem
+        '
+        Me.ProcesosAbiertosToolStripMenuItem.Name = "ProcesosAbiertosToolStripMenuItem"
+        Me.ProcesosAbiertosToolStripMenuItem.Size = New System.Drawing.Size(111, 21)
+        Me.ProcesosAbiertosToolStripMenuItem.Text = "Procesos abiertos"
         '
         'PanContenido
         '
@@ -433,11 +440,11 @@ Partial Class GUImain
         Me.cmsNotificacionesOperaciones.Name = "ContextMenuStrip1"
         Me.cmsNotificacionesOperaciones.Size = New System.Drawing.Size(61, 4)
         '
-        'ProcesosAbiertosToolStripMenuItem
+        'NuevoMovimientoToolStripMenuItem
         '
-        Me.ProcesosAbiertosToolStripMenuItem.Name = "ProcesosAbiertosToolStripMenuItem"
-        Me.ProcesosAbiertosToolStripMenuItem.Size = New System.Drawing.Size(111, 21)
-        Me.ProcesosAbiertosToolStripMenuItem.Text = "Procesos abiertos"
+        Me.NuevoMovimientoToolStripMenuItem.Name = "NuevoMovimientoToolStripMenuItem"
+        Me.NuevoMovimientoToolStripMenuItem.Size = New System.Drawing.Size(122, 21)
+        Me.NuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento"
         '
         'GUImain
         '
@@ -519,5 +526,6 @@ Partial Class GUImain
     Protected WithEvents MovimientosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Protected WithEvents ElaboracionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Protected WithEvents FiltrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents NuevoMovimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
