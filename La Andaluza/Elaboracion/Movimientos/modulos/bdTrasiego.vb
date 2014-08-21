@@ -38,7 +38,14 @@
                                             ",17 " & _
                                         ")"
 
-        'prep
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@tlote", tlote)
+        AñadirParametroConsulta("@producto", producto)
+        AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+        AñadirParametroConsulta("@depositoDestino", depositoDestino)
+
+        Consultar()
         Return True
     End Function
 
@@ -69,7 +76,13 @@
                                             ",17 " & _
                                         "from lotes " & _
                                         "where codigoLote = '@codigoLote'"
-        'prep
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+        AñadirParametroConsulta("@depositoDestino", depositoDestino)
+        AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+
+        Consultar()
 
         Return True
     End Function
@@ -77,53 +90,75 @@
 
     Public Function actualizar_lote(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
         query = "update lotes set cantidadRestante=cantidadRestante+@cantidad where codigolote='@codigoLote'"
-        Return Consultar()
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@codigoLote", codigoLote)
+
+        Consultar()
+
+        Return True
     End Function
 
     Public Function actualizar_lote_origen(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
         query = "update lotes set cantidadRestante=cantidadRestante-@cantidad where codigolote='@codigoLote'"
-        Return Consultar()
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@codigoLote", codigoLote)
+
+        Consultar()
+
+        Return True
     End Function
 
     Public Function sacar_lote(ByVal codigoLote As String) As Boolean
         query = "update lotes set depositoprevioid=depositoid, depositoid=null where codigolote='@codigoLote'"
-        Return Consultar()
+
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@codigoLote", codigoLote)
+
+        Consultar()
+
+        Return True
     End Function
 
-    Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As DataTable
+    Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String
         query = "exec LotesSelectUltimoCodigo '@codigoSinLetra'"
-            this->result = consultar
+        Dim dt As DataTable = Consultar()
+        Dim row As String = dt.Rows(0).Item(0).ToString
+        Dim extra As String
+        Dim ascii As Integer
 
-            if ( row = mssql_fetch_array(this->result) )
-                if (strlen(row[0]) > 14)
-                    extra = substr(row[0],14, 1)                        
-                ascii = ord(extra) + 1
+        If row.Length > 14 Then
+            extra = row.Substring(14, 1)
+            ascii = Asc(extra) + 1
 
-                     If ( ascii == 58 )
-                    ascii = 65
-                     Else If ( ascii ==  90 )
-                    ascii = 97
+            If ascii = 58 Then
+                ascii = 65
+            ElseIf ascii = 90 Then
+                ascii = 97
+            End If
 
 
-
-                    Return codigoSinLetra.chr(ascii)
-                End Subelse
-                    return row[0].'1'
+            Return codigoSinLetra & Chr(ascii)
+        Else
+            Return row & "1"
+        End If
     End Function
-            End Subelse
-                return codigoSinLetra . '1'
-            End Sub
-        End Sub
+
     ''*****************************************************************************************
     ''                         funciones de productos
     ''*****************************************************************************************        
     Public Function seleccionar_detalles_producto(ByVal id As Integer) As DataTable
         query = "select TipoProductoID, Descripcion, Abreviatura from TiposProductos where TipoProductoID=@id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", id)
         Return Consultar()
     End Function
 
     Public Function listar_productos() As DataTable
         query = "select TipoProductoID, Descripcion, Abreviatura from TiposProductos order by descripcion"
+        PrepararConsulta(query)
+
         Return consultar
     End Function
     ''*****************************************************************************************
@@ -131,11 +166,14 @@
     ''*****************************************************************************************        
     Public Function seleccionar_detalles_tlote(ByVal id As Integer) As DataTable
         query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes where tipoloteid=@id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", id)
         Return Consultar()
     End Function
 
     Public Function listar_tlotes() As DataTable
         query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes order by descripcion"
+        PrepararConsulta(query)
         Return consultar
     End Function
     ''*****************************************************************************************
@@ -248,7 +286,7 @@
                                 ". (id_deposito_origen) .",
                                 '". (cantidad) ."', 9, CURRENT_TIMESTAMP)"
         ''echo query
-        Return Consultar()
+        Return True
     End Function
 
     Public Function guardar_trazabilidad(ByVal codigoDestino As String, ByVal codigoOrigen As String, ByVal cantidad As Double) As Boolean
@@ -267,7 +305,7 @@
                                                    , CURRENT_TIMESTAMP
                                                    , 17 )"
 
-        Return Consultar()
+        Return True
 
     End Function
 End Class
