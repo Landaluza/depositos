@@ -6,7 +6,7 @@ Public Class DataBase
     Private Cnn As System.Data.SqlClient.SqlConnection
     Private transaction As System.Data.SqlClient.SqlTransaction
     Private time_out As Integer
-
+    Private command As System.Data.SqlClient.SqlCommand
     Public Property TimeOut As Integer
         Get
             Return Me.time_out

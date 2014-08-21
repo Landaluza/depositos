@@ -86,7 +86,7 @@
 
         Return True
     End Function
-        */
+
 
     Public Function actualizar_lote(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
         query = "update lotes set cantidadRestante=cantidadRestante+@cantidad where codigolote='@codigoLote'"
@@ -181,98 +181,106 @@
     ''*****************************************************************************************
 
     Public Function listar_depositos() As DataTable
-        query = "select "
-                                    Depositos.Codigo,  
-                                    Lotes.CodigoLote, 
-                                    CASE 
-                                            WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID) 
-                                            ELSE Lotes.Descripcion 
-                                    END AS Descripcion,
-                                    Depositos.Capacidad, 
-                                    Lotes.CantidadRestante,                                                                                                          
-                                    Depositos.depositoID,
-                                    Depositos.Listado,  
-                                    Lotes.TipoLoteID,                                                                                                            
-                                    Lotes.TipoProductoID,
-                                    TiposProductos.descripcion producto
-        from()
-        TiposProductos()
-                                    RIGHT OUTER JOIN Lotes 
-                                            ON Lotes.TipoProductoID = TiposProductos.TipoProductoID
-                                    RIGHT OUTER JOIN  Depositos 
-                                            ON Lotes.DepositoID = Depositos.DepositoID
-        where()
-                                    Depositos.BotaID Is NULL 
-                            and 
-                                    Depositos.Listado = 'TRUE'
-        ORDER BY
-        Depositos.Codigo ""
+        query = "select " & _
+                        "Depositos.Codigo,   " & _
+                        "Lotes.CodigoLote,  " & _
+                        "CASE  " & _
+                        "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
+                                "ELSE Lotes.Descripcion  " & _
+                        "END AS Descripcion, " & _
+                        "Depositos.Capacidad,  " & _
+                        "Lotes.CantidadRestante,     " & _
+                        "Depositos.depositoID, " & _
+                        "Depositos.Listado,   " & _
+                        "Lotes.TipoLoteID,  " & _
+                        "Lotes.TipoProductoID, " & _
+                        "TiposProductos.descripcion producto " & _
+                "from  " & _
+                        "TiposProductos " & _
+                        "RIGHT OUTER JOIN Lotes  " & _
+                        "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
+                        "RIGHT OUTER JOIN  Depositos  " & _
+                        "ON Lotes.DepositoID = Depositos.DepositoID " & _
+                "where " & _
+                        "Depositos.BotaID Is NULL  " & _
+                        "and  " & _
+                        "Depositos.Listado = 'TRUE' " & _
+                        "ORDER BY " & _
+                        "Depositos.Codigo "
+
+        PrepararConsulta(query)
 
         Return consultar
     End Function
 
     Public Function listar_depositos_excepto(ByVal id As Integer) As DataTable
-        query = "select "
-                                    Depositos.Codigo,  
-                                    Lotes.CodigoLote, 
-                                    CASE 
-                                            WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID) 
-                                            ELSE Lotes.Descripcion 
-                                    END AS Descripcion,
-                                    Depositos.Capacidad, 
-                                    Lotes.CantidadRestante,                                                                                                          
-                                    Depositos.depositoID,
-                                    Depositos.Listado,  
-                                    Lotes.TipoLoteID,                                                                                                            
-                                    Lotes.TipoProductoID,
-                                    TiposProductos.descripcion producto
-        from()
-        TiposProductos()
-                                    RIGHT OUTER JOIN Lotes 
-                                            ON Lotes.TipoProductoID = TiposProductos.TipoProductoID
-                                    RIGHT OUTER JOIN  Depositos 
-                                            ON Lotes.DepositoID = Depositos.DepositoID
-        where()
-                                    Depositos.BotaID Is NULL 
-                            and 
-                                    Depositos.Listado = 'TRUE' 
-                            and
-                                    depositos.depositoid <> ". (id) ."
-        ORDER BY
-        Depositos.Codigo ""
+        query = "select " & _
+                    "Depositos.Codigo,   " & _
+                    "Lotes.CodigoLote,  " & _
+                    "CASE  " & _
+                    "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
+                    "        ELSE Lotes.Descripcion  " & _
+                    "END AS Descripcion, " & _
+                    "Depositos.Capacidad,  " & _
+                    "Lotes.CantidadRestante,  " & _
+                    "Depositos.depositoID, " & _
+                    "Depositos.Listado, " & _
+                    "Lotes.TipoLoteID, " & _
+                    "Lotes.TipoProductoID, " & _
+                    "TiposProductos.descripcion producto " & _
+                "from " & _
+                    "TiposProductos " & _
+                    "RIGHT OUTER JOIN Lotes  " & _
+                    "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
+                    "RIGHT OUTER JOIN  Depositos  " & _
+                    "ON Lotes.DepositoID = Depositos.DepositoID " & _
+                "where " & _
+                    "Depositos.BotaID Is NULL " & _
+                    "and  " & _
+                    "Depositos.Listado = 'TRUE' " & _
+                    "and " & _
+                    "depositos.depositoid <>  @id " & _
+                "ORDER BY " & _
+                    "Depositos.Codigo "
+
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", id)
+
         Return Consultar()
     End Function
 
     Public Function seleccionar_detalles_deposito(ByVal id_deposito As Integer) As DataTable
-        query = "select "
-                                    Depositos.Codigo,  
-                                    Lotes.CodigoLote, 
-                                    CASE 
-                                            WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID) 
-                                            ELSE Lotes.Descripcion 
-                                    END AS Descripcion,
-                                    Depositos.Capacidad, 
-                                    Lotes.CantidadRestante,                                                                                                          
-                                    Depositos.depositoID,
-                                    Depositos.Listado,  
-                                    Lotes.TipoLoteID,                                                                                                            
-                                    Lotes.TipoProductoID,
-                                    TiposProductos.descripcion producto
-        from()
-        TiposProductos()
-                                    RIGHT OUTER JOIN Lotes 
-                                            ON Lotes.TipoProductoID = TiposProductos.TipoProductoID
-                                    RIGHT OUTER JOIN  Depositos 
-                                            ON Lotes.DepositoID = Depositos.DepositoID
-        where()
-                                    Depositos.BotaID Is NULL 
-                            and 
-                                    Depositos.Listado = 'TRUE'
-                            and
-        depositos.depositoid = ". (id_deposito) ."
-        ORDER BY
-        Depositos.Codigo ""
+        query = "select " & _
+                    "Depositos.Codigo,   " & _
+                    "Lotes.CodigoLote,  " & _
+                    "CASE  " & _
+                    "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
+                    "        ELSE Lotes.Descripcion  " & _
+                    "END AS Descripcion, " & _
+                    "Depositos.Capacidad,  " & _
+                    "Lotes.CantidadRestante, " & _
+                    "Depositos.depositoID, " & _
+                    "Depositos.Listado,   " & _
+                    "Lotes.TipoLoteID, " & _
+                    "Lotes.TipoProductoID, " & _
+                    "TiposProductos.descripcion producto " & _
+                "from " & _
+                    "TiposProductos " & _
+                    "RIGHT OUTER JOIN Lotes  " & _
+                    "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
+                    "RIGHT OUTER JOIN  Depositos  " & _
+                    "ON Lotes.DepositoID = Depositos.DepositoID " & _
+                "where " & _
+                    "Depositos.BotaID Is NULL  " & _
+                    "and  " & _
+                    "Depositos.Listado = 'TRUE' " & _
+                    "and " & _
+                    "depositos.depositoid = @id_deposito " & _
+                "ORDER BY " & _
+                    "Depositos.Codigo "
 
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id_deposito", id_deposito)
         Return Consultar()
     End Function
 
@@ -281,29 +289,42 @@
     ''                         funciones de movimientos
     ''*****************************************************************************************
     Public Function guardar_movimiento(ByVal id_deposito_origen As Integer, ByVal id_deposito_destino As Integer, ByVal cantidad As Double) As Boolean
-        query = "insert into movimientos(entraDepositoID, saleDepositoId, cantidad, procesoid, fecha)"
-                        values( ". (id_deposito_destino) .",
-                                ". (id_deposito_origen) .",
-                                '". (cantidad) ."', 9, CURRENT_TIMESTAMP)"
-        ''echo query
+        query = "insert into movimientos(entraDepositoID, saleDepositoId, cantidad, procesoid, fecha) " & _
+                        "values( @id_deposito_destino, " & _
+                                "@id_deposito_origen, " & _
+        "'@cantidad', 9, CURRENT_TIMESTAMP)"
+
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id_deposito_destino", id_deposito_destino)
+        AñadirParametroConsulta("@id_deposito_origen", id_deposito_origen)
+        AñadirParametroConsulta("@cantidad", cantidad)
+
+        Consultar()
+
         Return True
     End Function
 
     Public Function guardar_trazabilidad(ByVal codigoDestino As String, ByVal codigoOrigen As String, ByVal cantidad As Double) As Boolean
-        query = "INSERT INTO [dbo].[CompuestoPor]"
-                                                   ([LoteFinal]
-                                                   ,[LotePartida]
-                                                   ,[MovimientoID]
-                                                   ,[Cantidad]
-                                                   ,[FechaModificacion]
-                                                   ,[UsuarioModificacion])
-        VALUES()
-                                                   ( (select top 1 loteid from lotes where codigoLote = '" . (codigoDestino) . "')
-                                                   , (select top 1 loteid from lotes where codigoLote = '" . (codigoOrigen) . "')
-                                                   , (select max(movimientoid) from movimientos)
-                                                   ," . (cantidad) . "
-                                                   , CURRENT_TIMESTAMP
-                                                   , 17 )"
+        query = "INSERT INTO [dbo].[CompuestoPor] " & _
+                                                   "([LoteFinal] " & _
+                                                   ",[LotePartida] " & _
+                                                   ",[MovimientoID] " & _
+                                                   ",[Cantidad] " & _
+                                                   ",[FechaModificacion] " & _
+                                                   ",[UsuarioModificacion " & _
+                                        "VALUES " & _
+                                                    "( (select top 1 loteid from lotes where codigoLote = '@codigoDestino') " & _
+                                                    ", (select top 1 loteid from lotes where codigoLote = '@codigoOrigen)') " & _
+                                                    ", (select max(movimientoid) from movimientos) " & _
+                                                    ",@cantidad" & _
+                                                    ", CURRENT_TIMESTAMP " & _
+                                                    ", 17 )"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@codigoDestino", codigoDestino)
+        AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
+        AñadirParametroConsulta("@cantidad", cantidad)
+
+        Consultar()
 
         Return True
 
