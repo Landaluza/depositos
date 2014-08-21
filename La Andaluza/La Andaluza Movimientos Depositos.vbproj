@@ -49,7 +49,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>184</ApplicationRevision>
+    <ApplicationRevision>188</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -823,6 +823,8 @@
     <Content Include="Resources\fermentacion.png" />
     <Content Include="Resources\filtrado.png" />
     <Content Include="Resources\folder-development.ico" />
+    <None Include="Resources\glyphicons_196_circle_exclamation_mark.png" />
+    <None Include="Resources\glyphicons_198_ok.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
