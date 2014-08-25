@@ -221,6 +221,10 @@
   <data name="butEliminar.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="butEliminar.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="butEliminar.RightToLeftAutoMirrorImage" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -299,11 +303,17 @@
   <data name="butRefrescar.Text" xml:space="preserve">
     <value>Refrescar</value>
   </data>
+  <data name="butWord.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="butWord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 32</value>
+    <value>32, 32</value>
+  </data>
+  <data name="butExcel.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="butExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="bdnGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -329,7 +339,6 @@
   <data name="&gt;&gt;bdnGeneral.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvGeneral.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -360,15 +369,6 @@
   <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>421, 3</value>
   </metadata>
-  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 26</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
-    <value>ContextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ImprimirToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Space</value>
   </data>
@@ -377,6 +377,15 @@
   </data>
   <data name="ImprimirToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Imprimir</value>
+  </data>
+  <data name="ContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 26</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Name" xml:space="preserve">
+    <value>ContextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="PrintDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>281, 3</value>

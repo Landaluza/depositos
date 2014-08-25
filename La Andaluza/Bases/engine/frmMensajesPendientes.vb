@@ -22,7 +22,7 @@
             Me.DataGridView1.DataSource = notificacion
 
             Dim cborrar As New DataGridViewImageColumn
-            cborrar.Image = My.Resources.edit_remove_3
+            cborrar.Image = My.Resources.glyphicons_433_minus
             cborrar.Name = "borrar"
             cborrar.HeaderText = ""
             cborrar.ToolTipText = "Borra el mensaje"

@@ -19,7 +19,8 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>Iconos\Modificar.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <ManifestCertificateThumbprint>247F7EA75E27118A015C3762DB5731458C9579A9</ManifestCertificateThumbprint>
     <ManifestKeyFile>La Andaluza Produccion_TemporaryKey.pfx</ManifestKeyFile>
     <SignManifests>false</SignManifests>
@@ -842,21 +843,20 @@
     <None Include="Resources\glyphicons_388_exit.png" />
     <None Include="Resources\glyphicons_190_circle_plus.png" />
     <None Include="Resources\glyphicons_192_circle_remove.png" />
+    <None Include="Resources\glyphicons_080_retweet.png" />
+    <None Include="Resources\glyphicons_039_notes.png" />
+    <None Include="Resources\glyphicons_040_stats.png" />
+    <None Include="Resources\glyphicons_040_stats1.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
     <Content Include="Resources\venta.png" />
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
-    <Content Include="Resources\xx.png" />
     <Content Include="user-trash.ico" />
     <None Include="Resources\window_duplicate.ico" />
-    <None Include="Resources\page_excel_16.png" />
-    <None Include="Resources\page_white_word_16.png" />
     <None Include="Resources\folder-magnify.png" />
-    <None Include="Resources\view-refresh-4.png" />
     <None Include="Resources\tools-report-bug.png" />
-    <None Include="Resources\view_16.png" />
     <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
     <None Include="Iconos\LA  sin texto 48 x 48.bmp" />
     <None Include="Iconos\LA  sin texto 48 x 48.ico" />
@@ -864,22 +864,15 @@
     <None Include="Iconos\LA con texto 48 x 48.ico" />
     <None Include="Iconos\LogoLA.ico" />
     <None Include="Iconos\LogoLA.jpg" />
-    <None Include="Iconos\Modificar.ico" />
     <None Include="Iconos\print_ico.jpg" />
     <None Include="Iconos\refresh.png" />
     <None Include="Iconos\Solo texto.jpg" />
-    <None Include="Resources\document_16.png" />
     <None Include="Resources\emblem-notice.png" />
-    <None Include="Resources\edit-remove-3.png" />
     <None Include="Resources\checkbox-2.png" />
-    <None Include="Resources\document-save-5.png" />
     <None Include="Resources\edit-clear-2.png" />
     <None Include="Resources\edit-clear-21.png" />
     <None Include="Resources\emblem-documents.png" />
-    <None Include="Resources\edit-add-2.png" />
-    <None Include="Resources\application-exit-3.png" />
     <None Include="Resources\emblem-special.png" />
-    <None Include="Resources\document-save-5_32.png" />
     <None Include="Resources\emblem-notice_256.png" />
     <None Include="Resources\emblem-new_256.png" />
     <None Include="Resources\emblem-important-2_256.png" />
@@ -889,17 +882,13 @@
     <None Include="Resources\edit-group.png" />
     <None Include="Resources\appointmentmissed16.png" />
     <None Include="Resources\accessories_dictionary.png" />
-    <None Include="Resources\document_print_16.png" />
     <Content Include="Resources\important.png" />
     <None Include="Bases\ZLibrerias\referencias\AxInterop.TwainControlXTrial.dll" />
     <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.dll" />
     <None Include="Resources\sp2b.jpg" />
-    <None Include="Resources\imprimir_16.png" />
     <None Include="Resources\pedidoColor.bmp" />
-    <None Include="Resources\refresh.png" />
     <None Include="Resources\window-duplicate.png" />
     <None Include="Resources\system-help-3.png" />
-    <None Include="Resources\search-3.png" />
     <None Include="Resources\LogoLA.ico" />
     <None Include="Resources\user-suit.png" />
     <None Include="Resources\network-transmit.png" />

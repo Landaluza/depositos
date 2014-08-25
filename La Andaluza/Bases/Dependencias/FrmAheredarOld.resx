@@ -300,11 +300,17 @@
   <data name="butRefrescar.Text" xml:space="preserve">
     <value>Refrescar</value>
   </data>
+  <data name="butWord.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="butWord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 32</value>
+    <value>32, 32</value>
+  </data>
+  <data name="butExcel.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="butExcel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 32</value>
+    <value>32, 32</value>
   </data>
   <data name="bdnGeneral.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>

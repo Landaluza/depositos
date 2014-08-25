@@ -38,7 +38,7 @@ Public Class ctlMovimientos
                 If Not IsDBNull(tabla.Rows(i).Item(1)) Then reg.Fecha = CDate(tabla.Rows(i).Item(1))
 
                 If Not IsDBNull(tabla.Rows(i).Item(2)) Then reg.Observaciones = tabla.Rows(i).Item(2).ToString
-                If Not IsDBNull(tabla.Rows(i).Item(3)) Then reg.Cantidad = Convert.ToDouble(tabla.Rows(i).Item(3))
+                If Not IsDBNull(tabla.Rows(i).Item(3)) Then reg.Cantidad = Convert.ToSingle(tabla.Rows(i).Item(3))
                 If Not IsDBNull(tabla.Rows(i).Item(4)) Then reg.ProcesoID = tabla.Rows(i).Item(4).ToString
 
                 If IsDBNull(tabla.Rows(i).Item(5)) Then

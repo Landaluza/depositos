@@ -28,8 +28,6 @@ Partial Class FrmInicio
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.btnPass = New System.Windows.Forms.Button()
-        Me.lPass = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -96,7 +94,7 @@ Partial Class FrmInicio
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label2.Location = New System.Drawing.Point(88, 186)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 11)
+        Me.Label2.Size = New System.Drawing.Size(65, 11)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña"
         '
@@ -121,7 +119,7 @@ Partial Class FrmInicio
         Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancelar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_387_log_out
-        Me.ButtonCancelar.Location = New System.Drawing.Point(234, -1)
+        Me.ButtonCancelar.Location = New System.Drawing.Point(228, 4)
         Me.ButtonCancelar.Name = "ButtonCancelar"
         Me.ButtonCancelar.Size = New System.Drawing.Size(27, 24)
         Me.ButtonCancelar.TabIndex = 8
@@ -143,34 +141,6 @@ Partial Class FrmInicio
         Me.btnAceptar.TabIndex = 0
         Me.btnAceptar.Text = "&Entrar"
         Me.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        '
-        'btnPass
-        '
-        Me.btnPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnPass.BackColor = System.Drawing.Color.White
-        Me.btnPass.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPass.FlatAppearance.BorderSize = 0
-        Me.btnPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPass.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.system_help_3
-        Me.btnPass.Location = New System.Drawing.Point(238, 251)
-        Me.btnPass.Name = "btnPass"
-        Me.btnPass.Size = New System.Drawing.Size(24, 22)
-        Me.btnPass.TabIndex = 6
-        Me.btnPass.UseVisualStyleBackColor = False
-        '
-        'lPass
-        '
-        Me.lPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lPass.AutoSize = True
-        Me.lPass.BackColor = System.Drawing.Color.White
-        Me.lPass.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lPass.Location = New System.Drawing.Point(141, 257)
-        Me.lPass.Name = "lPass"
-        Me.lPass.Size = New System.Drawing.Size(95, 9)
-        Me.lPass.TabIndex = 5
-        Me.lPass.Text = "He olvidado mi contraseña"
         '
         'BackgroundWorker1
         '
@@ -206,11 +176,9 @@ Partial Class FrmInicio
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.ButtonCancelar)
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.btnPass)
         Me.Panel2.Controls.Add(Me.txtLogin)
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.lPass)
         Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.lblPasswordIssue)
@@ -257,8 +225,6 @@ Partial Class FrmInicio
     Private WithEvents ButtonCancelar As System.Windows.Forms.Button
     Private WithEvents LblLoginIssue As System.Windows.Forms.Label
     Private WithEvents lblPasswordIssue As System.Windows.Forms.Label
-    Private WithEvents btnPass As System.Windows.Forms.Button
-    Private WithEvents lPass As System.Windows.Forms.Label
     Private WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
    Private WithEvents Panel1 As System.Windows.Forms.Panel
     Private WithEvents PictureBox1 As System.Windows.Forms.PictureBox

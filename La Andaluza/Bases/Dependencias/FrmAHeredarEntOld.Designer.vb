@@ -68,7 +68,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.BindingNavigatorCountItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 22)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 32)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Numero Total de Items"
         '
@@ -103,7 +103,7 @@ Partial Class FrmAHeredarEntOld
         Me.BindingNavigatorMoveLastItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_177_fast_forward
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 32)
         Me.BindingNavigatorMoveLastItem.Text = "Ir al Ultimo"
         '
         'BindingNavigatorMoveNextItem
@@ -113,7 +113,7 @@ Partial Class FrmAHeredarEntOld
         Me.BindingNavigatorMoveNextItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_178_step_forward
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 32)
         Me.BindingNavigatorMoveNextItem.Text = "Ir al Siguiente"
         '
         'BindingNavigatorPositionItem
@@ -130,7 +130,7 @@ Partial Class FrmAHeredarEntOld
         'Separator2
         '
         Me.Separator2.Name = "Separator2"
-        Me.Separator2.Size = New System.Drawing.Size(6, 25)
+        Me.Separator2.Size = New System.Drawing.Size(6, 35)
         '
         'butImprimir
         '
@@ -158,11 +158,12 @@ Partial Class FrmAHeredarEntOld
         '
         'butExcel
         '
+        Me.butExcel.AutoSize = False
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.page_excel_16
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats1
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
-        Me.butExcel.Size = New System.Drawing.Size(23, 22)
+        Me.butExcel.Size = New System.Drawing.Size(32, 32)
         Me.butExcel.Text = "ToolStripButton1"
         Me.butExcel.ToolTipText = "Exportar a Excel (F9)"
         Me.butExcel.Visible = False
@@ -174,7 +175,7 @@ Partial Class FrmAHeredarEntOld
         Me.BindingNavigatorMovePreviousItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_170_step_backward
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 32)
         Me.BindingNavigatorMovePreviousItem.Text = "Ir al Anterior"
         '
         'BindingNavigatorMoveFirstItem
@@ -184,7 +185,7 @@ Partial Class FrmAHeredarEntOld
         Me.BindingNavigatorMoveFirstItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_171_fast_backward
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 32)
         Me.BindingNavigatorMoveFirstItem.Text = "Ir al Primero"
         '
         'txtTodoCorrecto

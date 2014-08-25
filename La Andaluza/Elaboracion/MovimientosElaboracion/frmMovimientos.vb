@@ -20,7 +20,7 @@ Public Class frmMovimientos
         btnRefresh.TextDirection = ToolStripTextDirection.Horizontal
         btnRefresh.TextAlign = ContentAlignment.MiddleRight
         'refresh100.DisplayStyle = ToolStripItemDisplayStyle.Image
-        btnRefresh.Image = My.Resources.refresh
+        btnRefresh.Image = My.Resources.glyphicons_080_retweet
         AddHandler btnRefresh.Click, AddressOf toolStripRefresh_Click
     End Sub
     Private Sub frmMovimientos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

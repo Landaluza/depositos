@@ -186,22 +186,22 @@ Partial Class FrmAheredarOld
         '
         resources.ApplyResources(Me.butRefrescar, "butRefrescar")
         Me.butRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_081_refresh
+        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_080_retweet
         Me.butRefrescar.Name = "butRefrescar"
         '
         'butWord
         '
-        Me.butWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butWord.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.page_white_word_16
-        Me.butWord.Name = "butWord"
         resources.ApplyResources(Me.butWord, "butWord")
+        Me.butWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.butWord.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_039_notes
+        Me.butWord.Name = "butWord"
         '
         'butExcel
         '
-        Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.page_excel_16
-        Me.butExcel.Name = "butExcel"
         resources.ApplyResources(Me.butExcel, "butExcel")
+        Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats
+        Me.butExcel.Name = "butExcel"
         '
         'dgvGeneral
         '
@@ -213,6 +213,7 @@ Partial Class FrmAheredarOld
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvGeneral.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvGeneral.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvGeneral.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

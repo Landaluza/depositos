@@ -471,7 +471,7 @@ Public Class GUImain
 
     Private Sub NuevoMovimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoMovimientoToolStripMenuItem.Click
         Dim frm As New GuiNuevoMovimiento
-        LAengine.AñadirPestaña(frm)
+        LAengine.AñadirPestaña(CType(frm, Form))
     End Sub
 End Class
 

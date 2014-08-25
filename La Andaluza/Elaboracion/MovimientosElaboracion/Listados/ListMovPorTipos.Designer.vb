@@ -363,7 +363,7 @@ Partial Class ListMovPorTipos
         Me.btnVer.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnVer.FlatAppearance.BorderSize = 0
         Me.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.search_3
+        Me.btnVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
         Me.btnVer.Location = New System.Drawing.Point(1233, 19)
         Me.btnVer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnVer.Name = "btnVer"

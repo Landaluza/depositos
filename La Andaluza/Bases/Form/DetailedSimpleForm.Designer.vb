@@ -101,11 +101,12 @@ Partial Class DetailedSimpleForm
         '
         'butExcel
         '
+        Me.butExcel.AutoSize = False
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.page_excel_16
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
-        Me.butExcel.Size = New System.Drawing.Size(23, 32)
+        Me.butExcel.Size = New System.Drawing.Size(32, 32)
         Me.butExcel.Text = "ToolStripButton1"
         Me.butExcel.ToolTipText = "Exportar a Excel (F9)"
         Me.butExcel.Visible = False
