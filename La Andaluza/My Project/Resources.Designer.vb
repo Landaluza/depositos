@@ -243,16 +243,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property document_save_5_16() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("document_save_5_16", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property document_save_5_32() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("document_save_5_32", resourceCulture)
@@ -576,6 +566,16 @@ Namespace My.Resources
         Friend ReadOnly Property glyphicons_387_log_out() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("glyphicons_387_log_out", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property glyphicons_388_exit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("glyphicons_388_exit", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

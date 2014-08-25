@@ -163,7 +163,7 @@ Partial Class gridsimpleform
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.application_xit_3
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
         resources.ApplyResources(Me.butSalir, "butSalir")
         Me.butSalir.Name = "butSalir"
         '

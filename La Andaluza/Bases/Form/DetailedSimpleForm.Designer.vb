@@ -27,12 +27,12 @@ Partial Class DetailedSimpleForm
         Me.bdnGeneral = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.GeneralBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.butGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.Separator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.butImprimir = New System.Windows.Forms.ToolStripButton()
         Me.butVer = New System.Windows.Forms.ToolStripButton()
         Me.butExcel = New System.Windows.Forms.ToolStripButton()
         Me.butSalir = New System.Windows.Forms.ToolStripButton()
         Me.MyToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Separator1 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.bdnGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bdnGeneral.SuspendLayout()
         CType(Me.GeneralBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,17 +60,22 @@ Partial Class DetailedSimpleForm
         'butGuardar
         '
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_save_5_16
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
         Me.butGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butGuardar.Name = "butGuardar"
         Me.butGuardar.Size = New System.Drawing.Size(23, 22)
         Me.butGuardar.Text = "Guardar"
         Me.butGuardar.ToolTipText = "Guardar (F5)"
         '
+        'Separator1
+        '
+        Me.Separator1.Name = "Separator1"
+        Me.Separator1.Size = New System.Drawing.Size(6, 25)
+        '
         'butImprimir
         '
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_print_16
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
         Me.butImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butImprimir.Name = "butImprimir"
         Me.butImprimir.Size = New System.Drawing.Size(23, 22)
@@ -81,7 +86,7 @@ Partial Class DetailedSimpleForm
         'butVer
         '
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_16
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
         Me.butVer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butVer.Name = "butVer"
         Me.butVer.Size = New System.Drawing.Size(23, 22)
@@ -104,17 +109,12 @@ Partial Class DetailedSimpleForm
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.application_xit_3
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
         Me.butSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butSalir.Name = "butSalir"
         Me.butSalir.Size = New System.Drawing.Size(23, 22)
         Me.butSalir.Text = "Salir"
         Me.butSalir.ToolTipText = "Salir (Esc)"
-        '
-        'Separator1
-        '
-        Me.Separator1.Name = "Separator1"
-        Me.Separator1.Size = New System.Drawing.Size(6, 25)
         '
         'DetailedSimpleForm
         '

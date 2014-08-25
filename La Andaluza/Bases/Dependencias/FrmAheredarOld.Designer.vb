@@ -44,8 +44,8 @@ Partial Class FrmAheredarOld
         Me.butSalir = New System.Windows.Forms.ToolStripButton()
         Me.bdnGeneral = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.GeneralBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.butRefrescar = New System.Windows.Forms.ToolStripButton()
         Me.Separator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.butRefrescar = New System.Windows.Forms.ToolStripButton()
         Me.butWord = New System.Windows.Forms.ToolStripButton()
         Me.butExcel = New System.Windows.Forms.ToolStripButton()
         Me.dgvGeneral = New System.Windows.Forms.DataGridView()
@@ -64,15 +64,17 @@ Partial Class FrmAheredarOld
         '
         Me.BindingNavigatorMoveFirstItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
+        Me.BindingNavigatorMoveFirstItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_171_fast_backward
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
         '
         'BindingNavigatorMovePreviousItem
         '
         Me.BindingNavigatorMovePreviousItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMovePreviousItem, "BindingNavigatorMovePreviousItem")
+        Me.BindingNavigatorMovePreviousItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_170_step_backward
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        resources.ApplyResources(Me.BindingNavigatorMovePreviousItem, "BindingNavigatorMovePreviousItem")
         '
         'BindingNavigatorPositionItem
         '
@@ -90,35 +92,37 @@ Partial Class FrmAheredarOld
         '
         Me.BindingNavigatorMoveNextItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveNextItem, "BindingNavigatorMoveNextItem")
+        Me.BindingNavigatorMoveNextItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_178_step_forward
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveNextItem, "BindingNavigatorMoveNextItem")
         '
         'BindingNavigatorMoveLastItem
         '
         Me.BindingNavigatorMoveLastItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
+        Me.BindingNavigatorMoveLastItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_177_fast_forward
         Me.BindingNavigatorMoveLastItem.Margin = New System.Windows.Forms.Padding(0, 1, 15, 2)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         '
         'butNuevo
         '
         Me.butNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.edit_add_2
+        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_432_plus
         Me.butNuevo.Name = "butNuevo"
         resources.ApplyResources(Me.butNuevo, "butNuevo")
         '
         'butModificar
         '
         Me.butModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butModificar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.Modificar
+        Me.butModificar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_030_pencil
         resources.ApplyResources(Me.butModificar, "butModificar")
         Me.butModificar.Name = "butModificar"
         '
         'butVer
         '
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_16
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
         resources.ApplyResources(Me.butVer, "butVer")
         Me.butVer.Name = "butVer"
         '
@@ -130,21 +134,21 @@ Partial Class FrmAheredarOld
         'butEliminar
         '
         Me.butEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.edit_remove_3
-        Me.butEliminar.Name = "butEliminar"
+        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_433_minus
         resources.ApplyResources(Me.butEliminar, "butEliminar")
+        Me.butEliminar.Name = "butEliminar"
         '
         'butImprimir
         '
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_print_16
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
         resources.ApplyResources(Me.butImprimir, "butImprimir")
         Me.butImprimir.Name = "butImprimir"
         '
         'butGuardar
         '
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_save_5_16
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
         resources.ApplyResources(Me.butGuardar, "butGuardar")
         Me.butGuardar.Name = "butGuardar"
         '
@@ -152,7 +156,7 @@ Partial Class FrmAheredarOld
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.application_xit_3
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
         resources.ApplyResources(Me.butSalir, "butSalir")
         Me.butSalir.Name = "butSalir"
         '
@@ -172,17 +176,17 @@ Partial Class FrmAheredarOld
         Me.bdnGeneral.Name = "bdnGeneral"
         Me.bdnGeneral.PositionItem = Me.BindingNavigatorPositionItem
         '
-        'butRefrescar
-        '
-        Me.butRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_refresh_4
-        resources.ApplyResources(Me.butRefrescar, "butRefrescar")
-        Me.butRefrescar.Name = "butRefrescar"
-        '
         'Separator1
         '
         Me.Separator1.Name = "Separator1"
         resources.ApplyResources(Me.Separator1, "Separator1")
+        '
+        'butRefrescar
+        '
+        Me.butRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_081_refresh
+        resources.ApplyResources(Me.butRefrescar, "butRefrescar")
+        Me.butRefrescar.Name = "butRefrescar"
         '
         'butWord
         '

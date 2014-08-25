@@ -839,6 +839,7 @@
     <None Include="Resources\glyphicons_177_fast_forward.png" />
     <None Include="Resources\glyphicons_446_floppy_save.png" />
     <None Include="Resources\glyphicons_015_print.png" />
+    <None Include="Resources\glyphicons_388_exit.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
@@ -874,7 +875,6 @@
     <None Include="Resources\edit-clear-21.png" />
     <None Include="Resources\emblem-documents.png" />
     <None Include="Resources\edit-add-2.png" />
-    <None Include="Resources\document-save-5_16.png" />
     <None Include="Resources\application-exit-3.png" />
     <None Include="Resources\emblem-special.png" />
     <None Include="Resources\document-save-5_32.png" />
