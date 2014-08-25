@@ -828,6 +828,17 @@
     <None Include="Resources\glyphicons_197_remove.png" />
     <None Include="Resources\glyphicons_207_remove_2.png" />
     <None Include="Resources\glyphicons_387_log_out.png" />
+    <None Include="Resources\glyphicons_432_plus.png" />
+    <None Include="Resources\glyphicons_433_minus.png" />
+    <None Include="Resources\glyphicons_030_pencil.png" />
+    <None Include="Resources\glyphicons_081_refresh.png" />
+    <None Include="Resources\glyphicons_027_search.png" />
+    <None Include="Resources\glyphicons_171_fast_backward.png" />
+    <None Include="Resources\glyphicons_170_step_backward.png" />
+    <None Include="Resources\glyphicons_178_step_forward.png" />
+    <None Include="Resources\glyphicons_177_fast_forward.png" />
+    <None Include="Resources\glyphicons_446_floppy_save.png" />
+    <None Include="Resources\glyphicons_015_print.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />

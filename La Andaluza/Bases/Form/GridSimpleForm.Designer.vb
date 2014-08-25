@@ -65,15 +65,17 @@ Partial Class gridsimpleform
         '
         Me.BindingNavigatorMoveFirstItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
+        Me.BindingNavigatorMoveFirstItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_171_fast_backward
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
         '
         'BindingNavigatorMovePreviousItem
         '
         Me.BindingNavigatorMovePreviousItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMovePreviousItem, "BindingNavigatorMovePreviousItem")
+        Me.BindingNavigatorMovePreviousItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_170_step_backward
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        resources.ApplyResources(Me.BindingNavigatorMovePreviousItem, "BindingNavigatorMovePreviousItem")
         '
         'BindingNavigatorPositionItem
         '
@@ -92,16 +94,18 @@ Partial Class gridsimpleform
         '
         Me.BindingNavigatorMoveNextItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveNextItem, "BindingNavigatorMoveNextItem")
+        Me.BindingNavigatorMoveNextItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_178_step_forward
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveNextItem, "BindingNavigatorMoveNextItem")
         '
         'BindingNavigatorMoveLastItem
         '
         Me.BindingNavigatorMoveLastItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
+        Me.BindingNavigatorMoveLastItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_177_fast_forward
         Me.BindingNavigatorMoveLastItem.Margin = New System.Windows.Forms.Padding(0, 1, 15, 2)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         '
         'eparator2
         '
@@ -111,30 +115,30 @@ Partial Class gridsimpleform
         'butNuevo
         '
         Me.butNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.edit_add_2
+        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_432_plus
         Me.butNuevo.Name = "butNuevo"
         resources.ApplyResources(Me.butNuevo, "butNuevo")
         '
         'butModificar
         '
         Me.butModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butModificar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.Modificar
+        Me.butModificar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_030_pencil
         resources.ApplyResources(Me.butModificar, "butModificar")
         Me.butModificar.Name = "butModificar"
         '
         'butVer
         '
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_16
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
         resources.ApplyResources(Me.butVer, "butVer")
         Me.butVer.Name = "butVer"
         '
         'butEliminar
         '
         Me.butEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.edit_remove_3
-        Me.butEliminar.Name = "butEliminar"
+        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_433_minus
         resources.ApplyResources(Me.butEliminar, "butEliminar")
+        Me.butEliminar.Name = "butEliminar"
         '
         'Separator3
         '
@@ -144,14 +148,14 @@ Partial Class gridsimpleform
         'butImprimir
         '
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_print_16
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
         resources.ApplyResources(Me.butImprimir, "butImprimir")
         Me.butImprimir.Name = "butImprimir"
         '
         'butGuardar
         '
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.document_save_5_16
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
         resources.ApplyResources(Me.butGuardar, "butGuardar")
         Me.butGuardar.Name = "butGuardar"
         '
@@ -182,7 +186,7 @@ Partial Class gridsimpleform
         'butRefrescar
         '
         Me.butRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.view_refresh_4
+        Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_081_refresh
         resources.ApplyResources(Me.butRefrescar, "butRefrescar")
         Me.butRefrescar.Name = "butRefrescar"
         '
@@ -264,7 +268,7 @@ Partial Class gridsimpleform
         Me.ControlBox = False
         Me.Controls.Add(Me.dgvGeneral)
         Me.Controls.Add(Me.bdnGeneral)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixedsingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
         Me.Name = "gridsimpleform"
         CType(Me.bdnGeneral, System.ComponentModel.ISupportInitialize).EndInit()

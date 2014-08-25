@@ -3,6 +3,7 @@
         InitializeComponent()
         Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvorigen)
         Dim pop2 As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
+
     End Sub
 
     Public WriteOnly Property OrigenDataSource As DataTable
