@@ -46,6 +46,8 @@ Partial Class FrmAHeredarEntOld
         'bdnGeneral
         '
         Me.bdnGeneral.AddNewItem = Nothing
+        Me.bdnGeneral.AutoSize = False
+        Me.bdnGeneral.BackColor = System.Drawing.Color.White
         Me.bdnGeneral.BindingSource = Me.GeneralBindingSource
         Me.bdnGeneral.CountItem = Me.BindingNavigatorCountItem
         Me.bdnGeneral.DeleteItem = Nothing
@@ -58,7 +60,7 @@ Partial Class FrmAHeredarEntOld
         Me.bdnGeneral.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.bdnGeneral.Name = "bdnGeneral"
         Me.bdnGeneral.PositionItem = Me.BindingNavigatorPositionItem
-        Me.bdnGeneral.Size = New System.Drawing.Size(466, 25)
+        Me.bdnGeneral.Size = New System.Drawing.Size(466, 35)
         Me.bdnGeneral.TabIndex = 7
         Me.bdnGeneral.Text = "BindingNavigatorGeneral"
         '
@@ -72,23 +74,25 @@ Partial Class FrmAHeredarEntOld
         '
         'butGuardar
         '
+        Me.butGuardar.AutoSize = False
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
         Me.butGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butGuardar.Name = "butGuardar"
-        Me.butGuardar.Size = New System.Drawing.Size(23, 22)
+        Me.butGuardar.Size = New System.Drawing.Size(32, 32)
         Me.butGuardar.Text = "Guardar"
         Me.butGuardar.ToolTipText = "Guardar (F5)"
         '
         'butSalir
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.butSalir.AutoSize = False
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
         Me.butSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butSalir.Margin = New System.Windows.Forms.Padding(10, 1, 0, 2)
         Me.butSalir.Name = "butSalir"
-        Me.butSalir.Size = New System.Drawing.Size(23, 22)
+        Me.butSalir.Size = New System.Drawing.Size(32, 32)
         Me.butSalir.Text = "Salir"
         Me.butSalir.ToolTipText = "Salir (Esc)"
         '
@@ -130,22 +134,24 @@ Partial Class FrmAHeredarEntOld
         '
         'butImprimir
         '
+        Me.butImprimir.AutoSize = False
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
         Me.butImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butImprimir.Name = "butImprimir"
-        Me.butImprimir.Size = New System.Drawing.Size(23, 22)
+        Me.butImprimir.Size = New System.Drawing.Size(32, 32)
         Me.butImprimir.Text = "&Imprimir"
         Me.butImprimir.ToolTipText = "Imprimir (F6)"
         Me.butImprimir.Visible = False
         '
         'butVer
         '
+        Me.butVer.AutoSize = False
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
         Me.butVer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butVer.Name = "butVer"
-        Me.butVer.Size = New System.Drawing.Size(23, 22)
+        Me.butVer.Size = New System.Drawing.Size(32, 32)
         Me.butVer.Text = "Ver"
         Me.butVer.ToolTipText = "Ver (F7)"
         Me.butVer.Visible = False
