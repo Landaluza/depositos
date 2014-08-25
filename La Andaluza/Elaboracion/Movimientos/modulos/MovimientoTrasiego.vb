@@ -29,6 +29,7 @@
         cargarDatosOrigen()
 
         AddHandler gui.dgvorigen.SelectionChanged, AddressOf cargarDatosDestino
+        AddHandler gui.FormClosing, AddressOf cerrar
     End Sub
 
     Public Sub cargarDatosOrigen()
@@ -68,5 +69,9 @@
 
     Private Sub mostrarDatosSecundarios()
         gui.DestinoDataSource = listadoDepositos
+    End Sub
+
+    Private Sub cerrar()
+
     End Sub
 End Class

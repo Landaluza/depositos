@@ -24,10 +24,10 @@ Partial Class gridsimpleform
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(gridsimpleform))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
@@ -114,30 +114,30 @@ Partial Class gridsimpleform
         '
         'butNuevo
         '
-        Me.butNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_432_plus
-        Me.butNuevo.Name = "butNuevo"
         resources.ApplyResources(Me.butNuevo, "butNuevo")
+        Me.butNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.butNuevo.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_190_circle_plus
+        Me.butNuevo.Name = "butNuevo"
         '
         'butModificar
         '
+        resources.ApplyResources(Me.butModificar, "butModificar")
         Me.butModificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butModificar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_030_pencil
-        resources.ApplyResources(Me.butModificar, "butModificar")
         Me.butModificar.Name = "butModificar"
         '
         'butVer
         '
+        resources.ApplyResources(Me.butVer, "butVer")
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
-        resources.ApplyResources(Me.butVer, "butVer")
         Me.butVer.Name = "butVer"
         '
         'butEliminar
         '
-        Me.butEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_433_minus
         resources.ApplyResources(Me.butEliminar, "butEliminar")
+        Me.butEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.butEliminar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_192_circle_remove
         Me.butEliminar.Name = "butEliminar"
         '
         'Separator3
@@ -147,35 +147,36 @@ Partial Class gridsimpleform
         '
         'butImprimir
         '
+        resources.ApplyResources(Me.butImprimir, "butImprimir")
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
-        resources.ApplyResources(Me.butImprimir, "butImprimir")
         Me.butImprimir.Name = "butImprimir"
         '
         'butGuardar
         '
+        resources.ApplyResources(Me.butGuardar, "butGuardar")
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
-        resources.ApplyResources(Me.butGuardar, "butGuardar")
         Me.butGuardar.Name = "butGuardar"
         '
         'butSalir
         '
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        resources.ApplyResources(Me.butSalir, "butSalir")
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
-        resources.ApplyResources(Me.butSalir, "butSalir")
         Me.butSalir.Name = "butSalir"
         '
         'bdnGeneral
         '
         Me.bdnGeneral.AddNewItem = Nothing
+        resources.ApplyResources(Me.bdnGeneral, "bdnGeneral")
+        Me.bdnGeneral.BackColor = System.Drawing.Color.White
         Me.bdnGeneral.BindingSource = Me.GeneralBindingSource
         Me.bdnGeneral.CountItem = Me.BindingNavigatorCountItem
         Me.bdnGeneral.DeleteItem = Nothing
         Me.bdnGeneral.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.bdnGeneral.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.butSalir, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorMoveNextItem, Me.butNuevo, Me.butModificar, Me.butEliminar, Me.eparator2, Me.butRefrescar, Me.butVer, Me.Separator3, Me.butImprimir, Me.butWord, Me.butGuardar, Me.butExcel, Me.BindingNavigatorCountItem, Me.BindingNavigatorPositionItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorMoveFirstItem})
-        resources.ApplyResources(Me.bdnGeneral, "bdnGeneral")
         Me.bdnGeneral.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.bdnGeneral.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.bdnGeneral.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -185,9 +186,9 @@ Partial Class gridsimpleform
         '
         'butRefrescar
         '
+        resources.ApplyResources(Me.butRefrescar, "butRefrescar")
         Me.butRefrescar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.butRefrescar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_081_refresh
-        resources.ApplyResources(Me.butRefrescar, "butRefrescar")
         Me.butRefrescar.Name = "butRefrescar"
         '
         'butWord
@@ -209,37 +210,37 @@ Partial Class gridsimpleform
         Me.dgvGeneral.AllowUserToAddRows = False
         Me.dgvGeneral.AllowUserToDeleteRows = False
         Me.dgvGeneral.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvGeneral.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvGeneral.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvGeneral.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvGeneral.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvGeneral.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         resources.ApplyResources(Me.dgvGeneral, "dgvGeneral")
         Me.dgvGeneral.Name = "dgvGeneral"
         Me.dgvGeneral.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvGeneral.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvGeneral.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvGeneral.RowHeadersVisible = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.NullValue = Nothing
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgvGeneral.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.NullValue = Nothing
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvGeneral.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvGeneral.RowTemplate.Height = 18
         Me.dgvGeneral.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
@@ -278,7 +279,6 @@ Partial Class gridsimpleform
         CType(Me.dgvGeneral, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Protected WithEvents GeneralBindingSource As System.Windows.Forms.BindingSource

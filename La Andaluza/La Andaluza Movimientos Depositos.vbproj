@@ -840,6 +840,8 @@
     <None Include="Resources\glyphicons_446_floppy_save.png" />
     <None Include="Resources\glyphicons_015_print.png" />
     <None Include="Resources\glyphicons_388_exit.png" />
+    <None Include="Resources\glyphicons_190_circle_plus.png" />
+    <None Include="Resources\glyphicons_192_circle_remove.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
