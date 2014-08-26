@@ -2,7 +2,6 @@
     Inherits Checker
 
     Public Const LETRAS As String = "qwertyuiopasdfghjklñzxcvbnmáéíóúü"
-    Public Const NUMEROS As String = "1234567890"
     Public Const CARACTERES_ESPECIALES As String = ",.:-_"""
 
     Public Overloads Function check(nombreCampo As String, value As String, min As Integer, max As Integer, caracteresPermitidos As String) As Boolean
