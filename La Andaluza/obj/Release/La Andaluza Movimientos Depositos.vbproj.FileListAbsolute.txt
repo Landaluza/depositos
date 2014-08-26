@@ -74,6 +74,12 @@ C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza Movimie
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe.config
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe.manifest
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.application
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositosPruebas.resources.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.C1Report.2.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.Win.C1Report.2.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\DgvFilterPopup.dll
@@ -89,13 +95,6 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Wind
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Xml.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.C1Report.2.xml
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\C1.Win.C1Report.2.xml
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbproj.GenerateResource.Cache
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe.config
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe.manifest
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.application
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.exe
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositosPruebas.pdb
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositosPruebas.resources.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GUIstandar.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmNews.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GUImain.resources
@@ -128,6 +127,8 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmFiltros.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmEntMovimientosCopy.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmMovimientos.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiNuevoMovimiento.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoTrasiego.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmEntNoticias2.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmNoticias2.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.frmMensajesPendientes.resources
@@ -137,11 +138,11 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.gridsimpleform.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.DetailedSimpleForm.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.SplashScreen1.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.ListMovPorTipos.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.MessageDialogue.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.Resources.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.FrmAheredarOld.es.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.gridsimpleform.es.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbproj.GenerateResource.Cache
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.exe.licenses
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\es\La Andaluza MovimientosDepositosPruebas.resources.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.TrustInfo.xml
@@ -149,6 +150,3 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.pdb
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiNuevoMovimiento.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoTrasiego.resources

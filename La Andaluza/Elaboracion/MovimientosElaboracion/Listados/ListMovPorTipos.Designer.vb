@@ -52,7 +52,6 @@ Partial Class ListMovPorTipos
         '
         Me.C1PrintPreviewControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.C1PrintPreviewControl1.Location = New System.Drawing.Point(0, 0)
-        Me.C1PrintPreviewControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.C1PrintPreviewControl1.Name = "C1PrintPreviewControl1"
         Me.C1PrintPreviewControl1.NavigationPanelVisible = False
         '
@@ -60,9 +59,8 @@ Partial Class ListMovPorTipos
         '
         Me.C1PrintPreviewControl1.PreviewOutlineView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.C1PrintPreviewControl1.PreviewOutlineView.Location = New System.Drawing.Point(0, 0)
-        Me.C1PrintPreviewControl1.PreviewOutlineView.Margin = New System.Windows.Forms.Padding(4)
         Me.C1PrintPreviewControl1.PreviewOutlineView.Name = "OutlineView"
-        Me.C1PrintPreviewControl1.PreviewOutlineView.Size = New System.Drawing.Size(165, 424)
+        Me.C1PrintPreviewControl1.PreviewOutlineView.Size = New System.Drawing.Size(125, 348)
         Me.C1PrintPreviewControl1.PreviewOutlineView.TabIndex = 0
         Me.C1PrintPreviewControl1.PreviewOutlineView.Visible = False
         '
@@ -75,11 +73,10 @@ Partial Class ListMovPorTipos
         'C1PrintPreviewControl1.PreviewTextSearchPanel
         '
         Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Location = New System.Drawing.Point(815, 0)
-        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.MinimumSize = New System.Drawing.Size(267, 295)
+        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Location = New System.Drawing.Point(611, 0)
+        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.MinimumSize = New System.Drawing.Size(200, 240)
         Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Name = "PreviewTextSearchPanel"
-        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Size = New System.Drawing.Size(267, 644)
+        Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Size = New System.Drawing.Size(200, 523)
         Me.C1PrintPreviewControl1.PreviewTextSearchPanel.TabIndex = 0
         Me.C1PrintPreviewControl1.PreviewTextSearchPanel.Visible = False
         '
@@ -87,13 +84,12 @@ Partial Class ListMovPorTipos
         '
         Me.C1PrintPreviewControl1.PreviewThumbnailView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.C1PrintPreviewControl1.PreviewThumbnailView.Location = New System.Drawing.Point(0, 0)
-        Me.C1PrintPreviewControl1.PreviewThumbnailView.Margin = New System.Windows.Forms.Padding(4)
         Me.C1PrintPreviewControl1.PreviewThumbnailView.Name = "ThumbnailView"
-        Me.C1PrintPreviewControl1.PreviewThumbnailView.Size = New System.Drawing.Size(165, 424)
+        Me.C1PrintPreviewControl1.PreviewThumbnailView.Size = New System.Drawing.Size(122, 342)
         Me.C1PrintPreviewControl1.PreviewThumbnailView.TabIndex = 0
         Me.C1PrintPreviewControl1.PreviewThumbnailView.UseImageAsThumbnail = False
         Me.C1PrintPreviewControl1.PreviewThumbnailView.Visible = False
-        Me.C1PrintPreviewControl1.Size = New System.Drawing.Size(1599, 490)
+        Me.C1PrintPreviewControl1.Size = New System.Drawing.Size(1199, 396)
         Me.C1PrintPreviewControl1.TabIndex = 1
         Me.C1PrintPreviewControl1.Text = "C1PrintPreviewControl1"
         '
@@ -230,7 +226,7 @@ Partial Class ListMovPorTipos
         '
         '
         Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomInTool.Name = "itemZoomInTool"
-        Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomInTool.Size = New System.Drawing.Size(68, 22)
+        Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomInTool.Size = New System.Drawing.Size(67, 22)
         '
         '
         '
@@ -240,7 +236,7 @@ Partial Class ListMovPorTipos
         '
         '
         Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomOutTool.Name = "itemZoomOutTool"
-        Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomOutTool.Size = New System.Drawing.Size(68, 22)
+        Me.C1PrintPreviewControl1.ToolBars.Zoom.ZoomOutTool.Size = New System.Drawing.Size(67, 22)
         '
         '
         '
@@ -252,60 +248,55 @@ Partial Class ListMovPorTipos
         'dtpDesde
         '
         Me.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDesde.Location = New System.Drawing.Point(873, 20)
-        Me.dtpDesde.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpDesde.Location = New System.Drawing.Point(655, 16)
         Me.dtpDesde.Name = "dtpDesde"
-        Me.dtpDesde.Size = New System.Drawing.Size(124, 22)
+        Me.dtpDesde.Size = New System.Drawing.Size(94, 20)
         Me.dtpDesde.TabIndex = 1
         Me.dtpDesde.Value = New Date(2009, 1, 1, 0, 0, 0, 0)
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(811, 25)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(608, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 17)
+        Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Desde:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1043, 25)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(782, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 17)
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Hasta:"
         '
         'dtpHasta
         '
         Me.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpHasta.Location = New System.Drawing.Point(1101, 20)
-        Me.dtpHasta.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpHasta.Location = New System.Drawing.Point(826, 16)
         Me.dtpHasta.Name = "dtpHasta"
-        Me.dtpHasta.Size = New System.Drawing.Size(124, 22)
+        Me.dtpHasta.Size = New System.Drawing.Size(94, 20)
         Me.dtpHasta.TabIndex = 2
         '
         'cboProcesos
         '
-        Me.cboProcesos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProcesos.FormattingEnabled = True
-        Me.cboProcesos.Location = New System.Drawing.Point(105, 18)
-        Me.cboProcesos.Margin = New System.Windows.Forms.Padding(4)
+        Me.cboProcesos.Location = New System.Drawing.Point(79, 15)
         Me.cboProcesos.Name = "cboProcesos"
-        Me.cboProcesos.Size = New System.Drawing.Size(289, 24)
+        Me.cboProcesos.Size = New System.Drawing.Size(218, 21)
         Me.cboProcesos.TabIndex = 0
         '
         'rdbLitros
         '
         Me.rdbLitros.AutoSize = True
         Me.rdbLitros.Checked = True
-        Me.rdbLitros.Location = New System.Drawing.Point(423, 7)
-        Me.rdbLitros.Margin = New System.Windows.Forms.Padding(4)
+        Me.rdbLitros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rdbLitros.Location = New System.Drawing.Point(317, 6)
         Me.rdbLitros.Name = "rdbLitros"
-        Me.rdbLitros.Size = New System.Drawing.Size(80, 21)
+        Me.rdbLitros.Size = New System.Drawing.Size(61, 17)
         Me.rdbLitros.TabIndex = 6
         Me.rdbLitros.TabStop = True
         Me.rdbLitros.Text = "En litros"
@@ -314,10 +305,10 @@ Partial Class ListMovPorTipos
         'rdbGrados
         '
         Me.rdbGrados.AutoSize = True
-        Me.rdbGrados.Location = New System.Drawing.Point(423, 36)
-        Me.rdbGrados.Margin = New System.Windows.Forms.Padding(4)
+        Me.rdbGrados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rdbGrados.Location = New System.Drawing.Point(317, 29)
         Me.rdbGrados.Name = "rdbGrados"
-        Me.rdbGrados.Size = New System.Drawing.Size(94, 21)
+        Me.rdbGrados.Size = New System.Drawing.Size(72, 17)
         Me.rdbGrados.TabIndex = 7
         Me.rdbGrados.TabStop = True
         Me.rdbGrados.Text = "En grados"
@@ -326,10 +317,10 @@ Partial Class ListMovPorTipos
         'chbAlcohol
         '
         Me.chbAlcohol.AutoSize = True
-        Me.chbAlcohol.Location = New System.Drawing.Point(528, 37)
-        Me.chbAlcohol.Margin = New System.Windows.Forms.Padding(4)
+        Me.chbAlcohol.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chbAlcohol.Location = New System.Drawing.Point(396, 30)
         Me.chbAlcohol.Name = "chbAlcohol"
-        Me.chbAlcohol.Size = New System.Drawing.Size(116, 21)
+        Me.chbAlcohol.Size = New System.Drawing.Size(88, 17)
         Me.chbAlcohol.TabIndex = 8
         Me.chbAlcohol.Text = "Incluir alcohol"
         Me.chbAlcohol.UseVisualStyleBackColor = True
@@ -338,36 +329,34 @@ Partial Class ListMovPorTipos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 25)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(25, 20)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 17)
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Proceso:"
         '
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(1599, 425)
+        Me.DataGridView1.Size = New System.Drawing.Size(1199, 343)
         Me.DataGridView1.TabIndex = 10
         '
         'btnVer
         '
         Me.btnVer.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnVer.FlatAppearance.BorderSize = 0
         Me.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
-        Me.btnVer.Location = New System.Drawing.Point(1233, 19)
-        Me.btnVer.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnVer.Location = New System.Drawing.Point(927, 9)
         Me.btnVer.Name = "btnVer"
-        Me.btnVer.Size = New System.Drawing.Size(73, 23)
+        Me.btnVer.Size = New System.Drawing.Size(74, 35)
         Me.btnVer.TabIndex = 11
         Me.btnVer.Text = "Ver"
         Me.btnVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -387,15 +376,15 @@ Partial Class ListMovPorTipos
         Me.Panel1.Controls.Add(Me.rdbLitros)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1599, 69)
+        Me.Panel1.Size = New System.Drawing.Size(1199, 56)
         Me.Panel1.TabIndex = 12
         '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 69)
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 56)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -406,23 +395,19 @@ Partial Class ListMovPorTipos
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.C1PrintPreviewControl1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1599, 945)
-        Me.SplitContainer1.SplitterDistance = 425
-        Me.SplitContainer1.SplitterWidth = 30
+        Me.SplitContainer1.Size = New System.Drawing.Size(1199, 763)
+        Me.SplitContainer1.SplitterDistance = 343
+        Me.SplitContainer1.SplitterWidth = 24
         Me.SplitContainer1.TabIndex = 13
-        '
-        'BackgroundWorker1
-        '
         '
         'ListMovPorTipos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1599, 1014)
+        Me.ClientSize = New System.Drawing.Size(1199, 819)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MinimumSize = New System.Drawing.Size(1397, 1007)
+        Me.MinimumSize = New System.Drawing.Size(1052, 825)
         Me.Name = "ListMovPorTipos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Movimientos por tipo entre fechas"

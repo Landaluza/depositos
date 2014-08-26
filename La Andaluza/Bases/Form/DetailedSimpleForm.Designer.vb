@@ -42,7 +42,7 @@ Partial Class DetailedSimpleForm
         '
         Me.bdnGeneral.AddNewItem = Nothing
         Me.bdnGeneral.AutoSize = False
-        Me.bdnGeneral.BackColor = System.Drawing.Color.White
+        Me.bdnGeneral.BackColor = System.Drawing.Color.LightGray
         Me.bdnGeneral.BindingSource = Me.GeneralBindingSource
         Me.bdnGeneral.CountItem = Nothing
         Me.bdnGeneral.DeleteItem = Nothing

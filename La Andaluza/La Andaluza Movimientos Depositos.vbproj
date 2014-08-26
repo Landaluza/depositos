@@ -96,11 +96,6 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.C1Report.2, Version=2.6.20102.54119, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="C1.Win.C1Report.2, Version=2.6.20102.54119, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
     <Reference Include="DgvFilterPopup, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="InformeDepositos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -114,6 +109,8 @@
       <HintPath>Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -138,6 +135,7 @@
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms">
       <Private>True</Private>
     </Reference>
@@ -551,12 +549,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Bases\Clases\Encriptacion.vb" />
-    <Compile Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.Designer.vb">
-      <DependentUpon>ListMovPorTipos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Bases\Conf\Components\MessageDialogue.Designer.vb">
       <DependentUpon>MessageDialogue.vb</DependentUpon>
     </Compile>
@@ -730,9 +722,6 @@
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
-    <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\Listados\ListMovPorTipos.resx">
-      <DependentUpon>ListMovPorTipos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bases\Conf\Components\MessageDialogue.resx">
       <DependentUpon>MessageDialogue.vb</DependentUpon>
     </EmbeddedResource>
@@ -884,7 +873,6 @@
     <None Include="Resources\accessories_dictionary.png" />
     <Content Include="Resources\important.png" />
     <None Include="Bases\ZLibrerias\referencias\AxInterop.TwainControlXTrial.dll" />
-    <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.dll" />
     <None Include="Resources\sp2b.jpg" />
     <None Include="Resources\pedidoColor.bmp" />
     <None Include="Resources\window-duplicate.png" />
@@ -900,13 +888,6 @@
     <None Include="Resources\LogoBandejaLa2.ico" />
     <None Include="Resources\mail-forward-4_16.png" />
     <None Include="Resources\mail-forward-4_22.png" />
-    <None Include="Bases\ZLibrerias\referencias\C1.C1Report.2.xml" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1InputPanel.2.dll" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1InputPanel.2.xml" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1Report.2.dll" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1Report.2.xml" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1TrueDBGrid.2.dll" />
-    <None Include="Bases\ZLibrerias\referencias\C1.Win.C1TrueDBGrid.2.xml" />
     <None Include="Bases\ZLibrerias\referencias\DgvFilterPopup.dll" />
     <None Include="app.config" />
     <None Include="My Project\DataSources\ControlesLotesGranel.datasource" />

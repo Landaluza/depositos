@@ -24,8 +24,6 @@ Partial Class frmMovimientosMain
     Private Sub InitializeComponent()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
@@ -33,9 +31,9 @@ Partial Class frmMovimientosMain
         'TabPage1
         '
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Size = New System.Drawing.Size(680, 356)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Movimientos"
@@ -45,38 +43,14 @@ Partial Class frmMovimientosMain
         '
         Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(688, 385)
         Me.TabControl1.TabIndex = 3
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage2.Size = New System.Drawing.Size(680, 356)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Tipos movimientos"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage3.Size = New System.Drawing.Size(680, 356)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Listado entre fechas"
-        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'TabPage4
         '
@@ -94,7 +68,7 @@ Partial Class frmMovimientosMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(688, 385)
         Me.Controls.Add(Me.TabControl1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmMovimientosMain"
         Me.Text = "Movimientos"
         Me.TabControl1.ResumeLayout(False)
@@ -103,7 +77,5 @@ Partial Class frmMovimientosMain
     End Sub
     Private WithEvents TabPage1 As System.Windows.Forms.TabPage
     Private WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Private WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Private WithEvents TabPage3 As System.Windows.Forms.TabPage
     Private WithEvents TabPage4 As System.Windows.Forms.TabPage
 End Class

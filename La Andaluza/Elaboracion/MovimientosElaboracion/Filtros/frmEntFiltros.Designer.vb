@@ -65,7 +65,7 @@ Partial Class frmEntFiltros
         Me.tlpMiddle.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98.0!))
         Me.tlpMiddle.Controls.Add(Me.lblDescripcion, 1, 0)
         Me.tlpMiddle.Controls.Add(Me.txtDescripcion, 2, 0)
-        Me.tlpMiddle.Location = New System.Drawing.Point(0, 25)
+        Me.tlpMiddle.Location = New System.Drawing.Point(0, 40)
         Me.tlpMiddle.Name = "tlpMiddle"
         Me.tlpMiddle.Padding = New System.Windows.Forms.Padding(0, 15, 0, 0)
         Me.tlpMiddle.RowCount = 2
@@ -97,7 +97,6 @@ Partial Class frmEntFiltros
         Me.tlpMiddle.ResumeLayout(False)
         Me.tlpMiddle.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
