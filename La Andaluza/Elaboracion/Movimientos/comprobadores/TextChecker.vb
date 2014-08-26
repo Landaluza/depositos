@@ -6,12 +6,12 @@
     Public Const CARACTERES_ESPECIALES As String = ",.:-_"""
 
     Public Overloads Function check(nombreCampo As String, value As String, min As Integer, max As Integer, caracteresPermitidos As String) As Boolean
-        If value.Length < min Then
+        If value.Length <= min Then
             message = "La longitud minima de " & nombreCampo & " es de " & min & " caracteres"
             Return False
         End If
 
-        If value.Length > max Then
+        If value.Length >= max Then
             message = "La longitud maxima de " & nombreCampo & " es de " & max & " caracteres"
             Return False
         End If

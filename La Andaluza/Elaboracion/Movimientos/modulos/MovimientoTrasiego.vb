@@ -86,5 +86,12 @@
     Private Sub guardar()
         Dim trasiego As Trasiego = gui.valores
 
+        Dim errores As String = trasiego.validar
+        If errores <> String.Empty Then
+            MessageBox.Show("Se has encontrado los siguientes errores: " & Environment.NewLine & errores, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return
+        End If
+
+
     End Sub
 End Class

@@ -3,9 +3,11 @@
     Public loteFinal As Lote
     Public cantidad As Double
 
-    Public Function validar() As Boolean
+    Public Function validar() As String
+        Dim ch As New DecimalChecker
+        ch.check_decimal("cantidad", cantidad, 0)
 
-
+        Return ch.mensaje
     End Function
     Public Class Deposito
         Public numero As String
@@ -26,8 +28,8 @@
         Public tipo As Trasiego.TipoLote
         Public deposito As Integer
 
-        Public Function validar() As Boolean
-
+        Public Function validar() As String
+            Return ""
         End Function
     End Class
 
@@ -36,8 +38,8 @@
         Public id As Integer
         Public abreviatura As String
 
-        Public Function validar() As Boolean
-
+        Public Function validar() As String
+            Return ""
         End Function
     End Class
 
@@ -45,8 +47,8 @@
         Public nombre As String
         Public id As Integer
 
-        Public Function validar() As Boolean
-
+        Public Function validar() As String
+            Return ""
         End Function
     End Class
 End Class
