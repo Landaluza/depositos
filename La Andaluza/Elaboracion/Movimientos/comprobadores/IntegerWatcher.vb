@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub comprobar(sender As Object, e As KeyPressEventArgs)
-        If Not Me.filtro.Contains(e.KeyChar) Then
+        If Not Me.filtro.Contains(e.KeyChar) And Asc(e.KeyChar) <> Keys.Delete And Asc(e.KeyChar) <> 8 Then
             e.Handled = True
             Return
         End If
@@ -21,10 +21,15 @@
 
     Private Sub comprobarContenido(sender As Object, e As KeyEventArgs)
 
-
-        If Convert.ToInt32(control.Text) <= minimo Then
+        If control.Text = "" Then
+            control.BackColor = Color.Red
+            tooltip.SetToolTip(control, "El valor debe estar comprendido entre " & minimo & " y " & maximo)
+        ElseIf Convert.ToInt32(control.Text) <= minimo Then
             control.BackColor = Color.Red
             tooltip.SetToolTip(control, "El valor minimo es " & minimo)
+        ElseIf Convert.ToInt32(control.Text) >= maximo Then
+            control.BackColor = Color.Red
+            tooltip.SetToolTip(control, "El valor debe estar comprendido entre " & minimo & " y " & maximo)
         Else
             control.BackColor = backcolor
             tooltip.SetToolTip(control, "valor correcto")
