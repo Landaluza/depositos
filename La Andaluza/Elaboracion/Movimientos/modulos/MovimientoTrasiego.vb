@@ -5,6 +5,8 @@
     Private listadoProductos As DataTable
     Private listadoLotes As DataTable
 
+    Private hiloDatos As System.Threading.Thread
+    Private hiloDatosDestino As System.Threading.Thread
     Private iniciohiloDatos As System.Threading.ThreadStart
     Private iniciohiloSecundarios As System.Threading.ThreadStart
     Private invocador As MethodInvoker
@@ -34,21 +36,21 @@
     End Sub
 
     Public Sub cargarDatosOrigen()
-        Dim hilo As System.Threading.Thread
 
-        hilo = New System.Threading.Thread(iniciohiloDatos)
-        hilo.IsBackground = True
-        hilo.Name = "consultadatos"
-        hilo.Start()
+
+        hiloDatos = New System.Threading.Thread(iniciohiloDatos)
+        hiloDatos.IsBackground = True
+        hiloDatos.Name = "consultadatos"
+        hiloDatos.Start()
     End Sub
 
     Public Sub cargarDatosDestino()
-        Dim hilo As System.Threading.Thread
 
-        hilo = New System.Threading.Thread(iniciohiloSecundarios)
-        hilo.IsBackground = True
-        hilo.Name = "consultadatosSecundarios"
-        hilo.Start()
+
+        hiloDatosDestino = New System.Threading.Thread(iniciohiloSecundarios)
+        hiloDatosDestino.IsBackground = True
+        hiloDatosDestino.Name = "consultadatosSecundarios"
+        hiloDatosDestino.Start()
     End Sub
 
     Private Sub cargardatos()
@@ -64,8 +66,11 @@
         gui.TipoProductoDatasource = listadoProductos
     End Sub
 
-    Private Sub cargarDatosSecundarios()
-        listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
+    Private Sub cargarDatosSecundarios()        
+        If Not gui.dgvorigen.CurrentRow Is Nothing Then
+            listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
+        End If
+
         gui.BeginInvoke(invocadorSecundario)
     End Sub
 
@@ -74,7 +79,8 @@
     End Sub
 
     Private Sub cerrar()
-
+        If hiloDatosDestino.IsAlive Then hiloDatosDestino.Abort()
+        If hiloDatos.IsAlive Then hiloDatos.Abort()
     End Sub
 
     Private Sub guardar()
