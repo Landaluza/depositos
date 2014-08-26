@@ -11,6 +11,12 @@
             Return False
         End If
 
+        If value.Length > max Then
+            message = "La longitud maxima de " & nombreCampo & " es de " & max & " caracteres"
+            Return False
+        End If
+
+
         For Each ch As Char In value.ToCharArray
             If Not caracteresPermitidos.Contains(ch) Then
                 message = "El campo " & nombreCampo & " contiene el caracter no permitido " & ch
