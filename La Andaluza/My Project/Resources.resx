@@ -136,9 +136,6 @@
   <data name="emblem_notice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-notice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="align_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\align-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LogoLA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\LogoLA.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,26 +190,17 @@
   <data name="trasiego" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trasiego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="emblem_symbolic_link_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emblem-symbolic-link-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="appointmentmissed16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appointmentmissed16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fermentacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\fermentacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="system_help_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\system-help-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="diferencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\diferencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder_development" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\folder-development.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="window_duplicate1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window_duplicate.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="application_exit_3_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application-exit-3_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,9 +298,6 @@
   <data name="glyphicons_387_log_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_387_log_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="window_duplicate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window-duplicate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="accessories_dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accessories_dictionary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -348,11 +333,5 @@
   </data>
   <data name="glyphicons_196_circle_exclamation_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_196_circle_exclamation_mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="emblem_unreadable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\emblem-unreadable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="glyphicons_040_stats1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_040_stats1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

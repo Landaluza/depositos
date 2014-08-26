@@ -160,7 +160,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.butExcel.AutoSize = False
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats1
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
         Me.butExcel.Size = New System.Drawing.Size(32, 32)

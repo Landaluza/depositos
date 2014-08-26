@@ -479,7 +479,7 @@ Public Class FrmAHeredarEntOld
                 Case VISION
                     Me.Text = GridSimpleForm.ACCION_VER & " " & Me.Text
                     butGuardar.Visible = False
-                    Me.Icon = My.Resources.window_duplicate1
+                    Me.Icon = My.Resources.window_new_3
                 Case Else
                     Me.Icon = My.Resources.LogoBandejaLa21
             End Select
@@ -494,7 +494,7 @@ Public Class FrmAHeredarEntOld
                 Case GridSimpleForm.ACCION_VER.Substring(0, 3)
                     'Me.Text = GridSimpleForm.ACCION_VER & " " & Me.Text
                     butGuardar.Visible = False
-                    Me.Icon = My.Resources.window_duplicate1
+                    Me.Icon = My.Resources.window_new_3
                 Case Else
                     Me.Icon = My.Resources.LogoBandejaLa21
             End Select

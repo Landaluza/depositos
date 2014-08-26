@@ -93,16 +93,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property align_left() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("align_left", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property application_exit_3_256() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("application_exit_3_256", resourceCulture)
@@ -293,26 +283,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property emblem_symbolic_link_2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("emblem_symbolic_link_2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property emblem_unreadable() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("emblem_unreadable", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property envasado() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("envasado", resourceCulture)
@@ -406,16 +376,6 @@ Namespace My.Resources
         Friend ReadOnly Property glyphicons_040_stats() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("glyphicons_040_stats", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property glyphicons_040_stats1() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("glyphicons_040_stats1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -763,16 +723,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property system_help_3() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("system_help_3", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property tools_report_bug() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("tools_report_bug", resourceCulture)
@@ -807,26 +757,6 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("venta", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property window_duplicate() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("window_duplicate", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
-        '''</summary>
-        Friend ReadOnly Property window_duplicate1() As System.Drawing.Icon
-            Get
-                Dim obj As Object = ResourceManager.GetObject("window_duplicate1", resourceCulture)
-                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         

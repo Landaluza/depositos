@@ -794,9 +794,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trasiego.png" />
-    <None Include="Resources\emblem-unreadable.png" />
-    <None Include="Resources\emblem-symbolic-link-2.png" />
-    <None Include="Resources\align-left.png" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll" />
     <Content Include="Resources\ajusteagua.png" />
@@ -842,7 +839,6 @@
     <Content Include="Resources\window_new.ico" />
     <Content Include="Resources\window_new_3.ico" />
     <Content Include="user-trash.ico" />
-    <None Include="Resources\window_duplicate.ico" />
     <None Include="Resources\folder-magnify.png" />
     <None Include="Resources\tools-report-bug.png" />
     <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
@@ -872,8 +868,6 @@
     <None Include="Bases\ZLibrerias\referencias\AxInterop.TwainControlXTrial.dll" />
     <None Include="Resources\sp2b.jpg" />
     <None Include="Resources\pedidoColor.bmp" />
-    <None Include="Resources\window-duplicate.png" />
-    <None Include="Resources\system-help-3.png" />
     <None Include="Resources\LogoLA.ico" />
     <None Include="Resources\user-suit.png" />
     <None Include="Resources\network-transmit.png" />

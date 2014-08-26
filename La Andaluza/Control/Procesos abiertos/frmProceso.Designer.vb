@@ -23,7 +23,6 @@ Partial Class frmProceso
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProceso))
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnExportar = New System.Windows.Forms.Button()
         Me.pbIconoOperacion = New System.Windows.Forms.PictureBox()
@@ -38,7 +37,7 @@ Partial Class frmProceso
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Image = CType(resources.GetObject("btnBorrar.Image"), System.Drawing.Image)
+        Me.btnBorrar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
         Me.btnBorrar.Location = New System.Drawing.Point(618, 0)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 249)
@@ -50,7 +49,7 @@ Partial Class frmProceso
         Me.btnExportar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnExportar.FlatAppearance.BorderSize = 0
         Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExportar.Image = CType(resources.GetObject("btnExportar.Image"), System.Drawing.Image)
+        Me.btnExportar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
         Me.btnExportar.Location = New System.Drawing.Point(693, 0)
         Me.btnExportar.Name = "btnExportar"
         Me.btnExportar.Size = New System.Drawing.Size(75, 249)
