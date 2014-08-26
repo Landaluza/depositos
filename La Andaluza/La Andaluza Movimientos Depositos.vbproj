@@ -443,7 +443,9 @@
     <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\comprobadores\TextChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\BdTrasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\comprobadores\Checker.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.Designer.vb">
       <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
     </Compile>

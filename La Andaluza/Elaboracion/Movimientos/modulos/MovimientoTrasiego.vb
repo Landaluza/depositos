@@ -84,6 +84,7 @@
     End Sub
 
     Private Sub guardar()
+        Dim trasiego As Trasiego = gui.valores
 
     End Sub
 End Class
