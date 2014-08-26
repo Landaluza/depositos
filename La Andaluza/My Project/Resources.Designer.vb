@@ -253,29 +253,9 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property emblem_notice() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("emblem_notice", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property emblem_notice_256() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("emblem_notice_256", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property emblem_special() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("emblem_special", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

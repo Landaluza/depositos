@@ -850,11 +850,9 @@
     <None Include="Iconos\LogoLA.jpg" />
     <None Include="Iconos\refresh.png" />
     <None Include="Iconos\Solo texto.jpg" />
-    <None Include="Resources\emblem-notice.png" />
     <None Include="Resources\edit-clear-2.png" />
     <None Include="Resources\edit-clear-21.png" />
     <None Include="Resources\emblem-documents.png" />
-    <None Include="Resources\emblem-special.png" />
     <None Include="Resources\emblem-notice_256.png" />
     <None Include="Resources\emblem-new_256.png" />
     <None Include="Resources\emblem-important-2_256.png" />
