@@ -721,7 +721,6 @@
     <EmbeddedResource Include="Bases\engine\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="Bases\Conf\Components\MessageDialogue.resx">
       <DependentUpon>MessageDialogue.vb</DependentUpon>
     </EmbeddedResource>

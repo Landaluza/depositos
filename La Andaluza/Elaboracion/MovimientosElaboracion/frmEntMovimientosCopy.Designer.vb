@@ -1079,9 +1079,9 @@ Partial Class frmEntMovimientosCopy
         Me.gbFinal.Controls.Add(Me.GroupBox1)
         Me.gbFinal.Controls.Add(EntraDepositoIDLabel)
         Me.gbFinal.Dock = System.Windows.Forms.DockStyle.Left
-        Me.gbFinal.Location = New System.Drawing.Point(350, 72)
+        Me.gbFinal.Location = New System.Drawing.Point(350, 82)
         Me.gbFinal.Name = "gbFinal"
-        Me.gbFinal.Size = New System.Drawing.Size(350, 684)
+        Me.gbFinal.Size = New System.Drawing.Size(350, 674)
         Me.gbFinal.TabIndex = 4
         Me.gbFinal.TabStop = False
         Me.gbFinal.Text = "Deposito Final"
@@ -1752,10 +1752,9 @@ Partial Class frmEntMovimientosCopy
         'butActualizar
         '
         Me.butActualizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.butActualizar.FlatAppearance.BorderSize = 0
         Me.butActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.butActualizar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.checkbox_2
-        Me.butActualizar.Location = New System.Drawing.Point(525, 11)
+        Me.butActualizar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.butActualizar.Location = New System.Drawing.Point(525, 8)
         Me.butActualizar.Name = "butActualizar"
         Me.butActualizar.Size = New System.Drawing.Size(114, 49)
         Me.butActualizar.TabIndex = 16
@@ -1792,10 +1791,10 @@ Partial Class frmEntMovimientosCopy
         Me.Panel1.Controls.Add(Me.gbLotes)
         Me.Panel1.Controls.Add(Me.gbPartida)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel1.Location = New System.Drawing.Point(0, 72)
+        Me.Panel1.Location = New System.Drawing.Point(0, 82)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(350, 684)
+        Me.Panel1.Size = New System.Drawing.Size(350, 674)
         Me.Panel1.TabIndex = 6
         '
         'Panel2
@@ -1805,7 +1804,7 @@ Partial Class frmEntMovimientosCopy
         Me.Panel2.Controls.Add(Me.dtpFecha)
         Me.Panel2.Controls.Add(FechaLabel)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 25)
+        Me.Panel2.Location = New System.Drawing.Point(0, 35)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(700, 47)
@@ -1813,6 +1812,7 @@ Partial Class frmEntMovimientosCopy
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.Color.LightGray
         Me.Panel3.Controls.Add(Label18)
         Me.Panel3.Controls.Add(Me.txtObservaciones)
         Me.Panel3.Controls.Add(Me.txtCantidad)
@@ -1833,10 +1833,10 @@ Partial Class frmEntMovimientosCopy
         Me.Panel4.Controls.Add(Me.gbDiferencias)
         Me.Panel4.Controls.Add(Me.gbSalidas)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel4.Location = New System.Drawing.Point(700, 72)
+        Me.Panel4.Location = New System.Drawing.Point(700, 82)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(341, 684)
+        Me.Panel4.Size = New System.Drawing.Size(341, 674)
         Me.Panel4.TabIndex = 1000000002
         '
         'frmEntMovimientosCopy
