@@ -852,11 +852,9 @@
     <None Include="Iconos\LA con texto 48 x 48.ico" />
     <None Include="Iconos\LogoLA.ico" />
     <None Include="Iconos\LogoLA.jpg" />
-    <None Include="Iconos\print_ico.jpg" />
     <None Include="Iconos\refresh.png" />
     <None Include="Iconos\Solo texto.jpg" />
     <None Include="Resources\emblem-notice.png" />
-    <None Include="Resources\checkbox-2.png" />
     <None Include="Resources\edit-clear-2.png" />
     <None Include="Resources\edit-clear-21.png" />
     <None Include="Resources\emblem-documents.png" />
@@ -891,7 +889,6 @@
     <None Include="app.config" />
     <None Include="My Project\DataSources\ControlesLotesGranel.datasource" />
     <Content Include="Resources\LA  sin texto 48 x 48.ico" />
-    <None Include="Resources\insert-horizontal-rule.png" />
     <Content Include="Resources\Logo JR Sabater.gif" />
     <Content Include="Resources\Logo LA sin texto.jpg" />
     <None Include="Bases\ZLibrerias\DgvFilterPopup.dll" />

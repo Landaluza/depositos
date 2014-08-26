@@ -28,7 +28,7 @@ Partial Class GuiMovimientoTrasiego
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.rbLoteDEstino = New System.Windows.Forms.RadioButton()
         Me.rbNuevoLote = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
         Me.btnCantidadOrigenIncorrecta = New System.Windows.Forms.Button()
@@ -40,6 +40,7 @@ Partial Class GuiMovimientoTrasiego
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
         Me.cboTipoLote = New System.Windows.Forms.ComboBox()
         Me.panNuevoLote = New System.Windows.Forms.Panel()
+        Me.chbSuma = New System.Windows.Forms.CheckBox()
         CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -97,7 +98,7 @@ Partial Class GuiMovimientoTrasiego
         Me.rbLoteDEstino.Checked = True
         Me.rbLoteDEstino.FlatAppearance.BorderSize = 0
         Me.rbLoteDEstino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rbLoteDEstino.Location = New System.Drawing.Point(42, 690)
+        Me.rbLoteDEstino.Location = New System.Drawing.Point(45, 713)
         Me.rbLoteDEstino.Name = "rbLoteDEstino"
         Me.rbLoteDEstino.Size = New System.Drawing.Size(152, 17)
         Me.rbLoteDEstino.TabIndex = 2
@@ -110,25 +111,25 @@ Partial Class GuiMovimientoTrasiego
         Me.rbNuevoLote.AutoSize = True
         Me.rbNuevoLote.FlatAppearance.BorderSize = 0
         Me.rbNuevoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rbNuevoLote.Location = New System.Drawing.Point(42, 713)
+        Me.rbNuevoLote.Location = New System.Drawing.Point(45, 690)
         Me.rbNuevoLote.Name = "rbNuevoLote"
         Me.rbNuevoLote.Size = New System.Drawing.Size(117, 17)
         Me.rbNuevoLote.TabIndex = 3
         Me.rbNuevoLote.Text = "Crear un nuevo lote"
         Me.rbNuevoLote.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnGuardar
         '
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(950, 678)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(244, 69)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Continuar"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.Location = New System.Drawing.Point(950, 678)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
+        Me.btnGuardar.TabIndex = 5
+        Me.btnGuardar.Text = "Continuar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -254,15 +255,29 @@ Partial Class GuiMovimientoTrasiego
         Me.panNuevoLote.TabIndex = 10
         Me.panNuevoLote.Visible = False
         '
+        'chbSuma
+        '
+        Me.chbSuma.AutoSize = True
+        Me.chbSuma.Checked = True
+        Me.chbSuma.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chbSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chbSuma.Location = New System.Drawing.Point(147, 736)
+        Me.chbSuma.Name = "chbSuma"
+        Me.chbSuma.Size = New System.Drawing.Size(50, 17)
+        Me.chbSuma.TabIndex = 10
+        Me.chbSuma.Text = "Suma"
+        Me.chbSuma.UseVisualStyleBackColor = True
+        '
         'GuiMovimientoTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1240, 780)
+        Me.Controls.Add(Me.chbSuma)
         Me.Controls.Add(Me.panNuevoLote)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.rbNuevoLote)
         Me.Controls.Add(Me.rbLoteDEstino)
         Me.Controls.Add(Me.txtCantidad)
@@ -280,7 +295,7 @@ Partial Class GuiMovimientoTrasiego
 
     End Sub
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
-    Public WithEvents Button1 As System.Windows.Forms.Button
+    Public WithEvents btnGuardar As System.Windows.Forms.Button
     Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
     Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
     Public WithEvents rbLoteDEstino As System.Windows.Forms.RadioButton
@@ -296,4 +311,5 @@ Partial Class GuiMovimientoTrasiego
     Public WithEvents cboTipoProducto As System.Windows.Forms.ComboBox
     Public WithEvents cboTipoLote As System.Windows.Forms.ComboBox
     Friend WithEvents panNuevoLote As System.Windows.Forms.Panel
+    Public WithEvents chbSuma As System.Windows.Forms.CheckBox
 End Class

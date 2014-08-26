@@ -175,9 +175,6 @@
   <data name="glyphicons_039_notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_039_notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="print_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\print_ico.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\window_new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,9 +304,6 @@
   <data name="LogoJR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo JR Sabater.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="insert_horizontal_rule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insert-horizontal-rule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="envasado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\envasado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -348,9 +342,6 @@
   </data>
   <data name="LogoBandejaLa21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoBandejaLa2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="checkbox_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkbox-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tools_report_bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools-report-bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

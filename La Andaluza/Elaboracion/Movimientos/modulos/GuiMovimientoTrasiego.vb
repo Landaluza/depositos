@@ -52,5 +52,6 @@
 
     Private Sub rbLoteDEstino_CheckedChanged(sender As Object, e As EventArgs) Handles rbLoteDEstino.CheckedChanged, rbNuevoLote.CheckedChanged
         panNuevoLote.Visible = rbNuevoLote.Checked
+        chbSuma.Visible = rbLoteDEstino.Checked
     End Sub
 End Class

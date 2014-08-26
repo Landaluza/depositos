@@ -123,16 +123,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property checkbox_2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("checkbox_2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property clarificacion() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("clarificacion", resourceCulture)
@@ -613,16 +603,6 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property insert_horizontal_rule() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("insert_horizontal_rule", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property LAconTexto48x48() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("LAconTexto48x48", resourceCulture)
@@ -766,16 +746,6 @@ Namespace My.Resources
         Friend ReadOnly Property piebota() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("piebota", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property print_ico() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("print_ico", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

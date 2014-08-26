@@ -30,6 +30,7 @@
 
         AddHandler gui.dgvorigen.SelectionChanged, AddressOf cargarDatosDestino
         AddHandler gui.FormClosing, AddressOf cerrar
+        AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
 
     Public Sub cargarDatosOrigen()
@@ -62,6 +63,7 @@
         gui.TipoLoteDatasource = listadoLotes
         gui.TipoProductoDatasource = listadoProductos
     End Sub
+
     Private Sub cargarDatosSecundarios()
         listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
         gui.BeginInvoke(invocadorSecundario)
@@ -72,6 +74,10 @@
     End Sub
 
     Private Sub cerrar()
+
+    End Sub
+
+    Private Sub guardar()
 
     End Sub
 End Class
