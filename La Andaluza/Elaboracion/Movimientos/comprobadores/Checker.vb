@@ -13,27 +13,27 @@
 
     End Function
 
-    Public Function check_cp(name As String, value As Object) As Boolean
+    Public Function check_cp(name As String, value As String) As Boolean
 
     End Function
 
-    Public Function check_tlf(name As String, value As Object) As Boolean
+    Public Function check_tlf(name As String, value As String) As Boolean
 
     End Function
 
-    Public Function check_nif(name As String, value As Object) As Boolean
+    Public Function check_nif(name As String, value As String) As Boolean
 
     End Function
 
-    Public Function check_nombre(name As String, value As Object) As Boolean
+    Public Function check_nombre(name As String, value As String) As Boolean
 
     End Function
 
-    Public Function check_codigo_lote(name As String, value As Object) As Boolean
+    Public Function check_codigo_lote(name As String, value As String) As Boolean
 
     End Function
 
-    Public Function check_mail(name As String, value As Object) As Boolean
+    Public Function check_mail(name As String, value As String) As Boolean
 
     End Function
 
