@@ -5,6 +5,7 @@
         Dim pop2 As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
 
         Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+        
     End Sub
 
     Public WriteOnly Property OrigenDataSource As DataTable
