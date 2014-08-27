@@ -449,6 +449,18 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\TextChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.Designer.vb">
+      <DependentUpon>GuiMovimientoCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.Designer.vb">
+      <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\bdNiveles.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.Designer.vb">
       <DependentUpon>guiNiveles.vb</DependentUpon>
@@ -479,6 +491,12 @@
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\MovimientoTrasiego.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\Trasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.Designer.vb">
+      <DependentUpon>GuiMovimientoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -705,6 +723,12 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.resx">
+      <DependentUpon>GuiMovimientoCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.resx">
+      <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.resx">
       <DependentUpon>guiNiveles.vb</DependentUpon>
     </EmbeddedResource>
@@ -713,6 +737,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.resx">
       <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.resx">
+      <DependentUpon>GuiMovimientoVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
       <DependentUpon>frmEntNoticias2.vb</DependentUpon>
@@ -859,6 +886,7 @@
     <None Include="Resources\glyphicons_039_notes.png" />
     <None Include="Resources\glyphicons_040_stats.png" />
     <None Include="Resources\glyphicons_040_stats1.png" />
+    <None Include="Resources\glyphicons_123_message_out.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
@@ -962,9 +990,6 @@
   <ItemGroup>
     <Folder Include="Control\Especificaciones\" />
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\compras\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\filtrados\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\ventas\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">

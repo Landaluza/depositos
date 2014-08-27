@@ -23,8 +23,8 @@ Partial Class guiNiveles
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.sep3 = New System.Windows.Forms.Label()
@@ -56,25 +56,12 @@ Partial Class guiNiveles
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.LightGray
-        Me.Panel1.Controls.Add(Me.btnCancelar)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 509)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(673, 81)
         Me.Panel1.TabIndex = 0
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancelar.FlatAppearance.BorderSize = 0
-        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
-        Me.btnCancelar.Location = New System.Drawing.Point(638, 17)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(35, 51)
-        Me.btnCancelar.TabIndex = 1
-        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -85,6 +72,19 @@ Partial Class guiNiveles
         Me.Label1.Size = New System.Drawing.Size(409, 55)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nivelar depositos"
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancelar.FlatAppearance.BorderSize = 0
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.btnCancelar.Location = New System.Drawing.Point(638, -2)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(35, 51)
+        Me.btnCancelar.TabIndex = 1
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -286,6 +286,7 @@ Partial Class guiNiveles
         Me.btnContinuar.Size = New System.Drawing.Size(673, 39)
         Me.btnContinuar.TabIndex = 3
         Me.btnContinuar.Text = "Continuar"
+        Me.btnContinuar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnContinuar.UseVisualStyleBackColor = False
         '
         'guiNiveles
@@ -294,6 +295,7 @@ Partial Class guiNiveles
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(673, 590)
+        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnContinuar)
         Me.Controls.Add(Me.FlowLayoutPanel3)
         Me.Controls.Add(Me.Panel2)

@@ -145,6 +145,8 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositosPruebas.pdb
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\Geckofx-Winforms.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.guiNiveles.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.guiProductoIncorrecto.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoCompra.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoFiltrado.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositosPruebas.GuiMovimientoVenta.resources
