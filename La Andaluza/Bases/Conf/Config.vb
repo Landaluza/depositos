@@ -34,6 +34,8 @@
         Config.MailClientHost = "smtp.1and1.es"
         Config.QS_Sesion = "Sesión A - [24 x 80]"
         'Config.QS_Sesion = "Sesión A"
+
+        
     End Sub
 
     Public Shared ReadOnly Property Version_seriada As String

@@ -449,12 +449,26 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\TextChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\BdTrasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\bdNiveles.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.Designer.vb">
+      <DependentUpon>guiNiveles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiProductoIncorrecto.Designer.vb">
+      <DependentUpon>guiProductoIncorrecto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiProductoIncorrecto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\niveles\Niveles.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\BdTrasiego.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Checker.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.Designer.vb">
+    <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.Designer.vb">
       <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.vb">
+    <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.Designer.vb">
@@ -463,8 +477,8 @@
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\MovimientoTrasiego.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\Trasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\MovimientoTrasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\Trasiego.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -691,7 +705,13 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\GuiMovimientoTrasiego.resx">
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.resx">
+      <DependentUpon>guiNiveles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiProductoIncorrecto.resx">
+      <DependentUpon>guiProductoIncorrecto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.resx">
       <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
@@ -942,6 +962,9 @@
   <ItemGroup>
     <Folder Include="Control\Especificaciones\" />
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\compras\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\filtrados\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\ventas\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">

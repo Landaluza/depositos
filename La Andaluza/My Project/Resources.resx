@@ -133,23 +133,23 @@
   <data name="maceracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\maceracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="glyphicons_015_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_015_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mail_forward_4_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail-forward-4_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LogoLA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\LogoLA.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_suit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-suit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mail_forward_4_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mail-forward-4_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LAconTexto48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\iconos\LA con texto 48 x 48.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ajustecomercial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\ajustecomercial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="desembotenc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\desembotenc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filtrado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\filtrado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +160,8 @@
   <data name="edit_clear_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-clear-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_040_stats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_040_stats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glyphicons_197_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_197_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="emblem_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,23 +169,17 @@
   <data name="glyphicons_039_notes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_039_notes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\window_new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glyphicons_387_log_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_387_log_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LAsinTexto48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\iconos\LA  sin texto 48 x 48.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="glyphicons_015_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_015_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glyphicons_192_circle_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_192_circle_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glyphicons_207_remove_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_207_remove_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="desembote" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\desembote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trasiego" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trasiego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="appointmentmissed16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\appointmentmissed16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +211,8 @@
   <data name="emblem_important_2_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\emblem-important-2_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogoBandejaLa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoBandejaLa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clarificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\clarificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glyphicons_433_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_433_minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,20 +223,26 @@
   <data name="ajusteagua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\ajusteagua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="glyphicons_196_circle_exclamation_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_196_circle_exclamation_mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="glyphicons_198_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_198_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_clear_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-clear-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_197_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_197_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trasiego" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trasiego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="desecho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\desecho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="piebota" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\piebota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="glyphicons_178_step_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_178_step_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="network_transmit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\network-transmit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,17 +268,11 @@
   <data name="glyphicons_190_circle_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_190_circle_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sp2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sp2b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="window_new_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\window_new_3.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clarificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\clarificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="glyphicons_178_step_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_178_step_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogoBandejaLa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoBandejaLa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glyphicons_171_fast_backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_171_fast_backward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,11 +283,14 @@
   <data name="LogoJR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo JR Sabater.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sp2b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sp2b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="envasado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\envasado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_387_log_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_387_log_out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glyphicons_040_stats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glyphicons_040_stats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="accessories_dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accessories_dictionary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,8 +307,8 @@
   <data name="lavado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\lavado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_192_circle_remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_192_circle_remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="desembotenc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\desembotenc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glyphicons_080_retweet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glyphicons_080_retweet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,10 +319,13 @@
   <data name="LogoBandejaLa21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoBandejaLa2.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="window_new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\window_new.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tools_report_bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tools-report-bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glyphicons_196_circle_exclamation_mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glyphicons_196_circle_exclamation_mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LAsinTexto48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\iconos\LA  sin texto 48 x 48.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
