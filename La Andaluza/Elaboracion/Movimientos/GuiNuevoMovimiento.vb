@@ -8,7 +8,7 @@
         For Each Control As Control In Me.FlowLayoutPanel1.Controls
             Randomize(Now.Millisecond + Now.Second)
 
-            Control.BackColor = Color.FromArgb(rand.Next(0, 256), rand.Next(0, 256), rand.Next(0, 256))
+            Control.BackColor = Color.FromArgb(rand.Next(20, 160), rand.Next(20, 160), rand.Next(20, 160))
         Next
 
         Dim fil As New File
@@ -23,7 +23,8 @@
         Catch ex As Exception
             contador = New contadorMovimientos
         End Try
-        
+
+        contador.order()
     End Sub
 
     Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click

@@ -10,5 +10,18 @@
         contadores(indice) = contadores(indice) + 1
     End Sub
 
+    Public Sub order()
+
+
+        Dim maximos As Integer() = contadores.Clone()
+        Array.Sort(maximos)
+
+        For i As Integer = 1 To 5
+
+
+
+        Next
+
+    End Sub
 
 End Class
