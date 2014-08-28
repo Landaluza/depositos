@@ -283,6 +283,7 @@ Partial Class GuiMovimientoFiltrado
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.dgvDestino)
         Me.Controls.Add(Me.dgvorigen)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiMovimientoFiltrado"
         Me.Text = "GuiMovimientoFiltrado"
         Me.panNuevoLote.ResumeLayout(False)

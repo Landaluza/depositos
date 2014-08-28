@@ -539,6 +539,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\Envasar\MovimientoEnvasar.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\fermentados\BdFermentacion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\fermentados\Fermentacion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\fermentados\GuiMovimientoFermentacion.Designer.vb">
       <DependentUpon>GuiMovimientoFermentacion.vb</DependentUpon>
@@ -848,17 +849,56 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.resx">
+      <DependentUpon>GuiMovimientoAjustesComerciales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\ajustes agua\GuiMovimientoAjustesAgua.resx">
+      <DependentUpon>GuiMovimientoAjustesAgua.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\clarificacion\GuiMovimientoClarificacion.resx">
+      <DependentUpon>GuiMovimientoClarificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\coccion controlada\GuiMovimientoCoccionControlada.resx">
+      <DependentUpon>GuiMovimientoCoccionControlada.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.resx">
       <DependentUpon>GuiMovimientoCompra.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desecho\GuiMovimientoDesecho.resx">
+      <DependentUpon>GuiMovimientoDesecho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.resx">
+      <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.resx">
+      <DependentUpon>GuiMovimientoDesembote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.resx">
+      <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\Envasar\GuiMovimientoEnvasar.resx">
+      <DependentUpon>GuiMovimientoEnvasar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\fermentados\GuiMovimientoFermentacion.resx">
+      <DependentUpon>GuiMovimientoFermentacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.resx">
       <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.resx">
+      <DependentUpon>GuiMovimientoLavado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.resx">
+      <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.resx">
       <DependentUpon>guiNiveles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiProductoIncorrecto.resx">
       <DependentUpon>guiProductoIncorrecto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\pies de cuba\GuiMovimientoPieCuba.resx">
+      <DependentUpon>GuiMovimientoPieCuba.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.resx">
       <DependentUpon>GuiMovimientoTrasiego.vb</DependentUpon>

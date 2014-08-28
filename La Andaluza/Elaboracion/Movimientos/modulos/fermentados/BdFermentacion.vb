@@ -1,4 +1,4 @@
-﻿Public Class BdClarificacion
+﻿Public Class BdFermentacion
     Inherits DataBase
 
     Private query As String

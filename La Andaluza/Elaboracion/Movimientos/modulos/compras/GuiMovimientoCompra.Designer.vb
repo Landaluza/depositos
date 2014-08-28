@@ -283,6 +283,7 @@ Partial Class GuiMovimientoCompra
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.dgvDestino)
         Me.Controls.Add(Me.dgvorigen)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiMovimientoCompra"
         Me.Text = "GuiMovimientoCompra"
         Me.panNuevoLote.ResumeLayout(False)
