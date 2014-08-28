@@ -1,4 +1,29 @@
 ﻿Public Class GuiNuevoMovimiento
+    Private contador As contadorMovimientos
+    Public Sub New()
+
+        InitializeComponent()
+        Dim rand As New Random
+
+        For Each Control As Control In Me.FlowLayoutPanel1.Controls
+            Randomize(Now.Millisecond + Now.Second)
+
+            Control.BackColor = Color.FromArgb(rand.Next(0, 256), rand.Next(0, 256), rand.Next(0, 256))
+        Next
+
+        Dim fil As New File
+
+        Try
+            Dim obj As Object = fil.loadObject(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\mov.obj")
+            If Not obj Is Nothing Then
+                contador = CType(obj, contadorMovimientos)
+            Else
+                contador = New contadorMovimientos
+            End If
+        Catch ex As Exception
+        End Try
+        
+    End Sub
 
     Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click
         Dim trasiego As New MovimientoTrasiego
@@ -84,5 +109,25 @@
     Private Sub btnPieCuba_Click(sender As Object, e As EventArgs) Handles btnPieCuba.Click
         Dim trasiego As New MovimientoPieCuba
         GUImain.añadirPestaña(trasiego.Form)
+    End Sub
+
+    Private Sub btnDEsembote_Click(sender As Object, e As EventArgs) Handles btnDEsembote.Click
+        Dim trasiego As New MovimientoDesembote
+        GUImain.añadirPestaña(trasiego.Form)
+    End Sub
+
+    Private Sub estadisticas(sender As Object, e As EventArgs) Handles btnDEsembote.Click, btnPieCuba.Click, btnMigracion.Click, btnLavado.Click, btnFermentados.Click, btnDiferencia.Click, btnDesemboteNC.Click, btnDesecho.Click, _
+        btnCoccionControlada.Click, btnClarificacion.Click, btnAjustesAgua.Click, btnAjustesComerciales.Click, btnFiltrado.Click, btnEnvasar.Click, btnVenta.Click, btnCompra.Click, btnNiveles.Click, _
+        btnTrasiego.Click
+
+        Dim index As Integer = Convert.ToInt32(CType(sender, Button).Tag)
+        contador.incrementar(index)
+
+        Try
+            Dim fil As New File
+            fil.saveObject(CType(contador, Object), My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\mov.obj")
+        Catch ex As Exception
+        End Try
+        
     End Sub
 End Class

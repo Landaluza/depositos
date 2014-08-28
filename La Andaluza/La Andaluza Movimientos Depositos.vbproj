@@ -449,6 +449,7 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\TextChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
+    <Compile Include="Elaboracion\Movimientos\contadorMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\AjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\BdAjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.Designer.vb">
