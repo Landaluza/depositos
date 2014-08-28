@@ -449,18 +449,131 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\TextChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\AjusteComercial.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\BdAjusteComercial.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.Designer.vb">
+      <DependentUpon>GuiMovimientoAjustesComerciales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\MovimientoAjusteComercial.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajustes agua\AjusteAgua.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajustes agua\BdAjusteAgua.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ajustes agua\GuiMovimientoAjustesAgua.Designer.vb">
+      <DependentUpon>GuiMovimientoAjustesAgua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ajustes agua\GuiMovimientoAjustesAgua.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ajustes agua\MovimientoAjusteAgua.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\clarificacion\BdClarificacion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\clarificacion\Clarificacion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\clarificacion\GuiMovimientoClarificacion.Designer.vb">
+      <DependentUpon>GuiMovimientoClarificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\clarificacion\GuiMovimientoClarificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\clarificacion\MovimientoClarificacion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\coccion controlada\BdCoccionControlada.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\coccion controlada\CoccionControlada.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\coccion controlada\GuiMovimientoCoccionControlada.Designer.vb">
+      <DependentUpon>GuiMovimientoCoccionControlada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\coccion controlada\GuiMovimientoCoccionControlada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\coccion controlada\MovimientoCoccionControlada.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\compras\BdCompra.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.Designer.vb">
       <DependentUpon>GuiMovimientoCompra.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\compras\GuiMovimientoCompra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\compras\Compra.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\compras\MovimientoCompra.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desecho\BdDEsecho.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desecho\Desecho.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desecho\GuiMovimientoDesecho.Designer.vb">
+      <DependentUpon>GuiMovimientoDesecho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desecho\GuiMovimientoDesecho.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desecho\MovimientoDEsecho.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\bdDEsemboteNc.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\DEsemboteNC.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\MovimientoDesemboteNC.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote\BdDEsembote.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote\Desembote.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.Designer.vb">
+      <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote\MovimientoDesembote.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\BdDiferencia.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\Diferencia.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.Designer.vb">
+      <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.Designer.vb">
+      <DependentUpon>GuiMovimientoDesembote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\MovimientoDiferencia.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\Envasar\BdEnvasar.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\Envasar\Envsar.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\Envasar\GuiMovimientoEnvasar.Designer.vb">
+      <DependentUpon>GuiMovimientoEnvasar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\Envasar\GuiMovimientoEnvasar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\Envasar\MovimientoEnvasar.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\fermentados\Fermentacion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\fermentados\GuiMovimientoFermentacion.Designer.vb">
+      <DependentUpon>GuiMovimientoFermentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\fermentados\GuiMovimientoFermentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\fermentados\MovimientoFermentacion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\BdFiltrado.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\Filtrado.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.Designer.vb">
       <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\MovimientoFiltrado.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\lavados\BdLavado.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.Designer.vb">
+      <DependentUpon>GuiMovimientoLavado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\lavados\Lavado.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\lavados\MovimientoLavado.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\BdMaceracion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.Designer.vb">
+      <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\Maceracion.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\MovimientoMaceracion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\bdNiveles.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.Designer.vb">
       <DependentUpon>guiNiveles.vb</DependentUpon>
@@ -475,6 +588,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\Niveles.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\pies de cuba\BdMovimientoPieCuba.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\pies de cuba\GuiMovimientoPieCuba.Designer.vb">
+      <DependentUpon>GuiMovimientoPieCuba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\pies de cuba\GuiMovimientoPieCuba.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\pies de cuba\MovimientoPieCuba.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\pies de cuba\PieCuba.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\BdTrasiego.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Checker.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\GuiMovimientoTrasiego.Designer.vb">
@@ -491,12 +613,15 @@
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\MovimientoTrasiego.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\trasiegos\Trasiego.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ventas\BdVenta.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.Designer.vb">
       <DependentUpon>GuiMovimientoVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\modulos\ventas\MovimientoVenta.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\ventas\Venta.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -990,19 +1115,6 @@
   <ItemGroup>
     <Folder Include="Control\Especificaciones\" />
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\ajustes agua\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\clarificacion\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\coccion controlada\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\desecho\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\desembote NC\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\desembote\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\diferencia\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\Envasar\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\fermentados\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\lavados\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\maceracion\" />
-    <Folder Include="Elaboracion\Movimientos\modulos\pies de cuba\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">
