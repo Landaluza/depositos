@@ -990,6 +990,19 @@
   <ItemGroup>
     <Folder Include="Control\Especificaciones\" />
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\ajustes agua\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\clarificacion\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\coccion controlada\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\desecho\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\desembote NC\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\desembote\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\diferencia\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\Envasar\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\fermentados\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\lavados\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\maceracion\" />
+    <Folder Include="Elaboracion\Movimientos\modulos\pies de cuba\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">
