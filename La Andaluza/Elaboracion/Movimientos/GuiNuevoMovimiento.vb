@@ -21,6 +21,7 @@
                 contador = New contadorMovimientos
             End If
         Catch ex As Exception
+            contador = New contadorMovimientos
         End Try
         
     End Sub
