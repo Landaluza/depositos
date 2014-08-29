@@ -42,7 +42,7 @@ Partial Class FrmInicio
         Me.lblPasswordIssue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPasswordIssue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPasswordIssue.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
+        Me.lblPasswordIssue.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
         Me.lblPasswordIssue.Location = New System.Drawing.Point(49, 195)
         Me.lblPasswordIssue.Name = "lblPasswordIssue"
         Me.lblPasswordIssue.Size = New System.Drawing.Size(32, 32)
@@ -55,7 +55,7 @@ Partial Class FrmInicio
         Me.LblLoginIssue.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblLoginIssue.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblLoginIssue.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
+        Me.LblLoginIssue.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
         Me.LblLoginIssue.Location = New System.Drawing.Point(52, 156)
         Me.LblLoginIssue.Name = "LblLoginIssue"
         Me.LblLoginIssue.Size = New System.Drawing.Size(29, 32)
@@ -118,7 +118,7 @@ Partial Class FrmInicio
         Me.ButtonCancelar.FlatAppearance.BorderSize = 0
         Me.ButtonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonCancelar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_387_log_out
+        Me.ButtonCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_387_log_out
         Me.ButtonCancelar.Location = New System.Drawing.Point(228, 4)
         Me.ButtonCancelar.Name = "ButtonCancelar"
         Me.ButtonCancelar.Size = New System.Drawing.Size(27, 24)
@@ -134,7 +134,7 @@ Partial Class FrmInicio
         Me.btnAceptar.FlatAppearance.BorderSize = 0
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnAceptar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnAceptar.Location = New System.Drawing.Point(88, 10)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(87, 46)
@@ -162,7 +162,7 @@ Partial Class FrmInicio
         '
         Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.LogoLA
+        Me.PictureBox1.BackgroundImage = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.LogoLA
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(26, 9)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)

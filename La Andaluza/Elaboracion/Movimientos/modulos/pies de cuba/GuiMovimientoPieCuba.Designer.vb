@@ -153,7 +153,7 @@ Partial Class GuiMovimientoPieCuba
         '
         Me.btnProductoOrigenIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnProductoOrigenIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductoOrigenIncorrecto.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
+        Me.btnProductoOrigenIncorrecto.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
         Me.btnProductoOrigenIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnProductoOrigenIncorrecto.Location = New System.Drawing.Point(3, 91)
         Me.btnProductoOrigenIncorrecto.Name = "btnProductoOrigenIncorrecto"
@@ -188,7 +188,7 @@ Partial Class GuiMovimientoPieCuba
         'btnGuardar
         '
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnGuardar.Location = New System.Drawing.Point(1017, 645)
         Me.btnGuardar.Name = "btnGuardar"

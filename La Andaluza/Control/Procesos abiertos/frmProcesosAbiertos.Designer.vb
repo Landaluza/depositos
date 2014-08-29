@@ -72,7 +72,7 @@ Partial Class frmProcesosAbiertos
         'tsCompacto
         '
         Me.tsCompacto.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsCompacto.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.emblem_documents
+        Me.tsCompacto.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.emblem_documents
         Me.tsCompacto.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsCompacto.Name = "tsCompacto"
         Me.tsCompacto.Size = New System.Drawing.Size(23, 22)

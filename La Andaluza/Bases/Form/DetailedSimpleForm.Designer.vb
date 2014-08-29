@@ -63,7 +63,7 @@ Partial Class DetailedSimpleForm
         '
         Me.butGuardar.AutoSize = False
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_446_floppy_save
         Me.butGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butGuardar.Name = "butGuardar"
         Me.butGuardar.Size = New System.Drawing.Size(32, 32)
@@ -79,7 +79,7 @@ Partial Class DetailedSimpleForm
         '
         Me.butImprimir.AutoSize = False
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_015_print
         Me.butImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butImprimir.Name = "butImprimir"
         Me.butImprimir.Size = New System.Drawing.Size(32, 32)
@@ -91,7 +91,7 @@ Partial Class DetailedSimpleForm
         '
         Me.butVer.AutoSize = False
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_027_search
         Me.butVer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butVer.Name = "butVer"
         Me.butVer.Size = New System.Drawing.Size(32, 32)
@@ -103,7 +103,7 @@ Partial Class DetailedSimpleForm
         '
         Me.butExcel.AutoSize = False
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_040_stats
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
         Me.butExcel.Size = New System.Drawing.Size(32, 32)
@@ -116,7 +116,7 @@ Partial Class DetailedSimpleForm
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.AutoSize = False
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_388_exit
         Me.butSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butSalir.Name = "butSalir"
         Me.butSalir.Size = New System.Drawing.Size(32, 32)

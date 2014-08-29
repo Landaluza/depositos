@@ -7,9 +7,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0518B3B6-EE66-4D4F-A0E3-F953E0AC2A37}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>La_Andaluza_MovimientosDepositosPruebas.My.MyApplication</StartupObject>
-    <RootNamespace>La_Andaluza_MovimientosDepositosPruebas</RootNamespace>
-    <AssemblyName>La Andaluza MovimientosDepositosPruebas</AssemblyName>
+    <StartupObject>La_Andaluza_MovimientosDepositos.My.MyApplication</StartupObject>
+    <RootNamespace>La_Andaluza_MovimientosDepositos</RootNamespace>
+    <AssemblyName>La Andaluza MovimientosDepositos</AssemblyName>
     <MyType>WindowsForms</MyType>
     <TargetZone>Custom</TargetZone>
     <GenerateManifests>true</GenerateManifests>
@@ -19,8 +19,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>user-trash.ico</ApplicationIcon>
     <ManifestCertificateThumbprint>247F7EA75E27118A015C3762DB5731458C9579A9</ManifestCertificateThumbprint>
     <ManifestKeyFile>La Andaluza Produccion_TemporaryKey.pfx</ManifestKeyFile>
     <SignManifests>false</SignManifests>
@@ -33,7 +32,7 @@
     <SccProvider>SubversionScc</SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <PublishUrl>\\192.168.1.200\datos\Informatica\pruebas\La Andaluza MovimientosDepositos\</PublishUrl>
+    <PublishUrl>\\192.168.1.200\datos\Informatica\La Andaluza MovimientosDepositos\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -44,13 +43,13 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-ES</TargetCulture>
-    <ProductName>La Andaluza Movimientos Despositos Pruebas</ProductName>
+    <ProductName>La Andaluza Movimientos Despositos</ProductName>
     <PublisherName>La Andaluza</PublisherName>
     <MinimumRequiredVersion>1.0.0.20</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>189</ApplicationRevision>
+    <ApplicationRevision>193</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

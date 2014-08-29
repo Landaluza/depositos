@@ -67,7 +67,7 @@ Partial Class frmResumenEliminarElaboracion
         '
         Me.butCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.butCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.butCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_197_remove
         Me.butCancelar.Location = New System.Drawing.Point(9, 6)
         Me.butCancelar.Margin = New System.Windows.Forms.Padding(2)
         Me.butCancelar.Name = "butCancelar"
@@ -81,7 +81,7 @@ Partial Class frmResumenEliminarElaboracion
         '
         Me.butConfirmar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.butConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.butConfirmar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.butConfirmar.Location = New System.Drawing.Point(459, 6)
         Me.butConfirmar.Margin = New System.Windows.Forms.Padding(2)
         Me.butConfirmar.Name = "butConfirmar"

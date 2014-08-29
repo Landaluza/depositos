@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ 
 Partial Class frmEntFiltros
-    Inherits La_Andaluza_MovimientosDepositosPruebas.DetailedSimpleForm
+    Inherits La_Andaluza_MovimientosDepositos.DetailedSimpleForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _

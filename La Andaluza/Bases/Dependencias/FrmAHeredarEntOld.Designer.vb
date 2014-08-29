@@ -37,7 +37,7 @@ Partial Class FrmAHeredarEntOld
         Me.butExcel = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.txtTodoCorrecto = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtTodoCorrecto = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         CType(Me.bdnGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bdnGeneral.SuspendLayout()
         CType(Me.GeneralBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +76,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.butGuardar.AutoSize = False
         Me.butGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_446_floppy_save
+        Me.butGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_446_floppy_save
         Me.butGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butGuardar.Name = "butGuardar"
         Me.butGuardar.Size = New System.Drawing.Size(32, 32)
@@ -88,7 +88,7 @@ Partial Class FrmAHeredarEntOld
         Me.butSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.butSalir.AutoSize = False
         Me.butSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_388_exit
+        Me.butSalir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_388_exit
         Me.butSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butSalir.Margin = New System.Windows.Forms.Padding(10, 1, 0, 2)
         Me.butSalir.Name = "butSalir"
@@ -100,7 +100,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.BindingNavigatorMoveLastItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_177_fast_forward
+        Me.BindingNavigatorMoveLastItem.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_177_fast_forward
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 32)
@@ -110,7 +110,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.BindingNavigatorMoveNextItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_178_step_forward
+        Me.BindingNavigatorMoveNextItem.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_178_step_forward
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 32)
@@ -136,7 +136,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.butImprimir.AutoSize = False
         Me.butImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_015_print
+        Me.butImprimir.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_015_print
         Me.butImprimir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butImprimir.Name = "butImprimir"
         Me.butImprimir.Size = New System.Drawing.Size(32, 32)
@@ -148,7 +148,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.butVer.AutoSize = False
         Me.butVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_027_search
+        Me.butVer.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_027_search
         Me.butVer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butVer.Name = "butVer"
         Me.butVer.Size = New System.Drawing.Size(32, 32)
@@ -160,7 +160,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.butExcel.AutoSize = False
         Me.butExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_040_stats
+        Me.butExcel.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_040_stats
         Me.butExcel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.butExcel.Name = "butExcel"
         Me.butExcel.Size = New System.Drawing.Size(32, 32)
@@ -172,7 +172,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.BindingNavigatorMovePreviousItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_170_step_backward
+        Me.BindingNavigatorMovePreviousItem.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_170_step_backward
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 32)
@@ -182,7 +182,7 @@ Partial Class FrmAHeredarEntOld
         '
         Me.BindingNavigatorMoveFirstItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_171_fast_backward
+        Me.BindingNavigatorMoveFirstItem.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_171_fast_backward
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 32)

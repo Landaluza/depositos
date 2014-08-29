@@ -37,7 +37,7 @@ Partial Class frmProceso
         Me.btnBorrar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnBorrar.FlatAppearance.BorderSize = 0
         Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBorrar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.btnBorrar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_197_remove
         Me.btnBorrar.Location = New System.Drawing.Point(618, 0)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 249)
@@ -49,7 +49,7 @@ Partial Class frmProceso
         Me.btnExportar.Dock = System.Windows.Forms.DockStyle.Right
         Me.btnExportar.FlatAppearance.BorderSize = 0
         Me.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExportar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnExportar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnExportar.Location = New System.Drawing.Point(693, 0)
         Me.btnExportar.Name = "btnExportar"
         Me.btnExportar.Size = New System.Drawing.Size(75, 249)
@@ -60,7 +60,7 @@ Partial Class frmProceso
         '
         Me.pbIconoOperacion.Dock = System.Windows.Forms.DockStyle.Left
         Me.pbIconoOperacion.Enabled = False
-        Me.pbIconoOperacion.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.trasiego
+        Me.pbIconoOperacion.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.trasiego
         Me.pbIconoOperacion.Location = New System.Drawing.Point(0, 0)
         Me.pbIconoOperacion.Name = "pbIconoOperacion"
         Me.pbIconoOperacion.Size = New System.Drawing.Size(94, 249)

@@ -116,7 +116,7 @@ Partial Class guiProductoIncorrecto
         Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_123_message_out
+        Me.Button1.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_123_message_out
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.Location = New System.Drawing.Point(0, 534)
         Me.Button1.Name = "Button1"
@@ -132,7 +132,7 @@ Partial Class guiProductoIncorrecto
         Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_197_remove
         Me.btnCancelar.Location = New System.Drawing.Point(695, 1)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(35, 51)

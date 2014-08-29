@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmEntMovimientosCopy
-    Inherits La_Andaluza_MovimientosDepositosPruebas.FrmAHeredarEntOld
+    Inherits La_Andaluza_MovimientosDepositos.FrmAHeredarEntOld
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -64,10 +64,10 @@ Partial Class frmEntMovimientosCopy
         Dim Label36 As System.Windows.Forms.Label
         Dim Label37 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEntMovimientosCopy))
-        Me.DtsMovimientos = New La_Andaluza_MovimientosDepositosPruebas.dtsMovimientos()
+        Me.DtsMovimientos = New La_Andaluza_MovimientosDepositos.dtsMovimientos()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
-        Me.txtCantidad = New La_Andaluza_MovimientosDepositosPruebas.CuadroTextoNumerosNegativos(Me.components)
-        Me.txtObservaciones = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtCantidad = New La_Andaluza_MovimientosDepositos.CuadroTextoNumerosNegativos(Me.components)
+        Me.txtObservaciones = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.gbPartida = New System.Windows.Forms.GroupBox()
         Me.cbFiltros = New System.Windows.Forms.ComboBox()
         Me.cboPartidaTipoProducto = New System.Windows.Forms.ComboBox()
@@ -75,15 +75,15 @@ Partial Class frmEntMovimientosCopy
         Me.chbFiltroDeshechos = New System.Windows.Forms.CheckBox()
         Me.txtPartidaObservacion = New System.Windows.Forms.TextBox()
         Me.lblFiltros = New System.Windows.Forms.Label()
-        Me.cbMedidaPartida = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtPartidaDescripcion = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtPartidaCantidadActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtPartidaLoteActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.cbMedidaPartida = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtPartidaDescripcion = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtPartidaCantidadActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtPartidaLoteActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.gbLotes = New System.Windows.Forms.GroupBox()
         Me.cboAjusteLotes = New System.Windows.Forms.ComboBox()
         Me.cboAdicionProducto = New System.Windows.Forms.ComboBox()
         Me.cbMedidaLote = New System.Windows.Forms.ComboBox()
-        Me.txtAjusteCantidadActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtAjusteCantidadActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.chbSumaEnologico = New System.Windows.Forms.CheckBox()
         Me.gbCompra = New System.Windows.Forms.GroupBox()
         Me.cbMedidacompra = New System.Windows.Forms.ComboBox()
@@ -91,8 +91,8 @@ Partial Class frmEntMovimientosCopy
         Me.cboCompraProducto = New System.Windows.Forms.ComboBox()
         Me.txtCompraObservacion = New System.Windows.Forms.TextBox()
         Me.txtCompraDescripcion = New System.Windows.Forms.TextBox()
-        Me.txtCompraLote = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtCompraCantidad = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtCompraLote = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtCompraCantidad = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.chbNuevoLote = New System.Windows.Forms.CheckBox()
         Me.gbFinal = New System.Windows.Forms.GroupBox()
         Me.cboFinalDepositoID = New System.Windows.Forms.ComboBox()
@@ -100,17 +100,17 @@ Partial Class frmEntMovimientosCopy
         Me.cboTipoLoteCompra = New System.Windows.Forms.ComboBox()
         Me.cboFinalTipoProductoFinal = New System.Windows.Forms.ComboBox()
         Me.txtFinalObservacionFinal = New System.Windows.Forms.TextBox()
-        Me.txtFinalCantidadFinal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtFinalCantidadFinal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.lblProcesoCompra = New System.Windows.Forms.Label()
-        Me.txtFinalLoteFinal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtFinalDescripcionFinal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtFinalLoteFinal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtFinalDescripcionFinal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.chbConMuestra = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cboFinalTipoProductoActual = New System.Windows.Forms.ComboBox()
         Me.txtFinalObservacionActual = New System.Windows.Forms.TextBox()
-        Me.txtFinalDescripcionActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtFinalLoteActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtFinalCantidadActual = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtFinalDescripcionActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtFinalLoteActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtFinalCantidadActual = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.gbSalidas = New System.Windows.Forms.GroupBox()
         Me.cboSalidaTransicubas = New System.Windows.Forms.ComboBox()
         Me.cboSalidaRecipiente = New System.Windows.Forms.ComboBox()
@@ -118,22 +118,22 @@ Partial Class frmEntMovimientosCopy
         Me.lblTransicubas = New System.Windows.Forms.Label()
         Me.lblSalidasRecipientes = New System.Windows.Forms.Label()
         Me.lblSalidaCantidadReal = New System.Windows.Forms.Label()
-        Me.txtSalidaCantidadReal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtSalidaCantidadReal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.txtSalidaObservacion = New System.Windows.Forms.TextBox()
         Me.chbSalidaMuestra = New System.Windows.Forms.CheckBox()
-        Me.txtSalidaCantidad = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtSalidaCodigoLote = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtSalidaDescripcion = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtSalidaCantidad = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtSalidaCodigoLote = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtSalidaDescripcion = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.gbDiferencias = New System.Windows.Forms.GroupBox()
         Me.cboDiferenciasTipoLote = New System.Windows.Forms.ComboBox()
         Me.cboDiferenciaProducto = New System.Windows.Forms.ComboBox()
         Me.txtdiferenciaObservaciones = New System.Windows.Forms.TextBox()
-        Me.txtDiferenciasDescripcionFinal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtDiferenciasDescripcion = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtDiferenciasCantidadFinal = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
-        Me.txtDiferenciasCantidad = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtDiferenciasDescripcionFinal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtDiferenciasDescripcion = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtDiferenciasCantidadFinal = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
+        Me.txtDiferenciasCantidad = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.txtDiferenciasCodigoLote = New La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto()
+        Me.txtDiferenciasCodigoLote = New La_Andaluza_MovimientosDepositos.CuadroDeTexto()
         Me.butActualizar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cboProceso = New System.Windows.Forms.ComboBox()
@@ -1753,7 +1753,7 @@ Partial Class frmEntMovimientosCopy
         '
         Me.butActualizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.butActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.butActualizar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.butActualizar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.butActualizar.Location = New System.Drawing.Point(525, 8)
         Me.butActualizar.Name = "butActualizar"
         Me.butActualizar.Size = New System.Drawing.Size(114, 49)
@@ -1888,7 +1888,7 @@ Partial Class frmEntMovimientosCopy
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents DtsMovimientos As La_Andaluza_MovimientosDepositosPruebas.dtsMovimientos
+    Private WithEvents DtsMovimientos As La_Andaluza_MovimientosDepositos.dtsMovimientos
     Private WithEvents gbDiferencias As System.Windows.Forms.GroupBox
     Private WithEvents cboPartidaTipoProducto As System.Windows.Forms.ComboBox
     Private WithEvents cbMedidacompra As System.Windows.Forms.ComboBox
@@ -1958,10 +1958,10 @@ Partial Class frmEntMovimientosCopy
     Public WithEvents cboFinalDepositoID As System.Windows.Forms.ComboBox
     Public WithEvents cboTipoLoteCompra As System.Windows.Forms.ComboBox
     Public WithEvents cboFinalTipoProductoFinal As System.Windows.Forms.ComboBox
-    Public WithEvents txtCantidad As La_Andaluza_MovimientosDepositosPruebas.CuadroTextoNumerosNegativos
+    Public WithEvents txtCantidad As La_Andaluza_MovimientosDepositos.CuadroTextoNumerosNegativos
     Public WithEvents cboCompraProveedor As System.Windows.Forms.ComboBox
     Public WithEvents cboCompraProducto As System.Windows.Forms.ComboBox
-    Public WithEvents txtCompraCantidad As La_Andaluza_MovimientosDepositosPruebas.CuadroDeTexto
+    Public WithEvents txtCompraCantidad As La_Andaluza_MovimientosDepositos.CuadroDeTexto
     Public WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
     Public WithEvents cbFiltros As System.Windows.Forms.ComboBox
     Public WithEvents cboAjusteLotes As System.Windows.Forms.ComboBox

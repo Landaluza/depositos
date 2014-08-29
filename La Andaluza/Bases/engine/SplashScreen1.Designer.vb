@@ -32,7 +32,7 @@ Partial Class SplashScreen1
         '
         'MainLayoutPanel
         '
-        Me.MainLayoutPanel.BackgroundImage = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.sp2b
+        Me.MainLayoutPanel.BackgroundImage = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.sp2b
         Me.MainLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MainLayoutPanel.ColumnCount = 3
         Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))

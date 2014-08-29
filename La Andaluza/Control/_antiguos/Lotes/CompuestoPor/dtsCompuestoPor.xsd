@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LAConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="LAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.La_Andaluza_MovimientosDepositosPruebas.My.MySettings.GlobalReference.Default.LAConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="LAConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="LAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.La_Andaluza_MovimientosDepositos.My.MySettings.GlobalReference.Default.LAConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -14,7 +14,7 @@
   <xs:element name="dtsCompuestoPor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dtsCompuestoPor" msprop:Generator_UserDSName="dtsCompuestoPor">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CompuestoPor" msprop:Generator_TableClassName="CompuestoPorDataTable" msprop:Generator_RowEvArgName="CompuestoPorRowChangeEvent" msprop:Generator_TableVarName="tableCompuestoPor" msprop:Generator_TablePropName="CompuestoPor" msprop:Generator_RowDeletingName="CompuestoPorRowDeleting" msprop:Generator_RowChangingName="CompuestoPorRowChanging" msprop:Generator_RowDeletedName="CompuestoPorRowDeleted" msprop:Generator_RowEvHandlerName="CompuestoPorRowChangeEventHandler" msprop:Generator_UserTableName="CompuestoPor" msprop:Generator_RowChangedName="CompuestoPorRowChanged" msprop:Generator_RowClassName="CompuestoPorRow">
+        <xs:element name="CompuestoPor" msprop:Generator_TableClassName="CompuestoPorDataTable" msprop:Generator_RowEvArgName="CompuestoPorRowChangeEvent" msprop:Generator_TableVarName="tableCompuestoPor" msprop:Generator_TablePropName="CompuestoPor" msprop:Generator_RowDeletingName="CompuestoPorRowDeleting" msprop:Generator_RowChangingName="CompuestoPorRowChanging" msprop:Generator_RowDeletedName="CompuestoPorRowDeleted" msprop:Generator_RowEvHandlerName="CompuestoPorRowChangeEventHandler" msprop:Generator_RowChangedName="CompuestoPorRowChanged" msprop:Generator_UserTableName="CompuestoPor" msprop:Generator_RowClassName="CompuestoPorRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LoteFinal" msdata:Caption="LoteA" msprop:Generator_ColumnVarNameInTable="columnLoteFinal" msprop:Generator_ColumnPropNameInRow="LoteFinal" msprop:Generator_ColumnPropNameInTable="LoteFinalColumn" msprop:Generator_UserColumnName="LoteFinal" type="xs:int" />

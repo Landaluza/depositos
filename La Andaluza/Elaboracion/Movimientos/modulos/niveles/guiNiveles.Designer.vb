@@ -79,7 +79,7 @@ Partial Class guiNiveles
         Me.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_197_remove
+        Me.btnCancelar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_197_remove
         Me.btnCancelar.Location = New System.Drawing.Point(638, -2)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(35, 51)
@@ -279,7 +279,7 @@ Partial Class guiNiveles
         Me.btnContinuar.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnContinuar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnContinuar.Image = Global.La_Andaluza_MovimientosDepositosPruebas.My.Resources.Resources.glyphicons_198_ok
+        Me.btnContinuar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnContinuar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnContinuar.Location = New System.Drawing.Point(0, 470)
         Me.btnContinuar.Name = "btnContinuar"

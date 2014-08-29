@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmMovimientos
-    Inherits La_Andaluza_MovimientosDepositosPruebas.FrmAheredarOld
+    Inherits La_Andaluza_MovimientosDepositos.FrmAheredarOld
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
     <System.Diagnostics.DebuggerNonUserCode()> _
