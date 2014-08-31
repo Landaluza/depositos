@@ -233,7 +233,6 @@ Partial Class GUImain
         '
         'NuevoMovimientoToolStripMenuItem
         '
-        Me.NuevoMovimientoToolStripMenuItem.Enabled = False
         Me.NuevoMovimientoToolStripMenuItem.Name = "NuevoMovimientoToolStripMenuItem"
         Me.NuevoMovimientoToolStripMenuItem.Size = New System.Drawing.Size(122, 21)
         Me.NuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento"

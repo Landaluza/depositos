@@ -32,20 +32,18 @@ Partial Class GuiMovimientoMAceracion
         Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
         Me.lDescripcionDestino = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
-        Me.btnCantidadOrigenIncorrecta = New System.Windows.Forms.Button()
         Me.lDescripcionOrigen = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.rbNuevoLote = New System.Windows.Forms.RadioButton()
         Me.rbLoteDEstino = New System.Windows.Forms.RadioButton()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
-        Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.dgvorigen = New System.Windows.Forms.DataGridView()
+        Me.dgvDeposito = New System.Windows.Forms.DataGridView()
+        Me.dgvLote = New System.Windows.Forms.DataGridView()
         Me.panNuevoLote.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDeposito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLote, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chbSuma
@@ -139,8 +137,6 @@ Partial Class GuiMovimientoMAceracion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnProductoOrigenIncorrecto)
-        Me.GroupBox1.Controls.Add(Me.btnCantidadOrigenIncorrecta)
         Me.GroupBox1.Controls.Add(Me.lDescripcionOrigen)
         Me.GroupBox1.Location = New System.Drawing.Point(94, 307)
         Me.GroupBox1.Name = "GroupBox1"
@@ -148,32 +144,6 @@ Partial Class GuiMovimientoMAceracion
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalles"
-        '
-        'btnProductoOrigenIncorrecto
-        '
-        Me.btnProductoOrigenIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnProductoOrigenIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductoOrigenIncorrecto.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
-        Me.btnProductoOrigenIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProductoOrigenIncorrecto.Location = New System.Drawing.Point(3, 91)
-        Me.btnProductoOrigenIncorrecto.Name = "btnProductoOrigenIncorrecto"
-        Me.btnProductoOrigenIncorrecto.Size = New System.Drawing.Size(572, 37)
-        Me.btnProductoOrigenIncorrecto.TabIndex = 2
-        Me.btnProductoOrigenIncorrecto.Text = "Producto incorrecto"
-        Me.btnProductoOrigenIncorrecto.UseVisualStyleBackColor = True
-        '
-        'btnCantidadOrigenIncorrecta
-        '
-        Me.btnCantidadOrigenIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCantidadOrigenIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCantidadOrigenIncorrecta.Image = CType(resources.GetObject("btnCantidadOrigenIncorrecta.Image"), System.Drawing.Image)
-        Me.btnCantidadOrigenIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCantidadOrigenIncorrecta.Location = New System.Drawing.Point(3, 128)
-        Me.btnCantidadOrigenIncorrecta.Name = "btnCantidadOrigenIncorrecta"
-        Me.btnCantidadOrigenIncorrecta.Size = New System.Drawing.Size(572, 34)
-        Me.btnCantidadOrigenIncorrecta.TabIndex = 1
-        Me.btnCantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
-        Me.btnCantidadOrigenIncorrecta.UseVisualStyleBackColor = True
         '
         'lDescripcionOrigen
         '
@@ -236,37 +206,37 @@ Partial Class GuiMovimientoMAceracion
         Me.txtCantidad.Text = "30000000"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'dgvDestino
+        'dgvDeposito
         '
-        Me.dgvDestino.AllowUserToAddRows = False
-        Me.dgvDestino.AllowUserToDeleteRows = False
-        Me.dgvDestino.AllowUserToResizeRows = False
-        Me.dgvDestino.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvDestino.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDestino.Location = New System.Drawing.Point(678, 50)
-        Me.dgvDestino.Name = "dgvDestino"
-        Me.dgvDestino.ReadOnly = True
-        Me.dgvDestino.RowHeadersVisible = False
-        Me.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
-        Me.dgvDestino.TabIndex = 15
+        Me.dgvDeposito.AllowUserToAddRows = False
+        Me.dgvDeposito.AllowUserToDeleteRows = False
+        Me.dgvDeposito.AllowUserToResizeRows = False
+        Me.dgvDeposito.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvDeposito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvDeposito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDeposito.Location = New System.Drawing.Point(678, 50)
+        Me.dgvDeposito.Name = "dgvDeposito"
+        Me.dgvDeposito.ReadOnly = True
+        Me.dgvDeposito.RowHeadersVisible = False
+        Me.dgvDeposito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDeposito.Size = New System.Drawing.Size(571, 239)
+        Me.dgvDeposito.TabIndex = 15
         '
-        'dgvorigen
+        'dgvLote
         '
-        Me.dgvorigen.AllowUserToAddRows = False
-        Me.dgvorigen.AllowUserToDeleteRows = False
-        Me.dgvorigen.AllowUserToResizeRows = False
-        Me.dgvorigen.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvorigen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvorigen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvorigen.Location = New System.Drawing.Point(94, 50)
-        Me.dgvorigen.Name = "dgvorigen"
-        Me.dgvorigen.ReadOnly = True
-        Me.dgvorigen.RowHeadersVisible = False
-        Me.dgvorigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvorigen.Size = New System.Drawing.Size(578, 239)
-        Me.dgvorigen.TabIndex = 11
+        Me.dgvLote.AllowUserToAddRows = False
+        Me.dgvLote.AllowUserToDeleteRows = False
+        Me.dgvLote.AllowUserToResizeRows = False
+        Me.dgvLote.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvLote.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLote.Location = New System.Drawing.Point(94, 50)
+        Me.dgvLote.Name = "dgvLote"
+        Me.dgvLote.ReadOnly = True
+        Me.dgvLote.RowHeadersVisible = False
+        Me.dgvLote.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvLote.Size = New System.Drawing.Size(578, 239)
+        Me.dgvLote.TabIndex = 11
         '
         'GuiMovimientoMAceracion
         '
@@ -281,15 +251,15 @@ Partial Class GuiMovimientoMAceracion
         Me.Controls.Add(Me.rbNuevoLote)
         Me.Controls.Add(Me.rbLoteDEstino)
         Me.Controls.Add(Me.txtCantidad)
-        Me.Controls.Add(Me.dgvDestino)
-        Me.Controls.Add(Me.dgvorigen)
+        Me.Controls.Add(Me.dgvDeposito)
+        Me.Controls.Add(Me.dgvLote)
         Me.Name = "GuiMovimientoMAceracion"
         Me.Text = "GuiMovimientoMAceracion"
         Me.panNuevoLote.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDeposito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLote, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -303,13 +273,11 @@ Partial Class GuiMovimientoMAceracion
     Public WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
     Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
     Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Public WithEvents btnProductoOrigenIncorrecto As System.Windows.Forms.Button
-    Public WithEvents btnCantidadOrigenIncorrecta As System.Windows.Forms.Button
     Friend WithEvents lDescripcionOrigen As System.Windows.Forms.Label
     Public WithEvents btnGuardar As System.Windows.Forms.Button
     Public WithEvents rbNuevoLote As System.Windows.Forms.RadioButton
     Public WithEvents rbLoteDEstino As System.Windows.Forms.RadioButton
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
-    Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
-    Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
+    Public WithEvents dgvDeposito As System.Windows.Forms.DataGridView
+    Public WithEvents dgvLote As System.Windows.Forms.DataGridView
 End Class

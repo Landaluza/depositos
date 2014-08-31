@@ -1,14 +1,11 @@
 ﻿Public Class GuiNuevoMovimiento
     Private contador As contadorMovimientos
+    Private fil As New File
     Public Sub New()
 
         InitializeComponent()
         Dim rand As New Random
 
-        
-
-        Dim fil As New File
-        ' contador = New contadorMovimientos
         Try
             Dim obj As Object = fil.loadObject(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\mov.obj")
             If Not obj Is Nothing Then
@@ -140,7 +137,6 @@
         contador.incrementar(index - 1)
 
         Try
-            Dim fil As New File
             fil.saveObject(CType(contador, Object), My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\mov.obj")
         Catch ex As Exception
         End Try

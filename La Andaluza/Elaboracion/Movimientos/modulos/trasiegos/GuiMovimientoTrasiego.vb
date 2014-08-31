@@ -81,7 +81,7 @@
                 destino.producto = producto
                 destino.tipo = lote
             Else
-                destino.codigo_lote = dgvDestino.CurrentRow.Cells("CodigoLote").Value
+                destino.codigo_lote = If(Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value), "", dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString)
             End If
 
             destino.deposito = dgvDestino.CurrentRow.Cells("depositoID").Value

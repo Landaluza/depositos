@@ -23,10 +23,7 @@ Partial Class GuiMovimientoCoccionControlada
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GuiMovimientoCoccionControlada))
-        Me.chbSuma = New System.Windows.Forms.CheckBox()
-        Me.panNuevoLote = New System.Windows.Forms.Panel()
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
-        Me.cboTipoLote = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
         Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
@@ -36,58 +33,23 @@ Partial Class GuiMovimientoCoccionControlada
         Me.btnCantidadOrigenIncorrecta = New System.Windows.Forms.Button()
         Me.lDescripcionOrigen = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.rbNuevoLote = New System.Windows.Forms.RadioButton()
-        Me.rbLoteDEstino = New System.Windows.Forms.RadioButton()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.dgvorigen = New System.Windows.Forms.DataGridView()
-        Me.panNuevoLote.SuspendLayout()
+        Me.dgvLote = New System.Windows.Forms.DataGridView()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLote, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'chbSuma
-        '
-        Me.chbSuma.AutoSize = True
-        Me.chbSuma.Checked = True
-        Me.chbSuma.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chbSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbSuma.Location = New System.Drawing.Point(201, 701)
-        Me.chbSuma.Name = "chbSuma"
-        Me.chbSuma.Size = New System.Drawing.Size(50, 17)
-        Me.chbSuma.TabIndex = 19
-        Me.chbSuma.Text = "Suma"
-        Me.chbSuma.UseVisualStyleBackColor = True
-        '
-        'panNuevoLote
-        '
-        Me.panNuevoLote.Controls.Add(Me.cboTipoProducto)
-        Me.panNuevoLote.Controls.Add(Me.cboTipoLote)
-        Me.panNuevoLote.Location = New System.Drawing.Point(302, 643)
-        Me.panNuevoLote.Name = "panNuevoLote"
-        Me.panNuevoLote.Size = New System.Drawing.Size(342, 69)
-        Me.panNuevoLote.TabIndex = 20
-        Me.panNuevoLote.Visible = False
         '
         'cboTipoProducto
         '
         Me.cboTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(24, 11)
+        Me.cboTipoProducto.Location = New System.Drawing.Point(512, 572)
         Me.cboTipoProducto.Name = "cboTipoProducto"
         Me.cboTipoProducto.Size = New System.Drawing.Size(287, 21)
         Me.cboTipoProducto.TabIndex = 8
-        '
-        'cboTipoLote
-        '
-        Me.cboTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboTipoLote.FormattingEnabled = True
-        Me.cboTipoLote.Location = New System.Drawing.Point(24, 38)
-        Me.cboTipoLote.Name = "cboTipoLote"
-        Me.cboTipoLote.Size = New System.Drawing.Size(287, 21)
-        Me.cboTipoLote.TabIndex = 9
         '
         'GroupBox2
         '
@@ -198,32 +160,6 @@ Partial Class GuiMovimientoCoccionControlada
         Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'rbNuevoLote
-        '
-        Me.rbNuevoLote.AutoSize = True
-        Me.rbNuevoLote.FlatAppearance.BorderSize = 0
-        Me.rbNuevoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rbNuevoLote.Location = New System.Drawing.Point(99, 655)
-        Me.rbNuevoLote.Name = "rbNuevoLote"
-        Me.rbNuevoLote.Size = New System.Drawing.Size(117, 17)
-        Me.rbNuevoLote.TabIndex = 14
-        Me.rbNuevoLote.Text = "Crear un nuevo lote"
-        Me.rbNuevoLote.UseVisualStyleBackColor = True
-        '
-        'rbLoteDEstino
-        '
-        Me.rbLoteDEstino.AutoSize = True
-        Me.rbLoteDEstino.Checked = True
-        Me.rbLoteDEstino.FlatAppearance.BorderSize = 0
-        Me.rbLoteDEstino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rbLoteDEstino.Location = New System.Drawing.Point(99, 678)
-        Me.rbLoteDEstino.Name = "rbLoteDEstino"
-        Me.rbLoteDEstino.Size = New System.Drawing.Size(152, 17)
-        Me.rbLoteDEstino.TabIndex = 13
-        Me.rbLoteDEstino.TabStop = True
-        Me.rbLoteDEstino.Text = "Mantener el lote de destino"
-        Me.rbLoteDEstino.UseVisualStyleBackColor = True
-        '
         'txtCantidad
         '
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -252,53 +188,46 @@ Partial Class GuiMovimientoCoccionControlada
         Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
         Me.dgvDestino.TabIndex = 15
         '
-        'dgvorigen
+        'dgvLote
         '
-        Me.dgvorigen.AllowUserToAddRows = False
-        Me.dgvorigen.AllowUserToDeleteRows = False
-        Me.dgvorigen.AllowUserToResizeRows = False
-        Me.dgvorigen.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvorigen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvorigen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvorigen.Location = New System.Drawing.Point(96, 66)
-        Me.dgvorigen.Name = "dgvorigen"
-        Me.dgvorigen.ReadOnly = True
-        Me.dgvorigen.RowHeadersVisible = False
-        Me.dgvorigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvorigen.Size = New System.Drawing.Size(578, 239)
-        Me.dgvorigen.TabIndex = 11
+        Me.dgvLote.AllowUserToAddRows = False
+        Me.dgvLote.AllowUserToDeleteRows = False
+        Me.dgvLote.AllowUserToResizeRows = False
+        Me.dgvLote.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvLote.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLote.Location = New System.Drawing.Point(96, 66)
+        Me.dgvLote.Name = "dgvLote"
+        Me.dgvLote.ReadOnly = True
+        Me.dgvLote.RowHeadersVisible = False
+        Me.dgvLote.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvLote.Size = New System.Drawing.Size(578, 239)
+        Me.dgvLote.TabIndex = 11
         '
         'GuiMovimientoCoccionControlada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1346, 785)
-        Me.Controls.Add(Me.chbSuma)
-        Me.Controls.Add(Me.panNuevoLote)
+        Me.Controls.Add(Me.cboTipoProducto)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.rbNuevoLote)
-        Me.Controls.Add(Me.rbLoteDEstino)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.dgvDestino)
-        Me.Controls.Add(Me.dgvorigen)
+        Me.Controls.Add(Me.dgvLote)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiMovimientoCoccionControlada"
         Me.Text = "GuiCoccionControlada"
-        Me.panNuevoLote.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLote, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Public WithEvents chbSuma As System.Windows.Forms.CheckBox
-    Friend WithEvents panNuevoLote As System.Windows.Forms.Panel
     Public WithEvents cboTipoProducto As System.Windows.Forms.ComboBox
-    Public WithEvents cboTipoLote As System.Windows.Forms.ComboBox
     Public WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Public WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
     Public WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
@@ -308,9 +237,7 @@ Partial Class GuiMovimientoCoccionControlada
     Public WithEvents btnCantidadOrigenIncorrecta As System.Windows.Forms.Button
     Friend WithEvents lDescripcionOrigen As System.Windows.Forms.Label
     Public WithEvents btnGuardar As System.Windows.Forms.Button
-    Public WithEvents rbNuevoLote As System.Windows.Forms.RadioButton
-    Public WithEvents rbLoteDEstino As System.Windows.Forms.RadioButton
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
     Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
-    Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
+    Public WithEvents dgvLote As System.Windows.Forms.DataGridView
 End Class

@@ -34,13 +34,13 @@ Partial Class GuiNuevoMovimiento
         Me.btnClarificacion = New System.Windows.Forms.Button()
         Me.btnCoccionControlada = New System.Windows.Forms.Button()
         Me.btnDesecho = New System.Windows.Forms.Button()
-        Me.btnDesemboteNC = New System.Windows.Forms.Button()
         Me.btnDiferencia = New System.Windows.Forms.Button()
         Me.btnFermentados = New System.Windows.Forms.Button()
         Me.btnFiltrados = New System.Windows.Forms.Button()
         Me.btnLavado = New System.Windows.Forms.Button()
         Me.btnMigracion = New System.Windows.Forms.Button()
         Me.btnPieCuba = New System.Windows.Forms.Button()
+        Me.btnDesemboteNC = New System.Windows.Forms.Button()
         Me.btnDEsembote = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,7 +53,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnTrasiego.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnTrasiego.Location = New System.Drawing.Point(3, 3)
         Me.btnTrasiego.Name = "btnTrasiego"
-        Me.btnTrasiego.Size = New System.Drawing.Size(306, 150)
+        Me.btnTrasiego.Size = New System.Drawing.Size(150, 150)
         Me.btnTrasiego.TabIndex = 0
         Me.btnTrasiego.Tag = "1"
         Me.btnTrasiego.Text = "Trasiego"
@@ -66,7 +66,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCompra.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.compra
         Me.btnCompra.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnCompra.Location = New System.Drawing.Point(315, 3)
+        Me.btnCompra.Location = New System.Drawing.Point(159, 3)
         Me.btnCompra.Name = "btnCompra"
         Me.btnCompra.Size = New System.Drawing.Size(150, 150)
         Me.btnCompra.TabIndex = 1
@@ -81,7 +81,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVenta.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.venta
         Me.btnVenta.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVenta.Location = New System.Drawing.Point(471, 3)
+        Me.btnVenta.Location = New System.Drawing.Point(315, 3)
         Me.btnVenta.Name = "btnVenta"
         Me.btnVenta.Size = New System.Drawing.Size(150, 150)
         Me.btnVenta.TabIndex = 2
@@ -96,7 +96,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnFiltrado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFiltrado.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.filtrado
         Me.btnFiltrado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnFiltrado.Location = New System.Drawing.Point(939, 3)
+        Me.btnFiltrado.Location = New System.Drawing.Point(627, 3)
         Me.btnFiltrado.Name = "btnFiltrado"
         Me.btnFiltrado.Size = New System.Drawing.Size(150, 150)
         Me.btnFiltrado.TabIndex = 3
@@ -111,7 +111,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnNiveles.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNiveles.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_040_stats
         Me.btnNiveles.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnNiveles.Location = New System.Drawing.Point(3, 159)
+        Me.btnNiveles.Location = New System.Drawing.Point(783, 3)
         Me.btnNiveles.Name = "btnNiveles"
         Me.btnNiveles.Size = New System.Drawing.Size(150, 150)
         Me.btnNiveles.TabIndex = 4
@@ -155,9 +155,9 @@ Partial Class GuiNuevoMovimiento
         Me.btnEnvasar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnvasar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.envasado
         Me.btnEnvasar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnEnvasar.Location = New System.Drawing.Point(627, 3)
+        Me.btnEnvasar.Location = New System.Drawing.Point(471, 3)
         Me.btnEnvasar.Name = "btnEnvasar"
-        Me.btnEnvasar.Size = New System.Drawing.Size(306, 150)
+        Me.btnEnvasar.Size = New System.Drawing.Size(150, 150)
         Me.btnEnvasar.TabIndex = 15
         Me.btnEnvasar.Tag = "4"
         Me.btnEnvasar.Text = "Envasar"
@@ -170,7 +170,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnAjustesComerciales.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAjustesComerciales.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.ajustecomercial
         Me.btnAjustesComerciales.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAjustesComerciales.Location = New System.Drawing.Point(159, 159)
+        Me.btnAjustesComerciales.Location = New System.Drawing.Point(939, 3)
         Me.btnAjustesComerciales.Name = "btnAjustesComerciales"
         Me.btnAjustesComerciales.Size = New System.Drawing.Size(150, 150)
         Me.btnAjustesComerciales.TabIndex = 5
@@ -185,7 +185,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnAjustesAgua.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAjustesAgua.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.ajusteagua
         Me.btnAjustesAgua.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnAjustesAgua.Location = New System.Drawing.Point(315, 159)
+        Me.btnAjustesAgua.Location = New System.Drawing.Point(3, 159)
         Me.btnAjustesAgua.Name = "btnAjustesAgua"
         Me.btnAjustesAgua.Size = New System.Drawing.Size(150, 150)
         Me.btnAjustesAgua.TabIndex = 6
@@ -200,7 +200,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnClarificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClarificacion.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.clarificacion
         Me.btnClarificacion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnClarificacion.Location = New System.Drawing.Point(471, 159)
+        Me.btnClarificacion.Location = New System.Drawing.Point(159, 159)
         Me.btnClarificacion.Name = "btnClarificacion"
         Me.btnClarificacion.Size = New System.Drawing.Size(150, 150)
         Me.btnClarificacion.TabIndex = 7
@@ -215,7 +215,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnCoccionControlada.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCoccionControlada.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.coccion
         Me.btnCoccionControlada.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnCoccionControlada.Location = New System.Drawing.Point(627, 159)
+        Me.btnCoccionControlada.Location = New System.Drawing.Point(315, 159)
         Me.btnCoccionControlada.Name = "btnCoccionControlada"
         Me.btnCoccionControlada.Size = New System.Drawing.Size(150, 150)
         Me.btnCoccionControlada.TabIndex = 8
@@ -230,7 +230,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnDesecho.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesecho.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desecho
         Me.btnDesecho.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDesecho.Location = New System.Drawing.Point(783, 159)
+        Me.btnDesecho.Location = New System.Drawing.Point(471, 159)
         Me.btnDesecho.Name = "btnDesecho"
         Me.btnDesecho.Size = New System.Drawing.Size(150, 150)
         Me.btnDesecho.TabIndex = 11
@@ -239,28 +239,13 @@ Partial Class GuiNuevoMovimiento
         Me.btnDesecho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnDesecho.UseVisualStyleBackColor = True
         '
-        'btnDesemboteNC
-        '
-        Me.btnDesemboteNC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDesemboteNC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDesemboteNC.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desembotenc
-        Me.btnDesemboteNC.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDesemboteNC.Location = New System.Drawing.Point(783, 315)
-        Me.btnDesemboteNC.Name = "btnDesemboteNC"
-        Me.btnDesemboteNC.Size = New System.Drawing.Size(150, 150)
-        Me.btnDesemboteNC.TabIndex = 12
-        Me.btnDesemboteNC.Tag = "18"
-        Me.btnDesemboteNC.Text = "Desembote NC"
-        Me.btnDesemboteNC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnDesemboteNC.UseVisualStyleBackColor = True
-        '
         'btnDiferencia
         '
         Me.btnDiferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDiferencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDiferencia.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.diferencia
         Me.btnDiferencia.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDiferencia.Location = New System.Drawing.Point(939, 159)
+        Me.btnDiferencia.Location = New System.Drawing.Point(627, 159)
         Me.btnDiferencia.Name = "btnDiferencia"
         Me.btnDiferencia.Size = New System.Drawing.Size(150, 150)
         Me.btnDiferencia.TabIndex = 13
@@ -275,7 +260,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnFermentados.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFermentados.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.fermentacion
         Me.btnFermentados.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnFermentados.Location = New System.Drawing.Point(3, 315)
+        Me.btnFermentados.Location = New System.Drawing.Point(783, 159)
         Me.btnFermentados.Name = "btnFermentados"
         Me.btnFermentados.Size = New System.Drawing.Size(150, 150)
         Me.btnFermentados.TabIndex = 16
@@ -290,7 +275,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnFiltrados.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFiltrados.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.filtrado
         Me.btnFiltrados.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnFiltrados.Location = New System.Drawing.Point(159, 315)
+        Me.btnFiltrados.Location = New System.Drawing.Point(939, 159)
         Me.btnFiltrados.Name = "btnFiltrados"
         Me.btnFiltrados.Size = New System.Drawing.Size(150, 150)
         Me.btnFiltrados.TabIndex = 17
@@ -305,7 +290,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnLavado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLavado.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.lavado
         Me.btnLavado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnLavado.Location = New System.Drawing.Point(315, 315)
+        Me.btnLavado.Location = New System.Drawing.Point(3, 315)
         Me.btnLavado.Name = "btnLavado"
         Me.btnLavado.Size = New System.Drawing.Size(150, 150)
         Me.btnLavado.TabIndex = 18
@@ -320,7 +305,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnMigracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMigracion.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.maceracion
         Me.btnMigracion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnMigracion.Location = New System.Drawing.Point(471, 315)
+        Me.btnMigracion.Location = New System.Drawing.Point(159, 315)
         Me.btnMigracion.Name = "btnMigracion"
         Me.btnMigracion.Size = New System.Drawing.Size(150, 150)
         Me.btnMigracion.TabIndex = 19
@@ -335,7 +320,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnPieCuba.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPieCuba.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.piebota
         Me.btnPieCuba.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPieCuba.Location = New System.Drawing.Point(627, 315)
+        Me.btnPieCuba.Location = New System.Drawing.Point(315, 315)
         Me.btnPieCuba.Name = "btnPieCuba"
         Me.btnPieCuba.Size = New System.Drawing.Size(150, 150)
         Me.btnPieCuba.TabIndex = 21
@@ -344,13 +329,28 @@ Partial Class GuiNuevoMovimiento
         Me.btnPieCuba.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnPieCuba.UseVisualStyleBackColor = True
         '
+        'btnDesemboteNC
+        '
+        Me.btnDesemboteNC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDesemboteNC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDesemboteNC.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desembotenc
+        Me.btnDesemboteNC.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnDesemboteNC.Location = New System.Drawing.Point(471, 315)
+        Me.btnDesemboteNC.Name = "btnDesemboteNC"
+        Me.btnDesemboteNC.Size = New System.Drawing.Size(150, 150)
+        Me.btnDesemboteNC.TabIndex = 12
+        Me.btnDesemboteNC.Tag = "18"
+        Me.btnDesemboteNC.Text = "Desembote NC"
+        Me.btnDesemboteNC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnDesemboteNC.UseVisualStyleBackColor = True
+        '
         'btnDEsembote
         '
         Me.btnDEsembote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDEsembote.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDEsembote.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desembote
         Me.btnDEsembote.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDEsembote.Location = New System.Drawing.Point(939, 315)
+        Me.btnDEsembote.Location = New System.Drawing.Point(627, 315)
         Me.btnDEsembote.Name = "btnDEsembote"
         Me.btnDEsembote.Size = New System.Drawing.Size(150, 150)
         Me.btnDEsembote.TabIndex = 22

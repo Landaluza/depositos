@@ -92,6 +92,36 @@
             Return
         End If
 
+        bdTrasiego.EmpezarTransaccion()
 
+        Try
+
+            If trasiego.loteFinal.codigo_lote = "" Then 'deposito vacio
+                'If Not bdTrasiego.crear_lote(trasiego.lotePartida.codigo_lote, ) Then
+
+                'End If
+
+                If Not bdTrasiego.guardar_movimiento(trasiego.lotePartida.deposito, trasiego.loteFinal.deposito, trasiego.cantidad) Then
+                    bdTrasiego.CancelarTransaccion()
+                    MessageBox.Show("1", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+
+                If Not bdTrasiego.guardar_trazabilidad(trasiego.lotePartida.codigo_lote, trasiego.lotePartida.codigo_lote, trasiego.cantidad) Then
+                    bdTrasiego.CancelarTransaccion()
+                    MessageBox.Show("2", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+
+            End If
+
+            bdTrasiego.TerminarTransaccion()
+            MessageBox.Show("3", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        Catch ex As Exception
+            bdTrasiego.CancelarTransaccion()
+            MessageBox.Show("4", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End Try
     End Sub
 End Class
