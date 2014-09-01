@@ -50,4 +50,22 @@
             Return Nothing
         End Get
     End Property
+
+    Private Sub actualiza_descripcion(sender As Object, e As EventArgs)
+        If dgvDestino.CurrentRow Is Nothing Then
+            Return
+        End If
+
+        Me.lDescripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboProductoEntrada.Text & _
+            " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & ". El producto se recepciono de " & cboProveedor.Text & "." & Environment.NewLine
+    End Sub
+
+    Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        AddHandler dgvDestino.SelectionChanged, AddressOf actualiza_descripcion
+        AddHandler cboProductoEntrada.SelectedValueChanged, AddressOf actualiza_descripcion
+        AddHandler cboProveedor.SelectedValueChanged, AddressOf actualiza_descripcion
+        AddHandler cboTipoLote.SelectedValueChanged, AddressOf actualiza_descripcion
+        AddHandler cboTipoProducto.SelectedValueChanged, AddressOf actualiza_descripcion
+        AddHandler txtCantidad.TextChanged, AddressOf actualiza_descripcion
+    End Sub
 End Class
