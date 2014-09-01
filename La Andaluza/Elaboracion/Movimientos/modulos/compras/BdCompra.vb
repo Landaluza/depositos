@@ -146,6 +146,15 @@
     End Function
 
     ''*****************************************************************************************
+    ''                         funciones de proveedores
+    ''*****************************************************************************************  
+    Public Function listar_proveedores() As DataTable
+        query = "select ProveedorID, nombre from proveedores order by nombre"
+        PrepararConsulta(query)
+        Return Consultar()
+    End Function
+
+    ''*****************************************************************************************
     ''                         funciones de productos
     ''*****************************************************************************************        
     Public Function seleccionar_detalles_producto(ByVal id As Integer) As DataTable
@@ -159,7 +168,7 @@
         query = "select TipoProductoID, Descripcion, Abreviatura from TiposProductos order by descripcion"
         PrepararConsulta(query)
 
-        Return consultar
+        Return Consultar()
     End Function
     ''*****************************************************************************************
     ''                         funciones de tiposLotes
@@ -174,7 +183,7 @@
     Public Function listar_tlotes() As DataTable
         query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes order by descripcion"
         PrepararConsulta(query)
-        Return consultar
+        Return Consultar()
     End Function
     ''*****************************************************************************************
     ''                         funciones de depositos
@@ -210,7 +219,7 @@
 
         PrepararConsulta(query)
 
-        Return consultar
+        Return Consultar()
     End Function
 
     Public Function listar_depositos_excepto(ByVal id As Integer) As DataTable
