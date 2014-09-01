@@ -1,7 +1,10 @@
-﻿Public Class Compra
+﻿Namespace compras
+
+Public Class Compra
     Public lotePartida As Lote
     Public loteFinal As Lote
     Public cantidad As Double
+        Public proveedorCompra As Integer
 
     Public Function validar() As String
         Dim ch As New DecimalChecker
@@ -51,4 +54,9 @@
             Return ""
         End Function
     End Class
-End Class
+
+
+    End Class
+
+End Namespace
+

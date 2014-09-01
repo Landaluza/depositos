@@ -45,9 +45,21 @@
         End Set
     End Property
 
-    Public ReadOnly Property valores As Compra
+    Public ReadOnly Property valores As compras.Compra
         Get
-            Return Nothing
+            Dim compra As New compras.Compra
+            Dim origen As New compras.Compra.Lote
+            Dim destino As New compras.Compra.Lote
+
+
+            compra.cantidad = txtCantidad.Text
+            origen.producto = cboTipoProducto.SelectedValue
+            compra.proveedorCompra = cboProveedor.SelectedValue
+
+
+            compra.lotePartida = origen
+            compra.loteFinal = destino
+            Return compra
         End Get
     End Property
 

@@ -59,7 +59,7 @@
     End Sub
 
     Private Sub guardar()
-        Dim compra As Compra = gui.valores
+        Dim compra As compras.Compra = gui.valores
 
         Dim errores As String = Compra.validar
         If errores <> String.Empty Then

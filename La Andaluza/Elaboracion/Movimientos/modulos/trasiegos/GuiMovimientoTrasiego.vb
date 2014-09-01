@@ -96,8 +96,4 @@
     End Property
 
 
-
-    Private Sub txtCantidad_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCantidad.KeyUp
-
-    End Sub
 End Class
