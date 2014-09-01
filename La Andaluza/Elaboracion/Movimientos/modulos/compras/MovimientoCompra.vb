@@ -1,9 +1,10 @@
 ﻿Public Class MovimientoCompra
-    Private gui As GuiMovimientoTrasiego
-    Private bdTrasiego As bdTrasiego
+    Private gui As GuiMovimientoCompra
+    Private bdCompra As BdCompra
     Private listadoDepositos As DataTable
     Private listadoProductos As DataTable
     Private listadoLotes As DataTable
+    Private listadoProveedores As DataTable
 
     Private hiloDatos As System.Threading.Thread
     Private hiloDatosDestino As System.Threading.Thread
@@ -19,8 +20,8 @@
     End Property
 
     Public Sub New()
-        gui = New GuiMovimientoTrasiego
-        bdTrasiego = New bdTrasiego
+        gui = New GuiMovimientoCompra
+        bdCompra = New BdCompra
 
 
         iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
@@ -30,7 +31,7 @@
 
         cargarDatosOrigen()
 
-        AddHandler gui.dgvorigen.SelectionChanged, AddressOf cargarDatosDestino
+
         AddHandler gui.FormClosing, AddressOf cerrar
         AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
@@ -54,9 +55,9 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdTrasiego.listar_depositos()
-        listadoLotes = bdTrasiego.listar_tlotes
-        listadoProductos = bdTrasiego.listar_productos
+        listadoDepositos = bdCompra.listar_depositos()
+        listadoLotes = bdCompra.listar_tlotes
+        listadoProductos = bdCompra.listar_productos
         gui.BeginInvoke(invocador)
     End Sub
 
@@ -67,9 +68,7 @@
     End Sub
 
     Private Sub cargarDatosSecundarios()
-        If Not gui.dgvorigen.CurrentRow Is Nothing Then
             listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
-        End If
 
         gui.BeginInvoke(invocadorSecundario)
     End Sub
