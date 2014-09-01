@@ -34,6 +34,10 @@
         Me.tabAdm.añadirPestañaAutonoma(form)
     End Sub
 
+    Public Sub añadirPestañaAutonomaCentrada(ByRef form As Form)
+        Me.tabAdm.añadirPestañaAutonomaCentrada(form)
+    End Sub
+
     Public Sub volverApestañaPrevia(Optional ByVal secundario As Boolean = False)
         If secundario Then
             Me.tabAdm.volverApestañaPrevia2()

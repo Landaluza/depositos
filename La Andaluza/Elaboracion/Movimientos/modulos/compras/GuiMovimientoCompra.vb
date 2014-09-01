@@ -63,11 +63,18 @@
             Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
             Me.btncantidadDestinoIncorrecta.Visible = False
             Me.btnProductoDestinoIncorrecto.Visible = False
+            Me.chbLoteNuevo.Enabled = False
+            Me.cboTipoProducto.Enabled = False
+            Me.cboTipoProducto.Text = ""
         Else
             Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
             Me.btncantidadDestinoIncorrecta.Visible = True
             Me.btnProductoDestinoIncorrecto.Visible = True
-        End If
+            Me.chbLoteNuevo.Enabled = True
+            If chbLoteNuevo.Checked Then
+                Me.cboTipoProducto.Enabled = True
+            End If
+            End If
     End Sub
 
     Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
@@ -77,5 +84,7 @@
         AddHandler cboTipoLote.SelectedValueChanged, AddressOf actualiza_descripcion
         AddHandler cboTipoProducto.SelectedValueChanged, AddressOf actualiza_descripcion
         AddHandler txtCantidad.TextChanged, AddressOf actualiza_descripcion
+        AddHandler chbLoteNuevo.CheckedChanged, AddressOf actualiza_descripcion
     End Sub
+
 End Class

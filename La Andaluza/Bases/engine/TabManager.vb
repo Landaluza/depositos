@@ -45,6 +45,25 @@
         AddHandler form.FormClosed, AddressOf frmGui.cerrarPestaña
     End Sub
 
+    Public Sub añadirPestañaAutonomaCentrada(ByRef form As Form)
+        Dim myTabPage As New TabPage()
+        Dim p As New Panel
+        p.Size = form.Size
+
+        Engine_LA.FormEnPestaña(form, p)
+        myTabPage.Controls.Add(p)
+
+        tabControl.TabPages.Add(myTabPage)
+        myTabPage.Text = form.Text & (CIERRE_PESTAÑA)
+        myTabPage.Name = form.Text
+        myTabPage.Tag = MULTIPESTAÑA
+        tabControl.SelectedTab = myTabPage
+
+        Pantalla.centerIn(p, myTabPage)
+
+        AddHandler form.FormClosed, AddressOf frmGui.cerrarPestaña
+    End Sub
+
     Public Sub añadirPestañaSinCierre(ByRef form As Form)
         Dim myTabPage As New TabPage()
         Engine_LA.FormEnPestaña(form, myTabPage)

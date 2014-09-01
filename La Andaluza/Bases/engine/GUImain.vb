@@ -119,39 +119,7 @@ Public Class GUImain
 
     Protected Sub TabControl1_MouseMove(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles TabControl1.MouseMove
 
-        If e.Button = Windows.Forms.MouseButtons.Left Then
-            'If Me.scExtra.Panel2Collapsed Then
-
-            '    Me.scExtra.Panel2Collapsed = False
-
-            'If Me.TabControl2.TabPages.Count = 0 Then
-            '    Dim pan As New Panel
-            '    pan.Dock = DockStyle.Fill
-            '    pan.BackColor = Color.LightSteelBlue
-
-            '    Dim tb As New TabPage
-            '    tb.Text = "Arrastra aquí  x"
-            '    tb.Name = "Arrastra aquí  x"
-
-            '    TabControl2.TabPages.Add(tb)
-            '    pan.Parent = tb
-
-            '    Dim l As New Label
-            '    l.Text = "Para una vista dual"
-            '    l.Dock = DockStyle.Top
-
-            '    Dim l2 As New Label
-            '    l2.Text = "Arrastra aquí"
-            '    l2.Dock = DockStyle.Top
-
-            '    pan.Controls.Add(l)
-            '    pan.Controls.Add(l2)
-            'End If
-
-            'End If
-            'sender.DoDragDrop(Me.TabControl1.SelectedTab, DragDropEffects.Copy)
-
-        Else
+        If e.Button <> Windows.Forms.MouseButtons.Left Then
             Try
                 If Not TabControl1.SelectedTab.Tag Is Nothing Then
                     If CType(TabControl1.SelectedTab.Tag, Byte) <> TabManager.PESTAÑA_SIN_CIERRE Then
@@ -189,20 +157,6 @@ Public Class GUImain
         End If
     End Sub
 
-    'Protected Sub ToolStrip2_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles tsCustomMenu.DragDrop
-    '    Dim ts As ToolStripItem = e.Data.GetData("System.Windows.Forms.ToolStripItem")
-    '    For Each tsm As ToolStripItem In Me.tsCustomMenu.Items
-    '        If tsm.Text = ts.Text Then
-    '            return
-    '        End If
-    '    Next
-    '    tsCustomMenu.Items.Add(ts.Text, ts.Image, AddressOf ts.PerformClick)
-    '    'tsCustomMenu.Items.Add(ts.Text, ts.Image, AddressOf ts.PerformClick)
-    '    Dim t As ToolStripItem = findToolStripItem(ts.Text, tsCustomMenu)
-    '    AddHandler t.MouseMove, AddressOf tsmToTrash_MouseDown
-    '    Me.tsCustomMenu.AllowDrop = False
-    'End Sub
-
     Protected Function findToolStripItem(ByVal text As String, tool As ToolStrip) As ToolStripItem
         For Each t As ToolStripItem In tool.Items
             If t.Text = text Then
@@ -231,16 +185,6 @@ Public Class GUImain
             Catch ex As Exception
 
             End Try
-
-            'Dim o As Object = e.Data.GetData("System.Windows.Forms.Object")
-
-            'If o.GetType Is GetType(System.Windows.Forms.TabPage) Then
-            '    'Dim ts As TabPage = e.Data.GetData("System.Windows.Forms.TabPage")
-            '    'Me.TabControl1.TabPages.Add(ts)
-            '    ''Me.TabControl1.TabPages.Remove(ts)
-            'ElseIf o.GetType Is GetType(System.Windows.Forms.ToolStripItem) Then
-
-            'End If
         End If
     End Sub
 
@@ -250,13 +194,8 @@ Public Class GUImain
 
     Public Overridable Sub stopGUI()
         Try
-            'LAengine.guardarMenu(Me.tsCustomMenu)
-            'Me.TimerNotificaciones.Stop()
-            'Me.TimerNotificaciones.Enabled = False
-            'Me.TimerNotificaciones.Dispose()
             Me.TabControl1.TabPages.Clear()
             Me.TabControl2.TabPages.Clear()
-
         Catch ex As Exception
         End Try
     End Sub
@@ -276,7 +215,6 @@ Public Class GUImain
         Try
             Dim ts As TabPage = CType(e.Data.GetData("System.Windows.Forms.TabPage"), TabPage)
             Me.TabControl2.TabPages.Add(ts)
-            'Me.TabControl1.TabPages.Remove(ts)
 
             Me.TabControl1.Invalidate()
             Me.TabControl2.Invalidate()
@@ -311,11 +249,6 @@ Public Class GUImain
 
     Protected Sub TabControl2_MouseMove(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles TabControl2.MouseMove
 
-        'If sender Is TabControl2 Then
-        '    If e.Button = Windows.Forms.MouseButtons.Left Then
-        '        sender.DoDragDrop(Me.TabControl2.SelectedTab, DragDropEffects.Copy)
-        '    End If
-        'End If
         Try
             With TabControl2
                 Dim ItemRect As Rectangle = .GetTabRect(.SelectedIndex)
@@ -388,6 +321,10 @@ Public Class GUImain
 
     Shared Sub añadirPestaña(ByRef frmEnt As Form)
         LAengine.añadirPestañaAutonoma(frmEnt)
+    End Sub
+
+    Shared Sub añadirPestañaCentrada(ByRef frmEnt As Form)
+        LAengine.añadirPestañaAutonomaCentrada(frmEnt)
     End Sub
 
     Shared Sub añadirPestaña_standar(ByRef frmEnt As Form)

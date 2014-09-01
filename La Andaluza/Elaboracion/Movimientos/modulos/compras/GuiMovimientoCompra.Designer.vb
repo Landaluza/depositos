@@ -39,6 +39,7 @@ Partial Class GuiMovimientoCompra
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,7 +50,7 @@ Partial Class GuiMovimientoCompra
         Me.chbSuma.Checked = True
         Me.chbSuma.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chbSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbSuma.Location = New System.Drawing.Point(179, 171)
+        Me.chbSuma.Location = New System.Drawing.Point(321, 448)
         Me.chbSuma.Name = "chbSuma"
         Me.chbSuma.Size = New System.Drawing.Size(50, 17)
         Me.chbSuma.TabIndex = 19
@@ -61,7 +62,7 @@ Partial Class GuiMovimientoCompra
         Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
         Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
         Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-        Me.GroupBox2.Location = New System.Drawing.Point(77, 451)
+        Me.GroupBox2.Location = New System.Drawing.Point(77, 469)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
         Me.GroupBox2.TabIndex = 18
@@ -109,7 +110,7 @@ Partial Class GuiMovimientoCompra
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar.Location = New System.Drawing.Point(404, 640)
+        Me.btnGuardar.Location = New System.Drawing.Point(404, 656)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
         Me.btnGuardar.TabIndex = 16
@@ -121,7 +122,7 @@ Partial Class GuiMovimientoCompra
         '
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.txtCantidad.Location = New System.Drawing.Point(77, 640)
+        Me.txtCantidad.Location = New System.Drawing.Point(77, 656)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
@@ -137,7 +138,7 @@ Partial Class GuiMovimientoCompra
         Me.dgvDestino.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvDestino.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDestino.Location = New System.Drawing.Point(77, 194)
+        Me.dgvDestino.Location = New System.Drawing.Point(77, 133)
         Me.dgvDestino.Name = "dgvDestino"
         Me.dgvDestino.ReadOnly = True
         Me.dgvDestino.RowHeadersVisible = False
@@ -185,7 +186,7 @@ Partial Class GuiMovimientoCompra
         '
         Me.cboTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoLote.FormattingEnabled = True
-        Me.cboTipoLote.Location = New System.Drawing.Point(179, 117)
+        Me.cboTipoLote.Location = New System.Drawing.Point(179, 394)
         Me.cboTipoLote.Name = "cboTipoLote"
         Me.cboTipoLote.Size = New System.Drawing.Size(469, 21)
         Me.cboTipoLote.TabIndex = 27
@@ -194,7 +195,7 @@ Partial Class GuiMovimientoCompra
         '
         Me.cboTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(179, 144)
+        Me.cboTipoProducto.Location = New System.Drawing.Point(179, 421)
         Me.cboTipoProducto.Name = "cboTipoProducto"
         Me.cboTipoProducto.Size = New System.Drawing.Size(469, 21)
         Me.cboTipoProducto.TabIndex = 28
@@ -202,7 +203,7 @@ Partial Class GuiMovimientoCompra
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 120)
+        Me.Label3.Location = New System.Drawing.Point(74, 397)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 13)
         Me.Label3.TabIndex = 29
@@ -211,17 +212,31 @@ Partial Class GuiMovimientoCompra
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(74, 147)
+        Me.Label4.Location = New System.Drawing.Point(74, 424)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(87, 13)
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "Producto destino"
         '
+        'chbLoteNuevo
+        '
+        Me.chbLoteNuevo.AutoSize = True
+        Me.chbLoteNuevo.Checked = True
+        Me.chbLoteNuevo.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chbLoteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chbLoteNuevo.Location = New System.Drawing.Point(179, 448)
+        Me.chbLoteNuevo.Name = "chbLoteNuevo"
+        Me.chbLoteNuevo.Size = New System.Drawing.Size(117, 17)
+        Me.chbLoteNuevo.TabIndex = 31
+        Me.chbLoteNuevo.Text = "No crear lote nuevo"
+        Me.chbLoteNuevo.UseVisualStyleBackColor = True
+        '
         'GuiMovimientoCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(740, 758)
+        Me.ClientSize = New System.Drawing.Size(734, 758)
+        Me.Controls.Add(Me.chbLoteNuevo)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cboTipoLote)
@@ -260,4 +275,5 @@ Partial Class GuiMovimientoCompra
     Private WithEvents Label2 As System.Windows.Forms.Label
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
+    Public WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
 End Class
