@@ -25,27 +25,24 @@ Partial Class GuiMovimientoCompra
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GuiMovimientoCompra))
         Me.chbSuma = New System.Windows.Forms.CheckBox()
         Me.panNuevoLote = New System.Windows.Forms.Panel()
-        Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
-        Me.cboTipoLote = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
         Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
         Me.lDescripcionDestino = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
-        Me.btnCantidadOrigenIncorrecta = New System.Windows.Forms.Button()
-        Me.lDescripcionOrigen = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.rbNuevoLote = New System.Windows.Forms.RadioButton()
         Me.rbLoteDEstino = New System.Windows.Forms.RadioButton()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.dgvorigen = New System.Windows.Forms.DataGridView()
+        Me.cboProductoEntrada = New System.Windows.Forms.ComboBox()
+        Me.cboProveedor = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.panNuevoLote.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chbSuma
@@ -63,31 +60,13 @@ Partial Class GuiMovimientoCompra
         '
         'panNuevoLote
         '
-        Me.panNuevoLote.Controls.Add(Me.cboTipoProducto)
-        Me.panNuevoLote.Controls.Add(Me.cboTipoLote)
+        Me.panNuevoLote.Controls.Add(Me.ComboBox3)
+        Me.panNuevoLote.Controls.Add(Me.ComboBox4)
         Me.panNuevoLote.Location = New System.Drawing.Point(280, 640)
         Me.panNuevoLote.Name = "panNuevoLote"
         Me.panNuevoLote.Size = New System.Drawing.Size(342, 69)
         Me.panNuevoLote.TabIndex = 20
         Me.panNuevoLote.Visible = False
-        '
-        'cboTipoProducto
-        '
-        Me.cboTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(24, 11)
-        Me.cboTipoProducto.Name = "cboTipoProducto"
-        Me.cboTipoProducto.Size = New System.Drawing.Size(287, 21)
-        Me.cboTipoProducto.TabIndex = 8
-        '
-        'cboTipoLote
-        '
-        Me.cboTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboTipoLote.FormattingEnabled = True
-        Me.cboTipoLote.Location = New System.Drawing.Point(24, 38)
-        Me.cboTipoLote.Name = "cboTipoLote"
-        Me.cboTipoLote.Size = New System.Drawing.Size(287, 21)
-        Me.cboTipoLote.TabIndex = 9
         '
         'GroupBox2
         '
@@ -136,54 +115,6 @@ Partial Class GuiMovimientoCompra
         Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
         Me.lDescripcionDestino.TabIndex = 1
         Me.lDescripcionDestino.Text = "-"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btnProductoOrigenIncorrecto)
-        Me.GroupBox1.Controls.Add(Me.btnCantidadOrigenIncorrecta)
-        Me.GroupBox1.Controls.Add(Me.lDescripcionOrigen)
-        Me.GroupBox1.Location = New System.Drawing.Point(74, 320)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(578, 165)
-        Me.GroupBox1.TabIndex = 17
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalles"
-        '
-        'btnProductoOrigenIncorrecto
-        '
-        Me.btnProductoOrigenIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnProductoOrigenIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductoOrigenIncorrecto.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_196_circle_exclamation_mark
-        Me.btnProductoOrigenIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProductoOrigenIncorrecto.Location = New System.Drawing.Point(3, 91)
-        Me.btnProductoOrigenIncorrecto.Name = "btnProductoOrigenIncorrecto"
-        Me.btnProductoOrigenIncorrecto.Size = New System.Drawing.Size(572, 37)
-        Me.btnProductoOrigenIncorrecto.TabIndex = 2
-        Me.btnProductoOrigenIncorrecto.Text = "Producto incorrecto"
-        Me.btnProductoOrigenIncorrecto.UseVisualStyleBackColor = True
-        '
-        'btnCantidadOrigenIncorrecta
-        '
-        Me.btnCantidadOrigenIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCantidadOrigenIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCantidadOrigenIncorrecta.Image = CType(resources.GetObject("btnCantidadOrigenIncorrecta.Image"), System.Drawing.Image)
-        Me.btnCantidadOrigenIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCantidadOrigenIncorrecta.Location = New System.Drawing.Point(3, 128)
-        Me.btnCantidadOrigenIncorrecta.Name = "btnCantidadOrigenIncorrecta"
-        Me.btnCantidadOrigenIncorrecta.Size = New System.Drawing.Size(572, 34)
-        Me.btnCantidadOrigenIncorrecta.TabIndex = 1
-        Me.btnCantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
-        Me.btnCantidadOrigenIncorrecta.UseVisualStyleBackColor = True
-        '
-        'lDescripcionOrigen
-        '
-        Me.lDescripcionOrigen.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lDescripcionOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lDescripcionOrigen.Location = New System.Drawing.Point(3, 16)
-        Me.lDescripcionOrigen.Name = "lDescripcionOrigen"
-        Me.lDescripcionOrigen.Size = New System.Drawing.Size(572, 72)
-        Me.lDescripcionOrigen.TabIndex = 0
-        Me.lDescripcionOrigen.Text = "-"
         '
         'btnGuardar
         '
@@ -252,65 +183,102 @@ Partial Class GuiMovimientoCompra
         Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
         Me.dgvDestino.TabIndex = 15
         '
-        'dgvorigen
+        'cboProductoEntrada
         '
-        Me.dgvorigen.AllowUserToAddRows = False
-        Me.dgvorigen.AllowUserToDeleteRows = False
-        Me.dgvorigen.AllowUserToResizeRows = False
-        Me.dgvorigen.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvorigen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgvorigen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvorigen.Location = New System.Drawing.Point(74, 63)
-        Me.dgvorigen.Name = "dgvorigen"
-        Me.dgvorigen.ReadOnly = True
-        Me.dgvorigen.RowHeadersVisible = False
-        Me.dgvorigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvorigen.Size = New System.Drawing.Size(578, 239)
-        Me.dgvorigen.TabIndex = 11
+        Me.cboProductoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProductoEntrada.FormattingEnabled = True
+        Me.cboProductoEntrada.Location = New System.Drawing.Point(280, 63)
+        Me.cboProductoEntrada.Name = "cboProductoEntrada"
+        Me.cboProductoEntrada.Size = New System.Drawing.Size(287, 21)
+        Me.cboProductoEntrada.TabIndex = 21
+        '
+        'cboProveedor
+        '
+        Me.cboProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProveedor.FormattingEnabled = True
+        Me.cboProveedor.Location = New System.Drawing.Point(280, 90)
+        Me.cboProveedor.Name = "cboProveedor"
+        Me.cboProveedor.Size = New System.Drawing.Size(287, 21)
+        Me.cboProveedor.TabIndex = 22
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(74, 66)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Entrada"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(74, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(56, 13)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Proveedor"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(24, 7)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(287, 21)
+        Me.ComboBox3.TabIndex = 27
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(24, 34)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(287, 21)
+        Me.ComboBox4.TabIndex = 28
         '
         'GuiMovimientoCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1302, 736)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboProductoEntrada)
+        Me.Controls.Add(Me.cboProveedor)
         Me.Controls.Add(Me.chbSuma)
         Me.Controls.Add(Me.panNuevoLote)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.rbNuevoLote)
         Me.Controls.Add(Me.rbLoteDEstino)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.dgvDestino)
-        Me.Controls.Add(Me.dgvorigen)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiMovimientoCompra"
         Me.Text = "GuiMovimientoCompra"
         Me.panNuevoLote.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvorigen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Public WithEvents chbSuma As System.Windows.Forms.CheckBox
     Friend WithEvents panNuevoLote As System.Windows.Forms.Panel
-    Public WithEvents cboTipoProducto As System.Windows.Forms.ComboBox
-    Public WithEvents cboTipoLote As System.Windows.Forms.ComboBox
     Public WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Public WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
     Public WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
     Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
-    Public WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Public WithEvents btnProductoOrigenIncorrecto As System.Windows.Forms.Button
-    Public WithEvents btnCantidadOrigenIncorrecta As System.Windows.Forms.Button
-    Friend WithEvents lDescripcionOrigen As System.Windows.Forms.Label
     Public WithEvents btnGuardar As System.Windows.Forms.Button
     Public WithEvents rbNuevoLote As System.Windows.Forms.RadioButton
     Public WithEvents rbLoteDEstino As System.Windows.Forms.RadioButton
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
     Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
-    Public WithEvents dgvorigen As System.Windows.Forms.DataGridView
+    Public WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Public WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Public WithEvents cboProductoEntrada As System.Windows.Forms.ComboBox
+    Public WithEvents cboProveedor As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
