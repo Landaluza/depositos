@@ -67,6 +67,14 @@
             Return
         End If
 
+        bdCompra.EmpezarTransaccion()
 
+        Try
+
+
+            bdCompra.TerminarTransaccion()
+        Catch ex As Exception
+            bdCompra.CancelarTransaccion()
+        End Try
     End Sub
 End Class

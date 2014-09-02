@@ -53,9 +53,10 @@
             Dim destino As New compras.Compra.Lote
 
 
-            compra.cantidad = txtCantidad.Text
             origen.producto = cboTipoProducto.SelectedValue
             compra.proveedorCompra = cboProveedor.SelectedValue
+
+            destino.deposito = dgvDestino.CurrentRow.Cells("CodigoLote").Value
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                 destino.producto = cboTipoProducto.SelectedValue
@@ -70,6 +71,13 @@
                     destino.producto = dgvDestino.CurrentRow.Cells("TipoProductoID").Value
                     destino.tipo = dgvDestino.CurrentRow.Cells("TipoLoteID").Value
                 End If
+            End If
+
+
+            If chbSuma.Checked Then
+                compra.cantidad = txtCantidad.Text
+            Else
+                compra.cantidad = 0
             End If
 
             compra.lotePartida = origen
