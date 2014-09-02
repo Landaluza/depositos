@@ -1022,7 +1022,7 @@ Public Class frmEntMovimientosCopy
         Try
             bandera = False
             If gbFinal.Visible Then
-                Dim Cant As Double = Convert.Todouble(txtFinalCantidadFinal.Text)
+                Dim Cant As Double = If(txtFinalCantidadFinal.Text = "", 0.0, Convert.ToDouble(txtFinalCantidadFinal.Text))
                 If Cant > Capacidad Then
                     messagebox.show("La cantidad Final supera la capacidad maxima de " & Capacidad & " litros del deposito " & cboFinalDepositoID.Text, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Exit Try

@@ -56,29 +56,29 @@
             origen.producto = cboTipoProducto.SelectedValue
             compra.proveedorCompra = cboProveedor.SelectedValue
 
-            destino.deposito = dgvDestino.CurrentRow.Cells("CodigoLote").Value
+            destino.deposito = dgvDestino.CurrentRow.Cells("depositoID").Value
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                 destino.producto = cboTipoProducto.SelectedValue
                 destino.tipo = cboTipoLote.SelectedValue
+                compra.sumarAdestino = True
             Else
                 If chbLoteNuevo.Checked Then
                     destino.producto = cboTipoProducto.SelectedValue
                     destino.tipo = cboTipoLote.SelectedValue
+                    destino.id = dgvDestino.CurrentRow.Cells("LoteID").Value 'lo guardamos para la trabilidad
                 Else
                     destino.codigo_lote = dgvDestino.CurrentRow.Cells("CodigoLote").Value
                     destino.id = dgvDestino.CurrentRow.Cells("LoteID").Value
                     destino.producto = dgvDestino.CurrentRow.Cells("TipoProductoID").Value
                     destino.tipo = dgvDestino.CurrentRow.Cells("TipoLoteID").Value
                 End If
+
+                compra.sumarAdestino = chbSuma.Checked
             End If
 
-
-            If chbSuma.Checked Then
-                compra.cantidad = txtCantidad.Text
-            Else
-                compra.cantidad = 0
-            End If
+            compra.cantidad = txtCantidad.Text
+            compra.fecha = dtpFecha.Value.Date
 
             compra.lotePartida = origen
             compra.loteFinal = destino

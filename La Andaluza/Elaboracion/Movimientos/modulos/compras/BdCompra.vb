@@ -14,6 +14,39 @@
         Return Consultar()
     End Function
 
+
+    Public Function crear_lote_compra(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer, ByVal proveedor As Integer) As Boolean
+
+        query = "INSERT INTO [dbo].[Lotes] " & _
+                                           "([Fecha] " & _
+                                           ",[CantidadRestante] " & _
+                                           ",[TipoLoteID] " & _
+                                           ",[TipoProductoID] " & _
+                                           ",[CodigoLote] " & _
+                                           ",[DepositoID] " & _
+                                           ",[FechaModificacion] " & _
+                                           ",[UsuarioModificacion]) " & _
+                                        "VALUES( " & _
+                                            "CURRENT_TIMESTAMP " & _
+                                            ", @cantidad    " & _
+                                            ", 43 " & _
+                                            ", @producto " & _
+                                            ", @nuevoCodigo " & _
+                                            ", @proveedor " & _
+                                            ",CURRENT_TIMESTAMP " & _
+                                            ",17 " & _
+                                        ")"
+
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@producto", producto)
+        AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+        AñadirParametroConsulta("@proveedor", proveedor)
+
+        Consultar()
+        Return True
+    End Function
+
     Public Function crear_lote(ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double, ByVal tlote As Integer, ByVal producto As Integer) As Boolean
 
         query = "INSERT INTO [dbo].[Lotes] " & _

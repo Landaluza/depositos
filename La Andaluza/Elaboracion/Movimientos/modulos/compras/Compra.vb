@@ -5,6 +5,8 @@ Public Class Compra
         Public loteFinal As Lote
         Public cantidad As Double
         Public proveedorCompra As Integer
+        Public sumarAdestino As Boolean
+        Public fecha As Date
 
         Public Function validar() As String
             Dim ch As New DecimalChecker

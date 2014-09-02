@@ -40,6 +40,7 @@ Partial Class GuiMovimientoCompra
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -231,11 +232,20 @@ Partial Class GuiMovimientoCompra
         Me.chbLoteNuevo.Text = "No crear lote nuevo"
         Me.chbLoteNuevo.UseVisualStyleBackColor = True
         '
+        'dtpFecha
+        '
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(542, 26)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
+        Me.dtpFecha.TabIndex = 32
+        '
         'GuiMovimientoCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(734, 758)
+        Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.chbLoteNuevo)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -276,4 +286,5 @@ Partial Class GuiMovimientoCompra
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents Label4 As System.Windows.Forms.Label
     Public WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
+    Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
 End Class
