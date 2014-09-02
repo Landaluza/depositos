@@ -61,7 +61,7 @@
     Private Sub guardar()
         Dim compra As compras.Compra = gui.valores
 
-        Dim errores As String = Compra.validar
+        Dim errores As String = compra.validar
         If errores <> String.Empty Then
             MessageBox.Show("Se has encontrado los siguientes errores: " & Environment.NewLine & errores, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return
@@ -93,15 +93,24 @@
                 compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
             End If
 
-            Dim codigoSinLetra As String = compra.fecha.ToString("YYYYMMdd")
-            MsgBox(codigoSinLetra)
-            'codigo = bdCompra.calcular_codigo_lote()
-            'crear lote compra
-            bdCompra.crear_lote_compra("", compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra)
+            Dim producto As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.producto)            
+            Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & compras.Compra.ABREVIATURA
+            Dim codigo As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
 
-            'si corresponde crear lote final
+            'crear lote compra
+            bdCompra.crear_lote_compra(codigo, compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra)
+
+            'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
             If compra.loteFinal.id = 0 Then
-                ' bdCompra.crear_lote("", )
+
+                'crear lote clonando el de compra, deposito vacio
+                bdCompra.crear_lote(codigo, )
+            Else
+                If compra.loteFinal.codigo_lote = "" Then
+                    'crear lote y guardar para trazabilidad el anterior
+                Else
+                    'no crear lote
+                End If
             End If
 
             'realizar movimiento de compra a final

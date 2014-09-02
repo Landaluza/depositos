@@ -1,6 +1,7 @@
 ﻿Namespace compras
 
-Public Class Compra
+    Public Class Compra
+        Public Const ABREVIATURA As String = "Rec"
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public cantidad As Double

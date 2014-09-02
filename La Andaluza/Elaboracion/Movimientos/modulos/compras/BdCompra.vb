@@ -155,7 +155,9 @@
     End Function
 
     Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String
-        query = "exec LotesSelectUltimoCodigo '@codigoSinLetra'"
+        query = "LotesSelectUltimoCodigo @codigoSinLetra"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@codigoSinLetra", codigoSinLetra)
         Dim dt As DataTable = Consultar()
         Dim row As String = dt.Rows(0).Item(0).ToString
         Dim extra As String
