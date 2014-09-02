@@ -17,6 +17,7 @@
                 Me.dgvDestino.Columns("depositoID").Visible = False
                 Me.dgvDestino.Columns("Capacidad").Visible = False
                 Me.dgvDestino.Columns("Listado").Visible = False
+                Me.dgvDestino.Columns("LoteID").Visible = False
             End If
         End Set
     End Property
@@ -56,6 +57,20 @@
             origen.producto = cboTipoProducto.SelectedValue
             compra.proveedorCompra = cboProveedor.SelectedValue
 
+            If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
+                destino.producto = cboTipoProducto.SelectedValue
+                destino.tipo = cboTipoLote.SelectedValue
+            Else
+                If chbLoteNuevo.Checked Then
+                    destino.producto = cboTipoProducto.SelectedValue
+                    destino.tipo = cboTipoLote.SelectedValue
+                Else
+                    destino.codigo_lote = dgvDestino.CurrentRow.Cells("CodigoLote").Value
+                    destino.id = dgvDestino.CurrentRow.Cells("LoteID").Value
+                    destino.producto = dgvDestino.CurrentRow.Cells("TipoProductoID").Value
+                    destino.tipo = dgvDestino.CurrentRow.Cells("TipoLoteID").Value
+                End If
+            End If
 
             compra.lotePartida = origen
             compra.loteFinal = destino

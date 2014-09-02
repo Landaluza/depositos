@@ -127,7 +127,7 @@ Partial Class GuiMovimientoCompra
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
         Me.txtCantidad.TabIndex = 12
-        Me.txtCantidad.Text = "30000000"
+        Me.txtCantidad.Text = "0"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'dgvDestino
