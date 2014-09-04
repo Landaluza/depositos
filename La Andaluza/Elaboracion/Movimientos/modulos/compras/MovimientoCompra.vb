@@ -104,7 +104,7 @@
             If compra.loteFinal.id = 0 Then
 
                 'crear lote clonando el de compra, deposito vacio
-                bdCompra.crear_lote(codigo, )
+                bdCompra.crear_lote(codigo, 
             Else
                 If compra.loteFinal.codigo_lote = "" Then
                     'crear lote y guardar para trazabilidad el anterior
