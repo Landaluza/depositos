@@ -92,14 +92,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1692672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1693696">
       <assemblyIdentity name="La Andaluza MovimientosDepositos" version="2014.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8U0xwcaSUucXB3yR3iSKSAR/lKIAFpvE2iNKBbFtS18=</dsig:DigestValue>
+        <dsig:DigestValue>Lfaen+5OTo3J87YK4TsMkBgF8iJvd3PM7UmsG3J5gD4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bFrirRMi7iUbuyfJ+Eoqrtt2CUjiDLey4AWuRxHaCEg=</dsig:DigestValue>
+        <dsig:DigestValue>So0S3kHGFYX4sv4UhGlDeC+Mi27UgLNnVNoXhpsER9M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

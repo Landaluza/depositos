@@ -96,30 +96,101 @@
             Dim producto As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.producto)            
             Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & compras.Compra.ABREVIATURA
             Dim codigo As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
+            'Dim loteAnterior As compras.Compra.Lote
 
             'crear lote compra
-            bdCompra.crear_lote_compra(codigo, compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra)
+            If Not bdCompra.crear_lote_compra(codigo, compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra) Then
+                bdCompra.CancelarTransaccion()
+                MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return
+            End If
 
             'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
             If compra.loteFinal.id = 0 Then
-
                 'crear lote clonando el de compra, deposito vacio
-                bdCompra.crear_lote(codigo, 
+                Dim codigoDestino As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
+
+                If Not bdCompra.crear_lote(codigo, codigoDestino, compra.loteFinal.deposito, compra.cantidad) Then
+                    bdCompra.CancelarTransaccion()
+                    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return
+                End If
+
+                compra.loteFinal.codigo_lote = codigoDestino
             Else
                 If compra.loteFinal.codigo_lote = "" Then
+                    'loteAnterior = compra.loteFinal
+
                     'crear lote y guardar para trazabilidad el anterior
+                    Dim productoFinal As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.producto)
+                    Dim tipoFinal As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.tipo)
+                    Dim codigoDestino As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & compras.Compra.ABREVIATURA
+
+                    Dim detallesDepositoFinal As DataTable = bdCompra.seleccionar_detalles_deposito(compra.loteFinal.deposito)
+                    compra.loteFinal.codigo_lote = detallesDepositoFinal.Rows(0).Item(1).ToString
+
+
+                    If Not bdCompra.crear_lote(compra.loteFinal.codigo_lote, compra.loteFinal.deposito, 0, compra.loteFinal.tipo, compra.loteFinal.producto) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    If Not bdCompra.guardar_movimiento(compra.loteFinal.deposito, compra.loteFinal.deposito, compra.loteFinal.cantidad_restante) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    If Not bdCompra.guardar_trazabilidad(compra.loteFinal.codigo_lote, codigoDestino, compra.loteFinal.cantidad_restante) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+
+                    'actualizar atributos
+                    If Not bdCompra.sacar_lote(compra.loteFinal.codigo_lote) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    If Not bdCompra.actualizar_lote(compra.loteFinal.codigo_lote, 0) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    compra.loteFinal.codigo_lote = codigoDestino
+
+                    Dim lote As DataTable = bdCompra.seleccionar_lote_por_codigo(compra.loteFinal.codigo_lote)
+                    compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
                 Else
                     'no crear lote
+
                 End If
             End If
 
+
             'realizar movimiento de compra a final
+            If Not bdCompra.guardar_movimiento(compra.lotePartida.deposito, compra.loteFinal.deposito, If(compra.sumarAdestino, compra.cantidad, 0)) Then
+                bdCompra.CancelarTransaccion()
+                MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return
+            End If
 
             'guardar trazabilidad
+            If Not bdCompra.guardar_trazabilidad(compra.lotePartida.codigo_lote, compra.loteFinal.codigo_lote, If(compra.sumarAdestino, compra.cantidad, 0)) Then
+                bdCompra.CancelarTransaccion()
+                MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return
+            End If
 
             bdCompra.TerminarTransaccion()
         Catch ex As Exception
             bdCompra.CancelarTransaccion()
+            MessageBox.Show("Error al guardar. " & Environment.NewLine & ex.Message, "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class

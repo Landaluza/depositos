@@ -159,6 +159,15 @@
         PrepararConsulta(query)
         AñadirParametroConsulta("@codigoSinLetra", codigoSinLetra)
         Dim dt As DataTable = Consultar()
+
+        If dt.Rows.Count = 0 Then
+            Return codigoSinLetra & "1"
+        End If        
+
+        If dt.Rows(0).Item(0) Is Convert.DBNull Then
+            Return codigoSinLetra & "1"
+        End If
+
         Dim row As String = dt.Rows(0).Item(0).ToString
         Dim extra As String
         Dim ascii As Integer
@@ -176,7 +185,7 @@
 
             Return codigoSinLetra & Chr(ascii)
         Else
-            Return row & "1"
+            Return codigoSinLetra & "1"
         End If
     End Function
 
@@ -301,7 +310,7 @@
         query = "insert into movimientos(entraDepositoID, saleDepositoId, cantidad, procesoid, fecha) " & _
                         "values( @id_deposito_destino, " & _
                                 "@id_deposito_origen, " & _
-        "'@cantidad', 9, CURRENT_TIMESTAMP)"
+        "'@cantidad', 1, CURRENT_TIMESTAMP)"
 
         PrepararConsulta(query)
         AñadirParametroConsulta("@id_deposito_destino", id_deposito_destino)

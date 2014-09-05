@@ -197,6 +197,7 @@ Public Class DataBase
             Ad.Fill(dtsTemp, "NuevaTabla")
             dtsTabla = dtsTemp.Tables(0)
             'cmd.Dispose()
+
             Return dtsTabla
         Catch ex As Exception
             Return Nothing
