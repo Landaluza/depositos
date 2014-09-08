@@ -216,13 +216,7 @@
     End Function
     ''*****************************************************************************************
     ''                         funciones de tiposLotes
-    ''*****************************************************************************************        
-    Public Function seleccionar_detalles_tlote(ByVal id As Integer) As DataTable
-        query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes where tipoloteid=@id"
-        PrepararConsulta(query)
-        AñadirParametroConsulta("@id", id)
-        Return Consultar()
-    End Function
+    ''*****************************************************************************************       
 
     Public Function listar_tlotes() As DataTable
         query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes order by descripcion"
