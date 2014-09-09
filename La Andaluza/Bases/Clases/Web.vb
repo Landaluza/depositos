@@ -10,7 +10,7 @@ Public Class Web
     End Sub
 
     Public Sub send_GET(ByVal msg As String, ByVal regId As String)
-        'Dim request As WebRequest = WebRequest.Create("http://192.168.1.106/gcm/send_message.php") '" & regid & "&message=" & message)
+        'Dim request As WebRequest = WebRequest.Create("http://192.168.10.106/gcm/send_message.php") '" & regid & "&message=" & message)
         'request.Method = "GET"
 
         'Dim byteArray As Byte() = Encoding.UTF8.GetBytes(msg)
@@ -24,7 +24,7 @@ Public Class Web
         'dataStream.Close()
         'messageBox.show("Done")
         Dim webClient As New System.Net.WebClient
-        Dim result As String = webClient.DownloadString("http://192.168.1.106/gcm/send_message.php?regId=" & regId & "&message=" & msg)
+        Dim result As String = webClient.DownloadString("http://192.168.10.106/gcm/send_message.php?regId=" & regId & "&message=" & msg)
         'messageBox.show(result)
     End Sub
 
