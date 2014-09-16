@@ -27,7 +27,7 @@ Partial Class frmMovimientos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.ClientSize = New System.Drawing.Size(1368, 828)
         Me.Margin = New System.Windows.Forms.Padding(5)
-        Me.MinimumSize = New System.Drawing.Size(1374, 855)
+        Me.MinimumSize = New System.Drawing.Size(0, 0)
         Me.Name = "frmMovimientos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Movimientos"
