@@ -2,7 +2,7 @@ Public Class clsDepositos
 
 #Region "Atributos"
     Private DepositoID As Integer
-    Private Codigo As Integer
+    Private Codigo As String
     Private FechaCreacion As Date
     Private Capacidad As Integer
     Private DoctoUbicacionFisica As String
@@ -25,12 +25,12 @@ Public Class clsDepositos
         End Set
     End Property
 
-    Public Property _Codigo() As Integer
+    Public Property _Codigo() As String
         Get
             Return Codigo
         End Get
 
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             Codigo = value
         End Set
     End Property

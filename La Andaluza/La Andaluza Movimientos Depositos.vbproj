@@ -1153,7 +1153,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Control\Especificaciones\" />
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
   </ItemGroup>
   <ItemGroup>
