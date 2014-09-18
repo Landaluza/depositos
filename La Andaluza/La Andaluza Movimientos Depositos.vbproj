@@ -49,7 +49,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>200</ApplicationRevision>
+    <ApplicationRevision>202</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -1033,7 +1033,7 @@
     <None Include="Resources\trasiego.png" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll" />
-    <Content Include="Elaboracion\Movimientos\tipos\ProcesosBatch.sql" />
+    <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
     <Content Include="Resources\ajusteagua.png" />
     <Content Include="Resources\ajustecomercial.png" />
     <Content Include="Resources\clarificacion.png" />
@@ -1080,7 +1080,6 @@
     <Content Include="user-trash.ico" />
     <None Include="Resources\folder-magnify.png" />
     <None Include="Resources\tools-report-bug.png" />
-    <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
     <None Include="Iconos\LA  sin texto 48 x 48.bmp" />
     <None Include="Iconos\LA  sin texto 48 x 48.ico" />
     <None Include="Iconos\LA con texto 256 x 256.ico" />
