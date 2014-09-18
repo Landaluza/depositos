@@ -49,7 +49,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>199</ApplicationRevision>
+    <ApplicationRevision>200</ApplicationRevision>
     <ApplicationVersion>2014.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -330,8 +330,6 @@
     <Compile Include="Control\Procesos abiertos\procesos\SpMaceracion.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpPieCuba.vb" />
     <Compile Include="Control\Procesos abiertos\procesos\SpTrasiegos.vb" />
-    <Compile Include="Control\Procesos\DBO_Procesos.vb" />
-    <Compile Include="Control\Procesos\spProcesos.vb" />
     <Compile Include="Control\Procesos abiertos\spProcesosAbiertos.vb" />
     <Compile Include="Control\TiposLotes\new\DBO_TiposLotes.vb" />
     <Compile Include="Control\TiposLotes\new\spTiposLotes.vb" />
@@ -623,6 +621,20 @@
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\ventas\MovimientoVenta.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ventas\Venta.vb" />
+    <Compile Include="Elaboracion\Movimientos\tipos\DBO_Procesos.vb" />
+    <Compile Include="Elaboracion\Movimientos\tipos\frmEntProcesos.Designer.vb">
+      <DependentUpon>frmEntProcesos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\tipos\frmEntProcesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\tipos\frmProcesos.Designer.vb">
+      <DependentUpon>frmProcesos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\tipos\frmProcesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\tipos\spProcesos.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -906,6 +918,12 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\ventas\GuiMovimientoVenta.resx">
       <DependentUpon>GuiMovimientoVenta.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\tipos\frmEntProcesos.resx">
+      <DependentUpon>frmEntProcesos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\tipos\frmProcesos.resx">
+      <DependentUpon>frmProcesos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Noticias\Visor\frmEntNoticias2.resx">
       <DependentUpon>frmEntNoticias2.vb</DependentUpon>
     </EmbeddedResource>
@@ -1015,6 +1033,7 @@
     <None Include="Resources\trasiego.png" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="Elaboracion\Movimientos\tipos\ProcesosBatch.sql" />
     <Content Include="Resources\ajusteagua.png" />
     <Content Include="Resources\ajustecomercial.png" />
     <Content Include="Resources\clarificacion.png" />

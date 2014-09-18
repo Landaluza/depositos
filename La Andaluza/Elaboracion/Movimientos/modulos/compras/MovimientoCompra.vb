@@ -72,7 +72,7 @@
         Try
             'comprobaciones de los datos recibidos
 
-            If compra.loteFinal.codigo_lote = "" Then
+            If compra.loteFinal.codigo_lote = "" And compra.loteFinal.id = 0 Then
                 Dim dep As DataTable = bdCompra.seleccionar_detalles_deposito(compra.loteFinal.deposito)
 
                 If dep.Rows(0).Item(1).ToString <> "" Then
@@ -82,7 +82,7 @@
                 End If
             Else
 
-                Dim lote As DataTable = bdCompra.seleccionar_lote_por_codigo(compra.loteFinal.codigo_lote)
+                Dim lote As DataTable = bdCompra.seleccionar_lote(compra.loteFinal.id)
                 If compra.loteFinal.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
                     bdCompra.CancelarTransaccion()
                     MessageBox.Show("El deposito de destino ya no contiene el lote que se selecciono.", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -90,16 +90,16 @@
                 End If
 
                 'actualizamos la cantidad restante con los valores actuales
-                compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
+                compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
             End If
 
             Dim producto As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.producto)            
             Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & compras.Compra.ABREVIATURA
-            Dim codigo As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
+            compra.lotePartida.codigo_lote = bdCompra.calcular_codigo_lote(codigoSinLetra)
             'Dim loteAnterior As compras.Compra.Lote
 
             'crear lote compra
-            If Not bdCompra.crear_lote_compra(codigo, compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra) Then
+            If Not bdCompra.crear_lote_compra(compra.lotePartida.codigo_lote, compra.cantidad, compra.lotePartida.producto, compra.proveedorCompra) Then
                 bdCompra.CancelarTransaccion()
                 MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
@@ -110,7 +110,7 @@
                 'crear lote clonando el de compra, deposito vacio
                 Dim codigoDestino As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
 
-                If Not bdCompra.crear_lote(codigo, codigoDestino, compra.loteFinal.deposito, compra.cantidad) Then
+                If Not bdCompra.crear_lote(compra.lotePartida.codigo_lote, codigoDestino, compra.loteFinal.deposito, compra.cantidad) Then
                     bdCompra.CancelarTransaccion()
                     MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
@@ -122,9 +122,10 @@
                     'loteAnterior = compra.loteFinal
 
                     'crear lote y guardar para trazabilidad el anterior
-                    Dim productoFinal As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.producto)
-                    Dim tipoFinal As DataTable = bdCompra.seleccionar_detalles_producto(compra.lotePartida.tipo)
-                    Dim codigoDestino As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & compras.Compra.ABREVIATURA
+                    Dim productoFinal As DataTable = bdCompra.seleccionar_detalles_producto(compra.loteFinal.producto)
+                    Dim tipoFinal As DataTable = bdCompra.seleccionar_detalles_tlote(compra.loteFinal.tipo)
+                    Dim codigoDestino As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
+                    codigoDestino = bdCompra.calcular_codigo_lote(codigoDestino)
 
                     Dim detallesDepositoFinal As DataTable = bdCompra.seleccionar_detalles_deposito(compra.loteFinal.deposito)
                     compra.loteFinal.codigo_lote = detallesDepositoFinal.Rows(0).Item(1).ToString
@@ -188,6 +189,7 @@
             End If
 
             bdCompra.TerminarTransaccion()
+            Me.gui.Close()
         Catch ex As Exception
             bdCompra.CancelarTransaccion()
             MessageBox.Show("Error al guardar. " & Environment.NewLine & ex.Message, "Error al guardar", MessageBoxButtons.OK, MessageBoxIcon.Error)

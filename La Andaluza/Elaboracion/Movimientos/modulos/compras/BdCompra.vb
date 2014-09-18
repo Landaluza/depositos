@@ -8,12 +8,18 @@
 
 
     Public Function seleccionar_lote_por_codigo(ByVal codigo As String) As DataTable
-        query = "select loteid, codigolote, descripcion, cantidadRestante, tipoproductoid from lotes where codigoLote = @codigoLote"
+        query = "select loteid, codigolote, descripcion, cantidadRestante, tipoproductoid, depositoid from lotes where codigoLote = @codigoLote"
         PrepararConsulta(query)
         AñadirParametroConsulta("@codigoLote", codigo)
         Return Consultar()
     End Function
 
+    Public Function seleccionar_lote(ByVal id As Integer) As DataTable
+        query = "select loteid, codigolote, descripcion, cantidadRestante, tipoproductoid, depositoid from lotes where loteid = @id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", id)
+        Return Consultar()
+    End Function
 
     Public Function crear_lote_compra(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer, ByVal proveedor As Integer) As Boolean
 
@@ -23,7 +29,7 @@
                                            ",[TipoLoteID] " & _
                                            ",[TipoProductoID] " & _
                                            ",[CodigoLote] " & _
-                                           ",[DepositoID] " & _
+                                           ",[ProveedorID] " & _
                                            ",[FechaModificacion] " & _
                                            ",[UsuarioModificacion]) " & _
                                         "VALUES( " & _
@@ -43,8 +49,8 @@
         AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
         AñadirParametroConsulta("@proveedor", proveedor)
 
-        Consultar()
-        Return True
+        Return Consultar(True)
+
     End Function
 
     Public Function crear_lote(ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double, ByVal tlote As Integer, ByVal producto As Integer) As Boolean
@@ -78,8 +84,8 @@
         AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
         AñadirParametroConsulta("@depositoDestino", depositoDestino)
 
-        Consultar()
-        Return True
+        Return Consultar(True)
+
     End Function
 
 
@@ -102,56 +108,56 @@
                                             ",Observacion " & _
                                             ",TipoLoteID " & _
                                             ",TipoProductoID " & _
-                                            ",'@nuevoCodigo'   " & _
+                                            ",@nuevoCodigo   " & _
                                             ",@depositoDestino  " & _
                                             ",'True' " & _
                                             ",CURRENT_TIMESTAMP " & _
                                             ",17 " & _
                                         "from lotes " & _
-                                        "where codigoLote = '@codigoLote'"
+                                        "where codigoLote = @codigoLote"
         PrepararConsulta(query)
         AñadirParametroConsulta("@cantidad", cantidad)
         AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
         AñadirParametroConsulta("@depositoDestino", depositoDestino)
-        AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+        AñadirParametroConsulta("@codigoLote", codigoLote)
 
-        Consultar()
+        Return Consultar(True)
 
-        Return True
+
     End Function
 
 
     Public Function actualizar_lote(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
-        query = "update lotes set cantidadRestante=cantidadRestante+@cantidad where codigolote='@codigoLote'"
+        query = "update lotes set cantidadRestante=cantidadRestante+@cantidad where codigolote= @codigoLote"
         PrepararConsulta(query)
         AñadirParametroConsulta("@cantidad", cantidad)
         AñadirParametroConsulta("@codigoLote", codigoLote)
 
-        Consultar()
+        Return Consultar(True)
 
-        Return True
+
     End Function
 
-    Public Function actualizar_lote_origen(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
-        query = "update lotes set cantidadRestante=cantidadRestante-@cantidad where codigolote='@codigoLote'"
-        PrepararConsulta(query)
-        AñadirParametroConsulta("@cantidad", cantidad)
-        AñadirParametroConsulta("@codigoLote", codigoLote)
+    'Public Function actualizar_lote_origen(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
+    '    query = "update lotes set cantidadRestante=cantidadRestante-@cantidad where codigolote= @codigoLote"
+    '    PrepararConsulta(query)
+    '    AñadirParametroConsulta("@cantidad", cantidad)
+    '    AñadirParametroConsulta("@codigoLote", codigoLote)
 
-        Consultar()
+    '    consultar(true)
 
-        Return True
-    End Function
+    '    
+    'End Function
 
     Public Function sacar_lote(ByVal codigoLote As String) As Boolean
-        query = "update lotes set depositoprevioid=depositoid, depositoid=null where codigolote='@codigoLote'"
+        query = "update lotes set depositoprevioid=depositoid, depositoid=null where codigolote= @codigoLote"
 
         PrepararConsulta(query)
         AñadirParametroConsulta("@codigoLote", codigoLote)
 
-        Consultar()
+        Return Consultar(True)
 
-        Return True
+
     End Function
 
     Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String
@@ -162,7 +168,7 @@
 
         If dt.Rows.Count = 0 Then
             Return codigoSinLetra & "1"
-        End If        
+        End If
 
         If dt.Rows(0).Item(0) Is Convert.DBNull Then
             Return codigoSinLetra & "1"
@@ -221,6 +227,13 @@
     Public Function listar_tlotes() As DataTable
         query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes order by descripcion"
         PrepararConsulta(query)
+        Return Consultar()
+    End Function
+
+    Public Function seleccionar_detalles_tlote(ByVal id As Integer) As DataTable
+        query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes where TipoLoteid=@id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", id)
         Return Consultar()
     End Function
     ''*****************************************************************************************
@@ -304,16 +317,16 @@
         query = "insert into movimientos(entraDepositoID, saleDepositoId, cantidad, procesoid, fecha) " & _
                         "values( @id_deposito_destino, " & _
                                 "@id_deposito_origen, " & _
-        "'@cantidad', 1, CURRENT_TIMESTAMP)"
+        "@cantidad, 1, CURRENT_TIMESTAMP)"
 
         PrepararConsulta(query)
         AñadirParametroConsulta("@id_deposito_destino", id_deposito_destino)
-        AñadirParametroConsulta("@id_deposito_origen", id_deposito_origen)
+        AñadirParametroConsulta("@id_deposito_origen", If(id_deposito_origen = 0, Convert.DBNull, id_deposito_origen))
         AñadirParametroConsulta("@cantidad", cantidad)
 
-        Consultar()
+        Return Consultar(True)
 
-        Return True
+
     End Function
 
     Public Function guardar_trazabilidad(ByVal codigoDestino As String, ByVal codigoOrigen As String, ByVal cantidad As Double) As Boolean
@@ -323,10 +336,10 @@
                                                    ",[MovimientoID] " & _
                                                    ",[Cantidad] " & _
                                                    ",[FechaModificacion] " & _
-                                                   ",[UsuarioModificacion " & _
+                                                   ",[UsuarioModificacion])" & _
                                         "VALUES " & _
-                                                    "( (select top 1 loteid from lotes where codigoLote = '@codigoDestino') " & _
-                                                    ", (select top 1 loteid from lotes where codigoLote = '@codigoOrigen)') " & _
+                                                    "( (select top 1 loteid from lotes where codigoLote = @codigoDestino) " & _
+                                                    ", (select top 1 loteid from lotes where codigoLote = @codigoOrigen) " & _
                                                     ", (select max(movimientoid) from movimientos) " & _
                                                     ",@cantidad" & _
                                                     ", CURRENT_TIMESTAMP " & _
@@ -336,9 +349,9 @@
         AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
         AñadirParametroConsulta("@cantidad", cantidad)
 
-        Consultar()
+        Return Consultar(True)
 
-        Return True
+
 
     End Function
 End Class

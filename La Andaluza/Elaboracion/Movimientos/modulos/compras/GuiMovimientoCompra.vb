@@ -63,7 +63,7 @@
                 destino.tipo = cboTipoLote.SelectedValue
                 compra.sumarAdestino = True
             Else
-                If chbLoteNuevo.Checked Then
+                If Not chbLoteNuevo.Checked Then
                     destino.producto = cboTipoProducto.SelectedValue
                     destino.tipo = cboTipoLote.SelectedValue
                     destino.id = dgvDestino.CurrentRow.Cells("LoteID").Value 'lo guardamos para la trabilidad
