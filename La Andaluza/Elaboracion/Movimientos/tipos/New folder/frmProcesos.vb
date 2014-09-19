@@ -36,8 +36,8 @@ Public Class frmProcesos
                .Columns("Id").Visible = False
                    .FormatoColumna("Descripcion", TiposColumna.Izquierda, true)
                    .FormatoColumna("TipoProductoParaLote", TiposColumna.Izquierda, true)
-               .FormatoColumna("Descripcion", TiposColumna.Izquierda, true)
-               .FormatoColumna("Descripcion", TiposColumna.Izquierda, true)
+                .FormatoColumna("TipoLote", TiposColumna.Izquierda, True)
+                .FormatoColumna("TipoMovimiento", TiposColumna.Izquierda, True)
                End With
        End If
 

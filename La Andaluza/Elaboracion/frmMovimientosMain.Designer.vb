@@ -25,7 +25,8 @@ Partial Class frmMovimientosMain
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.tpTipos = New System.Windows.Forms.TabPage()
+        Me.tpProcesos = New System.Windows.Forms.TabPage()
+        Me.tpTiposProcesos = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +46,8 @@ Partial Class frmMovimientosMain
         Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.tpTipos)
+        Me.TabControl1.Controls.Add(Me.tpProcesos)
+        Me.TabControl1.Controls.Add(Me.tpTiposProcesos)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
@@ -64,15 +66,25 @@ Partial Class frmMovimientosMain
         Me.TabPage4.Text = "Listado a una fecha"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'tpTipos
+        'tpProcesos
         '
-        Me.tpTipos.Location = New System.Drawing.Point(4, 25)
-        Me.tpTipos.Name = "tpTipos"
-        Me.tpTipos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpTipos.Size = New System.Drawing.Size(680, 356)
-        Me.tpTipos.TabIndex = 4
-        Me.tpTipos.Text = "Tipos"
-        Me.tpTipos.UseVisualStyleBackColor = True
+        Me.tpProcesos.Location = New System.Drawing.Point(4, 25)
+        Me.tpProcesos.Name = "tpProcesos"
+        Me.tpProcesos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpProcesos.Size = New System.Drawing.Size(680, 356)
+        Me.tpProcesos.TabIndex = 4
+        Me.tpProcesos.Text = "Procesos"
+        Me.tpProcesos.UseVisualStyleBackColor = True
+        '
+        'tpTiposProcesos
+        '
+        Me.tpTiposProcesos.Location = New System.Drawing.Point(4, 25)
+        Me.tpTiposProcesos.Name = "tpTiposProcesos"
+        Me.tpTiposProcesos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpTiposProcesos.Size = New System.Drawing.Size(680, 356)
+        Me.tpTiposProcesos.TabIndex = 5
+        Me.tpTiposProcesos.Text = "Tipos procesos"
+        Me.tpTiposProcesos.UseVisualStyleBackColor = True
         '
         'frmMovimientosMain
         '
@@ -90,5 +102,6 @@ Partial Class frmMovimientosMain
     Private WithEvents TabPage1 As System.Windows.Forms.TabPage
     Private WithEvents TabControl1 As System.Windows.Forms.TabControl
     Private WithEvents TabPage4 As System.Windows.Forms.TabPage
-    Private WithEvents tpTipos As System.Windows.Forms.TabPage
+    Private WithEvents tpProcesos As System.Windows.Forms.TabPage
+    Friend WithEvents tpTiposProcesos As System.Windows.Forms.TabPage
 End Class

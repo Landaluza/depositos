@@ -1,3 +1,4 @@
+use[la]
 IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[ProcesosDelete]') AND type in (N'P', N'PC'))
 DROP PROCEDURE [dbo].[ProcesosDelete]
 GO
@@ -102,10 +103,10 @@ BEGIN
 SELECT
       [dbo].[Procesos].[ProcesoID] Id
      ,[dbo].[Procesos].[Descripcion]
-     ,[dbo].[Procesos].[TipoProductoParaLote]
+     ,[dbo].[Procesos].[TipoProductoParaLote] TipoLote
      ,[dbo].[TiposLotes].[Descripcion]
      ,[dbo].[Procesos].[ConMuestra]
-     ,[dbo].[TiposMovimientos].[Descripcion]
+     ,[dbo].[TiposMovimientos].[Descripcion] TipoMovimiento
 FROM
      [dbo].[Procesos]
      INNER JOIN [dbo].[TiposLotes] ON [dbo].[Procesos].[TipoLoteID] = [dbo].[TiposLotes].[TipoLoteID]
