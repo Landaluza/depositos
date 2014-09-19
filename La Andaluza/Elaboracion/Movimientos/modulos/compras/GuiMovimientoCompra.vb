@@ -77,7 +77,7 @@
                 compra.sumarAdestino = chbSuma.Checked
             End If
 
-            compra.cantidad = txtCantidad.Text
+            compra.cantidad = Convert.ToDouble(txtCantidad.Text)
             compra.fecha = dtpFecha.Value.Date
 
             compra.lotePartida = origen

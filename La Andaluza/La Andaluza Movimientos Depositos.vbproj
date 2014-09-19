@@ -1055,8 +1055,6 @@
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Excel.dll" />
     <None Include="Bases\ZLibrerias\referencias\Microsoft.Office.Interop.Word.dll" />
     <None Include="Bases\ZLibrerias\InformeDepositos.dll" />
-    <Content Include="Elaboracion\Movimientos\tiposmovimientos\TiposMovimientosBatch.sql" />
-    <Content Include="Elaboracion\Movimientos\tipos\ProcesosBatch.sql" />
     <Content Include="Resources\ajusteagua.png" />
     <Content Include="Resources\ajustecomercial.png" />
     <Content Include="Resources\clarificacion.png" />

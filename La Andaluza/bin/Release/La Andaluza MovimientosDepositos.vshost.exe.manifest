@@ -92,14 +92,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1736704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1737216">
       <assemblyIdentity name="La Andaluza MovimientosDepositos" version="2014.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+rGmgglfhPNVQqF0ncDP4NhDQAucS0L61RNc+FYz1no=</dsig:DigestValue>
+        <dsig:DigestValue>kDwGkU1IHMBuVlNtUKiGqTi8pz1ZccPfAT3mtatUBDA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VidRAR0RCeplr7poL3GVFZC0sDs40I6WfsECfZPGWN0=</dsig:DigestValue>
+        <dsig:DigestValue>JjDpkoq3AzoxYJRHs/fNaNwzrqOA39mCiXvfMNktHbc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -175,24 +175,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Elaboracion\Movimientos\tipos\ProcesosBatch.sql" size="3530">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5G1/KBhDHYrxrHz0omi6GcD+5x4CueuQEuj5d3OcdDA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Elaboracion\Movimientos\tiposmovimientos\TiposMovimientosBatch.sql" size="3336">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>IHUPrD72BwMGufsO1JFImtGOC0NTZ1JMYF8y7E7OO3o=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="La Andaluza MovimientosDepositos.exe.config" size="25882">
     <hash>
       <dsig:Transforms>

@@ -108,9 +108,12 @@
             'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
             If compra.loteFinal.id = 0 Then
                 'crear lote clonando el de compra, deposito vacio
+                Dim tipoFinal As DataTable = bdCompra.seleccionar_detalles_tlote(compra.loteFinal.tipo)
+                codigoSinLetra = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
                 Dim codigoDestino As String = bdCompra.calcular_codigo_lote(codigoSinLetra)
 
-                If Not bdCompra.crear_lote(compra.lotePartida.codigo_lote, codigoDestino, compra.loteFinal.deposito, compra.cantidad) Then
+
+                If Not bdCompra.crear_lote(compra.lotePartida.codigo_lote, codigoDestino, compra.loteFinal.deposito, 0) Then
                     bdCompra.CancelarTransaccion()
                     MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return
@@ -194,11 +197,19 @@
                 Return
             End If
 
-            'If Not bdCompra.actualizar_lote(compra.lotePartida.codigo_lote, compra.lotePartida.cantidad_restante -) Then
-            '    bdCompra.CancelarTransaccion()
-            '    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            '    Return
-            'End If
+            If Not bdCompra.actualizar_lote(compra.lotePartida.codigo_lote, -compra.cantidad) Then
+                bdCompra.CancelarTransaccion()
+                MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return
+            End If
+
+            If compra.sumarAdestino Then
+                If Not bdCompra.actualizar_lote(compra.loteFinal.codigo_lote, compra.cantidad) Then
+                    bdCompra.CancelarTransaccion()
+                    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return
+                End If
+            End If
 
             bdCompra.TerminarTransaccion()
             Me.gui.Close()
