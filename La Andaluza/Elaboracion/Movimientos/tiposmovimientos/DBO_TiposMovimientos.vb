@@ -1,17 +1,17 @@
 Public Class DBO_TiposMovimientos
-Inherits BasesParaCompatibilidad.DataBussines
+Inherits DataBussines
 
-   Private m_Id As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_Abreviatura As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_Descripcion As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_Observaciones As BasesParaCompatibilidad.DataBussinesParameter
+   Private m_Id As DataBussinesParameter
+   Private m_Abreviatura As DataBussinesParameter
+   Private m_Descripcion As DataBussinesParameter
+   Private m_Observaciones As DataBussinesParameter
 
    Public Sub New()
        MyBase.New()
-       m_Id = New BasesParaCompatibilidad.DataBussinesParameter("@Id","Id")
-       m_Abreviatura= New BasesParaCompatibilidad.DataBussinesParameter("@Abreviatura","Abreviatura")
-       m_Descripcion= New BasesParaCompatibilidad.DataBussinesParameter("@Descripcion","Descripcion")
-       m_Observaciones= New BasesParaCompatibilidad.DataBussinesParameter("@Observaciones","Observaciones")
+       m_Id = New DataBussinesParameter("@Id","Id")
+       m_Abreviatura= New DataBussinesParameter("@Abreviatura","Abreviatura")
+       m_Descripcion= New DataBussinesParameter("@Descripcion","Descripcion")
+       m_Observaciones= New DataBussinesParameter("@Observaciones","Observaciones")
        MyBase.primaryKey = m_Id
        añadirParametros()
    End Sub

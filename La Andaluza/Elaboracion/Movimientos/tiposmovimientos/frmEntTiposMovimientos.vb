@@ -1,14 +1,14 @@
 Public Class frmEntTiposMovimientos
-   Inherits BasesParaCompatibilidad.DetailedSimpleForm
-   Implements BasesParaCompatibilidad.Savable
-   Public Shadows Event afterSave(sender As Object, args As EventArgs) Implements BasesParaCompatibilidad.Savable.afterSave
+   Inherits DetailedSimpleForm
+   Implements Savable
+   Public Shadows Event afterSave(sender As Object, args As EventArgs) Implements Savable.afterSave
    Private m_DBO_TiposMovimientos As DBO_TiposMovimientos
 
    Public Sub New(ByVal modoDeApertura As String, Optional ByRef v_sp As spTiposMovimientos = Nothing, Optional ByRef v_dbo As DBO_TiposMovimientos = Nothing)
-       MyBase.new(modoDeApertura, v_sp, ctype(v_dbo, BasesParaCompatibilidad.databussines))
+       MyBase.new(modoDeApertura, v_sp, ctype(v_dbo, databussines))
        InitializeComponent()
        If v_sp Is Nothing then
-       sp = ctype( New spTiposMovimientos,BasesParaCompatibilidad.StoredProcedure)
+       sp = ctype( New spTiposMovimientos,StoredProcedure)
        else
        sp = v_sp
        End if
@@ -17,7 +17,7 @@ Public Class frmEntTiposMovimientos
    End Sub
 
    Public Sub New()
-       MyBase.new(BasesParaCompatibilidad.GridSimpleForm.ACCION_INSERTAR, ctype(new spTiposMovimientos,BasesParaCompatibilidad.storedprocedure), ctype(new DBO_TiposMovimientos, BasesParaCompatibilidad.databussines))
+       MyBase.new(GridSimpleForm.ACCION_INSERTAR, ctype(new spTiposMovimientos,storedprocedure), ctype(new DBO_TiposMovimientos, databussines))
        InitializeComponent()
    End Sub
 
@@ -29,28 +29,28 @@ Public Class frmEntTiposMovimientos
 
    End Sub
 
-   Overrides Sub SetValores() Implements BasesParaCompatibilidad.Savable.setValores
+   Overrides Sub SetValores() Implements Savable.setValores
        If (Me.modoDeApertura = INSERCION) Then
        Me.m_DBO_TiposMovimientos = new dbo_TiposMovimientos
        Else
        Me.m_DBO_TiposMovimientos = ctype(dbo, DBO_TiposMovimientos)
        End If
 
-           txtAbreviatura.Text = m_DBO_TiposMovimientos.Abreviatura
+        'txtAbreviatura.Text = m_DBO_TiposMovimientos.Abreviatura
            txtDescripcion.Text = m_DBO_TiposMovimientos.Descripcion
            txtObservaciones.Text = m_DBO_TiposMovimientos.Observaciones
    End Sub
 
-   Protected Overrides Function GetValores() as boolean Implements BasesParaCompatibilidad.Savable.getValores
+   Protected Overrides Function GetValores() as boolean Implements Savable.getValores
         Dim errores as String = string.empty
 
 
-       If txtAbreviatura.Text= "" then
-           If errores = "" Then txtAbreviatura.Focus()
-           errores = errores & "El campo Abreviatura no puede estar vacío." & Environment.NewLine()
-       Else
-       m_DBO_TiposMovimientos.Abreviatura = System.Convert.ToString(txtAbreviatura.Text)
-       End If
+        If txtAbreviatura.Text = "" Then
+            If errores = "" Then txtAbreviatura.Focus()
+            errores = errores & "El campo Abreviatura no puede estar vacío." & Environment.NewLine()
+        Else
+            m_DBO_TiposMovimientos.Abreviatura = System.Convert.ToChar(txtAbreviatura.Text)
+        End If
 
 
        If txtDescripcion.Text= "" then
@@ -66,7 +66,7 @@ Public Class frmEntTiposMovimientos
 
 
        If (errores = String.empty) then
-         Dbo = ctype(m_DBO_TiposMovimientos, BasesParaCompatibilidad.databussines)
+         Dbo = ctype(m_DBO_TiposMovimientos, databussines)
          return true
        Else
          MessageBox.Show("Rellene correctamente el formulario, se han encontrado os siguientes errores:" & Environment.NewLine() & Environment.NewLine() & errores,"Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -74,11 +74,11 @@ Public Class frmEntTiposMovimientos
         End IF
    End Function
 
-   Public Overrides Sub Guardar(Optional ByRef trans As SqlClient.SqlTransaction = nothing) Implements BasesParaCompatibilidad.Savable.Guardar
-       MyBase.Guardar(trans)
-   End Sub
+    Public Overrides Sub Guardar(ByRef dtb As DataBase) Implements Savable.Guardar
+        MyBase.Guardar(dtb)
+    End Sub
 
    Private Sub frmEntTiposMovimientos_Shown(sender As System.Object, e As System.EventArgs) Handles MyBase.Shown
-       BasesParaCompatibilidad.DetailedSimpleForm.centerIn(ctype(Me.tlpMiddle, Control), Me)
+        Pantalla.centerIn(CType(Me.tlpMiddle, Control), Me)
    End Sub
 End Class

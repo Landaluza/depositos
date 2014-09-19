@@ -1,6 +1,6 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _ 
 Partial Class frmEntProcesos
-    Inherits BasesParaCompatibilidad.DetailedSimpleForm
+    Inherits DetailedSimpleForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -82,7 +82,7 @@ Partial Class frmEntProcesos
         Me.butVerTipoLoteID.Cursor = System.Windows.Forms.Cursors.Hand
         Me.butVerTipoLoteID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.butVerTipoLoteID.Name = "butVerTipoLoteID
-        Me.butVerTipoLoteID.Image = Global.La_Andaluza.My.Resources.Resources.agenda
+        Me.butVerTipoLoteID.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_027_search
         Me.butVerTipoLoteID.TabStop = False
         Me.butVerTipoLoteID.Size = New System.Drawing.Size(20, 20)
         'butAddTipoLoteID
@@ -92,8 +92,8 @@ Partial Class frmEntProcesos
         Me.butAddTipoLoteID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butAddTipoLoteID.Cursor = System.Windows.Forms.Cursors.Hand
         Me.butAddTipoLoteID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.butAddTipoLoteID.Image = Global.La_Andaluza.My.Resources.edit_add_2
-        Me.butAddTipoLoteID.Name = "butAddTipoLoteID
+        Me.butAddTipoLoteID.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.glyphicons_432_plus
+        Me.butAddTipoLoteID.Name = "butAddTipoLoteID"
         Me.butAddTipoLoteID.TabStop = False
         Me.butAddTipoLoteID.Size = New System.Drawing.Size(20, 20)
         '
@@ -102,12 +102,12 @@ Partial Class frmEntProcesos
         '
         Me.chbConMuestra.Dock = System.Windows.Forms.DockStyle.Fill
         Me.chbConMuestra.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chbConMuestra.Name = "chbConMuestra
+        Me.chbConMuestra.Name = "chbConMuestra"
         Me.chbConMuestra.TabIndex = 3
         Me.chbConMuestra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.chbConMuestra.BackColor = System.Drawing.SystemColors.Control
         Me.chbConMuestra.UseVisualStyleBackColor = False
-        Me.chbConMuestra.Size = New System.Drawing.Size(16,21)
+        Me.chbConMuestra.Size = New System.Drawing.Size(16, 21)
         '
         'cboTipoMovimiento
         '
@@ -116,10 +116,10 @@ Partial Class frmEntProcesos
         Me.cboTipoMovimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
         Me.cboTipoMovimiento.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cboTipoMovimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboTipoMovimiento.Name = "cboTipoMovimiento
+        Me.cboTipoMovimiento.Name = "cboTipoMovimiento"
         Me.cboTipoMovimiento.TabIndex = 4
         Me.cboTipoMovimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboTipoMovimiento.Size = New System.Drawing.Size(200,21)
+        Me.cboTipoMovimiento.Size = New System.Drawing.Size(200, 21)
         '
         'butVerTipoMovimientoID
         '
@@ -128,8 +128,8 @@ Partial Class frmEntProcesos
         Me.butVerTipoMovimientoID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butVerTipoMovimientoID.Cursor = System.Windows.Forms.Cursors.Hand
         Me.butVerTipoMovimientoID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.butVerTipoMovimientoID.Name = "butVerTipoMovimientoID
-        Me.butVerTipoMovimientoID.Image = Global.La_Andaluza.My.Resources.Resources.agenda
+        Me.butVerTipoMovimientoID.Name = "butVerTipoMovimientoID"
+        Me.butVerTipoMovimientoID.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_027_search
         Me.butVerTipoMovimientoID.TabStop = False
         Me.butVerTipoMovimientoID.Size = New System.Drawing.Size(20, 20)
         'butAddTipoMovimientoID
@@ -139,7 +139,7 @@ Partial Class frmEntProcesos
         Me.butAddTipoMovimientoID.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butAddTipoMovimientoID.Cursor = System.Windows.Forms.Cursors.Hand
         Me.butAddTipoMovimientoID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.butAddTipoMovimientoID.Image = Global.La_Andaluza.My.Resources.edit_add_2
+        Me.butAddTipoMovimientoID.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.glyphicons_432_plus
         Me.butAddTipoMovimientoID.Name = "butAddTipoMovimientoID
         Me.butAddTipoMovimientoID.TabStop = False
         Me.butAddTipoMovimientoID.Size = New System.Drawing.Size(20, 20)

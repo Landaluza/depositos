@@ -1,21 +1,21 @@
 Public Class DBO_Procesos
-Inherits BasesParaCompatibilidad.DataBussines
+Inherits DataBussines
 
-   Private m_Id As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_Descripcion As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_TipoProductoParaLote As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_TipoLoteID As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_ConMuestra As BasesParaCompatibilidad.DataBussinesParameter
-   Private m_TipoMovimientoID As BasesParaCompatibilidad.DataBussinesParameter
+   Private m_Id As DataBussinesParameter
+   Private m_Descripcion As DataBussinesParameter
+   Private m_TipoProductoParaLote As DataBussinesParameter
+   Private m_TipoLoteID As DataBussinesParameter
+   Private m_ConMuestra As DataBussinesParameter
+   Private m_TipoMovimientoID As DataBussinesParameter
 
    Public Sub New()
        MyBase.New()
-       m_Id = New BasesParaCompatibilidad.DataBussinesParameter("@ProcesoID","ProcesoID")
-       m_Descripcion= New BasesParaCompatibilidad.DataBussinesParameter("@Descripcion","Descripcion")
-       m_TipoProductoParaLote= New BasesParaCompatibilidad.DataBussinesParameter("@TipoProductoParaLote","TipoProductoParaLote")
-       m_TipoLoteID= New BasesParaCompatibilidad.DataBussinesParameter("@TipoLoteID","TipoLoteID")
-       m_ConMuestra= New BasesParaCompatibilidad.DataBussinesParameter("@ConMuestra","ConMuestra")
-       m_TipoMovimientoID= New BasesParaCompatibilidad.DataBussinesParameter("@TipoMovimientoID","TipoMovimientoID")
+       m_Id = New DataBussinesParameter("@ProcesoID","ProcesoID")
+       m_Descripcion= New DataBussinesParameter("@Descripcion","Descripcion")
+       m_TipoProductoParaLote= New DataBussinesParameter("@TipoProductoParaLote","TipoProductoParaLote")
+       m_TipoLoteID= New DataBussinesParameter("@TipoLoteID","TipoLoteID")
+       m_ConMuestra= New DataBussinesParameter("@ConMuestra","ConMuestra")
+       m_TipoMovimientoID= New DataBussinesParameter("@TipoMovimientoID","TipoMovimientoID")
        MyBase.primaryKey = m_Id
        añadirParametros()
    End Sub

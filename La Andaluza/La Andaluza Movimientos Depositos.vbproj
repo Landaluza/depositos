@@ -625,21 +625,29 @@
     <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.Designer.vb">
       <DependentUpon>frmEntTiposMovimientos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.vb" />
+    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.Designer.vb">
       <DependentUpon>frmTiposMovimientos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.vb" />
+    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elaboracion\Movimientos\tiposmovimientos\spTiposMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\tipos\New folder\DBO_Procesos.vb" />
     <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmEntProcesos.Designer.vb">
       <DependentUpon>frmEntProcesos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmEntProcesos.vb" />
+    <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmEntProcesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmProcesos.Designer.vb">
       <DependentUpon>frmProcesos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmProcesos.vb" />
+    <Compile Include="Elaboracion\Movimientos\tipos\New folder\frmProcesos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Elaboracion\Movimientos\tipos\New folder\spProcesos.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
