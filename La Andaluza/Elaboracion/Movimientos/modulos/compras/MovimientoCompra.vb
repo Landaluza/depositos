@@ -146,17 +146,17 @@
                         Return
                     End If
 
-                    'If Not bdCompra.guardar_trazabilidad(codigoDestino, compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
-                    '    bdCompra.CancelarTransaccion()
-                    '    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    '    Return
-                    'End If
-
-                    If Not bdCompra.guardar_trazabilidad_ultimo_lote(compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
+                    If Not bdCompra.guardar_trazabilidad(codigoDestino, compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
                         bdCompra.CancelarTransaccion()
                         MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Return
                     End If
+
+                    'If Not bdCompra.guardar_trazabilidad_ultimo_lote(compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
+                    '    bdCompra.CancelarTransaccion()
+                    '    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    '    Return
+                    'End If
 
                     'actualizar atributos
                     If Not bdCompra.sacar_lote(compra.loteFinal.codigo_lote) Then
@@ -166,6 +166,12 @@
                     End If
 
                     If Not bdCompra.actualizar_lote(compra.loteFinal.codigo_lote, 0) Then
+                        bdCompra.CancelarTransaccion()
+                        MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Return
+                    End If
+
+                    If Not bdCompra.actualizar_lote(codigoDestino, compra.loteFinal.cantidad_restante) Then
                         bdCompra.CancelarTransaccion()
                         MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Return

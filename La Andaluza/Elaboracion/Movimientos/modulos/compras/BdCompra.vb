@@ -70,7 +70,7 @@
                                             ", @cantidad    " & _
                                             ", @tlote " & _
                                             ", @producto " & _
-                                            ",' @nuevoCodigo' " & _
+                                            ", @nuevoCodigo " & _
                                             ", @depositoDestino " & _
                                             ",'True' " & _
                                             ",CURRENT_TIMESTAMP " & _
