@@ -74,14 +74,12 @@ C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza Movimie
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Migue\Desktop\git\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\InformeDepositos.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe.config
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe.manifest
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.application
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.pdb
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositos.resources.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\DgvFilterPopup.dll
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\InformeDepositos.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\Microsoft.VisualBasic.PowerPacks.Vs.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Configuration.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Data.DataSetExtensions.dll
@@ -168,3 +166,5 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositos.resources.dll

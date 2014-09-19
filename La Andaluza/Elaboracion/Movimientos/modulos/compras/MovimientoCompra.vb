@@ -131,7 +131,7 @@
                     compra.loteFinal.codigo_lote = detallesDepositoFinal.Rows(0).Item(1).ToString
 
 
-                    If Not bdCompra.crear_lote(compra.loteFinal.codigo_lote, compra.loteFinal.deposito, 0, compra.loteFinal.tipo, compra.loteFinal.producto) Then
+                    If Not bdCompra.crear_lote(codigoDestino, compra.loteFinal.deposito, 0, compra.loteFinal.tipo, compra.loteFinal.producto) Then
                         bdCompra.CancelarTransaccion()
                         MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Return
@@ -143,12 +143,17 @@
                         Return
                     End If
 
-                    If Not bdCompra.guardar_trazabilidad(compra.loteFinal.codigo_lote, codigoDestino, compra.loteFinal.cantidad_restante) Then
+                    'If Not bdCompra.guardar_trazabilidad(codigoDestino, compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
+                    '    bdCompra.CancelarTransaccion()
+                    '    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    '    Return
+                    'End If
+
+                    If Not bdCompra.guardar_trazabilidad_ultimo_lote(compra.loteFinal.codigo_lote, compra.loteFinal.cantidad_restante) Then
                         bdCompra.CancelarTransaccion()
                         MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Return
                     End If
-
 
                     'actualizar atributos
                     If Not bdCompra.sacar_lote(compra.loteFinal.codigo_lote) Then
@@ -166,7 +171,8 @@
                     compra.loteFinal.codigo_lote = codigoDestino
 
                     Dim lote As DataTable = bdCompra.seleccionar_lote_por_codigo(compra.loteFinal.codigo_lote)
-                    compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
+                    'sobra, la cantidad restante es la que tenia el lote anterior
+                    ' compra.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
                 Else
                     'no crear lote
 
@@ -182,11 +188,17 @@
             End If
 
             'guardar trazabilidad
-            If Not bdCompra.guardar_trazabilidad(compra.lotePartida.codigo_lote, compra.loteFinal.codigo_lote, If(compra.sumarAdestino, compra.cantidad, 0)) Then
+            If Not bdCompra.guardar_trazabilidad(compra.loteFinal.codigo_lote, compra.lotePartida.codigo_lote, If(compra.sumarAdestino, compra.cantidad, 0)) Then
                 bdCompra.CancelarTransaccion()
                 MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return
             End If
+
+            'If Not bdCompra.actualizar_lote(compra.lotePartida.codigo_lote, compra.lotePartida.cantidad_restante -) Then
+            '    bdCompra.CancelarTransaccion()
+            '    MessageBox.Show(".", "Operacion no permitida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            '    Return
+            'End If
 
             bdCompra.TerminarTransaccion()
             Me.gui.Close()

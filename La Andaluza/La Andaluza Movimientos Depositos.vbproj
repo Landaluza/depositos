@@ -989,6 +989,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Control\_antiguos\Lotes\CompuestoPor\dtsCompuestoPor.xsc">
       <DependentUpon>dtsCompuestoPor.xsd</DependentUpon>
     </None>

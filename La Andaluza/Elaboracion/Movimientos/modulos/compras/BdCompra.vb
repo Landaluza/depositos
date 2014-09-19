@@ -338,14 +338,39 @@
                                                    ",[FechaModificacion] " & _
                                                    ",[UsuarioModificacion])" & _
                                         "VALUES " & _
-                                                    "( (select top 1 loteid from lotes where codigoLote = @codigoDestino) " & _
+                                                    "( (select top 1 loteid from lotes where codigoLote = @codigoDestino ) " & _
+                                                    ", (select top 1 loteid from lotes where codigoLote = @codigoOrigen ) " & _
+                                                    ", (select max(movimientoid) from movimientos) " & _
+                                                    ", @cantidad " & _
+                                                    ", CURRENT_TIMESTAMP " & _
+                                                    ", 17 )"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@codigoDestino", codigoDestino)
+        AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
+        AñadirParametroConsulta("@cantidad", cantidad)
+
+        Return Consultar(True)
+
+
+
+    End Function
+
+    Public Function guardar_trazabilidad_ultimo_lote(ByVal codigoOrigen As String, ByVal cantidad As Double) As Boolean
+        query = "INSERT INTO [dbo].[CompuestoPor] " & _
+                                                   "([LoteFinal] " & _
+                                                   ",[LotePartida] " & _
+                                                   ",[MovimientoID] " & _
+                                                   ",[Cantidad] " & _
+                                                   ",[FechaModificacion] " & _
+                                                   ",[UsuarioModificacion])" & _
+                                        "VALUES " & _
+                                                    "( (select max(loteid) from lotes) " & _
                                                     ", (select top 1 loteid from lotes where codigoLote = @codigoOrigen) " & _
                                                     ", (select max(movimientoid) from movimientos) " & _
                                                     ",@cantidad" & _
                                                     ", CURRENT_TIMESTAMP " & _
                                                     ", 17 )"
         PrepararConsulta(query)
-        AñadirParametroConsulta("@codigoDestino", codigoDestino)
         AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
         AñadirParametroConsulta("@cantidad", cantidad)
 
