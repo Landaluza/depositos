@@ -4,7 +4,7 @@ Public Class clsProcesos
     Private ProcesoID As Integer
     Private Descripcion As String
     Private TipoProductoParaLote As String
-    Private TipoMovimiento As String
+    Private TipoMovimiento As Char
     Private TipoLoteID As String
     Private ConMuestra As Boolean
 #End Region
@@ -39,12 +39,12 @@ Public Class clsProcesos
         End Set
     End Property
 
-    Public Property _TipoMovimiento() As String
+    Public Property _TipoMovimiento() As Char
         Get
             Return TipoMovimiento
         End Get
 
-        Set(ByVal value As String)
+        Set(ByVal value As Char)
             TipoMovimiento = value
         End Set
     End Property
@@ -80,7 +80,7 @@ Public Class clsProcesos
 
     Public Sub devolverTipoMovimientoPorDescripcion(ByRef dtb As DataBase)
         Try
-            TipoMovimiento = dtb.Consultar("select tiposmovimiento.descripcion as TipoMovimiento from Procesos, tiposmovimientos where tipomovimientoid = id and procesos.Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0).ToString
+            TipoMovimiento = Convert.ToChar(dtb.Consultar("select Tiposmovimientos.abreviatura as TipoMovimiento from Procesos, tiposmovimientos where tipomovimientoid = id and procesos.Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0))
         Catch ex As Exception
             TipoMovimiento = ""
         End Try
@@ -89,16 +89,16 @@ Public Class clsProcesos
 
 
     Public Sub Cargar(ByRef dtb As DataBase)
-        Dim tabla As DataTable = dtb.Consultar("select Procesos.Descripcion,Procesos.TipoProductoParaLote,Tiposmovimiento.descripcion as TipoMovimiento,TiposLotes.tipoLoteID As TiposLotes, Procesos.ConMuestra " & _
+        Dim tabla As DataTable = dtb.Consultar("select Procesos.Descripcion,Procesos.TipoProductoParaLote,Tiposmovimientos.abreviatura as TipoMovimiento,TiposLotes.tipoLoteID As TiposLotes, Procesos.ConMuestra " & _
                                                " from Procesos inner join tiposmovimientos on tipomovimientoid = id LEFT JOIN TiposLotes On Procesos.TipoLoteID = TiposLotes.TipoLoteID " & _
                                                "where Procesos.ProcesoId = " & Convert.ToString(ProcesoID), False)
 
         Try
             Descripcion = tabla.Rows(0).Item(0).ToString
             TipoProductoParaLote = tabla.Rows(0).Item(1).ToString
-            TipoMovimiento = tabla.Rows(0).Item(2).ToString
+            TipoMovimiento = Convert.ToChar(tabla.Rows(0).Item(2))
 
-           
+
             If IsDBNull(tabla.Rows(0).Item(3)) Then
                 TipoLoteID = "0"
             Else

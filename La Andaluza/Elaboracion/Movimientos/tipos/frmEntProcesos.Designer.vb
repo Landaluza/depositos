@@ -144,7 +144,7 @@ Partial Class frmEntProcesos
         Me.lblTipoProductoParaLote.Name = "lblTipoProductoParaLote"
         Me.lblTipoProductoParaLote.Size = New System.Drawing.Size(120, 27)
         Me.lblTipoProductoParaLote.TabIndex = 1
-        Me.lblTipoProductoParaLote.Text = "Tipoproductoparalote"
+        Me.lblTipoProductoParaLote.Text = "Producto para lote"
         Me.lblTipoProductoParaLote.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTipoLoteID
@@ -154,7 +154,7 @@ Partial Class frmEntProcesos
         Me.lblTipoLoteID.Name = "lblTipoLoteID"
         Me.lblTipoLoteID.Size = New System.Drawing.Size(120, 29)
         Me.lblTipoLoteID.TabIndex = 2
-        Me.lblTipoLoteID.Text = "Tipolote"
+        Me.lblTipoLoteID.Text = "Tipo de lote"
         Me.lblTipoLoteID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblConMuestra
@@ -164,7 +164,7 @@ Partial Class frmEntProcesos
         Me.lblConMuestra.Name = "lblConMuestra"
         Me.lblConMuestra.Size = New System.Drawing.Size(120, 27)
         Me.lblConMuestra.TabIndex = 5
-        Me.lblConMuestra.Text = "Conmuestra"
+        Me.lblConMuestra.Text = "Con muestra"
         Me.lblConMuestra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblTipoMovimientoID
@@ -174,7 +174,7 @@ Partial Class frmEntProcesos
         Me.lblTipoMovimientoID.Name = "lblTipoMovimientoID"
         Me.lblTipoMovimientoID.Size = New System.Drawing.Size(120, 29)
         Me.lblTipoMovimientoID.TabIndex = 6
-        Me.lblTipoMovimientoID.Text = "Tipomovimiento"
+        Me.lblTipoMovimientoID.Text = "Tipo de movimiento"
         Me.lblTipoMovimientoID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'tlpMiddle
@@ -217,7 +217,7 @@ Partial Class frmEntProcesos
         'frmEntProcesos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(434, 1020)
+        Me.ClientSize = New System.Drawing.Size(434, 227)
         Me.Controls.Add(Me.tlpMiddle)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

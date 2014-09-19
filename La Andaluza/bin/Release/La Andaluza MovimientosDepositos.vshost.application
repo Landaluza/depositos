@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="La Andaluza MovimientosDepositos.exe.manifest" size="22007">
+    <dependentAssembly dependencyType="install" codebase="La Andaluza MovimientosDepositos.exe.manifest" size="21996">
       <assemblyIdentity name="La Andaluza MovimientosDepositos.exe" version="2014.2.1.202" publicKeyToken="0000000000000000" language="es-ES" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s/vQl7txTn7LAm+O/gUQ3Do4uY+1ZyOrkwhSQzp16+k=</dsig:DigestValue>
+        <dsig:DigestValue>ActKJZb+NvkpVzZQvimcNyJk+az/REfBsmFIOZ5zsso=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

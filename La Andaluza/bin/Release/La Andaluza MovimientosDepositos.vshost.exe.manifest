@@ -92,14 +92,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1735680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="La Andaluza MovimientosDepositos.exe" size="1736192">
       <assemblyIdentity name="La Andaluza MovimientosDepositos" version="2014.2.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>luuLAzgQU0Hra0EwEiD15V/xjJ/rOeiocUsF9l530ts=</dsig:DigestValue>
+        <dsig:DigestValue>wMewZy4Mlg0suHBZnS08yn7L//GVVb28C4CsoZi1rlo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kClE9wqqqZhedVREqXdd+LJ11jFUZd2FVXCYQ9H/A/E=</dsig:DigestValue>
+        <dsig:DigestValue>itDqIm29WKK4+HWWTLgToN2p2PnxqX07N/9utxat/MI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -175,13 +175,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Elaboracion\Movimientos\tipos\New folder\ProcesosBatch.sql" size="3521">
+  <file name="Elaboracion\Movimientos\tipos\ProcesosBatch.sql" size="3530">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>DyCQOCT5Bef4FLyGSCGo4em376pT+ZHiY9At8ZAtb9A=</dsig:DigestValue>
+      <dsig:DigestValue>5G1/KBhDHYrxrHz0omi6GcD+5x4CueuQEuj5d3OcdDA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Elaboracion\Movimientos\tiposmovimientos\TiposMovimientosBatch.sql" size="3336">

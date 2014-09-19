@@ -36,7 +36,7 @@ Public Class frmEntTiposMovimientos
        Me.m_DBO_TiposMovimientos = ctype(dbo, DBO_TiposMovimientos)
        End If
 
-        'txtAbreviatura.Text = m_DBO_TiposMovimientos.Abreviatura
+        txtAbreviatura.Text = m_DBO_TiposMovimientos.Abreviatura
            txtDescripcion.Text = m_DBO_TiposMovimientos.Descripcion
            txtObservaciones.Text = m_DBO_TiposMovimientos.Observaciones
    End Sub

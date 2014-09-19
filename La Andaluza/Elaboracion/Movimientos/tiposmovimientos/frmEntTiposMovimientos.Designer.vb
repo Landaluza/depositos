@@ -119,16 +119,18 @@ Partial Class frmEntTiposMovimientos
         '
         'txtAbreviatura
         '
+        Me.txtAbreviatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAbreviatura.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtAbreviatura.Location = New System.Drawing.Point(113, 18)
         Me.txtAbreviatura.MaxLength = 1
         Me.txtAbreviatura.Name = "txtAbreviatura"
-        Me.txtAbreviatura.Size = New System.Drawing.Size(100, 20)
+        Me.txtAbreviatura.Size = New System.Drawing.Size(200, 20)
         Me.txtAbreviatura.TabIndex = 3
         '
         'frmEntTiposMovimientos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.ClientSize = New System.Drawing.Size(427, 344)
+        Me.ClientSize = New System.Drawing.Size(427, 185)
         Me.Controls.Add(Me.tlpMiddle)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
