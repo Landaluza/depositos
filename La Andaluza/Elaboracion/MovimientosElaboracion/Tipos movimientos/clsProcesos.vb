@@ -80,7 +80,7 @@ Public Class clsProcesos
 
     Public Sub devolverTipoMovimientoPorDescripcion(ByRef dtb As DataBase)
         Try
-            TipoMovimiento = dtb.Consultar("select Procesos.TipoMovimiento from Procesos where Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0).ToString
+            TipoMovimiento = dtb.Consultar("select tiposmovimiento.descripcion as TipoMovimiento from Procesos, tiposmovimientos where tipomovimientoid = id and procesos.Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0).ToString
         Catch ex As Exception
             TipoMovimiento = ""
         End Try
@@ -89,8 +89,8 @@ Public Class clsProcesos
 
 
     Public Sub Cargar(ByRef dtb As DataBase)
-        Dim tabla As DataTable = dtb.Consultar("select Procesos.Descripcion,Procesos.TipoProductoParaLote,Procesos.TipoMovimiento,TiposLotes.tipoLoteID As TiposLotes, Procesos.ConMuestra " & _
-                                               " from Procesos LEFT JOIN TiposLotes On Procesos.TipoLoteID = TiposLotes.TipoLoteID " & _
+        Dim tabla As DataTable = dtb.Consultar("select Procesos.Descripcion,Procesos.TipoProductoParaLote,Tiposmovimiento.descripcion as TipoMovimiento,TiposLotes.tipoLoteID As TiposLotes, Procesos.ConMuestra " & _
+                                               " from Procesos inner join tiposmovimientos on tipomovimientoid = id LEFT JOIN TiposLotes On Procesos.TipoLoteID = TiposLotes.TipoLoteID " & _
                                                "where Procesos.ProcesoId = " & Convert.ToString(ProcesoID), False)
 
         Try
