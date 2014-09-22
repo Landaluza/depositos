@@ -49,7 +49,7 @@
     End Sub
 
     Private Sub btnCompra_Click(sender As Object, e As EventArgs) Handles btnCompra.Click
-        Dim trasiego As New MovimientoEntrada
+        Dim trasiego As New MovimientoCompra
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 

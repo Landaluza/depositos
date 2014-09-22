@@ -448,7 +448,8 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
     <Compile Include="Elaboracion\Movimientos\contadorMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
-    <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoCompra.vb" />
+    <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
+    <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Entrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.Designer.vb">
       <DependentUpon>GuiEntrada.vb</DependentUpon>
@@ -504,28 +505,19 @@
     <Compile Include="Elaboracion\Movimientos\modulos\desecho\MovimientoDEsecho.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\bdDEsemboteNc.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\DEsemboteNC.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\MovimientoDesemboteNC.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote\BdDEsembote.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote\Desembote.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.Designer.vb">
       <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote\MovimientoDesembote.vb" />
+    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\MovimientoDesemboteNC.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\BdDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\Diferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.Designer.vb">
       <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.Designer.vb">
-      <DependentUpon>GuiMovimientoDesembote.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\MovimientoDiferencia.vb" />
@@ -896,9 +888,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.resx">
       <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desembote\GuiMovimientoDesembote.resx">
-      <DependentUpon>GuiMovimientoDesembote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.resx">
       <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
