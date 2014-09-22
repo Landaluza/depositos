@@ -19,6 +19,7 @@
 
         Catch ex As Exception
             MyBase.bdEntrada.CancelarTransaccion()
+            MessageBox.Show(ex.ToString, "Error al gaurdar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 End Class

@@ -192,7 +192,7 @@
     End Function
 
     Public Shared Sub centerIn(ByRef c2 As Control, ByRef c1 As Control)
-        c2.Left = (c1.Width - c2.Width) / 2
-        c2.Top = (c1.Height - c2.Height) / 2
+        c2.Left = Convert.ToInt32((c1.Width - c2.Width) / 2)
+        c2.Top = Convert.ToInt32((c1.Height - c2.Height) / 2)
     End Sub
 End Class

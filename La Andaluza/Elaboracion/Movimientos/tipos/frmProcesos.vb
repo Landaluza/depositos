@@ -1,4 +1,4 @@
-Imports DataGridViewExtension
+
 Public Class frmProcesos
    Inherits gridsimpleform
    Implements Queriable

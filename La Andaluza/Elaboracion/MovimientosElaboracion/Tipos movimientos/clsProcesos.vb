@@ -113,7 +113,7 @@ Public Class clsProcesos
         Catch ex As Exception
             Descripcion = ""
             TipoProductoParaLote = ""
-            TipoMovimiento = ""
+            TipoMovimiento = " "c
             TipoLoteID = "0"
             ConMuestra = False
         End Try

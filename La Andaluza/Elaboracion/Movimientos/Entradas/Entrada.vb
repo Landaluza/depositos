@@ -13,6 +13,10 @@
         Public sumarAdestino As Boolean
         Public fecha As Date
 
+        Public Sub New()
+            proveedorCompra = 0
+        End Sub
+
         Public Function validar() As String
             Dim ch As New DecimalChecker
             ch.check_decimal("cantidad", cantidad, 0)

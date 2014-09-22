@@ -449,7 +449,7 @@
     <Compile Include="Elaboracion\Movimientos\contadorMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
-    <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesembote.vb" />
+    <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesemboteNC.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Entrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.Designer.vb">

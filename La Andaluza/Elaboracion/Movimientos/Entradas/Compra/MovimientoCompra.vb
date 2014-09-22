@@ -7,7 +7,7 @@
     End Sub
 
 
-    Private Sub guardar()
+    Private Overloads Sub guardar()
         MyBase.bdEntrada.EmpezarTransaccion()
 
         Try
@@ -23,6 +23,7 @@
 
         Catch ex As Exception
             MyBase.bdEntrada.CancelarTransaccion()
+            MessageBox.Show(ex.ToString, "Error al gaurdar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 End Class

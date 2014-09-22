@@ -106,7 +106,7 @@ Public Class frmEntProcesos
 
     Private Sub butVerTipoMovimientoID_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles butVerTipoMovimientoID.Click
         Dim frmEnt As New frmTiposMovimientos()
-        GUImain.añadirPestaña(frmEnt)
+        GUImain.añadirPestaña(CType(frmEnt, Form))
     End Sub
 
     Private Sub butAddTipoMovimientoID_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles butAddTipoMovimientoID.Click
