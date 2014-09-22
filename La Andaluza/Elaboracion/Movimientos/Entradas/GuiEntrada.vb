@@ -8,10 +8,14 @@
 
         If tipoEntrada = Entradas.Entrada.COMPRA Then
             cboProveedor.Visible = True
+            lProveedor.Visible = True
             cboTipoLote.Visible = True
+            lTlote.Visible = True
         Else
             cboProveedor.Visible = False
+            lProveedor.Visible = False
             cboTipoLote.Visible = False
+            lTlote.Visible = False
         End If
     End Sub
 

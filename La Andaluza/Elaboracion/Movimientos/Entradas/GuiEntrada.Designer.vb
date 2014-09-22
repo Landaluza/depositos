@@ -34,15 +34,17 @@ Partial Class GuiEntrada
         Me.cboProductoEntrada = New System.Windows.Forms.ComboBox()
         Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lProveedor = New System.Windows.Forms.Label()
         Me.cboTipoLote = New System.Windows.Forms.ComboBox()
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lTlote = New System.Windows.Forms.Label()
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'chbSuma
@@ -51,7 +53,7 @@ Partial Class GuiEntrada
         Me.chbSuma.Checked = True
         Me.chbSuma.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chbSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbSuma.Location = New System.Drawing.Point(321, 448)
+        Me.chbSuma.Location = New System.Drawing.Point(3, 457)
         Me.chbSuma.Name = "chbSuma"
         Me.chbSuma.Size = New System.Drawing.Size(50, 17)
         Me.chbSuma.TabIndex = 19
@@ -63,7 +65,7 @@ Partial Class GuiEntrada
         Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
         Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
         Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-        Me.GroupBox2.Location = New System.Drawing.Point(77, 469)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 480)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
         Me.GroupBox2.TabIndex = 18
@@ -111,7 +113,7 @@ Partial Class GuiEntrada
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar.Location = New System.Drawing.Point(404, 656)
+        Me.btnGuardar.Location = New System.Drawing.Point(356, 677)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
         Me.btnGuardar.TabIndex = 16
@@ -123,7 +125,7 @@ Partial Class GuiEntrada
         '
         Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-        Me.txtCantidad.Location = New System.Drawing.Point(77, 656)
+        Me.txtCantidad.Location = New System.Drawing.Point(23, 677)
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
@@ -139,7 +141,7 @@ Partial Class GuiEntrada
         Me.dgvDestino.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvDestino.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDestino.Location = New System.Drawing.Point(77, 133)
+        Me.dgvDestino.Location = New System.Drawing.Point(3, 109)
         Me.dgvDestino.Name = "dgvDestino"
         Me.dgvDestino.ReadOnly = True
         Me.dgvDestino.RowHeadersVisible = False
@@ -149,18 +151,20 @@ Partial Class GuiEntrada
         '
         'cboProductoEntrada
         '
+        Me.cboProductoEntrada.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboProductoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProductoEntrada.FormattingEnabled = True
-        Me.cboProductoEntrada.Location = New System.Drawing.Point(179, 63)
+        Me.cboProductoEntrada.Location = New System.Drawing.Point(105, 42)
         Me.cboProductoEntrada.Name = "cboProductoEntrada"
         Me.cboProductoEntrada.Size = New System.Drawing.Size(469, 21)
         Me.cboProductoEntrada.TabIndex = 21
         '
         'cboProveedor
         '
+        Me.cboProveedor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboProveedor.FormattingEnabled = True
-        Me.cboProveedor.Location = New System.Drawing.Point(179, 90)
+        Me.cboProveedor.Location = New System.Drawing.Point(105, 82)
         Me.cboProveedor.Name = "cboProveedor"
         Me.cboProveedor.Size = New System.Drawing.Size(469, 21)
         Me.cboProveedor.TabIndex = 22
@@ -168,35 +172,37 @@ Partial Class GuiEntrada
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(74, 66)
+        Me.Label1.Location = New System.Drawing.Point(3, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Entrada"
         '
-        'Label2
+        'lProveedor
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(74, 93)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 13)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Proveedor"
+        Me.lProveedor.AutoSize = True
+        Me.lProveedor.Location = New System.Drawing.Point(3, 66)
+        Me.lProveedor.Name = "lProveedor"
+        Me.lProveedor.Size = New System.Drawing.Size(56, 13)
+        Me.lProveedor.TabIndex = 24
+        Me.lProveedor.Text = "Proveedor"
         '
         'cboTipoLote
         '
+        Me.cboTipoLote.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboTipoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoLote.FormattingEnabled = True
-        Me.cboTipoLote.Location = New System.Drawing.Point(179, 394)
+        Me.cboTipoLote.Location = New System.Drawing.Point(105, 367)
         Me.cboTipoLote.Name = "cboTipoLote"
         Me.cboTipoLote.Size = New System.Drawing.Size(469, 21)
         Me.cboTipoLote.TabIndex = 27
         '
         'cboTipoProducto
         '
+        Me.cboTipoProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboTipoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboTipoProducto.FormattingEnabled = True
-        Me.cboTipoProducto.Location = New System.Drawing.Point(179, 421)
+        Me.cboTipoProducto.Location = New System.Drawing.Point(105, 407)
         Me.cboTipoProducto.Name = "cboTipoProducto"
         Me.cboTipoProducto.Size = New System.Drawing.Size(469, 21)
         Me.cboTipoProducto.TabIndex = 28
@@ -204,20 +210,20 @@ Partial Class GuiEntrada
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 397)
+        Me.Label3.Location = New System.Drawing.Point(3, 351)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 13)
         Me.Label3.TabIndex = 29
         Me.Label3.Text = "Lote destino"
         '
-        'Label4
+        'lTlote
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(74, 424)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 13)
-        Me.Label4.TabIndex = 30
-        Me.Label4.Text = "Producto destino"
+        Me.lTlote.AutoSize = True
+        Me.lTlote.Location = New System.Drawing.Point(3, 391)
+        Me.lTlote.Name = "lTlote"
+        Me.lTlote.Size = New System.Drawing.Size(87, 13)
+        Me.lTlote.TabIndex = 30
+        Me.lTlote.Text = "Producto destino"
         '
         'chbLoteNuevo
         '
@@ -225,7 +231,7 @@ Partial Class GuiEntrada
         Me.chbLoteNuevo.Checked = True
         Me.chbLoteNuevo.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chbLoteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbLoteNuevo.Location = New System.Drawing.Point(179, 448)
+        Me.chbLoteNuevo.Location = New System.Drawing.Point(3, 434)
         Me.chbLoteNuevo.Name = "chbLoteNuevo"
         Me.chbLoteNuevo.Size = New System.Drawing.Size(117, 17)
         Me.chbLoteNuevo.TabIndex = 31
@@ -234,37 +240,49 @@ Partial Class GuiEntrada
         '
         'dtpFecha
         '
+        Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(542, 26)
+        Me.dtpFecha.Location = New System.Drawing.Point(468, 3)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
         Me.dtpFecha.TabIndex = 32
         '
-        'GuiMovimientoCompra
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.dtpFecha)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cboProductoEntrada)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lProveedor)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cboProveedor)
+        Me.FlowLayoutPanel1.Controls.Add(Me.dgvDestino)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cboTipoLote)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lTlote)
+        Me.FlowLayoutPanel1.Controls.Add(Me.cboTipoProducto)
+        Me.FlowLayoutPanel1.Controls.Add(Me.chbLoteNuevo)
+        Me.FlowLayoutPanel1.Controls.Add(Me.chbSuma)
+        Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox2)
+        Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(23, 12)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 651)
+        Me.FlowLayoutPanel1.TabIndex = 33
+        '
+        'GuiEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 758)
-        Me.Controls.Add(Me.dtpFecha)
-        Me.Controls.Add(Me.chbLoteNuevo)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cboTipoLote)
-        Me.Controls.Add(Me.cboTipoProducto)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cboProductoEntrada)
-        Me.Controls.Add(Me.cboProveedor)
-        Me.Controls.Add(Me.chbSuma)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(625, 759)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtCantidad)
-        Me.Controls.Add(Me.dgvDestino)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "GuiMovimientoCompra"
+        Me.Name = "GuiEntrada"
         Me.Text = "Compra"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -282,9 +300,10 @@ Partial Class GuiEntrada
     Private WithEvents cboProductoEntrada As System.Windows.Forms.ComboBox
     Private WithEvents cboProveedor As System.Windows.Forms.ComboBox
     Private WithEvents Label1 As System.Windows.Forms.Label
-    Private WithEvents Label2 As System.Windows.Forms.Label
+    Private WithEvents lProveedor As System.Windows.Forms.Label
     Private WithEvents Label3 As System.Windows.Forms.Label
-    Private WithEvents Label4 As System.Windows.Forms.Label
+    Private WithEvents lTlote As System.Windows.Forms.Label
     Public WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
     Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
+    Private WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
 End Class
