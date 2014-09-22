@@ -15,7 +15,7 @@ Public Class contadorMovimientos
     Public Function order() As Integer()
 
 
-        Dim maximos As Integer() = contadores.Clone()
+        Dim maximos As Integer() = contadores.Clone
         Array.Sort(maximos)
         Array.Reverse(maximos)
 

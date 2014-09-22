@@ -60,29 +60,29 @@
     Public ReadOnly Property valores As Entradas.Entrada
         Get
             Dim compra As New Entradas.Entrada
-            Dim origen As New Entradas.Entrada.Lote
-            Dim destino As New Entradas.Entrada.Lote
+            'Dim origen As New Entradas.Entrada.Lote
+            'Dim destino As New Entradas.Entrada.Lote
 
 
-            origen.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+            compra.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
             compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue)
 
-            destino.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            compra.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                destino.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                If cboTipoLote.Visible Then destino.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
+                compra.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                If cboTipoLote.Visible Then compra.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
                 compra.sumarAdestino = True
             Else
                 If Not chbLoteNuevo.Checked Then
-                    destino.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                    If cboTipoLote.Visible Then destino.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
-                    destino.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
+                    compra.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                    If cboTipoLote.Visible Then compra.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
+                    compra.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
                 Else
-                    destino.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
-                    destino.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
-                    destino.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
-                    destino.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+                    compra.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
+                    compra.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
+                    compra.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+                    compra.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
                 End If
 
                 compra.sumarAdestino = chbSuma.Checked
@@ -91,8 +91,6 @@
             compra.cantidad = Convert.ToDouble(txtCantidad.Text)
             compra.fecha = dtpFecha.Value.Date
 
-            compra.lotePartida = origen
-            compra.loteFinal = destino
             Return compra
         End Get
     End Property

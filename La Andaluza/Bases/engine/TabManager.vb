@@ -59,7 +59,7 @@
         myTabPage.Tag = MULTIPESTAÑA
         tabControl.SelectedTab = myTabPage
 
-        Pantalla.centerIn(p, myTabPage)
+        Pantalla.centerIn(CType(p, Control), CType(myTabPage, Control))
 
         AddHandler form.FormClosed, AddressOf frmGui.cerrarPestaña
     End Sub

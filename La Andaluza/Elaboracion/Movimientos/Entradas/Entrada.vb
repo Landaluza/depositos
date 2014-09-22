@@ -13,8 +13,10 @@
         Public sumarAdestino As Boolean
         Public fecha As Date
 
-        Public Sub New()
+        Public Sub New(Optional ByVal tipoLoteFinal As Integer = 0)
             proveedorCompra = 0
+
+            Me.loteFinal = New Lote(tipoLoteFinal)
         End Sub
 
         Public Function validar() As String
@@ -43,8 +45,8 @@
             Public tipo As Integer
             Public deposito As Integer
 
-            Public Sub New()
-                tipo = 0
+            Public Sub New(Optional ByVal tipo As Integer = 0)
+                Me.tipo = tipo
             End Sub
             Public Function validar() As String
                 Return ""

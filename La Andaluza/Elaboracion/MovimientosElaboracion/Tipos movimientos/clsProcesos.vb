@@ -82,7 +82,7 @@ Public Class clsProcesos
         Try
             TipoMovimiento = Convert.ToChar(dtb.Consultar("select Tiposmovimientos.abreviatura as TipoMovimiento from Procesos, tiposmovimientos where tipomovimientoid = id and procesos.Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0))
         Catch ex As Exception
-            TipoMovimiento = ""
+            TipoMovimiento = " "c
         End Try
 
     End Sub

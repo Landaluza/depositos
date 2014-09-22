@@ -29,17 +29,17 @@ Inherits DataBussines
        End Set
    End Property
 
-   Public Property Abreviatura() As Char
-       Get
-           if m_Abreviatura.value is convert.dbnull then
-             Return nothing 
-           End if
-           Return m_Abreviatura.value
-       End Get
-       Set(ByVal value As Char)
-           m_Abreviatura.value = value
-       End Set
-   End Property
+    Public Property Abreviatura() As String
+        Get
+            If m_Abreviatura.value Is Convert.DBNull Then
+                Return Nothing
+            End If
+            Return Convert.ToString(m_Abreviatura.value)
+        End Get
+        Set(ByVal value As String)
+            m_Abreviatura.value = value
+        End Set
+    End Property
 
    Public Property Descripcion() As String
        Get

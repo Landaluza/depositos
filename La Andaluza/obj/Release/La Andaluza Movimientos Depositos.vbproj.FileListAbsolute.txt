@@ -127,10 +127,7 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoAjustesAgua.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoClarificacion.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoCoccionControlada.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoCompra.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoDesecho.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoDesemboteNC.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoDesembote.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoDiferencia.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoEnvasar.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoFermentacion.resources
@@ -168,3 +165,4 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.pdb
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositos.resources.dll
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiEntrada.resources

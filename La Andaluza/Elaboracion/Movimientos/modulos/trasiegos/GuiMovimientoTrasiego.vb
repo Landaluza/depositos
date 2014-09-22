@@ -67,15 +67,15 @@
             Dim origen As New Trasiego.Lote
             Dim destino As New Trasiego.Lote
 
-            origen.codigo_lote = dgvorigen.CurrentRow.Cells("CodigoLote").Value
-            origen.deposito = dgvorigen.CurrentRow.Cells("depositoID").Value
+            origen.codigo_lote = Convert.ToString(dgvorigen.CurrentRow.Cells("CodigoLote").Value)
+            origen.deposito = Convert.ToInt32(dgvorigen.CurrentRow.Cells("depositoID").Value)
 
             If rbNuevoLote.Checked Then
                 Dim producto As New Trasiego.Producto
                 Dim lote As New Trasiego.TipoLote
-                lote.id = cboTipoLote.SelectedValue
+                lote.id = Convert.ToInt32(cboTipoLote.SelectedValue)
                 lote.nombre = cboTipoLote.Text
-                producto.id = cboTipoProducto.SelectedValue
+                producto.id = Convert.ToInt32(cboTipoProducto.SelectedValue)
                 producto.nombre = cboTipoProducto.Text
 
                 destino.producto = producto
@@ -84,12 +84,12 @@
                 destino.codigo_lote = If(Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value), "", dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString)
             End If
 
-            destino.deposito = dgvDestino.CurrentRow.Cells("depositoID").Value
+            destino.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
 
             trasiego.lotePartida = origen
             trasiego.loteFinal = destino
-            trasiego.cantidad = txtCantidad.Text
+            trasiego.cantidad = Convert.ToDouble(txtCantidad.Text)
 
             Return trasiego
         End Get

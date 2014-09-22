@@ -458,6 +458,7 @@
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Entradas\lotefinal.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\MovimientoEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\AjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\BdAjusteComercial.vb" />
