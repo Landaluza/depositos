@@ -608,7 +608,7 @@ Public Class frmEntMovimientosCopy
             If If(txtCompraCantidad.Text = "" Or IsDBNull(txtCompraCantidad.Text), 0, Convert.Todouble(txtCompraCantidad.Text)) <> 0 Then
                 If LoteCompraID > 0 Then
                     Dim LoteID As Integer = ctlLot.guardarLoteDesdeMovimiento(LoteCompraID, LoteFinalID, txtFinalLoteFinal.Text, (Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text)), _
-                                                                              dtpFecha.Value, Convert.ToDouble(txtFinalCantidadFinal.Text), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
+                                                                              dtpFecha.Value.Date, If(txtFinalCantidadFinal.Text = "", 0.0, Convert.ToDouble(txtFinalCantidadFinal.Text)), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
                                                                               Convert.ToInt32(cboFinalTipoProductoFinal.SelectedValue), TipoLoteID, chbNuevoLote.Checked, txtCompraDescripcion.Text, txtCompraObservacion.Text, chbConMuestra.Checked, 0, 0, dtb)
 
                     If LoteID > 0 Then
