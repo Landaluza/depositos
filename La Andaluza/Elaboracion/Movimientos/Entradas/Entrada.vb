@@ -23,7 +23,7 @@
             Dim ch As New DecimalChecker
             ch.check_decimal("cantidad", cantidad, 0)
 
-            Return ch.mensaje
+            Return ch.mensaje & loteFinal.validar & lotePartida.validar
         End Function
 
         'Public Class Deposito
@@ -49,28 +49,38 @@
                 Me.tipo = tipo
             End Sub
             Public Function validar() As String
-                Return ""
+                Dim msg As String = ""
+
+                If tipo <= 0 Then
+                    msg = "El tipo del lote no es valido"
+                End If
+
+                If producto <= 0 Then
+                    msg &= "El producto no es valido"
+                End If
+
+                Return msg
             End Function
         End Class
 
-        Public Class TipoLote
-            Public nombre As String
-            Public id As Integer
-            Public abreviatura As String
+        'Public Class TipoLote
+        '    Public nombre As String
+        '    Public id As Integer
+        '    Public abreviatura As String
 
-            Public Function validar() As String
-                Return ""
-            End Function
-        End Class
+        '    Public Function validar() As String
+        '        Return ""
+        '    End Function
+        'End Class
 
-        Public Class Producto
-            Public nombre As String
-            Public id As Integer
+        'Public Class Producto
+        '    Public nombre As String
+        '    Public id As Integer
 
-            Public Function validar() As String
-                Return ""
-            End Function
-        End Class
+        '    Public Function validar() As String
+        '        Return ""
+        '    End Function
+        'End Class
 
 
     End Class
