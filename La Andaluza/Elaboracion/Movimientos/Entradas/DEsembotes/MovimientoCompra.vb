@@ -50,7 +50,7 @@
             End If
 
             Dim producto As DataTable = bdEntrada.seleccionar_detalles_producto(compra.lotePartida.producto)
-            Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Entradas.Entrada.ABREVIATURA
+            Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Entradas.Entrada.ABREVIATURA_ENTRADA
             compra.lotePartida.codigo_lote = bdEntrada.calcular_codigo_lote(codigoSinLetra)
             'Dim loteAnterior As compras.Compra.Lote
 
