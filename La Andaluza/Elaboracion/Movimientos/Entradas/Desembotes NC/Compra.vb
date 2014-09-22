@@ -1,11 +1,7 @@
-﻿Namespace Entradas
+﻿Namespace compras
 
-    Public Class Entrada
-        Public Const ABREVIATURA_ENTRADA As String = "Rec"
-        Public Const COMPRA As Integer = 1
-        Public Const DESEMBOTE As Integer = 2
-        Public Const DESEMBOTE_NO_COMFORME As Integer = 3
-
+    Public Class Compra
+        Public Const ABREVIATURA As String = "Rec"
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public cantidad As Double
@@ -19,7 +15,6 @@
 
             Return ch.mensaje
         End Function
-
         'Public Class Deposito
         '    Public numero As String
         '    Public codigo_lote As String
@@ -39,9 +34,6 @@
             Public tipo As Integer
             Public deposito As Integer
 
-            Public Sub New()
-                tipo = 0
-            End Sub
             Public Function validar() As String
                 Return ""
             End Function

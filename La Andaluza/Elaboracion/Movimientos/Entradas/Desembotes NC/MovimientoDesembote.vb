@@ -1,9 +1,9 @@
-﻿Public Class MovimientoDesembote
+﻿Public Class MovimientoDesemboteNC
     Inherits MovimientoEntrada
 
 
     Public Sub New()
-        MyBase.New(Entradas.Entrada.DESEMBOTE)
+        MyBase.New(Entradas.Entrada.DESEMBOTE_NO_COMFORME)
     End Sub
 
 

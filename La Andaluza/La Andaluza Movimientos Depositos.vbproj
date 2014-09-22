@@ -449,6 +449,7 @@
     <Compile Include="Elaboracion\Movimientos\contadorMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
+    <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Entrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.Designer.vb">
@@ -503,15 +504,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\desecho\MovimientoDEsecho.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\bdDEsemboteNc.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\DEsemboteNC.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.Designer.vb">
-      <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\desembote NC\MovimientoDesemboteNC.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\BdDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\Diferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.Designer.vb">
@@ -885,9 +877,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desecho\GuiMovimientoDesecho.resx">
       <DependentUpon>GuiMovimientoDesecho.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desembote NC\GuiMovimientoDesemboteNC.resx">
-      <DependentUpon>GuiMovimientoDesemboteNC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.resx">
       <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
