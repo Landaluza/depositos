@@ -27,7 +27,6 @@
         cargarDatosuno()
 
         AddHandler gui.FormClosing, AddressOf cerrar
-        AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
 
     Public Sub cargarDatosuno()
@@ -60,6 +59,7 @@
     End Sub
 
     Protected Sub guardar()
+
         compra = gui.valores
 
         Dim errores As String = compra.validar
@@ -96,7 +96,7 @@
             Throw New Exception("No se pudo crear el lote de entrada")
         End If
 
-        
+
 
         'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
         If compra.loteFinal.id = 0 Then
@@ -183,7 +183,5 @@
             End If
         End If
 
-        
-        
     End Sub
 End Class

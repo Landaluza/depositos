@@ -16,6 +16,7 @@
         Public Sub New(Optional ByVal tipoLoteFinal As Integer = 0)
             proveedorCompra = 0
 
+            Me.lotePartida = New Lote()
             Me.loteFinal = New Lote(tipoLoteFinal)
         End Sub
 

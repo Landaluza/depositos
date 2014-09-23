@@ -4,6 +4,7 @@
 
     Public Sub New()
         MyBase.New(Entradas.Entrada.DESEMBOTE_NO_COMFORME)
+        AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
 
 
@@ -19,7 +20,7 @@
 
         Catch ex As Exception
             MyBase.bdEntrada.CancelarTransaccion()
-            MessageBox.Show(ex.ToString, "Error al gaurdar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show(ex.Message, "Error al gaurdar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 End Class

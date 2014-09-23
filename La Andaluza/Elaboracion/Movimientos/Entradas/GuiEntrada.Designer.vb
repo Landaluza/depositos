@@ -278,7 +278,7 @@ Partial Class GuiEntrada
         Me.Controls.Add(Me.txtCantidad)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiEntrada"
-        Me.Text = "Compra"
+        Me.Text = "Entrada"
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)

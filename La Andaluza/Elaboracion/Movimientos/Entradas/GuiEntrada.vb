@@ -60,12 +60,10 @@
     Public ReadOnly Property valores As Entradas.Entrada
         Get
             Dim compra As New Entradas.Entrada
-            'Dim origen As New Entradas.Entrada.Lote
-            'Dim destino As New Entradas.Entrada.Lote
 
 
             compra.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-            compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue)
+            If cboProveedor.Visible then compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue) Then
 
             compra.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 

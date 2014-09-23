@@ -355,7 +355,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnDEsembote.Size = New System.Drawing.Size(150, 150)
         Me.btnDEsembote.TabIndex = 22
         Me.btnDEsembote.Tag = "19"
-        Me.btnDEsembote.Text = "Desembote NC"
+        Me.btnDEsembote.Text = "Desembote"
         Me.btnDEsembote.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnDEsembote.UseVisualStyleBackColor = True
         '
