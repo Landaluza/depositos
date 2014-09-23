@@ -238,6 +238,23 @@
         AñadirParametroConsulta("@id", id)
         Return Consultar()
     End Function
+
+    ''*****************************************************************************************
+    ''                         funciones de depositos
+    ''*****************************************************************************************
+    Public Function seleccionar_muestra_pro_proceso(ByVal proceso As Integer) As DataTable
+        query = "select isnull(conmuestra, 'false') from procesos where procesoid= @id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", proceso)
+        Return Consultar()
+    End Function
+
+    Public Function seleccionar_tlote_por_proceso(ByVal proceso As Integer) As DataTable
+        query = "select isnull(TipoLoteID, 0) from procesos where procesoid= @id"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@id", proceso)
+        Return Consultar()
+    End Function
     ''*****************************************************************************************
     ''                         funciones de depositos
     ''*****************************************************************************************

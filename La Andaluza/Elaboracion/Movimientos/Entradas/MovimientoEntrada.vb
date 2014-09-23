@@ -10,6 +10,7 @@
     Protected hiloDatos As System.Threading.Thread
     Protected iniciohiloDatos As System.Threading.ThreadStart
     Protected invocador As MethodInvoker
+    Private TipoProceso As Integer
 
     Public ReadOnly Property Form As Form
         Get
@@ -18,8 +19,15 @@
     End Property
 
     Public Sub New(ByVal tipoEntrada As Integer)
-        gui = New GuiEntrada(tipoEntrada)
+
+        Me.TipoProceso = tipoEntrada
         bdEntrada = New BdEntrada
+        compra = New Entradas.Entrada
+        compra.loteFinal.tipo = Convert.ToInt32(bdEntrada.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
+        compra.loteFinal.muestra = Convert.ToBoolean(bdEntrada.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+
+
+        gui = New GuiEntrada(tipoEntrada, compra)
 
         iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
         invocador = New MethodInvoker(AddressOf mostrarDatos)
@@ -61,6 +69,7 @@
     Protected Sub guardar()
 
         compra = gui.valores
+
 
         Dim errores As String = compra.validar
         If errores <> String.Empty Then
@@ -185,3 +194,4 @@
 
     End Sub
 End Class
+

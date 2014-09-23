@@ -1,16 +1,19 @@
 ﻿Public Class GuiEntrada
-
-    Public Sub New(Optional ByVal tipoEntrada As Integer = 0)
+    Dim entrada As Entradas.Entrada
+    Public Sub New(ByVal tipoEntrada As Integer, ByVal entrada As Entradas.Entrada)
         InitializeComponent()
+        Me.entrada = entrada
         Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
-
         Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+
+        Me.chbMuestra.Checked = entrada.loteFinal.muestra
 
         If tipoEntrada = Entradas.Entrada.COMPRA Then
             cboProveedor.Visible = True
             lProveedor.Visible = True
             cboTipoLote.Visible = True
             lTlote.Visible = True
+            cboTipoLote.SelectedValue = entrada.loteFinal.tipo
         Else
             cboProveedor.Visible = False
             lProveedor.Visible = False
@@ -59,37 +62,36 @@
 
     Public ReadOnly Property valores As Entradas.Entrada
         Get
-            Dim compra As New Entradas.Entrada
 
 
-            compra.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-            If cboProveedor.Visible Then compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue)
+            entrada.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+            If cboProveedor.Visible Then entrada.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue)
 
-            compra.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            entrada.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                compra.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                If cboTipoLote.Visible Then compra.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
-                compra.sumarAdestino = True
+                entrada.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
+                entrada.sumarAdestino = True
             Else
                 If Not chbLoteNuevo.Checked Then
-                    compra.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                    If cboTipoLote.Visible Then compra.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
-                    compra.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
+                    entrada.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                    If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
+                    entrada.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
                 Else
-                    compra.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
-                    compra.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
-                    compra.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
-                    compra.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+                    entrada.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
+                    entrada.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
+                    entrada.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+                    If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
                 End If
 
-                compra.sumarAdestino = chbSuma.Checked
+                entrada.sumarAdestino = chbSuma.Checked
             End If
 
-            compra.cantidad = Convert.ToDouble(txtCantidad.Text)
-            compra.fecha = dtpFecha.Value.Date
+            entrada.cantidad = Convert.ToDouble(txtCantidad.Text)
+            entrada.fecha = dtpFecha.Value.Date
 
-            Return compra
+            Return entrada
         End Get
     End Property
 

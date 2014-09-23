@@ -45,9 +45,11 @@
             Public producto As Integer
             Public tipo As Integer
             Public deposito As Integer
+            Public muestra As Boolean
 
             Public Sub New(Optional ByVal tipo As Integer = 0)
                 Me.tipo = tipo
+                Me.muestra = False
             End Sub
             Public Function validar() As String
                 Dim msg As String = ""

@@ -42,18 +42,23 @@ Partial Class GuiEntrada
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.chbMuestra = New System.Windows.Forms.CheckBox()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'chbSuma
         '
         Me.chbSuma.AutoSize = True
+        Me.chbSuma.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chbSuma.Checked = True
         Me.chbSuma.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chbSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbSuma.Location = New System.Drawing.Point(3, 457)
+        Me.chbSuma.Location = New System.Drawing.Point(515, 3)
+        Me.chbSuma.Margin = New System.Windows.Forms.Padding(40, 3, 3, 3)
         Me.chbSuma.Name = "chbSuma"
         Me.chbSuma.Size = New System.Drawing.Size(50, 17)
         Me.chbSuma.TabIndex = 19
@@ -65,7 +70,7 @@ Partial Class GuiEntrada
         Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
         Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
         Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 480)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 470)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
         Me.GroupBox2.TabIndex = 18
@@ -228,10 +233,12 @@ Partial Class GuiEntrada
         'chbLoteNuevo
         '
         Me.chbLoteNuevo.AutoSize = True
+        Me.chbLoteNuevo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chbLoteNuevo.Checked = True
         Me.chbLoteNuevo.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chbLoteNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chbLoteNuevo.Location = New System.Drawing.Point(3, 434)
+        Me.chbLoteNuevo.Location = New System.Drawing.Point(355, 3)
+        Me.chbLoteNuevo.Margin = New System.Windows.Forms.Padding(40, 3, 3, 3)
         Me.chbLoteNuevo.Name = "chbLoteNuevo"
         Me.chbLoteNuevo.Size = New System.Drawing.Size(117, 17)
         Me.chbLoteNuevo.TabIndex = 31
@@ -259,20 +266,45 @@ Partial Class GuiEntrada
         Me.FlowLayoutPanel1.Controls.Add(Me.cboTipoLote)
         Me.FlowLayoutPanel1.Controls.Add(Me.lTlote)
         Me.FlowLayoutPanel1.Controls.Add(Me.cboTipoProducto)
-        Me.FlowLayoutPanel1.Controls.Add(Me.chbLoteNuevo)
-        Me.FlowLayoutPanel1.Controls.Add(Me.chbSuma)
+        Me.FlowLayoutPanel1.Controls.Add(Me.FlowLayoutPanel2)
         Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox2)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(23, 12)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 651)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 644)
         Me.FlowLayoutPanel1.TabIndex = 33
+        '
+        'chbMuestra
+        '
+        Me.chbMuestra.AutoSize = True
+        Me.chbMuestra.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chbMuestra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chbMuestra.Location = New System.Drawing.Point(224, 3)
+        Me.chbMuestra.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
+        Me.chbMuestra.Name = "chbMuestra"
+        Me.chbMuestra.Size = New System.Drawing.Size(88, 17)
+        Me.chbMuestra.TabIndex = 32
+        Me.chbMuestra.Text = "Crear muestra"
+        Me.chbMuestra.UseVisualStyleBackColor = True
+        '
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbSuma)
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbLoteNuevo)
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbMuestra)
+        Me.FlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 434)
+        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 13)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(568, 20)
+        Me.FlowLayoutPanel2.TabIndex = 33
         '
         'GuiEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(625, 759)
+        Me.ClientSize = New System.Drawing.Size(623, 759)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtCantidad)
@@ -283,11 +315,12 @@ Partial Class GuiEntrada
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Public WithEvents chbSuma As System.Windows.Forms.CheckBox
     Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
     Public WithEvents btnGuardar As System.Windows.Forms.Button
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
@@ -303,7 +336,10 @@ Partial Class GuiEntrada
     Private WithEvents lProveedor As System.Windows.Forms.Label
     Private WithEvents Label3 As System.Windows.Forms.Label
     Private WithEvents lTlote As System.Windows.Forms.Label
-    Public WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
     Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
     Private WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Private WithEvents FlowLayoutPanel2 As System.Windows.Forms.FlowLayoutPanel
+    Private WithEvents chbMuestra As System.Windows.Forms.CheckBox
+    Private WithEvents chbSuma As System.Windows.Forms.CheckBox
+    Private WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
 End Class
