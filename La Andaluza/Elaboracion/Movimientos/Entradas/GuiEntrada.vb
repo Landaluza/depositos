@@ -63,7 +63,7 @@
 
 
             compra.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-            If cboProveedor.Visible then compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue) Then
+            If cboProveedor.Visible Then compra.proveedorCompra = Convert.ToInt32(cboProveedor.SelectedValue)
 
             compra.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
