@@ -25,7 +25,7 @@
         compra = New Entradas.Entrada
         compra.loteFinal.tipo = Convert.ToInt32(bdEntrada.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
         compra.loteFinal.muestra = Convert.ToBoolean(bdEntrada.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
-
+        compra.lotePartida.tipo = 39
 
         gui = New GuiEntrada(tipoEntrada, compra)
 
