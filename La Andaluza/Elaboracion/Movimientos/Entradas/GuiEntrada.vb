@@ -1,5 +1,8 @@
 ﻿Public Class GuiEntrada
-    Dim entrada As Entradas.Entrada
+    Private entrada As Entradas.Entrada
+    Public Event CantidadIncorrecta()
+    Public Event ProductoIncorrecto()
+
     Public Sub New(ByVal tipoEntrada As Integer, ByVal entrada As Entradas.Entrada)
         InitializeComponent()
         Me.entrada = entrada
@@ -131,4 +134,12 @@
         AddHandler chbLoteNuevo.CheckedChanged, AddressOf actualiza_descripcion
     End Sub
 
+
+    Private Sub btnProductoDestinoIncorrecto_Click(sender As Object, e As EventArgs) Handles btnProductoDestinoIncorrecto.Click
+        RaiseEvent ProductoIncorrecto()
+    End Sub
+
+    Private Sub btncantidadDestinoIncorrecta_Click(sender As Object, e As EventArgs) Handles btncantidadDestinoIncorrecta.Click
+        RaiseEvent CantidadIncorrecta()
+    End Sub
 End Class

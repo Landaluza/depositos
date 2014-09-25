@@ -29,7 +29,6 @@
                                            ",[TipoLoteID] " & _
                                            ",[TipoProductoID] " & _
                                            ",[CodigoLote] " & _
-                                           ",[ProveedorID] " & _
                                            ",[FechaModificacion] " & _
                                            ",[UsuarioModificacion]) " & _
                                         "VALUES( " & _
@@ -38,7 +37,6 @@
                                             ", 43 " & _
                                             ", @producto " & _
                                             ", @nuevoCodigo " & _
-                                            ", @proveedor " & _
                                             ",CURRENT_TIMESTAMP " & _
                                             ",17 " & _
                                         ")"

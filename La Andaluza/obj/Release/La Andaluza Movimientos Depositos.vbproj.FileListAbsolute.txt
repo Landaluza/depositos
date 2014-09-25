@@ -166,3 +166,5 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.pdb
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\es\La Andaluza MovimientosDepositos.resources.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiEntrada.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiCorrectorProducto.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiCorrectorCantidad.resources

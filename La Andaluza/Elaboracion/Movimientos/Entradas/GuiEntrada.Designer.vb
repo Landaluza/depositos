@@ -42,8 +42,8 @@ Partial Class GuiEntrada
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.chbMuestra = New System.Windows.Forms.CheckBox()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.chbMuestra = New System.Windows.Forms.CheckBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -275,6 +275,18 @@ Partial Class GuiEntrada
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 644)
         Me.FlowLayoutPanel1.TabIndex = 33
         '
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbSuma)
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbLoteNuevo)
+        Me.FlowLayoutPanel2.Controls.Add(Me.chbMuestra)
+        Me.FlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 434)
+        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 13)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(568, 20)
+        Me.FlowLayoutPanel2.TabIndex = 33
+        '
         'chbMuestra
         '
         Me.chbMuestra.AutoSize = True
@@ -287,18 +299,6 @@ Partial Class GuiEntrada
         Me.chbMuestra.TabIndex = 32
         Me.chbMuestra.Text = "Crear muestra"
         Me.chbMuestra.UseVisualStyleBackColor = True
-        '
-        'FlowLayoutPanel2
-        '
-        Me.FlowLayoutPanel2.Controls.Add(Me.chbSuma)
-        Me.FlowLayoutPanel2.Controls.Add(Me.chbLoteNuevo)
-        Me.FlowLayoutPanel2.Controls.Add(Me.chbMuestra)
-        Me.FlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 434)
-        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 13)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(568, 20)
-        Me.FlowLayoutPanel2.TabIndex = 33
         '
         'GuiEntrada
         '
