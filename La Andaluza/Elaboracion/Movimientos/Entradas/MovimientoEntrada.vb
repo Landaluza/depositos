@@ -197,11 +197,15 @@
     End Sub
 
     Private Sub cantidad_incorrecta(ByVal lote As Integer, e As EventArgs)
+        'Pantalla.mostrarDialogo(CType(New CorrectorCantidad(lote), Form))
         Dim corrector As New CorrectorCantidad(lote)
+        cargarDatosuno()
     End Sub
 
     Private Sub producto_incorrecto(ByVal lote As Integer, e As EventArgs)
+        'Pantalla.mostrarDialogo(CType(New CorrectorProducto(lote), Form))
         Dim corrector As New CorrectorProducto(lote)
+        cargarDatosuno()
     End Sub
 
 End Class

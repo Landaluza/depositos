@@ -195,4 +195,14 @@
         c2.Left = Convert.ToInt32((c1.Width - c2.Width) / 2)
         c2.Top = Convert.ToInt32((c1.Height - c2.Height) / 2)
     End Sub
+
+    Shared Function mostrarDialogo(frm As Form) As DialogResult
+        Dim glass As New glassPanel
+        glass.Show()
+
+        Dim result As DialogResult = frm.ShowDialog
+        glass.Close()
+        Return result
+    End Function
+
 End Class

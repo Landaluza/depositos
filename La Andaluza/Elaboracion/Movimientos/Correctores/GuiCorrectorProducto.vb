@@ -12,10 +12,16 @@
         End Get
     End Property
 
+    Public Sub New()
+        InitializeComponent()
+
+     
+    End Sub
+
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         If Me.cboProducto.SelectedValue Is Nothing Then Return
 
         Me.DialogResult = Windows.Forms.DialogResult.OK
-        Me.Hide()
+        Me.Hide()        
     End Sub
 End Class
