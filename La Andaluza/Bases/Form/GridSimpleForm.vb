@@ -226,7 +226,8 @@ Public Class gridsimpleform
     Public Overridable Sub Action(ByVal TipoAction As String)
         Me.newRegForm.ModoDeAperturaCadena = TipoAction
         'GUImain.añadirPestaña(Me.newRegForm)
-        Me.newRegForm.ShowDialog()
+        Pantalla.mostrarDialogo(newRegForm)
+        'Me.newRegForm.ShowDialog()
     End Sub
 
     Overridable Sub ToExcel()

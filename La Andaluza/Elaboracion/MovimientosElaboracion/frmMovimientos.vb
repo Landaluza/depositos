@@ -58,7 +58,8 @@ Public Class frmMovimientos
         FrmEnt = New frmEntMovimientosCopy
         FrmEnt.Text = "Insertar Movimientos"
         FrmEnt.CargarDatos(0, 0, Today, 0, "", "0", "0", "0", "0", dtb)
-        FrmEnt.ShowDialog()
+        'FrmEnt.ShowDialog()
+        Pantalla.mostrarDialogo(FrmEnt)
         'ctlMov.mostrarTodosMovimientos(dtsMov)
         Me.dgvFill()
         ' GeneralBindingSource.Position = 1

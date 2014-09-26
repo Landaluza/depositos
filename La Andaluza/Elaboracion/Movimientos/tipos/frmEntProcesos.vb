@@ -112,7 +112,8 @@ Public Class frmEntProcesos
     Private Sub butAddTipoMovimientoID_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles butAddTipoMovimientoID.Click
         Dim DBO_TiposMovimientos As New DBO_TiposMovimientos
         Dim frmEnt As New frmEntTiposMovimientos(GridSimpleForm.ACCION_INSERTAR, New spTiposMovimientos, DBO_TiposMovimientos)
-        frmEnt.ShowDialog()
+        'frmEnt.ShowDialog()
+        Pantalla.mostrarDialogo(frmEnt)
         Dim s As New spTiposMovimientos
         s.cargar_TiposMovimientos(Me.cboTipoMovimiento)
     End Sub
