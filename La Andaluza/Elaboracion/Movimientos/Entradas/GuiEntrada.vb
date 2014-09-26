@@ -1,7 +1,7 @@
 ﻿Public Class GuiEntrada
     Private entrada As Entradas.Entrada
-    Public Event CantidadIncorrecta()
-    Public Event ProductoIncorrecto()
+    Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
+    Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
     Public Sub New(ByVal tipoEntrada As Integer, ByVal entrada As Entradas.Entrada)
         InitializeComponent()
@@ -136,10 +136,10 @@
 
 
     Private Sub btnProductoDestinoIncorrecto_Click(sender As Object, e As EventArgs) Handles btnProductoDestinoIncorrecto.Click
-        RaiseEvent ProductoIncorrecto()
+        RaiseEvent ProductoIncorrecto(Convert.ToInt32(dgvDestino.CurrentRow.Cells("loteid").Value), Nothing)
     End Sub
 
     Private Sub btncantidadDestinoIncorrecta_Click(sender As Object, e As EventArgs) Handles btncantidadDestinoIncorrecta.Click
-        RaiseEvent CantidadIncorrecta()
+        RaiseEvent CantidadIncorrecta(Convert.ToInt32(dgvDestino.CurrentRow.Cells("loteid").Value), Nothing)
     End Sub
 End Class

@@ -24,7 +24,8 @@ Partial Class GuiCorrectorCantidad
     Private Sub InitializeComponent()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnAceptar
@@ -50,22 +51,34 @@ Partial Class GuiCorrectorCantidad
         Me.btnCancelar.TabIndex = 6
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtCantidad
         '
-        Me.TextBox2.Location = New System.Drawing.Point(146, 71)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCantidad.Location = New System.Drawing.Point(191, 75)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(100, 20)
+        Me.txtCantidad.TabIndex = 8
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(92, 78)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(83, 13)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Nueva cantidad"
         '
         'GuiCorrectorCantidad
         '
         Me.CancelButton = Me.btnCancelar
         Me.ClientSize = New System.Drawing.Size(419, 192)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnCancelar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiCorrectorCantidad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -78,5 +91,6 @@ Partial Class GuiCorrectorCantidad
     Private WithEvents Button2 As System.Windows.Forms.Button
     Private WithEvents btnAceptar As System.Windows.Forms.Button
     Private WithEvents btnCancelar As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Private WithEvents Label3 As System.Windows.Forms.Label
+    Private WithEvents txtCantidad As System.Windows.Forms.TextBox
 End Class

@@ -22,21 +22,21 @@ Partial Class GuiCorrectorProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboProducto = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cboProducto
         '
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(116, 39)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(287, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.cboProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProducto.FormattingEnabled = True
+        Me.cboProducto.Location = New System.Drawing.Point(116, 39)
+        Me.cboProducto.Name = "cboProducto"
+        Me.cboProducto.Size = New System.Drawing.Size(287, 21)
+        Me.cboProducto.TabIndex = 1
         '
         'Label2
         '
@@ -91,16 +91,17 @@ Partial Class GuiCorrectorProducto
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboProducto)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GuiCorrectorProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "GuiCorrector"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Private WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Private WithEvents cboProducto As System.Windows.Forms.ComboBox
     Private WithEvents btnCancelar As System.Windows.Forms.Button
     Private WithEvents btnAceptar As System.Windows.Forms.Button
     Private WithEvents Label1 As System.Windows.Forms.Label

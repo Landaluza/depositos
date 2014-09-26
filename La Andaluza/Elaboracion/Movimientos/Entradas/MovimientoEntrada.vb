@@ -35,6 +35,8 @@
         cargarDatosuno()
 
         AddHandler gui.FormClosing, AddressOf cerrar
+        AddHandler gui.CantidadIncorrecta, AddressOf cantidad_incorrecta
+        AddHandler gui.ProductoIncorrecto, AddressOf producto_incorrecto
     End Sub
 
     Public Sub cargarDatosuno()
@@ -193,5 +195,14 @@
         End If
 
     End Sub
+
+    Private Sub cantidad_incorrecta(ByVal lote As Integer, e As EventArgs)
+        Dim corrector As New CorrectorCantidad(lote)
+    End Sub
+
+    Private Sub producto_incorrecto(ByVal lote As Integer, e As EventArgs)
+        Dim corrector As New CorrectorProducto(lote)
+    End Sub
+
 End Class
 

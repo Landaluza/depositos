@@ -448,7 +448,8 @@
     <Compile Include="Elaboracion\Movimientos\comprobadores\Watcher.vb" />
     <Compile Include="Elaboracion\Movimientos\contadorMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\Correctores\BdCorrector.vb" />
-    <Compile Include="Elaboracion\Movimientos\Correctores\Corrector.vb" />
+    <Compile Include="Elaboracion\Movimientos\Correctores\CorrectorCantidad.vb" />
+    <Compile Include="Elaboracion\Movimientos\Correctores\CorrectorProducto.vb" />
     <Compile Include="Elaboracion\Movimientos\Correctores\GuiCorrectorProducto.Designer.vb">
       <DependentUpon>GuiCorrectorProducto.vb</DependentUpon>
     </Compile>
