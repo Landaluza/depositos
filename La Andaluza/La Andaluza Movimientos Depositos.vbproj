@@ -450,10 +450,10 @@
     <Compile Include="Elaboracion\Movimientos\Correctores\BdCorrector.vb" />
     <Compile Include="Elaboracion\Movimientos\Correctores\CorrectorCantidad.vb" />
     <Compile Include="Elaboracion\Movimientos\Correctores\CorrectorProducto.vb" />
-    <Compile Include="Elaboracion\Movimientos\Correctores\glassPanel.Designer.vb">
+    <Compile Include="Bases\Clases\glassPanel.Designer.vb">
       <DependentUpon>glassPanel.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\Correctores\glassPanel.vb">
+    <Compile Include="Bases\Clases\glassPanel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Correctores\GuiCorrectorProducto.Designer.vb">
@@ -879,7 +879,7 @@
     <EmbeddedResource Include="Elaboracion\MovimientosElaboracion\frmMovimientos.resx">
       <DependentUpon>frmMovimientos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\Correctores\glassPanel.resx">
+    <EmbeddedResource Include="Bases\Clases\glassPanel.resx">
       <DependentUpon>glassPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\Correctores\GuiCorrectorProducto.resx">
