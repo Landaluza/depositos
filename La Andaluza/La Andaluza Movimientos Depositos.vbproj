@@ -1203,6 +1203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Control\_antiguos\Lotes\MuestrasObservaciones\" />
+    <Folder Include="Elaboracion\Movimientos\Diferencias\" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">
