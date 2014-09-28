@@ -468,12 +468,15 @@
     <Compile Include="Elaboracion\Movimientos\Correctores\GuiCorrectorCantidad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Diferencias\BdDiferencia.vb" />
+    <Compile Include="Elaboracion\Movimientos\Diferencias\Diferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\Diferencias\GuiDiferencia.Designer.vb">
       <DependentUpon>GuiDiferencia.vb</DependentUpon>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Diferencias\GuiDiferencia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Diferencias\MovimientoDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesemboteNC.vb" />
@@ -485,7 +488,6 @@
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\Entradas\lotefinal.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\MovimientoEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\AjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\BdAjusteComercial.vb" />
@@ -532,15 +534,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\desecho\MovimientoDEsecho.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\BdDiferencia.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\Diferencia.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.Designer.vb">
-      <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\diferencia\MovimientoDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\Envasar\BdEnvasar.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\Envasar\Envsar.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\Envasar\GuiMovimientoEnvasar.Designer.vb">
@@ -917,9 +910,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\desecho\GuiMovimientoDesecho.resx">
       <DependentUpon>GuiMovimientoDesecho.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\diferencia\GuiMovimientoDiferencia.resx">
-      <DependentUpon>GuiMovimientoDiferencia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\Envasar\GuiMovimientoEnvasar.resx">
       <DependentUpon>GuiMovimientoEnvasar.vb</DependentUpon>
