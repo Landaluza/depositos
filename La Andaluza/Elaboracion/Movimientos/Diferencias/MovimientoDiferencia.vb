@@ -96,7 +96,7 @@
                 codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Entradas.Entrada.ABREVIATURA_ENTRADA
             End If
 
-            If diferencia.loteFinal.codigo_lote = "" Then
+            If diferencia.loteFinal.codigo_lote.Replace(" ", "") = "" Then
                 diferencia.loteFinal.codigo_lote = bdDiferencia.calcular_codigo_lote(codigoSinLetra)
 
                 If Not bdDiferencia.crear_lote(diferencia.loteFinal.codigo_lote, diferencia.cantidad, diferencia.loteFinal.producto, diferencia.loteFinal.tipo) Then
@@ -125,6 +125,7 @@
             End If
 
             bdDiferencia.TerminarTransaccion()
+            gui.Close()
         Catch ex As Exception
             bdDiferencia.CancelarTransaccion()
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)

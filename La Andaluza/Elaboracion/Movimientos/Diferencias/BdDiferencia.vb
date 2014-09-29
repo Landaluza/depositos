@@ -347,7 +347,7 @@
         "@cantidad, 1, CURRENT_TIMESTAMP)"
 
         PrepararConsulta(query)
-        AñadirParametroConsulta("@id_deposito_destino", id_deposito_destino)
+        AñadirParametroConsulta("@id_deposito_destino", If(id_deposito_destino = 0, Convert.DBNull, id_deposito_destino))
         AñadirParametroConsulta("@id_deposito_origen", If(id_deposito_origen = 0, Convert.DBNull, id_deposito_origen))
         AñadirParametroConsulta("@cantidad", cantidad)
 
