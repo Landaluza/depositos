@@ -104,6 +104,8 @@
                 End If
             End If
 
+
+            ''??
             'realizar movimiento de compra a final
             If Not bdDiferencia.guardar_movimiento(diferencia.lotePartida.deposito, diferencia.loteFinal.deposito, diferencia.cantidad) Then
                 Throw New Exception("No se pudo guardar el movimiento del lote compra")

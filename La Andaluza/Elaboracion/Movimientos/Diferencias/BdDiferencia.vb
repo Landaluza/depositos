@@ -198,7 +198,7 @@
 
     Public Function recuperar_ultimo_codigo_lote(ByVal codigosinletra As String) As String
         codigosinletra = codigosinletra & "1"
-        query = "select isnull(codigolote, '') from lotes where codigolote = @cod"
+        query = "select isnull( (select codigolote from lotes where codigolote = @cod ) , '')"
         PrepararConsulta(query)
         AñadirParametroConsulta("@cod", codigosinletra)
 
