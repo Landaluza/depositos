@@ -28,6 +28,10 @@
     Public ReadOnly Property valores As Diferencias.Diferencia
         Get
             diferencia.lotePartida.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            diferencia.lotePartida.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
+            diferencia.lotePartida.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
+            diferencia.lotePartida.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+            diferencia.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
 
             diferencia.cantidad = Convert.ToDouble(txtCantidad.Text)
             diferencia.fecha = dtpFecha.Value.Date
