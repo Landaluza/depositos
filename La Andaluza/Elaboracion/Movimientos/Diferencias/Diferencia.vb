@@ -47,6 +47,7 @@
             Public Sub New(Optional ByVal tipo As Integer = 0)
                 Me.tipo = tipo
                 Me.muestra = False
+                codigo_lote = ""
             End Sub
             Public Function validar() As String
                 Dim msg As String = ""
