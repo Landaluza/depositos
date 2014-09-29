@@ -120,6 +120,11 @@
                 Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
             End If
 
+            If Me.diferencia.cantidad = Me.diferencia.lotePartida.cantidad_restante Then
+                bdDiferencia.sacar_lote(diferencia.lotePartida.codigo_lote)
+            End If
+
+
             If Not bdDiferencia.actualizar_lote(diferencia.loteFinal.codigo_lote, diferencia.cantidad) Then
                 Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
             End If
