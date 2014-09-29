@@ -21,7 +21,7 @@
         Return Consultar()
     End Function
 
-    Public Function crear_lote_entrada(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer) As Boolean
+    Public Function crear_lote(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer, ByVal tlote As Integer) As Boolean
 
         query = "INSERT INTO [dbo].[Lotes] " & _
                                            "([Fecha] " & _
@@ -34,7 +34,7 @@
                                         "VALUES( " & _
                                             "CURRENT_TIMESTAMP " & _
                                             ", @cantidad    " & _
-                                            ", 43 " & _
+                                            ", @tlote " & _
                                             ", @producto " & _
                                             ", @nuevoCodigo " & _
                                             ",CURRENT_TIMESTAMP " & _
@@ -43,6 +43,7 @@
 
         PrepararConsulta(query)
         AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@tlote", tlote)
         AñadirParametroConsulta("@producto", producto)
         AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
 
@@ -195,6 +196,15 @@
         End If
     End Function
 
+    Public Function recuperar_ultimo_codigo_lote(ByVal codigosinletra As String) As String
+        codigosinletra = codigosinletra & "1"
+        query = "select isnull(codigolote, '') from lotes where codigolote = @cod"
+        PrepararConsulta(query)
+        AñadirParametroConsulta("@cod", codigosinletra)
+
+        Return Convert.ToString(Consultar().Rows(0).Item(0))
+    End Function
+
     ''*****************************************************************************************
     ''                         funciones de proveedores
     ''*****************************************************************************************  
@@ -257,7 +267,7 @@
     ''                         funciones de depositos
     ''*****************************************************************************************
 
-    Public Function listar_depositos() As DataTable
+    Public Function listar_depositos_ocupados() As DataTable
         query = "select " & _
                         "Depositos.Codigo,   " & _
                         "Lotes.CodigoLote,  " & _
@@ -277,7 +287,7 @@
                         "TiposProductos " & _
                         "RIGHT OUTER JOIN Lotes  " & _
                         "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
-                        "RIGHT OUTER JOIN  Depositos  " & _
+                        "inner JOIN  Depositos  " & _
                         "ON Lotes.DepositoID = Depositos.DepositoID " & _
                 "where " & _
                         "Depositos.BotaID Is NULL  " & _

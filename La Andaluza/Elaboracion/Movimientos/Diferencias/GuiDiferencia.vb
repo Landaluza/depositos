@@ -1,11 +1,11 @@
 ﻿Public Class GuiDiferencia
-    Private entrada As Entradas.Entrada
+    Private diferencia As Diferencias.Diferencia
     Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
     Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-    Public Sub New(ByVal tipoEntrada As Integer, ByVal entrada As Entradas.Entrada)
+    Public Sub New(ByVal diferencia As Diferencias.Diferencia)
         InitializeComponent()
-        Me.entrada = entrada
+        Me.diferencia = diferencia
         Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
         Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
     End Sub
@@ -25,14 +25,14 @@
     End Property
 
 
-    Public ReadOnly Property valores As Entradas.Entrada
+    Public ReadOnly Property valores As Diferencias.Diferencia
         Get
-            entrada.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            diferencia.lotePartida.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
-            entrada.cantidad = Convert.ToDouble(txtCantidad.Text)
-            entrada.fecha = dtpFecha.Value.Date
+            diferencia.cantidad = Convert.ToDouble(txtCantidad.Text)
+            diferencia.fecha = dtpFecha.Value.Date
 
-            Return entrada
+            Return diferencia
         End Get
     End Property
 

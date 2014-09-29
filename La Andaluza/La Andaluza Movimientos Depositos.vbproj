@@ -561,15 +561,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\filtrados\MovimientoFiltrado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\lavados\BdLavado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.Designer.vb">
-      <DependentUpon>GuiMovimientoLavado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\lavados\Lavado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\lavados\MovimientoLavado.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\maceracion\BdMaceracion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.Designer.vb">
       <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>
@@ -919,9 +910,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.resx">
       <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\lavados\GuiMovimientoLavado.resx">
-      <DependentUpon>GuiMovimientoLavado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.resx">
       <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>

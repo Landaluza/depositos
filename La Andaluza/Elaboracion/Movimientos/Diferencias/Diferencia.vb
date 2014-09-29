@@ -1,17 +1,30 @@
 ﻿Namespace Diferencias
 
     Public Class Diferencia
-        Public Const DIFERENCIA As Integer = 1
-        Public Const LAVADO As Integer = 2
+        Public Const DIFERENCIA As Integer = 11
+        Public Const LAVADO As Integer = 13
 
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public cantidad As Double
         Public fecha As Date
 
-        Public Sub New(Optional ByVal tipoLoteFinal As Integer = 0)
+        Public frecuencia_creacion_lote As Integer
+        Public Const FRECUENCIA_MENSUAL As Integer = 1
+        Public Const FRECUENCIA_STANDAR As Integer = 2
+        Public proceso As Integer
+
+        Public Sub New(ByVal proceso As Integer)
+            Me.proceso = proceso
+
+            If proceso = Diferencias.Diferencia.DIFERENCIA Then
+                Me.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_MENSUAL
+            Else
+                Me.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_STANDAR
+            End If
+
             Me.lotePartida = New Lote()
-            Me.loteFinal = New Lote(tipoLoteFinal)
+            Me.loteFinal = New Lote(proceso)
         End Sub
 
         Public Function validar() As String

@@ -99,7 +99,7 @@
     End Sub
 
     Private Sub btnDiferencia_Click(sender As Object, e As EventArgs) Handles btnDiferencia.Click
-        Dim trasiego As New MovimientoTrasiego
+        Dim trasiego As New MovimientoDiferencia(Diferencias.Diferencia.DIFERENCIA)
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
@@ -110,8 +110,8 @@
 
 
     Private Sub btnLavado_Click(sender As Object, e As EventArgs) Handles btnLavado.Click
-        Dim trasiego As New MovimientoLavado
-        GUImain.añadirPestañaCentrada(trasiego.Form)
+        'Dim trasiego As New MovimientoLavado
+        'GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
     Private Sub btnMigracion_Click(sender As Object, e As EventArgs) Handles btnMigracion.Click
