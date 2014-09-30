@@ -489,6 +489,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Entradas\MovimientoEntrada.vb" />
+    <Compile Include="Elaboracion\Movimientos\Filtrado\BdFiltrado.vb" />
+    <Compile Include="Elaboracion\Movimientos\Filtrado\Filtrado.vb" />
+    <Compile Include="Elaboracion\Movimientos\Filtrado\GuiFiltrado.Designer.vb">
+      <DependentUpon>GuiFiltrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Filtrado\GuiFiltrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Filtrado\MovimientoFiltrado.vb" />
+    <Compile Include="Elaboracion\Movimientos\Maceracion\BdMaceracion.vb" />
+    <Compile Include="Elaboracion\Movimientos\Maceracion\GuiMaceracion.Designer.vb">
+      <DependentUpon>GuiMaceracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Maceracion\GuiMaceracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Maceracion\Maceracion.vb" />
+    <Compile Include="Elaboracion\Movimientos\Maceracion\MovimientoMaceracion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\AjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\BdAjusteComercial.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.Designer.vb">
@@ -552,24 +570,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\modulos\fermentados\MovimientoFermentacion.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\BdFiltrado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\Filtrado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.Designer.vb">
-      <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\filtrados\MovimientoFiltrado.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\BdMaceracion.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.Designer.vb">
-      <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\Maceracion.vb" />
-    <Compile Include="Elaboracion\Movimientos\modulos\maceracion\MovimientoMaceracion.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\bdNiveles.vb" />
     <Compile Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.Designer.vb">
       <DependentUpon>guiNiveles.vb</DependentUpon>
@@ -884,8 +884,14 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\Entradas\GuiEntrada.resx">
       <DependentUpon>GuiEntrada.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Filtrado\GuiFiltrado.resx">
+      <DependentUpon>GuiFiltrado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Maceracion\GuiMAceracion.resx">
+      <DependentUpon>GuiMaceracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\ajsutes comerciales\GuiMovimientoAjustesComerciales.resx">
       <DependentUpon>GuiMovimientoAjustesComerciales.vb</DependentUpon>
@@ -907,12 +913,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\fermentados\GuiMovimientoFermentacion.resx">
       <DependentUpon>GuiMovimientoFermentacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\filtrados\GuiMovimientoFiltrado.resx">
-      <DependentUpon>GuiMovimientoFiltrado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\modulos\maceracion\GuiMovimientoMAceracion.resx">
-      <DependentUpon>GuiMovimientoMAceracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\modulos\niveles\guiNiveles.resx">
       <DependentUpon>guiNiveles.vb</DependentUpon>

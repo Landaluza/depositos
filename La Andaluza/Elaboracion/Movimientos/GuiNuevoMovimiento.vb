@@ -64,7 +64,7 @@
     End Sub
 
     Private Sub btnFiltrado_Click(sender As Object, e As EventArgs) Handles btnFiltrado.Click
-        Dim trasiego As New MovimientoFiltrado
+        Dim trasiego As New MovimientoFiltrado(1)
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
@@ -115,7 +115,7 @@
     End Sub
 
     Private Sub btnMigracion_Click(sender As Object, e As EventArgs) Handles btnMigracion.Click
-        Dim trasiego As New MovimientoMaceracion
+        Dim trasiego As New MovimientoMaceracion(1)
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 

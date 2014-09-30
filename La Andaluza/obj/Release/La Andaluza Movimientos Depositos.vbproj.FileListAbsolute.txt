@@ -130,8 +130,6 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoDesecho.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoEnvasar.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoFermentacion.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoFiltrado.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoMAceracion.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.guiNiveles.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.guiProductoIncorrecto.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiMovimientoPieCuba.resources
@@ -168,3 +166,4 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiCorrectorCantidad.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.glassPanel.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiDiferencia.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiFiltrado.resources
