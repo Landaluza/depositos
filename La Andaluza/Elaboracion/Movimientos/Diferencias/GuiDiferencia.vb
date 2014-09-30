@@ -72,4 +72,8 @@
     Private Sub btncantidadDestinoIncorrecta_Click(sender As Object, e As EventArgs) Handles btncantidadDestinoIncorrecta.Click
         RaiseEvent CantidadIncorrecta(Convert.ToInt32(dgvDestino.CurrentRow.Cells("loteid").Value), Nothing)
     End Sub
+
+    Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
+        txtCantidad.Text = Convert.ToString(dgvDestino.CurrentRow.Cells("CantidadRestante").Value)
+    End Sub
 End Class

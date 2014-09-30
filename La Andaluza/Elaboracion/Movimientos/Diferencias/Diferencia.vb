@@ -13,7 +13,7 @@
         Public Const FRECUENCIA_MENSUAL As Integer = 1
         Public Const FRECUENCIA_STANDAR As Integer = 2
         Public proceso As Integer
-
+        Public Abreviatura As String
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso
 

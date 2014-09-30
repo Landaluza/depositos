@@ -32,6 +32,7 @@ Partial Class GuiDiferencia
         Me.lDescripcionDestino = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.btnTodo = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -47,7 +48,7 @@ Partial Class GuiDiferencia
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 460)
-        Me.FlowLayoutPanel1.TabIndex = 36
+        Me.FlowLayoutPanel1.TabIndex = 0
         '
         'dtpFecha
         '
@@ -56,7 +57,7 @@ Partial Class GuiDiferencia
         Me.dtpFecha.Location = New System.Drawing.Point(468, 3)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
-        Me.dtpFecha.TabIndex = 32
+        Me.dtpFecha.TabIndex = 0
         '
         'dgvDestino
         '
@@ -72,7 +73,7 @@ Partial Class GuiDiferencia
         Me.dgvDestino.RowHeadersVisible = False
         Me.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
-        Me.dgvDestino.TabIndex = 15
+        Me.dgvDestino.TabIndex = 1
         '
         'GroupBox2
         '
@@ -82,7 +83,7 @@ Partial Class GuiDiferencia
         Me.GroupBox2.Location = New System.Drawing.Point(3, 274)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
-        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalles"
         '
@@ -95,7 +96,7 @@ Partial Class GuiDiferencia
         Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
         Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
         Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
-        Me.btnProductoDestinoIncorrecto.TabIndex = 4
+        Me.btnProductoDestinoIncorrecto.TabIndex = 1
         Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
         Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
         '
@@ -108,7 +109,7 @@ Partial Class GuiDiferencia
         Me.btncantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
         Me.btncantidadDestinoIncorrecta.Name = "btncantidadDestinoIncorrecta"
         Me.btncantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
-        Me.btncantidadDestinoIncorrecta.TabIndex = 3
+        Me.btncantidadDestinoIncorrecta.TabIndex = 2
         Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
         Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
         '
@@ -119,7 +120,7 @@ Partial Class GuiDiferencia
         Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
         Me.lDescripcionDestino.Name = "lDescripcionDestino"
         Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-        Me.lDescripcionDestino.TabIndex = 1
+        Me.lDescripcionDestino.TabIndex = 0
         Me.lDescripcionDestino.Text = "-"
         '
         'btnGuardar
@@ -130,7 +131,7 @@ Partial Class GuiDiferencia
         Me.btnGuardar.Location = New System.Drawing.Point(416, 488)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
-        Me.btnGuardar.TabIndex = 35
+        Me.btnGuardar.TabIndex = 3
         Me.btnGuardar.Text = "Continuar"
         Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnGuardar.UseVisualStyleBackColor = True
@@ -143,15 +144,27 @@ Partial Class GuiDiferencia
         Me.txtCantidad.Multiline = True
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
-        Me.txtCantidad.TabIndex = 34
+        Me.txtCantidad.TabIndex = 1
         Me.txtCantidad.Text = "0"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnTodo
+        '
+        Me.btnTodo.FlatAppearance.BorderSize = 0
+        Me.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTodo.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_414_disk_save
+        Me.btnTodo.Location = New System.Drawing.Point(295, 488)
+        Me.btnTodo.Name = "btnTodo"
+        Me.btnTodo.Size = New System.Drawing.Size(31, 69)
+        Me.btnTodo.TabIndex = 2
+        Me.btnTodo.UseVisualStyleBackColor = True
         '
         'GuiDiferencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 591)
+        Me.Controls.Add(Me.btnTodo)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtCantidad)
@@ -173,4 +186,5 @@ Partial Class GuiDiferencia
     Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
     Public WithEvents btnGuardar As System.Windows.Forms.Button
     Public WithEvents txtCantidad As System.Windows.Forms.TextBox
+    Private WithEvents btnTodo As System.Windows.Forms.Button
 End Class

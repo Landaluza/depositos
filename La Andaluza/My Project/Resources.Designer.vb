@@ -513,6 +513,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property glyphicons_414_disk_save() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("glyphicons_414_disk_save", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property glyphicons_432_plus() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("glyphicons_432_plus", resourceCulture)

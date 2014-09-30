@@ -23,6 +23,8 @@
         diferencia.lotePartida.tipo = Convert.ToInt32(bdDiferencia.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
         diferencia.lotePartida.muestra = Convert.ToBoolean(bdDiferencia.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
+        If diferencia.lotePartida.tipo <> 0 Then diferencia.Abreviatura = Convert.ToString(bdDiferencia.seleccionar_detalles_tlote(diferencia.lotePartida.tipo).Rows(0).Item(2))
+
         gui = New GuiDiferencia(diferencia)
 
         iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
@@ -88,13 +90,14 @@
             If Me.diferencia.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_MENSUAL Then
                 fechaDiferencias = New Date(diferencia.fecha.Year, diferencia.fecha.Month, 1)
 
-                codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Entradas.Entrada.ABREVIATURA_ENTRADA
+                codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Me.diferencia.Abreviatura
                 diferencia.loteFinal.codigo_lote = bdDiferencia.recuperar_ultimo_codigo_lote(codigoSinLetra)
             Else
                 fechaDiferencias = diferencia.fecha
 
-                codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Entradas.Entrada.ABREVIATURA_ENTRADA
+                codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Me.diferencia.Abreviatura
             End If
+
 
             If diferencia.loteFinal.codigo_lote.Replace(" ", "") = "" Then
                 diferencia.loteFinal.codigo_lote = bdDiferencia.calcular_codigo_lote(codigoSinLetra)

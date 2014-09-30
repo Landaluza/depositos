@@ -1089,6 +1089,7 @@
     <None Include="Resources\glyphicons_040_stats.png" />
     <None Include="Resources\glyphicons_040_stats1.png" />
     <None Include="Resources\glyphicons_123_message_out.png" />
+    <None Include="Resources\glyphicons_414_disk_save.png" />
     <Content Include="Resources\lavado.png" />
     <Content Include="Resources\maceracion.png" />
     <Content Include="Resources\piebota.png" />
