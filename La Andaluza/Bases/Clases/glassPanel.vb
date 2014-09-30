@@ -9,6 +9,11 @@
     End Sub
     Public Sub recolocar(sender As Object, e As EventArgs)
         Me.Size = New Size(padre.Size.Width + 200, padre.Size.Height + 100)
-            Me.Location = New Point(padre.Location.X - 100, padre.Location.Y - 50)
+        Me.Location = New Point(padre.Location.X - 100, padre.Location.Y - 50)
+        Me.Show()
+    End Sub
+
+    Public Sub ocultar(sender As Object, e As EventArgs)
+        Me.Hide()
     End Sub
 End Class

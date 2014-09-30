@@ -167,3 +167,4 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
