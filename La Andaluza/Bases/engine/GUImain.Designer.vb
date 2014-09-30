@@ -58,7 +58,11 @@ Partial Class GUImain
         Me.tsNavegacion = New System.Windows.Forms.ToolStripLabel()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cmsNotificacionesOperaciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.msOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MonitorActivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Monitor1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Monitor2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.mAgenda.SuspendLayout()
         Me.msMenu.SuspendLayout()
@@ -78,6 +82,7 @@ Partial Class GUImain
         Me.ToolStrip1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tsPestañas.SuspendLayout()
+        Me.msOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -233,6 +238,7 @@ Partial Class GUImain
         '
         'NuevoMovimientoToolStripMenuItem
         '
+        Me.NuevoMovimientoToolStripMenuItem.Enabled = False
         Me.NuevoMovimientoToolStripMenuItem.Name = "NuevoMovimientoToolStripMenuItem"
         Me.NuevoMovimientoToolStripMenuItem.Size = New System.Drawing.Size(122, 21)
         Me.NuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento"
@@ -441,10 +447,36 @@ Partial Class GUImain
         Me.ToolTip1.ShowAlways = True
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
-        'cmsNotificacionesOperaciones
+        'NotifyIcon1
         '
-        Me.cmsNotificacionesOperaciones.Name = "ContextMenuStrip1"
-        Me.cmsNotificacionesOperaciones.Size = New System.Drawing.Size(61, 4)
+        Me.NotifyIcon1.ContextMenuStrip = Me.msOpciones
+        Me.NotifyIcon1.Text = "Depositos"
+        Me.NotifyIcon1.Visible = True
+        '
+        'msOpciones
+        '
+        Me.msOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MonitorActivoToolStripMenuItem})
+        Me.msOpciones.Name = "msOpciones"
+        Me.msOpciones.Size = New System.Drawing.Size(153, 26)
+        '
+        'MonitorActivoToolStripMenuItem
+        '
+        Me.MonitorActivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Monitor1ToolStripMenuItem, Me.Monitor2ToolStripMenuItem})
+        Me.MonitorActivoToolStripMenuItem.Name = "MonitorActivoToolStripMenuItem"
+        Me.MonitorActivoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MonitorActivoToolStripMenuItem.Text = "Monitor activo"
+        '
+        'Monitor1ToolStripMenuItem
+        '
+        Me.Monitor1ToolStripMenuItem.Name = "Monitor1ToolStripMenuItem"
+        Me.Monitor1ToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.Monitor1ToolStripMenuItem.Text = "Monitor 1"
+        '
+        'Monitor2ToolStripMenuItem
+        '
+        Me.Monitor2ToolStripMenuItem.Name = "Monitor2ToolStripMenuItem"
+        Me.Monitor2ToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.Monitor2ToolStripMenuItem.Text = "Monitor 2"
         '
         'GUImain
         '
@@ -487,6 +519,7 @@ Partial Class GUImain
         Me.Panel3.PerformLayout()
         Me.tsPestañas.ResumeLayout(False)
         Me.tsPestañas.PerformLayout()
+        Me.msOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -511,7 +544,6 @@ Partial Class GUImain
     Protected WithEvents Panel9 As System.Windows.Forms.Panel
     Protected WithEvents Label26 As System.Windows.Forms.Label
     Protected WithEvents Label25 As System.Windows.Forms.Label
-    Protected WithEvents cmsNotificacionesOperaciones As System.Windows.Forms.ContextMenuStrip
     Protected WithEvents lMensajes As System.Windows.Forms.Label
     Protected WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Protected WithEvents tsPetañalateral As System.Windows.Forms.ToolStripButton
@@ -527,5 +559,10 @@ Partial Class GUImain
     Protected WithEvents ElaboracionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Protected WithEvents FiltrosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Protected WithEvents NuevoMovimientoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
+    Protected WithEvents msOpciones As System.Windows.Forms.ContextMenuStrip
+    Protected WithEvents MonitorActivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents Monitor1ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Protected WithEvents Monitor2ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

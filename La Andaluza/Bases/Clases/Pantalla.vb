@@ -46,7 +46,16 @@
         Me.ubicar(pantalla, form, posicion)
 
         If modal Then
-            Return form.ShowDialog()
+            Dim glass As New glassPanel(form)
+            glass.Text = form.Text
+            glass.Size = New Size(form.Size.Width + 200, form.Size.Height + 100)
+            glass.Show()
+            AddHandler form.ResizeEnd, AddressOf glass.recolocar
+
+            Dim result As DialogResult = form.ShowDialog
+            glass.Close()
+            Return result
+            'Return form.ShowDialog()
         Else
             form.Show()
             Return DialogResult.OK
@@ -197,13 +206,10 @@
     End Sub
 
     Shared Function mostrarDialogo(frm As Form) As DialogResult
-        Dim glass As New glassPanel
-        glass.Text = frm.Text
-        glass.Show()
-        glass.FormBorderStyle = FormBorderStyle.None
-        Dim result As DialogResult = frm.ShowDialog
-        glass.Close()
-        Return result
+        Dim pant As New Pantalla
+        Return pant.mostrar_formulario(Config.activeScreen, frm, True, CENTRADA)
     End Function
+
+
 
 End Class

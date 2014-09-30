@@ -47,6 +47,13 @@ Public Class GUImain
 
         MovimientosToolStripMenuItem_Click(Me, Nothing)
         ElaboracionesToolStripMenuItem_Click(Me, Nothing)
+
+        Dim scr As New Pantalla
+        If Not scr.isMultiScreen Then
+            Me.Monitor2ToolStripMenuItem.Enabled = False
+        End If
+
+        Me.NotifyIcon1.Icon = My.Resources.folder_development
     End Sub
 
     Public Sub CambiarSesion()
@@ -64,31 +71,6 @@ Public Class GUImain
         ProcesosAbiertosToolStripMenuItem_Click(Nothing, Nothing)
         Me.Show()
     End Sub
-
-    'Protected Sub lblDragEnter(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs)
-    '    e.Effect = DragDropEffects.Copy
-    '    sender.BorderStyle = BorderStyle.Fixedsingle
-    'End Sub
-
-    'Protected Sub lblDragLeave(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DragEventArgs)
-    '    sender.BorderStyle = BorderStyle.None
-    'End Sub
-
-    'Public Sub tsm_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs)
-    '    If e.Button = Windows.Forms.MouseButtons.Left Then
-    '        If Me.SplitContainer1.Panel1Collapsed Then
-    '            Me.SplitContainer1.Panel1Collapsed = False
-    '        End If
-    '        Me.tsCustomMenu.AllowDrop = True
-    '        sender.DoDragDrop(sender, DragDropEffects.Copy)
-    '    End If
-    'End Sub
-
-    'Public Sub tsmToTrash_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs)
-    '    If e.Button = Windows.Forms.MouseButtons.Left Then
-    '        sender.DoDragDrop(sender, DragDropEffects.Copy)
-    '    End If
-    'End Sub
 
     Public Sub cerrarPestaña()
         Try
@@ -331,28 +313,6 @@ Public Class GUImain
         LAengine.AñadirPestaña(frmEnt)
     End Sub
 
-
-    'Private Sub cargarExtras(ByVal sender As System.Object, _
-    '  ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-
-    '    'AddHandler tsNavegacion.MouseEnter, AddressOf ToolStripLabel1_Click
-    '    'AddHandler Me.SplitContainer1.Panel1.MouseLeave, AddressOf ToolStripLabel1_Click
-
-    '    'calculo del tamaño del cierre de las pestañas
-    '    'TabTarget = CreateGraphics.MeasureString(" x", TabControl1.Font)
-
-    'End Sub
-
-    'Private Sub ended(ByVal sender As System.Object, _
-    '  ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-
-    '    If Not Config.dataFillNotificaction Then
-    '        frmNews.ocultarNotificaciones() 'Me.PanNot1.Visible = False
-    '    End If
-
-    'End Sub
-
-
     Private Sub LAgenda_Click(sender As System.Object, e As System.EventArgs) Handles LAgenda.Click
         mAgenda.Show(LAgenda, LAgenda.Location)
     End Sub
@@ -409,6 +369,14 @@ Public Class GUImain
     Private Sub NuevoMovimientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoMovimientoToolStripMenuItem.Click
         Dim frm As New GuiNuevoMovimiento
         LAengine.AñadirPestaña(CType(frm, Form))
+    End Sub
+
+    Private Sub Monitor1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Monitor1ToolStripMenuItem.Click
+        Config.activeScreen = 0
+    End Sub
+
+    Private Sub Monitor2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Monitor2ToolStripMenuItem.Click
+        Config.activeScreen = 1
     End Sub
 End Class
 
