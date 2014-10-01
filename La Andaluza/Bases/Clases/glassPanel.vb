@@ -10,10 +10,15 @@
     Public Sub recolocar(sender As Object, e As EventArgs)
         Me.Size = New Size(padre.Size.Width + 200, padre.Size.Height + 100)
         Me.Location = New Point(padre.Location.X - 100, padre.Location.Y - 50)
-        Me.Show()
+        Me.Visible = True
     End Sub
 
     Public Sub ocultar(sender As Object, e As EventArgs)
-        Me.Hide()
+        Me.Visible = False
+    End Sub
+
+    Private Sub glassPanel_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Dim result As DialogResult = padre.ShowDialog
+        Me.DialogResult = result
     End Sub
 End Class
