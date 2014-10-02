@@ -27,7 +27,7 @@
     Public Shared activeScreen As Integer
 
     Public Shared Sub Cargar_Ajustes_Predeterminados()
-        Config.Server = DataBase.SERVIDOR
+        Config.Server = DataBase.LOCAL
         Config.MailReportPass = "Administracion2008"
         Config.HelpUrl = "http://192.168.10.106/AyudaLA/index.php"
         Config.ventasPath = "Z:\Informatica\La Andaluza app\ExcelFile\Book1.xlsx"
@@ -36,7 +36,7 @@
         Config.QS_Sesion = "Sesión A - [24 x 80]"
         'Config.QS_Sesion = "Sesión A"
 
-        activeScreen = 0
+        Config.load()
     End Sub
 
     Public Shared ReadOnly Property Version_seriada As String
@@ -117,4 +117,29 @@
                 Config.versionApp = "LA Movimientos" & Convert.ToString(My.Application.Info.Version).Substring(0, 7) '& " -- " & String.Format("Version {0}", NumeroVersion())
         End Select
     End Sub
+
+    Public Shared Sub save()
+        Dim options As New UserOptions
+        Dim fil As New File
+
+        options.Screen = Config.activeScreen
+        Try
+            fil.saveObject(options, Environment.SpecialFolder.MyDocuments & "options.opt")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Public Shared Sub load()
+        Dim fil As New File
+        Dim opt As UserOptions
+
+        Try
+            opt = fil.loadObject(Environment.SpecialFolder.MyDocuments & "options.opt")
+            Config.activeScreen = opt.Screen
+        Catch ex As Exception
+            Config.activeScreen = 0
+        End Try
+    End Sub
+
 End Class
