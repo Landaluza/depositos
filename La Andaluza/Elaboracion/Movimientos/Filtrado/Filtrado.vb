@@ -1,23 +1,20 @@
 ﻿Namespace Filtrados
 
-    Public Class Filtrado
-        Public Const ABREVIATURA_ENTRADA As String = "Rec"
-        Public Const COMPRA As Integer = 1
-        Public Const DESEMBOTE As Integer = 2
-        Public Const DESEMBOTE_NO_COMFORME As Integer = 3
-
+    Public Class Filtrado        
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public cantidad As Double
-        Public proveedorCompra As Integer
         Public sumarAdestino As Boolean
         Public fecha As Date
+        Public proceso As Integer
+        Public Abreviatura As String
+        Public filtro As Integer
 
-        Public Sub New(Optional ByVal tipoLoteFinal As Integer = 0)
-            proveedorCompra = 0
+        Public Sub New(ByVal proceso As Integer)
+            Me.proceso = proceso
 
             Me.lotePartida = New Lote()
-            Me.loteFinal = New Lote(tipoLoteFinal)
+            Me.loteFinal = New Lote()
         End Sub
 
         Public Function validar() As String
@@ -50,6 +47,7 @@
             Public Sub New(Optional ByVal tipo As Integer = 0)
                 Me.tipo = tipo
                 Me.muestra = False
+                codigo_lote = ""
             End Sub
             Public Function validar() As String
                 Dim msg As String = ""
