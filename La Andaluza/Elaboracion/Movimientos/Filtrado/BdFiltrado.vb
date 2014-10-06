@@ -229,7 +229,17 @@
             PrepararConsulta(query)
 
             Return Consultar()
-        End Function
+    End Function
+
+    ''*****************************************************************************************
+    ''                         funciones de filtros
+    ''*****************************************************************************************     
+    Public Function devolver_Filtros() As DataTable
+        query = ("FiltrosCbo")
+        PrepararConsulta(query)
+        Return Consultar()
+    End Function
+
         ''*****************************************************************************************
         ''                         funciones de tiposLotes
         ''*****************************************************************************************       
@@ -269,39 +279,14 @@
         ''                         funciones de depositos
         ''*****************************************************************************************
 
-        Public Function listar_depositos_ocupados() As DataTable
-            query = "select " & _
-                            "Depositos.Codigo,   " & _
-                            "Lotes.CodigoLote,  " & _
-                            "CASE  " & _
-                            "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
-                                    "ELSE Lotes.Descripcion  " & _
-                            "END AS Descripcion, " & _
-                            "Depositos.Capacidad,  " & _
-                            "Lotes.CantidadRestante,     " & _
-                            "Depositos.depositoID, " & _
-                            "Depositos.Listado,   " & _
-                            "Lotes.TipoLoteID,  " & _
-                            "Lotes.TipoProductoID, " & _
-                            "TiposProductos.descripcion producto, " & _
-                            "Lotes.loteid " & _
-                    "from  " & _
-                            "TiposProductos " & _
-                            "RIGHT OUTER JOIN Lotes  " & _
-                            "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
-                            "inner JOIN  Depositos  " & _
-                            "ON Lotes.DepositoID = Depositos.DepositoID " & _
-                    "where " & _
-                            "Depositos.BotaID Is NULL  " & _
-                            "and  " & _
-                            "Depositos.Listado = 'TRUE' " & _
-                            "ORDER BY " & _
-                            "Depositos.Codigo "
+    Public Function listar_depositos_libres() As DataTable
+        query = "devolverDepositosFinales"
+       
 
-            PrepararConsulta(query)
+        PrepararConsulta(query)
 
-            Return Consultar()
-        End Function
+        Return Consultar()
+    End Function
 
         Public Function seleccionar_detalles_deposito(ByVal id_deposito As Integer) As DataTable
             query = "select " & _
@@ -339,6 +324,38 @@
         End Function
 
 
+    Public Function devolver_depositos_ocupados() As DataTable
+        query = "select " & _
+                       "Depositos.Codigo,   " & _
+                       "Lotes.CodigoLote,  " & _
+                       "CASE  " & _
+                       "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
+                               "ELSE Lotes.Descripcion  " & _
+                       "END AS Descripcion, " & _
+                       "Depositos.Capacidad,  " & _
+                       "Lotes.CantidadRestante,     " & _
+                       "Depositos.depositoID, " & _
+                       "Depositos.Listado,   " & _
+                       "Lotes.TipoLoteID,  " & _
+                       "Lotes.TipoProductoID, " & _
+                       "TiposProductos.descripcion producto, " & _
+                       "Lotes.loteid " & _
+               "from  " & _
+                       "TiposProductos " & _
+                       "RIGHT OUTER JOIN Lotes  " & _
+                       "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
+                       "inner JOIN  Depositos  " & _
+                       "ON Lotes.DepositoID = Depositos.DepositoID " & _
+               "where " & _
+                       "Depositos.BotaID Is NULL  " & _
+                       "and  " & _
+                       "Depositos.Listado = 'TRUE' " & _
+                       "ORDER BY " & _
+                       "Depositos.Codigo "
+
+        PrepararConsulta(query) '"devolverDepositosPartidas")
+        Return Me.Consultar()
+    End Function
         ''*****************************************************************************************
         ''                         funciones de movimientos
         ''*****************************************************************************************
