@@ -130,13 +130,13 @@
     End Sub
 
     Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click
-        Dim trasiego As New MovimientoTrasiego(9)
+        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
     Private Sub estadisticas(sender As Object, e As EventArgs) Handles btnDEsembote.Click, btnPieCuba.Click, btnMigracion.Click, btnLavado.Click, btnFermentados.Click, btnDiferencia.Click, btnDesemboteNC.Click, btnDesecho.Click, _
         btnCoccionControlada.Click, btnClarificacion.Click, btnAjustesAgua.Click, btnAjustesComerciales.Click, btnFiltrado.Click, btnEnvasar.Click, btnVenta.Click, btnCompra.Click, btnNiveles.Click, _
-        btnTrasiego.Click
+        btnTrasiego.Click, btnTerminado.Click, btnClarificacion.Click
 
         Dim index As Integer = Convert.ToInt32(CType(sender, Button).Tag)
         contador.incrementar(index - 1)
@@ -145,6 +145,21 @@
             fil.saveObject(CType(contador, Object), My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\mov.obj")
         Catch ex As Exception
         End Try
-        
+
+    End Sub
+
+    Private Sub btnTerminado_Click(sender As Object, e As EventArgs) Handles btnTerminado.Click
+        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
+        GUImain.añadirPestañaCentrada(trasiego.Form)
+    End Sub
+
+    Private Sub btnFermentado_Click(sender As Object, e As EventArgs) Handles btnFermentados.Click
+        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
+        GUImain.añadirPestañaCentrada(trasiego.Form)
+    End Sub
+
+    Private Sub btnClarificacion_Click(sender As Object, e As EventArgs) Handles btnClarificacion.Click
+        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
+        GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 End Class
