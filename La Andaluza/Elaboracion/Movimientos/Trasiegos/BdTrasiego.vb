@@ -383,16 +383,17 @@
     ''*****************************************************************************************
     ''                         funciones de movimientos
     ''*****************************************************************************************
-    Public Function guardar_movimiento(ByVal id_deposito_origen As Integer, ByVal id_deposito_destino As Integer, ByVal cantidad As Double) As Boolean
+    Public Function guardar_movimiento(ByVal id_deposito_origen As Integer, ByVal id_deposito_destino As Integer, ByVal cantidad As Double, ByVal proceso As Integer) As Boolean
         query = "insert into movimientos(entraDepositoID, saleDepositoId, cantidad, procesoid, fecha) " & _
                         "values( @id_deposito_destino, " & _
                                 "@id_deposito_origen, " & _
-        "@cantidad, 1, CURRENT_TIMESTAMP)"
+        "@cantidad, @proc, CURRENT_TIMESTAMP)"
 
         PrepararConsulta(query)
         AñadirParametroConsulta("@id_deposito_destino", If(id_deposito_destino = 0, Convert.DBNull, id_deposito_destino))
         AñadirParametroConsulta("@id_deposito_origen", If(id_deposito_origen = 0, Convert.DBNull, id_deposito_origen))
         AñadirParametroConsulta("@cantidad", cantidad)
+        AñadirParametroConsulta("@proc", proceso)
 
         Return Consultar(True)
 
