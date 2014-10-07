@@ -57,14 +57,14 @@
 
     Private Sub cargardatos()
         listadoDepositos = bdTrasiego.devolver_depositos_ocupados
-        listadoDepositosDestino = bdTrasiego.devolver_depositos
+        'listadoDepositosDestino = bdTrasiego.devolver_depositos
         listadoProductos = bdTrasiego.listar_productos
         listadoTiposLotes = bdTrasiego.listar_tlotes
         gui.BeginInvoke(invocador)
     End Sub
 
     Private Sub mostrarDatos()
-        gui.DestinoDatasource = listadoDepositosDestino
+        ' gui.DestinoDatasource = listadoDepositosDestino
         gui.OrigenDatasource = listadoDepositos
         gui.TipoProductoDatasource = listadoProductos
         gui.TipoLoteDatasource = listadoTiposLotes

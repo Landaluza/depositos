@@ -410,8 +410,8 @@
                        "ORDER BY " & _
                        "Depositos.Codigo "
 
-        AñadirParametroConsulta("@cod", codigo)
         PrepararConsulta(query)
+        AñadirParametroConsulta("@cod", codigo)
         Return Me.Consultar()
     End Function
     ''*****************************************************************************************
