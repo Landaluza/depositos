@@ -68,7 +68,7 @@
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                 trasiego.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
                 trasiego.sumarAdestino = True
-                If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+                If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(cboTiplote.SelectedValue)
             Else
                 trasiego.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
 
@@ -143,5 +143,9 @@
 
     Private Sub btncantidadOrigenIncorrecta_Click(sender As Object, e As EventArgs) Handles btncantidadOrigenIncorrecta.Click
         RaiseEvent CantidadIncorrecta(Convert.ToInt32(dgvOrigen.CurrentRow.Cells("loteid").Value), Nothing)
+    End Sub
+
+    Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
+        txtCantidad.Text = Convert.ToString(dgvOrigen.CurrentRow.Cells("CantidadRestante").Value)
     End Sub
 End Class

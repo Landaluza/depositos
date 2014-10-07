@@ -77,12 +77,15 @@
         hiloDatosDestino.Start()
     End Sub
 
-    Private Sub solicitardatosDestino()
+    Private Sub solicitardatosDestino()        
         If Not gui.dgvOrigen.CurrentRow Is Nothing Then
             listadoDepositosDestino = bdTrasiego.devolver_depositos_excepto(Convert.ToString(gui.dgvOrigen.CurrentRow.Cells(0).Value))
         End If
 
-        gui.BeginInvoke(invocadorDatosDestino)
+        Try
+            gui.BeginInvoke(invocadorDatosDestino)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub mostrarDatosDestino()
@@ -90,7 +93,14 @@
     End Sub
 
     Private Sub cerrar()
+        Dim s As eventhandler = AddressOf cargarDatosDestino
+        RemoveHandler gui.dgvOrigen.SelectionChanged, s
+
         If hiloDatos.IsAlive Then hiloDatos.Abort()
+        If hiloDatosDestino.IsAlive Then
+            hiloDatosDestino.Abort()
+            invocadorDatosDestino = Nothing
+        End If
     End Sub
 
     Protected Sub guardar()

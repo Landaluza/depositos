@@ -46,6 +46,7 @@ Partial Class GuiTrasiego
         Me.chbSuma = New System.Windows.Forms.CheckBox()
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.chbMuetra = New System.Windows.Forms.CheckBox()
+        Me.btnTodo = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -339,11 +340,23 @@ Partial Class GuiTrasiego
         Me.chbMuetra.Text = "Crear muestra"
         Me.chbMuetra.UseVisualStyleBackColor = True
         '
+        'btnTodo
+        '
+        Me.btnTodo.FlatAppearance.BorderSize = 0
+        Me.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTodo.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_414_disk_save
+        Me.btnTodo.Location = New System.Drawing.Point(843, 607)
+        Me.btnTodo.Name = "btnTodo"
+        Me.btnTodo.Size = New System.Drawing.Size(31, 69)
+        Me.btnTodo.TabIndex = 38
+        Me.btnTodo.UseVisualStyleBackColor = True
+        '
         'GuiTrasiego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1231, 691)
+        Me.Controls.Add(Me.btnTodo)
         Me.Controls.Add(Me.FlowLayoutPanel3)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
@@ -386,4 +399,5 @@ Partial Class GuiTrasiego
     Private WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
     Private WithEvents chbMuetra As System.Windows.Forms.CheckBox
     Private WithEvents lDescripcionOrigen As System.Windows.Forms.Label
+    Private WithEvents btnTodo As System.Windows.Forms.Button
 End Class
