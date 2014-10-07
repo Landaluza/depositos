@@ -1,4 +1,4 @@
-﻿Public Class MovimientoAjusteAgua
+﻿Public Class MovimientoCoccionControlada
     Private gui As GuiMovimientoTrasiego
     Private bdTrasiego As bdTrasiego
     Private listadoDepositos As DataTable
@@ -54,7 +54,7 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdTrasiego.listar_depositos()
+        listadoDepositos = bdTrasiego.listar_depositos_libres()
         listadoLotes = bdTrasiego.listar_tlotes
         listadoProductos = bdTrasiego.listar_productos
         gui.BeginInvoke(invocador)

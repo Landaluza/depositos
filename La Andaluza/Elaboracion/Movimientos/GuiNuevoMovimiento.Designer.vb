@@ -36,7 +36,6 @@ Partial Class GuiNuevoMovimiento
         Me.btnDesecho = New System.Windows.Forms.Button()
         Me.btnDiferencia = New System.Windows.Forms.Button()
         Me.btnFermentados = New System.Windows.Forms.Button()
-        Me.btnFiltrados = New System.Windows.Forms.Button()
         Me.btnLavado = New System.Windows.Forms.Button()
         Me.btnMigracion = New System.Windows.Forms.Button()
         Me.btnPieCuba = New System.Windows.Forms.Button()
@@ -137,7 +136,6 @@ Partial Class GuiNuevoMovimiento
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDesecho)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDiferencia)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnFermentados)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnFiltrados)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnLavado)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnMigracion)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnPieCuba)
@@ -269,28 +267,13 @@ Partial Class GuiNuevoMovimiento
         Me.btnFermentados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnFermentados.UseVisualStyleBackColor = True
         '
-        'btnFiltrados
-        '
-        Me.btnFiltrados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrados.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFiltrados.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.filtrado
-        Me.btnFiltrados.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnFiltrados.Location = New System.Drawing.Point(939, 159)
-        Me.btnFiltrados.Name = "btnFiltrados"
-        Me.btnFiltrados.Size = New System.Drawing.Size(150, 150)
-        Me.btnFiltrados.TabIndex = 17
-        Me.btnFiltrados.Tag = "14"
-        Me.btnFiltrados.Text = "Filtrados"
-        Me.btnFiltrados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnFiltrados.UseVisualStyleBackColor = True
-        '
         'btnLavado
         '
         Me.btnLavado.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLavado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLavado.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.lavado
         Me.btnLavado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnLavado.Location = New System.Drawing.Point(3, 315)
+        Me.btnLavado.Location = New System.Drawing.Point(939, 159)
         Me.btnLavado.Name = "btnLavado"
         Me.btnLavado.Size = New System.Drawing.Size(150, 150)
         Me.btnLavado.TabIndex = 18
@@ -305,7 +288,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnMigracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMigracion.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.maceracion
         Me.btnMigracion.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnMigracion.Location = New System.Drawing.Point(159, 315)
+        Me.btnMigracion.Location = New System.Drawing.Point(3, 315)
         Me.btnMigracion.Name = "btnMigracion"
         Me.btnMigracion.Size = New System.Drawing.Size(150, 150)
         Me.btnMigracion.TabIndex = 19
@@ -320,7 +303,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnPieCuba.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPieCuba.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.piebota
         Me.btnPieCuba.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnPieCuba.Location = New System.Drawing.Point(315, 315)
+        Me.btnPieCuba.Location = New System.Drawing.Point(159, 315)
         Me.btnPieCuba.Name = "btnPieCuba"
         Me.btnPieCuba.Size = New System.Drawing.Size(150, 150)
         Me.btnPieCuba.TabIndex = 21
@@ -335,7 +318,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnDesemboteNC.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDesemboteNC.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desembotenc
         Me.btnDesemboteNC.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDesemboteNC.Location = New System.Drawing.Point(471, 315)
+        Me.btnDesemboteNC.Location = New System.Drawing.Point(315, 315)
         Me.btnDesemboteNC.Name = "btnDesemboteNC"
         Me.btnDesemboteNC.Size = New System.Drawing.Size(150, 150)
         Me.btnDesemboteNC.TabIndex = 12
@@ -350,7 +333,7 @@ Partial Class GuiNuevoMovimiento
         Me.btnDEsembote.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDEsembote.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.desembote
         Me.btnDEsembote.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDEsembote.Location = New System.Drawing.Point(627, 315)
+        Me.btnDEsembote.Location = New System.Drawing.Point(471, 315)
         Me.btnDEsembote.Name = "btnDEsembote"
         Me.btnDEsembote.Size = New System.Drawing.Size(150, 150)
         Me.btnDEsembote.TabIndex = 22
@@ -387,7 +370,6 @@ Partial Class GuiNuevoMovimiento
     Private WithEvents btnDesemboteNC As System.Windows.Forms.Button
     Private WithEvents btnDiferencia As System.Windows.Forms.Button
     Private WithEvents btnFermentados As System.Windows.Forms.Button
-    Private WithEvents btnFiltrados As System.Windows.Forms.Button
     Private WithEvents btnLavado As System.Windows.Forms.Button
     Private WithEvents btnMigracion As System.Windows.Forms.Button
     Private WithEvents btnPieCuba As System.Windows.Forms.Button

@@ -1,4 +1,4 @@
-﻿Public Class MovimientoVenta
+﻿Public Class MovimientoEnvasar
     Private gui As GuiMovimientoTrasiego
     Private bdTrasiego As bdTrasiego
     Private listadoDepositos As DataTable
@@ -54,7 +54,7 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdTrasiego.listar_depositos()
+        listadoDepositos = bdTrasiego.listar_depositos_libres()
         listadoLotes = bdTrasiego.listar_tlotes
         listadoProductos = bdTrasiego.listar_productos
         gui.BeginInvoke(invocador)
@@ -68,7 +68,7 @@
 
     Private Sub cargarDatosSecundarios()
         If Not gui.dgvorigen.CurrentRow Is Nothing Then
-            listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
+            ' listadoDepositos = bdTrasiego.listar_depositos_excepto(Convert.ToInt32(gui.dgvorigen.CurrentRow.Cells(0).Value))
         End If
 
         gui.BeginInvoke(invocadorSecundario)
