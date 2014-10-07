@@ -130,7 +130,7 @@
     End Sub
 
     Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click
-        Dim trasiego As New MovimientoDesembote
+        Dim trasiego As New MovimientoTrasiego(9)
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 

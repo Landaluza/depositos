@@ -174,3 +174,4 @@ C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_Movimie
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmTiposMovimientos.resources
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntProcesos.resources
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProcesos.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiTrasiego.resources

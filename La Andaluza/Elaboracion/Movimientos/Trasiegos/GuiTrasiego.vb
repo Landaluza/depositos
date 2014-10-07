@@ -91,22 +91,22 @@
         Me.lDEscripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboTipoProducto.Text & _
             " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & "."
 
-        If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-            Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
-            Me.btncantidadDestinoIncorrecta.Visible = False
-            Me.btnProductoDestinaIncorrecto.Visible = False
-            Me.chbLoteNuevo.Enabled = False
-            Me.cboTipoProducto.Enabled = False
-            Me.cboTipoProducto.Text = ""
-        Else
-            Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
-            Me.btncantidadDestinoIncorrecta.Visible = True
-            Me.btnProductoDestinaIncorrecto.Visible = True
-            Me.chbLoteNuevo.Enabled = True
-            If chbLoteNuevo.Checked Then
-                Me.cboTipoProducto.Enabled = True
-            End If
-        End If
+        'If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
+        '    Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
+        '    Me.btncantidadDestinoIncorrecta.Visible = False
+        '    Me.btnProductoDestinaIncorrecto.Visible = False
+        '    Me.chbLoteNuevo.Enabled = False
+        '    Me.cboTipoProducto.Enabled = False
+        '    Me.cboTipoProducto.Text = ""
+        'Else
+        '    Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
+        '    Me.btncantidadDestinoIncorrecta.Visible = True
+        '    Me.btnProductoDestinaIncorrecto.Visible = True
+        '    Me.chbLoteNuevo.Enabled = True
+        '    If chbLoteNuevo.Checked Then
+        '        Me.cboTipoProducto.Enabled = True
+        '    End If
+        'End If
     End Sub
 
     Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

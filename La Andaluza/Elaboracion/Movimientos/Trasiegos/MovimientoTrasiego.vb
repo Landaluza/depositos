@@ -18,17 +18,17 @@
         End Get
     End Property
 
-    Public Sub New(ByVal tipoDiferencia As Integer)
+    Public Sub New(ByVal proceso As Integer)
 
-        Me.TipoProceso = tipoDiferencia
+        Me.TipoProceso = proceso
         bdTrasiego = New BdTrasiego
-        trasiego = New Trasiegos.Trasiego(tipoDiferencia)
+        trasiego = New Trasiegos.Trasiego(proceso)
         trasiego.lotePartida.tipo = Convert.ToInt32(bdTrasiego.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
         trasiego.lotePartida.muestra = Convert.ToBoolean(bdTrasiego.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
-        If trasiego.lotePartida.tipo <> 0 Then trasiego.Abreviatura = Convert.ToString(Bdtrasiego.seleccionar_detalles_tlote(trasiego.lotePartida.tipo).Rows(0).Item(2))
+        If trasiego.lotePartida.tipo <> 0 Then trasiego.Abreviatura = Convert.ToString(bdTrasiego.seleccionar_detalles_tlote(trasiego.lotePartida.tipo).Rows(0).Item(2))
 
-        gui = New Guitrasiego(trasiego)
+        gui = New GuiTrasiego(trasiego)
 
         iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
         invocador = New MethodInvoker(AddressOf mostrarDatos)
@@ -49,10 +49,10 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdtrasiego.listar_depositos_libres
-        listadoProductos = bdtrasiego.listar_productos
+        listadoDepositos = bdTrasiego.listar_depositos
+        listadoProductos = bdTrasiego.listar_productos
         listadoTiposLotes = bdtrasiego.listar_tlotes
-        listadoLotes = bdtrasiego.devolver_depositos_ocupados
+        listadoLotes = bdTrasiego.devolver_depositos
         gui.BeginInvoke(invocador)
     End Sub
 

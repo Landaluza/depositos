@@ -279,15 +279,6 @@
     ''                         funciones de depositos
     ''*****************************************************************************************
 
-    Public Function listar_depositos_libres() As DataTable
-        query = "devolverDepositosFinales"
-
-
-        PrepararConsulta(query)
-
-        Return Consultar()
-    End Function
-
     Public Function seleccionar_detalles_deposito(ByVal id_deposito As Integer) As DataTable
         query = "select " & _
                     "Depositos.Codigo,   " & _
@@ -324,7 +315,7 @@
     End Function
 
 
-    Public Function devolver_depositos_ocupados() As DataTable
+    Public Function devolver_depositos() As DataTable
         query = "select " & _
                        "Depositos.Codigo,   " & _
                        "Lotes.CodigoLote,  " & _
