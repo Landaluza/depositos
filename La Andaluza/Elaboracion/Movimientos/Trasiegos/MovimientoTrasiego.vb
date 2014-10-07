@@ -44,7 +44,7 @@
     Public Sub cargarDatosuno()
         hiloDatos = New System.Threading.Thread(iniciohiloDatos)
         hiloDatos.IsBackground = True
-        hiloDatos.Name = "consultadatosCompras"
+        hiloDatos.Name = "consultadatostrasiegos"
         hiloDatos.Start()
     End Sub
 
@@ -71,80 +71,115 @@
 
         trasiego = gui.valores
 
-        bdtrasiego.EmpezarTransaccion()
-        Try
+        Dim errores As String = trasiego.validar
+        If errores <> String.Empty Then
+            Throw New Exception("Se has encontrado los siguientes errores: " & Environment.NewLine & errores)
+        End If
 
-            Dim errores As String = trasiego.validar
-            If errores <> String.Empty Then
-                Throw New Exception("Se has encontrado los siguientes errores: " & Environment.NewLine & errores)
+        'comprobaciones de los datos recibidos
+
+        If trasiego.loteFinal.codigo_lote = "" And trasiego.loteFinal.id = 0 Then
+            Dim dep As DataTable = bdTrasiego.seleccionar_detalles_deposito(trasiego.loteFinal.deposito)
+
+            If dep.Rows(0).Item(1).ToString <> "" Then
+                Throw New Exception("Deposito en uso. El deposito de destino ya esta en uso.")
             End If
+        Else
 
-
-            'comprobaciones de los datos recibidos
-            Dim lote As DataTable = Bdtrasiego.seleccionar_lote(trasiego.lotePartida.id)
-            If trasiego.lotePartida.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
+            Dim lote As DataTable = bdTrasiego.seleccionar_lote(trasiego.loteFinal.id)
+            If trasiego.loteFinal.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
                 Throw New Exception("El deposito de destino ya no contiene el lote que se selecciono.")
             End If
 
             'actualizamos la cantidad restante con los valores actuales
-            trasiego.lotePartida.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
+            trasiego.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
+        End If
 
-            'preaparacion del lote final
-            Dim producto As DataTable = bdtrasiego.seleccionar_detalles_producto(trasiego.lotePartida.producto)
-            Dim fechaDiferencias As Date
-            Dim codigoSinLetra As String
+        Dim producto As DataTable = bdTrasiego.seleccionar_detalles_producto(trasiego.loteFinal.producto)
 
-            'If Me.trasiego.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_MENSUAL Then
-            '    fechaDiferencias = New Date(trasiego.fecha.Year, trasiego.fecha.Month, 1)
+        'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
+        If trasiego.loteFinal.id = 0 Then
+            'crear lote clonando el de trasiego, deposito vacio
+            Dim tipoFinal As DataTable = bdTrasiego.seleccionar_detalles_tlote(trasiego.loteFinal.tipo)
+            Dim codigoDestino As String = trasiego.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
+            codigoDestino = bdTrasiego.calcular_codigo_lote(codigoDestino)
 
-            '    codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Me.trasiego.Abreviatura
-            '    trasiego.loteFinal.codigo_lote = bdtrasiego.recuperar_ultimo_codigo_lote(codigoSinLetra)
-            'Else
-            fechaDiferencias = trasiego.fecha
+            If Not bdTrasiego.crear_lote(trasiego.lotePartida.codigo_lote, codigoDestino, trasiego.loteFinal.deposito, 0) Then
+                Throw New Exception("No se pudo crear el lote de destino")
+            End If
 
-            codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Me.trasiego.Abreviatura
-            ' End If
+            trasiego.loteFinal.codigo_lote = codigoDestino
+        Else
+            If trasiego.loteFinal.codigo_lote = "" Then
+                'loteAnterior = trasiego.loteFinal
+
+                'crear lote y guardar para trazabilidad el anterior
+                Dim productoFinal As DataTable = bdTrasiego.seleccionar_detalles_producto(trasiego.loteFinal.producto)
+                Dim tipoFinal As DataTable = bdTrasiego.seleccionar_detalles_tlote(trasiego.loteFinal.tipo)
+                Dim codigoDestino As String = trasiego.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
+                codigoDestino = bdTrasiego.calcular_codigo_lote(codigoDestino)
+
+                Dim detallesDepositoFinal As DataTable = bdTrasiego.seleccionar_detalles_deposito(trasiego.loteFinal.deposito)
+                trasiego.loteFinal.codigo_lote = detallesDepositoFinal.Rows(0).Item(1).ToString
 
 
-            If trasiego.loteFinal.codigo_lote.Replace(" ", "") = "" Then
-                trasiego.loteFinal.codigo_lote = bdtrasiego.calcular_codigo_lote(codigoSinLetra)
-
-                If Not bdtrasiego.crear_lote(trasiego.loteFinal.codigo_lote, trasiego.cantidad, trasiego.loteFinal.producto, trasiego.loteFinal.tipo) Then
-                    Throw New Exception("No se pudo crear el lote de entrada")
+                If Not bdTrasiego.crear_lote(codigoDestino, trasiego.loteFinal.deposito, 0, trasiego.loteFinal.tipo, trasiego.loteFinal.producto) Then
+                    Throw New Exception("No se pudo crear el lote de destino")
                 End If
+
+                If Not bdTrasiego.guardar_movimiento(trasiego.loteFinal.deposito, trasiego.loteFinal.deposito, trasiego.loteFinal.cantidad_restante) Then
+                    Throw New Exception("No se pudo guardar el movimiento del lote en el deposito de destino")
+                End If
+
+                If Not bdTrasiego.guardar_trazabilidad(codigoDestino, trasiego.loteFinal.codigo_lote, trasiego.loteFinal.cantidad_restante) Then
+                    Throw New Exception("No se pudo guardar la trazabilidad del lote en el deposito de destino")
+                End If
+
+
+                'actualizar atributos
+                If Not bdTrasiego.sacar_lote(trasiego.loteFinal.codigo_lote) Then
+                    Throw New Exception("No se pudo actualizar el deposito del lote en el deposito de destino")
+                End If
+
+                If Not bdTrasiego.actualizar_lote(trasiego.loteFinal.codigo_lote, 0) Then
+                    Throw New Exception("No se pudo actualizar la cantidad del lote en el deposito de destino")
+                End If
+
+                If Not bdTrasiego.actualizar_lote(codigoDestino, trasiego.loteFinal.cantidad_restante) Then
+                    Throw New Exception("No se pudo actualizar la cantidad del nuevo lote en el deposito de destino")
+                End If
+
+                trasiego.loteFinal.codigo_lote = codigoDestino
+
+                Dim lote As DataTable = bdTrasiego.seleccionar_lote_por_codigo(trasiego.loteFinal.codigo_lote)
+                'sobra, la cantidad restante es la que tenia el lote anterior
+                ' trasiego.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
+            Else
+                'no crear lote
+
             End If
+        End If
 
 
-            ''??
-            'realizar movimiento de compra a final
-            If Not bdtrasiego.guardar_movimiento(trasiego.lotePartida.deposito, trasiego.loteFinal.deposito, trasiego.cantidad) Then
-                Throw New Exception("No se pudo guardar el movimiento del lote compra")
-            End If
+        'realizar movimiento de trasiego a final
+        If Not bdTrasiego.guardar_movimiento(trasiego.lotePartida.deposito, trasiego.loteFinal.deposito, If(trasiego.sumarAdestino, trasiego.cantidad, 0)) Then
+            Throw New Exception("No se pudo guardar el movimiento del lote trasiego")
+        End If
 
-            'guardar trazabilidad
-            If Not bdtrasiego.guardar_trazabilidad(trasiego.loteFinal.codigo_lote, trasiego.lotePartida.codigo_lote, trasiego.cantidad) Then
-                Throw New Exception("No se pudo guardar la trazabilidad del lote compra")
-            End If
+        'guardar trazabilidad
+        If Not bdTrasiego.guardar_trazabilidad(trasiego.loteFinal.codigo_lote, trasiego.lotePartida.codigo_lote, If(trasiego.sumarAdestino, trasiego.cantidad, 0)) Then
+            Throw New Exception("No se pudo guardar la trazabilidad del lote trasiego")
+        End If
 
-            If Not bdtrasiego.actualizar_lote(trasiego.lotePartida.codigo_lote, -trasiego.cantidad) Then
-                Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
-            End If
+        If Not bdTrasiego.actualizar_lote(trasiego.lotePartida.codigo_lote, -trasiego.cantidad) Then
+            Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+        End If
 
-            If Me.trasiego.cantidad = Me.trasiego.lotePartida.cantidad_restante Then
-                bdtrasiego.sacar_lote(trasiego.lotePartida.codigo_lote)
-            End If
-
-
-            If Not bdtrasiego.actualizar_lote(trasiego.loteFinal.codigo_lote, trasiego.cantidad) Then
+        If trasiego.sumarAdestino Then
+            If Not bdTrasiego.actualizar_lote(trasiego.loteFinal.codigo_lote, trasiego.cantidad) Then
                 Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
             End If
-
-            bdtrasiego.TerminarTransaccion()
-            gui.Close()
-        Catch ex As Exception
-            bdtrasiego.CancelarTransaccion()
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        End If
     End Sub
 
     Private Sub cantidad_incorrecta(ByVal lote As Integer, e As EventArgs)
