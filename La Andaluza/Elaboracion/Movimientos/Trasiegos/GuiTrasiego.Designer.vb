@@ -38,7 +38,7 @@ Partial Class GuiTrasiego
         Me.btnProductoDestinaIncorrecto = New System.Windows.Forms.Button()
         Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
         Me.lDEscripcionDestino = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lTipoLote = New System.Windows.Forms.Label()
         Me.cboTiplote = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
@@ -168,7 +168,7 @@ Partial Class GuiTrasiego
         '
         Me.FlowLayoutPanel3.Controls.Add(Me.dgvDestino)
         Me.FlowLayoutPanel3.Controls.Add(Me.GroupBox1)
-        Me.FlowLayoutPanel3.Controls.Add(Me.Label2)
+        Me.FlowLayoutPanel3.Controls.Add(Me.lTipoLote)
         Me.FlowLayoutPanel3.Controls.Add(Me.cboTiplote)
         Me.FlowLayoutPanel3.Controls.Add(Me.Label4)
         Me.FlowLayoutPanel3.Controls.Add(Me.cboTipoProducto)
@@ -245,15 +245,15 @@ Partial Class GuiTrasiego
         Me.lDEscripcionDestino.TabIndex = 1
         Me.lDEscripcionDestino.Text = "-"
         '
-        'Label2
+        'lTipoLote
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 452)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 13)
-        Me.Label2.TabIndex = 29
-        Me.Label2.Text = "Lote destino"
+        Me.lTipoLote.AutoSize = True
+        Me.lTipoLote.Location = New System.Drawing.Point(3, 452)
+        Me.lTipoLote.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.lTipoLote.Name = "lTipoLote"
+        Me.lTipoLote.Size = New System.Drawing.Size(65, 13)
+        Me.lTipoLote.TabIndex = 29
+        Me.lTipoLote.Text = "Lote destino"
         '
         'cboTiplote
         '
@@ -377,7 +377,7 @@ Partial Class GuiTrasiego
     Private WithEvents btnProductoDestinaIncorrecto As System.Windows.Forms.Button
     Private WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
     Friend WithEvents lDEscripcionDestino As System.Windows.Forms.Label
-    Private WithEvents Label2 As System.Windows.Forms.Label
+    Private WithEvents lTipoLote As System.Windows.Forms.Label
     Private WithEvents cboTiplote As System.Windows.Forms.ComboBox
     Private WithEvents Label4 As System.Windows.Forms.Label
     Private WithEvents cboTipoProducto As System.Windows.Forms.ComboBox

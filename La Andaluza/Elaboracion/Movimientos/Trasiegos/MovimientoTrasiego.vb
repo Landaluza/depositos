@@ -2,9 +2,9 @@
     Protected gui As GuiTrasiego
     Protected bdTrasiego As BdTrasiego
     Protected listadoDepositos As DataTable
+    Protected listadoDepositosDestino As DataTable
     Protected listadoTiposLotes As DataTable
     Protected listadoProductos As DataTable
-    Protected listadoLotes As DataTable
     Protected trasiego As Trasiegos.Trasiego
 
     Protected hiloDatos As System.Threading.Thread
@@ -23,10 +23,10 @@
         Me.TipoProceso = proceso
         bdTrasiego = New BdTrasiego
         trasiego = New Trasiegos.Trasiego(proceso)
-        trasiego.lotePartida.tipo = Convert.ToInt32(bdTrasiego.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-        trasiego.lotePartida.muestra = Convert.ToBoolean(bdTrasiego.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+        trasiego.loteFinal.tipo = Convert.ToInt32(bdTrasiego.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
+        trasiego.loteFinal.muestra = Convert.ToBoolean(bdTrasiego.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
-        If trasiego.lotePartida.tipo <> 0 Then trasiego.Abreviatura = Convert.ToString(bdTrasiego.seleccionar_detalles_tlote(trasiego.lotePartida.tipo).Rows(0).Item(2))
+        If trasiego.loteFinal.tipo <> 0 Then trasiego.Abreviatura = Convert.ToString(bdTrasiego.seleccionar_detalles_tlote(trasiego.loteFinal.tipo).Rows(0).Item(2))
 
         gui = New GuiTrasiego(trasiego)
 
@@ -49,16 +49,16 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdTrasiego.listar_depositos
+        listadoDepositos = bdTrasiego.devolver_depositos_ocupados
+        listadoDepositosDestino = bdTrasiego.devolver_depositos
         listadoProductos = bdTrasiego.listar_productos
-        listadoTiposLotes = bdtrasiego.listar_tlotes
-        listadoLotes = bdTrasiego.devolver_depositos
+        listadoTiposLotes = bdTrasiego.listar_tlotes
         gui.BeginInvoke(invocador)
     End Sub
 
     Private Sub mostrarDatos()
-        gui.DestinoDatasource = listadoDepositos
-        gui.OrigenDatasource = listadoLotes
+        gui.DestinoDatasource = listadoDepositosDestino
+        gui.OrigenDatasource = listadoDepositos
         gui.TipoProductoDatasource = listadoProductos
         gui.TipoLoteDatasource = listadoTiposLotes
     End Sub

@@ -3,11 +3,16 @@
     Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
     Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-    Public Sub New(ByVal diferencia As Trasiegos.Trasiego)
+    Public Sub New(ByVal trasiego As Trasiegos.Trasiego)
         InitializeComponent()
         Me.trasiego = trasiego
         Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
         Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+
+        If Me.trasiego.loteFinal.tipo <> 0 Then
+            Me.cboTiplote.Visible = False
+            Me.lTipoLote.Visible = False
+        End If
     End Sub
 
     Public WriteOnly Property OrigenDatasource As DataTable
@@ -53,7 +58,9 @@
         Get
 
 
-            trasiego.lotePartida.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+            trasiego.lotePartida.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+            trasiego.lotePartida.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            trasiego.lotePartida.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
 
             trasiego.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
@@ -91,22 +98,22 @@
         Me.lDEscripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboTipoProducto.Text & _
             " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & "."
 
-        'If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-        '    Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
-        '    Me.btncantidadDestinoIncorrecta.Visible = False
-        '    Me.btnProductoDestinaIncorrecto.Visible = False
-        '    Me.chbLoteNuevo.Enabled = False
-        '    Me.cboTipoProducto.Enabled = False
-        '    Me.cboTipoProducto.Text = ""
-        'Else
-        '    Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
-        '    Me.btncantidadDestinoIncorrecta.Visible = True
-        '    Me.btnProductoDestinaIncorrecto.Visible = True
-        '    Me.chbLoteNuevo.Enabled = True
-        '    If chbLoteNuevo.Checked Then
-        '        Me.cboTipoProducto.Enabled = True
-        '    End If
-        'End If
+        If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
+            Me.lDEscripcionDestino.Text &= "El deposito se encuentra vacio."
+            Me.btncantidadDestinoIncorrecta.Visible = False
+            Me.btnProductoDestinaIncorrecto.Visible = False
+            Me.chbLoteNuevo.Enabled = False
+            Me.cboTipoProducto.Enabled = False
+            Me.cboTipoProducto.Text = ""
+        Else
+            Me.lDEscripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
+            Me.btncantidadDestinoIncorrecta.Visible = True
+            Me.btnProductoDestinaIncorrecto.Visible = True
+            Me.chbLoteNuevo.Enabled = True
+            If chbLoteNuevo.Checked Then
+                Me.cboTipoProducto.Enabled = True
+            End If
+        End If
     End Sub
 
     Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

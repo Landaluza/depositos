@@ -14,7 +14,7 @@
             Me.proceso = proceso
 
             Me.lotePartida = New Lote()
-            Me.loteFinal = New Lote(proceso)
+            Me.loteFinal = New Lote()
         End Sub
 
         Public Function validar() As String
@@ -34,8 +34,7 @@
             Public deposito As Integer
             Public muestra As Boolean
 
-            Public Sub New(Optional ByVal tipo As Integer = 0)
-                Me.tipo = tipo
+            Public Sub New()
                 Me.muestra = False
                 codigo_lote = ""
             End Sub
