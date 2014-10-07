@@ -381,7 +381,7 @@
         Return Me.Consultar()
     End Function
 
-    Public Function devolver_depositos_excepto(ByVal codigo As Integer) As DataTable
+    Public Function devolver_depositos_excepto(ByVal codigo As String) As DataTable
         query = "select " & _
                        "Depositos.Codigo,   " & _
                        "Lotes.CodigoLote,  " & _
@@ -405,7 +405,7 @@
                        "ON Lotes.DepositoID = Depositos.DepositoID " & _
                "where " & _
                        "Depositos.BotaID Is NULL  " & _
-                       "and  codigolote <> @cod and " & _
+                       "and  Depositos.Codigo <> @cod and " & _
                        "Depositos.Listado = 'TRUE' " & _
                        "ORDER BY " & _
                        "Depositos.Codigo "

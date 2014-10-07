@@ -10,6 +10,9 @@
     Protected hiloDatos As System.Threading.Thread
     Protected iniciohiloDatos As System.Threading.ThreadStart
     Protected invocador As MethodInvoker
+    Protected invocadorDatosDestino As MethodInvoker
+    Protected hiloDatosDestino As System.Threading.Thread
+    Protected iniciohiloDatosDestino As System.Threading.ThreadStart
     Private TipoProceso As Integer
 
     Public ReadOnly Property Form As Form
@@ -32,6 +35,9 @@
 
         iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
         invocador = New MethodInvoker(AddressOf mostrarDatos)
+
+        iniciohiloDatosDestino = New System.Threading.ThreadStart(AddressOf solicitardatosDestino)
+        invocadorDatosDestino = New MethodInvoker(AddressOf mostrarDatosDestino)
 
         cargarDatosuno()
 
@@ -65,25 +71,22 @@
     End Sub
 
     Public Sub cargarDatosDestino()
-        hiloDatos = New System.Threading.Thread(iniciohiloDatos)
-        hiloDatos.IsBackground = True
-        hiloDatos.Name = "consultadatostrasiegos"
-        hiloDatos.Start()
+        hiloDatosDestino = New System.Threading.Thread(iniciohiloDatosDestino)
+        hiloDatosDestino.IsBackground = True
+        hiloDatosDestino.Name = "consultadatosDestinotrasiegos"
+        hiloDatosDestino.Start()
     End Sub
 
     Private Sub solicitardatosDestino()
         If Not gui.dgvOrigen.CurrentRow Is Nothing Then
-            listadoDepositosDestino = bdTrasiego.devolver_depositos_excepto(Convert.ToInt32(gui.dgvOrigen.CurrentRow.Cells(0).Value))
+            listadoDepositosDestino = bdTrasiego.devolver_depositos_excepto(Convert.ToString(gui.dgvOrigen.CurrentRow.Cells(0).Value))
         End If
 
-        gui.BeginInvoke(invocador)
+        gui.BeginInvoke(invocadorDatosDestino)
     End Sub
 
     Private Sub mostrarDatosDestino()
         gui.DestinoDatasource = listadoDepositosDestino
-        gui.OrigenDatasource = listadoDepositos
-        gui.TipoProductoDatasource = listadoProductos
-        gui.TipoLoteDatasource = listadoTiposLotes
     End Sub
 
     Private Sub cerrar()
@@ -224,7 +227,7 @@
     Private Sub producto_incorrecto(ByVal lote As Integer, e As EventArgs)
         'Pantalla.mostrarDialogo(CType(New CorrectorProducto(lote), Form))
         Dim corrector As New CorrectorProducto(lote)
-        cargarDatosuno()
+        cargarDatosDestino()
     End Sub
 
 End Class
