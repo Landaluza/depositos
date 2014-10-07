@@ -26,35 +26,35 @@ Partial Class GuiMAceracion
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dgvOrigen = New System.Windows.Forms.DataGridView()
         Me.lProveedor = New System.Windows.Forms.Label()
         Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
+        Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
+        Me.lDescripcionDestino = New System.Windows.Forms.Label()
         Me.cboTipoLote = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.lTlote = New System.Windows.Forms.Label()
         Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.chbSuma = New System.Windows.Forms.CheckBox()
         Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
         Me.chbMuestra = New System.Windows.Forms.CheckBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
-        Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
-        Me.lDescripcionDestino = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FlowLayoutPanel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.dtpFecha)
         Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.DataGridView1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.dgvOrigen)
         Me.FlowLayoutPanel1.Controls.Add(Me.lProveedor)
         Me.FlowLayoutPanel1.Controls.Add(Me.dgvDestino)
         Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox2)
@@ -88,6 +88,22 @@ Partial Class GuiMAceracion
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Entrada"
         '
+        'dgvOrigen
+        '
+        Me.dgvOrigen.AllowUserToAddRows = False
+        Me.dgvOrigen.AllowUserToDeleteRows = False
+        Me.dgvOrigen.AllowUserToResizeRows = False
+        Me.dgvOrigen.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.dgvOrigen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvOrigen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvOrigen.Location = New System.Drawing.Point(3, 42)
+        Me.dgvOrigen.Name = "dgvOrigen"
+        Me.dgvOrigen.ReadOnly = True
+        Me.dgvOrigen.RowHeadersVisible = False
+        Me.dgvOrigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvOrigen.Size = New System.Drawing.Size(571, 125)
+        Me.dgvOrigen.TabIndex = 34
+        '
         'lProveedor
         '
         Me.lProveedor.AutoSize = True
@@ -113,14 +129,53 @@ Partial Class GuiMAceracion
         Me.dgvDestino.Size = New System.Drawing.Size(571, 165)
         Me.dgvDestino.TabIndex = 15
         '
-        'Label3
+        'GroupBox2
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 552)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "Lote destino"
+        Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
+        Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
+        Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 357)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
+        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Detalles"
+        '
+        'btnProductoDestinoIncorrecto
+        '
+        Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
+        Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
+        Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
+        Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
+        Me.btnProductoDestinoIncorrecto.TabIndex = 4
+        Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
+        Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
+        '
+        'btncantidadDestinoIncorrecta
+        '
+        Me.btncantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btncantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btncantidadDestinoIncorrecta.Image = CType(resources.GetObject("btncantidadDestinoIncorrecta.Image"), System.Drawing.Image)
+        Me.btncantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btncantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
+        Me.btncantidadDestinoIncorrecta.Name = "btncantidadDestinoIncorrecta"
+        Me.btncantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
+        Me.btncantidadDestinoIncorrecta.TabIndex = 3
+        Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
+        Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
+        '
+        'lDescripcionDestino
+        '
+        Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
+        Me.lDescripcionDestino.Name = "lDescripcionDestino"
+        Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
+        Me.lDescripcionDestino.TabIndex = 1
+        Me.lDescripcionDestino.Text = "-"
         '
         'cboTipoLote
         '
@@ -131,6 +186,15 @@ Partial Class GuiMAceracion
         Me.cboTipoLote.Name = "cboTipoLote"
         Me.cboTipoLote.Size = New System.Drawing.Size(469, 21)
         Me.cboTipoLote.TabIndex = 27
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 552)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.TabIndex = 29
+        Me.Label3.Text = "Lote destino"
         '
         'lTlote
         '
@@ -206,54 +270,6 @@ Partial Class GuiMAceracion
         Me.chbMuestra.Text = "Crear muestra"
         Me.chbMuestra.UseVisualStyleBackColor = True
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
-        Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
-        Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 357)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
-        Me.GroupBox2.TabIndex = 18
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detalles"
-        '
-        'btnProductoDestinoIncorrecto
-        '
-        Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
-        Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
-        Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
-        Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
-        Me.btnProductoDestinoIncorrecto.TabIndex = 4
-        Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
-        Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
-        '
-        'btncantidadDestinoIncorrecta
-        '
-        Me.btncantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btncantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btncantidadDestinoIncorrecta.Image = CType(resources.GetObject("btncantidadDestinoIncorrecta.Image"), System.Drawing.Image)
-        Me.btncantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
-        Me.btncantidadDestinoIncorrecta.Name = "btncantidadDestinoIncorrecta"
-        Me.btncantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
-        Me.btncantidadDestinoIncorrecta.TabIndex = 3
-        Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
-        Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-        '
-        'lDescripcionDestino
-        '
-        Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
-        Me.lDescripcionDestino.Name = "lDescripcionDestino"
-        Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-        Me.lDescripcionDestino.TabIndex = 1
-        Me.lDescripcionDestino.Text = "-"
-        '
         'btnGuardar
         '
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -279,27 +295,11 @@ Partial Class GuiMAceracion
         Me.txtCantidad.Text = "0"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 42)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(571, 125)
-        Me.DataGridView1.TabIndex = 34
-        '
         'GuiMAceracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(699, 776)
+        Me.ClientSize = New System.Drawing.Size(699, 573)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtCantidad)
@@ -307,11 +307,11 @@ Partial Class GuiMAceracion
         Me.Text = "GuiMAceracion"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
+        CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.FlowLayoutPanel2.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -319,7 +319,7 @@ Partial Class GuiMAceracion
     Private WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
     Private WithEvents Label1 As System.Windows.Forms.Label
-    Public WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Public WithEvents dgvOrigen As System.Windows.Forms.DataGridView
     Private WithEvents lProveedor As System.Windows.Forms.Label
     Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
     Private WithEvents GroupBox2 As System.Windows.Forms.GroupBox

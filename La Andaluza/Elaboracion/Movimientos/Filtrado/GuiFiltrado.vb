@@ -1,9 +1,9 @@
-﻿Public Class GuiFiltrado
-    Private filtrado As Filtrados.Filtrado
+﻿Public Class Guifiltrado
+    Private filtrado As filtrados.filtrado
     Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
     Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-    Public Sub New(ByVal filtrado As Filtrados.Filtrado)
+    Public Sub New(ByVal filtrado As filtrados.filtrado)
         InitializeComponent()
         Me.filtrado = filtrado
         Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
@@ -49,7 +49,7 @@
     End Property
 
 
-    Public ReadOnly Property valores As Filtrados.Filtrado
+    Public ReadOnly Property valores As filtrados.filtrado
         Get
 
 
@@ -112,7 +112,7 @@
     End Sub
 
     Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        AddHandler dgvDestino.SelectionChanged, AddressOf actualiza_descripcion        
+        AddHandler dgvDestino.SelectionChanged, AddressOf actualiza_descripcion
         AddHandler cboFiltro.SelectedValueChanged, AddressOf actualiza_descripcion
         'AddHandler cboTipoLote.SelectedValueChanged, AddressOf actualiza_descripcion
         AddHandler cboProducto.SelectedValueChanged, AddressOf actualiza_descripcion

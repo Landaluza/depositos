@@ -1,6 +1,6 @@
 ﻿Namespace Filtrados
 
-    Public Class Filtrado        
+    Public Class Filtrado
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public cantidad As Double

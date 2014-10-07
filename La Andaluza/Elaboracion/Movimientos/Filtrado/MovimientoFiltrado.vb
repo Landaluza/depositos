@@ -1,6 +1,6 @@
 ﻿Public Class MovimientoFiltrado
     Protected gui As GuiFiltrado
-    Protected bdFiltrado As BdFiltrado
+    Protected bdfiltrado As bdfiltrado
     Protected listadoDepositos As DataTable
     Protected listadoFiltros As DataTable
     Protected listadoProductos As DataTable
@@ -21,12 +21,12 @@
     Public Sub New(ByVal tipoDiferencia As Integer)
 
         Me.TipoProceso = tipoDiferencia
-        bdFiltrado = New bdFiltrado
+        bdfiltrado = New bdfiltrado
         filtrado = New Filtrados.Filtrado(tipoDiferencia)
-        filtrado.lotePartida.tipo = Convert.ToInt32(bdFiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-        filtrado.lotePartida.muestra = Convert.ToBoolean(bdFiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+        filtrado.lotePartida.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
+        filtrado.lotePartida.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
-        If filtrado.lotePartida.tipo <> 0 Then filtrado.Abreviatura = Convert.ToString(bdFiltrado.seleccionar_detalles_tlote(filtrado.lotePartida.tipo).Rows(0).Item(2))
+        If filtrado.lotePartida.tipo <> 0 Then filtrado.Abreviatura = Convert.ToString(bdfiltrado.seleccionar_detalles_tlote(filtrado.lotePartida.tipo).Rows(0).Item(2))
 
         gui = New GuiFiltrado(filtrado)
 
@@ -49,10 +49,10 @@
     End Sub
 
     Private Sub cargardatos()
-        listadoDepositos = bdFiltrado.listar_depositos_libres
-        listadoProductos = bdFiltrado.listar_productos
-        listadoFiltros = bdFiltrado.devolver_Filtros
-        listadoLotes = bdFiltrado.devolver_depositos_ocupados
+        listadoDepositos = bdfiltrado.listar_depositos_libres
+        listadoProductos = bdfiltrado.listar_productos
+        listadoFiltros = bdfiltrado.devolver_Filtros
+        listadoLotes = bdfiltrado.devolver_depositos_ocupados
         gui.BeginInvoke(invocador)
     End Sub
 
@@ -71,7 +71,7 @@
 
         filtrado = gui.valores
 
-        bdFiltrado.EmpezarTransaccion()
+        bdfiltrado.EmpezarTransaccion()
         Try
 
             Dim errores As String = filtrado.validar
@@ -81,7 +81,7 @@
 
 
             'comprobaciones de los datos recibidos
-            Dim lote As DataTable = bdFiltrado.seleccionar_lote(filtrado.lotePartida.id)
+            Dim lote As DataTable = bdfiltrado.seleccionar_lote(filtrado.lotePartida.id)
             If filtrado.lotePartida.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
                 Throw New Exception("El deposito de destino ya no contiene el lote que se selecciono.")
             End If
@@ -90,7 +90,7 @@
             filtrado.lotePartida.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
 
             'preaparacion del lote final
-            Dim producto As DataTable = bdFiltrado.seleccionar_detalles_producto(filtrado.lotePartida.producto)
+            Dim producto As DataTable = bdfiltrado.seleccionar_detalles_producto(filtrado.lotePartida.producto)
             Dim fechaDiferencias As Date
             Dim codigoSinLetra As String
 
@@ -98,7 +98,7 @@
             '    fechaDiferencias = New Date(filtrado.fecha.Year, filtrado.fecha.Month, 1)
 
             '    codigoSinLetra = fechaDiferencias.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Me.filtrado.Abreviatura
-            '    filtrado.loteFinal.codigo_lote = bdFiltrado.recuperar_ultimo_codigo_lote(codigoSinLetra)
+            '    filtrado.loteFinal.codigo_lote = bdfiltrado.recuperar_ultimo_codigo_lote(codigoSinLetra)
             'Else
             fechaDiferencias = filtrado.fecha
 
@@ -107,9 +107,9 @@
 
 
             If filtrado.loteFinal.codigo_lote.Replace(" ", "") = "" Then
-                filtrado.loteFinal.codigo_lote = bdFiltrado.calcular_codigo_lote(codigoSinLetra)
+                filtrado.loteFinal.codigo_lote = bdfiltrado.calcular_codigo_lote(codigoSinLetra)
 
-                If Not bdFiltrado.crear_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad, filtrado.loteFinal.producto, filtrado.loteFinal.tipo) Then
+                If Not bdfiltrado.crear_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad, filtrado.loteFinal.producto, filtrado.loteFinal.tipo) Then
                     Throw New Exception("No se pudo crear el lote de entrada")
                 End If
             End If
@@ -117,32 +117,32 @@
 
             ''??
             'realizar movimiento de compra a final
-            If Not bdFiltrado.guardar_movimiento(filtrado.lotePartida.deposito, filtrado.loteFinal.deposito, filtrado.cantidad) Then
+            If Not bdfiltrado.guardar_movimiento(filtrado.lotePartida.deposito, filtrado.loteFinal.deposito, filtrado.cantidad) Then
                 Throw New Exception("No se pudo guardar el movimiento del lote compra")
             End If
 
             'guardar trazabilidad
-            If Not bdFiltrado.guardar_trazabilidad(filtrado.loteFinal.codigo_lote, filtrado.lotePartida.codigo_lote, filtrado.cantidad) Then
+            If Not bdfiltrado.guardar_trazabilidad(filtrado.loteFinal.codigo_lote, filtrado.lotePartida.codigo_lote, filtrado.cantidad) Then
                 Throw New Exception("No se pudo guardar la trazabilidad del lote compra")
             End If
 
-            If Not bdFiltrado.actualizar_lote(filtrado.lotePartida.codigo_lote, -filtrado.cantidad) Then
+            If Not bdfiltrado.actualizar_lote(filtrado.lotePartida.codigo_lote, -filtrado.cantidad) Then
                 Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
             End If
 
             If Me.filtrado.cantidad = Me.filtrado.lotePartida.cantidad_restante Then
-                bdFiltrado.sacar_lote(filtrado.lotePartida.codigo_lote)
+                bdfiltrado.sacar_lote(filtrado.lotePartida.codigo_lote)
             End If
 
 
-            If Not bdFiltrado.actualizar_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad) Then
+            If Not bdfiltrado.actualizar_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad) Then
                 Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
             End If
 
-            bdFiltrado.TerminarTransaccion()
+            bdfiltrado.TerminarTransaccion()
             gui.Close()
         Catch ex As Exception
-            bdFiltrado.CancelarTransaccion()
+            bdfiltrado.CancelarTransaccion()
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
