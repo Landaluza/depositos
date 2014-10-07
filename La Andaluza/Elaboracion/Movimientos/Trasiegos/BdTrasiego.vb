@@ -380,6 +380,40 @@
         PrepararConsulta(query) '"devolverDepositosPartidas")
         Return Me.Consultar()
     End Function
+
+    Public Function devolver_depositos_excepto(ByVal codigo As Integer) As DataTable
+        query = "select " & _
+                       "Depositos.Codigo,   " & _
+                       "Lotes.CodigoLote,  " & _
+                       "CASE  " & _
+                       "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
+                               "ELSE Lotes.Descripcion  " & _
+                       "END AS Descripcion, " & _
+                       "Depositos.Capacidad,  " & _
+                       "Lotes.CantidadRestante,     " & _
+                       "Depositos.depositoID, " & _
+                       "Depositos.Listado,   " & _
+                       "Lotes.TipoLoteID,  " & _
+                       "Lotes.TipoProductoID, " & _
+                       "TiposProductos.descripcion producto, " & _
+                       "Lotes.loteid " & _
+               "from  " & _
+                       "TiposProductos " & _
+                       "RIGHT OUTER JOIN Lotes  " & _
+                       "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
+                       "right JOIN  Depositos  " & _
+                       "ON Lotes.DepositoID = Depositos.DepositoID " & _
+               "where " & _
+                       "Depositos.BotaID Is NULL  " & _
+                       "and  codigolote <> @cod and " & _
+                       "Depositos.Listado = 'TRUE' " & _
+                       "ORDER BY " & _
+                       "Depositos.Codigo "
+
+        AñadirParametroConsulta("@cod", codigo)
+        PrepararConsulta(query)
+        Return Me.Consultar()
+    End Function
     ''*****************************************************************************************
     ''                         funciones de movimientos
     ''*****************************************************************************************

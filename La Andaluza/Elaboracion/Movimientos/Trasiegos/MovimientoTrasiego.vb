@@ -39,6 +39,7 @@
         AddHandler gui.btnGuardar.Click, AddressOf guardar
         AddHandler gui.CantidadIncorrecta, AddressOf cantidad_incorrecta
         AddHandler gui.ProductoIncorrecto, AddressOf producto_incorrecto
+        AddHandler gui.dgvOrigen.SelectionChanged, AddressOf cargarDatosDestino
     End Sub
 
     Public Sub cargarDatosuno()
@@ -57,6 +58,28 @@
     End Sub
 
     Private Sub mostrarDatos()
+        gui.DestinoDatasource = listadoDepositosDestino
+        gui.OrigenDatasource = listadoDepositos
+        gui.TipoProductoDatasource = listadoProductos
+        gui.TipoLoteDatasource = listadoTiposLotes
+    End Sub
+
+    Public Sub cargarDatosDestino()
+        hiloDatos = New System.Threading.Thread(iniciohiloDatos)
+        hiloDatos.IsBackground = True
+        hiloDatos.Name = "consultadatostrasiegos"
+        hiloDatos.Start()
+    End Sub
+
+    Private Sub solicitardatosDestino()
+        If Not gui.dgvOrigen.CurrentRow Is Nothing Then
+            listadoDepositosDestino = bdTrasiego.devolver_depositos_excepto(Convert.ToInt32(gui.dgvOrigen.CurrentRow.Cells(0).Value))
+        End If
+
+        gui.BeginInvoke(invocador)
+    End Sub
+
+    Private Sub mostrarDatosDestino()
         gui.DestinoDatasource = listadoDepositosDestino
         gui.OrigenDatasource = listadoDepositos
         gui.TipoProductoDatasource = listadoProductos
@@ -130,7 +153,7 @@
                         Throw New Exception("No se pudo crear el lote de destino")
                     End If
 
-                    If Not bdTrasiego.guardar_movimiento(trasiego.loteFinal.deposito, trasiego.loteFinal.deposito, trasiego.loteFinal.cantidad_restante) Then
+                    If Not bdTrasiego.guardar_movimiento(trasiego.loteFinal.deposito, trasiego.loteFinal.deposito, trasiego.loteFinal.cantidad_restante, trasiego.proceso) Then
                         Throw New Exception("No se pudo guardar el movimiento del lote en el deposito de destino")
                     End If
 
@@ -165,7 +188,7 @@
 
 
             'realizar movimiento de trasiego a final
-            If Not bdTrasiego.guardar_movimiento(trasiego.lotePartida.deposito, trasiego.loteFinal.deposito, If(trasiego.sumarAdestino, trasiego.cantidad, 0)) Then
+            If Not bdTrasiego.guardar_movimiento(trasiego.lotePartida.deposito, trasiego.loteFinal.deposito, If(trasiego.sumarAdestino, trasiego.cantidad, 0), trasiego.proceso) Then
                 Throw New Exception("No se pudo guardar el movimiento del lote trasiego")
             End If
 
