@@ -1,7 +1,7 @@
 
 
 Public Class spTiposUsuarios
-    Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
     Public Sub New()
         MyBase.New("[dbo].[TiposUsuariosSelect]", _
@@ -12,7 +12,7 @@ Public Class spTiposUsuarios
                       "[dbo].[TiposUsuariosSelectDgvBy]")
     End Sub
 
-    Public Overloads Function Select_Record(ByVal TipoUsuarioID As Int32, ByRef dtb As DataBase) As DBO_TiposUsuarios
+    Public Overloads Function Select_Record(ByVal TipoUsuarioID As Int32, ByRef dtb As Connection.DataBase) As DBO_TiposUsuarios
         Dim dbo As New DBO_TiposUsuarios
         dbo.searchKey = dbo.item("TipoUsuarioID")
         dbo.searchKey.value = TipoUsuarioID
@@ -20,7 +20,7 @@ Public Class spTiposUsuarios
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal TipoUsuarioID As Int32, ByRef dtb As DataBase) As Boolean
+    Public Overrides Function Delete(ByVal TipoUsuarioID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_TiposUsuarios
         dbo.searchKey = dbo.item("TipoUsuarioID")
         dbo.searchKey.value = TipoUsuarioID

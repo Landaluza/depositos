@@ -7,7 +7,7 @@
         ctlTipLot = New spTiposLotes
     End Sub
 
-    Function GenerarCodigoDiferencias(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As DataBase) As String
+    Function GenerarCodigoDiferencias(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As Connection.DataBase) As String
         Try
             Dim mes As String
 
@@ -30,7 +30,7 @@
         End Try
     End Function
 
-    Function GenerarCodigoLoteFinal(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As DataBase) As String
+    Function GenerarCodigoLoteFinal(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As Connection.DataBase) As String
         Try
             Dim dia, mes As String
             If fecha.Day < 10 Then
@@ -53,7 +53,7 @@
         End Try
     End Function
 
-    Function GenerarCodigoLoteProcesoCompra(ByVal fecha As Date, ByVal productoid As Integer, ByVal tipoloteid As Integer, ByRef dtb As DataBase) As String
+    Function GenerarCodigoLoteProcesoCompra(ByVal fecha As Date, ByVal productoid As Integer, ByVal tipoloteid As Integer, ByRef dtb As Connection.DataBase) As String
         Try
             Dim dia, mes As String
             If fecha.Day < 10 Then
@@ -83,7 +83,7 @@
 
     End Function
 
-    Function GenerarCodigoLote(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As DataBase) As String
+    Function GenerarCodigoLote(ByVal fecha As Date, ByVal productoId As Integer, ByVal TipoLoteId As Integer, ByRef dtb As Connection.DataBase) As String
         Try
             Dim dia, mes As String
             If fecha.Day < 10 Then
@@ -110,7 +110,7 @@
         End Try
     End Function
 
-    Function GenerarCodigoLoteCompra(ByVal fecha As Date, ByVal productoid As Integer, ByVal DescripcionTipoLoteRecepcion As String, ByRef dtb As DataBase) As String
+    Function GenerarCodigoLoteCompra(ByVal fecha As Date, ByVal productoid As Integer, ByVal DescripcionTipoLoteRecepcion As String, ByRef dtb As Connection.DataBase) As String
         Try
             Dim dia, mes As String
             If fecha.Day < 10 Then
@@ -138,7 +138,7 @@
         End Try
     End Function
 
-    Public Function GenerarCodigoLoteSalida(ByVal fecha As Date, ByVal productoid As Integer, ByVal tipoloteid As Integer, ByRef dtb As DataBase) As String
+    Public Function GenerarCodigoLoteSalida(ByVal fecha As Date, ByVal productoid As Integer, ByVal tipoloteid As Integer, ByRef dtb As Connection.DataBase) As String
         Try
             Dim dia, mes As String
             If fecha.Day < 10 Then

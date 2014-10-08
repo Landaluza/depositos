@@ -10,7 +10,7 @@ Namespace Movimientos
                 MyBase.New(modoDeApertura, v_sp, CType(v_dbo, DataBussines))
                 InitializeComponent()
                 If v_sp Is Nothing Then
-                    sp = CType(New Db, StoredProcedure)
+                    sp = CType(New Db, Connection.StoredProcedure)
                 Else
                     sp = v_sp
                 End If
@@ -19,7 +19,7 @@ Namespace Movimientos
             End Sub
 
             Public Sub New()
-                MyBase.New(gridsimpleform.ACCION_INSERTAR, CType(New Db, StoredProcedure), CType(New Tipos, DataBussines))
+                MyBase.New(gridsimpleform.ACCION_INSERTAR, CType(New Db, Connection.StoredProcedure), CType(New Tipos, DataBussines))
                 InitializeComponent()
             End Sub
 
@@ -76,7 +76,7 @@ Namespace Movimientos
                 End If
             End Function
 
-            Public Overrides Sub Guardar(ByRef dtb As DataBase) Implements Savable.Guardar
+            Public Overrides Sub Guardar(ByRef dtb As Connection.DataBase) Implements Savable.Guardar
                 MyBase.Guardar(dtb)
             End Sub
 

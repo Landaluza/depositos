@@ -1,5 +1,5 @@
 ﻿Public Class BdCorrector
-    Inherits DataBase
+    Inherits Connection.DataBase
     Private query As String
 
     Public Sub New()

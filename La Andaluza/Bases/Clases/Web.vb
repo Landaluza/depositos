@@ -28,7 +28,7 @@ Public Class Web
         'messageBox.show(result)
     End Sub
 
-    Public Function recuperar_id_tablet(ByVal usuarioid As Integer, ByRef dtb As DataBase) As String
+    Public Function recuperar_id_tablet(ByVal usuarioid As Integer, ByRef dtb As Connection.DataBase) As String
         Return dtb.Consultar("select gcm_regid from gcm_Users where id_usuario= " & usuarioid, False).Rows(0).Item(0).ToString
     End Function
 End Class

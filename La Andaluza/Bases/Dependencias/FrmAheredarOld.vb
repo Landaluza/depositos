@@ -12,7 +12,7 @@ Public Class FrmAheredarOld
     Protected mse As MicrosoftOfficeExporter
     Protected filterManager As DgvFilterPopup.DgvFilterManager
     Protected dataSource As DataTable
-    Protected dtb As DataBase
+    Protected dtb As Connection.DataBase
     Protected LastEntry As Boolean
 
     Public Sub New()
@@ -25,7 +25,7 @@ Public Class FrmAheredarOld
         mse = New MicrosoftOfficeExporter
         filterManager = New DgvFilterPopup.DgvFilterManager(dgvGeneral)
         LastEntry = True
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
     End Sub
     Public Sub New(ByRef storedProc As sp, Optional ByVal MaestroID As Integer = 0)
         ' This call is required by the designer.
@@ -35,7 +35,7 @@ Public Class FrmAheredarOld
         mse = New MicrosoftOfficeExporter
         filterManager = New DgvFilterPopup.DgvFilterManager(dgvGeneral)
         LastEntry = True
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
     End Sub
 
 

@@ -2,7 +2,7 @@
     
 
     Function comprobarNotificaciones() As DataTable
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
         Dim dt As DataTable
 
         Try
@@ -17,10 +17,10 @@
     End Function
 
     Public Function borrarNotificacion(ByVal id As Integer) As Boolean
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
 
         Try
-            Return dtb.ConsultaAlteraciones("delete from notificaciones where id = " & id)             
+            Return dtb.ConsultaAlteraciones("delete from notificaciones where id = " & id)
         Catch ex As Exception
             Return False
         End Try
@@ -28,7 +28,7 @@
 
 
     Function comprobarNumeroPedidos() As Integer
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
 
 
         Dim dt As DataTable = dtb.Consultar("PedidosClientesCountByDiaServicio2", True)
@@ -40,7 +40,7 @@
     End Function
 
     Function comprobarNumeroOC() As Integer
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
 
 
         Dim dt As DataTable = dtb.Consultar("OrdenesDeCargaCountByDiaServicio", True)

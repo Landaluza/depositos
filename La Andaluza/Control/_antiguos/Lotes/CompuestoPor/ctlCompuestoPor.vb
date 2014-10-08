@@ -27,7 +27,7 @@ Public Class ctlCompuestoPor
     Public Function GuardarCompuestoPor(ByVal LoteFinal As Integer, _
                                    ByVal LotePartida As Integer, _
                                    ByVal MovimientoID As Integer, _
-                                   ByVal Cantidad As Double, ByRef dtb As DataBase) As Boolean
+                                   ByVal Cantidad As Double, ByRef dtb As Connection.DataBase) As Boolean
 
         clsCom._LoteFinal = LoteFinal
         clsCom._LotePartida = LotePartida
@@ -36,16 +36,16 @@ Public Class ctlCompuestoPor
         Return clsCom.Insertar(dtb)
     End Function
 
-    Public Function RevertirMovimiento(ByRef dtb As DataBase) As Boolean
+    Public Function RevertirMovimiento(ByRef dtb As Connection.DataBase) As Boolean
         Return clsCom.RevertirMovimiento(dtb)
     End Function
 
-    Public Function DevolverCompuestosPorMovimiento(ByVal MovID As Integer, ByRef dtb As DataBase) As DataTable
+    Public Function DevolverCompuestosPorMovimiento(ByVal MovID As Integer, ByRef dtb As Connection.DataBase) As DataTable
         clsCom._MovimientoID = MovID
         Return clsCom.DevolverPorMovimiento(dtb)
     End Function
 
-    Public Function EliminarCompuestoPor(ByRef dtb As DataBase) As Boolean
+    Public Function EliminarCompuestoPor(ByRef dtb As Connection.DataBase) As Boolean
         Return clsCom.Eliminar(dtb)
     End Function
 End Class

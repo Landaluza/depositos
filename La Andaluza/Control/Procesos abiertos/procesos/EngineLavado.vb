@@ -62,7 +62,7 @@
             gui.frmMovimientos = New frmEntMovimientosCopy
             AddHandler gui.frmMovimientos.Saved, AddressOf borrar
             gui.frmMovimientos.Show()
-            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.LAVADO_DEPOSITO.ToString, "", "", "", New DataBase(Config.Server))
+            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.LAVADO_DEPOSITO.ToString, "", "", "", New Connection.DataBase(Config.Server))
             gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.LAVADO_DEPOSITO
             If Not gui.cboDepositoPArtida.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDepositoPArtida.SelectedValue
 

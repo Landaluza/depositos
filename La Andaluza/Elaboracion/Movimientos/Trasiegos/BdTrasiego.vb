@@ -1,7 +1,7 @@
 ﻿Namespace Movimientos
 
 Public Class BdTrasiego
-    Inherits DataBase
+        Inherits Connection.DataBase
 
     Private query As String
     Public Sub New()

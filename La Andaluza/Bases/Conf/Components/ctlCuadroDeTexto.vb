@@ -1,7 +1,7 @@
 Public Class ctlCuadroDeTexto
     Private cls As New clsCuadroDeTexto
 
-    Function Validar(ByVal ID As Integer, ByVal Campo As String, ByVal CampoValor As String, ByVal CampoID As String, ByVal Tabla As String, ByRef dtb As DataBase) As Boolean
+    Function Validar(ByVal ID As Integer, ByVal Campo As String, ByVal CampoValor As String, ByVal CampoID As String, ByVal Tabla As String, ByRef dtb As Connection.DataBase) As Boolean
         cls._ID = ID
         cls._Campo = Campo
         cls._CampoValor = CampoValor

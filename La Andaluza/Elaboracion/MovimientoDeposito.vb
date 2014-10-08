@@ -1,5 +1,5 @@
 ﻿Public Class MovimientoDeposito
-    Inherits DataBase
+    Inherits Connection.DataBase
 
     Public trazabilidad As Boolean 'si el movimiento posee trazabilidad
     Public MovimientoID As Integer 'id del movimiento a eliminar    

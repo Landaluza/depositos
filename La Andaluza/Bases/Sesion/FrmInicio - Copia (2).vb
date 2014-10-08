@@ -110,7 +110,7 @@ Public Class FrmInicio
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As System.Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-        DataBase.buildConnectionString(Config.Server)
+        Connection.DataBase.buildConnectionString(Config.Server)
         Dim spUsuarios As New spUsuarios
 
         If Not Calendar.TestDate() Then

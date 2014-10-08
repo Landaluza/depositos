@@ -16,7 +16,7 @@ Public Class clsTransicubas
         End Set
     End Property
 
-    Public Function darDeBajaTransicuba(ByRef dtb As DataBase) As Boolean
+    Public Function darDeBajaTransicuba(ByRef dtb As Connection.DataBase) As Boolean
 
         Return dtb.ConsultaAlteraciones("update Transicubas set " & _
                     "Estado='False' where TransicubaID=" & Convert.ToString(TransicubaID))

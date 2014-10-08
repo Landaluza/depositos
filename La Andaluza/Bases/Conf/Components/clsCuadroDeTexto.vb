@@ -60,7 +60,7 @@ Public Class clsCuadroDeTexto
 
 #End Region
 
-    Function EsMio(ByRef dtb As DataBase) As Boolean
+    Function EsMio(ByRef dtb As Connection.DataBase) As Boolean
         Try
             Return Convert.ToInt32(dtb.Consultar("select count(*) from " & Tabla & " where " & Campo & " = '" & CampoValor & "' and " & CampoID & " = " & Convert.ToString(ID), False).Rows(0).Item(0)) > 0
         Catch ex As Exception
@@ -68,7 +68,7 @@ Public Class clsCuadroDeTexto
         End Try
     End Function
 
-    Function Validar(ByRef dtb As DataBase) As Boolean
+    Function Validar(ByRef dtb As Connection.DataBase) As Boolean
         Try
             Return Convert.ToInt32(dtb.Consultar("select count(*) as cuenta from " & Tabla & " where " & Campo & " = '" & CampoValor & "'", False).Rows(0).Item(0)) > 0
         Catch ex As Exception

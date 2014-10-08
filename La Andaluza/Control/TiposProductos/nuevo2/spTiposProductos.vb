@@ -1,7 +1,7 @@
 
 
 Public Class spTiposProductos
-Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
    Public Sub new()
        MyBase.New( "[dbo].[TiposProductosSelect]",  _
@@ -12,7 +12,7 @@ Inherits StoredProcedure
                      "[dbo].[TiposProductosSelectDgvBy]")
    End Sub
 
-    Public Overloads Function Select_Record(ByVal TipoProductoID As Int32, ByRef dtb As database) As DBO_TiposProductos
+    Public Overloads Function Select_Record(ByVal TipoProductoID As Int32, ByRef dtb As Connection.DataBase) As DBO_TiposProductos
         Dim dbo As New DBO_TiposProductos
         dbo.searchKey = dbo.item("TipoProductoID")
         dbo.searchKey.value = TipoProductoID
@@ -20,7 +20,7 @@ Inherits StoredProcedure
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal TipoProductoID As Int32, ByRef dtb As database) As Boolean
+    Public Overrides Function Delete(ByVal TipoProductoID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_TiposProductos
         dbo.searchKey = dbo.item("TipoProductoID")
         dbo.searchKey.value = TipoProductoID
@@ -31,7 +31,7 @@ Inherits StoredProcedure
         If primeraCelda = String.Empty Then
             cbo.mam_DataSource("[TiposProductosSelectCboEnologicos]", False)
         Else
-            cbo.mam_DataSource("[TiposProductosSelectCboEnologicos]", True, New DataBase(Config.Server), primeraCelda)
+            cbo.mam_DataSource("[TiposProductosSelectCboEnologicos]", True, New Connection.DataBase(Config.Server), primeraCelda)
         End If
     End Sub
 
@@ -39,7 +39,7 @@ Inherits StoredProcedure
         If primeracelda = String.Empty Then
             cbo.mam_DataSource("TiposProductosSelectCbo", False)
         Else
-            cbo.mam_DataSource("TiposProductosSelectCbo", False, New DataBase(Config.Server), primeracelda)
+            cbo.mam_DataSource("TiposProductosSelectCbo", False, New Connection.DataBase(Config.Server), primeracelda)
         End If
     End Sub
 
@@ -47,21 +47,21 @@ Inherits StoredProcedure
         cbo.mam_DataSource("[dbo].[TiposProductosSelectDgv]", False)
     End Sub
 
-    Public Function devolver_TiposProductos_Cbo(ByRef dtb As DataBase) As DataTable
+    Public Function devolver_TiposProductos_Cbo(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("TiposProductosSelectCbo", True)
     End Function
 
-    Public Function devolver_TiposProductos_No_enologicos(ByRef dtb As DataBase) As DataTable
+    Public Function devolver_TiposProductos_No_enologicos(ByRef dtb As Connection.DataBase) As DataTable
 
         Return dtb.Consultar("TiposProductosSelectCboNoEnologicos", True)
     End Function
 
-    Public Function devolver_TiposProductos_Enologicos(ByRef dtb As DataBase) As DataTable
+    Public Function devolver_TiposProductos_Enologicos(ByRef dtb As Connection.DataBase) As DataTable
 
         Return dtb.Consultar("TiposProductosSelectCboEnologicos", True)
     End Function
 
-    Public Function devolver_TiposProductos(ByRef dtb As DataBase) As DataTable
+    Public Function devolver_TiposProductos(ByRef dtb As Connection.DataBase) As DataTable
 
         Return dtb.Consultar("[dbo].[TiposProductosSelectDgv]", True)
     End Function
@@ -70,7 +70,7 @@ Inherits StoredProcedure
         If primeraCelda = String.Empty Then
             cbo.mam_DataSource("[TiposProductosSelectCboNoEnologicos]", False)
         Else
-            cbo.mam_DataSource("[TiposProductosSelectCboNoEnologicos]", True, New DataBase(Config.Server), primeraCelda)
+            cbo.mam_DataSource("[TiposProductosSelectCboNoEnologicos]", True, New Connection.DataBase(Config.Server), primeraCelda)
         End If
     End Sub
 

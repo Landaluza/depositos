@@ -1,6 +1,6 @@
 
 Public Class spFiltros
-Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
    Public Sub new()
        MyBase.New( "[dbo].[FiltrosSelect]",  _
@@ -11,7 +11,7 @@ Inherits StoredProcedure
                      "[dbo].[FiltrosSelectDgvBy]")
    End Sub
 
-    Public Overloads Function Select_Record(ByVal FiltroID As Integer, ByRef dtb As DataBase) As DBO_Filtros
+    Public Overloads Function Select_Record(ByVal FiltroID As Integer, ByRef dtb As Connection.DataBase) As DBO_Filtros
         Dim dbo As New DBO_Filtros
         dbo.searchKey = dbo.item("FiltroID")
         dbo.searchKey.value = FiltroID
@@ -19,7 +19,7 @@ Inherits StoredProcedure
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal FiltroID As Integer, ByRef dtb As DataBase) As Boolean
+    Public Overrides Function Delete(ByVal FiltroID As Integer, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_Filtros
         dbo.searchKey = dbo.item("FiltroID")
         dbo.searchKey.value = FiltroID

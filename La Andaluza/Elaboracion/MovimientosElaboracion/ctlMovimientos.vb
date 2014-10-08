@@ -18,13 +18,13 @@ Public Class ctlMovimientos
         clsMov._MovimientoID = ID
     End Sub
 
-    Public Function devolverListadoMovimientosPorTipos(ByVal ProcesoID As Integer, ByVal Desde As Date, ByVal Hasta As Date, ByRef dtb As DataBase) As DataTable
+    Public Function devolverListadoMovimientosPorTipos(ByVal ProcesoID As Integer, ByVal Desde As Date, ByVal Hasta As Date, ByRef dtb As Connection.DataBase) As DataTable
         clsMov._ProcesoID = ProcesoID
         clsMov._Fecha = Desde
         Return clsMov.devolverListadoMovimientosPorTipos(Hasta, dtb)
     End Function
 
-    Public Sub mostrarTodosMovimientos(ByRef dts As dtsMovimientos.MovimientosDataTable, ByRef dtb As DataBase)
+    Public Sub mostrarTodosMovimientos(ByRef dts As dtsMovimientos.MovimientosDataTable, ByRef dtb As Connection.DataBase)
         Dim tabla As DataTable
         tabla = clsMov.Devolver(dtb)
 
@@ -77,7 +77,7 @@ Public Class ctlMovimientos
                                  ByVal LoteID As Integer, _
                                  ByVal FiltroID As Integer, _
                                  ByVal Suma As Boolean, _
-                                 ByVal NuevoLote As Boolean, ByRef dtb As DataBase) As Boolean
+                                 ByVal NuevoLote As Boolean, ByRef dtb As Connection.DataBase) As Boolean
 
         clsMov._Fecha = Fecha
         clsMov._Observaciones = Observaciones
@@ -97,11 +97,11 @@ Public Class ctlMovimientos
         End If
     End Function
 
-    Public Function EliminarMovimiento(Optional ByRef transactdtb As DataBase = Nothing) As Boolean
-        Dim dtb As DataBase
+    Public Function EliminarMovimiento(Optional ByRef transactdtb As Connection.DataBase = Nothing) As Boolean
+        Dim dtb As Connection.DataBase
 
         If transactdtb Is Nothing Then
-            dtb = New DataBase(Config.Server)
+            dtb = New Connection.DataBase(Config.Server)
         Else
             dtb = transactdtb
         End If

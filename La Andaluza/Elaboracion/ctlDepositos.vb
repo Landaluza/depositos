@@ -13,15 +13,15 @@ Public Class ctlDepositos
         clsDep._DepositoID = ID
     End Sub
 
-    Public Function devolverDepositosFinales(ByRef dtb As DataBase) As DataTable
+    Public Function devolverDepositosFinales(ByRef dtb As Connection.DataBase) As DataTable
         Return clsDep.devolverDepositosFinales(dtb)
     End Function
 
-    Public Function devolverDepositosPartidas(ByRef dtb As DataBase) As DataTable
+    Public Function devolverDepositosPartidas(ByRef dtb As Connection.DataBase) As DataTable
         Return clsDep.devolverDepositosPartidas(dtb)
     End Function
 
-    Public Sub CargarDepositos(ByRef dtb As DataBase)
+    Public Sub CargarDepositos(ByRef dtb As Connection.DataBase)
         clsDep.Cargar(dtb)
     End Sub
 
@@ -37,11 +37,11 @@ Public Class ctlDepositos
         clsTra._TransicubaID = ID
     End Sub
 
-    Public Function devolverTransicubasActivas(ByRef dtb As DataBase) As DataTable
+    Public Function devolverTransicubasActivas(ByRef dtb As Connection.DataBase) As DataTable
         Return clsDep.devolverTransicubasActivas(dtb)
     End Function
 
-    Public Function darDeBajaTransicuba(ByRef dtb As DataBase) As Boolean
+    Public Function darDeBajaTransicuba(ByRef dtb As Connection.DataBase) As Boolean
         Return clsTra.darDeBajaTransicuba(dtb)
     End Function
 

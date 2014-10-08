@@ -350,7 +350,7 @@ Public Class clsLotes
     End Sub
 
 
-    Public Sub cargarParaMovimientoPorDeposito(ByRef dtb As DataBase)
+    Public Sub cargarParaMovimientoPorDeposito(ByRef dtb As Connection.DataBase)
         Dim tabla As DataTable = dtb.Consultar("select LoteID, Descripcion, CantidadRestante, TipoProductoId, CodigoLote, observacion " & _
                                    "from Lotes where " & _
                                    "Lotes.DepositoID =" & Convert.ToString(DepositoID), False)
@@ -392,7 +392,7 @@ Public Class clsLotes
     End Sub
 
 
-    Public Sub devolverReferencia(ByRef dtb As DataBase)
+    Public Sub devolverReferencia(ByRef dtb As Connection.DataBase)
         Try
             Referencia = Convert.ToInt32(dtb.Consultar("select max(referencia) from Lotes", False).Rows(0).Item(0))
             Referencia = Referencia + 1
@@ -401,7 +401,7 @@ Public Class clsLotes
         End Try
     End Sub
 
-    Public Function guardarLoteCompra(ByRef dtb As DataBase) As Boolean
+    Public Function guardarLoteCompra(ByRef dtb As Connection.DataBase) As Boolean
 
         If Not dtb.ConsultaAlteraciones("insert into Lotes(Referencia,Fecha,CantidadRestante,TipoLoteID,TipoProductoID,ProveedorID,CodigoLote,descripcion,observacion,FechaModificacion,UsuarioModificacion) values(" & _
                                         Referencia & ",'" & Calendar.ArmarFecha(Fecha) & "'," & _
@@ -422,18 +422,18 @@ Public Class clsLotes
     End Function
 
 
-    Public Function Eliminar(ByRef dtb As DataBase) As Boolean
+    Public Function Eliminar(ByRef dtb As Connection.DataBase) As Boolean
         Return dtb.ConsultaAlteraciones("delete from Lotes where LoteID = " & LoteID)
-  
+
     End Function
 
-    Public Function devolverLotesEnologicosParaMovimientoPorProceso(ByVal Proceso As Integer, ByRef dtb As DataBase) As DataTable
+    Public Function devolverLotesEnologicosParaMovimientoPorProceso(ByVal Proceso As Integer, ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select Lotes.LoteID, Lotes.CodigoLote from " & _
                               " Lotes LEFT OUTER JOIN TiposProductos ON Lotes.TipoProductoID = TiposProductos.TipoProductoID inner join usosProductos on TiposProductos.TipoProductoID = usosproductos.TipoProductoID " & _
                               " where usosProductos.ProcesoID = " & Proceso & " and CantidadRestante > 0", False)
     End Function
 
-    Public Sub validarLoteDiferencia(ByRef dtb As DataBase)
+    Public Sub validarLoteDiferencia(ByRef dtb As Connection.DataBase)
         Try
             Dim tabla As DataTable = dtb.Consultar("select Lotes.LoteID, cantidadRestante, descripcion from Lotes where codigoLote = '" & CodigoLote & "'", False)
             LoteID = Convert.ToInt32(tabla.Rows(0).Item(0))
@@ -446,7 +446,7 @@ Public Class clsLotes
         End Try
     End Sub
 
-    Public Sub DevolverEnologicosParaMovimientosPorLoteID(ByRef dtb As DataBase)
+    Public Sub DevolverEnologicosParaMovimientosPorLoteID(ByRef dtb As Connection.DataBase)
         Dim tabla As DataTable = dtb.Consultar("select Lotes.LoteID, Lotes.CantidadRestante,TipoProductoID, Lotes.CodigoLote from Lotes where LoteID =" & Convert.ToString(LoteID), False)
         Try
             LoteID = Convert.ToInt32(tabla.Rows(0).Item(0))
@@ -462,7 +462,7 @@ Public Class clsLotes
     End Sub
 
 
-    Public Function DevolverLotesTrazabilidad(ByVal Lote As Integer, ByRef dtb As DataBase) As DataTable
+    Public Function DevolverLotesTrazabilidad(ByVal Lote As Integer, ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select Lotes.CodigoLote AS ComponeA, Lotes_Partida.LoteID, Lotes_Partida.CodigoLote, Movimientos.Fecha, Procesos.Descripcion AS Proceso, CompuestoPor.Cantidad, Proveedores.Nombre " & _
                               "from Lotes INNER JOIN CompuestoPor ON Lotes.LoteID = CompuestoPor.LoteFinal LEFT JOIN Movimientos ON CompuestoPor.MovimientoID = Movimientos.MovimientoID LEFT JOIN Lotes AS Lotes_Partida ON CompuestoPor.LotePartida = Lotes_Partida.LoteID LEFT JOIN Procesos ON Movimientos.ProcesoID = Procesos.ProcesoID LEFT JOIN Proveedores ON Lotes_Partida.ProveedorID = Proveedores.ProveedorID" & _
                               " where Lotes.LoteID =" & Lote, False)

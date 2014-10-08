@@ -4,7 +4,7 @@
     Public Function TestDate() As Boolean
 
 
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
         dtb.TimeOut = 40
         Dim dt As DataTable
         Try

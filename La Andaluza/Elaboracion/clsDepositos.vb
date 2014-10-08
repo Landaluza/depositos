@@ -168,15 +168,15 @@ Public Class clsDepositos
 #End Region
 
 #Region "Metodos"
-    Public Function devolverDepositosFinales(ByRef dtb As DataBase) As DataTable
+    Public Function devolverDepositosFinales(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("devolverDepositosFinales", True)
     End Function
 
-    Public Function devolverDepositosPartidas(ByRef dtb As DataBase) As DataTable
+    Public Function devolverDepositosPartidas(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("devolverDepositosPartidas", True)
     End Function
 
-    Public Sub Cargar(ByRef dtb As DataBase)
+    Public Sub Cargar(ByRef dtb As Connection.DataBase)
         Try
             Dim tabla As New DataTable
             tabla = dtb.Consultar("select Depositos.FechaCreacion, Depositos.Capacidad,Depositos.DoctoUbicacionFisica,TonelID,TransicubaID, BotaID, BotaPiernaID from Depositos where DepositoID=" & DepositoID, False)
@@ -223,10 +223,10 @@ Public Class clsDepositos
         End Try
     End Sub
 
-   
 
-   
-    Public Function devolverTransicubasActivas(ByRef dtb As DataBase) As DataTable
+
+
+    Public Function devolverTransicubasActivas(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select Depositos.TransicubaID,Depositos.Codigo from " & _
                               "Depositos INNER JOIN Transicubas ON Depositos.TransicubaID = Transicubas.TransicubaID where " & _
                               "(Transicubas.Estado = 'True')  and Depositos.DepositoID not in (SELECT DISTINCT Depositos.DepositoID FROM Depositos INNER JOIN Transicubas ON Depositos.TransicubaID = Transicubas.TransicubaID INNER JOIN Lotes ON Depositos.DepositoID = Lotes.DepositoID WHERE (Transicubas.Estado = 'True')) order by Depositos.Codigo", False)

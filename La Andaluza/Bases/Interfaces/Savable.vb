@@ -2,5 +2,5 @@
     Event afterSave(sender As Object, args As EventArgs) '
     Sub setValores()
     Function getValores() As Boolean
-    Sub Guardar(ByRef dtb As DataBase)
+    Sub Guardar(ByRef dtb As Connection.DataBase)
 End Interface

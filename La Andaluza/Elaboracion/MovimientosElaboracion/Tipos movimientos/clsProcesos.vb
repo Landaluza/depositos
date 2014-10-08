@@ -78,7 +78,7 @@ Public Class clsProcesos
     End Property
 
 
-    Public Sub devolverTipoMovimientoPorDescripcion(ByRef dtb As DataBase)
+    Public Sub devolverTipoMovimientoPorDescripcion(ByRef dtb As Connection.DataBase)
         Try
             TipoMovimiento = Convert.ToChar(dtb.Consultar("select Tiposmovimientos.abreviatura as TipoMovimiento from Procesos, tiposmovimientos where tipomovimientoid = id and procesos.Descripcion ='" & Descripcion & "'", False).Rows(0).Item(0))
         Catch ex As Exception
@@ -88,7 +88,7 @@ Public Class clsProcesos
     End Sub
 
 
-    Public Sub Cargar(ByRef dtb As DataBase)
+    Public Sub Cargar(ByRef dtb As Connection.DataBase)
         Dim tabla As DataTable = dtb.Consultar("select Procesos.Descripcion,Procesos.TipoProductoParaLote,Tiposmovimientos.abreviatura as TipoMovimiento,TiposLotes.tipoLoteID As TiposLotes, Procesos.ConMuestra " & _
                                                " from Procesos inner join tiposmovimientos on tipomovimientoid = id LEFT JOIN TiposLotes On Procesos.TipoLoteID = TiposLotes.TipoLoteID " & _
                                                "where Procesos.ProcesoId = " & Convert.ToString(ProcesoID), False)
@@ -119,7 +119,7 @@ Public Class clsProcesos
         End Try
     End Sub
 
-    Public Function devolverProcesosPorDescripcion(ByRef dtb As DataBase) As DataTable
+    Public Function devolverProcesosPorDescripcion(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select ProcesoID,Descripcion from Procesos where ProcesoID>0 and procesoid<>16 ORDER BY Descripcion", False)
     End Function
 

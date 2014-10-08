@@ -32,7 +32,7 @@ Public Class frmEntNoticias2
         Return False
     End Function
 
-    Public Overrides Sub Guardar(ByRef dtb As DataBase)
+    Public Overrides Sub Guardar(ByRef dtb As Connection.DataBase)
         Me.Close()
     End Sub
 

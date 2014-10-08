@@ -90,7 +90,7 @@
             gui.frmMovimientos = New frmEntMovimientosCopy
             AddHandler gui.frmMovimientos.Saved, AddressOf borrar
             gui.frmMovimientos.Show()
-            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.PIE_DE_CUBA.ToString, "", "", "", New DataBase(Config.Server))
+            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.PIE_DE_CUBA.ToString, "", "", "", New Connection.DataBase(Config.Server))
             gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.PIE_DE_CUBA
             If Not gui.cboLote.SelectedValue Is Nothing Then gui.frmMovimientos.cboAjusteLotes.SelectedValue = gui.cboLote.SelectedValue
             If Not gui.cboDeposito.SelectedValue Is Nothing Then gui.frmMovimientos.cboFinalDepositoID.SelectedValue = gui.cboDeposito.SelectedValue

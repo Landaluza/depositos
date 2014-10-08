@@ -1,7 +1,7 @@
 
 
 Public Class spUsuarios
-    Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
     Public Sub New()
         MyBase.New("[dbo].[UsuariosSelect]", _
@@ -12,14 +12,14 @@ Public Class spUsuarios
                         "[dbo].[UsuariosSelectDgvBy]")
     End Sub
 
-    Public Overrides Function Delete(ByVal UsuarioID As Int32, ByRef dtb As DataBase) As Boolean
+    Public Overrides Function Delete(ByVal UsuarioID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_Usuarios
         dbo.searchKey = dbo.item("UsuarioID")
         dbo.searchKey.value = UsuarioID
         Return MyBase.DeleteProcedure(CType(dbo, DataBussines), dtb)
     End Function
-  
-    Public Function select_record_by_usuario(ByVal usuario As String, ByRef dtb As DataBase) As DBO_Usuarios
+
+    Public Function select_record_by_usuario(ByVal usuario As String, ByRef dtb As Connection.DataBase) As DBO_Usuarios
         Dim dbo As New DBO_Usuarios
         dbo.searchKey = dbo.item("Usuario")
         dbo.searchKey.value = usuario

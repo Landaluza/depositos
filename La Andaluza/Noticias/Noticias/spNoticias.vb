@@ -1,7 +1,7 @@
 
 
 Public Class spNoticias
-Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
    Public Sub new()
        MyBase.New( "[dbo].[NoticiasSelect]",  _
@@ -12,7 +12,7 @@ Inherits StoredProcedure
                      "[dbo].[NoticiasSelectDgvBy]")
    End Sub
 
-    Public Overloads Function Select_Record(ByVal Id As Int32, ByRef dtb As database) As DBO_Noticias
+    Public Overloads Function Select_Record(ByVal Id As Int32, ByRef dtb As Connection.DataBase) As DBO_Noticias
         Dim dbo As New DBO_Noticias
         dbo.searchKey = dbo.item("Id")
         dbo.searchKey.value = Id
@@ -20,7 +20,7 @@ Inherits StoredProcedure
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal Id As Int32, ByRef dtb As database) As Boolean
+    Public Overrides Function Delete(ByVal Id As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_Noticias
         dbo.searchKey = dbo.item("Id")
         dbo.searchKey.value = Id

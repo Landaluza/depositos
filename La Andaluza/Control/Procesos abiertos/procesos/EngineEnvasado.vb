@@ -61,7 +61,7 @@
             gui.frmMovimientos = New frmEntMovimientosCopy
             AddHandler gui.frmMovimientos.Saved, AddressOf borrar
             gui.frmMovimientos.Show()
-            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.ENVASADO.ToString, "", "", "", New DataBase(Config.Server))
+            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.ENVASADO.ToString, "", "", "", New Connection.DataBase(Config.Server))
             gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.ENVASADO
             If Not gui.cboDeposito.SelectedValue Is Nothing Then gui.frmMovimientos.cboPartidaDepositoID.SelectedValue = gui.cboDeposito.SelectedValue
             gui.frmMovimientos.txtCantidad.Text = gui.txtCantidad.Text

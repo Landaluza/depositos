@@ -1,6 +1,6 @@
 ﻿Namespace Procesos
     Public Class SpClarificacion
-        Inherits DataBase
+        Inherits Connection.DataBase
 
         Public Sub New()
             MyBase.New(Config.Server)

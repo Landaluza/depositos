@@ -8,7 +8,7 @@ Public Class frmEntFiltros
        MyBase.new(modoDeApertura, v_sp, ctype(v_dbo,databussines))
        InitializeComponent()
        If v_sp Is Nothing then
-       sp = ctype( New spFiltros,storedprocedure)
+            sp = CType(New spFiltros, Connection.StoredProcedure)
        else
        sp = v_sp
        End if
@@ -17,7 +17,7 @@ Public Class frmEntFiltros
    End Sub
 
    Public Sub New()
-       MyBase.new(GridSimpleForm.ACCION_INSERTAR, ctype(new spFiltros,storedprocedure), ctype(new DBO_Filtros,databussines))
+        MyBase.New(gridsimpleform.ACCION_INSERTAR, CType(New spFiltros, Connection.StoredProcedure), CType(New DBO_Filtros, DataBussines))
        InitializeComponent()
    End Sub
 
@@ -61,7 +61,7 @@ Public Class frmEntFiltros
         End IF
    End Function
 
-    Public Overrides Sub Guardar(ByRef dtb As DataBase) Implements Savable.Guardar
+    Public Overrides Sub Guardar(ByRef dtb As Connection.DataBase) Implements Savable.Guardar
         MyBase.Guardar(dtb)
     End Sub
 End Class

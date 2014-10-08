@@ -9,7 +9,7 @@ Class spCompuestoPor
                    "[dbo].[CompuestoPorDelete]", "CompuestoPorSelectDgv", "CompuestoPorSelectDgvByLotePartida")
     End Sub
 
-    Public Function Select_Record(ByVal LoteFinal As Int32, ByVal LotePartida As Int32, ByVal MovimientoID As Int32, ByRef dtb As DataBase) As DBO_CompuestoPor
+    Public Function Select_Record(ByVal LoteFinal As Int32, ByVal LotePartida As Int32, ByVal MovimientoID As Int32, ByRef dtb As Connection.DataBase) As DBO_CompuestoPor
         dtb.Conectar()
         Dim DBO_CompuestoPor As New DBO_CompuestoPor
         Dim selectCommand As System.Data.SqlClient.SqlCommand = dtb.Comando("[dbo].[CompuestoPorSelect]")
@@ -41,7 +41,7 @@ Class spCompuestoPor
         Return DBO_CompuestoPor
     End Function
 
-    Public Function CompuestoPorInsert(ByVal dbo_CompuestoPor As DBO_CompuestoPor, ByRef dtb As database) As Boolean
+    Public Function CompuestoPorInsert(ByVal dbo_CompuestoPor As DBO_CompuestoPor, ByRef dtb As Connection.DataBase) As Boolean
         dtb.Conectar()
         Dim insertCommand As System.Data.SqlClient.SqlCommand = dtb.Comando("[dbo].[CompuestoPorInsert]")
         insertCommand.CommandType = CommandType.StoredProcedure
@@ -66,7 +66,7 @@ Class spCompuestoPor
         End Try
     End Function
 
-    Public Function CompuestoPorUpdate(ByVal newDBO_CompuestoPor As DBO_CompuestoPor, ByRef dtb As DataBase) As Boolean
+    Public Function CompuestoPorUpdate(ByVal newDBO_CompuestoPor As DBO_CompuestoPor, ByRef dtb As Connection.DataBase) As Boolean
         dtb.Conectar()
         Dim updateCommand As System.Data.SqlClient.SqlCommand = dtb.Comando("[dbo].[CompuestoPorUpdate]")
         If Not dtb.Transaccion Is Nothing Then updateCommand.Transaction = dtb.Transaccion
@@ -84,14 +84,14 @@ Class spCompuestoPor
         Try
             updateCommand.ExecuteNonQuery()
             Return True
-        Catch ex As System.Data.SqlClient.SqlException            
+        Catch ex As System.Data.SqlClient.SqlException
             Return False
         Finally
             dtb.Desconectar()
         End Try
     End Function
 
-    Public Function CompuestoPorDelete(ByVal LoteFinal As Int32, ByVal LotePartida As Int32, ByVal MovimientoID As Int32, ByRef dtb As DataBase) As Boolean
+    Public Function CompuestoPorDelete(ByVal LoteFinal As Int32, ByVal LotePartida As Int32, ByVal MovimientoID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         dtb.Conectar()
         Dim deleteCommand As System.Data.SqlClient.SqlCommand = dtb.Comando("[dbo].[CompuestoPorDelete]")
         deleteCommand.CommandType = CommandType.StoredProcedure
@@ -113,7 +113,7 @@ Class spCompuestoPor
         End Try
     End Function
 
-    Public Function GrabarCompuestoPor(ByVal dbo_CompuestoPor As DBO_CompuestoPor, ByRef dtb As DataBase) As Boolean
+    Public Function GrabarCompuestoPor(ByVal dbo_CompuestoPor As DBO_CompuestoPor, ByRef dtb As Connection.DataBase) As Boolean
         dbo_CompuestoPor.FechaModificacion = System.DateTime.Now.Date
         dbo_CompuestoPor.UsuarioModificacion = Config.User
         If dbo_CompuestoPor.LoteFinal = 0 Then

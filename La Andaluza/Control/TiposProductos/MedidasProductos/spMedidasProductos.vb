@@ -1,7 +1,7 @@
 
 
 Public Class spMedidasProductos
-Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
     Public Sub New()
         MyBase.New("[dbo].[MedidasProductosSelect]", _
@@ -12,7 +12,7 @@ Inherits StoredProcedure
                         "[dbo].[MedidasProductosSelectDgvBy]")
     End Sub
 
-    Public Overloads Function Select_Record(ByVal MedidaID As Int32, ByRef dtb As database) As DBO_MedidasProductos
+    Public Overloads Function Select_Record(ByVal MedidaID As Int32, ByRef dtb As Connection.DataBase) As DBO_MedidasProductos
         Dim dbo As New DBO_MedidasProductos
         dbo.searchKey = dbo.item("MedidaID")
         dbo.searchKey.value = MedidaID
@@ -20,7 +20,7 @@ Inherits StoredProcedure
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal MedidaID As Int32, ByRef dtb As database) As Boolean
+    Public Overrides Function Delete(ByVal MedidaID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_MedidasProductos
         dbo.searchKey = dbo.item("MedidaID")
         dbo.searchKey.value = MedidaID
@@ -32,7 +32,7 @@ Inherits StoredProcedure
     End Sub
 
     Public Function devolver_MedidasProductos() As DataTable
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
         Return dtb.Consultar("MedidasProductosCbo", True)
     End Function
 End Class

@@ -19,11 +19,11 @@ Public Class ctlLotes
         clsAnaVal = New clsAnaliticasValores
         clsAna = New clsAnaliticas
     End Sub
-    Public Function devolverLotesEnologicosParaMovimientoPorProceso(ByVal Proceso As Integer, ByRef dtb As DataBase) As DataTable
+    Public Function devolverLotesEnologicosParaMovimientoPorProceso(ByVal Proceso As Integer, ByRef dtb As Connection.DataBase) As DataTable
         Return clsLot.devolverLotesEnologicosParaMovimientoPorProceso(Proceso, dtb)
     End Function
 
-    Public Sub devolverLotesEnologicosParaMovimientosPorLoteID(ByVal LoteID As Integer, ByRef CantidadRestante As String, ByRef TipoProductoID As Integer, ByRef CodigoLote As String, ByRef dtb As DataBase)
+    Public Sub devolverLotesEnologicosParaMovimientosPorLoteID(ByVal LoteID As Integer, ByRef CantidadRestante As String, ByRef TipoProductoID As Integer, ByRef CodigoLote As String, ByRef dtb As Connection.DataBase)
         clsLot._LoteID = LoteID
         clsLot.DevolverEnologicosParaMovimientosPorLoteID(dtb)
         CantidadRestante = clsLot._CantidadRestante.ToString
@@ -31,7 +31,7 @@ Public Class ctlLotes
         CodigoLote = clsLot._CodigoLote
     End Sub
 
-    Function validarLoteDiferencia(ByVal codigo As String, ByRef cantidad As Double, ByRef descr As String, ByRef dtb As DataBase) As Integer
+    Function validarLoteDiferencia(ByVal codigo As String, ByRef cantidad As Double, ByRef descr As String, ByRef dtb As Connection.DataBase) As Integer
         clsLot._CodigoLote = codigo
         clsLot.validarLoteDiferencia(dtb)
         cantidad = clsLot._CantidadRestante
@@ -54,7 +54,7 @@ Public Class ctlLotes
                                                ByVal observacion As String, _
                                                ByVal conMuestra As Boolean, _
                                                ByVal RecipienteSalida As Integer, _
-                                               ByVal TransicubaID As Integer, ByRef dtb As DataBase) _
+                                               ByVal TransicubaID As Integer, ByRef dtb As Connection.DataBase) _
                                                As Integer
 
         Dim RecipienteSalidaId As String
@@ -111,7 +111,7 @@ Public Class ctlLotes
         End If
 
         'tipoproducto 0
-        
+
 
 
         If TransicubaID <> 0 Then
@@ -133,7 +133,7 @@ Public Class ctlLotes
         End If
     End Function
 
-    Public Function verificar_lote(ByVal codigoLote As String, ByRef dtb As DataBase) As Integer
+    Public Function verificar_lote(ByVal codigoLote As String, ByRef dtb As Connection.DataBase) As Integer
         Dim consulta As String = "select loteid from lotes where codigolote = '" & codigoLote & "'"
 
         Dim dt As DataTable = dtb.Consultar(consulta, False)
@@ -145,7 +145,7 @@ Public Class ctlLotes
         Return Convert.ToInt32(dt.Rows(0).Item(0))
     End Function
 
-    Public Sub CargarParaMovimiento(ByVal DepositoID As Integer, ByRef LoteId As Integer, ByRef LoteActual As String, ByRef TipoProductoID As Integer, ByRef Descripcion As String, ByRef obser As String, ByRef CantidadActual As String, ByRef dtb As DataBase)
+    Public Sub CargarParaMovimiento(ByVal DepositoID As Integer, ByRef LoteId As Integer, ByRef LoteActual As String, ByRef TipoProductoID As Integer, ByRef Descripcion As String, ByRef obser As String, ByRef CantidadActual As String, ByRef dtb As Connection.DataBase)
         clsLot._DepositoID = DepositoID
         clsLot.cargarParaMovimientoPorDeposito(dtb)
         LoteId = clsLot._LoteID
@@ -156,12 +156,12 @@ Public Class ctlLotes
         obser = clsLot._Observacion
     End Sub
 
-    Public Function devolverReferencia(ByRef dtb As DataBase) As Integer
+    Public Function devolverReferencia(ByRef dtb As Connection.DataBase) As Integer
         clsLot.devolverReferencia(dtb)
         Return clsLot._Referencia
     End Function
 
-    Public Function GuardarLoteCompra(ByVal TipoProducto As Integer, ByVal tipoLote As Integer, ByVal proveedor As Integer, ByVal Cantidad As Double, ByVal Fecha As Date, ByVal CodigoLote As String, ByVal descrip As String, ByVal obs As String, ByRef dtb As DataBase) As Boolean
+    Public Function GuardarLoteCompra(ByVal TipoProducto As Integer, ByVal tipoLote As Integer, ByVal proveedor As Integer, ByVal Cantidad As Double, ByVal Fecha As Date, ByVal CodigoLote As String, ByVal descrip As String, ByVal obs As String, ByRef dtb As Connection.DataBase) As Boolean
         devolverReferencia(dtb)
         clsLot._TipoProductoID = TipoProducto
         clsLot._TipoLoteID = tipoLote
@@ -175,7 +175,7 @@ Public Class ctlLotes
     End Function
 
     '-----------------------------------------------------LOTES-----------------------------------------------------------------
-    Public Sub mostrarTrazabilidadLote(ByRef dts As dtsLotesTrazabilidad.LotesTrazabilidadDataTable, ByVal Lote As Integer, ByRef dtb As DataBase)
+    Public Sub mostrarTrazabilidadLote(ByRef dts As dtsLotesTrazabilidad.LotesTrazabilidadDataTable, ByVal Lote As Integer, ByRef dtb As Connection.DataBase)
         Dim tabla As New DataTable
         tabla = clsLot.DevolverLotesTrazabilidad(Lote, dtb)
         Dim i As Integer
@@ -203,7 +203,7 @@ Public Class ctlLotes
     End Sub
 
 
-    Public Function EliminarLote(ByVal ID As Integer, ByRef dtb As DataBase) As Boolean
+    Public Function EliminarLote(ByVal ID As Integer, ByRef dtb As Connection.DataBase) As Boolean
         clsAna._LoteID = ID
 
         Dim tabla As DataTable = clsAna.DevolverPorMuestra(dtb)
@@ -235,18 +235,18 @@ Public Class ctlLotes
         Return True
     End Function
 
-    Public Function EliminarRequerimientoPorAnalitica(ByRef dtb As DataBase, ByVal analiticaid As Integer) As Boolean
+    Public Function EliminarRequerimientoPorAnalitica(ByRef dtb As Connection.DataBase, ByVal analiticaid As Integer) As Boolean
         Return dtb.ConsultaAlteraciones("delete from AnaliticasRequerimientos where AnaliticaID = " & Convert.ToString(AnaliticaID))
     End Function
-    Public Function EliminarObservacionesPorAnalitica(ByRef dtb As DataBase, ByVal AnaliticaID As Integer) As Boolean
+    Public Function EliminarObservacionesPorAnalitica(ByRef dtb As Connection.DataBase, ByVal AnaliticaID As Integer) As Boolean
         Return dtb.ConsultaAlteraciones("delete from MuestrasObservaciones where AnaliticaID = " & Convert.ToString(AnaliticaID))
     End Function
 
-    Public Function EliminarExternasPorAnalitica(ByRef dtb As DataBase, ByVal AnaliticaID As Integer) As Boolean
+    Public Function EliminarExternasPorAnalitica(ByRef dtb As Connection.DataBase, ByVal AnaliticaID As Integer) As Boolean
         Return dtb.ConsultaAlteraciones("delete from AnaliticasExternas where AnaliticaID = " & Convert.ToString(AnaliticaID))
     End Function
 
-    Public Function EliminarValoresPorAnalitica(ByRef dtb As DataBase, ByVal analiticaId As Integer) As Boolean
+    Public Function EliminarValoresPorAnalitica(ByRef dtb As Connection.DataBase, ByVal analiticaId As Integer) As Boolean
         Return dtb.ConsultaAlteraciones("delete from AnaliticasValores where AnaliticaID = " & Convert.ToString(AnaliticaID))
     End Function
 End Class

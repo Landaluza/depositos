@@ -121,7 +121,7 @@
             gui.frmMovimientos = New frmEntMovimientosCopy
             AddHandler gui.frmMovimientos.Saved, AddressOf borrar
             gui.frmMovimientos.Show()
-            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS.ToString, gui.cboDepositoDestino.SelectedValue.ToString, "", "", New DataBase(Config.Server))
+            gui.frmMovimientos.CargarDatos(0, 0, New Date, 0, "", EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS.ToString, gui.cboDepositoDestino.SelectedValue.ToString, "", "", New Connection.DataBase(Config.Server))
             gui.frmMovimientos.cboProceso.SelectedValue = EngineProcesosAbiertos.COMPRA_MATERIAS_PRIMAS
             If Not gui.cboProductoEntrada.SelectedValue Is Nothing Then gui.frmMovimientos.cboCompraProducto.SelectedValue = gui.cboProductoEntrada.SelectedValue
             If Not gui.cboProveedor.SelectedValue Is Nothing Then gui.frmMovimientos.cboCompraProveedor.SelectedValue = gui.cboProveedor.SelectedValue

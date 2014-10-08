@@ -157,7 +157,7 @@ Public Class clsMovimientos
     End Property
 
 
-    Public Function devolverListadoMovimientosPorTipos(ByVal hasta As Date, ByRef dtb As DataBase) As DataTable
+    Public Function devolverListadoMovimientosPorTipos(ByVal hasta As Date, ByRef dtb As Connection.DataBase) As DataTable
         Dim strSELECT As String
 
         strSELECT = "select DISTINCT Movimientos.MovimientoId," & _
@@ -180,7 +180,7 @@ Public Class clsMovimientos
         Return dtb.Consultar(strSELECT, False)
     End Function
 
-    Public Function Devolver(ByRef dtb As DataBase) As DataTable
+    Public Function Devolver(ByRef dtb As Connection.DataBase) As DataTable
         Dim strSELECT As String
 
         strSELECT = "select Movimientos.MovimientoID, " & _
@@ -216,7 +216,7 @@ Public Class clsMovimientos
         Return dtb.Consultar(strSELECT, False)
     End Function
 
-    Public Sub Cargar(ByRef dtb As DataBase)
+    Public Sub Cargar(ByRef dtb As Connection.DataBase)
         Dim tabla As New DataTable
         tabla = dtb.Consultar("select NuevoLote,Suma from Movimientos where MovimientoID=" & Convert.ToString(MovimientoID))
         Try
@@ -228,7 +228,7 @@ Public Class clsMovimientos
         End Try
     End Sub
 
-    'Public Function Modificar(ByRef dtb As DataBase) As Boolean
+    'Public Function Modificar(ByRef dtb as Connection.DataBase ) As Boolean
     '    Return dtb.ConsultaAlteraciones("update Movimientos set " & _
     '                             "Fecha='" & Calendar.ArmarFecha(Fecha) & "'," & _
     '                             "Observaciones='" & Observaciones & "'," & _
@@ -244,7 +244,7 @@ Public Class clsMovimientos
 
     'End Function
 
-    Public Function Insertar(ByRef dtb As DataBase) As Boolean
+    Public Function Insertar(ByRef dtb As Connection.DataBase) As Boolean
         Dim ret As Boolean
         ret = dtb.ConsultaAlteraciones("insert into  Movimientos (fecha,observaciones, cantidad,procesoid,entradepositoid, saledepositoid, loteid, filtroid, suma, nuevolote, fechamodificacion, usuariomodificacion ) values(" & _
                             "'" & Calendar.ArmarFecha(Fecha) & "'," & _
@@ -270,7 +270,7 @@ Public Class clsMovimientos
         End Try
     End Function
 
-    Public Function Eliminar(ByRef dtb As DataBase) As Boolean
+    Public Function Eliminar(ByRef dtb As Connection.DataBase) As Boolean
         Return dtb.ConsultaAlteraciones("delete from Movimientos where MovimientoID = " & Convert.ToString(MovimientoID))
     End Function
 

@@ -7,12 +7,12 @@ Public Class DetailedSimpleForm
     Public Const MODIFICACION As Byte = 2
     Public Const CERRADO As Byte = 3
     Public Const VISION As Byte = 99
-    Protected sp As StoredProcedure
+    Protected sp As Connection.StoredProcedure
     Protected dbo As DataBussines
     Protected Event beforeShown()
     Protected Event afterShown()
     Public Shadows Event afterSave()
-    Private dtb As DataBase
+    Private dtb As Connection.DataBase
     Protected evitarCerrarSinGuardar As Boolean
 
     Public WriteOnly Property Evitar_cerrado_sin_guardar As Boolean
@@ -25,7 +25,7 @@ Public Class DetailedSimpleForm
         InitializeComponent()
         Me.ModoDeApertura = INSERCION
         Me.dbo = New DataBussines
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         evitarCerrarSinGuardar = False
     End Sub
 
@@ -41,11 +41,11 @@ Public Class DetailedSimpleForm
                 Me.ModoDeApertura = VISION
         End Select
 
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         evitarCerrarSinGuardar = False
     End Sub
 
-    Public Sub New(ByVal modo_de_apertura As String, ByVal sp As StoredProcedure, Optional ByRef dbo As DataBussines = Nothing)
+    Public Sub New(ByVal modo_de_apertura As String, ByVal sp As Connection.StoredProcedure, Optional ByRef dbo As DataBussines = Nothing)
         InitializeComponent()
 
         Select Case modo_de_apertura
@@ -57,14 +57,14 @@ Public Class DetailedSimpleForm
                 Me.ModoDeApertura = VISION
         End Select
 
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         Me.dbo = dbo
         Me.sp = sp
 
         evitarCerrarSinGuardar = False
     End Sub
 
-    Public Sub New(ByVal sp As StoredProcedure, ByRef dbo As DataBussines)
+    Public Sub New(ByVal sp As Connection.StoredProcedure, ByRef dbo As DataBussines)
         Me.sp = sp
         Me.dbo = dbo
         InitializeComponent()
@@ -94,16 +94,16 @@ Public Class DetailedSimpleForm
         End Set
     End Property
 
-    Public Property StoredProcedure As StoredProcedure
+    Public Property StoredProcedure As Connection.StoredProcedure
         Get
             Return Me.sp
         End Get
-        Set(ByVal value As StoredProcedure)
+        Set(ByVal value As Connection.StoredProcedure)
             sp = value
         End Set
     End Property
 
-    Public Sub SetStoredProcedure(ByRef value As StoredProcedure)
+    Public Sub SetStoredProcedure(ByRef value As Connection.StoredProcedure)
         sp = value
     End Sub
 
@@ -133,7 +133,7 @@ Public Class DetailedSimpleForm
         Return False
     End Function
 
-    Public Overridable Sub Guardar(ByRef dtb As DataBase)
+    Public Overridable Sub Guardar(ByRef dtb As Connection.DataBase)
         If Not Me.sp Is Nothing Then
             If Me.getValores Then
                 Try

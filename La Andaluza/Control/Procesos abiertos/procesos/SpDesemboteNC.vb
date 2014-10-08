@@ -1,6 +1,6 @@
 ﻿Namespace Procesos
     Public Class SpDesemboteNC
-        Inherits DataBase
+        Inherits Connection.DataBase
 
         Public Sub New()
             MyBase.New(Config.Server)

@@ -1,5 +1,5 @@
 ﻿Public Class spProcesosAbiertos
-    Inherits DataBase
+    Inherits Connection.DataBase
 
     Public Sub New()
         MyBase.New(Config.Server)

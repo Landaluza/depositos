@@ -80,13 +80,13 @@ Public Class clsAnaliticas
 #Region "Metodos"
    
 
-    Public Function DevolverPorMuestra(ByRef dtb As DataBase) As DataTable
+    Public Function DevolverPorMuestra(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select AnaliticaID, Nombre from Analiticas where LoteID = " & Convert.ToString(LoteID), False)
     End Function
 
- 
 
-    Public Function Eliminar(ByRef dtb As DataBase) As Boolean
+
+    Public Function Eliminar(ByRef dtb As Connection.DataBase) As Boolean
         Return dtb.ConsultaAlteraciones("delete from Analiticas where AnaliticaID = " & AnaliticaID)
     End Function
 #End Region

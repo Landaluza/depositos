@@ -1,7 +1,7 @@
 
 
 Public Class spTiposLotes
-Inherits StoredProcedure
+    Inherits Connection.StoredProcedure
 
    Public Sub new()
        MyBase.New( "[dbo].[TiposLotesSelect]",  _
@@ -12,7 +12,7 @@ Inherits StoredProcedure
                      "[dbo].[TiposLotesSelectDgvBy]")
    End Sub
 
-    Public Overloads Function Select_Record(ByVal TipoLoteID As Int32, ByRef dtb As database) As DBO_TiposLotes
+    Public Overloads Function Select_Record(ByVal TipoLoteID As Int32, ByRef dtb As Connection.DataBase) As DBO_TiposLotes
         Dim dbo As New DBO_TiposLotes
         dbo.searchKey = dbo.item("TipoLoteID")
         dbo.searchKey.value = TipoLoteID
@@ -20,7 +20,7 @@ Inherits StoredProcedure
         Return dbo
     End Function
 
-    Public Overrides Function Delete(ByVal TipoLoteID As Int32, ByRef dtb As DataBase) As Boolean
+    Public Overrides Function Delete(ByVal TipoLoteID As Int32, ByRef dtb As Connection.DataBase) As Boolean
         Dim dbo As New DBO_TiposLotes
         dbo.searchKey = dbo.item("TipoLoteID")
         dbo.searchKey.value = TipoLoteID
@@ -31,16 +31,16 @@ Inherits StoredProcedure
         If opcion = String.Empty Then
             cbo.mam_DataSource("TiposLotesCbo", False)
         Else
-            cbo.mam_DataSource("TiposLotesCbo", True, New DataBase(Config.Server), opcion)
+            cbo.mam_DataSource("TiposLotesCbo", True, New Connection.DataBase(Config.Server), opcion)
         End If
     End Sub
 
     Public Function devolver_TiposLotes() As DataTable
-        Dim dtb As New DataBase(Config.Server)
+        Dim dtb As New Connection.DataBase(Config.Server)
         Return dtb.Consultar("TiposLotesCbo", False)
     End Function
 
-    Public Function DevolverPorDescripcion(ByVal Descripcion As String, ByRef dtb As DataBase) As DBO_TiposLotes
+    Public Function DevolverPorDescripcion(ByVal Descripcion As String, ByRef dtb As Connection.DataBase) As DBO_TiposLotes
         Dim dbo As New DBO_TiposLotes
         dbo.searchKey = dbo.item("Descripcion")
         dbo.searchKey.value = Descripcion

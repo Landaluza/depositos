@@ -102,7 +102,7 @@ Public Class frmMovimientos
         'Me.Cursor = Cursors.Default
 
         'PRUEBA
-        'Dim dtb As New DataBase(Config.Server)
+        'Dim dtb As New Connection.DataBase (Config.Server)
         'Dim dt As DataTable = dtb.Consultar("select movimientoid from movimientos", False)
         'Dim frm As frmResumenBorradoDeposito
 
@@ -128,7 +128,7 @@ Public Class frmMovimientos
         End If
     End Sub
 
-    Function EliminarTodos(ByRef dtb As DataBase) As Boolean
+    Function EliminarTodos(ByRef dtb As Connection.DataBase) As Boolean
         Dim ctlPro As New ctlProcesos
 
         For Each row As DataGridViewRow In dgvGeneral.Rows

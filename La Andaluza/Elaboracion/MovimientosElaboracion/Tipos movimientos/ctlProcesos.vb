@@ -10,13 +10,13 @@ Public Class ctlProcesos
         clsPro._ProcesoID = ID
     End Sub
 
-    Public Function devolverTipoMovimientoPorDescripcion(ByVal Descrip As String, ByRef dtb As DataBase) As String
+    Public Function devolverTipoMovimientoPorDescripcion(ByVal Descrip As String, ByRef dtb As Connection.DataBase) As String
         clsPro._Descripcion = Descrip
         clsPro.devolverTipoMovimientoPorDescripcion(dtb)
         Return clsPro._TipoMovimiento
     End Function
 
-    Public Sub cargarProceso(ByRef TipoProductoParaLote As String, ByRef TipoMovimiento As String, ByRef TipoLoteID As Integer, ByRef conMuestra As Boolean, ByRef dtb As DataBase)
+    Public Sub cargarProceso(ByRef TipoProductoParaLote As String, ByRef TipoMovimiento As String, ByRef TipoLoteID As Integer, ByRef conMuestra As Boolean, ByRef dtb As Connection.DataBase)
         clsPro.Cargar(dtb)
         TipoProductoParaLote = clsPro._TipoProductoParaLote
         TipoMovimiento = clsPro._TipoMovimiento
@@ -24,7 +24,7 @@ Public Class ctlProcesos
         conMuestra = clsPro._ConMuestra
     End Sub
 
-    Public Function devolverProcesosPorDescripcion(ByRef dtb As DataBase) As DataTable
+    Public Function devolverProcesosPorDescripcion(ByRef dtb As Connection.DataBase) As DataTable
         Return clsPro.devolverProcesosPorDescripcion(dtb)
     End Function
 

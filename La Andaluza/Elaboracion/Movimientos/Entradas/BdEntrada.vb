@@ -1,6 +1,6 @@
 ﻿Namespace Movimientos
     Public Class BdEntrada
-        Inherits DataBase
+        Inherits Connection.DataBase
 
         Private query As String
         Public Sub New()

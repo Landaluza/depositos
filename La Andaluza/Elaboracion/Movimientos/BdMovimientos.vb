@@ -1,6 +1,6 @@
 ﻿Namespace Movimientos
     Public Class BdMovimientos
-        Inherits DataBase
+        Inherits Connection.DataBase
         Private query As String
         Public Sub New()
             MyBase.New(Config.Server)

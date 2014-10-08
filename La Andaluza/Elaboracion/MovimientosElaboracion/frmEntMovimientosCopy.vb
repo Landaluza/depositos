@@ -26,10 +26,10 @@ Public Class frmEntMovimientosCopy
     Private spTiposProductos As spTiposProductos
     Private spMedidasProductos As spMedidasProductos
     Private spTiposLotes As spTiposLotes
-    Public Shared dtb As DataBase
+    Public Shared dtb As Connection.DataBase
     Private codigoLote As CodigoLote
 
-    
+
 
     Private OldLib As OldLib
 
@@ -62,7 +62,7 @@ Public Class frmEntMovimientosCopy
         spMedidasProductos = New spMedidasProductos
         spTiposLotes = New spTiposLotes
         codigoLote = New CodigoLote
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         dtsMov = New dtsMovimientos.MovimientosDataTable
         ctlMov = New ctlMovimientos
         ctlPro = New ctlProcesos
@@ -87,7 +87,7 @@ Public Class frmEntMovimientosCopy
                                 ByVal ProcesoI As String, _
                                 ByVal EntraDepositoID As String, _
                                 ByVal SaleDepositoID As String, _
-                                ByVal LoteID As String, ByRef dtb As DataBase)
+                                ByVal LoteID As String, ByRef dtb As Connection.DataBase)
 
         bandera = False
         banderaCantidadMover = False
@@ -508,7 +508,7 @@ Public Class frmEntMovimientosCopy
 
                 Try
                     If Convert.ToInt32(Me.cboProceso.SelectedValue) = 8 Then
-                        Dim dtb As New DataBase(Config.Server)
+                        Dim dtb As New Connection.DataBase(Config.Server)
                         Dim dt As DataTable = dtb.Consultar("select tipoloteid from lotes where codigoLote = '" & txtFinalLoteActual.Text & "'", False)
                         If Not dt Is Nothing Then
                             cboTipoLoteCompra.SelectedValue = dt.Rows(0).Item(0)

@@ -8,13 +8,13 @@ Public Class gridsimpleform
     Public Const ACCION_MODIFICAR As String = "Modificar"
     Public Const ACCION_VER As String = "Ver"
 
-    Protected sp As StoredProcedure
+    Protected sp As Connection.StoredProcedure
     Protected dbo As DataBussines
     Protected newRegForm As DetailedSimpleForm
     Protected filterManager As DgvFilterPopup.DgvFilterManager
     Protected mse As MicrosoftOfficeExporter
     Protected dataSource As DataTable
-    Protected dtb As DataBase
+    Protected dtb As Connection.DataBase
 
     Public Event AfterDelete(ByRef sender As Object, ByRef target As gridsimpleform)
     Public Event BeforeDelete(ByRef sender As Object, ByRef target As gridsimpleform)
@@ -45,7 +45,7 @@ Public Class gridsimpleform
 
     '    filterManager = New DgvFilterManager(dgvGeneral)
     '    mse = New MicrosoftOfficeExporter
-    '    dtb = New DataBase(Config.Server)
+    '    dtb = New Connection.DataBase (Config.Server)
     'End Sub
 
     Public Sub New()
@@ -53,7 +53,7 @@ Public Class gridsimpleform
         InitializeComponent()
 
     End Sub
-    Public Sub New(ByRef sp As StoredProcedure, ByVal maestroid As String)
+    Public Sub New(ByRef sp As Connection.StoredProcedure, ByVal maestroid As String)
         InitializeComponent()
         Me.sp = sp
 
@@ -68,7 +68,7 @@ Public Class gridsimpleform
 
         filterManager = New DgvFilterManager(dgvGeneral)
         mse = New MicrosoftOfficeExporter
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         dgvFill()
     End Sub
 

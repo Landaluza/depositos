@@ -39,7 +39,7 @@
 
         Try
             Dim tb As New DataTable
-            Dim dtb As New DataBase(Config.Server)
+            Dim dtb As New Connection.DataBase(Config.Server)
             tb = dtb.Consultar(sp)
 
             If Not tb Is Nothing Then
@@ -79,7 +79,7 @@
 
 
     <Extension()> _
-    Public Sub mam_DataSource(ByVal Combo As ComboBox, ByVal sp As String, ByVal PrimeraVacia As Boolean, ByRef dtb As DataBase, Optional ByVal Texto As String = "")
+    Public Sub mam_DataSource(ByVal Combo As ComboBox, ByVal sp As String, ByVal PrimeraVacia As Boolean, ByRef dtb As Connection.DataBase, Optional ByVal Texto As String = "")
 
         Try
             Dim tb As New DataTable

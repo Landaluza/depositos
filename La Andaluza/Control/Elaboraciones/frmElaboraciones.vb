@@ -1,12 +1,12 @@
 ﻿Public Class frmElaboraciones
     Private dt As DataTable
-    Private dtb As DataBase
+    Private dtb As Connection.DataBase
     Private frmMovimientos As frmMovimientos
 
     Public Sub New()
         InitializeComponent()
 
-        dtb = New DataBase(Config.Server)
+        dtb = New Connection.DataBase(Config.Server)
         dt = dtb.Consultar("SelectLotesElaboraciones", True)
         Me.frmMovimientos = New frmMovimientos
     End Sub

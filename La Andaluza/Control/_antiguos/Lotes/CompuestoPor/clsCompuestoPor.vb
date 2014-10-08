@@ -56,12 +56,12 @@ Public Class clsCompuestoPor
     End Property
 
 
-    Public Function DevolverPorMovimiento(ByRef dtb As DataBase) As DataTable
+    Public Function DevolverPorMovimiento(ByRef dtb As Connection.DataBase) As DataTable
         Return dtb.Consultar("select LoteFinal,LotePartida,Cantidad from CompuestoPor where MovimientoID=" & Convert.ToString(MovimientoID), False)
     End Function
 
 
-    Public Function Insertar(ByRef dtb As DataBase) As Boolean
+    Public Function Insertar(ByRef dtb As Connection.DataBase) As Boolean
         Try
             If Not dtb.ConsultaAlteraciones("insert into CompuestoPor(lotefinal, lotepartida, movimientoid, cantidad) values(" & Convert.ToString(LoteFinal) & "," & _
                                     "" & Convert.ToString(LotePartida) & "," & _
@@ -77,7 +77,7 @@ Public Class clsCompuestoPor
         End Try
     End Function
 
-    Public Function RevertirMovimiento(ByRef dtb As DataBase) As Boolean
+    Public Function RevertirMovimiento(ByRef dtb As Connection.DataBase) As Boolean
         Dim dt As DataTable
         Try
             dt = dtb.Consultar("RevertirMovimiento " & Convert.ToString(LotePartida) & "," & "'" & Convert.ToString(Cantidad).Replace(",", ".") & "'")
@@ -93,8 +93,8 @@ Public Class clsCompuestoPor
         End Try
     End Function
 
-    Public Function Eliminar(ByRef dtb As DataBase) As Boolean
-Return dtb.ConsultaAlteraciones ("delete from CompuestoPor where LoteFinal = " & Convert.ToString(LoteFinal) & " and LotePartida =" & Convert.ToString(LotePartida))
+    Public Function Eliminar(ByRef dtb As Connection.DataBase) As Boolean
+        Return dtb.ConsultaAlteraciones("delete from CompuestoPor where LoteFinal = " & Convert.ToString(LoteFinal) & " and LotePartida =" & Convert.ToString(LotePartida))
     End Function
 
 End Class
