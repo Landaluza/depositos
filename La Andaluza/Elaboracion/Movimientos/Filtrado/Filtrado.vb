@@ -1,4 +1,4 @@
-﻿Namespace Filtrados
+﻿Namespace Movimientos
 
     Public Class Filtrado
         Public lotePartida As Lote

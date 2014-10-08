@@ -1,19 +1,21 @@
-﻿Public Class GuiTrasiego
-    Private trasiego As Trasiegos.Trasiego
+﻿Namespace Movimientos
+
+Public Class GuiTrasiego
+        Private trasiego As Movimientos.Trasiego
     Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
     Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-    Public Sub New(ByVal trasiego As Trasiegos.Trasiego)
-        InitializeComponent()
-        Me.trasiego = trasiego
-        Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
-        Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+        Public Sub New(ByVal trasiego As Movimientos.Trasiego)
+            InitializeComponent()
+            Me.trasiego = trasiego
+            Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
+            Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
 
-        If Me.trasiego.loteFinal.tipo <> 0 Then
-            Me.cboTiplote.Visible = False
-            Me.lTipoLote.Visible = False
-        End If
-    End Sub
+            If Me.trasiego.loteFinal.tipo <> 0 Then
+                Me.cboTiplote.Visible = False
+                Me.lTipoLote.Visible = False
+            End If
+        End Sub
 
     Public WriteOnly Property OrigenDatasource As DataTable
         Set(value As DataTable)
@@ -54,45 +56,45 @@
         End Set
     End Property
 
-    Public ReadOnly Property valores As Trasiegos.Trasiego
-        Get
+        Public ReadOnly Property valores As Movimientos.Trasiego
+            Get
 
 
-            trasiego.lotePartida.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
-            trasiego.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
-            trasiego.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
-            trasiego.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
+                trasiego.lotePartida.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
+                trasiego.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
+                trasiego.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
+                trasiego.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
 
-            trasiego.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+                trasiego.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
-            If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                trasiego.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
-                trasiego.sumarAdestino = True
-                If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(cboTiplote.SelectedValue)
-            Else
-                trasiego.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
-
-                If Not chbLoteNuevo.Checked Then
+                If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                     trasiego.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                    trasiego.sumarAdestino = True
                     If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(cboTiplote.SelectedValue)
                 Else
-                    trasiego.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
-                    trasiego.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
-                    If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+                    trasiego.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
 
+                    If Not chbLoteNuevo.Checked Then
+                        trasiego.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
+                        If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(cboTiplote.SelectedValue)
+                    Else
+                        trasiego.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
+                        trasiego.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+                        If cboTiplote.Visible Then trasiego.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+
+                    End If
+
+                    trasiego.sumarAdestino = chbSuma.Checked
                 End If
 
-                trasiego.sumarAdestino = chbSuma.Checked
-            End If
 
 
+                trasiego.cantidad = Convert.ToDouble(txtCantidad.Text)
+                trasiego.fecha = dtpFecha.Value.Date
 
-            trasiego.cantidad = Convert.ToDouble(txtCantidad.Text)
-            trasiego.fecha = dtpFecha.Value.Date
-
-            Return trasiego
-        End Get
-    End Property
+                Return trasiego
+            End Get
+        End Property
 
     Private Sub actualiza_descripcion(sender As Object, e As EventArgs)
         If dgvDestino.CurrentRow Is Nothing Then
@@ -148,4 +150,5 @@
     Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
         txtCantidad.Text = Convert.ToString(dgvOrigen.CurrentRow.Cells("CantidadRestante").Value)
     End Sub
-End Class
+    End Class
+End Namespace

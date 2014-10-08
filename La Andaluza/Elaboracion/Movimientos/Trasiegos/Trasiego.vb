@@ -1,4 +1,4 @@
-﻿Namespace Trasiegos
+﻿Namespace Movimientos
 
     Public Class Trasiego
         Public lotePartida As Lote

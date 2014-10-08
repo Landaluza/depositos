@@ -1,11 +1,13 @@
-﻿Public Class MovimientoFiltrado
-    Protected gui As GuiFiltrado
-    Protected bdfiltrado As bdfiltrado
+﻿Namespace Movimientos
+
+Public Class MovimientoFiltrado
+    Protected gui As Guifiltrado
+    Protected bdfiltrado As BdFiltrado
     Protected listadoDepositos As DataTable
     Protected listadoFiltros As DataTable
     Protected listadoProductos As DataTable
     Protected listadoLotes As DataTable
-    Protected filtrado As Filtrados.Filtrado
+        Protected filtrado As Movimientos.Filtrado
 
     Protected hiloDatos As System.Threading.Thread
     Protected iniciohiloDatos As System.Threading.ThreadStart
@@ -22,7 +24,7 @@
 
         Me.TipoProceso = proceso
         bdfiltrado = New BdFiltrado
-        filtrado = New Filtrados.Filtrado(proceso)
+            filtrado = New Movimientos.Filtrado(proceso)
         filtrado.loteFinal.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
         filtrado.loteFinal.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
@@ -205,3 +207,4 @@
     End Sub
 
 End Class
+End Namespace

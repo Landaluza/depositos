@@ -1,3 +1,5 @@
-﻿Public Class GuiSalida
+﻿Namespace Movimientos
+    Public Class GuiSalida
 
-End Class
+    End Class
+End Namespace

@@ -1,4 +1,6 @@
-﻿Public Class BdDiferencia
+﻿Namespace Movimientos
+
+Public Class BdDiferencia
     Inherits DataBase
 
     Private query As String
@@ -410,3 +412,4 @@
     End Function
 End Class
 
+End Namespace

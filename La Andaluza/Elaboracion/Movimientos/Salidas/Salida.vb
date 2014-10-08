@@ -1,3 +1,6 @@
-﻿Public Class Salida
+﻿Namespace Movimientos
+
+Public Class Salida
 
 End Class
+End Namespace

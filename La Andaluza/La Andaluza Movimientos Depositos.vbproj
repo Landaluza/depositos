@@ -516,34 +516,34 @@
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Salidas\MovimientoSalida.vb" />
     <Compile Include="Elaboracion\Movimientos\Salidas\Salida.vb" />
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\DBO_TiposMovimientos.vb" />
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.Designer.vb">
-      <DependentUpon>frmEntTiposMovimientos.vb</DependentUpon>
+    <Compile Include="Elaboracion\Movimientos\Tipos\Tipos.vb" />
+    <Compile Include="Elaboracion\Movimientos\Tipos\frmEnt.Designer.vb">
+      <DependentUpon>frmEnt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.vb">
+    <Compile Include="Elaboracion\Movimientos\Tipos\frmEnt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.Designer.vb">
-      <DependentUpon>frmTiposMovimientos.vb</DependentUpon>
+    <Compile Include="Elaboracion\Movimientos\Tipos\frm.Designer.vb">
+      <DependentUpon>frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.vb">
+    <Compile Include="Elaboracion\Movimientos\Tipos\frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tiposmovimientos\spTiposMovimientos.vb" />
-    <Compile Include="Elaboracion\Movimientos\tipos\DBO_Procesos.vb" />
-    <Compile Include="Elaboracion\Movimientos\tipos\frmEntProcesos.Designer.vb">
-      <DependentUpon>frmEntProcesos.vb</DependentUpon>
+    <Compile Include="Elaboracion\Movimientos\Tipos\Db.vb" />
+    <Compile Include="Elaboracion\Movimientos\Procesos\Proceso.vb" />
+    <Compile Include="Elaboracion\Movimientos\Procesos\FrmEnt.Designer.vb">
+      <DependentUpon>FrmEnt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\frmEntProcesos.vb">
+    <Compile Include="Elaboracion\Movimientos\Procesos\FrmEnt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\frmProcesos.Designer.vb">
-      <DependentUpon>frmProcesos.vb</DependentUpon>
+    <Compile Include="Elaboracion\Movimientos\Procesos\Frm.Designer.vb">
+      <DependentUpon>Frm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\frmProcesos.vb">
+    <Compile Include="Elaboracion\Movimientos\Procesos\Frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\tipos\spProcesos.vb" />
+    <Compile Include="Elaboracion\Movimientos\Procesos\Db.vb" />
     <Compile Include="Elaboracion\Movimientos\Trasiegos\BdTrasiego.vb" />
     <Compile Include="Elaboracion\Movimientos\Trasiegos\GuiTrasiego.Designer.vb">
       <DependentUpon>GuiTrasiego.vb</DependentUpon>
@@ -797,17 +797,17 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.resx">
-      <DependentUpon>frmEntTiposMovimientos.vb</DependentUpon>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Tipos\frmEnt.resx">
+      <DependentUpon>frmEnt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\tiposmovimientos\frmTiposMovimientos.resx">
-      <DependentUpon>frmTiposMovimientos.vb</DependentUpon>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Tipos\frm.resx">
+      <DependentUpon>frm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\tipos\frmEntProcesos.resx">
-      <DependentUpon>frmEntProcesos.vb</DependentUpon>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Procesos\FrmEnt.resx">
+      <DependentUpon>FrmEnt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\tipos\frmProcesos.resx">
-      <DependentUpon>frmProcesos.vb</DependentUpon>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Procesos\Frm.resx">
+      <DependentUpon>Frm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\Trasiegos\GuiTrasiego.resx">
       <DependentUpon>GuiTrasiego.vb</DependentUpon>

@@ -1,4 +1,6 @@
-﻿Public Class BdTrasiego
+﻿Namespace Movimientos
+
+Public Class BdTrasiego
     Inherits DataBase
 
     Private query As String
@@ -364,3 +366,4 @@ End Class
 
 
 
+End Namespace

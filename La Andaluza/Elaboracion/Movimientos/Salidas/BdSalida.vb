@@ -1,3 +1,5 @@
-﻿Public Class BdSalida
+﻿Namespace Movimientos
+    Public Class BdSalida
 
-End Class
+    End Class
+End Namespace

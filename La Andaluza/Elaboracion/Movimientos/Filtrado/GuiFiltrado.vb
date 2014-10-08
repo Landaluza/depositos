@@ -1,16 +1,18 @@
-﻿Public Class Guifiltrado
-    Private filtrado As filtrados.filtrado
+﻿Namespace Movimientos
+
+Public Class Guifiltrado
+        Private filtrado As Movimientos.Filtrado
     Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
     Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-    Public Sub New(ByVal filtrado As filtrados.filtrado)
-        InitializeComponent()
-        Me.filtrado = filtrado
-        Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
-        Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+        Public Sub New(ByVal filtrado As Movimientos.Filtrado)
+            InitializeComponent()
+            Me.filtrado = filtrado
+            Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
+            Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
 
-        Me.chbMuestra.Checked = filtrado.loteFinal.muestra
-    End Sub
+            Me.chbMuestra.Checked = filtrado.loteFinal.muestra
+        End Sub
 
     Public WriteOnly Property DestinoDatasource As DataTable
         Set(value As DataTable)
@@ -54,44 +56,44 @@
     End Property
 
 
-    Public ReadOnly Property valores As filtrados.filtrado
-        Get
+        Public ReadOnly Property valores As Movimientos.Filtrado
+            Get
 
 
-            filtrado.lotePartida.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
-            filtrado.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
-            filtrado.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
-            filtrado.lotePartida.id = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("LoteID").Value)
-            filtrado.filtro = Convert.ToInt32(cboFiltro.SelectedValue)
+                filtrado.lotePartida.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
+                filtrado.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
+                filtrado.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
+                filtrado.lotePartida.id = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("LoteID").Value)
+                filtrado.filtro = Convert.ToInt32(cboFiltro.SelectedValue)
 
-            filtrado.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
-            filtrado.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+                filtrado.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
+                filtrado.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
-            If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                filtrado.loteFinal.codigo_lote = ""
-                filtrado.loteFinal.id = 0
-                filtrado.loteFinal.producto = Convert.ToInt32(cboProducto.SelectedValue)
-                filtrado.sumarAdestino = True
-            Else
-                If Not chbLoteNuevo.Checked Then
+                If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                     filtrado.loteFinal.codigo_lote = ""
+                    filtrado.loteFinal.id = 0
                     filtrado.loteFinal.producto = Convert.ToInt32(cboProducto.SelectedValue)
-                    filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
+                    filtrado.sumarAdestino = True
                 Else
-                    filtrado.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
-                    filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
-                    filtrado.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+                    If Not chbLoteNuevo.Checked Then
+                        filtrado.loteFinal.codigo_lote = ""
+                        filtrado.loteFinal.producto = Convert.ToInt32(cboProducto.SelectedValue)
+                        filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
+                    Else
+                        filtrado.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
+                        filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
+                        filtrado.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
+                    End If
+
+                    filtrado.sumarAdestino = chbSuma.Checked
                 End If
 
-                filtrado.sumarAdestino = chbSuma.Checked
-            End If
+                filtrado.cantidad = Convert.ToDouble(txtCantidad.Text)
+                filtrado.fecha = dtpFecha.Value.Date
 
-            filtrado.cantidad = Convert.ToDouble(txtCantidad.Text)
-            filtrado.fecha = dtpFecha.Value.Date
-
-            Return filtrado
-        End Get
-    End Property
+                Return filtrado
+            End Get
+        End Property
 
     Private Sub actualiza_descripcion(sender As Object, e As EventArgs)
         If dgvDestino.CurrentRow Is Nothing Then
@@ -105,7 +107,7 @@
             Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
             Me.btnCantidadDestinoIncorrecta.Visible = False
             Me.btnProductoDestinoIncorrecto.Visible = False
-            Me.chbLoteNuevo.Enabled = False                        
+            Me.chbLoteNuevo.Enabled = False
         Else
             Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
             Me.btnCantidadDestinoIncorrecta.Visible = True
@@ -138,4 +140,5 @@
     Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
         txtCantidad.Text = Convert.ToString(dgvOrigen.CurrentRow.Cells("CantidadRestante").Value)
     End Sub
-End Class
+    End Class
+End Namespace

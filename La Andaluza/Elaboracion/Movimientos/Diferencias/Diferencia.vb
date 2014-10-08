@@ -1,4 +1,4 @@
-﻿Namespace Diferencias
+﻿Namespace Movimientos
 
     Public Class Diferencia
         Public Const DIFERENCIA As Integer = 11
@@ -17,10 +17,10 @@
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso
 
-            If proceso = Diferencias.Diferencia.DIFERENCIA Then
-                Me.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_MENSUAL
+            If proceso = Movimientos.Diferencia.DIFERENCIA Then
+                Me.frecuencia_creacion_lote = Movimientos.Diferencia.FRECUENCIA_MENSUAL
             Else
-                Me.frecuencia_creacion_lote = Diferencias.Diferencia.FRECUENCIA_STANDAR
+                Me.frecuencia_creacion_lote = Movimientos.Diferencia.FRECUENCIA_STANDAR
             End If
 
             Me.lotePartida = New Lote()

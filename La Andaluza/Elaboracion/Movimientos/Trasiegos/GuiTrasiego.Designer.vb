@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Namespace Movimientos
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class GuiTrasiego
     Inherits System.Windows.Forms.Form
 
@@ -401,3 +403,4 @@ Partial Class GuiTrasiego
     Private WithEvents lDescripcionOrigen As System.Windows.Forms.Label
     Private WithEvents btnTodo As System.Windows.Forms.Button
 End Class
+End Namespace

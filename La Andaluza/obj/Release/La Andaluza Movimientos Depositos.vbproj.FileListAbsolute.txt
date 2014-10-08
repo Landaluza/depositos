@@ -80,6 +80,7 @@ C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_Movimie
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmTiposMovimientos.resources
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntProcesos.resources
 C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProcesos.resources
+C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiTrasiego.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe.config
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe.manifest
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.application
@@ -97,6 +98,7 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Drawing.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Windows.Forms.dll
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\bin\Release\System.Xml.dll
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUIstandar.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNews.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GUImain.resources
@@ -132,14 +134,15 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.glassPanel.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiCorrectorProducto.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiCorrectorCantidad.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiDiferencia.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Guifiltrado.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.GuiDiferencia.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.GuiEntrada.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Guifiltrado.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiNuevoMovimiento.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntTiposMovimientos.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmTiposMovimientos.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Tipos.frmEnt.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Tipos.frm.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntProcesos.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProcesos.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiTrasiego.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.GuiTrasiego.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntNoticias2.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNoticias2.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmMensajesPendientes.resources
@@ -160,6 +163,3 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
-C:\Users\Migue\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiTrasiego.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza Movimientos Depositos.vbprojResolveAssemblyReference.cache
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.GuiEntrada.resources
