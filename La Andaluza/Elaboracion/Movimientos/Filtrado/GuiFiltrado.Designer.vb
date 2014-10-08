@@ -22,8 +22,9 @@ Partial Class Guifiltrado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GuiFiltrado))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Guifiltrado))
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.dgvOrigen = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
@@ -32,28 +33,27 @@ Partial Class Guifiltrado
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboFiltro = New System.Windows.Forms.ComboBox()
         Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.chbSuma = New System.Windows.Forms.CheckBox()
-        Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
-        Me.chbMuestra = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
         Me.btnCantidadDestinoIncorrecta = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
-        Me.cboProducto = New System.Windows.Forms.ComboBox()
         Me.lProducto = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboFiltro = New System.Windows.Forms.ComboBox()
+        Me.cboProducto = New System.Windows.Forms.ComboBox()
+        Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.chbSuma = New System.Windows.Forms.CheckBox()
+        Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
+        Me.chbMuestra = New System.Windows.Forms.CheckBox()
         Me.btnTodo = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.FlowLayoutPanel3.SuspendLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FlowLayoutPanel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.FlowLayoutPanel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -67,6 +67,15 @@ Partial Class Guifiltrado
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 553)
         Me.FlowLayoutPanel1.TabIndex = 36
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(468, 3)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
+        Me.dtpFecha.TabIndex = 32
         '
         'dgvOrigen
         '
@@ -174,6 +183,25 @@ Partial Class Guifiltrado
         Me.FlowLayoutPanel3.Size = New System.Drawing.Size(577, 553)
         Me.FlowLayoutPanel3.TabIndex = 37
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(29, 13)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Filtro"
+        '
+        'cboFiltro
+        '
+        Me.cboFiltro.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboFiltro.FormattingEnabled = True
+        Me.cboFiltro.Location = New System.Drawing.Point(105, 16)
+        Me.cboFiltro.Name = "cboFiltro"
+        Me.cboFiltro.Size = New System.Drawing.Size(469, 21)
+        Me.cboFiltro.TabIndex = 22
+        '
         'dgvDestino
         '
         Me.dgvDestino.AllowUserToAddRows = False
@@ -189,6 +217,73 @@ Partial Class Guifiltrado
         Me.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
         Me.dgvDestino.TabIndex = 15
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btnProductoDestinoIncorrecto)
+        Me.GroupBox1.Controls.Add(Me.btnCantidadDestinoIncorrecta)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 288)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(571, 165)
+        Me.GroupBox1.TabIndex = 18
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Detalles"
+        '
+        'btnProductoDestinoIncorrecto
+        '
+        Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
+        Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
+        Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
+        Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
+        Me.btnProductoDestinoIncorrecto.TabIndex = 4
+        Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
+        Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
+        '
+        'btnCantidadDestinoIncorrecta
+        '
+        Me.btnCantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnCantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCantidadDestinoIncorrecta.Image = CType(resources.GetObject("btnCantidadDestinoIncorrecta.Image"), System.Drawing.Image)
+        Me.btnCantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
+        Me.btnCantidadDestinoIncorrecta.Name = "btnCantidadDestinoIncorrecta"
+        Me.btnCantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
+        Me.btnCantidadDestinoIncorrecta.TabIndex = 3
+        Me.btnCantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
+        Me.btnCantidadDestinoIncorrecta.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label7.Location = New System.Drawing.Point(3, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(565, 72)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "-"
+        '
+        'lProducto
+        '
+        Me.lProducto.AutoSize = True
+        Me.lProducto.Location = New System.Drawing.Point(3, 456)
+        Me.lProducto.Name = "lProducto"
+        Me.lProducto.Size = New System.Drawing.Size(87, 13)
+        Me.lProducto.TabIndex = 30
+        Me.lProducto.Text = "Producto destino"
+        '
+        'cboProducto
+        '
+        Me.cboProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cboProducto.FormattingEnabled = True
+        Me.cboProducto.Location = New System.Drawing.Point(105, 472)
+        Me.cboProducto.Name = "cboProducto"
+        Me.cboProducto.Size = New System.Drawing.Size(469, 21)
+        Me.cboProducto.TabIndex = 28
         '
         'FlowLayoutPanel4
         '
@@ -245,101 +340,6 @@ Partial Class Guifiltrado
         Me.chbMuestra.Text = "Crear muestra"
         Me.chbMuestra.UseVisualStyleBackColor = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btnProductoDestinoIncorrecto)
-        Me.GroupBox1.Controls.Add(Me.btnCantidadDestinoIncorrecta)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 288)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(571, 165)
-        Me.GroupBox1.TabIndex = 18
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Detalles"
-        '
-        'btnProductoDestinoIncorrecto
-        '
-        Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
-        Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
-        Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
-        Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
-        Me.btnProductoDestinoIncorrecto.TabIndex = 4
-        Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
-        Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
-        '
-        'btnCantidadDestinoIncorrecta
-        '
-        Me.btnCantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCantidadDestinoIncorrecta.Image = CType(resources.GetObject("btnCantidadDestinoIncorrecta.Image"), System.Drawing.Image)
-        Me.btnCantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
-        Me.btnCantidadDestinoIncorrecta.Name = "btnCantidadDestinoIncorrecta"
-        Me.btnCantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
-        Me.btnCantidadDestinoIncorrecta.TabIndex = 3
-        Me.btnCantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
-        Me.btnCantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label7.Location = New System.Drawing.Point(3, 16)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(565, 72)
-        Me.Label7.TabIndex = 1
-        Me.Label7.Text = "-"
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(468, 3)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
-        Me.dtpFecha.TabIndex = 32
-        '
-        'cboProducto
-        '
-        Me.cboProducto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cboProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboProducto.FormattingEnabled = True
-        Me.cboProducto.Location = New System.Drawing.Point(105, 472)
-        Me.cboProducto.Name = "cboProducto"
-        Me.cboProducto.Size = New System.Drawing.Size(469, 21)
-        Me.cboProducto.TabIndex = 28
-        '
-        'lProducto
-        '
-        Me.lProducto.AutoSize = True
-        Me.lProducto.Location = New System.Drawing.Point(3, 456)
-        Me.lProducto.Name = "lProducto"
-        Me.lProducto.Size = New System.Drawing.Size(87, 13)
-        Me.lProducto.TabIndex = 30
-        Me.lProducto.Text = "Producto destino"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(29, 13)
-        Me.Label4.TabIndex = 24
-        Me.Label4.Text = "Filtro"
-        '
-        'cboFiltro
-        '
-        Me.cboFiltro.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cboFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboFiltro.FormattingEnabled = True
-        Me.cboFiltro.Location = New System.Drawing.Point(105, 16)
-        Me.cboFiltro.Name = "cboFiltro"
-        Me.cboFiltro.Size = New System.Drawing.Size(469, 21)
-        Me.cboFiltro.TabIndex = 22
-        '
         'btnTodo
         '
         Me.btnTodo.FlatAppearance.BorderSize = 0
@@ -351,7 +351,7 @@ Partial Class Guifiltrado
         Me.btnTodo.TabIndex = 38
         Me.btnTodo.UseVisualStyleBackColor = True
         '
-        'GuiFiltrado
+        'Guifiltrado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -361,7 +361,7 @@ Partial Class Guifiltrado
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtCantidad)
-        Me.Name = "GuiFiltrado"
+        Me.Name = "Guifiltrado"
         Me.Text = "GuiFiltrado"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).EndInit()
@@ -369,9 +369,9 @@ Partial Class Guifiltrado
         Me.FlowLayoutPanel3.ResumeLayout(False)
         Me.FlowLayoutPanel3.PerformLayout()
         CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.FlowLayoutPanel4.ResumeLayout(False)
         Me.FlowLayoutPanel4.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

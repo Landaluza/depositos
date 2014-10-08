@@ -23,8 +23,8 @@
         Me.TipoProceso = proceso
         bdfiltrado = New BdFiltrado
         filtrado = New Filtrados.Filtrado(proceso)
-        filtrado.lotePartida.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-        filtrado.lotePartida.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+        filtrado.loteFinal.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
+        filtrado.loteFinal.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
 
         If filtrado.lotePartida.tipo <> 0 Then filtrado.Abreviatura = Convert.ToString(bdfiltrado.seleccionar_detalles_tlote(filtrado.lotePartida.tipo).Rows(0).Item(2))
 
@@ -81,7 +81,7 @@
 
             'comprobaciones de los datos recibidos
 
-            If filtrado.loteFinal.codigo_lote = "" And filtrado.loteFinal.id = 0 Then
+            If filtrado.loteFinal.codigo_lote = "" And filtrado.loteFinal.id = 0 Then ' uno de los dos valores llega mal
                 Dim dep As DataTable = bdfiltrado.seleccionar_detalles_deposito(filtrado.loteFinal.deposito)
 
                 If dep.Rows(0).Item(1).ToString <> "" Then

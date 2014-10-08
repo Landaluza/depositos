@@ -64,7 +64,7 @@
     'End Sub
 
     Private Sub btnFiltrado_Click(sender As Object, e As EventArgs) Handles btnFiltrado.Click
-        Dim trasiego As New MovimientoFiltrado(1)
+        Dim trasiego As New MovimientoFiltrado(Convert.ToInt32(CType(sender, Button).Tag))
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
