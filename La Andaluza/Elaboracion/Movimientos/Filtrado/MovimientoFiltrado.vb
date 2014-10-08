@@ -98,7 +98,7 @@
                 filtrado.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
             End If
 
-            Dim producto As DataTable = BdTrasiego.seleccionar_detalles_producto(filtrado.loteFinal.producto)
+            Dim producto As DataTable = bdfiltrado.seleccionar_detalles_producto(filtrado.loteFinal.producto)
 
             'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
             If filtrado.loteFinal.id = 0 Then
@@ -165,7 +165,7 @@
 
 
             'realizar movimiento de trasiego a final
-            If Not BdTrasiego.guardar_movimiento(filtrado.lotePartida.deposito, filtrado.loteFinal.deposito, If(filtrado.sumarAdestino, filtrado.cantidad, 0), trasiego.proceso) Then
+            If Not bdfiltrado.guardar_movimiento(filtrado.lotePartida.deposito, filtrado.loteFinal.deposito, If(filtrado.sumarAdestino, filtrado.cantidad, 0), filtrado.proceso) Then
                 Throw New Exception("No se pudo guardar el movimiento del lote trasiego")
             End If
 
