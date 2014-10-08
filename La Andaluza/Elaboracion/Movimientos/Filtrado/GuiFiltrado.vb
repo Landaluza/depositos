@@ -16,7 +16,12 @@
         Set(value As DataTable)
             Me.dgvDestino.DataSource = value
             If Not value Is Nothing Then
+                Me.dgvDestino.Columns("TipoProductoID").Visible = False
+                Me.dgvDestino.Columns("TipoLoteID").Visible = False
                 Me.dgvDestino.Columns("depositoID").Visible = False
+                Me.dgvDestino.Columns("Capacidad").Visible = False
+                Me.dgvDestino.Columns("Listado").Visible = False
+                Me.dgvDestino.Columns("LoteID").Visible = False
             End If
         End Set
     End Property
@@ -57,22 +62,19 @@
             filtrado.filtro = Convert.ToInt32(cboFiltro.SelectedValue)
 
             filtrado.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
-            filtrado.lotePartida.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
+            filtrado.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
                 filtrado.loteFinal.producto = Convert.ToInt32(cboProducto.SelectedValue)
-                'If cboTipoLote.Visible Then filtrado.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
                 filtrado.sumarAdestino = True
             Else
                 If Not chbLoteNuevo.Checked Then
                     filtrado.loteFinal.producto = Convert.ToInt32(cboProducto.SelectedValue)
-                    'If cboTipoLote.Visible Then filtrado.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
                     filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
                 Else
                     filtrado.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
                     filtrado.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
                     filtrado.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
-                    'If cboTipoLote.Visible Then filtrado.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
                 End If
 
                 filtrado.sumarAdestino = chbSuma.Checked
