@@ -1,10 +1,9 @@
 ﻿Namespace Movimientos
 
     Public Class Entrada
-        Public Const ABREVIATURA_ENTRADA As String = "Rec"
         Public Const COMPRA As Integer = 1
-        Public Const DESEMBOTE As Integer = 2
-        Public Const DESEMBOTE_NO_COMFORME As Integer = 3
+        Public Const LOTE_ENTRADA As Integer = 39
+        
 
         Public lotePartida As Lote
         Public loteFinal As Lote
@@ -12,12 +11,14 @@
         Public proveedorCompra As Integer
         Public sumarAdestino As Boolean
         Public fecha As Date
+        Public proceso As Integer
 
-        Public Sub New(Optional ByVal tipoLoteFinal As Integer = 0)
+        Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0
+            Me.proceso = proceso
 
             Me.lotePartida = New Lote()
-            Me.loteFinal = New Lote(tipoLoteFinal)
+            Me.loteFinal = New Lote()
         End Sub
 
         Public Function validar() As String
@@ -47,8 +48,8 @@
             Public deposito As Integer
             Public muestra As Boolean
 
-            Public Sub New(Optional ByVal tipo As Integer = 0)
-                Me.tipo = tipo
+            Public Sub New()
+                Me.tipo = 0
                 Me.muestra = False
             End Sub
             Public Function validar() As String

@@ -480,10 +480,7 @@
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Diferencias\MovimientoDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
-    <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\CtlEntrada.vb" />
-    <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesemboteNC.vb" />
-    <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Entrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\GuiEntrada.Designer.vb">
       <DependentUpon>GuiEntrada.vb</DependentUpon>

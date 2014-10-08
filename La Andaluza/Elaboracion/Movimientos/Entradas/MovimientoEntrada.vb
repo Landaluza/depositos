@@ -11,7 +11,6 @@
         Protected hiloDatos As System.Threading.Thread
         Protected iniciohiloDatos As System.Threading.ThreadStart
         Protected invocador As MethodInvoker
-        Private TipoProceso As Integer
 
         Public ReadOnly Property Form As Form
             Get
@@ -19,16 +18,16 @@
             End Get
         End Property
 
-        Public Sub New(ByVal tipoEntrada As Integer)
+        Public Sub New(ByVal proceso As Integer)
 
-            Me.TipoProceso = tipoEntrada
             bdEntrada = New BdEntrada
-            compra = New Movimientos.Entrada
-            compra.loteFinal.tipo = Convert.ToInt32(bdEntrada.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-            compra.loteFinal.muestra = Convert.ToBoolean(bdEntrada.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
-            compra.lotePartida.tipo = 39
+            compra = New Movimientos.Entrada(proceso)
+            compra.loteFinal.tipo = Convert.ToInt32(bdEntrada.seleccionar_tlote_por_proceso(Me.compra.proceso).Rows(0).Item(0))
+            compra.loteFinal.muestra = Convert.ToBoolean(bdEntrada.seleccionar_muestra_pro_proceso(Me.compra.proceso).Rows(0).Item(0))
+            compra.lotePartida.tipo = Movimientos.Entrada.Lote_ENTRADA
 
-            gui = New GuiEntrada(tipoEntrada, compra)
+
+            gui = New GuiEntrada(compra)
 
             iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
             invocador = New MethodInvoker(AddressOf mostrarDatos)
@@ -38,6 +37,12 @@
             AddHandler gui.FormClosing, AddressOf cerrar
             AddHandler gui.CantidadIncorrecta, AddressOf cantidad_incorrecta
             AddHandler gui.ProductoIncorrecto, AddressOf producto_incorrecto
+
+            If proceso = Movimientos.Entrada.COMPRA Then
+                AddHandler gui.btnGuardar.Click, AddressOf guardar_compra
+            Else
+                AddHandler gui.btnGuardar.Click, AddressOf guardar_entrada
+            End If
         End Sub
 
         Public Sub cargarDatosuno()
@@ -137,7 +142,8 @@
             End If
 
             Dim producto As DataTable = bdEntrada.seleccionar_detalles_producto(compra.lotePartida.producto)
-            Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Movimientos.Entrada.ABREVIATURA_ENTRADA
+            Dim tlote As DataTable = bdEntrada.seleccionar_detalles_tlote(compra.lotePartida.tipo)
+            Dim codigoSinLetra As String = compra.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & Convert.ToString(tlote.Rows(0).Item(2)) 'Movimientos.Entrada.ABREVIATURA_ENTRADA
             compra.lotePartida.codigo_lote = bdEntrada.calcular_codigo_lote(codigoSinLetra)
             'Dim loteAnterior As compras.Compra.Lote
 

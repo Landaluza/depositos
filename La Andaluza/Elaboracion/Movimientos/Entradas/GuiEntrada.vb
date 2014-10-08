@@ -4,7 +4,7 @@
         Public Event CantidadIncorrecta(lote As Integer, e As EventArgs)
         Public Event ProductoIncorrecto(lote As Integer, e As EventArgs)
 
-        Public Sub New(ByVal tipoEntrada As Integer, ByVal entrada As Movimientos.Entrada)
+        Public Sub New(ByVal entrada As Movimientos.Entrada)
             InitializeComponent()
             Me.entrada = entrada
             Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
@@ -12,7 +12,7 @@
 
             Me.chbMuestra.Checked = entrada.loteFinal.muestra
 
-            If tipoEntrada = Movimientos.Entrada.COMPRA Then
+            If entrada.proceso = Movimientos.Entrada.COMPRA Then
                 cboProveedor.Visible = True
                 lProveedor.Visible = True
                 cboTipoLote.Visible = True

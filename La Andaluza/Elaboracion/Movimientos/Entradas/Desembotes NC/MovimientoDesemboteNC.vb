@@ -2,8 +2,9 @@
     Inherits Movimientos.MovimientoEntrada
 
 
-    Public Sub New()
-        MyBase.New(Movimientos.Entrada.DESEMBOTE_NO_COMFORME)
+    Public Sub New(ByVal proceso As Integer)
+        'MyBase.New(Movimientos.Entrada.DESEMBOTE_NO_COMFORME)
+        MyBase.New(proceso)
         AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
 
