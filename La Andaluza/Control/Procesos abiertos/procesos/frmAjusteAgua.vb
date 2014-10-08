@@ -1,14 +1,14 @@
 ﻿Public Class frmAjusteAgua
     Inherits frmProceso
 
-    Private engineAjusteAgua As EngineAjusteAgua
+    Private engineAjusteAgua As Procesos.EngineAjusteAgua
 
     Public Sub New(ByVal id As Integer)
 
         InitializeComponent()
 
         Me.pbIconoOperacion.Image = My.Resources.ajusteagua
-        engineAjusteAgua = New EngineAjusteAgua(id, Me)
+        engineAjusteAgua = New Procesos.EngineAjusteAgua(id, Me)
 
     End Sub
 End Class

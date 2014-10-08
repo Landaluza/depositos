@@ -1,4 +1,6 @@
-﻿Public Class EngineAjusteComercial
+﻿Namespace Procesos
+
+Public Class EngineAjusteComercial
     Inherits ProcesosEngine
     Implements ProcesoMovimiento
 
@@ -91,3 +93,4 @@
         End If
     End Sub
 End Class
+End Namespace

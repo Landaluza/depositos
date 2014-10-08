@@ -441,6 +441,15 @@
     <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Adicion\Adicion.vb" />
+    <Compile Include="Elaboracion\Movimientos\Adicion\BdAdicion.vb" />
+    <Compile Include="Elaboracion\Movimientos\Adicion\GuiAdicion.Designer.vb">
+      <DependentUpon>GuiAdicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Adicion\GuiAdicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Adicion\MovimientoAdicion.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\DecimalChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\DecimalWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerChecker.vb" />
@@ -515,6 +524,15 @@
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Salidas\BdSalida.vb" />
+    <Compile Include="Elaboracion\Movimientos\Salidas\GuiSalida.Designer.vb">
+      <DependentUpon>GuiSalida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Salidas\GuiSalida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elaboracion\Movimientos\Salidas\MovimientoSalida.vb" />
+    <Compile Include="Elaboracion\Movimientos\Salidas\Salida.vb" />
     <Compile Include="Elaboracion\Movimientos\tiposmovimientos\DBO_TiposMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.Designer.vb">
       <DependentUpon>frmEntTiposMovimientos.vb</DependentUpon>
@@ -1070,42 +1088,42 @@
   <ItemGroup>
     <PublishFile Include="Microsoft.ReportViewer.Common">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.ReportViewer.WinForms">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

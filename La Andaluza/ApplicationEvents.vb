@@ -10,8 +10,8 @@
     Partial Friend Class MyApplication
         Public Shadows Sub Startup() Handles MyBase.Startup
             If Not My.Computer.Network.IsAvailable Then
-                MessageBox.Show("No dispone de conexión de red. No será posible utilizar la aplicacion", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Environment.Exit(1)
+                'MessageBox.Show("No dispone de conexión de red. No será posible utilizar la aplicacion", "Sin conexión", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'Environment.Exit(1)
             End If
         End Sub
     End Class

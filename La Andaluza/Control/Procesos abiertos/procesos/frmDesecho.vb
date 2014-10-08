@@ -1,14 +1,14 @@
 ﻿Public Class frmDesecho
     Inherits frmProceso
 
-    Private engineDesecho As EngineDesecho
+    Private engineDesecho As Procesos.EngineDesecho
 
     Public Sub New(ByVal id As Integer)
 
         InitializeComponent()
 
         Me.pbIconoOperacion.Image = My.Resources.desecho
-        engineDesecho = New EngineDesecho(id, Me)
+        engineDesecho = New Procesos.EngineDesecho(id, Me)
 
     End Sub
 End Class
