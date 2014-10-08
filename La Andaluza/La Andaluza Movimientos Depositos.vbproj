@@ -441,15 +441,7 @@
     <Compile Include="Elaboracion\MovimientosElaboracion\frmEntMovimientosCopy.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Elaboracion\Movimientos\Adicion\Adicion.vb" />
-    <Compile Include="Elaboracion\Movimientos\Adicion\BdAdicion.vb" />
-    <Compile Include="Elaboracion\Movimientos\Adicion\GuiAdicion.Designer.vb">
-      <DependentUpon>GuiAdicion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\Adicion\GuiAdicion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\Adicion\MovimientoAdicion.vb" />
+    <Compile Include="Elaboracion\Movimientos\BdMovimientos.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\DecimalChecker.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\DecimalWatcher.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\IntegerChecker.vb" />
@@ -489,6 +481,7 @@
     <Compile Include="Elaboracion\Movimientos\Diferencias\MovimientoDiferencia.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\BdEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Compra\MovimientoCompra.vb" />
+    <Compile Include="Elaboracion\Movimientos\Entradas\CtlEntrada.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Desembotes NC\MovimientoDesemboteNC.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\DEsembotes\MovimientoDesembote.vb" />
     <Compile Include="Elaboracion\Movimientos\Entradas\Entrada.vb" />
@@ -508,15 +501,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Filtrado\MovimientoFiltrado.vb" />
-    <Compile Include="Elaboracion\Movimientos\Maceracion\BdMaceracion.vb" />
-    <Compile Include="Elaboracion\Movimientos\Maceracion\GuiMaceracion.Designer.vb">
-      <DependentUpon>GuiMaceracion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\Maceracion\GuiMaceracion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Elaboracion\Movimientos\Maceracion\Maceracion.vb" />
-    <Compile Include="Elaboracion\Movimientos\Maceracion\MovimientoMaceracion.vb" />
     <Compile Include="Elaboracion\Movimientos\comprobadores\Checker.vb" />
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.Designer.vb">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
@@ -524,6 +508,8 @@
     <Compile Include="Elaboracion\Movimientos\GuiNuevoMovimiento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elaboracion\Movimientos\Movimiento.vb" />
+    <Compile Include="Elaboracion\Movimientos\Proceso.vb" />
     <Compile Include="Elaboracion\Movimientos\Salidas\BdSalida.vb" />
     <Compile Include="Elaboracion\Movimientos\Salidas\GuiSalida.Designer.vb">
       <DependentUpon>GuiSalida.vb</DependentUpon>
@@ -813,9 +799,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Elaboracion\Movimientos\Maceracion\GuiMAceracion.resx">
-      <DependentUpon>GuiMaceracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\tiposmovimientos\frmEntTiposMovimientos.resx">
       <DependentUpon>frmEntTiposMovimientos.vb</DependentUpon>

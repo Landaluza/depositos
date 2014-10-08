@@ -105,9 +105,7 @@
             Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
             Me.btnCantidadDestinoIncorrecta.Visible = False
             Me.btnProductoDestinoIncorrecto.Visible = False
-            Me.chbLoteNuevo.Enabled = False
-            'Me.cboTipoProducto.Enabled = False
-            Me.cboProducto.Text = ""
+            Me.chbLoteNuevo.Enabled = False                        
         Else
             Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
             Me.btnCantidadDestinoIncorrecta.Visible = True

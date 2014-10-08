@@ -1,9 +1,9 @@
 ﻿Public Class MovimientoDesemboteNC
-    Inherits MovimientoEntrada
+    Inherits Movimientos.MovimientoEntrada
 
 
     Public Sub New()
-        MyBase.New(Entradas.Entrada.DESEMBOTE_NO_COMFORME)
+        MyBase.New(Movimientos.Entrada.DESEMBOTE_NO_COMFORME)
         AddHandler gui.btnGuardar.Click, AddressOf guardar
     End Sub
 

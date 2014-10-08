@@ -38,100 +38,10 @@
         Me.ResumeLayout()
     End Sub
 
-    'Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click
-    '    Dim trasiego As New MovimientoTrasiego
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
 
-    'Private Sub btnNiveles_Click(sender As Object, e As EventArgs) Handles btnNiveles.Click
-    '    Dim frm As New guiNiveles
-    '    GUImain.añadirPestañaCentrada(CType(frm, Form))
-    'End Sub
-
-    Private Sub btnCompra_Click(sender As Object, e As EventArgs) Handles btnCompra.Click
-        Dim trasiego As New MovimientoCompra
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    'Private Sub btnVenta_Click(sender As Object, e As EventArgs) Handles btnVenta.Click
-    '    Dim trasiego As New MovimientoVenta
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    'Private Sub btnEnvasar_Click(sender As Object, e As EventArgs) Handles btnEnvasar.Click
-    '    Dim trasiego As New MovimientoEnvasar
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    Private Sub btnFiltrado_Click(sender As Object, e As EventArgs) Handles btnFiltrado.Click
-        Dim trasiego As New MovimientoFiltrado(Convert.ToInt32(CType(sender, Button).Tag))
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    'Private Sub btnAjustesComerciales_Click(sender As Object, e As EventArgs) Handles btnAjustesComerciales.Click
-    '    Dim trasiego As New MovimientoAjusteComercial
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    'Private Sub btnAjustesAgua_Click(sender As Object, e As EventArgs) Handles btnAjustesAgua.Click
-    '    Dim trasiego As New MovimientoAjusteAgua
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    'Private Sub btnClarificacion_Click(sender As Object, e As EventArgs) Handles btnClarificacion.Click
-    '    Dim trasiego As New MovimientoClarificacion
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    'Private Sub btnCoccionControlada_Click(sender As Object, e As EventArgs) Handles btnCoccionControlada.Click
-    '    Dim trasiego As New MovimientoCoccionControlada
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    'Private Sub btnDesecho_Click(sender As Object, e As EventArgs) Handles btnDesecho.Click
-    '    Dim trasiego As New MovimientoDEsecho
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    Private Sub btnDesemboteNC_Click(sender As Object, e As EventArgs) Handles btnDesemboteNC.Click
-        Dim trasiego As New MovimientoDesemboteNC
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    Private Sub btnDiferencia_Click(sender As Object, e As EventArgs) Handles btnDiferencia.Click
-        Dim trasiego As New MovimientoDiferencia(Diferencias.Diferencia.DIFERENCIA)
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    'Private Sub btnFermentados_Click(sender As Object, e As EventArgs) Handles btnFermentados.Click
-    '    Dim trasiego As New MovimientoFermentacion
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-
-    Private Sub btnLavado_Click(sender As Object, e As EventArgs) Handles btnLavado.Click
-        Dim trasiego As New MovimientoDiferencia(Diferencias.Diferencia.LAVADO)
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    Private Sub btnMigracion_Click(sender As Object, e As EventArgs) Handles btnMigracion.Click
-        Dim trasiego As New MovimientoMaceracion(1)
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    'Private Sub btnPieCuba_Click(sender As Object, e As EventArgs) Handles btnPieCuba.Click
-    '    Dim trasiego As New MovimientoPieCuba
-    '    GUImain.añadirPestañaCentrada(trasiego.Form)
-    'End Sub
-
-    Private Sub btnDEsembote_Click(sender As Object, e As EventArgs) Handles btnDEsembote.Click
-        Dim trasiego As New MovimientoDesembote
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    Private Sub btnTrasiego_Click(sender As Object, e As EventArgs) Handles btnTrasiego.Click
-        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
-        GUImain.añadirPestañaCentrada(trasiego.Form)
+    Private Sub btnNiveles_Click(sender As Object, e As EventArgs) Handles btnNiveles.Click
+        'Dim frm As New guiNiveles
+        'GUImain.añadirPestañaCentrada(CType(frm, Form))
     End Sub
 
     Private Sub estadisticas(sender As Object, e As EventArgs) Handles btnDEsembote.Click, btnPieCuba.Click, btnMigracion.Click, btnLavado.Click, btnFermentados.Click, btnDiferencia.Click, btnDesemboteNC.Click, btnDesecho.Click, _
@@ -148,18 +58,13 @@
 
     End Sub
 
-    Private Sub btnTerminado_Click(sender As Object, e As EventArgs) Handles btnTerminado.Click
-        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
+    Private Sub btnTerminado_Click(sender As Object, e As EventArgs) Handles btnDEsembote.Click, btnPieCuba.Click, btnMigracion.Click, btnLavado.Click, btnFermentados.Click, btnDiferencia.Click, btnDesemboteNC.Click, btnDesecho.Click, _
+        btnCoccionControlada.Click, btnClarificacion.Click, btnAjustesAgua.Click, btnAjustesComerciales.Click, btnFiltrado.Click, btnEnvasar.Click, btnVenta.Click, btnCompra.Click, btnNiveles.Click, _
+        btnTrasiego.Click, btnTerminado.Click, btnClarificacion.Click
+
+        Dim trasiego As New Movimientos.Movimiento(Convert.ToInt32(CType(sender, Button).Tag))
         GUImain.añadirPestañaCentrada(trasiego.Form)
     End Sub
 
-    Private Sub btnFermentado_Click(sender As Object, e As EventArgs) Handles btnFermentados.Click
-        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
-
-    Private Sub btnClarificacion_Click(sender As Object, e As EventArgs) Handles btnClarificacion.Click
-        Dim trasiego As New MovimientoTrasiego(Convert.ToInt32(CType(sender, Button).Tag))
-        GUImain.añadirPestañaCentrada(trasiego.Form)
-    End Sub
+    
 End Class

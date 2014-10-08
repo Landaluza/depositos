@@ -1,4 +1,4 @@
-﻿Namespace Entradas
+﻿Namespace Movimientos
 
     Public Class Entrada
         Public Const ABREVIATURA_ENTRADA As String = "Rec"
