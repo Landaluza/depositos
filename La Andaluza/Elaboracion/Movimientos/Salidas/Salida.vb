@@ -9,6 +9,7 @@ Public Class Salida
         Public fecha As Date
         Public proceso As Integer
         Public recipiente As Integer
+        Public transicuba As Integer
         Public Abreviatura As String
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0

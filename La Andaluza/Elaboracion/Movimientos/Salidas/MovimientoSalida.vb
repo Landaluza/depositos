@@ -4,6 +4,7 @@
         Protected bdSalida As Movimientos.BdSalida
         Protected listadoDepositos As DataTable
         Protected listadoRecipientes As DataTable
+        Protected listadoTransicubas As DataTable
         Protected salida As Movimientos.Salida
 
         Protected hiloDatos As System.Threading.Thread
@@ -52,12 +53,14 @@
 
         Private Sub cargardatos()
             listadoDepositos = bdSalida.devolver_depositos_ocupados
-            
+            listadoRecipientes = bdSalida.listar_recipientes
+            listadoTransicubas = bdSalida.listar_transicubas_activas
             gui.BeginInvoke(invocador)
         End Sub
 
         Private Sub mostrarDatos()
-            ' gui.DestinoDatasource = listadoDepositosDestino
+            gui.TransicubasDatasource = listadoTransicubas
+            gui.RecipientesDatasource = listadoRecipientes
             gui.OrigenDatasource = listadoDepositos
         End Sub
 
@@ -80,87 +83,25 @@
 
                 'comprobaciones de los datos recibidos
 
-                If salida.loteFinal.codigo_lote = "" And salida.loteFinal.id = 0 Then
-                    Dim dep As DataTable = bdSalida.seleccionar_detalles_deposito(salida.loteFinal.deposito)
 
-                    If dep.Rows(0).Item(1).ToString <> "" Then
-                        Throw New Exception("Deposito en uso. El deposito de destino ya esta en uso.")
-                    End If
-                Else
-
-                    Dim lote As DataTable = bdSalida.seleccionar_lote(salida.loteFinal.id)
-                    If salida.loteFinal.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
-                        Throw New Exception("El deposito de destino ya no contiene el lote que se selecciono.")
-                    End If
-
-                    'actualizamos la cantidad restante con los valores actuales
-                    salida.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
-                End If
 
                 Dim producto As DataTable = bdSalida.seleccionar_detalles_producto(salida.loteFinal.producto)
 
-                'si guardamos el lote que hubiera en el deposito de fin para añadir trazabilidad
-                If salida.loteFinal.id = 0 Then
-                    'crear lote clonando el de trasiego, deposito vacio
-                    Dim tipoFinal As DataTable = bdSalida.seleccionar_detalles_tlote(salida.loteFinal.tipo)
-                    Dim codigoDestino As String = salida.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
-                    codigoDestino = bdSalida.calcular_codigo_lote(codigoDestino)
 
-                    If Not bdSalida.crear_lote(salida.lotePartida.codigo_lote, codigoDestino, salida.loteFinal.deposito, 0) Then
-                        Throw New Exception("No se pudo crear el lote de destino")
-                    End If
-
-                    salida.loteFinal.codigo_lote = codigoDestino
-                Else
-                    If salida.loteFinal.codigo_lote = "" Then
-                        'loteAnterior = trasiego.loteFinal
-
-                        'crear lote y guardar para trazabilidad el anterior
-                        Dim productoFinal As DataTable = bdSalida.seleccionar_detalles_producto(salida.loteFinal.producto)
-                        Dim tipoFinal As DataTable = bdSalida.seleccionar_detalles_tlote(salida.loteFinal.tipo)
-                        Dim codigoDestino As String = salida.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
-                        codigoDestino = bdSalida.calcular_codigo_lote(codigoDestino)
-
-                        Dim detallesDepositoFinal As DataTable = bdSalida.seleccionar_detalles_deposito(salida.loteFinal.deposito)
-                        salida.loteFinal.codigo_lote = detallesDepositoFinal.Rows(0).Item(1).ToString
+                'crear lote y guardar para trazabilidad el anterior
+                Dim productoFinal As DataTable = bdSalida.seleccionar_detalles_producto(salida.loteFinal.producto)
+                Dim tipoFinal As DataTable = bdSalida.seleccionar_detalles_tlote(salida.loteFinal.tipo)
+                Dim codigoDestino As String = salida.fecha.ToString("yyyyMMdd") & producto.Rows(0).Item(2).ToString & tipoFinal.Rows(0).Item(2).ToString
+                codigoDestino = bdSalida.calcular_codigo_lote(codigoDestino)
 
 
-                        If Not bdSalida.crear_lote(codigoDestino, salida.loteFinal.deposito, 0, salida.loteFinal.tipo, salida.loteFinal.producto) Then
-                            Throw New Exception("No se pudo crear el lote de destino")
-                        End If
-
-                        If Not bdSalida.guardar_movimiento(salida.loteFinal.deposito, salida.loteFinal.deposito, salida.loteFinal.cantidad_restante, salida.proceso) Then
-                            Throw New Exception("No se pudo guardar el movimiento del lote en el deposito de destino")
-                        End If
-
-                        If Not bdSalida.guardar_trazabilidad(codigoDestino, salida.loteFinal.codigo_lote, salida.loteFinal.cantidad_restante) Then
-                            Throw New Exception("No se pudo guardar la trazabilidad del lote en el deposito de destino")
-                        End If
-
-
-                        'actualizar atributos
-                        If Not bdSalida.sacar_lote(salida.loteFinal.codigo_lote) Then
-                            Throw New Exception("No se pudo actualizar el deposito del lote en el deposito de destino")
-                        End If
-
-                        If Not bdSalida.actualizar_lote(salida.loteFinal.codigo_lote, 0) Then
-                            Throw New Exception("No se pudo actualizar la cantidad del lote en el deposito de destino")
-                        End If
-
-                        If Not bdSalida.actualizar_lote(codigoDestino, salida.loteFinal.cantidad_restante) Then
-                            Throw New Exception("No se pudo actualizar la cantidad del nuevo lote en el deposito de destino")
-                        End If
-
-                        salida.loteFinal.codigo_lote = codigoDestino
-
-                        Dim lote As DataTable = bdSalida.seleccionar_lote_por_codigo(salida.loteFinal.codigo_lote)
-                        'sobra, la cantidad restante es la que tenia el lote anterior
-                        ' trasiego.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(1))
-                    Else
-                        'no crear lote
-
-                    End If
+                If Not bdSalida.crear_lote(codigoDestino, salida.loteFinal.deposito, 0, salida.loteFinal.tipo, salida.loteFinal.producto) Then
+                    Throw New Exception("No se pudo crear el lote de destino")
                 End If
+
+
+                salida.loteFinal.codigo_lote = codigoDestino
+
 
 
                 'realizar movimiento de trasiego a final

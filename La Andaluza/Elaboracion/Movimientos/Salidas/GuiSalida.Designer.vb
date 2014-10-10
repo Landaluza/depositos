@@ -40,6 +40,8 @@
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.btnTodo = New System.Windows.Forms.Button()
+            Me.lTransicuba = New System.Windows.Forms.Label()
+            Me.cboTransicuba = New System.Windows.Forms.ComboBox()
             Me.FlowLayoutPanel1.SuspendLayout()
             CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.FlowLayoutPanel2.SuspendLayout()
@@ -53,13 +55,15 @@
             Me.FlowLayoutPanel1.Controls.Add(Me.dgvOrigen)
             Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
             Me.FlowLayoutPanel1.Controls.Add(Me.cboRecipiente)
+            Me.FlowLayoutPanel1.Controls.Add(Me.lTransicuba)
+            Me.FlowLayoutPanel1.Controls.Add(Me.cboTransicuba)
             Me.FlowLayoutPanel1.Controls.Add(Me.FlowLayoutPanel2)
             Me.FlowLayoutPanel1.Controls.Add(Me.GroupBox2)
             Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
             Me.FlowLayoutPanel1.Location = New System.Drawing.Point(34, 34)
             Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
             Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 545)
+            Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 596)
             Me.FlowLayoutPanel1.TabIndex = 36
             '
             'dtpFecha
@@ -105,6 +109,7 @@
             Me.Label1.Size = New System.Drawing.Size(58, 13)
             Me.Label1.TabIndex = 35
             Me.Label1.Text = "Recipiente"
+            Me.Label1.Visible = False
             '
             'cboRecipiente
             '
@@ -115,13 +120,14 @@
             Me.cboRecipiente.Name = "cboRecipiente"
             Me.cboRecipiente.Size = New System.Drawing.Size(469, 21)
             Me.cboRecipiente.TabIndex = 34
+            Me.cboRecipiente.Visible = False
             '
             'FlowLayoutPanel2
             '
             Me.FlowLayoutPanel2.Controls.Add(Me.chbSuma)
             Me.FlowLayoutPanel2.Controls.Add(Me.chbMuestra)
             Me.FlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-            Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 332)
+            Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 377)
             Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 13)
             Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
             Me.FlowLayoutPanel2.Size = New System.Drawing.Size(568, 20)
@@ -160,7 +166,7 @@
             Me.GroupBox2.Controls.Add(Me.btnProductoOrigenncorrecto)
             Me.GroupBox2.Controls.Add(Me.btncantidadOrigenIncorrecta)
             Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 368)
+            Me.GroupBox2.Location = New System.Drawing.Point(3, 413)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
             Me.GroupBox2.TabIndex = 18
@@ -208,7 +214,7 @@
             Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnGuardar.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_198_ok
             Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-            Me.btnGuardar.Location = New System.Drawing.Point(367, 613)
+            Me.btnGuardar.Location = New System.Drawing.Point(367, 657)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
             Me.btnGuardar.TabIndex = 35
@@ -220,7 +226,7 @@
             '
             Me.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte), True)
-            Me.txtCantidad.Location = New System.Drawing.Point(34, 613)
+            Me.txtCantidad.Location = New System.Drawing.Point(34, 657)
             Me.txtCantidad.Multiline = True
             Me.txtCantidad.Name = "txtCantidad"
             Me.txtCantidad.Size = New System.Drawing.Size(200, 69)
@@ -233,17 +239,39 @@
             Me.btnTodo.FlatAppearance.BorderSize = 0
             Me.btnTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.btnTodo.Image = Global.La_Andaluza_MovimientosDepositos.My.Resources.Resources.glyphicons_414_disk_save
-            Me.btnTodo.Location = New System.Drawing.Point(237, 613)
+            Me.btnTodo.Location = New System.Drawing.Point(237, 657)
             Me.btnTodo.Name = "btnTodo"
             Me.btnTodo.Size = New System.Drawing.Size(31, 69)
             Me.btnTodo.TabIndex = 39
             Me.btnTodo.UseVisualStyleBackColor = True
             '
+            'lTransicuba
+            '
+            Me.lTransicuba.AutoSize = True
+            Me.lTransicuba.Location = New System.Drawing.Point(3, 334)
+            Me.lTransicuba.Margin = New System.Windows.Forms.Padding(3, 5, 3, 0)
+            Me.lTransicuba.Name = "lTransicuba"
+            Me.lTransicuba.Size = New System.Drawing.Size(60, 13)
+            Me.lTransicuba.TabIndex = 37
+            Me.lTransicuba.Text = "Transicuba"
+            Me.lTransicuba.Visible = False
+            '
+            'cboTransicuba
+            '
+            Me.cboTransicuba.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.cboTransicuba.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cboTransicuba.FormattingEnabled = True
+            Me.cboTransicuba.Location = New System.Drawing.Point(105, 350)
+            Me.cboTransicuba.Name = "cboTransicuba"
+            Me.cboTransicuba.Size = New System.Drawing.Size(469, 21)
+            Me.cboTransicuba.TabIndex = 36
+            Me.cboTransicuba.Visible = False
+            '
             'GuiSalida
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(646, 702)
+            Me.ClientSize = New System.Drawing.Size(646, 742)
             Me.Controls.Add(Me.btnTodo)
             Me.Controls.Add(Me.FlowLayoutPanel1)
             Me.Controls.Add(Me.btnGuardar)
@@ -276,5 +304,7 @@
         Public WithEvents btnGuardar As System.Windows.Forms.Button
         Public WithEvents txtCantidad As System.Windows.Forms.TextBox
         Private WithEvents btnTodo As System.Windows.Forms.Button
+        Private WithEvents lTransicuba As System.Windows.Forms.Label
+        Private WithEvents cboTransicuba As System.Windows.Forms.ComboBox
     End Class
 End Namespace

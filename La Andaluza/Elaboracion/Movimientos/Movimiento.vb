@@ -29,11 +29,11 @@
                     Dim mov As New MovimientoFiltrado(Me.proceso.identificador)
                     Me.gui = mov.Form
                     Me.gui.Text = Me.proceso.nombre
-                Case 8
+                Case 5
                     Dim mov As New MovimientoSalida(Me.proceso.identificador)
                     Me.gui = mov.Form
                     Me.gui.Text = Me.proceso.nombre
-                Case 11
+                Case 8
                     Dim mov As New MovimientoDiferencia(Me.proceso.identificador)
                     Me.gui = mov.Form
                     Me.gui.Text = Me.proceso.nombre

@@ -52,47 +52,13 @@
             AñadirParametroConsulta("@tlote", tlote)
             AñadirParametroConsulta("@producto", producto)
             AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
-            AñadirParametroConsulta("@depositoDestino", depositoDestino)
+            If depositoDestino = 0 Then
+                AñadirParametroConsulta("@depositoDestino", Convert.DBNull)
+            Else
+                AñadirParametroConsulta("@depositoDestino", depositoDestino)
+            End If
 
             Return Consultar(True)
-
-        End Function
-
-
-        Public Function crear_lote(ByVal codigoLote As String, ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double) As Boolean
-
-            query = "INSERT INTO [dbo].[Lotes] " & _
-                                               "([Fecha] " & _
-                                               ",[CantidadRestante] " & _
-                                               ",[Observacion] " & _
-                                               ",[TipoLoteID] " & _
-                                               ",[TipoProductoID] " & _
-                                               ",[CodigoLote] " & _
-                                               ",[DepositoID] " & _
-                                               ",[Revisar] " & _
-                                               ",[FechaModificacion] " & _
-                                               ",[UsuarioModificacion]) " & _
-                                            "select " & _
-                                                "CURRENT_TIMESTAMP " & _
-                                                ",@cantidad " & _
-                                                ",Observacion " & _
-                                                ",TipoLoteID " & _
-                                                ",TipoProductoID " & _
-                                                ",@nuevoCodigo   " & _
-                                                ",@depositoDestino  " & _
-                                                ",'True' " & _
-                                                ",CURRENT_TIMESTAMP " & _
-                                                ",17 " & _
-                                            "from lotes " & _
-                                            "where codigoLote = @codigoLote"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@cantidad", cantidad)
-            AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
-            AñadirParametroConsulta("@depositoDestino", depositoDestino)
-            AñadirParametroConsulta("@codigoLote", codigoLote)
-
-            Return Consultar(True)
-
 
         End Function
 
@@ -156,6 +122,18 @@
 
 
         ''*****************************************************************************************
+        ''                         funciones de transicubas
+        ''*****************************************************************************************  
+        Public Function listar_transicubas_activas() As DataTable
+            query = "select Depositos.TransicubaID,Depositos.Codigo from " & _
+                              "Depositos INNER JOIN Transicubas ON Depositos.TransicubaID = Transicubas.TransicubaID where " & _
+                              "(Transicubas.Estado = 'True')  and Depositos.DepositoID not in (SELECT DISTINCT Depositos.DepositoID FROM Depositos INNER JOIN Transicubas ON Depositos.TransicubaID = Transicubas.TransicubaID INNER JOIN Lotes ON Depositos.DepositoID = Lotes.DepositoID WHERE (Transicubas.Estado = 'True')) order by Depositos.Codigo"
+
+            PrepararConsulta(query)
+            Return Consultar()
+        End Function
+
+        ''*****************************************************************************************
         ''                         funciones de productos
         ''*****************************************************************************************        
         Public Function seleccionar_detalles_producto(ByVal id As Integer) As DataTable
@@ -207,6 +185,14 @@
             Return Consultar()
         End Function
 
+        ''*****************************************************************************************
+        ''                         funciones de procesos
+        ''*****************************************************************************************
+        Public Function listar_recipientes() As DataTable
+            query = "RecipiesntesSalidasCbo"
+            PrepararConsulta(query)
+            Return Consultar()
+        End Function
 
         ''*****************************************************************************************
         ''                         funciones de depositos

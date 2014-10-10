@@ -9,6 +9,10 @@
             Me.salida = salida
             Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvOrigen)
             Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+
+            If salida.proceso = 8 Then
+                Me.cboRecipiente.Visible = False
+            End If
         End Sub
 
         Public WriteOnly Property OrigenDatasource As DataTable
@@ -45,6 +49,12 @@
             End Set
         End Property
 
+        Public WriteOnly Property TransicubasDatasource As DataTable
+            Set(value As DataTable)
+                Me.cboTransicuba.mam_DataSource(value, False, False)
+            End Set
+        End Property
+
         Public ReadOnly Property valores As Movimientos.Salida
             Get
 
@@ -54,7 +64,11 @@
                 salida.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
                 salida.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
                 salida.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
-                salida.recipiente = Convert.ToInt32(cboRecipiente.SelectedValue)
+                If cboRecipiente.Visible Then
+                    salida.recipiente = Convert.ToInt32(cboRecipiente.SelectedValue)
+
+                    If cboTransicuba.Visible Then salida.transicuba = Convert.ToInt32(cboTransicuba.SelectedValue)
+                End If
 
                 salida.sumarAdestino = chbSuma.Checked
 
@@ -108,6 +122,17 @@
 
         Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
             txtCantidad.Text = Convert.ToString(dgvOrigen.CurrentRow.Cells("CantidadRestante").Value)
+        End Sub
+
+        Private Sub cboRecipiente_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboRecipiente.SelectedValueChanged
+            If cboRecipiente.SelectedValue Is Nothing Then
+                cboTransicuba.SelectedValue = False
+                Return
+            End If
+
+            If Convert.ToInt32(cboRecipiente.SelectedValue) = 1 Then
+                Me.cboTransicuba.Visible = True
+            End If
         End Sub
     End Class
 End Namespace
