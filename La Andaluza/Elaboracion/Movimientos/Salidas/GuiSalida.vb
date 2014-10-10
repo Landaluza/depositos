@@ -10,7 +10,7 @@
             Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvOrigen)
             Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
 
-            If salida.proceso = 8 Then
+            If salida.proceso = 6 Then
                 Me.cboRecipiente.Visible = False
             End If
         End Sub
@@ -125,14 +125,18 @@
         End Sub
 
         Private Sub cboRecipiente_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboRecipiente.SelectedValueChanged
-            If cboRecipiente.SelectedValue Is Nothing Then
+            If CType(cboRecipiente.SelectedValue, DataRowView).Row.Item(0) Is Nothing Then
                 cboTransicuba.SelectedValue = False
                 Return
             End If
 
-            If Convert.ToInt32(cboRecipiente.SelectedValue) = 1 Then
-                Me.cboTransicuba.Visible = True
-            End If
+            Try
+                If Convert.ToInt32(cboRecipiente.SelectedValue) = 1 Then
+                    Me.cboTransicuba.Visible = True
+                End If
+            Catch ex As Exception
+
+            End Try
         End Sub
     End Class
 End Namespace
