@@ -33,6 +33,10 @@
                     Dim mov As New MovimientoSalida(Me.proceso.identificador)
                     Me.gui = mov.Form
                     Me.gui.Text = Me.proceso.nombre
+                Case 11
+                    Dim mov As New MovimientoDiferencia(Me.proceso.identificador)
+                    Me.gui = mov.Form
+                    Me.gui.Text = Me.proceso.nombre
                 Case Else
                     Dim mov As New MovimientoTrasiego(Me.proceso.identificador)
                     Me.gui = mov.Form

@@ -140,8 +140,6 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.GuiNuevoMovimiento.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Tipos.frmEnt.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Tipos.frm.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntProcesos.resources
-C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmProcesos.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.GuiTrasiego.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmEntNoticias2.resources
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.frmNoticias2.resources
@@ -163,3 +161,5 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Procesos.frmEntProcesos.resources
+C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La_Andaluza_MovimientosDepositos.Movimientos.Procesos.frmProcesos.resources
