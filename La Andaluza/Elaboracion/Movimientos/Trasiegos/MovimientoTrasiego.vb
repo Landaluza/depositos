@@ -126,13 +126,24 @@
                     End If
                 Else
 
-                    Dim lote As DataTable = bdTrasiego.seleccionar_lote(trasiego.loteFinal.id)
-                    If trasiego.loteFinal.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
+                    Dim lotef As DataTable = bdTrasiego.seleccionar_lote(trasiego.loteFinal.id)
+                    If trasiego.loteFinal.deposito <> Convert.ToInt32(lotef.Rows(0).Item(5)) Then
                         Throw New Exception("El deposito de destino ya no contiene el lote que se selecciono.")
                     End If
 
                     'actualizamos la cantidad restante con los valores actuales
-                    trasiego.loteFinal.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
+                    trasiego.loteFinal.cantidad_restante = Convert.ToDouble(lotef.Rows(0).Item(3))
+                End If
+
+                Dim lotep As DataTable = bdTrasiego.seleccionar_lote(trasiego.lotePartida.id)
+                If trasiego.lotePartida.deposito <> Convert.ToInt32(lotep.Rows(0).Item(5)) Then
+                    Throw New Exception("El deposito de origen ya no contiene el lote que se selecciono.")
+                End If
+
+                'actualizamos la cantidad restante con los valores actuales
+                trasiego.lotePartida.cantidad_restante = Convert.ToDouble(lotep.Rows(0).Item(3))
+                If trasiego.lotePartida.cantidad_restante < trasiego.cantidad Then
+                    Throw New Exception("SE intenta mover mas cantidad de la que posee el lote en el deposito.")
                 End If
 
                 Dim producto As DataTable = bdTrasiego.seleccionar_detalles_producto(trasiego.loteFinal.producto)
@@ -211,8 +222,18 @@
                     Throw New Exception("No se pudo guardar la trazabilidad del lote trasiego")
                 End If
 
-                If Not bdTrasiego.actualizar_lote(trasiego.lotePartida.codigo_lote, -trasiego.cantidad) Then
-                    Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                If trasiego.lotePartida.cantidad_restante - trasiego.cantidad <= 0 Then
+                    If Not bdTrasiego.sacar_lote(trasiego.lotePartida.codigo_lote) Then
+                        Throw New Exception("No se pudo sacar el lote del deposito")
+                    End If
+
+                    If Not bdTrasiego.actualizar_lote(trasiego.lotePartida.codigo_lote, 0) Then
+                        Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                    End If
+                Else
+                    If Not bdTrasiego.actualizar_lote(trasiego.lotePartida.codigo_lote, -trasiego.cantidad) Then
+                        Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                    End If
                 End If
 
                 If trasiego.sumarAdestino Then

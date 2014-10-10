@@ -82,8 +82,18 @@
                 End If
 
                 'comprobaciones de los datos recibidos
+                
 
+                Dim lote As DataTable = bdSalida.seleccionar_lote(salida.lotePartida.id)
+                If salida.lotePartida.deposito <> Convert.ToInt32(lote.Rows(0).Item(5)) Then
+                    Throw New Exception("El deposito de origen ya no contiene el lote que se selecciono.")
+                End If
 
+                    'actualizamos la cantidad restante con los valores actuales
+                salida.lotePartida.cantidad_restante = Convert.ToDouble(lote.Rows(0).Item(3))
+                If salida.lotePartida.cantidad_restante < salida.cantidad Then
+                    Throw New Exception("SE intenta mover mas cantidad de la que posee el lote en el deposito.")
+                End If
 
                 Dim producto As DataTable = bdSalida.seleccionar_detalles_producto(salida.loteFinal.producto)
 
@@ -114,8 +124,18 @@
                     Throw New Exception("No se pudo guardar la trazabilidad del lote trasiego")
                 End If
 
-                If Not bdSalida.actualizar_lote(salida.lotePartida.codigo_lote, -salida.cantidad) Then
-                    Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                If salida.lotePartida.cantidad_restante - salida.cantidad <= 0 Then
+                    If Not bdSalida.sacar_lote(salida.lotePartida.codigo_lote) Then
+                        Throw New Exception("No se pudo sacar el lote del deposito")
+                    End If
+
+                    If Not bdSalida.actualizar_lote(salida.lotePartida.codigo_lote, 0) Then
+                        Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                    End If
+                Else
+                    If Not bdSalida.actualizar_lote(salida.lotePartida.codigo_lote, -salida.cantidad) Then
+                        Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
+                    End If
                 End If
 
                 If salida.sumarAdestino Then
@@ -123,6 +143,8 @@
                         Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
                     End If
                 End If
+
+                
 
                 bdSalida.TerminarTransaccion()
                 gui.Close()
