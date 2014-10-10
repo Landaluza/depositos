@@ -8,7 +8,8 @@ Public Class Salida
         Public sumarAdestino As Boolean
         Public fecha As Date
         Public proceso As Integer
-
+        Public recipiente As Integer
+        Public Abreviatura As String
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0
             Me.proceso = proceso

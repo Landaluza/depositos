@@ -797,6 +797,9 @@
     <EmbeddedResource Include="Elaboracion\Movimientos\GuiNuevoMovimiento.resx">
       <DependentUpon>GuiNuevoMovimiento.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Elaboracion\Movimientos\Salidas\GuiSalida.resx">
+      <DependentUpon>GuiSalida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Elaboracion\Movimientos\Tipos\frmEnt.resx">
       <DependentUpon>frmEnt.vb</DependentUpon>
     </EmbeddedResource>
