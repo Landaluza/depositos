@@ -1,26 +1,6 @@
 ﻿Namespace Movimientos
     Public Class BdSalida
-        Inherits Connection.DataBase
-
-        Private query As String
-        Public Sub New()
-            MyBase.New(Config.Server)
-        End Sub
-
-
-        Public Function seleccionar_lote_por_codigo(ByVal codigo As String) As DataTable
-            query = "select loteid, codigolote, descripcion, cantidadRestante, tipoproductoid, depositoid from lotes where codigoLote = @codigoLote"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@codigoLote", codigo)
-            Return Consultar()
-        End Function
-
-        Public Function seleccionar_lote(ByVal id As Integer) As DataTable
-            query = "select loteid, codigolote, descripcion, cantidadRestante, tipoproductoid, depositoid from lotes where loteid = @id"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id", id)
-            Return Consultar()
-        End Function
+        Inherits Movimientos.BdMovimientos
 
 
         Public Function crear_lote(ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double, ByVal tlote As Integer, ByVal producto As Integer) As Boolean
@@ -63,64 +43,6 @@
         End Function
 
 
-        Public Function actualizar_lote(ByVal codigoLote As String, ByVal cantidad As Double) As Boolean
-            query = "update lotes set cantidadRestante=cantidadRestante+@cantidad where codigolote= @codigoLote"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@cantidad", cantidad)
-            AñadirParametroConsulta("@codigoLote", codigoLote)
-
-            Return Consultar(True)
-
-
-        End Function
-
-        Public Function sacar_lote(ByVal codigoLote As String) As Boolean
-            query = "update lotes set depositoprevioid=depositoid, depositoid=null where codigolote= @codigoLote"
-
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@codigoLote", codigoLote)
-
-            Return Consultar(True)
-
-
-        End Function
-
-        Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String
-            query = "LotesSelectUltimoCodigo @codigoSinLetra"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@codigoSinLetra", codigoSinLetra)
-            Dim dt As DataTable = Consultar()
-
-            If dt.Rows.Count = 0 Then
-                Return codigoSinLetra & "1"
-            End If
-
-            If dt.Rows(0).Item(0) Is Convert.DBNull Then
-                Return codigoSinLetra & "1"
-            End If
-
-            Dim row As String = dt.Rows(0).Item(0).ToString
-            Dim extra As String
-            Dim ascii As Integer
-
-            If row.Length > 14 Then
-                extra = row.Substring(14, 1)
-                ascii = Asc(extra) + 1
-
-                If ascii = 58 Then
-                    ascii = 65
-                ElseIf ascii = 90 Then
-                    ascii = 97
-                End If
-
-
-                Return codigoSinLetra & Chr(ascii)
-            Else
-                Return codigoSinLetra & "1"
-            End If
-        End Function
-
-
         ''*****************************************************************************************
         ''                         funciones de transicubas
         ''*****************************************************************************************  
@@ -133,57 +55,6 @@
             Return Consultar()
         End Function
 
-        ''*****************************************************************************************
-        ''                         funciones de productos
-        ''*****************************************************************************************        
-        Public Function seleccionar_detalles_producto(ByVal id As Integer) As DataTable
-            query = "select TipoProductoID, Descripcion, Abreviatura from TiposProductos where TipoProductoID=@id"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id", id)
-            Return Consultar()
-        End Function
-
-        Public Function listar_productos() As DataTable
-            query = "select TipoProductoID, Descripcion, Abreviatura from TiposProductos order by descripcion"
-            PrepararConsulta(query)
-
-            Return Consultar()
-        End Function
-
-
-        ''*****************************************************************************************
-        ''                         funciones de tiposLotes
-        ''*****************************************************************************************       
-
-        Public Function listar_tlotes() As DataTable
-            query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes order by descripcion"
-            PrepararConsulta(query)
-            Return Consultar()
-        End Function
-
-        Public Function seleccionar_detalles_tlote(ByVal id As Integer) As DataTable
-            query = "select TipoLoteID, Descripcion, Abreviatura from TiposLotes where TipoLoteid=@id"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id", id)
-            Return Consultar()
-        End Function
-
-        ''*****************************************************************************************
-        ''                         funciones de procesos
-        ''*****************************************************************************************
-        Public Function seleccionar_muestra_pro_proceso(ByVal proceso As Integer) As DataTable
-            query = "select isnull(conmuestra, 'false') from procesos where procesoid= @id"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id", proceso)
-            Return Consultar()
-        End Function
-
-        Public Function seleccionar_tlote_por_proceso(ByVal proceso As Integer) As DataTable
-            query = "select isnull(TipoLoteID, 0) from procesos where procesoid= @id"
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id", proceso)
-            Return Consultar()
-        End Function
 
         ''*****************************************************************************************
         ''                         funciones de procesos
@@ -197,42 +68,6 @@
         ''*****************************************************************************************
         ''                         funciones de depositos
         ''*****************************************************************************************
-
-        Public Function seleccionar_detalles_deposito(ByVal id_deposito As Integer) As DataTable
-            query = "select " & _
-                        "Depositos.Codigo,   " & _
-                        "Lotes.CodigoLote,  " & _
-                        "CASE  " & _
-                        "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
-                        "        ELSE Lotes.Descripcion  " & _
-                        "END AS Descripcion, " & _
-                        "Depositos.Capacidad,  " & _
-                        "Lotes.CantidadRestante, " & _
-                        "Depositos.depositoID, " & _
-                        "Depositos.Listado,   " & _
-                        "Lotes.TipoLoteID, " & _
-                        "Lotes.TipoProductoID, " & _
-                        "TiposProductos.descripcion producto " & _
-                    "from " & _
-                        "TiposProductos " & _
-                        "RIGHT OUTER JOIN Lotes  " & _
-                        "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
-                        "RIGHT OUTER JOIN  Depositos  " & _
-                        "ON Lotes.DepositoID = Depositos.DepositoID " & _
-                    "where " & _
-                        "Depositos.BotaID Is NULL  " & _
-                        "and  " & _
-                        "Depositos.Listado = 'TRUE' " & _
-                        "and " & _
-                        "depositos.depositoid = @id_deposito " & _
-                    "ORDER BY " & _
-                        "Depositos.Codigo "
-
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@id_deposito", id_deposito)
-            Return Consultar()
-        End Function
-
 
         Public Function devolver_depositos_ocupados() As DataTable
             query = "select " & _
@@ -267,39 +102,6 @@
             Return Me.Consultar()
         End Function
 
-        Public Function devolver_depositos_excepto(ByVal codigo As String) As DataTable
-            query = "select " & _
-                           "Depositos.Codigo,   " & _
-                           "Lotes.CodigoLote,  " & _
-                           "CASE  " & _
-                           "        WHEN CodigoLote is NULL THEN dbo.DepositoLavado(Depositos.DepositoID)  " & _
-                                   "ELSE Lotes.Descripcion  " & _
-                           "END AS Descripcion, " & _
-                           "Depositos.Capacidad,  " & _
-                           "Lotes.CantidadRestante,     " & _
-                           "Depositos.depositoID, " & _
-                           "Depositos.Listado,   " & _
-                           "Lotes.TipoLoteID,  " & _
-                           "Lotes.TipoProductoID, " & _
-                           "TiposProductos.descripcion producto, " & _
-                           "Lotes.loteid " & _
-                   "from  " & _
-                           "TiposProductos " & _
-                           "RIGHT OUTER JOIN Lotes  " & _
-                           "ON Lotes.TipoProductoID = TiposProductos.TipoProductoID " & _
-                           "right JOIN  Depositos  " & _
-                           "ON Lotes.DepositoID = Depositos.DepositoID " & _
-                   "where " & _
-                           "Depositos.BotaID Is NULL  " & _
-                           "and  Depositos.Codigo <> @cod and " & _
-                           "Depositos.Listado = 'TRUE' " & _
-                           "ORDER BY " & _
-                           "Depositos.Codigo "
-
-            PrepararConsulta(query)
-            AñadirParametroConsulta("@cod", codigo)
-            Return Me.Consultar()
-        End Function
 
         ''*****************************************************************************************
         ''                         funciones de movimientos
