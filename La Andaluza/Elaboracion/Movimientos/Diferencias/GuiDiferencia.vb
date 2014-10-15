@@ -9,7 +9,7 @@ Public Class GuiDiferencia
             InitializeComponent()
             Me.diferencia = diferencia
             Dim pop As New DgvFilterPopup.DgvFilterManager(Me.dgvDestino)
-            Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
+            Dim filter As New DecimalWatcher(Me.txtCantidad)
         End Sub
 
     Public WriteOnly Property DestinoDatasource As DataTable

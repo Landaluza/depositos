@@ -2,7 +2,7 @@
     Inherits Checker
     Public Function check_decimal(name As String, value As Double) As Boolean
         Dim cad As String = value.ToString
-        Dim decimales As String = NUMEROS & "."
+        Dim decimales As String = NUMEROS & ".-"
 
         For Each ch As Char In cad.ToCharArray
             If Not decimales.Contains(ch) Then
@@ -14,9 +14,9 @@
         Return True
     End Function
 
-    Public Function check_decimal(name As String, value As Double, min As Double) As Boolean
+    Public Function check_decimal(name As String, value As Double, Optional min As Double = -1.7976931348623157 * 10 ^ 308) As Boolean
         Dim cad As String = value.ToString
-        Dim decimales As String = NUMEROS & "."
+        Dim decimales As String = NUMEROS & ".-"
 
         For Each ch As Char In cad.ToCharArray
             If Not decimales.Contains(ch) Then
@@ -35,9 +35,9 @@
     End Function
 
 
-    Public Function check_decimal(name As String, value As Double, min As Double, max As Double) As Boolean
+    Public Function check_decimal(name As String, value As Double, Optional min As Double = -1.7976931348623157 * 10 ^ 308, Optional max As Double = 1.7976931348623157 * 10 ^ 308) As Boolean
         Dim cad As String = value.ToString
-        Dim decimales As String = NUMEROS & "."
+        Dim decimales As String = NUMEROS & ".-"
 
         For Each ch As Char In cad.ToCharArray
             If Not decimales.Contains(ch) Then

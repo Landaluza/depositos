@@ -29,7 +29,7 @@
 
         Public Function validar() As String
             Dim ch As New DecimalChecker
-            ch.check_decimal("cantidad", cantidad, 0)
+            ch.check_decimal("cantidad", cantidad)
 
             Return ch.mensaje & loteFinal.validar & lotePartida.validar
         End Function

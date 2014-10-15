@@ -112,14 +112,6 @@
             RaiseEvent CantidadIncorrecta(Convert.ToInt32(dgvOrigen.CurrentRow.Cells("loteid").Value), Nothing)
         End Sub
 
-        Private Sub btnProductoOrigenIncorrecto_Click(sender As Object, e As EventArgs) Handles btncantidadOrigenIncorrecta.Click
-            RaiseEvent ProductoIncorrecto(Convert.ToInt32(dgvOrigen.CurrentRow.Cells("loteid").Value), Nothing)
-        End Sub
-
-        Private Sub btncantidadOrigenIncorrecta_Click(sender As Object, e As EventArgs) Handles btncantidadOrigenIncorrecta.Click
-            RaiseEvent CantidadIncorrecta(Convert.ToInt32(dgvOrigen.CurrentRow.Cells("loteid").Value), Nothing)
-        End Sub
-
         Private Sub btnTodo_Click(sender As Object, e As EventArgs) Handles btnTodo.Click
             txtCantidad.Text = Convert.ToString(dgvOrigen.CurrentRow.Cells("CantidadRestante").Value)
         End Sub

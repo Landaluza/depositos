@@ -13,6 +13,9 @@ Public Class MovimientoFiltrado
         Protected iniciohiloDatos As System.Threading.ThreadStart
         Protected invocador As MethodInvoker
         Private TipoProceso As Integer
+        Protected invocadorDatosDestino As MethodInvoker
+        Protected hiloDatosDestino As System.Threading.Thread
+        Protected iniciohiloDatosDestino As System.Threading.ThreadStart
 
         Public ReadOnly Property Form As Form
             Get
@@ -35,12 +38,16 @@ Public Class MovimientoFiltrado
             iniciohiloDatos = New System.Threading.ThreadStart(AddressOf cargardatos)
             invocador = New MethodInvoker(AddressOf mostrarDatos)
 
+            iniciohiloDatosDestino = New System.Threading.ThreadStart(AddressOf solicitardatosDestino)
+            invocadorDatosDestino = New MethodInvoker(AddressOf mostrarDatosDestino)
+
             cargarDatosuno()
 
             AddHandler gui.FormClosing, AddressOf cerrar
             AddHandler gui.btnGuardar.Click, AddressOf guardar
             AddHandler gui.CantidadIncorrecta, AddressOf cantidad_incorrecta
             AddHandler gui.ProductoIncorrecto, AddressOf producto_incorrecto
+            AddHandler gui.dgvOrigen.SelectionChanged, AddressOf cargarDatosDestino
         End Sub
 
         Public Sub cargarDatosuno()
@@ -59,14 +66,41 @@ Public Class MovimientoFiltrado
         End Sub
 
         Private Sub mostrarDatos()
-            gui.DestinoDatasource = listadoDepositos
             gui.OrigenDatasource = listadoLotes
             gui.TipoProductoEntradaDatasource = listadoProductos
             gui.FiltroDatasource = listadoFiltros
         End Sub
 
+        Public Sub cargarDatosDestino()
+            hiloDatosDestino = New System.Threading.Thread(iniciohiloDatosDestino)
+            hiloDatosDestino.IsBackground = True
+            hiloDatosDestino.Name = "consultadatosDestinotrasiegos"
+            hiloDatosDestino.Start()
+        End Sub
+
+        Private Sub solicitardatosDestino()
+            If Not gui.dgvOrigen.CurrentRow Is Nothing Then
+                listadoDepositos = bdfiltrado.devolver_depositos_excepto(Convert.ToString(gui.dgvOrigen.CurrentRow.Cells(0).Value))
+            End If
+
+            Try
+                gui.BeginInvoke(invocadorDatosDestino)
+            Catch ex As Exception
+            End Try
+        End Sub
+
+        Private Sub mostrarDatosDestino()
+            gui.DestinoDatasource = listadoDepositos
+        End Sub
         Private Sub cerrar()
+            Dim s As eventhandler = AddressOf cargarDatosDestino
+            RemoveHandler gui.dgvOrigen.SelectionChanged, s
+
             If hiloDatos.IsAlive Then hiloDatos.Abort()
+            If hiloDatosDestino.IsAlive Then
+                hiloDatosDestino.Abort()
+                invocadorDatosDestino = Nothing
+            End If
         End Sub
 
         Protected Sub guardar()
@@ -208,6 +242,10 @@ Public Class MovimientoFiltrado
                     Throw New Exception("No se pudo guardar el movimiento del lote trasiego")
                 End If
 
+                If Not bdfiltrado.actualizar_filtro(filtrado.filtro) Then
+                    Throw New Exception("No se pudo añadir el filtro al movimiento")
+                End If
+
                 'guardar trazabilidad
                 If Not bdfiltrado.guardar_trazabilidad(filtrado.loteFinal.codigo_lote, filtrado.lotePartida.codigo_lote, If(filtrado.sumarAdestino, filtrado.cantidad, 0)) Then
                     Throw New Exception("No se pudo guardar la trazabilidad del lote trasiego")
@@ -227,9 +265,6 @@ Public Class MovimientoFiltrado
                     End If
                 End If
 
-                If Not bdfiltrado.actualizar_lote(filtrado.loteFinal.codigo_lote, filtrado.loteFinal.cantidad_restante) Then
-                    Throw New Exception("No se pudo actualizar la cantidad del nuevo lote en el deposito de destino")
-                End If
 
                 If filtrado.sumarAdestino Then
                     If Not bdfiltrado.actualizar_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad) Then
