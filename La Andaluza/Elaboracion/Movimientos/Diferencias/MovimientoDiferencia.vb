@@ -103,13 +103,12 @@
                 If diferencia.loteFinal.codigo_lote.Replace(" ", "") = "" Then
                     diferencia.loteFinal.codigo_lote = bdDiferencia.calcular_codigo_lote(codigoSinLetra)
 
-                    If Not bdDiferencia.crear_lote(diferencia.loteFinal.codigo_lote, diferencia.cantidad, diferencia.loteFinal.producto, diferencia.loteFinal.tipo) Then
+                    If Not bdDiferencia.crear_lote(diferencia.loteFinal.codigo_lote, 0, diferencia.loteFinal.producto, diferencia.loteFinal.tipo) Then
                         Throw New Exception("No se pudo crear el lote de entrada")
                     End If
                 End If
 
 
-                ''??
                 'realizar movimiento de compra a final
                 If Not bdDiferencia.guardar_movimiento(diferencia.lotePartida.deposito, diferencia.loteFinal.deposito, diferencia.cantidad) Then
                     Throw New Exception("No se pudo guardar el movimiento del lote compra")
@@ -120,9 +119,6 @@
                     Throw New Exception("No se pudo guardar la trazabilidad del lote compra")
                 End If
 
-                If Not bdDiferencia.actualizar_lote(diferencia.lotePartida.codigo_lote, -diferencia.cantidad) Then
-                    Throw New Exception("No se pudo actualizar la cantidad del lote de partida")
-                End If
 
                 If Me.diferencia.cantidad = Me.diferencia.lotePartida.cantidad_restante Then
                     If Not bdDiferencia.sacar_lote(diferencia.lotePartida.codigo_lote) Then
