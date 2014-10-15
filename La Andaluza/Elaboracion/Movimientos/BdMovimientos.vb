@@ -72,6 +72,13 @@
             Return Consultar(True)
         End Function
 
+        Public Function actualizar_muestra_lote(ByVal codigolote As String) As Boolean
+            query = "update lotes set referencia = (select max(referencia) from lotes)+1 where codigolote = @cod"
+            PrepararConsulta(query)
+            AñadirParametroConsulta("@cod", codigolote)
+            Return Consultar(True)
+        End Function
+
         Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String
             query = "LotesSelectUltimoCodigo @codigoSinLetra"
             PrepararConsulta(query)

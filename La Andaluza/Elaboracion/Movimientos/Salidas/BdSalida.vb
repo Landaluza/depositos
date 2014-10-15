@@ -3,7 +3,7 @@
         Inherits Movimientos.BdMovimientos
 
         Public Function actualizar_recipiente(codigolote As String, recipiente As Integer) As Boolean
-            query = "update lotes set recipienteid = @id where codigolote = @cod"
+            query = "update lotes set recipientesalidaid = @id where codigolote = @cod"
             PrepararConsulta(query)
             AñadirParametroConsulta("@id", recipiente)
             AñadirParametroConsulta("@cod", codigolote)

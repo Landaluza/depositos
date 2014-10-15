@@ -11,6 +11,7 @@ Public Class Salida
         Public recipiente As Integer
         Public transicuba As Integer
         Public Abreviatura As String
+        Public muestra As Boolean
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0
             Me.proceso = proceso

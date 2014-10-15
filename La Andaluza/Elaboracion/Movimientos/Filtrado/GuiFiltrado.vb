@@ -90,6 +90,7 @@ Public Class Guifiltrado
 
                 filtrado.cantidad = Convert.ToDouble(txtCantidad.Text)
                 filtrado.fecha = dtpFecha.Value.Date
+                filtrado.muestra = Me.chbMuestra.Checked
 
                 Return filtrado
             End Get

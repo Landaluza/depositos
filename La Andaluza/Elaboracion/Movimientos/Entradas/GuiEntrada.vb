@@ -94,6 +94,7 @@
 
                 entrada.cantidad = Convert.ToDouble(txtCantidad.Text)
                 entrada.fecha = dtpFecha.Value.Date
+                entrada.muestra = Me.chbMuestra.Checked
 
                 Return entrada
             End Get

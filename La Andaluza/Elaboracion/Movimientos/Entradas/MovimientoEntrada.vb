@@ -239,6 +239,9 @@
                 End If
             End If
 
+            If Not bdEntrada.actualizar_muestra_lote(compra.loteFinal.codigo_lote) Then
+                Throw New Exception("No se pudo crear la muestra")
+            End If
         End Sub
 
         Private Sub cantidad_incorrecta(ByVal lote As Integer, e As EventArgs)

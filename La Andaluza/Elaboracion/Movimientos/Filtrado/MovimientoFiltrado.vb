@@ -12,7 +12,6 @@ Public Class MovimientoFiltrado
         Protected hiloDatos As System.Threading.Thread
         Protected iniciohiloDatos As System.Threading.ThreadStart
         Protected invocador As MethodInvoker
-        Private TipoProceso As Integer
         Protected invocadorDatosDestino As MethodInvoker
         Protected hiloDatosDestino As System.Threading.Thread
         Protected iniciohiloDatosDestino As System.Threading.ThreadStart
@@ -25,11 +24,10 @@ Public Class MovimientoFiltrado
 
         Public Sub New(ByVal proceso As Integer)
 
-            Me.TipoProceso = proceso
             bdfiltrado = New BdFiltrado
             filtrado = New Movimientos.Filtrado(proceso)
-            filtrado.loteFinal.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-            filtrado.loteFinal.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+            filtrado.loteFinal.tipo = Convert.ToInt32(bdfiltrado.seleccionar_tlote_por_proceso(proceso).Rows(0).Item(0))
+            filtrado.loteFinal.muestra = Convert.ToBoolean(bdfiltrado.seleccionar_muestra_pro_proceso(proceso).Rows(0).Item(0))
 
             If filtrado.lotePartida.tipo <> 0 Then filtrado.Abreviatura = Convert.ToString(bdfiltrado.seleccionar_detalles_tlote(filtrado.lotePartida.tipo).Rows(0).Item(2))
 
@@ -270,6 +268,10 @@ Public Class MovimientoFiltrado
                     If Not bdfiltrado.actualizar_lote(filtrado.loteFinal.codigo_lote, filtrado.cantidad) Then
                         Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
                     End If
+                End If
+
+                If Not bdfiltrado.actualizar_muestra_lote(filtrado.loteFinal.codigo_lote) Then
+                    Throw New Exception("No se pudo crear la muestra")
                 End If
 
                 bdfiltrado.TerminarTransaccion()

@@ -10,6 +10,7 @@
         Public frecuencia_creacion_lote As Integer
         Public proceso As Integer
         Public Abreviatura As String
+        Public muestra As Boolean
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso
 

@@ -12,6 +12,7 @@
         Public sumarAdestino As Boolean
         Public fecha As Date
         Public proceso As Integer
+        Public muestra As Boolean
 
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0

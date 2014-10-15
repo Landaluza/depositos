@@ -63,6 +63,7 @@ Public Class GuiTrasiego
                 trasiego.lotePartida.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
                 trasiego.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
                 trasiego.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
+                trasiego.lotePartida.id = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("LoteID").Value)
                 trasiego.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
 
                 trasiego.loteFinal.deposito = Convert.ToInt32(dgvDestino.CurrentRow.Cells("depositoID").Value)
@@ -91,6 +92,7 @@ Public Class GuiTrasiego
 
                 trasiego.cantidad = Convert.ToDouble(txtCantidad.Text)
                 trasiego.fecha = dtpFecha.Value.Date
+                trasiego.muestra = Me.chbMuetra.Checked
 
                 Return trasiego
             End Get

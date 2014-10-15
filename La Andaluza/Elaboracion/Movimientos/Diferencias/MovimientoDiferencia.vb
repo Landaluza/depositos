@@ -8,7 +8,6 @@
         Protected hiloDatos As System.Threading.Thread
         Protected iniciohiloDatos As System.Threading.ThreadStart
         Protected invocador As MethodInvoker
-        Private TipoProceso As Integer
 
         Public ReadOnly Property Form As Form
             Get
@@ -16,13 +15,12 @@
             End Get
         End Property
 
-        Public Sub New(ByVal tipoDiferencia As Integer)
+        Public Sub New(ByVal proceso As Integer)
 
-            Me.TipoProceso = tipoDiferencia
             bdDiferencia = New BdDiferencia
-            diferencia = New Movimientos.Diferencia(tipoDiferencia)
-            diferencia.lotePartida.tipo = Convert.ToInt32(bdDiferencia.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-            diferencia.lotePartida.muestra = Convert.ToBoolean(bdDiferencia.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+            diferencia = New Movimientos.Diferencia(proceso)
+            diferencia.lotePartida.tipo = Convert.ToInt32(bdDiferencia.seleccionar_tlote_por_proceso(proceso).Rows(0).Item(0))
+            diferencia.lotePartida.muestra = Convert.ToBoolean(bdDiferencia.seleccionar_muestra_pro_proceso(proceso).Rows(0).Item(0))
 
             If diferencia.lotePartida.tipo <> 0 Then diferencia.Abreviatura = Convert.ToString(bdDiferencia.seleccionar_detalles_tlote(diferencia.lotePartida.tipo).Rows(0).Item(2))
 

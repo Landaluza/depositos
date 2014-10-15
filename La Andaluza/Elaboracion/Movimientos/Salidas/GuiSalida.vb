@@ -76,6 +76,7 @@
 
                 salida.cantidad = Convert.ToDouble(txtCantidad.Text)
                 salida.fecha = dtpFecha.Value.Date
+                salida.muestra = Me.chbMuestra.Checked
 
                 Return salida
             End Get

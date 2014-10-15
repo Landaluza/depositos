@@ -9,6 +9,7 @@
         Public proceso As Integer
         Public Abreviatura As String
         Public filtro As Integer
+        Public muestra As Boolean
 
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso

@@ -14,7 +14,6 @@
         Protected invocadorDatosDestino As MethodInvoker
         Protected hiloDatosDestino As System.Threading.Thread
         Protected iniciohiloDatosDestino As System.Threading.ThreadStart
-        Private TipoProceso As Integer
 
         Public ReadOnly Property Form As Form
             Get
@@ -24,11 +23,10 @@
 
         Public Sub New(ByVal proceso As Integer)
 
-            Me.TipoProceso = proceso
             bdTrasiego = New BdTrasiego
             trasiego = New Movimientos.Trasiego(proceso)
-            trasiego.loteFinal.tipo = Convert.ToInt32(bdTrasiego.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-            trasiego.loteFinal.muestra = Convert.ToBoolean(bdTrasiego.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+            trasiego.loteFinal.tipo = Convert.ToInt32(bdTrasiego.seleccionar_tlote_por_proceso(proceso).Rows(0).Item(0))
+            trasiego.loteFinal.muestra = Convert.ToBoolean(bdTrasiego.seleccionar_muestra_pro_proceso(proceso).Rows(0).Item(0))
 
             If trasiego.loteFinal.tipo <> 0 Then trasiego.Abreviatura = Convert.ToString(bdTrasiego.seleccionar_detalles_tlote(trasiego.loteFinal.tipo).Rows(0).Item(2))
 
@@ -240,6 +238,10 @@
                     If Not bdTrasiego.actualizar_lote(trasiego.loteFinal.codigo_lote, trasiego.cantidad) Then
                         Throw New Exception("No se pudo actualizar la cantidad del lote de destino")
                     End If
+                End If
+
+                If Not bdTrasiego.actualizar_muestra_lote(trasiego.loteFinal.codigo_lote) Then
+                    Throw New Exception("No se pudo crear la muestra")
                 End If
 
                 bdTrasiego.TerminarTransaccion()

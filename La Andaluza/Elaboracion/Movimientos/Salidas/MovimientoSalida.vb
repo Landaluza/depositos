@@ -13,7 +13,6 @@
         Protected invocadorDatosDestino As MethodInvoker
         Protected hiloDatosDestino As System.Threading.Thread
         Protected iniciohiloDatosDestino As System.Threading.ThreadStart
-        Private TipoProceso As Integer
 
         Public ReadOnly Property Form As Form
             Get
@@ -23,11 +22,10 @@
 
         Public Sub New(ByVal proceso As Integer)
 
-            Me.TipoProceso = proceso
             bdSalida = New BdSalida
             salida = New Movimientos.Salida(proceso)
-            salida.loteFinal.tipo = Convert.ToInt32(bdSalida.seleccionar_tlote_por_proceso(Me.TipoProceso).Rows(0).Item(0))
-            salida.loteFinal.muestra = Convert.ToBoolean(bdSalida.seleccionar_muestra_pro_proceso(Me.TipoProceso).Rows(0).Item(0))
+            salida.loteFinal.tipo = Convert.ToInt32(bdSalida.seleccionar_tlote_por_proceso(proceso).Rows(0).Item(0))
+            salida.loteFinal.muestra = Convert.ToBoolean(bdSalida.seleccionar_muestra_pro_proceso(proceso).Rows(0).Item(0))
 
             If salida.loteFinal.tipo <> 0 Then salida.Abreviatura = Convert.ToString(bdSalida.seleccionar_detalles_tlote(salida.loteFinal.tipo).Rows(0).Item(2))
 
@@ -148,7 +146,9 @@
                     End If
                 End If
 
-                
+                If Not bdSalida.actualizar_muestra_lote(salida.loteFinal.codigo_lote) Then
+                    Throw New Exception("No se pudo crear la muestra")
+                End If
 
                 bdSalida.TerminarTransaccion()
                 gui.Close()
