@@ -11,7 +11,8 @@
             Dim filter As New DecimalWatcher(Me.txtCantidad, 0)
 
             If salida.proceso = 6 Then
-                Me.cboRecipiente.Visible = False
+                Me.cboRecipiente.Visible = True
+                lRecipiente.Visible = True
             End If
         End Sub
 
@@ -63,6 +64,7 @@
                 salida.loteFinal.producto = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoProductoID").Value)
                 salida.lotePartida.deposito = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("depositoID").Value)
                 salida.lotePartida.codigo_lote = Convert.ToString(dgvOrigen.CurrentRow.Cells("CodigoLote").Value)
+                salida.lotePartida.id = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("LoteID").Value)
                 salida.lotePartida.tipo = Convert.ToInt32(dgvOrigen.CurrentRow.Cells("TipoLoteID").Value)
                 If cboRecipiente.Visible Then
                     salida.recipiente = Convert.ToInt32(cboRecipiente.SelectedValue)
@@ -117,14 +119,18 @@
         End Sub
 
         Private Sub cboRecipiente_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboRecipiente.SelectedValueChanged
-            If CType(cboRecipiente.SelectedValue, DataRowView).Row.Item(0) Is Nothing Then
-                cboTransicuba.SelectedValue = False
-                Return
-            End If
+            'If CType(cboRecipiente.SelectedValue, DataRowView).Row.Item(0) Is Nothing Then
+            '    cboTransicuba.SelectedValue = False
+            '    Return
+            'End If
 
             Try
                 If Convert.ToInt32(cboRecipiente.SelectedValue) = 1 Then
                     Me.cboTransicuba.Visible = True
+                    lTransicuba.Visible = True
+                Else
+                    Me.cboTransicuba.Visible = False
+                    lTransicuba.Visible = False
                 End If
             Catch ex As Exception
 

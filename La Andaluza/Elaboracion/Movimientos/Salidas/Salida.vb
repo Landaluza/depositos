@@ -14,6 +14,8 @@ Public Class Salida
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0
             Me.proceso = proceso
+            Me.recipiente = 0
+            Me.transicuba = 0
 
             Me.lotePartida = New Lote()
             Me.loteFinal = New Lote()

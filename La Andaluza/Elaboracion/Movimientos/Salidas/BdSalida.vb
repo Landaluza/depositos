@@ -2,7 +2,13 @@
     Public Class BdSalida
         Inherits Movimientos.BdMovimientos
 
-
+        Public Function actualizar_recipiente(codigolote As String, recipiente As Integer) As Boolean
+            query = "update lotes set recipienteid = @id where codigolote = @cod"
+            PrepararConsulta(query)
+            AñadirParametroConsulta("@id", recipiente)
+            AñadirParametroConsulta("@cod", codigolote)
+            Return Consultar(True)
+        End Function
         Public Function crear_lote(ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double, ByVal tlote As Integer, ByVal producto As Integer) As Boolean
 
             query = "INSERT INTO [dbo].[Lotes] " & _
@@ -60,7 +66,7 @@
         ''                         funciones de procesos
         ''*****************************************************************************************
         Public Function listar_recipientes() As DataTable
-            query = "RecipiesntesSalidasCbo"
+            query = "SELECT RecipienteSalidaID ,Descripcion from [dbo].[RecipientesSalidas]"
             PrepararConsulta(query)
             Return Consultar()
         End Function

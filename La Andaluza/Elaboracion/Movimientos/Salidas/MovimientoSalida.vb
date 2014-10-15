@@ -112,7 +112,11 @@
 
                 salida.loteFinal.codigo_lote = codigoDestino
 
-
+                If salida.recipiente <> 0 Then
+                    If Not bdSalida.actualizar_recipiente(codigoDestino, salida.recipiente) Then
+                        Throw New Exception("No se pudo crear el lote de destino")
+                    End If
+                End If
 
                 'realizar movimiento de trasiego a final
                 If Not bdSalida.guardar_movimiento(salida.lotePartida.deposito, salida.loteFinal.deposito, If(salida.sumarAdestino, salida.cantidad, 0), salida.proceso) Then

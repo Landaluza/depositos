@@ -28,8 +28,10 @@
             Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
             Me.lProveedor = New System.Windows.Forms.Label()
             Me.dgvOrigen = New System.Windows.Forms.DataGridView()
-            Me.Label1 = New System.Windows.Forms.Label()
+            Me.lRecipiente = New System.Windows.Forms.Label()
             Me.cboRecipiente = New System.Windows.Forms.ComboBox()
+            Me.lTransicuba = New System.Windows.Forms.Label()
+            Me.cboTransicuba = New System.Windows.Forms.ComboBox()
             Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
             Me.chbSuma = New System.Windows.Forms.CheckBox()
             Me.chbMuestra = New System.Windows.Forms.CheckBox()
@@ -40,8 +42,6 @@
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.btnTodo = New System.Windows.Forms.Button()
-            Me.lTransicuba = New System.Windows.Forms.Label()
-            Me.cboTransicuba = New System.Windows.Forms.ComboBox()
             Me.FlowLayoutPanel1.SuspendLayout()
             CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.FlowLayoutPanel2.SuspendLayout()
@@ -53,7 +53,7 @@
             Me.FlowLayoutPanel1.Controls.Add(Me.dtpFecha)
             Me.FlowLayoutPanel1.Controls.Add(Me.lProveedor)
             Me.FlowLayoutPanel1.Controls.Add(Me.dgvOrigen)
-            Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
+            Me.FlowLayoutPanel1.Controls.Add(Me.lRecipiente)
             Me.FlowLayoutPanel1.Controls.Add(Me.cboRecipiente)
             Me.FlowLayoutPanel1.Controls.Add(Me.lTransicuba)
             Me.FlowLayoutPanel1.Controls.Add(Me.cboTransicuba)
@@ -100,16 +100,16 @@
             Me.dgvOrigen.Size = New System.Drawing.Size(571, 239)
             Me.dgvOrigen.TabIndex = 15
             '
-            'Label1
+            'lRecipiente
             '
-            Me.Label1.AutoSize = True
-            Me.Label1.Location = New System.Drawing.Point(3, 289)
-            Me.Label1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 0)
-            Me.Label1.Name = "Label1"
-            Me.Label1.Size = New System.Drawing.Size(58, 13)
-            Me.Label1.TabIndex = 35
-            Me.Label1.Text = "Recipiente"
-            Me.Label1.Visible = False
+            Me.lRecipiente.AutoSize = True
+            Me.lRecipiente.Location = New System.Drawing.Point(3, 289)
+            Me.lRecipiente.Margin = New System.Windows.Forms.Padding(3, 5, 3, 0)
+            Me.lRecipiente.Name = "lRecipiente"
+            Me.lRecipiente.Size = New System.Drawing.Size(58, 13)
+            Me.lRecipiente.TabIndex = 35
+            Me.lRecipiente.Text = "Recipiente"
+            Me.lRecipiente.Visible = False
             '
             'cboRecipiente
             '
@@ -121,6 +121,28 @@
             Me.cboRecipiente.Size = New System.Drawing.Size(469, 21)
             Me.cboRecipiente.TabIndex = 34
             Me.cboRecipiente.Visible = False
+            '
+            'lTransicuba
+            '
+            Me.lTransicuba.AutoSize = True
+            Me.lTransicuba.Location = New System.Drawing.Point(3, 334)
+            Me.lTransicuba.Margin = New System.Windows.Forms.Padding(3, 5, 3, 0)
+            Me.lTransicuba.Name = "lTransicuba"
+            Me.lTransicuba.Size = New System.Drawing.Size(60, 13)
+            Me.lTransicuba.TabIndex = 37
+            Me.lTransicuba.Text = "Transicuba"
+            Me.lTransicuba.Visible = False
+            '
+            'cboTransicuba
+            '
+            Me.cboTransicuba.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.cboTransicuba.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.cboTransicuba.FormattingEnabled = True
+            Me.cboTransicuba.Location = New System.Drawing.Point(105, 350)
+            Me.cboTransicuba.Name = "cboTransicuba"
+            Me.cboTransicuba.Size = New System.Drawing.Size(469, 21)
+            Me.cboTransicuba.TabIndex = 36
+            Me.cboTransicuba.Visible = False
             '
             'FlowLayoutPanel2
             '
@@ -245,28 +267,6 @@
             Me.btnTodo.TabIndex = 39
             Me.btnTodo.UseVisualStyleBackColor = True
             '
-            'lTransicuba
-            '
-            Me.lTransicuba.AutoSize = True
-            Me.lTransicuba.Location = New System.Drawing.Point(3, 334)
-            Me.lTransicuba.Margin = New System.Windows.Forms.Padding(3, 5, 3, 0)
-            Me.lTransicuba.Name = "lTransicuba"
-            Me.lTransicuba.Size = New System.Drawing.Size(60, 13)
-            Me.lTransicuba.TabIndex = 37
-            Me.lTransicuba.Text = "Transicuba"
-            Me.lTransicuba.Visible = False
-            '
-            'cboTransicuba
-            '
-            Me.cboTransicuba.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.cboTransicuba.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.cboTransicuba.FormattingEnabled = True
-            Me.cboTransicuba.Location = New System.Drawing.Point(105, 350)
-            Me.cboTransicuba.Name = "cboTransicuba"
-            Me.cboTransicuba.Size = New System.Drawing.Size(469, 21)
-            Me.cboTransicuba.TabIndex = 36
-            Me.cboTransicuba.Visible = False
-            '
             'GuiSalida
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,7 +292,7 @@
         Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
         Private WithEvents lProveedor As System.Windows.Forms.Label
         Public WithEvents dgvOrigen As System.Windows.Forms.DataGridView
-        Private WithEvents Label1 As System.Windows.Forms.Label
+        Private WithEvents lRecipiente As System.Windows.Forms.Label
         Private WithEvents cboRecipiente As System.Windows.Forms.ComboBox
         Private WithEvents FlowLayoutPanel2 As System.Windows.Forms.FlowLayoutPanel
         Private WithEvents chbSuma As System.Windows.Forms.CheckBox
