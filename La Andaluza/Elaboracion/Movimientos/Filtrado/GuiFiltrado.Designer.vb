@@ -67,7 +67,7 @@
             Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
             Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
             Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 553)
-            Me.FlowLayoutPanel1.TabIndex = 36
+            Me.FlowLayoutPanel1.TabIndex = 0
             '
             'dtpFecha
             '
@@ -76,7 +76,7 @@
             Me.dtpFecha.Location = New System.Drawing.Point(468, 3)
             Me.dtpFecha.Name = "dtpFecha"
             Me.dtpFecha.Size = New System.Drawing.Size(106, 20)
-            Me.dtpFecha.TabIndex = 32
+            Me.dtpFecha.TabIndex = 0
             '
             'dgvOrigen
             '
@@ -93,7 +93,7 @@
             Me.dgvOrigen.RowHeadersVisible = False
             Me.dgvOrigen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvOrigen.Size = New System.Drawing.Size(571, 239)
-            Me.dgvOrigen.TabIndex = 15
+            Me.dgvOrigen.TabIndex = 1
             '
             'GroupBox2
             '
@@ -103,7 +103,7 @@
             Me.GroupBox2.Location = New System.Drawing.Point(3, 288)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
-            Me.GroupBox2.TabIndex = 18
+            Me.GroupBox2.TabIndex = 2
             Me.GroupBox2.TabStop = False
             Me.GroupBox2.Text = "Detalles"
             '
@@ -116,7 +116,7 @@
             Me.btnProductoOrigenIncorrecto.Location = New System.Drawing.Point(3, 91)
             Me.btnProductoOrigenIncorrecto.Name = "btnProductoOrigenIncorrecto"
             Me.btnProductoOrigenIncorrecto.Size = New System.Drawing.Size(565, 37)
-            Me.btnProductoOrigenIncorrecto.TabIndex = 4
+            Me.btnProductoOrigenIncorrecto.TabIndex = 1
             Me.btnProductoOrigenIncorrecto.Text = "Producto incorrecto"
             Me.btnProductoOrigenIncorrecto.UseVisualStyleBackColor = True
             '
@@ -129,7 +129,7 @@
             Me.btncantidadOrigenIncorrecta.Location = New System.Drawing.Point(3, 128)
             Me.btncantidadOrigenIncorrecta.Name = "btncantidadOrigenIncorrecta"
             Me.btncantidadOrigenIncorrecta.Size = New System.Drawing.Size(565, 34)
-            Me.btncantidadOrigenIncorrecta.TabIndex = 3
+            Me.btncantidadOrigenIncorrecta.TabIndex = 2
             Me.btncantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadOrigenIncorrecta.UseVisualStyleBackColor = True
             '
@@ -140,7 +140,7 @@
             Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
             Me.lDescripcionDestino.Name = "lDescripcionDestino"
             Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionDestino.TabIndex = 1
+            Me.lDescripcionDestino.TabIndex = 0
             Me.lDescripcionDestino.Text = "-"
             '
             'btnGuardar
@@ -151,7 +151,7 @@
             Me.btnGuardar.Location = New System.Drawing.Point(954, 625)
             Me.btnGuardar.Name = "btnGuardar"
             Me.btnGuardar.Size = New System.Drawing.Size(244, 69)
-            Me.btnGuardar.TabIndex = 35
+            Me.btnGuardar.TabIndex = 4
             Me.btnGuardar.Text = "Continuar"
             Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
             Me.btnGuardar.UseVisualStyleBackColor = True
@@ -164,7 +164,7 @@
             Me.txtCantidad.Multiline = True
             Me.txtCantidad.Name = "txtCantidad"
             Me.txtCantidad.Size = New System.Drawing.Size(210, 69)
-            Me.txtCantidad.TabIndex = 34
+            Me.txtCantidad.TabIndex = 2
             Me.txtCantidad.Text = "0"
             Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
             '
@@ -182,7 +182,7 @@
             Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
             Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
             Me.FlowLayoutPanel3.Size = New System.Drawing.Size(577, 553)
-            Me.FlowLayoutPanel3.TabIndex = 37
+            Me.FlowLayoutPanel3.TabIndex = 1
             '
             'Label4
             '
@@ -190,7 +190,7 @@
             Me.Label4.Location = New System.Drawing.Point(3, 0)
             Me.Label4.Name = "Label4"
             Me.Label4.Size = New System.Drawing.Size(29, 13)
-            Me.Label4.TabIndex = 24
+            Me.Label4.TabIndex = 0
             Me.Label4.Text = "Filtro"
             '
             'cboFiltro
@@ -201,7 +201,7 @@
             Me.cboFiltro.Location = New System.Drawing.Point(105, 16)
             Me.cboFiltro.Name = "cboFiltro"
             Me.cboFiltro.Size = New System.Drawing.Size(469, 21)
-            Me.cboFiltro.TabIndex = 22
+            Me.cboFiltro.TabIndex = 1
             '
             'dgvDestino
             '
@@ -217,7 +217,7 @@
             Me.dgvDestino.RowHeadersVisible = False
             Me.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
             Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
-            Me.dgvDestino.TabIndex = 15
+            Me.dgvDestino.TabIndex = 2
             '
             'GroupBox1
             '
@@ -227,7 +227,7 @@
             Me.GroupBox1.Location = New System.Drawing.Point(3, 288)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(571, 165)
-            Me.GroupBox1.TabIndex = 18
+            Me.GroupBox1.TabIndex = 3
             Me.GroupBox1.TabStop = False
             Me.GroupBox1.Text = "Detalles"
             '
@@ -240,7 +240,7 @@
             Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
             Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
             Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
-            Me.btnProductoDestinoIncorrecto.TabIndex = 4
+            Me.btnProductoDestinoIncorrecto.TabIndex = 1
             Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
             Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
             '
@@ -253,7 +253,7 @@
             Me.btnCantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
             Me.btnCantidadDestinoIncorrecta.Name = "btnCantidadDestinoIncorrecta"
             Me.btnCantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
-            Me.btnCantidadDestinoIncorrecta.TabIndex = 3
+            Me.btnCantidadDestinoIncorrecta.TabIndex = 2
             Me.btnCantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
             Me.btnCantidadDestinoIncorrecta.UseVisualStyleBackColor = True
             '
@@ -264,7 +264,7 @@
             Me.Label7.Location = New System.Drawing.Point(3, 16)
             Me.Label7.Name = "Label7"
             Me.Label7.Size = New System.Drawing.Size(565, 72)
-            Me.Label7.TabIndex = 1
+            Me.Label7.TabIndex = 0
             Me.Label7.Text = "-"
             '
             'lProducto
@@ -273,7 +273,7 @@
             Me.lProducto.Location = New System.Drawing.Point(3, 456)
             Me.lProducto.Name = "lProducto"
             Me.lProducto.Size = New System.Drawing.Size(87, 13)
-            Me.lProducto.TabIndex = 30
+            Me.lProducto.TabIndex = 4
             Me.lProducto.Text = "Producto destino"
             '
             'cboProducto
@@ -284,7 +284,7 @@
             Me.cboProducto.Location = New System.Drawing.Point(105, 472)
             Me.cboProducto.Name = "cboProducto"
             Me.cboProducto.Size = New System.Drawing.Size(469, 21)
-            Me.cboProducto.TabIndex = 28
+            Me.cboProducto.TabIndex = 5
             '
             'FlowLayoutPanel4
             '
@@ -296,7 +296,7 @@
             Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(3, 3, 3, 13)
             Me.FlowLayoutPanel4.Name = "FlowLayoutPanel4"
             Me.FlowLayoutPanel4.Size = New System.Drawing.Size(568, 20)
-            Me.FlowLayoutPanel4.TabIndex = 33
+            Me.FlowLayoutPanel4.TabIndex = 6
             '
             'chbSuma
             '
@@ -309,7 +309,7 @@
             Me.chbSuma.Margin = New System.Windows.Forms.Padding(40, 3, 3, 3)
             Me.chbSuma.Name = "chbSuma"
             Me.chbSuma.Size = New System.Drawing.Size(50, 17)
-            Me.chbSuma.TabIndex = 19
+            Me.chbSuma.TabIndex = 2
             Me.chbSuma.Text = "Suma"
             Me.chbSuma.UseVisualStyleBackColor = True
             '
@@ -324,7 +324,7 @@
             Me.chbLoteNuevo.Margin = New System.Windows.Forms.Padding(40, 3, 3, 3)
             Me.chbLoteNuevo.Name = "chbLoteNuevo"
             Me.chbLoteNuevo.Size = New System.Drawing.Size(117, 17)
-            Me.chbLoteNuevo.TabIndex = 31
+            Me.chbLoteNuevo.TabIndex = 1
             Me.chbLoteNuevo.Text = "No crear lote nuevo"
             Me.chbLoteNuevo.UseVisualStyleBackColor = True
             '
@@ -337,7 +337,7 @@
             Me.chbMuestra.Margin = New System.Windows.Forms.Padding(25, 3, 3, 3)
             Me.chbMuestra.Name = "chbMuestra"
             Me.chbMuestra.Size = New System.Drawing.Size(88, 17)
-            Me.chbMuestra.TabIndex = 32
+            Me.chbMuestra.TabIndex = 0
             Me.chbMuestra.Text = "Crear muestra"
             Me.chbMuestra.UseVisualStyleBackColor = True
             '
@@ -349,7 +349,7 @@
             Me.btnTodo.Location = New System.Drawing.Point(837, 625)
             Me.btnTodo.Name = "btnTodo"
             Me.btnTodo.Size = New System.Drawing.Size(31, 69)
-            Me.btnTodo.TabIndex = 38
+            Me.btnTodo.TabIndex = 3
             Me.btnTodo.UseVisualStyleBackColor = True
             '
             'Guifiltrado
