@@ -1,8 +1,8 @@
 ﻿Public Class glassPanel
     Private padre As Form
     Private pantalla As Pantalla
-    Dim izq As Screen
-    Dim der As Screen
+    Private izq As Screen
+    Private der As Screen
 
     Public Sub New(ByRef frm As Form)
         InitializeComponent()
@@ -41,7 +41,8 @@
             End If
         Else
 
-            pantalla.mostrar_formulario_en_pantalla_primaria(Me, False, pantalla.MAXIMIZADA)
+            Me.Location = New Point(My.Computer.Screen.WorkingArea.Location.X, My.Computer.Screen.WorkingArea.Location.Y)
+            Me.Size = My.Computer.Screen.WorkingArea.Size
         End If
 
         'Pantalla.centerIn(Me.Panel1, Me)
