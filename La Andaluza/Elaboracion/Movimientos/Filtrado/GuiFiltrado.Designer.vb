@@ -30,7 +30,6 @@
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
             Me.btncantidadOrigenIncorrecta = New System.Windows.Forms.Button()
-            Me.lDescripcionDestino = New System.Windows.Forms.Label()
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
@@ -40,7 +39,6 @@
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
             Me.btnCantidadDestinoIncorrecta = New System.Windows.Forms.Button()
-            Me.Label7 = New System.Windows.Forms.Label()
             Me.lProducto = New System.Windows.Forms.Label()
             Me.cboProducto = New System.Windows.Forms.ComboBox()
             Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
@@ -99,7 +97,6 @@
             '
             Me.GroupBox2.Controls.Add(Me.btnProductoOrigenIncorrecto)
             Me.GroupBox2.Controls.Add(Me.btncantidadOrigenIncorrecta)
-            Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
             Me.GroupBox2.Location = New System.Drawing.Point(3, 288)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
@@ -132,16 +129,6 @@
             Me.btncantidadOrigenIncorrecta.TabIndex = 2
             Me.btncantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadOrigenIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDescripcionDestino
-            '
-            Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
-            Me.lDescripcionDestino.Name = "lDescripcionDestino"
-            Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionDestino.TabIndex = 0
-            Me.lDescripcionDestino.Text = "-"
             '
             'btnGuardar
             '
@@ -223,7 +210,6 @@
             '
             Me.GroupBox1.Controls.Add(Me.btnProductoDestinoIncorrecto)
             Me.GroupBox1.Controls.Add(Me.btnCantidadDestinoIncorrecta)
-            Me.GroupBox1.Controls.Add(Me.Label7)
             Me.GroupBox1.Location = New System.Drawing.Point(3, 288)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(571, 165)
@@ -256,16 +242,6 @@
             Me.btnCantidadDestinoIncorrecta.TabIndex = 2
             Me.btnCantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
             Me.btnCantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-            '
-            'Label7
-            '
-            Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
-            Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.Label7.Location = New System.Drawing.Point(3, 16)
-            Me.Label7.Name = "Label7"
-            Me.Label7.Size = New System.Drawing.Size(565, 72)
-            Me.Label7.TabIndex = 0
-            Me.Label7.Text = "-"
             '
             'lProducto
             '
@@ -382,7 +358,6 @@
         Private WithEvents GroupBox2 As System.Windows.Forms.GroupBox
         Private WithEvents btnProductoOrigenIncorrecto As System.Windows.Forms.Button
         Private WithEvents btncantidadOrigenIncorrecta As System.Windows.Forms.Button
-        Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
         Public WithEvents btnGuardar As System.Windows.Forms.Button
         Public WithEvents txtCantidad As System.Windows.Forms.TextBox
         Private WithEvents FlowLayoutPanel3 As System.Windows.Forms.FlowLayoutPanel
@@ -394,7 +369,6 @@
         Private WithEvents GroupBox1 As System.Windows.Forms.GroupBox
         Private WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
         Private WithEvents btnCantidadDestinoIncorrecta As System.Windows.Forms.Button
-        Friend WithEvents Label7 As System.Windows.Forms.Label
         Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
         Private WithEvents Label4 As System.Windows.Forms.Label
         Private WithEvents cboFiltro As System.Windows.Forms.ComboBox

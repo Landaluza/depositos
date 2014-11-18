@@ -27,13 +27,12 @@
             Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
             Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
             Me.dgvDestino = New System.Windows.Forms.DataGridView()
-            Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-            Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
-            Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
-            Me.lDescripcionDestino = New System.Windows.Forms.Label()
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.btnTodo = New System.Windows.Forms.Button()
+            Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
+            Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
+            Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.FlowLayoutPanel1.SuspendLayout()
             CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
@@ -76,54 +75,6 @@
             Me.dgvDestino.Size = New System.Drawing.Size(571, 239)
             Me.dgvDestino.TabIndex = 1
             '
-            'GroupBox2
-            '
-            Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
-            Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
-            Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
-            Me.GroupBox2.Location = New System.Drawing.Point(3, 274)
-            Me.GroupBox2.Name = "GroupBox2"
-            Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
-            Me.GroupBox2.TabIndex = 2
-            Me.GroupBox2.TabStop = False
-            Me.GroupBox2.Text = "Detalles"
-            '
-            'btnProductoDestinoIncorrecto
-            '
-            Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
-            Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
-            Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
-            Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
-            Me.btnProductoDestinoIncorrecto.TabIndex = 1
-            Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
-            Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
-            '
-            'btncantidadDestinoIncorrecta
-            '
-            Me.btncantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
-            Me.btncantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.btncantidadDestinoIncorrecta.Image = CType(resources.GetObject("btncantidadDestinoIncorrecta.Image"), System.Drawing.Image)
-            Me.btncantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-            Me.btncantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
-            Me.btncantidadDestinoIncorrecta.Name = "btncantidadDestinoIncorrecta"
-            Me.btncantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
-            Me.btncantidadDestinoIncorrecta.TabIndex = 2
-            Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
-            Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDescripcionDestino
-            '
-            Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
-            Me.lDescripcionDestino.Name = "lDescripcionDestino"
-            Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionDestino.TabIndex = 0
-            Me.lDescripcionDestino.Text = "-"
-            '
             'btnGuardar
             '
             Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -160,6 +111,43 @@
             Me.btnTodo.TabIndex = 2
             Me.btnTodo.UseVisualStyleBackColor = True
             '
+            'btncantidadDestinoIncorrecta
+            '
+            Me.btncantidadDestinoIncorrecta.Dock = System.Windows.Forms.DockStyle.Bottom
+            Me.btncantidadDestinoIncorrecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btncantidadDestinoIncorrecta.Image = CType(resources.GetObject("btncantidadDestinoIncorrecta.Image"), System.Drawing.Image)
+            Me.btncantidadDestinoIncorrecta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btncantidadDestinoIncorrecta.Location = New System.Drawing.Point(3, 128)
+            Me.btncantidadDestinoIncorrecta.Name = "btncantidadDestinoIncorrecta"
+            Me.btncantidadDestinoIncorrecta.Size = New System.Drawing.Size(565, 34)
+            Me.btncantidadDestinoIncorrecta.TabIndex = 2
+            Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
+            Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
+            '
+            'btnProductoDestinoIncorrecto
+            '
+            Me.btnProductoDestinoIncorrecto.Dock = System.Windows.Forms.DockStyle.Bottom
+            Me.btnProductoDestinoIncorrecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.btnProductoDestinoIncorrecto.Image = CType(resources.GetObject("btnProductoDestinoIncorrecto.Image"), System.Drawing.Image)
+            Me.btnProductoDestinoIncorrecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+            Me.btnProductoDestinoIncorrecto.Location = New System.Drawing.Point(3, 91)
+            Me.btnProductoDestinoIncorrecto.Name = "btnProductoDestinoIncorrecto"
+            Me.btnProductoDestinoIncorrecto.Size = New System.Drawing.Size(565, 37)
+            Me.btnProductoDestinoIncorrecto.TabIndex = 1
+            Me.btnProductoDestinoIncorrecto.Text = "Producto incorrecto"
+            Me.btnProductoDestinoIncorrecto.UseVisualStyleBackColor = True
+            '
+            'GroupBox2
+            '
+            Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
+            Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
+            Me.GroupBox2.Location = New System.Drawing.Point(3, 274)
+            Me.GroupBox2.Name = "GroupBox2"
+            Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
+            Me.GroupBox2.TabIndex = 2
+            Me.GroupBox2.TabStop = False
+            Me.GroupBox2.Text = "Detalles"
+            '
             'GuiDiferencia
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -181,12 +169,11 @@
         Private WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
         Private WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
         Public WithEvents dgvDestino As System.Windows.Forms.DataGridView
-        Private WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-        Private WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
-        Private WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
-        Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
         Public WithEvents btnGuardar As System.Windows.Forms.Button
         Public WithEvents txtCantidad As System.Windows.Forms.TextBox
         Private WithEvents btnTodo As System.Windows.Forms.Button
+        Private WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+        Private WithEvents btnProductoDestinoIncorrecto As System.Windows.Forms.Button
+        Private WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
     End Class
 End Namespace

@@ -101,18 +101,12 @@ Public Class Guifiltrado
                 Return
             End If
 
-            Me.lDescripcionDestino.Text = ""
-            'Me.lDescripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboProducto.Text & _
-            '    " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & ". El producto se recepciono de " & cboFiltro.Text & "." & Environment.NewLine & Environment.NewLine
-
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
                 Me.btnCantidadDestinoIncorrecta.Visible = False
                 Me.btnProductoDestinoIncorrecto.Visible = False
                 Me.chbLoteNuevo.Enabled = False
                 Me.cboProducto.Enabled = False
             Else
-                Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
                 Me.btnCantidadDestinoIncorrecta.Visible = True
                 Me.btnProductoDestinoIncorrecto.Visible = True
                 Me.chbLoteNuevo.Enabled = True

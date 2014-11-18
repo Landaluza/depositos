@@ -47,18 +47,13 @@ Public Class GuiDiferencia
             Return
         End If
 
-        'Me.lDescripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboProductoEntrada.Text & _
-        '    " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & ". El producto se recepciono de " & cboProveedor.Text & "." & Environment.NewLine & Environment.NewLine
-
-        If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-            Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
-            Me.btncantidadDestinoIncorrecta.Visible = False
-            Me.btnProductoDestinoIncorrecto.Visible = False
-        Else
-            Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
-            Me.btncantidadDestinoIncorrecta.Visible = True
-            Me.btnProductoDestinoIncorrecto.Visible = True
-        End If
+            If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
+                Me.btncantidadDestinoIncorrecta.Visible = False
+                Me.btnProductoDestinoIncorrecto.Visible = False
+            Else
+                Me.btncantidadDestinoIncorrecta.Visible = True
+                Me.btnProductoDestinoIncorrecto.Visible = True
+            End If
     End Sub
 
     Private Sub GuiMovimientoCompra_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown

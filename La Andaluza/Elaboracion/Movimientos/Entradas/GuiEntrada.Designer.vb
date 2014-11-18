@@ -29,7 +29,6 @@
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.btnProductoDestinoIncorrecto = New System.Windows.Forms.Button()
             Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
-            Me.lDescripcionDestino = New System.Windows.Forms.Label()
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.dgvDestino = New System.Windows.Forms.DataGridView()
@@ -71,7 +70,6 @@
             '
             Me.GroupBox2.Controls.Add(Me.btnProductoDestinoIncorrecto)
             Me.GroupBox2.Controls.Add(Me.btncantidadDestinoIncorrecta)
-            Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
             Me.GroupBox2.Location = New System.Drawing.Point(3, 470)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
@@ -104,16 +102,6 @@
             Me.btncantidadDestinoIncorrecta.TabIndex = 2
             Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDescripcionDestino
-            '
-            Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
-            Me.lDescripcionDestino.Name = "lDescripcionDestino"
-            Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionDestino.TabIndex = 0
-            Me.lDescripcionDestino.Text = "-"
             '
             'btnGuardar
             '
@@ -323,7 +311,6 @@
             Me.PerformLayout()
 
         End Sub
-        Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
         Public WithEvents btnGuardar As System.Windows.Forms.Button
         Public WithEvents txtCantidad As System.Windows.Forms.TextBox
         Public WithEvents dgvDestino As System.Windows.Forms.DataGridView

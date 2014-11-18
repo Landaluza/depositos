@@ -31,24 +31,22 @@ Partial Class GuiTrasiego
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnProductoOrigenIncorrecto = New System.Windows.Forms.Button()
         Me.btncantidadOrigenIncorrecta = New System.Windows.Forms.Button()
-        Me.lDescripcionOrigen = New System.Windows.Forms.Label()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.txtCantidad = New System.Windows.Forms.TextBox()
-        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.dgvDestino = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnProductoDestinaIncorrecto = New System.Windows.Forms.Button()
-        Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
-        Me.lDEscripcionDestino = New System.Windows.Forms.Label()
-        Me.lTipoLote = New System.Windows.Forms.Label()
-        Me.cboTiplote = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
-        Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.chbSuma = New System.Windows.Forms.CheckBox()
-        Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
-        Me.chbMuetra = New System.Windows.Forms.CheckBox()
-        Me.btnTodo = New System.Windows.Forms.Button()
+            Me.btnGuardar = New System.Windows.Forms.Button()
+            Me.txtCantidad = New System.Windows.Forms.TextBox()
+            Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.dgvDestino = New System.Windows.Forms.DataGridView()
+            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+            Me.btnProductoDestinaIncorrecto = New System.Windows.Forms.Button()
+            Me.btncantidadDestinoIncorrecta = New System.Windows.Forms.Button()
+            Me.lTipoLote = New System.Windows.Forms.Label()
+            Me.cboTiplote = New System.Windows.Forms.ComboBox()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.cboTipoProducto = New System.Windows.Forms.ComboBox()
+            Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.chbSuma = New System.Windows.Forms.CheckBox()
+            Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
+            Me.chbMuetra = New System.Windows.Forms.CheckBox()
+            Me.btnTodo = New System.Windows.Forms.Button()
             Me.FlowLayoutPanel1.SuspendLayout()
             CType(Me.dgvOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.GroupBox2.SuspendLayout()
@@ -98,7 +96,6 @@ Partial Class GuiTrasiego
             '
             Me.GroupBox2.Controls.Add(Me.btnProductoOrigenIncorrecto)
             Me.GroupBox2.Controls.Add(Me.btncantidadOrigenIncorrecta)
-            Me.GroupBox2.Controls.Add(Me.lDescripcionOrigen)
             Me.GroupBox2.Location = New System.Drawing.Point(3, 274)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
@@ -131,16 +128,6 @@ Partial Class GuiTrasiego
             Me.btncantidadOrigenIncorrecta.TabIndex = 2
             Me.btncantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadOrigenIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDescripcionOrigen
-            '
-            Me.lDescripcionOrigen.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDescripcionOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDescripcionOrigen.Location = New System.Drawing.Point(3, 16)
-            Me.lDescripcionOrigen.Name = "lDescripcionOrigen"
-            Me.lDescripcionOrigen.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionOrigen.TabIndex = 0
-            Me.lDescripcionOrigen.Text = "-"
             '
             'btnGuardar
             '
@@ -204,7 +191,6 @@ Partial Class GuiTrasiego
             '
             Me.GroupBox1.Controls.Add(Me.btnProductoDestinaIncorrecto)
             Me.GroupBox1.Controls.Add(Me.btncantidadDestinoIncorrecta)
-            Me.GroupBox1.Controls.Add(Me.lDEscripcionDestino)
             Me.GroupBox1.Location = New System.Drawing.Point(3, 274)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(571, 165)
@@ -237,16 +223,6 @@ Partial Class GuiTrasiego
             Me.btncantidadDestinoIncorrecta.TabIndex = 2
             Me.btncantidadDestinoIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadDestinoIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDEscripcionDestino
-            '
-            Me.lDEscripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDEscripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDEscripcionDestino.Location = New System.Drawing.Point(3, 16)
-            Me.lDEscripcionDestino.Name = "lDEscripcionDestino"
-            Me.lDEscripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDEscripcionDestino.TabIndex = 0
-            Me.lDEscripcionDestino.Text = "-"
             '
             'lTipoLote
             '
@@ -391,8 +367,7 @@ Partial Class GuiTrasiego
     Private WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Private WithEvents btnProductoDestinaIncorrecto As System.Windows.Forms.Button
     Private WithEvents btncantidadDestinoIncorrecta As System.Windows.Forms.Button
-    Friend WithEvents lDEscripcionDestino As System.Windows.Forms.Label
-    Private WithEvents lTipoLote As System.Windows.Forms.Label
+        Private WithEvents lTipoLote As System.Windows.Forms.Label
     Private WithEvents cboTiplote As System.Windows.Forms.ComboBox
     Private WithEvents Label4 As System.Windows.Forms.Label
     Private WithEvents cboTipoProducto As System.Windows.Forms.ComboBox
@@ -400,7 +375,6 @@ Partial Class GuiTrasiego
     Private WithEvents chbSuma As System.Windows.Forms.CheckBox
     Private WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
     Private WithEvents chbMuetra As System.Windows.Forms.CheckBox
-    Private WithEvents lDescripcionOrigen As System.Windows.Forms.Label
-    Private WithEvents btnTodo As System.Windows.Forms.Button
+        Private WithEvents btnTodo As System.Windows.Forms.Button
 End Class
 End Namespace

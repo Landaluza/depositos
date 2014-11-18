@@ -46,15 +46,18 @@
         Me.ubicar(pantalla, form, posicion)
 
         If modal Then
-            Dim glass As New glassPanel(form)
-            glass.Text = form.Text
+            If isMultiScreen() Then
+                Return form.ShowDialog()
+            Else
+                Dim glass As New glassPanel(form)
+                glass.Text = form.Text
 
-            AddHandler form.ResizeEnd, AddressOf glass.recolocar
-            AddHandler form.Shown, AddressOf glass.recolocar
-            AddHandler form.ResizeBegin, AddressOf glass.ocultar
+                AddHandler form.ResizeEnd, AddressOf glass.recolocar
+                AddHandler form.Shown, AddressOf glass.recolocar
+                AddHandler form.ResizeBegin, AddressOf glass.ocultar
 
-            Return glass.ShowDialog
-            'Return form.ShowDialog()
+                Return glass.ShowDialog
+            End If
         Else
             form.Show()
             Return DialogResult.OK

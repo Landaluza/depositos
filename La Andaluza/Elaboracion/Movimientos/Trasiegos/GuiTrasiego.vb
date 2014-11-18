@@ -103,18 +103,14 @@ Public Class GuiTrasiego
             Return
         End If
 
-        Me.lDEscripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboTipoProducto.Text & _
-            " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & "."
 
         If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-            Me.lDEscripcionDestino.Text &= "El deposito se encuentra vacio."
             Me.btncantidadDestinoIncorrecta.Visible = False
             Me.btnProductoDestinaIncorrecto.Visible = False
             Me.chbLoteNuevo.Enabled = False
             Me.cboTipoProducto.Enabled = False
             Me.cboTipoProducto.Text = ""
         Else
-            Me.lDEscripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
             Me.btncantidadDestinoIncorrecta.Visible = True
             Me.btnProductoDestinaIncorrecto.Visible = True
             Me.chbLoteNuevo.Enabled = True

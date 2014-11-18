@@ -38,7 +38,6 @@
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.btnProductoOrigenncorrecto = New System.Windows.Forms.Button()
             Me.btncantidadOrigenIncorrecta = New System.Windows.Forms.Button()
-            Me.lDescripcionDestino = New System.Windows.Forms.Label()
             Me.btnGuardar = New System.Windows.Forms.Button()
             Me.txtCantidad = New System.Windows.Forms.TextBox()
             Me.btnTodo = New System.Windows.Forms.Button()
@@ -187,7 +186,6 @@
             '
             Me.GroupBox2.Controls.Add(Me.btnProductoOrigenncorrecto)
             Me.GroupBox2.Controls.Add(Me.btncantidadOrigenIncorrecta)
-            Me.GroupBox2.Controls.Add(Me.lDescripcionDestino)
             Me.GroupBox2.Location = New System.Drawing.Point(3, 413)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(571, 165)
@@ -220,16 +218,6 @@
             Me.btncantidadOrigenIncorrecta.TabIndex = 3
             Me.btncantidadOrigenIncorrecta.Text = "Cantidad incorrecta"
             Me.btncantidadOrigenIncorrecta.UseVisualStyleBackColor = True
-            '
-            'lDescripcionDestino
-            '
-            Me.lDescripcionDestino.Dock = System.Windows.Forms.DockStyle.Top
-            Me.lDescripcionDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-            Me.lDescripcionDestino.Location = New System.Drawing.Point(3, 16)
-            Me.lDescripcionDestino.Name = "lDescripcionDestino"
-            Me.lDescripcionDestino.Size = New System.Drawing.Size(565, 72)
-            Me.lDescripcionDestino.TabIndex = 1
-            Me.lDescripcionDestino.Text = "-"
             '
             'btnGuardar
             '
@@ -300,7 +288,6 @@
         Private WithEvents GroupBox2 As System.Windows.Forms.GroupBox
         Private WithEvents btnProductoOrigenncorrecto As System.Windows.Forms.Button
         Private WithEvents btncantidadOrigenIncorrecta As System.Windows.Forms.Button
-        Friend WithEvents lDescripcionDestino As System.Windows.Forms.Label
         Public WithEvents btnGuardar As System.Windows.Forms.Button
         Public WithEvents txtCantidad As System.Windows.Forms.TextBox
         Private WithEvents btnTodo As System.Windows.Forms.Button

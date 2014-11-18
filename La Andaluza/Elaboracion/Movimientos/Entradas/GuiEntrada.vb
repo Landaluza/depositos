@@ -105,18 +105,14 @@
                 Return
             End If
 
-            Me.lDescripcionDestino.Text = "Se añadirá " & txtCantidad.Text & " litros de " & cboProductoEntrada.Text & _
-                " al deposito " & dgvDestino.CurrentRow.Cells("Codigo").Value.ToString & ". El producto se recepciono de " & cboProveedor.Text & "." & Environment.NewLine & Environment.NewLine
 
             If Convert.IsDBNull(dgvDestino.CurrentRow.Cells("CodigoLote").Value) Then
-                Me.lDescripcionDestino.Text &= "El deposito se encuentra vacio."
                 Me.btncantidadDestinoIncorrecta.Visible = False
                 Me.btnProductoDestinoIncorrecto.Visible = False
                 Me.chbLoteNuevo.Enabled = False
                 Me.cboTipoProducto.Enabled = False
                 Me.cboTipoProducto.Text = ""
             Else
-                Me.lDescripcionDestino.Text &= "El deposito contiene el lote " & dgvDestino.CurrentRow.Cells("CodigoLote").Value.ToString
                 Me.btncantidadDestinoIncorrecta.Visible = True
                 Me.btnProductoDestinoIncorrecto.Visible = True
                 Me.chbLoteNuevo.Enabled = True
