@@ -1,18 +1,16 @@
 ﻿Namespace Movimientos
 
     Public Class Entrada
+        Inherits Movimientos.MovimientoBasico
+
         Public Const COMPRA As Integer = 1
         Public Const LOTE_ENTRADA As Integer = 39
-        
+
 
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public cantidad As Double
         Public proveedorCompra As Integer
-        Public sumarAdestino As Boolean
-        Public fecha As Date
         Public proceso As Integer
-        Public muestra As Boolean
 
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0

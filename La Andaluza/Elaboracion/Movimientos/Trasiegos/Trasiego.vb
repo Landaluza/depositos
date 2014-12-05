@@ -1,16 +1,13 @@
 ﻿Namespace Movimientos
 
     Public Class Trasiego
+        Inherits Movimientos.MovimientoBasico
+
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public cantidad As Double
-        Public fecha As Date
-        Public sumarAdestino As Boolean
-
         Public frecuencia_creacion_lote As Integer
         Public proceso As Integer
         Public Abreviatura As String
-        Public muestra As Boolean
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso
 

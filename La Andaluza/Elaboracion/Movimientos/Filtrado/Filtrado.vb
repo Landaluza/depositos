@@ -1,15 +1,13 @@
 ﻿Namespace Movimientos
 
     Public Class Filtrado
+        Inherits Movimientos.MovimientoBasico
+
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public cantidad As Double
-        Public sumarAdestino As Boolean
-        Public fecha As Date
         Public proceso As Integer
         Public Abreviatura As String
         Public filtro As Integer
-        Public muestra As Boolean
 
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso

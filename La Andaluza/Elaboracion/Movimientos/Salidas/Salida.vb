@@ -1,17 +1,15 @@
 ﻿Namespace Movimientos
 
-Public Class Salida
+    Public Class Salida
+        Inherits Movimientos.MovimientoBasico
+
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public cantidad As Double
         Public proveedorCompra As Integer
-        Public sumarAdestino As Boolean
-        Public fecha As Date
         Public proceso As Integer
         Public recipiente As Integer
         Public transicuba As Integer
         Public Abreviatura As String
-        Public muestra As Boolean
         Public Sub New(ByVal proceso As Integer)
             proveedorCompra = 0
             Me.proceso = proceso
@@ -58,5 +56,5 @@ Public Class Salida
             End Function
         End Class
 
-End Class
+    End Class
 End Namespace

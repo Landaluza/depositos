@@ -506,6 +506,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Elaboracion\Movimientos\Movimiento.vb" />
+    <Compile Include="Elaboracion\Movimientos\MovimientoBasico.vb" />
     <Compile Include="Elaboracion\Movimientos\Proceso.vb" />
     <Compile Include="Elaboracion\Movimientos\Salidas\BdSalida.vb" />
     <Compile Include="Elaboracion\Movimientos\Salidas\GuiSalida.Designer.vb">
