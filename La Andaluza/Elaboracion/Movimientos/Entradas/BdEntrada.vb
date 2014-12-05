@@ -6,7 +6,7 @@
 
         
 
-        Public Function crear_lote_entrada(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer) As Boolean
+        Public Function crear_lote_entrada(ByVal nuevoCodigo As String, ByVal cantidad As Double, ByVal producto As Integer, ByVal fechaCaducidad As Date, ByVal identificador As String) As Boolean
 
             query = "INSERT INTO [dbo].[Lotes] " & _
                                                "([Fecha] " & _
@@ -15,7 +15,9 @@
                                                ",[TipoProductoID] " & _
                                                ",[CodigoLote] " & _
                                                ",[FechaModificacion] " & _
-                                               ",[UsuarioModificacion]) " & _
+                                               ",[UsuarioModificacion] " & _
+                                               ",FechaCaducidad " & _
+                                               ",Identificador) " & _
                                             "VALUES( " & _
                                                 "CURRENT_TIMESTAMP " & _
                                                 ", @cantidad    " & _
@@ -24,12 +26,16 @@
                                                 ", @nuevoCodigo " & _
                                                 ",CURRENT_TIMESTAMP " & _
                                                 ",17 " & _
+                                                ", @fechaCaducidad " & _
+                                                ", @Identificador " & _
                                             ")"
 
             PrepararConsulta(query)
             AñadirParametroConsulta("@cantidad", cantidad)
             AñadirParametroConsulta("@producto", producto)
             AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
+            AñadirParametroConsulta("@fechaCaducidad", fechaCaducidad)
+            AñadirParametroConsulta("@Identificador", identificador)
 
             Return Consultar(True)
 

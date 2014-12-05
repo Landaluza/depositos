@@ -1,18 +1,18 @@
 ﻿Namespace Movimientos
 
     Public Class Diferencia
+        Inherits Movimientos.MovimientoBasico
+
         Public Const DIFERENCIA As Integer = 11
         Public Const LAVADO As Integer = 13
+        Public Const FRECUENCIA_MENSUAL As Integer = 1
+        Public Const FRECUENCIA_STANDAR As Integer = 2
 
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public cantidad As Double
-        Public fecha As Date
 
         Public frecuencia_creacion_lote As Integer
-        Public Const FRECUENCIA_MENSUAL As Integer = 1
-        Public Const FRECUENCIA_STANDAR As Integer = 2
-        Public proceso As Integer
+        
         Public Abreviatura As String
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso

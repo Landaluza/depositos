@@ -5,7 +5,6 @@
 
         Public lotePartida As Lote
         Public loteFinal As Lote
-        Public proceso As Integer
         Public Abreviatura As String
         Public filtro As Integer
 

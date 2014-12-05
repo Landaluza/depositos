@@ -148,7 +148,7 @@
             'Dim loteAnterior As compras.Compra.Lote
 
             'crear lote compra
-            If Not bdEntrada.crear_lote_entrada(compra.lotePartida.codigo_lote, compra.cantidad, compra.lotePartida.producto) Then
+            If Not bdEntrada.crear_lote_entrada(compra.lotePartida.codigo_lote, compra.cantidad, compra.lotePartida.producto, compra.fechaCaducidad, compra.identificadorProveedor) Then
                 Throw New Exception("No se pudo crear el lote de entrada")
             End If
 

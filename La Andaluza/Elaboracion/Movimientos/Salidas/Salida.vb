@@ -6,7 +6,6 @@
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public proveedorCompra As Integer
-        Public proceso As Integer
         Public recipiente As Integer
         Public transicuba As Integer
         Public Abreviatura As String

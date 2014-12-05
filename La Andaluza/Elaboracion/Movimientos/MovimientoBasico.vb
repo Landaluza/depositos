@@ -7,6 +7,7 @@ Public Class MovimientoBasico
         Public fecha As Date
         Public muestra As Boolean
         Public nuevoLote As Boolean
+        Public proceso As Integer
 End Class
 
 End Namespace

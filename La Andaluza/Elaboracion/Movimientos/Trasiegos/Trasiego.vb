@@ -6,7 +6,6 @@
         Public lotePartida As Lote
         Public loteFinal As Lote
         Public frecuencia_creacion_lote As Integer
-        Public proceso As Integer
         Public Abreviatura As String
         Public Sub New(ByVal proceso As Integer)
             Me.proceso = proceso

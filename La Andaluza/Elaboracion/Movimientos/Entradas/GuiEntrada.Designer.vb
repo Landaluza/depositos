@@ -43,12 +43,12 @@
             Me.chbLoteNuevo = New System.Windows.Forms.CheckBox()
             Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
             Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.txtIdentificador = New System.Windows.Forms.TextBox()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.dtpCaducidad = New System.Windows.Forms.DateTimePicker()
             Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
             Me.chbMuestra = New System.Windows.Forms.CheckBox()
-            Me.TextBox1 = New System.Windows.Forms.TextBox()
-            Me.Label2 = New System.Windows.Forms.Label()
-            Me.Label4 = New System.Windows.Forms.Label()
-            Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
             Me.GroupBox2.SuspendLayout()
             CType(Me.dgvDestino, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.FlowLayoutPanel1.SuspendLayout()
@@ -256,9 +256,9 @@
             Me.FlowLayoutPanel1.Controls.Add(Me.lProveedor)
             Me.FlowLayoutPanel1.Controls.Add(Me.cboProveedor)
             Me.FlowLayoutPanel1.Controls.Add(Me.Label2)
-            Me.FlowLayoutPanel1.Controls.Add(Me.TextBox1)
+            Me.FlowLayoutPanel1.Controls.Add(Me.txtIdentificador)
             Me.FlowLayoutPanel1.Controls.Add(Me.Label4)
-            Me.FlowLayoutPanel1.Controls.Add(Me.DateTimePicker1)
+            Me.FlowLayoutPanel1.Controls.Add(Me.dtpCaducidad)
             Me.FlowLayoutPanel1.Controls.Add(Me.dgvDestino)
             Me.FlowLayoutPanel1.Controls.Add(Me.Label3)
             Me.FlowLayoutPanel1.Controls.Add(Me.cboTipoLote)
@@ -272,6 +272,42 @@
             Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
             Me.FlowLayoutPanel1.Size = New System.Drawing.Size(577, 644)
             Me.FlowLayoutPanel1.TabIndex = 0
+            '
+            'Label2
+            '
+            Me.Label2.AutoSize = True
+            Me.Label2.Location = New System.Drawing.Point(3, 106)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(65, 13)
+            Me.Label2.TabIndex = 3
+            Me.Label2.Text = "Identificador"
+            '
+            'txtIdentificador
+            '
+            Me.txtIdentificador.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.txtIdentificador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+            Me.txtIdentificador.Location = New System.Drawing.Point(105, 122)
+            Me.txtIdentificador.Name = "txtIdentificador"
+            Me.txtIdentificador.Size = New System.Drawing.Size(469, 20)
+            Me.txtIdentificador.TabIndex = 12
+            '
+            'Label4
+            '
+            Me.Label4.AutoSize = True
+            Me.Label4.Location = New System.Drawing.Point(3, 145)
+            Me.Label4.Name = "Label4"
+            Me.Label4.Size = New System.Drawing.Size(58, 13)
+            Me.Label4.TabIndex = 3
+            Me.Label4.Text = "Caducidad"
+            '
+            'dtpCaducidad
+            '
+            Me.dtpCaducidad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.dtpCaducidad.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+            Me.dtpCaducidad.Location = New System.Drawing.Point(468, 161)
+            Me.dtpCaducidad.Name = "dtpCaducidad"
+            Me.dtpCaducidad.Size = New System.Drawing.Size(106, 20)
+            Me.dtpCaducidad.TabIndex = 3
             '
             'FlowLayoutPanel2
             '
@@ -297,42 +333,6 @@
             Me.chbMuestra.TabIndex = 0
             Me.chbMuestra.Text = "Crear muestra"
             Me.chbMuestra.UseVisualStyleBackColor = True
-            '
-            'TextBox1
-            '
-            Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.TextBox1.Location = New System.Drawing.Point(105, 122)
-            Me.TextBox1.Name = "TextBox1"
-            Me.TextBox1.Size = New System.Drawing.Size(469, 20)
-            Me.TextBox1.TabIndex = 12
-            '
-            'Label2
-            '
-            Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(3, 106)
-            Me.Label2.Name = "Label2"
-            Me.Label2.Size = New System.Drawing.Size(65, 13)
-            Me.Label2.TabIndex = 3
-            Me.Label2.Text = "Identificador"
-            '
-            'Label4
-            '
-            Me.Label4.AutoSize = True
-            Me.Label4.Location = New System.Drawing.Point(3, 145)
-            Me.Label4.Name = "Label4"
-            Me.Label4.Size = New System.Drawing.Size(58, 13)
-            Me.Label4.TabIndex = 3
-            Me.Label4.Text = "Caducidad"
-            '
-            'DateTimePicker1
-            '
-            Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-            Me.DateTimePicker1.Location = New System.Drawing.Point(468, 161)
-            Me.DateTimePicker1.Name = "DateTimePicker1"
-            Me.DateTimePicker1.Size = New System.Drawing.Size(106, 20)
-            Me.DateTimePicker1.TabIndex = 3
             '
             'GuiEntrada
             '
@@ -376,8 +376,8 @@
         Private WithEvents chbSuma As System.Windows.Forms.CheckBox
         Private WithEvents chbLoteNuevo As System.Windows.Forms.CheckBox
         Private WithEvents Label2 As System.Windows.Forms.Label
-        Public WithEvents TextBox1 As System.Windows.Forms.TextBox
+        Public WithEvents txtIdentificador As System.Windows.Forms.TextBox
         Private WithEvents Label4 As System.Windows.Forms.Label
-        Public WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+        Public WithEvents dtpCaducidad As System.Windows.Forms.DateTimePicker
     End Class
 End Namespace

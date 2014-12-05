@@ -77,16 +77,19 @@
                     entrada.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
                     If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
                     entrada.sumarAdestino = True
+                    entrada.nuevoLote = True
                 Else
                     If Not chbLoteNuevo.Checked Then
                         entrada.loteFinal.producto = Convert.ToInt32(cboTipoProducto.SelectedValue)
                         If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(cboTipoLote.SelectedValue)
                         entrada.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value) 'lo guardamos para la trabilidad
+                        entrada.nuevoLote = False
                     Else
                         entrada.loteFinal.codigo_lote = Convert.ToString(dgvDestino.CurrentRow.Cells("CodigoLote").Value)
                         entrada.loteFinal.id = Convert.ToInt32(dgvDestino.CurrentRow.Cells("LoteID").Value)
                         entrada.loteFinal.producto = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoProductoID").Value)
                         If cboTipoLote.Visible Then entrada.loteFinal.tipo = Convert.ToInt32(dgvDestino.CurrentRow.Cells("TipoLoteID").Value)
+                        entrada.nuevoLote = True
                     End If
 
                     entrada.sumarAdestino = chbSuma.Checked
@@ -95,6 +98,8 @@
                 entrada.cantidad = Convert.ToDouble(txtCantidad.Text)
                 entrada.fecha = dtpFecha.Value.Date
                 entrada.muestra = Me.chbMuestra.Checked
+                entrada.fechaCaducidad = Me.dtpCaducidad.Value.Date
+                entrada.identificadorProveedor = Me.txtIdentificador.Text
 
                 Return entrada
             End Get
