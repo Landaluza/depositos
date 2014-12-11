@@ -605,115 +605,114 @@ Public Class frmEntMovimientosCopy
 
         If TipoMovimiento = "E" Then
             'guardar movimiento de entrada
-            If If(txtCompraCantidad.Text = "" Or IsDBNull(txtCompraCantidad.Text), 0, Convert.ToDouble(txtCompraCantidad.Text)) = 0 Then
-                Throw New Exception("No se pudo llevar a cabo el movimiento, no hay Litros a mover")
-            End If
+            If If(txtCompraCantidad.Text = "" Or IsDBNull(txtCompraCantidad.Text), 0, Convert.Todouble(txtCompraCantidad.Text)) <> 0 Then
+                If LoteCompraID > 0 Then
+                    Dim LoteID As Integer = ctlLot.guardarLoteDesdeMovimiento(LoteCompraID, LoteFinalID, txtFinalLoteFinal.Text, (Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text)), _
+                                                                              dtpFecha.Value.Date, If(txtFinalCantidadFinal.Text = "", 0.0, Convert.ToDouble(txtFinalCantidadFinal.Text)), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
+                                                                              Convert.ToInt32(cboFinalTipoProductoFinal.SelectedValue), TipoLoteID, chbNuevoLote.Checked, txtCompraDescripcion.Text, txtCompraObservacion.Text, chbConMuestra.Checked, 0, 0, dtb)
 
-            If LoteCompraID > 0 Then
-                Dim LoteID As Integer = ctlLot.guardarLoteDesdeMovimiento(LoteCompraID, LoteFinalID, txtFinalLoteFinal.Text, (Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text)), _
-                                                                          dtpFecha.Value.Date, If(txtFinalCantidadFinal.Text = "", 0.0, Convert.ToDouble(txtFinalCantidadFinal.Text)), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
-                                                                          Convert.ToInt32(cboFinalTipoProductoFinal.SelectedValue), TipoLoteID, chbNuevoLote.Checked, txtCompraDescripcion.Text, txtCompraObservacion.Text, chbConMuestra.Checked, 0, 0, dtb)
+                    If LoteID > 0 Then
+                        If Not ctlMov.GuardarMovimiento(dtpFecha.Value, txtObservaciones.Text, _
+                                                    Convert.ToDouble(txtCantidad.Text), Convert.ToInt32(cboProceso.SelectedValue), _
+                                                    Convert.ToInt32(cboFinalDepositoID.SelectedValue), 0, 0, 0, chbSumaEnologico.Checked, _
+                                                    chbNuevoLote.Checked, dtb) Then
 
-                If LoteID > 0 Then
-                    If Not ctlMov.GuardarMovimiento(dtpFecha.Value, txtObservaciones.Text, _
-                                                Convert.ToDouble(txtCantidad.Text), Convert.ToInt32(cboProceso.SelectedValue), _
-                                                Convert.ToInt32(cboFinalDepositoID.SelectedValue), 0, 0, 0, chbSumaEnologico.Checked, _
-                                                chbNuevoLote.Checked, dtb) Then
-
-                        Throw New Exception("Error al guardar el movimiento")
-                    End If
-
-                    If ctlMov.GetMovimientoID > 0 Then
-                        If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteCompraID, ctlMov.GetMovimientoID, Convert.ToDouble(txtCantidad.Text), dtb) Then
-                            Throw New Exception("Error al guardar la trazabilidad del lote compra")
+                            Throw New Exception("Error al guardar el movimiento")
                         End If
 
-                        If LoteFinalID > 0 And chbNuevoLote.Checked Then
-                            If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteFinalID, ctlMov.GetMovimientoID, Convert.ToDouble(txtFinalCantidadActual.Text), dtb) Then
-                                Throw New Exception("Error al guardar la trazabilidad del lote final")
+                        If ctlMov.GetMovimientoID > 0 Then
+                            If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteCompraID, ctlMov.GetMovimientoID, Convert.ToDouble(txtCantidad.Text), dtb) Then
+                                Throw New Exception("Error al guardar la trazabilidad del lote compra")
                             End If
+
+                            If LoteFinalID > 0 And chbNuevoLote.Checked Then
+                                If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteFinalID, ctlMov.GetMovimientoID, Convert.ToDouble(txtFinalCantidadActual.Text), dtb) Then
+                                    Throw New Exception("Error al guardar la trazabilidad del lote final")
+                                End If
+                            End If
+                            'messagebox.show("Movimiento Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                            txtCompraCantidad.Text = (Convert.Todouble(txtCompraCantidad.Text) - Convert.Todouble(txtCantidad.Text)).ToString
+
+                            If txtCompraCantidad.Text = "0" Then
+                                LoteCompraID = 0
+                            End If
+
+                            Dim findep As Integer = Convert.ToInt32(cboFinalDepositoID.SelectedValue)
+                            Dim partdep As Integer = Convert.ToInt32(cboPartidaDepositoID.SelectedValue)
+                            txtCantidad.Text = "0"
+                            cboFinalDepositoID.DataSource = OldLib.HacerTablasObligatorias(ctlDep.devolverDepositosFinales(dtb))
+                            cboFinalDepositoID.ValueMember = "ID"
+                            cboFinalDepositoID.DisplayMember = "Display"
+                            cboFinalDepositoID.SelectedValue = findep
+                            cboPartidaDepositoID.DataSource = OldLib.HacerTablasObligatorias(ctlDep.devolverDepositosPartidas(dtb))
+                            cboPartidaDepositoID.ValueMember = "ID"
+                            cboPartidaDepositoID.DisplayMember = "Display"
+                            cboPartidaDepositoID.SelectedValue = partdep
+                            ctlMov = New ctlMovimientos
+                        Else
+                            Throw New Exception("No se pudo guardar el movimiento")
                         End If
-                        'messagebox.show("Movimiento Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                        txtCompraCantidad.Text = (Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text)).ToString
-
-                        If txtCompraCantidad.Text = "0" Then
-                            LoteCompraID = 0
-                        End If
-
-                        Dim findep As Integer = Convert.ToInt32(cboFinalDepositoID.SelectedValue)
-                        Dim partdep As Integer = Convert.ToInt32(cboPartidaDepositoID.SelectedValue)
-                        txtCantidad.Text = "0"
-                        cboFinalDepositoID.DataSource = OldLib.HacerTablasObligatorias(ctlDep.devolverDepositosFinales(dtb))
-                        cboFinalDepositoID.ValueMember = "ID"
-                        cboFinalDepositoID.DisplayMember = "Display"
-                        cboFinalDepositoID.SelectedValue = findep
-                        cboPartidaDepositoID.DataSource = OldLib.HacerTablasObligatorias(ctlDep.devolverDepositosPartidas(dtb))
-                        cboPartidaDepositoID.ValueMember = "ID"
-                        cboPartidaDepositoID.DisplayMember = "Display"
-                        cboPartidaDepositoID.SelectedValue = partdep
-                        ctlMov = New ctlMovimientos
                     Else
-                        Throw New Exception("No se pudo guardar el movimiento")
+                        Throw New Exception("No se pudo guardar el lote")
                     End If
                 Else
-                    Throw New Exception("No se pudo guardar el lote")
-                End If
-            Else
-                Dim response As DialogResult = MessageBox.Show("Se creara un nuevo lote de compra, desea proceder ?", " Movimiento ", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If response = DialogResult.Yes Then
-                    'crear lote de compra
-                    Me.dboTiposLotes = spTiposLotes.DevolverPorDescripcion(DESCRIPCION_TIPO_LOTE_RECEPCION, dtb)
-                    If Not ctlLot.GuardarLoteCompra(Convert.ToInt32(cboCompraProducto.SelectedValue), dboTiposLotes.ID, Convert.ToInt32(cboCompraProveedor.SelectedValue), Convert.ToDouble(txtCompraCantidad.Text), dtpFecha.Value, txtCompraLote.Text, txtCompraDescripcion.Text, txtCompraObservacion.Text, txtIdentificadorCompra.Text, dtpCaducidadCompra.Value.Date, dtb) Then
-                        Throw New Exception("Error al guardar el lote compra")
-                    End If
+                    Dim response As DialogResult = MessageBox.Show("Se creara un nuevo lote de compra, desea proceder ?", " Movimiento ", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If response = DialogResult.Yes Then
+                        'crear lote de compra
+                        Me.dboTiposLotes = spTiposLotes.DevolverPorDescripcion(DESCRIPCION_TIPO_LOTE_RECEPCION, dtb)
+                        If Not ctlLot.GuardarLoteCompra(Convert.ToInt32(cboCompraProducto.SelectedValue), dboTiposLotes.ID, Convert.ToInt32(cboCompraProveedor.SelectedValue), Convert.ToDouble(txtCompraCantidad.Text), dtpFecha.Value, txtCompraLote.Text, txtCompraDescripcion.Text, txtCompraObservacion.Text, dtb) Then
+                            Throw New Exception("Error al guardar el lote compra")
+                        End If
 
-                    LoteCompraID = ctlLot.LoteId
-                    ' txtFinalLoteFinal.Text = txtFinalLoteFinal.Text
-                    If LoteCompraID > 0 Then
-                        Dim LoteID As Integer = ctlLot.guardarLoteDesdeMovimiento(LoteCompraID, LoteFinalID, txtFinalLoteFinal.Text, _
-                                                                                  Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text), _
-                                                                                  dtpFecha.Value, Convert.ToDouble(txtFinalCantidadFinal.Text), _
-                                                                                  Convert.ToInt32(cboFinalDepositoID.SelectedValue), Convert.ToInt32(cboFinalTipoProductoFinal.SelectedValue), _
-                                                                                  TipoLoteID, chbNuevoLote.Checked, txtFinalDescripcionFinal.Text, txtFinalObservacionFinal.Text, chbConMuestra.Checked, 0, 0, dtb)
+                        LoteCompraID = ctlLot.LoteId
+                        ' txtFinalLoteFinal.Text = txtFinalLoteFinal.Text
+                        If LoteCompraID > 0 Then
+                            Dim LoteID As Integer = ctlLot.guardarLoteDesdeMovimiento(LoteCompraID, LoteFinalID, txtFinalLoteFinal.Text, _
+                                                                                      Convert.ToDouble(txtCompraCantidad.Text) - Convert.ToDouble(txtCantidad.Text), _
+                                                                                      dtpFecha.Value, Convert.ToDouble(txtFinalCantidadFinal.Text), _
+                                                                                      Convert.ToInt32(cboFinalDepositoID.SelectedValue), Convert.ToInt32(cboFinalTipoProductoFinal.SelectedValue), _
+                                                                                      TipoLoteID, chbNuevoLote.Checked, txtFinalDescripcionFinal.Text, txtFinalObservacionFinal.Text, chbConMuestra.Checked, 0, 0, dtb)
 
-                        If LoteID > 0 Then
-                            If Not ctlMov.GuardarMovimiento(dtpFecha.Value, txtObservaciones.Text, Convert.ToDouble(txtCantidad.Text), _
-                                                            Convert.ToInt32(cboProceso.SelectedValue), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
-                                                            0, 0, 0, chbSumaEnologico.Checked, chbNuevoLote.Checked, dtb) Then
-                                Throw New Exception("Error al guardar el movimiento del nuevo lote compra")
-                            End If
-
-                            If ctlMov.GetMovimientoID > 0 Then
-                                If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteCompraID, ctlMov.GetMovimientoID, Convert.ToDouble(txtCantidad.Text), dtb) Then
-                                    Throw New Exception("Error al guardar la trazabilidad del lote compra")
+                            If LoteID > 0 Then
+                                If Not ctlMov.GuardarMovimiento(dtpFecha.Value, txtObservaciones.Text, Convert.ToDouble(txtCantidad.Text), _
+                                                                Convert.ToInt32(cboProceso.SelectedValue), Convert.ToInt32(cboFinalDepositoID.SelectedValue), _
+                                                                0, 0, 0, chbSumaEnologico.Checked, chbNuevoLote.Checked, dtb) Then
+                                    Throw New Exception("Error al guardar el movimiento del nuevo lote compra")
                                 End If
 
-                                If LoteFinalID > 0 And chbNuevoLote.Checked Then
-                                    If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteFinalID, ctlMov.GetMovimientoID, Convert.ToDouble(txtFinalCantidadActual.Text), dtb) Then
-                                        Throw New Exception("Error al guardar la trabilidad del lote final")
+                                If ctlMov.GetMovimientoID > 0 Then
+                                    If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteCompraID, ctlMov.GetMovimientoID, Convert.ToDouble(txtCantidad.Text), dtb) Then
+                                        Throw New Exception("Error al guardar la trazabilidad del lote compra")
                                     End If
-                                End If
-                                'messagebox.show("Movimiento Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                                Me.Close()
+                                    If LoteFinalID > 0 And chbNuevoLote.Checked Then
+                                        If Not ctlComPor.GuardarCompuestoPor(LoteID, LoteFinalID, ctlMov.GetMovimientoID, Convert.ToDouble(txtFinalCantidadActual.Text), dtb) Then
+                                            Throw New Exception("Error al guardar la trabilidad del lote final")
+                                        End If
+                                    End If
+                                    'messagebox.show("Movimiento Correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                                    Me.Close()
+                                Else
+                                    Throw New Exception("Error al guardar el movimiento del nuevo lote compra")
+                                End If
                             Else
-                                Throw New Exception("Error al guardar el movimiento del nuevo lote compra")
+                                Throw New Exception("Error al guardar el nuevo lote compra")
                             End If
                         Else
-                            Throw New Exception("Error al guardar el nuevo lote compra")
+                            Throw New Exception("Error al gaurdar el lote compra")
                         End If
-                    Else
-                        Throw New Exception("Error al gaurdar el lote compra")
                     End If
                 End If
+                If txtCompraCantidad.Text = "0" Then
+                    Dim prodcom As Integer = Convert.ToInt32(cboCompraProducto.SelectedValue)
+                    cboCompraProducto.SelectedValue = 0
+                    cboCompraProducto.SelectedValue = prodcom
+                End If
+            Else
+                Throw New Exception("No se pudo llevar a cabo el movimiento, no hay Litros a mover")
             End If
-            If txtCompraCantidad.Text = "0" Then
-                Dim prodcom As Integer = Convert.ToInt32(cboCompraProducto.SelectedValue)
-                cboCompraProducto.SelectedValue = 0
-                cboCompraProducto.SelectedValue = prodcom
-            End If
-
         Else ' If TipoMovimiento = "E" Then
             'guardar movimiento de trasiego
             If TipoMovimiento = "F" And Convert.ToInt32(cbFiltros.SelectedValue) = 0 Then
@@ -724,7 +723,7 @@ Public Class frmEntMovimientosCopy
 
             If TipoMovimiento = "S" Then
                 If txtSalidaCantidadReal.Visible Then 'Es un lote de Envasado, si es Envasado Se guarda txtSalidaCantidadReal de lo contrario se guarda txtSalidaCantidad
-                    If If(txtSalidaCantidadReal.Text = "" Or IsDBNull(txtSalidaCantidadReal.Text), 0, Convert.ToDouble(txtSalidaCantidadReal.Text)) > 0 Then
+                    If If(txtSalidaCantidadReal.Text = "" Or IsDBNull(txtSalidaCantidadReal.Text), 0, Convert.Todouble(txtSalidaCantidadReal.Text)) > 0 Then
                         LoteID = ctlLot.guardarLoteDesdeMovimiento(LotePartidaID _
                                                                     , 0 _
                                                                     , txtSalidaCodigoLote.Text _
@@ -1020,28 +1019,21 @@ Public Class frmEntMovimientosCopy
         cboProceso.SelectedValue = proceso
     End Sub
     Private Sub butActualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles butActualizar.Click
-        'If txtIdentificadorCompra.Visible Then
-        '    If txtIdentificadorCompra.Text = "" Then
-        '        MessageBox.Show("No introdujo un identificador del proveedor para la compra", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        '        Return
-        '    End If
-        'End If
-
         Try
             bandera = False
             If gbFinal.Visible Then
                 Dim Cant As Double = If(txtFinalCantidadFinal.Text = "", 0.0, Convert.ToDouble(txtFinalCantidadFinal.Text))
                 If Cant > Capacidad Then
-                    MessageBox.Show("La cantidad Final supera la capacidad maxima de " & Capacidad & " litros del deposito " & cboFinalDepositoID.Text, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    messagebox.show("La cantidad Final supera la capacidad maxima de " & Capacidad & " litros del deposito " & cboFinalDepositoID.Text, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Exit Try
                 End If
             End If
 
             If TipoMovimiento = "S" And txtSalidaCantidadReal.Visible Then
-                Dim Cant1 As Double = Convert.ToDouble(txtCantidad.Text)
-                Dim Cant2 As Double = Convert.ToDouble(txtSalidaCantidadReal.Text)
+                Dim Cant1 As Double = Convert.Todouble(txtCantidad.Text)
+                Dim Cant2 As Double = Convert.Todouble(txtSalidaCantidadReal.Text)
                 If Cant1 < Cant2 Then
-                    MessageBox.Show("La cantidad real no pude ser mayor que la cantidad a transferir", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    messagebox.show("La cantidad real no pude ser mayor que la cantidad a transferir", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Exit Try
                 End If
             End If
@@ -1053,7 +1045,7 @@ Public Class frmEntMovimientosCopy
 
             If TipoMovimiento <> "D" Then
                 If (txtFinalLoteFinal.Text.Length = 15) Then
-                    If If(txtCantidad.Text = "" Or IsDBNull(txtCantidad.Text), 0, Convert.ToDouble(txtCantidad.Text)) <> 0 Then
+                    If If(txtCantidad.Text = "" Or IsDBNull(txtCantidad.Text), 0, Convert.Todouble(txtCantidad.Text)) <> 0 Then
                         If Not cboFinalTipoProductoFinal.SelectedValue Is cboFinalTipoProductoActual.SelectedValue And CType(cboFinalTipoProductoActual.SelectedValue, Integer) <> 0 Then
                             Dim response As DialogResult
                             response = MessageBox.Show("Se está pasando " & cboFinalTipoProductoActual.Text & " a " & cboFinalTipoProductoFinal.Text & ", desea proceder ?", " Movimiento ", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -1068,22 +1060,22 @@ Public Class frmEntMovimientosCopy
                     End If
 
                 Else
-                    MessageBox.Show("Revisar datos, el lote final no posee la codificacion requerida", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    messagebox.show("Revisar datos, el lote final no posee la codificacion requerida", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             Else
                 If (txtDiferenciasCodigoLote.Text.Length = 15) Then
-                    If If(txtCantidad.Text = "" Or IsDBNull(txtCantidad.Text), 0, Convert.ToDouble(txtCantidad.Text)) <> 0 Then
+                    If If(txtCantidad.Text = "" Or IsDBNull(txtCantidad.Text), 0, Convert.Todouble(txtCantidad.Text)) <> 0 Then
                         guardar_movimiento()
                     Else
                         MessageBox.Show("No se pudo llevar a cabo el movimiento, especificar cantidad a mover", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     End If
 
                 Else
-                    MessageBox.Show("Revisar datos, el lote final no posee la codificacion requerida", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    messagebox.show("Revisar datos, el lote final no posee la codificacion requerida", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show("No se pudo llevar a cabo el movimiento, " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            messagebox.show("No se pudo llevar a cabo el movimiento, " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         bandera = True
     End Sub

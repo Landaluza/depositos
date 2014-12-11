@@ -27,6 +27,8 @@ Public Class clsLotes
     Private CodigoLote As String
     Private DepositoID As String
     Private RecipienteSalidaID As String
+    Public Caducidad As Date
+    Public Identificador As String
 
 #End Region
 
@@ -403,13 +405,30 @@ Public Class clsLotes
 
     Public Function guardarLoteCompra(ByRef dtb As Connection.DataBase) As Boolean
 
-        If Not dtb.ConsultaAlteraciones("insert into Lotes(Referencia,Fecha,CantidadRestante,TipoLoteID,TipoProductoID,ProveedorID,CodigoLote,descripcion,observacion,FechaModificacion,UsuarioModificacion) values(" & _
-                                        Referencia & ",'" & Calendar.ArmarFecha(Fecha) & "'," & _
-                            "'" & Convert.ToString(CantidadRestante) & "'," & _
-                            "" & Convert.ToString(TipoLoteID) & "," & _
-                            "" & Convert.ToString(TipoProductoID) & "," & _
-                            Convert.ToString(ProveedorID) & "," & _
-                            "'" & CodigoLote & "','" & Descripcion & "','" & Observacion & "', CURRENT_TIMESTAMP, " & Config.User & ")") Then
+        'If Not dtb.ConsultaAlteraciones("insert into Lotes(Referencia,Fecha,CantidadRestante,TipoLoteID,TipoProductoID,ProveedorID,CodigoLote,descripcion,observacion,FechaModificacion,UsuarioModificacion) values(" & _
+        '                                Referencia & ",'" & Calendar.ArmarFecha(Fecha) & "'," & _
+        '                    "'" & Convert.ToString(CantidadRestante) & "'," & _
+        '                    "" & Convert.ToString(TipoLoteID) & "," & _
+        '                    "" & Convert.ToString(TipoProductoID) & "," & _
+        '                    Convert.ToString(ProveedorID) & "," & _
+        '                    "'" & CodigoLote & "','" & Descripcion & "','" & Observacion & "', CURRENT_TIMESTAMP, " & Config.User & ")") Then
+        dtb.PrepararConsulta("insert into Lotes(Referencia,Fecha,CantidadRestante,TipoLoteID,TipoProductoID,ProveedorID,CodigoLote,descripcion,observacion,FechaModificacion,UsuarioModificacion, identificador, fechacaducidad) " & _
+                               " values( @ref , @fecha, @cant, @tlote, @tpro, @pro, @cod, @desc, @obs ,CURRENT_TIMESTAMP, @umod, @idpro, @cad)")
+
+        dtb.AñadirParametroConsulta("@ref", Referencia)
+        dtb.AñadirParametroConsulta("@fecha", Fecha)
+        dtb.AñadirParametroConsulta("@cant", CantidadRestante)
+        dtb.AñadirParametroConsulta("@tlote", TipoLoteID)
+        dtb.AñadirParametroConsulta("@tpro", TipoProductoID)
+        dtb.AñadirParametroConsulta("@pro", ProveedorID)
+        dtb.AñadirParametroConsulta("@cod", CodigoLote)
+        dtb.AñadirParametroConsulta("@desc", Descripcion)
+        dtb.AñadirParametroConsulta("@obs", Observacion)
+        dtb.AñadirParametroConsulta("@umod", Config.User)
+        dtb.AñadirParametroConsulta("@idpro", Identificador)
+        dtb.AñadirParametroConsulta("@cad", Caducidad)
+
+        If Not dtb.Execute() Then
 
             Return False
         End If

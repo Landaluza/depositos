@@ -37,7 +37,7 @@
             AñadirParametroConsulta("@fechaCaducidad", fechaCaducidad)
             AñadirParametroConsulta("@Identificador", identificador)
 
-            Return Consultar(True)
+            Return Execute()
 
         End Function
 
@@ -51,7 +51,7 @@
             AñadirParametroConsulta("@codigo", codigo)
             AñadirParametroConsulta("@proveedor", proveedor)
 
-            Return Consultar(True)
+            Return Execute()
 
         End Function
 
@@ -86,7 +86,7 @@
             AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
             AñadirParametroConsulta("@depositoDestino", depositoDestino)
 
-            Return Consultar(True)
+            Return Execute()
 
         End Function
 
@@ -123,7 +123,7 @@
             AñadirParametroConsulta("@depositoDestino", depositoDestino)
             AñadirParametroConsulta("@codigoLote", codigoLote)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -228,7 +228,7 @@
             AñadirParametroConsulta("@id_deposito_origen", If(id_deposito_origen = 0, Convert.DBNull, id_deposito_origen))
             AñadirParametroConsulta("@cantidad", cantidad)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -253,7 +253,7 @@
             AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
             AñadirParametroConsulta("@cantidad", cantidad)
 
-            Return Consultar(True)
+            Return Execute()
 
 
 
@@ -278,7 +278,7 @@
             AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
             AñadirParametroConsulta("@cantidad", cantidad)
 
-            Return Consultar(True)
+            Return Execute()
 
 
 

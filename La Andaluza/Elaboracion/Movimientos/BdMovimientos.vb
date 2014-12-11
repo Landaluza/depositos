@@ -60,7 +60,7 @@
             AñadirParametroConsulta("@cantidad", cantidad)
             AñadirParametroConsulta("@codigoLote", codigoLote)
 
-            Return Consultar(True)
+            Return Execute()
         End Function
 
         Public Function sacar_lote(ByVal codigoLote As String) As Boolean
@@ -69,14 +69,14 @@
             PrepararConsulta(query)
             AñadirParametroConsulta("@codigoLote", codigoLote)
 
-            Return Consultar(True)
+            Return Execute()
         End Function
 
         Public Function actualizar_muestra_lote(ByVal codigolote As String) As Boolean
             query = "update lotes set referencia = (select max(referencia) from lotes)+1 where codigolote = @cod"
             PrepararConsulta(query)
             AñadirParametroConsulta("@cod", codigolote)
-            Return Consultar(True)
+            Return Execute()
         End Function
 
         Public Function calcular_codigo_lote(ByVal codigoSinLetra As String) As String

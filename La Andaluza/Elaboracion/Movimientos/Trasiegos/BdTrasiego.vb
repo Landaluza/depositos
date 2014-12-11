@@ -37,7 +37,7 @@ Public Class BdTrasiego
         AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
         AñadirParametroConsulta("@depositoDestino", depositoDestino)
 
-        Return Consultar(True)
+            Return Execute()
 
     End Function
 
@@ -74,7 +74,7 @@ Public Class BdTrasiego
         AñadirParametroConsulta("@depositoDestino", depositoDestino)
         AñadirParametroConsulta("@codigoLote", codigoLote)
 
-        Return Consultar(True)
+            Return Execute()
 
 
     End Function
@@ -207,7 +207,7 @@ Public Class BdTrasiego
         AñadirParametroConsulta("@cantidad", cantidad)
         AñadirParametroConsulta("@proc", proceso)
 
-        Return Consultar(True)
+            Return Execute()
 
 
     End Function
@@ -232,7 +232,7 @@ Public Class BdTrasiego
         AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
         AñadirParametroConsulta("@cantidad", cantidad)
 
-        Return Consultar(True)
+            Return Execute()
 
 
 

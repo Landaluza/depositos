@@ -6,7 +6,8 @@
             MyBase.New(Config.Server)
         End Sub
         Public Function devolver_tipos_lotes() As DataTable
-            Return Me.Consultar("TiposLotesCbo")
+            PrepararConsulta("TiposLotesCbo")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_lotes() As DataTable

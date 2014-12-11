@@ -35,7 +35,7 @@
             AñadirParametroConsulta("@nuevoCodigo", nuevoCodigo)
             AñadirParametroConsulta("@depositoDestino", depositoDestino)
 
-            Return Consultar(True)
+            Return Execute()
 
         End Function
 
@@ -72,7 +72,7 @@
             AñadirParametroConsulta("@depositoDestino", depositoDestino)
             AñadirParametroConsulta("@codigoLote", codigoLote)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -244,7 +244,7 @@
             AñadirParametroConsulta("@cantidad", cantidad)
             AñadirParametroConsulta("@proc", proceso)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -255,7 +255,7 @@
             PrepararConsulta(query)
             AñadirParametroConsulta("@fil", filtro)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -280,7 +280,7 @@
             AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
             AñadirParametroConsulta("@cantidad", cantidad)
 
-            Return Consultar(True)
+            Return Execute()
 
 
 

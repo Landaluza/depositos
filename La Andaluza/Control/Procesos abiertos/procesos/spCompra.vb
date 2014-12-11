@@ -6,25 +6,32 @@
             MyBase.New(Config.Server)
         End Sub
         Public Function devolver_productos() As DataTable
-            Return Me.Consultar("TiposProductosSelectCbo") '"TiposProductosSelectCboNoEnologicos")
+            PrepararConsulta("TiposProductosSelectCbo")
+            Return Me.Consultar() '"TiposProductosSelectCboNoEnologicos")
         End Function
         Public Function devolver_productos_no_enologicos() As DataTable
-            Return Me.Consultar("TiposProductosSelectCboNoEnologicos")
+            PrepararConsulta("TiposProductosSelectCboNoEnologicos")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_tipos_de_lotes() As DataTable
-            Return Me.Consultar("TiposLotesCbo")
+            PrepararConsulta("TiposLotesCbo")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_depositos_ocupados() As DataTable
-            Return Me.Consultar("devolverDepositosPartidas")
+            PrepararConsulta("devolverDepositosPartidas")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_depositos() As DataTable
-            Return Me.Consultar("devolverDepositosFinales") 'devolverDepositosPartidas
+            PrepararConsulta("devolverDepositosFinales")
+            Return Me.Consultar() 'devolverDepositosPartidas
         End Function
         Public Function devolver_proveedores() As DataTable
-            Return Me.Consultar("Proveedores1CboPorTipo 3")
+            PrepararConsulta("Proveedores1CboPorTipo @id")
+            AñadirParametroConsulta("@id", 3)
+            Return Me.Consultar()
         End Function
 
 

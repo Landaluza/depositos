@@ -206,7 +206,19 @@
             End Try
         End Function
 
-        Public Function Consultar(alteraciones As Boolean) As Boolean
+        'Public Function Consultar(alteraciones As Boolean) As Boolean
+        '    Try
+        '        command.ExecuteNonQuery()
+        '        Return True
+        '    Catch ex As Exception
+        '        Return False
+        '    Finally
+        '        command.Dispose()
+        '        Me.Desconectar()
+        '    End Try
+        'End Function
+
+        Public Function Execute() As Boolean
             Try
                 command.ExecuteNonQuery()
                 Return True

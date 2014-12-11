@@ -13,7 +13,7 @@
         Me.AñadirParametroConsulta("@cant", cantidad)
         Me.AñadirParametroConsulta("@id", loteid)
 
-        Return Consultar(True)
+        Return Execute()
     End Function
 
     Public Function guardarProducto(ByVal loteid As Integer, ByVal producto As Integer) As Boolean
@@ -23,7 +23,7 @@
         Me.AñadirParametroConsulta("@prod", producto)
         Me.AñadirParametroConsulta("@id", loteid)
 
-        Return Consultar(True)
+        Return Execute()
     End Function
 
     Public Function guardarCodigo(ByVal loteid As Integer, ByVal codigo As String) As Boolean
@@ -33,7 +33,7 @@
         Me.AñadirParametroConsulta("@cod", codigo)
         Me.AñadirParametroConsulta("@id", loteid)
 
-        Return Consultar(True)
+        Return Execute()
     End Function
 
     Public Function seleccionar_lote(ByVal id As Integer) As DataTable

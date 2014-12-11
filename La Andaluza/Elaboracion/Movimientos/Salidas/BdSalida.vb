@@ -7,7 +7,7 @@
             PrepararConsulta(query)
             AñadirParametroConsulta("@id", recipiente)
             AñadirParametroConsulta("@cod", codigolote)
-            Return Consultar(True)
+            Return Execute()
         End Function
         Public Function crear_lote(ByVal nuevoCodigo As String, ByVal depositoDestino As Integer, ByVal cantidad As Double, ByVal tlote As Integer, ByVal producto As Integer) As Boolean
 
@@ -44,7 +44,7 @@
                 AñadirParametroConsulta("@depositoDestino", depositoDestino)
             End If
 
-            Return Consultar(True)
+            Return Execute()
 
         End Function
 
@@ -124,7 +124,7 @@
             AñadirParametroConsulta("@cantidad", cantidad)
             AñadirParametroConsulta("@proc", proceso)
 
-            Return Consultar(True)
+            Return Execute()
 
 
         End Function
@@ -149,7 +149,7 @@
             AñadirParametroConsulta("@codigoOrigen", codigoOrigen)
             AñadirParametroConsulta("@cantidad", cantidad)
 
-            Return Consultar(True)
+            Return Execute()
 
 
 

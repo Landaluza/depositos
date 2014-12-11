@@ -27,7 +27,7 @@
     Public Shared activeScreen As Integer
 
     Public Shared Sub Cargar_Ajustes_Predeterminados()
-        Config.Server = Connection.DataBase.LOCAL
+        Config.Server = Connection.DataBase.SERVIDOR
         Config.MailReportPass = "Administracion2008"
         Config.HelpUrl = "http://192.168.10.106/AyudaLA/index.php"
         Config.ventasPath = "Z:\Informatica\La Andaluza app\ExcelFile\Book1.xlsx"

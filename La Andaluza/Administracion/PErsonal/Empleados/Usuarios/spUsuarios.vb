@@ -43,7 +43,9 @@ Public Class spUsuarios
                 Config.UserType = dbo.TipoUsuarioID
 
                 Config.dataFillNotificaction = False
-                Config.Worker = Convert.ToInt32(dtb.Consultar("select id from empleados where id_usuario=" & Config.User, False).Rows(0).Item(0))
+                dtb.Consultar("select id from empleados where id_usuario= @id")
+                dtb.AñadirParametroConsulta("@id", Config.User)
+                Config.Worker = Convert.ToInt32(dtb.Consultar().Rows(0).Item(0))
 
                 Return True
             Else

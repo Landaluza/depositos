@@ -29,7 +29,8 @@ Public Class frmMovimientos
     End Sub
 
     Protected Overrides Sub cargar_datos()
-        dataSource = dtb.Consultar(spSelectDgv)
+        dtb.PrepararConsulta(spSelectDgv)
+        dataSource = dtb.Consultar()
     End Sub
     Protected Overrides Sub BindDataSource()
 

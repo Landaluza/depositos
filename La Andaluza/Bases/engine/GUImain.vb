@@ -320,7 +320,8 @@ Public Class GUImain
 
     Protected Sub cargarAgenda()
         Dim dtb As New Connection.DataBase(Config.Server)
-        Dim dt As DataTable = dtb.Consultar("exec ComunicacionesSelectDgv", True)
+        dtb.PrepararConsulta("ComunicacionesSelectDgv")
+        Dim dt As DataTable = dtb.Consultar()
         If Not dt Is Nothing Then
             Me.mAgenda.Items.Clear()
             Dim sms2 As ToolStripMenuItem

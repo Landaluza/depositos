@@ -141,10 +141,6 @@ Partial Class frmEntMovimientosCopy
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.txtIdentificadorCompra = New System.Windows.Forms.TextBox()
-        Me.dtpCaducidadCompra = New System.Windows.Forms.DateTimePicker()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
         FechaLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         ObservacionesLabel = New System.Windows.Forms.Label()
@@ -382,7 +378,7 @@ Partial Class frmEntMovimientosCopy
         'Label14
         '
         Label14.AutoSize = True
-        Label14.Location = New System.Drawing.Point(9, 14)
+        Label14.Location = New System.Drawing.Point(10, 14)
         Label14.Name = "Label14"
         Label14.Size = New System.Drawing.Size(92, 13)
         Label14.TabIndex = 0
@@ -391,7 +387,7 @@ Partial Class frmEntMovimientosCopy
         'Label15
         '
         Label15.AutoSize = True
-        Label15.Location = New System.Drawing.Point(10, 40)
+        Label15.Location = New System.Drawing.Point(10, 42)
         Label15.Name = "Label15"
         Label15.Size = New System.Drawing.Size(59, 13)
         Label15.TabIndex = 2
@@ -400,7 +396,7 @@ Partial Class frmEntMovimientosCopy
         'Label16
         '
         Label16.AutoSize = True
-        Label16.Location = New System.Drawing.Point(10, 89)
+        Label16.Location = New System.Drawing.Point(10, 102)
         Label16.Name = "Label16"
         Label16.Size = New System.Drawing.Size(91, 13)
         Label16.TabIndex = 6
@@ -410,7 +406,7 @@ Partial Class frmEntMovimientosCopy
         '
         Label17.AutoSize = True
         Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label17.Location = New System.Drawing.Point(8, 64)
+        Label17.Location = New System.Drawing.Point(9, 72)
         Label17.Name = "Label17"
         Label17.Size = New System.Drawing.Size(50, 20)
         Label17.TabIndex = 4
@@ -492,7 +488,7 @@ Partial Class frmEntMovimientosCopy
         'Label25
         '
         Label25.AutoSize = True
-        Label25.Location = New System.Drawing.Point(9, 158)
+        Label25.Location = New System.Drawing.Point(10, 132)
         Label25.Name = "Label25"
         Label25.Size = New System.Drawing.Size(66, 13)
         Label25.TabIndex = 9
@@ -942,10 +938,6 @@ Partial Class frmEntMovimientosCopy
         '
         'gbCompra
         '
-        Me.gbCompra.Controls.Add(Me.Label39)
-        Me.gbCompra.Controls.Add(Me.Label38)
-        Me.gbCompra.Controls.Add(Me.dtpCaducidadCompra)
-        Me.gbCompra.Controls.Add(Me.txtIdentificadorCompra)
         Me.gbCompra.Controls.Add(Me.cbMedidacompra)
         Me.gbCompra.Controls.Add(Me.cboCompraProveedor)
         Me.gbCompra.Controls.Add(Me.cboCompraProducto)
@@ -973,17 +965,17 @@ Partial Class frmEntMovimientosCopy
         Me.cbMedidacompra.Enabled = False
         Me.cbMedidacompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbMedidacompra.FormattingEnabled = True
-        Me.cbMedidacompra.Location = New System.Drawing.Point(237, 86)
+        Me.cbMedidacompra.Location = New System.Drawing.Point(239, 102)
         Me.cbMedidacompra.Margin = New System.Windows.Forms.Padding(2)
         Me.cbMedidacompra.Name = "cbMedidacompra"
-        Me.cbMedidacompra.Size = New System.Drawing.Size(100, 24)
+        Me.cbMedidacompra.Size = New System.Drawing.Size(98, 24)
         Me.cbMedidacompra.TabIndex = 8
         '
         'cboCompraProveedor
         '
         Me.cboCompraProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboCompraProveedor.FormattingEnabled = True
-        Me.cboCompraProveedor.Location = New System.Drawing.Point(115, 34)
+        Me.cboCompraProveedor.Location = New System.Drawing.Point(115, 40)
         Me.cboCompraProveedor.Margin = New System.Windows.Forms.Padding(2)
         Me.cboCompraProveedor.Name = "cboCompraProveedor"
         Me.cboCompraProveedor.Size = New System.Drawing.Size(222, 21)
@@ -1012,11 +1004,11 @@ Partial Class frmEntMovimientosCopy
         'txtCompraDescripcion
         '
         Me.txtCompraDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCompraDescripcion.Location = New System.Drawing.Point(115, 156)
+        Me.txtCompraDescripcion.Location = New System.Drawing.Point(115, 132)
         Me.txtCompraDescripcion.MaxLength = 100
         Me.txtCompraDescripcion.Multiline = True
         Me.txtCompraDescripcion.Name = "txtCompraDescripcion"
-        Me.txtCompraDescripcion.Size = New System.Drawing.Size(222, 24)
+        Me.txtCompraDescripcion.Size = New System.Drawing.Size(222, 48)
         Me.txtCompraDescripcion.TabIndex = 10
         '
         'txtCompraLote
@@ -1028,7 +1020,7 @@ Partial Class frmEntMovimientosCopy
         Me.txtCompraLote.EsUnicoID = 0
         Me.txtCompraLote.EsUnicoTabla = "Lotes"
         Me.txtCompraLote.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCompraLote.Location = New System.Drawing.Point(115, 59)
+        Me.txtCompraLote.Location = New System.Drawing.Point(115, 70)
         Me.txtCompraLote.Minimo = 0
         Me.txtCompraLote.Modificado = False
         Me.txtCompraLote.Name = "txtCompraLote"
@@ -1050,7 +1042,7 @@ Partial Class frmEntMovimientosCopy
         Me.txtCompraCantidad.EsUnicoCampoID = ""
         Me.txtCompraCantidad.EsUnicoID = 0
         Me.txtCompraCantidad.EsUnicoTabla = ""
-        Me.txtCompraCantidad.Location = New System.Drawing.Point(115, 87)
+        Me.txtCompraCantidad.Location = New System.Drawing.Point(115, 102)
         Me.txtCompraCantidad.Minimo = 0
         Me.txtCompraCantidad.Modificado = False
         Me.txtCompraCantidad.Name = "txtCompraCantidad"
@@ -1847,40 +1839,6 @@ Partial Class frmEntMovimientosCopy
         Me.Panel4.Size = New System.Drawing.Size(341, 674)
         Me.Panel4.TabIndex = 1000000002
         '
-        'txtIdentificadorCompra
-        '
-        Me.txtIdentificadorCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtIdentificadorCompra.Location = New System.Drawing.Point(115, 109)
-        Me.txtIdentificadorCompra.Name = "txtIdentificadorCompra"
-        Me.txtIdentificadorCompra.Size = New System.Drawing.Size(222, 20)
-        Me.txtIdentificadorCompra.TabIndex = 15
-        '
-        'dtpCaducidadCompra
-        '
-        Me.dtpCaducidadCompra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpCaducidadCompra.Location = New System.Drawing.Point(116, 132)
-        Me.dtpCaducidadCompra.Name = "dtpCaducidadCompra"
-        Me.dtpCaducidadCompra.Size = New System.Drawing.Size(221, 20)
-        Me.dtpCaducidadCompra.TabIndex = 16
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(10, 111)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(68, 13)
-        Me.Label38.TabIndex = 17
-        Me.Label38.Text = "Identificador:"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(10, 136)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(61, 13)
-        Me.Label39.TabIndex = 18
-        Me.Label39.Text = "Caducidad:"
-        '
         'frmEntMovimientosCopy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2007,9 +1965,5 @@ Partial Class frmEntMovimientosCopy
     Public WithEvents cboSalidaRecipiente As System.Windows.Forms.ComboBox
     Public WithEvents cbFiltros As System.Windows.Forms.ComboBox
     Public WithEvents cboAjusteLotes As System.Windows.Forms.ComboBox
-    Private WithEvents Label39 As System.Windows.Forms.Label
-    Private WithEvents Label38 As System.Windows.Forms.Label
-    Private WithEvents dtpCaducidadCompra As System.Windows.Forms.DateTimePicker
-    Private WithEvents txtIdentificadorCompra As System.Windows.Forms.TextBox
 
 End Class

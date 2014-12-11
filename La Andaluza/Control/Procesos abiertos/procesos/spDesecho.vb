@@ -7,14 +7,17 @@
         End Sub
 
         Public Function devolver_depositos_ocupados() As DataTable
-            Return Me.Consultar("devolverDepositosPartidas")
+            PrepararConsulta("devolverDepositosPartidas")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_depositos() As DataTable
-            Return Me.Consultar("devolverDepositosFinales") 'devolverDepositosPartidas
+            PrepararConsulta("devolverDepositosFinales")
+            Return Me.Consultar() 'devolverDepositosPartidas
         End Function
         Public Function devolver_recipientes() As DataTable
-            Return Me.Consultar("RecipiesntesSalidasCbo")
+            PrepararConsulta("RecipiesntesSalidasCbo")
+            Return Me.Consultar()
         End Function
 
 

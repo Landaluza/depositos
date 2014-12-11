@@ -7,11 +7,13 @@
         End Sub
 
         Public Function devolver_depositos_ocupados() As DataTable
-            Return Me.Consultar("devolverDepositosPartidas")
+            PrepararConsulta("devolverDepositosPartidas")
+            Return Me.Consultar()
         End Function
 
         Public Function devolver_depositos() As DataTable
-            Return Me.Consultar("devolverDepositosFinales") 'devolverDepositosPartidas
+            PrepararConsulta("devolverDepositosFinales")
+            Return Me.Consultar() 'devolverDepositosPartidas
         End Function
 
         Public Function actualizar(ByVal destino As Integer, ByVal cantidad As Double, ByVal id As Integer) As Boolean

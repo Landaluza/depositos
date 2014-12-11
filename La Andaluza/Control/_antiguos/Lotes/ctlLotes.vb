@@ -161,7 +161,7 @@ Public Class ctlLotes
         Return clsLot._Referencia
     End Function
 
-    Public Function GuardarLoteCompra(ByVal TipoProducto As Integer, ByVal tipoLote As Integer, ByVal proveedor As Integer, ByVal Cantidad As Double, ByVal Fecha As Date, ByVal CodigoLote As String, ByVal descrip As String, ByVal obs As String, ByRef dtb As Connection.DataBase) As Boolean
+    Public Function GuardarLoteCompra(ByVal TipoProducto As Integer, ByVal tipoLote As Integer, ByVal proveedor As Integer, ByVal Cantidad As Double, ByVal Fecha As Date, ByVal CodigoLote As String, ByVal descrip As String, ByVal obs As String, ByVal identificador As String, ByVal caducidad As Date, ByRef dtb As Connection.DataBase) As Boolean
         devolverReferencia(dtb)
         clsLot._TipoProductoID = TipoProducto
         clsLot._TipoLoteID = tipoLote
@@ -171,6 +171,8 @@ Public Class ctlLotes
         clsLot._Fecha = Fecha
         clsLot._Descripcion = descrip
         clsLot._Observacion = obs
+        clsLot.Identificador = identificador
+        clsLot.Caducidad = caducidad
         Return clsLot.guardarLoteCompra(dtb)
     End Function
 

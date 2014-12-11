@@ -42,8 +42,8 @@
     Function comprobarNumeroOC() As Integer
         Dim dtb As New Connection.DataBase(Config.Server)
 
-
-        Dim dt As DataTable = dtb.Consultar("OrdenesDeCargaCountByDiaServicio", True)
+        dtb.PrepararConsulta("OrdenesDeCargaCountByDiaServicio")
+        Dim dt As DataTable = dtb.Consultar()
 
         If dt Is Nothing Then Return 0
         If dt.Rows(0) Is Nothing Then Return 0
