@@ -164,3 +164,6 @@ C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.application
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
 C:\Users\Administrador\Desktop\git\Depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
+C:\Users\mam\Documents\Visual Studio 2015\Projects\depositos\La Andaluza\bin\Release\La Andaluza MovimientosDepositos.exe.config
+C:\Users\mam\Documents\Visual Studio 2015\Projects\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.exe
+C:\Users\mam\Documents\Visual Studio 2015\Projects\depositos\La Andaluza\obj\Release\La Andaluza MovimientosDepositos.pdb
